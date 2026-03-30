@@ -33,8 +33,15 @@ export default function HomePage() {
     "@type": "Organization",
     name: "SabTools.in",
     url: "https://sabtools.in",
-    description: "India's #1 free online tools website with 280+ tools.",
+    logo: "https://sabtools.in/logo.svg",
+    description: `India's #1 free online tools website with ${tools.length}+ tools.`,
     sameAs: [],
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      url: "https://sabtools.in/contact",
+      availableLanguage: ["English", "Hindi"],
+    },
   };
 
   const itemListLd = {
@@ -50,11 +57,59 @@ export default function HomePage() {
     })),
   };
 
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Is SabTools.in completely free?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Yes! All ${tools.length}+ tools on SabTools.in are 100% free with no signup, no limits, and no hidden fees. Every tool runs directly in your browser.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is my data safe on SabTools.in?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Absolutely. All tools process your data locally in your browser using client-side JavaScript. No files or data are uploaded to any server. Your privacy is fully protected.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How many tools does SabTools.in have?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `SabTools.in offers ${tools.length}+ free online tools across ${categories.length} categories including Finance Calculators, AI Writing Tools, Developer Tools, Image Tools, PDF Tools, SEO Tools, and more.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Does SabTools.in work on mobile phones?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, SabTools.in is fully responsive and works on all devices — mobile phones, tablets, and desktops. You can even install it as a PWA (Progressive Web App) for quick access.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do I need to create an account to use tools?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "No account or signup is required. Simply visit any tool page and start using it immediately. All tools are accessible without any registration.",
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
 
       {/* Hero Section */}
       <section className="relative overflow-visible">
@@ -190,6 +245,32 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section — visible for users + rich snippets for Google */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
+        <div className="text-center mb-10">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
+          <p className="text-gray-500 mt-2">Everything you need to know about SabTools.in</p>
+        </div>
+        <div className="space-y-4">
+          {(faqLd.mainEntity as Array<{ name: string; acceptedAnswer: { text: string } }>).map((faq, i) => (
+            <details
+              key={i}
+              className="group bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden"
+            >
+              <summary className="flex items-center justify-between cursor-pointer px-6 py-4 font-semibold text-gray-800 hover:text-indigo-600 transition-colors">
+                {faq.name}
+                <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-6 pb-4 text-gray-600 leading-relaxed">
+                {faq.acceptedAnswer.text}
+              </div>
+            </details>
+          ))}
         </div>
       </section>
     </>

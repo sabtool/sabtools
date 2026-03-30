@@ -28,6 +28,17 @@ export async function generateMetadata({
       url: `https://sabtools.in/blog/${slug}`,
       type: "article",
       publishedTime: post.date,
+      siteName: "SabTools.in",
+      locale: "en_IN",
+      ...(post.image && {
+        images: [{ url: `https://sabtools.in${post.image.src}`, width: post.image.width, height: post.image.height, alt: post.image.alt }],
+      }),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      ...(post.image && { images: [`https://sabtools.in${post.image.src}`] }),
     },
   };
 }
@@ -61,12 +72,24 @@ export default async function BlogPostPage({
       "@type": "Organization",
       name: "SabTools.in",
       url: "https://sabtools.in",
+      logo: { "@type": "ImageObject", url: "https://sabtools.in/logo.svg" },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `https://sabtools.in/blog/${post.slug}`,
     },
     keywords: post.keywords.join(", "),
+    ...(post.image && {
+      image: {
+        "@type": "ImageObject",
+        url: `https://sabtools.in${post.image.src}`,
+        width: post.image.width,
+        height: post.image.height,
+        caption: post.image.alt,
+      },
+    }),
+    inLanguage: "en",
+    isAccessibleForFree: true,
   };
 
   const breadcrumbLd = {
@@ -127,6 +150,37 @@ export default async function BlogPostPage({
             </p>
             <div className="mt-8 h-px bg-gradient-to-r from-indigo-500 via-purple-400 to-transparent" />
           </header>
+
+          {/* Hero Image */}
+          {post.image && (
+            <figure className="mb-8 rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+              <img
+                src={post.image.src}
+                alt={post.image.alt}
+                width={post.image.width}
+                height={post.image.height}
+                loading="eager"
+                className="w-full h-auto"
+              />
+              <figcaption className="text-xs text-gray-400 text-center py-2 bg-gray-50">
+                {post.image.alt}
+              </figcaption>
+            </figure>
+          )}
+
+          {/* CTA Button */}
+          {post.toolSlug && (
+            <div className="mb-8 p-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl border border-indigo-100 flex items-center justify-between flex-wrap gap-3">
+              <p className="text-sm text-gray-700 font-medium">Try this tool now — 100% free, no signup required</p>
+              <Link
+                href={`/tools/${post.toolSlug}`}
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition shadow-sm"
+              >
+                Open Tool
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+              </Link>
+            </div>
+          )}
 
           <AdBanner format="horizontal" className="mb-8" />
 

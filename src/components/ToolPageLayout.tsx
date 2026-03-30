@@ -32,10 +32,18 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
     url: `https://sabtools.in/tools/${tool.slug}`,
     applicationCategory: "UtilityApplication",
     operatingSystem: "Any",
+    browserRequirements: "Requires JavaScript",
+    softwareVersion: "1.0",
+    author: {
+      "@type": "Organization",
+      name: "SabTools.in",
+      url: "https://sabtools.in",
+    },
     offers: {
       "@type": "Offer",
       price: "0",
       priceCurrency: "INR",
+      availability: "https://schema.org/InStock",
     },
     aggregateRating: {
       "@type": "AggregateRating",
@@ -44,6 +52,9 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
       bestRating: "5",
       worstRating: "1",
     },
+    inLanguage: ["en", "hi"],
+    isAccessibleForFree: true,
+    featureList: tool.keywords.join(", "),
   };
 
   const breadcrumbLd = {
@@ -60,16 +71,23 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
   const howToLd = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    name: `How to Use ${tool.name}`,
-    description: `Step-by-step guide to using ${tool.name} on SabTools.in`,
+    name: `How to Use ${tool.name} Online`,
+    description: `Step-by-step guide to using ${tool.name} on SabTools.in — free, no signup required.`,
     step: content.howToSteps.map((step, i) => ({
       "@type": "HowToStep",
       position: i + 1,
-      name: `Step ${i + 1}`,
+      name: step.length > 60 ? step.substring(0, 57) + "..." : step,
       text: step,
+      url: `https://sabtools.in/tools/${tool.slug}#step-${i + 1}`,
     })),
     tool: { "@type": "HowToTool", name: "Web Browser" },
+    supply: { "@type": "HowToSupply", name: "Internet Connection" },
     totalTime: "PT1M",
+    estimatedCost: {
+      "@type": "MonetaryAmount",
+      currency: "INR",
+      value: "0",
+    },
   };
 
   return (

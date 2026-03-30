@@ -10,3 +10,7 @@ google-indexing-key.json
 youtube-oauth.json
 youtube-token.json
 shorts-output/
+
+# macOS resource forks
+._*
+.DS_Store
