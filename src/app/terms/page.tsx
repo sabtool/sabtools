@@ -2,9 +2,22 @@ import { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
-  description: "Terms of Service for SabTools.in",
+  title: "Terms of Service — SabTools.in Free Online Tools",
+  description: "Terms of Service for SabTools.in. All 460+ tools are free for personal and commercial use. Results are for informational purposes only.",
   alternates: { canonical: "https://sabtools.in/terms" },
+  openGraph: {
+    title: "Terms of Service — SabTools.in",
+    description: "Terms of Service for SabTools.in free online tools.",
+    url: "https://sabtools.in/terms",
+    type: "website",
+    locale: "en_IN",
+    siteName: "SabTools.in",
+  },
+  twitter: {
+    card: "summary",
+    title: "Terms of Service — SabTools.in",
+    description: "Terms of Service for SabTools.in free online tools.",
+  },
 };
 
 export default function TermsPage() {

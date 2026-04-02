@@ -111,7 +111,7 @@ export default function HeicToJpg() {
           {previewUrl && (
             <div className="result-card">
               <div className="text-sm font-semibold text-gray-700 mb-2">Preview</div>
-              <img src={previewUrl} alt="Original" className="max-h-64 mx-auto rounded-lg" />
+              <img src={previewUrl} alt="Original image preview" className="max-h-64 mx-auto rounded-lg" loading="lazy" />
             </div>
           )}
 

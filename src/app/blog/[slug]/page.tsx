@@ -102,6 +102,21 @@ export default async function BlogPostPage({
     ],
   };
 
+  // Extract FAQ items from blog content (matches <h3> questions followed by <p> answers)
+  const faqMatches = [...post.content.matchAll(/<h3[^>]*>(.*?)<\/h3>\s*<p[^>]*>(.*?)<\/p>/gi)];
+  const faqLd = faqMatches.length >= 2 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqMatches.map((m) => ({
+      "@type": "Question",
+      name: m[1].replace(/<[^>]*>/g, ""),
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: m[2].replace(/<[^>]*>/g, ""),
+      },
+    })),
+  } : null;
+
   return (
     <>
       <script
@@ -112,6 +127,12 @@ export default async function BlogPostPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
+      {faqLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        />
+      )}
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
         <Breadcrumb

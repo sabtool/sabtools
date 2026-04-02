@@ -89,7 +89,7 @@ export default function SocialMediaImageResizer() {
             <button onClick={downloadResized} className="btn-primary">Download Resized</button>
           </div>
           <div className="bg-white rounded-xl p-4 shadow-sm flex justify-center">
-            <img src={image} alt="Preview" className="max-h-64 rounded-lg object-contain" />
+            <img src={image} alt="Image preview for resizing" className="max-h-64 rounded-lg object-contain" loading="lazy" />
           </div>
         </div>
       )}

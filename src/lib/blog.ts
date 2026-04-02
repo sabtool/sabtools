@@ -1360,7 +1360,7 @@ const blogPosts: BlogPost[] = [
       <p><strong>Q: I have no credit history. What is my CIBIL score?</strong></p>
       <p>If you have never taken a loan or credit card, your CIBIL report will show -1 or NH (No History). Start by getting a secured credit card or a small credit card with a low limit to begin building your credit history.</p>
       <p><strong>Q: Can I get a loan with a CIBIL score of 600?</strong></p>
-      <p>Most banks will reject applications below 700. However, some NBFCs and fintech lenders approve loans at 600-650 with higher interest rates (often 4-6% more than standard rates). Use the <a href="/tools/credit-card-payment-calculator">Credit Card Payment Calculator</a> to plan your debt payoff and improve your score before applying.</p>
+      <p>Most banks will reject applications below 700. However, some NBFCs and fintech lenders approve loans at 600-650 with higher interest rates (often 4-6% more than standard rates). Use the <a href="/tools/credit-score-estimator">Credit Card Payment Calculator</a> to plan your debt payoff and improve your score before applying.</p>
     `,
   },
   {
@@ -1448,7 +1448,7 @@ const blogPosts: BlogPost[] = [
       <p><strong>Q: What happens to gratuity if I change jobs before 5 years?</strong></p>
       <p>Unfortunately, you forfeit the gratuity if you leave before completing 5 years. The gratuity clock resets at your new employer. This is why many financial advisors recommend staying at least 5 years to secure your gratuity benefit.</p>
       <p><strong>Q: Is gratuity included in CTC?</strong></p>
-      <p>Yes, most companies include gratuity as part of the CTC (Cost to Company). Typically, the gratuity component in CTC is calculated as 4.81% of Basic Salary (which equals Basic x 15/26/12). Use the <a href="/tools/ctc-to-in-hand-salary-calculator">CTC to In-Hand Salary Calculator</a> to understand your complete salary breakup.</p>
+      <p>Yes, most companies include gratuity as part of the CTC (Cost to Company). Typically, the gratuity component in CTC is calculated as 4.81% of Basic Salary (which equals Basic x 15/26/12). Use the <a href="/tools/in-hand-salary-calculator">CTC to In-Hand Salary Calculator</a> to understand your complete salary breakup.</p>
       <p><strong>Q: Can I receive gratuity from multiple employers?</strong></p>
       <p>Yes. The Rs 25 lakh tax exemption limit applies to the total gratuity received from all employers during your lifetime. If you have already claimed exemption on Rs 15 lakh from a previous employer, you can only claim exemption on Rs 10 lakh from the next employer.</p>
     `,
@@ -1622,7 +1622,7 @@ const blogPosts: BlogPost[] = [
         <li><strong>VTU:</strong> Percentage = (CGPA - 0.75) x 10</li>
         <li><strong>Anna University:</strong> Percentage = CGPA x 10 (approximate)</li>
       </ul>
-      <p>For accurate conversions specific to your university, use the <a href="/tools/cgpa-to-percentage-converter">CGPA to Percentage Converter</a>.</p>
+      <p>For accurate conversions specific to your university, use the <a href="/tools/cgpa-to-percentage">CGPA to Percentage Converter</a>.</p>
 
       <h2>How to Calculate GST Percentage</h2>
       <p>Understanding GST calculation is essential for every Indian consumer and business owner.</p>
@@ -2090,7 +2090,7 @@ const blogPosts: BlogPost[] = [
     readTime: "6 min read",
     keywords: ["wedding invitation maker", "free wedding card maker", "AI invitation generator", "shaadi card maker online", "wedding invitation template", "Indian wedding card online"],
     content: `
-      <p>Planning a wedding in India is an elaborate affair, and one of the first things every family does is send out beautiful invitation cards to friends, relatives, and colleagues. Traditionally, designing and printing wedding cards involved visiting a local printer, choosing from a limited set of templates, placing a bulk order, and waiting days for delivery — all at a cost of Rs 5,000 to Rs 50,000 depending on the design and quantity. But in 2026, Artificial Intelligence has transformed how wedding invitations are created. With our free <a href="/tools/ai-wedding-invitation-maker">AI Wedding Invitation Maker</a>, you can design a gorgeous, personalised wedding card in minutes — right from your phone or laptop — and share it digitally or download it for printing.</p>
+      <p>Planning a wedding in India is an elaborate affair, and one of the first things every family does is send out beautiful invitation cards to friends, relatives, and colleagues. Traditionally, designing and printing wedding cards involved visiting a local printer, choosing from a limited set of templates, placing a bulk order, and waiting days for delivery — all at a cost of Rs 5,000 to Rs 50,000 depending on the design and quantity. But in 2026, Artificial Intelligence has transformed how wedding invitations are created. With our free <a href="/tools/ai-wedding-invitation">AI Wedding Invitation Maker</a>, you can design a gorgeous, personalised wedding card in minutes — right from your phone or laptop — and share it digitally or download it for printing.</p>
 
       <h2>How AI Wedding Invitation Tools Work</h2>
       <p>An AI-powered wedding invitation maker uses advanced design algorithms and machine learning to generate professional-quality invitation cards based on your inputs. Here is how the process typically works:</p>
@@ -2179,7 +2179,7 @@ const blogPosts: BlogPost[] = [
       </ul>
 
       <h2>Why Use Our AI Wedding Invitation Maker?</h2>
-      <p>Our <a href="/tools/ai-wedding-invitation-maker">AI Wedding Invitation Maker</a> on SabTools offers several advantages over traditional methods and other online tools:</p>
+      <p>Our <a href="/tools/ai-wedding-invitation">AI Wedding Invitation Maker</a> on SabTools offers several advantages over traditional methods and other online tools:</p>
       <ul>
         <li><strong>100% free:</strong> No hidden charges, no premium plans, no watermarks on your final design.</li>
         <li><strong>AI-powered design:</strong> The AI understands Indian wedding aesthetics and generates culturally appropriate designs for Hindu, Muslim, Christian, and Sikh weddings.</li>
@@ -2188,7 +2188,7 @@ const blogPosts: BlogPost[] = [
         <li><strong>High-quality download:</strong> Download in print-ready resolution for both digital sharing and physical printing.</li>
         <li><strong>Mobile-friendly:</strong> Works perfectly on smartphones, so you can design your invitation card on the go.</li>
       </ul>
-      <p>Try it now: <a href="/tools/ai-wedding-invitation-maker">Create Your Free Wedding Invitation</a></p>
+      <p>Try it now: <a href="/tools/ai-wedding-invitation">Create Your Free Wedding Invitation</a></p>
 
       <h2>Frequently Asked Questions</h2>
       <p><strong>Q: Is the AI Wedding Invitation Maker really free to use?</strong></p>
@@ -2260,7 +2260,7 @@ const blogPosts: BlogPost[] = [
       <p>The <a href="/tools/scientific-calculator">Scientific Calculator</a> provides all the functions of a physical Casio calculator — trigonometry (sin, cos, tan), logarithms (log, ln), exponents, factorials, permutations, combinations, and more. It is the second most visited tool on SabTools, used daily by thousands of students for homework, exam preparation, and quick calculations. Works perfectly on mobile devices.</p>
 
       <h3>13. CGPA Calculator</h3>
-      <p>The <a href="/tools/cgpa-calculator">CGPA Calculator</a> converts your semester grades into Cumulative Grade Point Average. Enter your subject-wise grade points and credits to get your CGPA and its equivalent percentage. Useful for students applying to higher education programs or jobs that require a minimum CGPA cutoff. Supports the 10-point and 4-point grading systems used by Indian universities.</p>
+      <p>The <a href="/tools/cgpa-to-percentage">CGPA Calculator</a> converts your semester grades into Cumulative Grade Point Average. Enter your subject-wise grade points and credits to get your CGPA and its equivalent percentage. Useful for students applying to higher education programs or jobs that require a minimum CGPA cutoff. Supports the 10-point and 4-point grading systems used by Indian universities.</p>
 
       <h3>14. Percentage Calculator</h3>
       <p>The <a href="/tools/percentage-calculator">Percentage Calculator</a> handles all percentage-related calculations: finding what percentage one number is of another, calculating the percentage increase or decrease between two values, and finding the value after adding or subtracting a percentage. Useful for academic results, discount calculations, profit/loss computations, and data analysis.</p>
@@ -2272,7 +2272,7 @@ const blogPosts: BlogPost[] = [
       <p>The <a href="/tools/background-remover">Background Remover</a> uses AI to instantly remove the background from any photograph. Upload a photo, and the tool isolates the subject (person, product, animal) and delivers a clean image with a transparent background. Perfect for creating professional profile pictures, product photos for e-commerce listings, social media content, and presentations. No Photoshop skills needed.</p>
 
       <h3>16. Image Blur Tool</h3>
-      <p>The <a href="/tools/blur-image">Image Blur Tool</a> lets you selectively blur parts of an image. Use it to blur sensitive information (Aadhaar numbers, phone numbers, addresses) before sharing screenshots, create aesthetic depth-of-field effects for social media posts, or anonymise faces in photographs. You can control the blur intensity and brush size for precise results.</p>
+      <p>The <a href="/tools/blur-background">Image Blur Tool</a> lets you selectively blur parts of an image. Use it to blur sensitive information (Aadhaar numbers, phone numbers, addresses) before sharing screenshots, create aesthetic depth-of-field effects for social media posts, or anonymise faces in photographs. You can control the blur intensity and brush size for precise results.</p>
 
       <h2>Lifestyle and Utility Calculators</h2>
       <p>These tools help with everyday decisions ranging from real estate transactions to wedding planning.</p>
@@ -2296,13 +2296,13 @@ const blogPosts: BlogPost[] = [
       <p>The <a href="/tools/gratuity-calculator">Gratuity Calculator</a> computes the gratuity amount payable to you upon completing 5 or more years of continuous service with an employer. Enter your last drawn basic salary plus DA and the number of years of service to see the gratuity amount. For employees covered under the Payment of Gratuity Act, the formula is: (15 x Last Drawn Salary x Years of Service) / 26.</p>
 
       <h3>23. CIBIL Score Estimator</h3>
-      <p>The <a href="/tools/cibil-score">CIBIL Score Estimator</a> helps you understand the factors that affect your credit score and provides an approximate score range based on your credit behaviour. While the exact CIBIL score can only be fetched from the bureau, this tool educates you on how payment history, credit utilisation, credit age, and enquiries impact your score.</p>
+      <p>The <a href="/tools/credit-score-estimator">CIBIL Score Estimator</a> helps you understand the factors that affect your credit score and provides an approximate score range based on your credit behaviour. While the exact CIBIL score can only be fetched from the bureau, this tool educates you on how payment history, credit utilisation, credit age, and enquiries impact your score.</p>
 
       <h3>24. AI Wedding Invitation Maker</h3>
-      <p>The <a href="/tools/ai-wedding-invitation-maker">AI Wedding Invitation Maker</a> is our most popular lifestyle tool. Use AI to generate stunning wedding invitation cards for Hindu, Muslim, Christian, and Sikh weddings. Enter the couple's names, wedding date, venue, and preferred style — and get a professionally designed card in seconds. Download in high quality for digital sharing or printing. Completely free with no watermarks.</p>
+      <p>The <a href="/tools/ai-wedding-invitation">AI Wedding Invitation Maker</a> is our most popular lifestyle tool. Use AI to generate stunning wedding invitation cards for Hindu, Muslim, Christian, and Sikh weddings. Enter the couple's names, wedding date, venue, and preferred style — and get a professionally designed card in seconds. Download in high quality for digital sharing or printing. Completely free with no watermarks.</p>
 
       <h3>25. Loan Against Property Calculator</h3>
-      <p>The <a href="/tools/lap-calculator">Loan Against Property Calculator</a> helps you estimate how much loan you can get against your residential or commercial property. Enter the property market value, LTV (loan-to-value) ratio offered by the bank, interest rate, and desired tenure to see the eligible loan amount, EMI, and total interest payable. Useful when you need funds for business expansion, education, or medical emergencies.</p>
+      <p>The <a href="/tools/loan-eligibility-calculator">Loan Against Property Calculator</a> helps you estimate how much loan you can get against your residential or commercial property. Enter the property market value, LTV (loan-to-value) ratio offered by the bank, interest rate, and desired tenure to see the eligible loan amount, EMI, and total interest payable. Useful when you need funds for business expansion, education, or medical emergencies.</p>
 
       <h2>Why Bookmark SabTools?</h2>
       <p>All 25 calculators listed above (and many more) are available completely free on <a href="/">SabTools.in</a>. Here is why thousands of Indians use our platform daily:</p>
@@ -2629,7 +2629,7 @@ const blogPosts: BlogPost[] = [
         <li><a href="/tools/passport-photo-maker">Passport Photo Maker</a> — Perfect passport/visa photos</li>
         <li><a href="/tools/image-watermark">Image Watermark</a> — Add text or logo watermarks</li>
         <li><a href="/tools/blur-background">Blur Background</a> — Professional background blur</li>
-        <li><a href="/tools/image-to-text">Image to Text (OCR)</a> — Extract text from images</li>
+        <li><a href="/tools/image-text-extractor-ocr">Image to Text (OCR)</a> — Extract text from images</li>
       </ul>
 
       <h2>Frequently Asked Questions</h2>

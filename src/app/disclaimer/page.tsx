@@ -2,9 +2,22 @@ import { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Disclaimer",
-  description: "Disclaimer for SabTools.in online tools.",
+  title: "Disclaimer — SabTools.in Free Online Tools",
+  description: "Read the disclaimer for SabTools.in. Our free online calculators and tools provide approximate results for informational purposes. Consult professionals for financial, legal, or medical decisions.",
   alternates: { canonical: "https://sabtools.in/disclaimer" },
+  openGraph: {
+    title: "Disclaimer — SabTools.in",
+    description: "Disclaimer for SabTools.in free online tools and calculators.",
+    url: "https://sabtools.in/disclaimer",
+    type: "website",
+    locale: "en_IN",
+    siteName: "SabTools.in",
+  },
+  twitter: {
+    card: "summary",
+    title: "Disclaimer — SabTools.in",
+    description: "Disclaimer for SabTools.in free online tools and calculators.",
+  },
 };
 
 export default function DisclaimerPage() {

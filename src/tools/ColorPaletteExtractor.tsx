@@ -137,7 +137,7 @@ export default function ColorPaletteExtractor() {
       {image && imageUrl && (
         <div className="result-card">
           <h3 className="text-lg font-bold text-gray-800 mb-3">Source Image</h3>
-          <img src={imageUrl} alt="Source" className="max-h-48 rounded-xl mx-auto border border-gray-200" />
+          <img src={imageUrl} alt="Source image for color extraction" loading="lazy" className="max-h-48 rounded-xl mx-auto border border-gray-200" />
         </div>
       )}
 

@@ -219,7 +219,7 @@ export default function PassportPhotoMaker() {
       {resultUrl && (
         <div className="space-y-4">
           <div className="flex justify-center">
-            <img src={resultUrl} alt="Passport photo" className="rounded-xl border max-w-[200px]" />
+            <img src={resultUrl} alt="Generated passport photo" loading="lazy" className="rounded-xl border max-w-[200px]" />
           </div>
           <a href={resultUrl} download="passport-photo.jpg" className="btn-primary inline-block text-center text-sm w-full">
             Download JPG ({outW}x{outH} @ {DPI} DPI)

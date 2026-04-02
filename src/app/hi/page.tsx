@@ -6,7 +6,23 @@ import { tools } from "@/lib/tools";
 export const metadata: Metadata = {
   title: "SabTools.in - 290+ मुफ्त ऑनलाइन टूल्स हिंदी में",
   description: "मुफ्त ऑनलाइन टूल्स — EMI कैलकुलेटर, SIP कैलकुलेटर, GST कैलकुलेटर, शब्द गणक और 290+ टूल्स। बिना साइनअप, 100% मुफ्त।",
-  alternates: { canonical: "https://sabtools.in/hi" },
+  alternates: {
+    canonical: "https://sabtools.in/hi",
+    languages: { en: "https://sabtools.in", hi: "https://sabtools.in/hi" },
+  },
+  openGraph: {
+    title: "SabTools.in - 290+ मुफ्त ऑनलाइन टूल्स हिंदी में",
+    description: "मुफ्त ऑनलाइन टूल्स — EMI कैलकुलेटर, SIP कैलकुलेटर, GST कैलकुलेटर और 290+ टूल्स। 100% मुफ्त।",
+    url: "https://sabtools.in/hi",
+    type: "website",
+    locale: "hi_IN",
+    siteName: "SabTools.in",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SabTools.in - 290+ मुफ्त ऑनलाइन टूल्स हिंदी में",
+    description: "मुफ्त ऑनलाइन टूल्स — 100% मुफ्त, बिना साइनअप।",
+  },
 };
 
 export default function HindiHomePage() {

@@ -2,9 +2,22 @@ import { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: "Privacy Policy of SabTools.in - Learn how we handle your data.",
+  title: "Privacy Policy — SabTools.in Free Online Tools",
+  description: "SabTools.in privacy policy. All tools run in your browser — we never collect, store, or transmit your data. Learn about our analytics, cookies, and data practices.",
   alternates: { canonical: "https://sabtools.in/privacy" },
+  openGraph: {
+    title: "Privacy Policy — SabTools.in",
+    description: "Learn how SabTools.in protects your privacy. All tools run locally in your browser.",
+    url: "https://sabtools.in/privacy",
+    type: "website",
+    locale: "en_IN",
+    siteName: "SabTools.in",
+  },
+  twitter: {
+    card: "summary",
+    title: "Privacy Policy — SabTools.in",
+    description: "Learn how SabTools.in protects your privacy. All tools run locally in your browser.",
+  },
 };
 
 export default function PrivacyPage() {

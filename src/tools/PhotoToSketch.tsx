@@ -134,14 +134,14 @@ export default function PhotoToSketch() {
           <div className="result-card grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <div className="text-xs font-semibold text-gray-500 mb-2 text-center">Original</div>
-              {previewUrl && <img src={previewUrl} alt="Original" className="max-h-64 mx-auto rounded-lg" />}
+              {previewUrl && <img src={previewUrl} alt="Original image preview" className="max-h-64 mx-auto rounded-lg" loading="lazy" />}
             </div>
             <div>
               <div className="text-xs font-semibold text-gray-500 mb-2 text-center">Sketch</div>
               {processing ? (
                 <div className="text-center text-sm text-gray-400 py-8">Processing...</div>
               ) : resultUrl ? (
-                <img src={resultUrl} alt="Sketch" className="max-h-64 mx-auto rounded-lg" />
+                <img src={resultUrl} alt="Converted sketch image" loading="lazy" className="max-h-64 mx-auto rounded-lg" />
               ) : null}
             </div>
           </div>

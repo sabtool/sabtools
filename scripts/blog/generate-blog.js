@@ -199,7 +199,7 @@ async function main() {
     toolSlug: tool.slug,
     image: {
       src: `/blog/${tool.slug}.webp`,
-      alt: `${tool.name} — Free Online ${tool.description.split(".")[0]} Tool on SabTools.in`,
+      alt: `${tool.name} — Free Online Tool on SabTools.in`,
       width: 1200,
       height: 630,
     },

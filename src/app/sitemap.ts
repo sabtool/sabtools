@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { tools, categories } from "@/lib/tools";
 import { getAllPosts } from "@/lib/blog";
+import { programmaticPages } from "@/lib/programmatic-pages";
 
 export const dynamic = "force-static";
 
@@ -97,5 +98,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...categoryPages, ...toolPages, ...hindiToolPages, ...blogListPage, ...blogPages];
+  // Programmatic calculator pages (/calc/*)
+  const calcPages: MetadataRoute.Sitemap = programmaticPages.map((page) => ({
+    url: `${baseUrl}/calc/${page.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+
+  // Search page
+  const searchPage: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/search`,
+      lastModified: now,
+      changeFrequency: "daily" as const,
+      priority: 0.5,
+    },
+  ];
+
+  return [...staticPages, ...categoryPages, ...toolPages, ...hindiToolPages, ...calcPages, ...searchPage, ...blogListPage, ...blogPages];
 }
