@@ -31,22 +31,47 @@ function generateFallbackScript(tool) {
     tax: `Tax bachana hai? Yeh ${tool.name} use karo!`,
     developer: `Developers, yeh tool aapka time bachayega!`,
     image: `Image editing FREE mein? Haan, ${tool.name} se!`,
+    converter: `Koi bhi conversion 1 second mein — ${tool.name}!`,
     default: `Yeh FREE tool har Indian ko pata hona chahiye!`,
   };
 
   const hook = hooks[tool.category] || hooks.default;
 
+  // Tutorial-style narration that explains step by step
+  const narration1 = `Aaj main aapko dikhata hoon ${tool.name} kaise use karte hain. Sabtools.in pe jaao aur yeh tool open karo. Koi signup nahi chahiye, bilkul free hai.`;
+  const narration2 = `Bas apne values enter karo aur dekho result turant aa jaata hai! Yeh tool 100% free hai, aapka data safe rehta hai, sab kuch browser mein hota hai. Koi app download nahi karna padta.`;
+  const cta = `Abhi try karo sabtools.in pe! 460 se zyada free tools available hain — calculators, converters, aur bahut kuch! Link comment section mein hai, abhi click karo!`;
+
+  // Tool-specific demo values for popular tools
+  const demoValuesMap = {
+    "emi-calculator": { loanAmount: "2500000", interestRate: "8.5", tenure: "20" },
+    "sip-calculator": { monthlyInvestment: "5000", expectedReturn: "12", timePeriod: "10" },
+    "gst-calculator": { amount: "10000", gstRate: "18" },
+    "fd-calculator": { principal: "100000", interestRate: "7.5", tenure: "5" },
+    "rd-calculator": { monthlyDeposit: "5000", interestRate: "7", tenure: "3" },
+    "ppf-calculator": { yearlyInvestment: "150000", tenure: "15" },
+    "income-tax-calculator": { annualIncome: "1200000" },
+    "percentage-calculator": { number: "750", percentage: "25" },
+    "bmi-calculator": { height: "170", weight: "70" },
+    "age-calculator": { dateOfBirth: "1995-06-15" },
+    "compound-interest-calculator": { principal: "100000", rate: "8", time: "5" },
+    "discount-calculator": { originalPrice: "2999", discountPercent: "30" },
+    "home-loan-calculator": { loanAmount: "5000000", interestRate: "8.5", tenure: "20" },
+    "salary-calculator": { monthlySalary: "50000" },
+    "love-calculator": { name1: "Rahul", name2: "Priya" },
+  };
+
   return {
     hook,
-    scene1: `Open ${tool.name} on sabtools.in and enter your values`,
-    narration1: `${tool.name} ek free online tool hai jo sabtools.in pe available hai. ${tool.description}. Isko use karna bahut easy hai, koi signup nahi chahiye.`,
-    scene2: `Show the instant results on screen`,
-    narration2: `Dekho kitna fast result aaya! Yeh tool 100% free hai aur aapka data safe rehta hai — sab kuch browser mein hota hai.`,
-    cta: `Abhi try karo sabtools.in pe! Link in bio. 460+ free tools available hain!`,
-    title: `${tool.name} FREE — Try Now! ${tool.icon} #shorts`,
-    description: `Use ${tool.name} for free at sabtools.in\n460+ Free Online Tools for India\n#FreeTools #India #SabTools`,
-    tags: [tool.name.toLowerCase(), "free tools", "india", "sabtools", "calculator", "online tool", tool.category, "free"],
-    demoValues: {},
+    scene1: `Open ${tool.name} on sabtools.in`,
+    narration1,
+    scene2: `Enter values and see instant results`,
+    narration2,
+    cta,
+    title: `${tool.name} — How to Use FREE! ${tool.icon} #shorts`,
+    description: `Learn how to use ${tool.name} for free at sabtools.in\nStep-by-step tutorial — no signup needed!\n460+ Free Online Tools for India\n#FreeTools #India #SabTools #HowTo #Tutorial`,
+    tags: [tool.name.toLowerCase(), "free tools", "india", "sabtools", "how to", "tutorial", tool.category, "free", "online tool", "step by step"],
+    demoValues: demoValuesMap[tool.slug] || {},
     fullText: "",
   };
 }
@@ -68,7 +93,7 @@ NARRATION_1: [What to say — 2-3 sentences explaining the tool, mix Hindi-Engli
 SCENE_2: [Show the result/output with specific numbers]
 NARRATION_2: [React to the result, explain why it's useful — 2 sentences]
 
-CTA: [Call to action — mention sabtools.in, "Link in bio", and "460+ free tools"]
+CTA: [Call to action — mention sabtools.in, "Link comment section mein hai", and "460+ free tools"]
 
 TITLE: [YouTube Short title — catchy, under 60 chars, include emoji]
 DESCRIPTION: [2-3 lines with hashtags — #FreeTools #India #SabTools]

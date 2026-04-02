@@ -1,0 +1,9 @@
+[
+  {
+    "slug": "sip-calculator",
+    "name": "SIP Calculator",
+    "status": "failed",
+    "error": "Waiting for selector `input[type=\"file\"]` failed",
+    "timestamp": "2026-03-28T12:39:56.870Z"
+  }
+]

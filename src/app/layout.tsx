@@ -64,11 +64,20 @@ export const metadata: Metadata = {
     siteName: "SabTools.in",
     title: "SabTools.in - 460+ Free Online Tools for India",
     description: "India's #1 free online tools website. Calculators, Converters, AI Tools, PDF Tools, Developer Tools & more. 100% free.",
+    images: [
+      {
+        url: "https://sabtools.in/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "SabTools.in - 460+ Free Online Tools for India",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "SabTools.in - 460+ Free Online Tools",
     description: "India's #1 free online tools website. 460+ tools — 100% free, no signup.",
+    images: ["https://sabtools.in/og-image.svg"],
   },
   robots: {
     index: true,
@@ -83,6 +92,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://sabtools.in",
+    languages: {
+      en: "https://sabtools.in",
+      hi: "https://sabtools.in/hi",
+    },
   },
   verification: {
     google: "GqkwjowsFohBgklNGrXwF-wwuRrsS059u5FHdi46eZA",

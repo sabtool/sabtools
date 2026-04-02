@@ -9,7 +9,10 @@ const path = require("path");
 const readline = require("readline");
 const config = require("./config");
 
-const SCOPES = ["https://www.googleapis.com/auth/youtube.upload"];
+const SCOPES = [
+  "https://www.googleapis.com/auth/youtube.upload",
+  "https://www.googleapis.com/auth/youtube.force-ssl",
+];
 
 async function uploadToYouTube(videoPath, script, tool) {
   const credsPath = config.YOUTUBE_CREDS;
@@ -112,6 +115,42 @@ async function uploadToYouTube(videoPath, script, tool) {
     const videoUrl = `https://youtube.com/shorts/${videoId}`;
     console.log(`\n✅ Uploaded successfully!`);
     console.log(`URL: ${videoUrl}`);
+
+    // Auto-comment with tool link (pinned comment for backlink)
+    try {
+      const toolUrl = `https://sabtools.in/tools/${tool.slug}`;
+      const commentText = [
+        `🔗 Try ${tool.name} FREE: ${toolUrl}`,
+        ``,
+        `👆 No signup needed — works on mobile & desktop!`,
+        `460+ Free Online Tools at https://sabtools.in`,
+        ``,
+        `⏱️ Timestamps:`,
+        `0:00 — Introduction`,
+        `0:03 — How to use ${tool.name}`,
+        `0:20 — Results & features`,
+        `0:28 — Try it yourself!`,
+        ``,
+        `#SabTools #FreeTools #India`,
+      ].join("\n");
+
+      const commentRes = await youtube.commentThreads.insert({
+        part: "snippet",
+        requestBody: {
+          snippet: {
+            videoId,
+            topLevelComment: {
+              snippet: {
+                textOriginal: commentText,
+              },
+            },
+          },
+        },
+      });
+      console.log(`📝 Comment posted with tool link: ${toolUrl}`);
+    } catch (commentErr) {
+      console.log(`⚠️  Comment failed (will retry manually): ${commentErr.message}`);
+    }
 
     return { videoId, videoUrl };
   } catch (err) {

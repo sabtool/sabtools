@@ -1,0 +1,24 @@
+=== Automated Pinterest Pin ===
+Time: 29/3/2026, 2:00:05 pm
+Posting 3 pins today:
+  - EMI Calculator
+  - SIP Calculator
+  - GST Calculator
+
+--- Posting: EMI Calculator ---
+
+=== Posting Pin: EMI Calculator ===
+
+
+=== Pinterest API Setup ===
+
+1. Go to: https://developers.pinterest.com/apps/
+2. Click 'Create app'
+3. Fill in app name: 'SabTools Pinterest'
+4. Add redirect URI: http://localhost:8086/callback
+5. Copy your App ID and App Secret
+
+Then set them in config.js or as environment variables:
+  PINTEREST_APP_ID=your_app_id
+  PINTEREST_APP_SECRET=your_app_secret
+

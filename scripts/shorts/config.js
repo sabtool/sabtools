@@ -17,7 +17,7 @@ module.exports = {
   VIDEO_WIDTH: 1080,
   VIDEO_HEIGHT: 1920,
   VIDEO_FPS: 30,
-  VIDEO_DURATION_TARGET: 35, // seconds
+  VIDEO_DURATION_TARGET: 50, // seconds
 
   // Paths
   OUTPUT_DIR: path.join(__dirname, "..", "..", "shorts-output"),

@@ -1,6 +1,6 @@
 /**
- * Step 4: Create YouTube Short video from screenshots + audio
- * Uses FFmpeg to combine screenshots into a slideshow with text overlays
+ * Step 4: Create YouTube Short video — Screen recording style
+ * Takes rapid screenshot frames and stitches them into smooth video
  */
 
 const ffmpeg = require("fluent-ffmpeg");
@@ -8,83 +8,86 @@ const ffmpegInstaller = require("@ffmpeg-installer/ffmpeg");
 const sharp = require("sharp");
 const fs = require("fs");
 const path = require("path");
+const { spawn } = require("child_process");
 const config = require("./config");
 
 ffmpeg.setFfmpegPath(ffmpegInstaller.path);
 
-async function createVideo(tool, script, screenshots, audioPath) {
+const W = config.VIDEO_WIDTH;
+const H = config.VIDEO_HEIGHT;
+
+async function createVideo(tool, script, screenshotFrames, audioPath) {
   const tempDir = config.TEMP_DIR;
   const outputDir = config.OUTPUT_DIR;
   fs.mkdirSync(outputDir, { recursive: true });
 
-  // Step 1: Create branded frames from screenshots
-  const frames = [];
-  const textsPerFrame = [
-    script.hook || `${tool.name} — Free Online Tool`,
-    script.narration1 || tool.description,
-    script.narration2 || "100% Free — No Signup Required",
-    script.cta || "sabtools.in — 460+ Free Tools",
-  ];
+  const audioDuration = await getAudioDuration(audioPath);
 
-  for (let i = 0; i < Math.min(screenshots.length, 4); i++) {
-    const framePath = path.join(tempDir, `frame_${i}.png`);
-    await createBrandedFrame(screenshots[i], textsPerFrame[i], tool, i, framePath);
-    frames.push(framePath);
-  }
-
-  // If less than 4 frames, add a CTA frame
-  if (frames.length < 4) {
-    const ctaPath = path.join(tempDir, "frame_cta.png");
-    await createCtaFrame(tool, script, ctaPath);
-    frames.push(ctaPath);
-  }
-
-  // Step 2: Create intro frame (hook)
+  // Create intro and outro frames
   const introPath = path.join(tempDir, "frame_intro.png");
-  await createIntroFrame(tool, script.hook, introPath);
-  frames.unshift(introPath);
-
-  // Step 3: Create outro frame (CTA)
   const outroPath = path.join(tempDir, "frame_outro.png");
-  await createCtaFrame(tool, script, outroPath);
-  frames.push(outroPath);
+  await createIntroFrame(tool, script.hook, introPath);
+  await createOutroFrame(tool, script, outroPath);
 
-  // Step 4: Calculate duration per frame
-  const totalDuration = config.VIDEO_DURATION_TARGET;
-  const durationPerFrame = totalDuration / frames.length;
+  // Build frame list: intro (4s) + screen recording frames + outro (5s)
+  const frameListPath = path.join(tempDir, "framelist.txt");
+  let frameList = "";
 
-  // Step 5: Create a file list for FFmpeg concat
-  const listPath = path.join(tempDir, "frames.txt");
-  const listContent = frames
-    .map((f) => `file '${f}'\nduration ${durationPerFrame}`)
-    .join("\n");
-  fs.writeFileSync(listPath, listContent + `\nfile '${frames[frames.length - 1]}'`);
+  // Intro — hold for 4 seconds
+  frameList += `file '${introPath}'\nduration 4\n`;
 
-  // Step 6: Generate video with FFmpeg
+  // Screen recording frames — use their natural durations
+  if (Array.isArray(screenshotFrames) && screenshotFrames.length > 0) {
+    const isNewFormat = screenshotFrames[0] && typeof screenshotFrames[0] === "object" && screenshotFrames[0].path;
+
+    if (isNewFormat) {
+      for (const frame of screenshotFrames) {
+        frameList += `file '${frame.path}'\nduration ${frame.duration}\n`;
+      }
+    } else {
+      // Old format — array of file paths
+      const durationPer = Math.max(1.5, (audioDuration - 7) / screenshotFrames.length);
+      for (const framePath of screenshotFrames) {
+        frameList += `file '${framePath}'\nduration ${durationPer}\n`;
+      }
+    }
+  }
+
+  // Outro — hold for 5 seconds
+  frameList += `file '${outroPath}'\nduration 5\n`;
+
+  // FFmpeg requires last frame listed without duration
+  frameList += `file '${outroPath}'\n`;
+
+  fs.writeFileSync(frameListPath, frameList);
+
+  // Count total frames for progress
+  const totalLines = frameList.split("\n").filter((l) => l.startsWith("file")).length;
+  console.log(`   ${totalLines} total frames in video`);
+
   const dateStr = new Date().toISOString().slice(0, 10);
   const videoFilename = `${tool.slug}-${dateStr}.mp4`;
   const outputPath = path.join(outputDir, videoFilename);
 
   return new Promise((resolve, reject) => {
-    const cmd = ffmpeg()
-      .input(listPath)
+    ffmpeg()
+      .input(frameListPath)
       .inputOptions(["-f", "concat", "-safe", "0"])
       .input(audioPath)
       .outputOptions([
         "-c:v", "libx264",
         "-pix_fmt", "yuv420p",
-        "-r", String(config.VIDEO_FPS),
+        "-r", "30",
         "-c:a", "aac",
         "-b:a", "128k",
         "-shortest",
         "-movflags", "+faststart",
-        // YouTube Shorts optimal settings
-        "-vf", `scale=${config.VIDEO_WIDTH}:${config.VIDEO_HEIGHT}:force_original_aspect_ratio=decrease,pad=${config.VIDEO_WIDTH}:${config.VIDEO_HEIGHT}:(ow-iw)/2:(oh-ih)/2:color=white`,
+        "-vf", `scale=${W}:${H}:force_original_aspect_ratio=decrease,pad=${W}:${H}:(ow-iw)/2:(oh-ih)/2:color=white`,
         "-preset", "medium",
         "-crf", "23",
       ])
       .output(outputPath)
-      .on("start", (cmd) => console.log("FFmpeg started..."))
+      .on("start", () => console.log("FFmpeg encoding screen recording..."))
       .on("progress", (p) => {
         if (p.percent) process.stdout.write(`\rEncoding: ${Math.round(p.percent)}%`);
       })
@@ -93,205 +96,122 @@ async function createVideo(tool, script, screenshots, audioPath) {
         resolve(outputPath);
       })
       .on("error", (err) => {
-        console.error("FFmpeg error:", err.message);
+        console.error("\nFFmpeg error:", err.message);
         reject(err);
-      });
-
-    cmd.run();
+      })
+      .run();
   });
 }
 
-async function createBrandedFrame(screenshotPath, text, tool, index, outputPath) {
-  const width = config.VIDEO_WIDTH;
-  const height = config.VIDEO_HEIGHT;
-
-  // Read and resize screenshot
-  const screenshot = await sharp(screenshotPath)
-    .resize(width - 60, height - 400, { fit: "inside", background: "#ffffff" })
-    .toBuffer();
-
-  const screenshotMeta = await sharp(screenshot).metadata();
-  const ssWidth = screenshotMeta.width || width - 60;
-  const ssHeight = screenshotMeta.height || height - 400;
-
-  // Wrap text to fit
-  const wrappedText = wrapText(text, 35);
-  const textLines = wrappedText.split("\n");
-  const textHeight = textLines.length * 42;
-
-  // Create the frame with SVG overlay
-  const svg = `
-    <svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
-        </linearGradient>
-      </defs>
-      <!-- Background -->
-      <rect width="${width}" height="${height}" fill="white"/>
-      <!-- Top bar -->
-      <rect width="${width}" height="80" fill="url(#grad)"/>
-      <text x="${width / 2}" y="50" text-anchor="middle" fill="white" font-size="28" font-weight="bold" font-family="Arial, sans-serif">
-        ${escapeXml(tool.icon)} ${escapeXml(tool.name)}
-      </text>
-      <!-- Bottom text area -->
-      <rect y="${height - 200 - textHeight}" width="${width}" height="${200 + textHeight}" fill="#f8fafc"/>
-      <rect y="${height - 200 - textHeight}" width="${width}" height="3" fill="url(#grad)"/>
-      ${textLines
-        .map(
-          (line, i) =>
-            `<text x="${width / 2}" y="${height - 160 - textHeight + i * 42 + 40}" text-anchor="middle" fill="#1e293b" font-size="32" font-weight="600" font-family="Arial, sans-serif">${escapeXml(line)}</text>`
-        )
-        .join("")}
-      <!-- SabTools branding -->
-      <text x="${width / 2}" y="${height - 40}" text-anchor="middle" fill="#6366f1" font-size="28" font-weight="bold" font-family="Arial, sans-serif">
-        sabtools.in
-      </text>
-      <!-- Step indicator -->
-      <circle cx="${width / 2 - 30}" cy="${height - 80}" r="8" fill="${index === 0 ? '#4f46e5' : '#cbd5e1'}"/>
-      <circle cx="${width / 2}" cy="${height - 80}" r="8" fill="${index === 1 ? '#4f46e5' : '#cbd5e1'}"/>
-      <circle cx="${width / 2 + 30}" cy="${height - 80}" r="8" fill="${index === 2 ? '#4f46e5' : '#cbd5e1'}"/>
-    </svg>
-  `;
-
-  await sharp({
-    create: {
-      width,
-      height,
-      channels: 4,
-      background: { r: 255, g: 255, b: 255, alpha: 1 },
-    },
-  })
-    .composite([
-      { input: Buffer.from(svg), top: 0, left: 0 },
-      {
-        input: screenshot,
-        top: 100,
-        left: Math.floor((width - ssWidth) / 2),
-      },
-    ])
-    .png()
-    .toFile(outputPath);
-}
-
 async function createIntroFrame(tool, hookText, outputPath) {
-  const width = config.VIDEO_WIDTH;
-  const height = config.VIDEO_HEIGHT;
-  const wrappedHook = wrapText(hookText || `${tool.name} — 100% Free!`, 25);
+  const wrappedHook = wrapText(hookText || `${tool.name} — 100% Free!`, 22);
   const hookLines = wrappedHook.split("\n");
 
   const svg = `
-    <svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
+    <svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
-          <stop offset="50%" style="stop-color:#6366f1;stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+          <stop offset="0%" style="stop-color:#0f0a2e" />
+          <stop offset="50%" style="stop-color:#1e1b4b" />
+          <stop offset="100%" style="stop-color:#312e81" />
         </linearGradient>
+        <radialGradient id="g1" cx="30%" cy="40%">
+          <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.3" />
+          <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0" />
+        </radialGradient>
       </defs>
-      <rect width="${width}" height="${height}" fill="url(#bg)"/>
-      <!-- Tool icon area -->
-      <circle cx="${width / 2}" cy="${height / 2 - 200}" r="80" fill="rgba(255,255,255,0.2)"/>
-      <text x="${width / 2}" y="${height / 2 - 170}" text-anchor="middle" font-size="80" font-family="Arial">${tool.icon}</text>
-      <!-- Tool name -->
-      <text x="${width / 2}" y="${height / 2 - 60}" text-anchor="middle" fill="white" font-size="48" font-weight="bold" font-family="Arial, sans-serif">
-        ${escapeXml(tool.name)}
-      </text>
-      <!-- Hook text -->
-      ${hookLines
-        .map(
-          (line, i) =>
-            `<text x="${width / 2}" y="${height / 2 + 40 + i * 56}" text-anchor="middle" fill="#fef08a" font-size="44" font-weight="bold" font-family="Arial, sans-serif">${escapeXml(line)}</text>`
-        )
-        .join("")}
-      <!-- FREE badge -->
-      <rect x="${width / 2 - 100}" y="${height / 2 + 200}" width="200" height="60" rx="30" fill="#22c55e"/>
-      <text x="${width / 2}" y="${height / 2 + 240}" text-anchor="middle" fill="white" font-size="32" font-weight="bold" font-family="Arial, sans-serif">
-        100% FREE
-      </text>
-      <!-- Branding -->
-      <text x="${width / 2}" y="${height - 80}" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="32" font-weight="600" font-family="Arial, sans-serif">
-        sabtools.in
-      </text>
+      <rect width="${W}" height="${H}" fill="url(#bg)"/>
+      <rect width="${W}" height="${H}" fill="url(#g1)"/>
+
+      <text x="${W / 2}" y="${H / 2 - 400}" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="28" letter-spacing="8" font-family="Arial">WATCH THIS</text>
+      <rect x="${W / 2 - 40}" y="${H / 2 - 370}" width="80" height="3" rx="2" fill="#818cf8"/>
+
+      <text x="${W / 2}" y="${H / 2 - 220}" text-anchor="middle" font-size="120">${tool.icon}</text>
+
+      <text x="${W / 2}" y="${H / 2 - 80}" text-anchor="middle" fill="white" font-size="56" font-weight="bold" font-family="Arial">${escapeXml(tool.name)}</text>
+
+      ${hookLines.map((line, i) =>
+        `<text x="${W / 2}" y="${H / 2 + 40 + i * 58}" text-anchor="middle" fill="#fbbf24" font-size="44" font-weight="bold" font-family="Arial">${escapeXml(line)}</text>`
+      ).join("")}
+
+      <rect x="${W / 2 - 130}" y="${H / 2 + 220}" width="260" height="70" rx="35" fill="#22c55e"/>
+      <text x="${W / 2}" y="${H / 2 + 266}" text-anchor="middle" fill="white" font-size="36" font-weight="bold" font-family="Arial">100% FREE</text>
+
+      <text x="${W / 2}" y="${H - 280}" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="30" font-family="Arial">Let me show you how it works ↓</text>
+
+      <rect y="${H - 120}" width="${W}" height="120" fill="rgba(0,0,0,0.4)"/>
+      <text x="${W / 2}" y="${H - 62}" text-anchor="middle" fill="white" font-size="36" font-weight="bold" font-family="Arial">sabtools.in</text>
     </svg>
   `;
-
   await sharp(Buffer.from(svg)).png().toFile(outputPath);
 }
 
-async function createCtaFrame(tool, script, outputPath) {
-  const width = config.VIDEO_WIDTH;
-  const height = config.VIDEO_HEIGHT;
-
+async function createOutroFrame(tool, script, outputPath) {
   const svg = `
-    <svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
+    <svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <linearGradient id="ctabg" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#1e1b4b;stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#312e81;stop-opacity:1" />
+        <linearGradient id="obg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0f0a2e" />
+          <stop offset="100%" style="stop-color:#1e1b4b" />
+        </linearGradient>
+        <linearGradient id="btn" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#4f46e5" />
+          <stop offset="100%" style="stop-color:#7c3aed" />
         </linearGradient>
       </defs>
-      <rect width="${width}" height="${height}" fill="url(#ctabg)"/>
-      <!-- Big CTA -->
-      <text x="${width / 2}" y="${height / 2 - 200}" text-anchor="middle" fill="white" font-size="56" font-weight="bold" font-family="Arial, sans-serif">
-        Try It FREE!
-      </text>
-      <!-- URL -->
-      <rect x="${width / 2 - 250}" y="${height / 2 - 120}" width="500" height="80" rx="40" fill="#4f46e5"/>
-      <text x="${width / 2}" y="${height / 2 - 68}" text-anchor="middle" fill="white" font-size="40" font-weight="bold" font-family="Arial, sans-serif">
-        sabtools.in
-      </text>
-      <!-- Features -->
-      <text x="${width / 2}" y="${height / 2 + 40}" text-anchor="middle" fill="#a5b4fc" font-size="32" font-family="Arial, sans-serif">
-        460+ Free Online Tools
-      </text>
-      <text x="${width / 2}" y="${height / 2 + 100}" text-anchor="middle" fill="#a5b4fc" font-size="28" font-family="Arial, sans-serif">
-        No Signup | No Ads | Made for India
-      </text>
-      <!-- Arrow -->
-      <text x="${width / 2}" y="${height / 2 + 180}" text-anchor="middle" fill="#fbbf24" font-size="48" font-family="Arial, sans-serif">
-        Link in Bio
-      </text>
-      <text x="${width / 2}" y="${height / 2 + 250}" text-anchor="middle" fill="#fbbf24" font-size="60" font-family="Arial, sans-serif">
-        ↓ ↓ ↓
-      </text>
-      <!-- Subscribe text -->
-      <rect x="${width / 2 - 180}" y="${height - 200}" width="360" height="60" rx="30" fill="#ef4444"/>
-      <text x="${width / 2}" y="${height - 160}" text-anchor="middle" fill="white" font-size="28" font-weight="bold" font-family="Arial, sans-serif">
-        SUBSCRIBE for more!
-      </text>
+      <rect width="${W}" height="${H}" fill="url(#obg)"/>
+      <circle cx="200" cy="400" r="300" fill="rgba(79,70,229,0.08)"/>
+      <circle cx="880" cy="1500" r="400" fill="rgba(124,58,237,0.06)"/>
+
+      <text x="${W / 2}" y="${H / 2 - 420}" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="28" letter-spacing="6" font-family="Arial">YOUR TURN</text>
+      <text x="${W / 2}" y="${H / 2 - 320}" text-anchor="middle" fill="white" font-size="64" font-weight="bold" font-family="Arial">Try It Now!</text>
+      <text x="${W / 2}" y="${H / 2 - 240}" text-anchor="middle" fill="#a5b4fc" font-size="36" font-family="Arial">${escapeXml(tool.name)} — 100% Free</text>
+
+      <rect x="${W / 2 - 300}" y="${H / 2 - 170}" width="600" height="100" rx="50" fill="url(#btn)"/>
+      <text x="${W / 2}" y="${H / 2 - 108}" text-anchor="middle" fill="white" font-size="48" font-weight="bold" font-family="Arial">sabtools.in</text>
+
+      <text x="${W / 2}" y="${H / 2 + 10}" text-anchor="middle" fill="#c7d2fe" font-size="34" font-family="Arial">460+ Free Online Tools</text>
+      <text x="${W / 2}" y="${H / 2 + 70}" text-anchor="middle" fill="#c7d2fe" font-size="34" font-family="Arial">No Signup Required</text>
+      <text x="${W / 2}" y="${H / 2 + 130}" text-anchor="middle" fill="#c7d2fe" font-size="34" font-family="Arial">Made for India</text>
+
+      <text x="${W / 2}" y="${H / 2 + 280}" text-anchor="middle" fill="#fbbf24" font-size="44" font-weight="bold" font-family="Arial">🔗 Link in Comment Section</text>
+
+      <rect x="${W / 2 - 200}" y="${H - 280}" width="400" height="80" rx="40" fill="#ef4444"/>
+      <text x="${W / 2}" y="${H - 228}" text-anchor="middle" fill="white" font-size="34" font-weight="bold" font-family="Arial">SUBSCRIBE</text>
+
+      <text x="${W / 2}" y="${H - 140}" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="28" font-family="Arial">Like and Share with friends</text>
+      <text x="${W / 2}" y="${H - 60}" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="22" font-family="Arial">SabTools.in — All Free Online Tools for India</text>
     </svg>
   `;
-
   await sharp(Buffer.from(svg)).png().toFile(outputPath);
 }
 
 function wrapText(text, maxChars) {
   const words = text.split(" ");
   const lines = [];
-  let currentLine = "";
-
-  for (const word of words) {
-    if ((currentLine + " " + word).trim().length > maxChars) {
-      if (currentLine) lines.push(currentLine.trim());
-      currentLine = word;
+  let cur = "";
+  for (const w of words) {
+    if ((cur + " " + w).trim().length > maxChars) {
+      if (cur) lines.push(cur.trim());
+      cur = w;
     } else {
-      currentLine = (currentLine + " " + word).trim();
+      cur = (cur + " " + w).trim();
     }
   }
-  if (currentLine) lines.push(currentLine.trim());
-
-  return lines.slice(0, 3).join("\n"); // Max 3 lines
+  if (cur) lines.push(cur.trim());
+  return lines.slice(0, 4).join("\n");
 }
 
 function escapeXml(str) {
-  return String(str || "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&apos;");
+  return String(str || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
+}
+
+function getAudioDuration(audioPath) {
+  return new Promise((resolve) => {
+    ffmpeg.ffprobe(audioPath, (err, meta) => {
+      resolve(err || !meta ? config.VIDEO_DURATION_TARGET : (meta.format.duration || config.VIDEO_DURATION_TARGET));
+    });
+  });
 }
 
 module.exports = { createVideo };
