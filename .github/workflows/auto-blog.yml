@@ -1,0 +1,63 @@
+name: Auto Blog Generator
+
+on:
+  schedule:
+    # 5 posts per day, ~4.8 hours apart
+    - cron: '0 0 * * *'    # 5:30 AM IST
+    - cron: '0 5 * * *'    # 10:30 AM IST
+    - cron: '0 10 * * *'   # 3:30 PM IST
+    - cron: '0 15 * * *'   # 8:30 PM IST
+    - cron: '0 20 * * *'   # 1:30 AM IST
+  workflow_dispatch: {}     # Manual trigger button in GitHub UI
+
+concurrency:
+  group: auto-blog
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Puppeteer Chrome
+        run: npx puppeteer browsers install chrome
+
+      - name: Generate blog post
+        run: node scripts/blog/generate-blog.js
+
+      - name: Take screenshot
+        run: node scripts/blog/screenshot.js
+
+      - name: Commit and push
+        run: |
+          git config user.name "SabTools Bot"
+          git config user.email "bot@sabtools.in"
+          git add -A
+          TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "blog: auto-publish ${TIMESTAMP}"
+          git push
+
+      - name: Submit to Google Indexing API
+        run: node scripts/blog/index-url.js
+        env:
+          GOOGLE_SERVICE_ACCOUNT_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_KEY }}
+        continue-on-error: true  # Don't fail workflow if indexing fails
