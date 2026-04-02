@@ -98,7 +98,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "", // TODO: Add new Search Console verification
+    google: "oNXrmRov9xzAcfS5YekN-KrUPjNlOSkL1KmgvDvgVYE",
   },
   other: {
     "rating": "general",
