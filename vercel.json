@@ -4,7 +4,9 @@
     { "source": "/products/", "destination": "/", "permanent": true },
     { "source": "/product/:slug*", "destination": "/tools/:slug*", "permanent": true },
     { "source": "/product/:slug*/", "destination": "/tools/:slug*", "permanent": true },
-    { "source": "/tool/:slug*", "destination": "/tools/:slug*", "permanent": true }
+    { "source": "/tool/:slug*", "destination": "/tools/:slug*", "permanent": true },
+    { "source": "/:path*", "has": [{ "type": "host", "value": "sabtools.vercel.app" }], "destination": "https://sabtools.in/:path*", "permanent": true },
+    { "source": "/:path*", "has": [{ "type": "host", "value": "sabtools-two.vercel.app" }], "destination": "https://sabtools.in/:path*", "permanent": true }
   ],
   "headers": [
     {
