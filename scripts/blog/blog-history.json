@@ -1,9 +1,10 @@
 {
   "bloggedTools": [
     "emi-calculator",
-    "percentage-calculator"
+    "percentage-calculator",
+    "sip-calculator"
   ],
-  "lastCategory": "math",
-  "totalPosts": 2,
-  "lastRun": "2026-04-02T11:24:44.078Z"
+  "lastCategory": "finance",
+  "totalPosts": 3,
+  "lastRun": "2026-04-02T17:39:13.268Z"
 }
