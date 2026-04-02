@@ -3,7 +3,7 @@
 import Script from "next/script";
 
 const GA_MEASUREMENT_ID = "G-WWFV24G99D";
-const GTM_ID = ""; // GTM not needed — using GA4 directly
+const GTM_ID = "GTM-5KPJ4LPT";
 
 export default function GoogleAnalytics() {
   return (
