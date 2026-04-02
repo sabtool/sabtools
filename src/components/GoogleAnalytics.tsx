@@ -2,8 +2,8 @@
 
 import Script from "next/script";
 
-const GA_MEASUREMENT_ID = "G-B8Z3TD2DL8";
-const GTM_ID = "GTM-5XH5NJPZ";
+const GA_MEASUREMENT_ID = ""; // TODO: Add new GA4 Measurement ID
+const GTM_ID = ""; // TODO: Add new GTM ID (optional)
 
 export default function GoogleAnalytics() {
   return (

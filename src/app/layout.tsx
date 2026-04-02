@@ -98,7 +98,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "GqkwjowsFohBgklNGrXwF-wwuRrsS059u5FHdi46eZA",
+    google: "", // TODO: Add new Search Console verification
   },
   other: {
     "rating": "general",
@@ -137,7 +137,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-5XH5NJPZ"
+            src="" // TODO: Add new GTM noscript URL
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
