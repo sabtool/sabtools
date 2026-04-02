@@ -73,21 +73,6 @@ export default function ContactPage() {
 
   return (
     <>
-      {/* SEO head tags for client component */}
-      <title>Contact Us — SabTools.in | Free Online Tools for India</title>
-      <meta
-        name="description"
-        content="Get in touch with the SabTools.in team. Report bugs, request new tools, share feedback, or explore business partnerships. We typically respond within 24-48 hours."
-      />
-      <link rel="canonical" href="https://sabtools.in/contact" />
-      <meta property="og:title" content="Contact Us — SabTools.in" />
-      <meta
-        property="og:description"
-        content="Get in touch with the SabTools.in team. Report bugs, request new tools, share feedback, or explore business partnerships."
-      />
-      <meta property="og:url" content="https://sabtools.in/contact" />
-      <meta property="og:type" content="website" />
-
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
         <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Contact Us" }]} />
 

@@ -24,6 +24,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       canonical: `https://sabtools.in/hi/tools/${slug}`,
       languages: { en: `https://sabtools.in/tools/${slug}`, hi: `https://sabtools.in/hi/tools/${slug}` },
     },
+    openGraph: {
+      title: `${ht.name} — मुफ्त ऑनलाइन टूल | SabTools.in`,
+      description: `${ht.description}। 100% मुफ्त, बिना साइनअप।`,
+      url: `https://sabtools.in/hi/tools/${slug}`,
+      type: "website",
+      locale: "hi_IN",
+      siteName: "SabTools.in",
+    },
+    twitter: {
+      card: "summary",
+      title: `${ht.name} — मुफ्त ऑनलाइन टूल`,
+      description: `${ht.description}। 100% मुफ्त, बिना साइनअप।`,
+    },
   };
 }
 

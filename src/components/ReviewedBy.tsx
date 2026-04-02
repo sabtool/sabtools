@@ -67,70 +67,24 @@ export default function ReviewedBy({ category, toolName, slug }: ReviewedByProps
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "12px",
-          padding: "10px 16px",
-          border: "1px solid #e0e7ff",
-          borderRadius: "10px",
-          backgroundColor: "#f8fafc",
-          maxWidth: "480px",
-          marginTop: "16px",
-        }}
-      >
-        {/* Avatar circle with initials */}
+      <div className="flex items-center gap-3 px-4 py-2.5 border border-indigo-100 rounded-[10px] bg-slate-50 max-w-[480px] mt-4">
         <div
-          style={{
-            width: "40px",
-            height: "40px",
-            minWidth: "40px",
-            borderRadius: "50%",
-            backgroundColor: reviewer.color,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#fff",
-            fontWeight: 700,
-            fontSize: "14px",
-            letterSpacing: "0.5px",
-          }}
+          className="w-10 h-10 min-w-[40px] rounded-full flex items-center justify-center text-white text-sm font-bold tracking-wide"
+          style={{ backgroundColor: reviewer.color }}
         >
           {reviewer.initials}
         </div>
-
-        {/* Text content */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              style={{ minWidth: "16px" }}
-            >
+        <div className="flex flex-col gap-0.5">
+          <div className="flex items-center gap-1.5">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="min-w-[16px]" aria-hidden="true">
               <circle cx="8" cy="8" r="8" fill="#16a34a" />
-              <path
-                d="M5 8.5L7 10.5L11 6"
-                stroke="#fff"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
+              <path d="M5 8.5L7 10.5L11 6" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <span
-              style={{
-                fontSize: "13px",
-                fontWeight: 600,
-                color: "#1e293b",
-                lineHeight: 1.3,
-              }}
-            >
+            <span className="text-[13px] font-semibold text-slate-800 leading-tight">
               Reviewed by {reviewer.name}
             </span>
           </div>
-          <span style={{ fontSize: "12px", color: "#64748b", lineHeight: 1.3 }}>
+          <span className="text-xs text-slate-500 leading-tight">
             {reviewer.title} &middot; Last updated: March 2026
           </span>
         </div>
