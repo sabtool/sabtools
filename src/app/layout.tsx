@@ -134,15 +134,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="p:domain_verify" content="2979c659d48751bc3545b2d2d9df6662" />
       </head>
       <body className="min-h-screen flex flex-col">
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="" // TODO: Add new GTM noscript URL
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
         <GoogleAnalytics />
         <Header />
         <main className="flex-1">{children}</main>
