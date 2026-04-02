@@ -1,8 +1,9 @@
 {
   "bloggedTools": [
-    "emi-calculator"
+    "emi-calculator",
+    "percentage-calculator"
   ],
-  "lastCategory": "finance",
-  "totalPosts": 1,
-  "lastRun": "2026-03-30T07:00:45.137Z"
+  "lastCategory": "math",
+  "totalPosts": 2,
+  "lastRun": "2026-04-02T11:24:44.078Z"
 }
