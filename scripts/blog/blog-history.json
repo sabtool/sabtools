@@ -6,9 +6,10 @@
     "age-calculator",
     "gst-calculator",
     "bmi-calculator",
-    "fd-calculator"
+    "fd-calculator",
+    "word-counter"
   ],
-  "lastCategory": "finance",
-  "totalPosts": 7,
-  "lastRun": "2026-04-03T11:56:50.243Z"
+  "lastCategory": "text",
+  "totalPosts": 8,
+  "lastRun": "2026-04-03T17:02:27.562Z"
 }
