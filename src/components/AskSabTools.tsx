@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
+import { tools } from "@/lib/tools";
 
 interface Message {
   type: "bot" | "user";
@@ -9,9 +10,10 @@ interface Message {
   tools?: { slug: string; name: string }[];
 }
 
-const GEMINI_API_KEY = "AIzaSyCSIMV-VmC4XODdx8QhsZcxA5e2H3ehLH4";
+const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_KEY || "";
+const TOOL_COUNT = tools.length;
 
-const SYSTEM_PROMPT = `You are SabTools Assistant — a friendly, helpful AI chatbot for SabTools.in, India's largest free online tools website with 424+ tools.
+const SYSTEM_PROMPT = `You are SabTools Assistant — a friendly, helpful AI chatbot for SabTools.in, India's largest free online tools website with ${TOOL_COUNT}+ tools.
 
 Your job is to:
 1. Help users find the right tool for their needs
@@ -64,7 +66,7 @@ interface ConversationMessage {
 async function callGemini(userMessage: string, history: ConversationMessage[]): Promise<string> {
   const contents = [
     { role: "user" as const, parts: [{ text: SYSTEM_PROMPT }] },
-    { role: "model" as const, parts: [{ text: "Understood! I'm SabTools Assistant. I'll help users find the right tools from SabTools.in's 424+ free tools. I'll keep responses short, friendly, and recommend tools using the [TOOL:slug:name] format. Ready to help!" }] },
+    { role: "model" as const, parts: [{ text: `Understood! I'm SabTools Assistant. I'll help users find the right tools from SabTools.in's ${TOOL_COUNT}+ free tools. I'll keep responses short, friendly, and recommend tools using the [TOOL:slug:name] format. Ready to help!` }] },
     ...history,
     { role: "user" as const, parts: [{ text: userMessage }] },
   ];
@@ -167,11 +169,12 @@ export default function AskSabTools() {
       {/* Floating Button */}
       {!isOpen && (
         <button
+          type="button"
           onClick={() => setIsOpen(true)}
           className="fixed left-6 bottom-6 z-40 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold py-3 px-5 rounded-full shadow-lg hover:shadow-xl hover:from-indigo-700 hover:to-purple-700 transition-all active:scale-95 flex items-center gap-2 text-sm"
           aria-label="Ask SabTools"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
           </svg>
           <span className="hidden sm:inline">Ask SabTools AI</span>
@@ -180,15 +183,15 @@ export default function AskSabTools() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed left-0 bottom-0 sm:left-6 sm:bottom-6 z-50 w-full sm:w-[380px] h-[65vh] sm:h-[500px] bg-white rounded-t-2xl sm:rounded-2xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden animate-slide-up">
+        <div role="dialog" aria-modal="true" aria-label="Chat with SabTools AI" className="fixed left-0 bottom-0 sm:left-6 sm:bottom-6 z-50 w-full sm:w-[380px] h-[65vh] sm:h-[500px] bg-white rounded-t-2xl sm:rounded-2xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden animate-slide-up">
           {/* Header */}
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-3 flex items-center justify-between shrink-0">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
               <span className="font-semibold text-sm">SabTools AI Assistant</span>
             </div>
-            <button onClick={() => setIsOpen(false)} className="p-1 hover:bg-white/20 rounded-full transition-colors" aria-label="Close chat">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <button type="button" onClick={() => setIsOpen(false)} className="p-1 hover:bg-white/20 rounded-full transition-colors" aria-label="Close chat">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
@@ -241,6 +244,7 @@ export default function AskSabTools() {
             <div className="px-4 pb-2 flex flex-wrap gap-1.5">
               {["Calculate EMI", "Compress image", "Income tax help", "Sleep calculator", "PDF tools"].map((q) => (
                 <button
+                  type="button"
                   key={q}
                   onClick={() => { setInput(q); }}
                   className="text-xs bg-indigo-50 text-indigo-600 px-3 py-1.5 rounded-full hover:bg-indigo-100 transition-colors border border-indigo-100"
@@ -261,16 +265,18 @@ export default function AskSabTools() {
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={handleKeyDown}
                 placeholder="Ask me anything..."
+                aria-label="Type your message"
                 disabled={isLoading}
                 className="flex-1 px-3 py-2 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent disabled:opacity-50"
               />
               <button
+                type="button"
                 onClick={handleSend}
                 disabled={!input.trim() || isLoading}
                 className="bg-indigo-600 text-white p-2 rounded-full hover:bg-indigo-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed shrink-0"
                 aria-label="Send message"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                 </svg>
               </button>

@@ -33,7 +33,14 @@ export default function ReadingProgress() {
   }, [handleScroll, updateProgress]);
 
   return (
-    <div className="fixed top-0 left-0 w-full h-[3px] z-50 bg-transparent">
+    <div
+      className="fixed top-0 left-0 w-full h-[3px] z-50 bg-transparent"
+      role="progressbar"
+      aria-valuenow={Math.round(progress)}
+      aria-valuemin={0}
+      aria-valuemax={100}
+      aria-label="Reading progress"
+    >
       <div
         className="h-full bg-gradient-to-r from-indigo-500 to-purple-500 transition-[width] duration-150 ease-out"
         style={{ width: `${progress}%` }}

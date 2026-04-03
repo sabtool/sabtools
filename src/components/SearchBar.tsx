@@ -21,19 +21,21 @@ export default function SearchBar() {
   }, [query]);
 
   return (
-    <div className="relative w-full max-w-2xl mx-auto" style={{ zIndex: 9999 }}>
+    <div className="relative w-full max-w-2xl mx-auto z-50">
       <div className="relative">
         <svg
           className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
+          aria-hidden="true"
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
         <input
           type="text"
           placeholder="Search tools... e.g. EMI Calculator, Word Counter"
+          aria-label="Search tools"
           className="search-bar"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -42,7 +44,7 @@ export default function SearchBar() {
         />
       </div>
       {focused && results.length > 0 && (
-        <div className="absolute top-full mt-2 w-full bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden" style={{ zIndex: 9999 }}>
+        <div className="absolute top-full mt-2 w-full bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden z-50">
           {results.map((tool) => (
             <Link
               key={tool.slug}

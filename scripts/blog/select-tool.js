@@ -54,6 +54,10 @@ function loadTools() {
     });
   }
 
+  if (tools.length === 0) {
+    console.warn("WARNING: loadTools() returned 0 tools. Check that src/lib/tools.ts exists and has the expected format.");
+  }
+
   return tools;
 }
 

@@ -115,8 +115,10 @@ export default function SuggestTool() {
     <>
       {/* Floating Button */}
       <button
+        type="button"
         onClick={open}
         className="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-purple-600 to-violet-600 text-white font-semibold py-3 px-5 rounded-full shadow-lg hover:shadow-xl hover:from-purple-700 hover:to-violet-700 transition-all active:scale-95 flex items-center gap-2 text-sm"
+        aria-label="Suggest a Tool"
       >
         <span role="img" aria-label="lightbulb">💡</span>
         <span className="hidden sm:inline">Suggest a Tool</span>
@@ -132,6 +134,9 @@ export default function SuggestTool() {
         >
           <div
             ref={modalRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Suggest a tool"
             className={`w-full sm:max-w-md bg-white sm:rounded-2xl rounded-t-2xl shadow-2xl transition-all duration-300 ease-out max-h-[90vh] overflow-y-auto ${
               animateIn
                 ? "translate-y-0 opacity-100"
@@ -147,11 +152,12 @@ export default function SuggestTool() {
                   Suggest a Tool
                 </h2>
                 <button
+                  type="button"
                   onClick={close}
                   className="text-gray-400 hover:text-gray-600 transition-colors p-1"
                   aria-label="Close"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
@@ -239,7 +245,7 @@ export default function SuggestTool() {
             ) : (
               <div className="p-6 text-center">
                 <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <svg className="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
@@ -248,6 +254,7 @@ export default function SuggestTool() {
                   Thanks! We&apos;ll review your suggestion.
                 </p>
                 <button
+                  type="button"
                   onClick={close}
                   className="bg-gray-100 text-gray-600 font-medium py-2.5 px-6 rounded-xl text-sm hover:bg-gray-200 transition-all"
                 >

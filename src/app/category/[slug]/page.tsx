@@ -192,7 +192,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     keywords: [cat.name.toLowerCase(), ...cat.description.toLowerCase().split(", ").slice(0, 5), "free tools", "online tools", "sabtools", "india"],
     alternates: {
       canonical: `https://sabtools.in/category/${slug}`,
-      languages: { en: `https://sabtools.in/category/${slug}`, hi: `https://sabtools.in/hi/category/${slug}` },
     },
     openGraph: {
       title: `${cat.name} — ${toolCount} Free Online Tools | SabTools.in`,

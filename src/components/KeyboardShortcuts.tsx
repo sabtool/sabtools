@@ -94,6 +94,7 @@ export default function KeyboardShortcuts() {
     <>
       {/* Floating trigger button — desktop only */}
       <button
+        type="button"
         onClick={() => setOpen(true)}
         aria-label="Keyboard shortcuts"
         className="hidden md:flex fixed bottom-6 right-6 z-50 items-center justify-center w-11 h-11 rounded-full bg-indigo-600 text-white shadow-lg hover:bg-indigo-700 hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2"
@@ -104,7 +105,10 @@ export default function KeyboardShortcuts() {
       {/* Modal overlay */}
       {open && (
         <div
-          className="hidden md:flex fixed inset-0 z-[9999] items-center justify-center bg-black/50 backdrop-blur-sm"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Keyboard shortcuts"
+          className="hidden md:flex fixed inset-0 z-[60] items-center justify-center bg-black/50 backdrop-blur-sm"
           onClick={() => setOpen(false)}
         >
           <div
@@ -119,6 +123,7 @@ export default function KeyboardShortcuts() {
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
@@ -134,7 +139,7 @@ export default function KeyboardShortcuts() {
                 className="p-1.5 rounded-lg text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                 aria-label="Close shortcuts modal"
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>

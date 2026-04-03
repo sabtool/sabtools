@@ -22,7 +22,9 @@ export default function EmbedCode({ slug }: EmbedCodeProps) {
   return (
     <div className="mt-8 border border-gray-200 rounded-2xl overflow-hidden">
       <button
+        type="button"
         onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
         className="w-full flex items-center justify-between px-5 py-4 bg-gray-50 hover:bg-gray-100 transition-colors text-left"
       >
         <div className="flex items-center gap-3">
@@ -34,6 +36,7 @@ export default function EmbedCode({ slug }: EmbedCodeProps) {
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
+          aria-hidden="true"
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
@@ -49,9 +52,11 @@ export default function EmbedCode({ slug }: EmbedCodeProps) {
               readOnly
               value={embedCode}
               rows={3}
+              aria-label="Embed code"
               className="w-full p-3 pr-24 bg-gray-900 text-green-400 text-sm font-mono rounded-xl border border-gray-700 resize-none focus:outline-none"
             />
             <button
+              type="button"
               onClick={handleCopy}
               className={`absolute top-3 right-3 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 ${
                 copied

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { categories } from "@/lib/tools";
+import { tools, categories } from "@/lib/tools";
 
 export default function Footer() {
   return (
@@ -29,7 +29,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
-              India&apos;s #1 free online tools website. 318+ calculators, converters, AI tools, PDF tools, developer tools and more. No signup, no limits, 100% free.
+              India&apos;s #1 free online tools website. {tools.length}+ calculators, converters, AI tools, PDF tools, developer tools and more. No signup, no limits, 100% free.
             </p>
           </div>
 

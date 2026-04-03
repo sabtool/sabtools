@@ -7,6 +7,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [toolsOpen, setToolsOpen] = useState(false);
   const pathname = usePathname();
   const isHindi = pathname.startsWith("/hi");
 
@@ -52,19 +53,28 @@ export default function Header() {
             <Link href="/" className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-indigo-600 rounded-lg hover:bg-indigo-50 transition">
               Home
             </Link>
-            <div className="relative group">
-              <button className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-indigo-600 rounded-lg hover:bg-indigo-50 transition flex items-center gap-1" aria-label="View tools by category" aria-haspopup="true">
+            <div className="relative group" onMouseLeave={() => setToolsOpen(false)}>
+              <button
+                type="button"
+                className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-indigo-600 rounded-lg hover:bg-indigo-50 transition flex items-center gap-1"
+                aria-label="View tools by category"
+                aria-haspopup="true"
+                aria-expanded={toolsOpen}
+                onClick={() => setToolsOpen(!toolsOpen)}
+                onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setToolsOpen(!toolsOpen); } }}
+              >
                 Tools
                 <svg className="w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div className="absolute top-full left-0 mt-1 w-72 max-h-96 overflow-y-auto bg-white rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-2">
+              <div className={`absolute top-full left-0 mt-1 w-72 max-h-96 overflow-y-auto bg-white rounded-2xl shadow-xl border border-gray-100 transition-all duration-200 p-2 ${toolsOpen ? "opacity-100 visible" : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"}`}>
                 {categories.map((cat) => (
                   <Link
                     key={cat.slug}
                     href={`/category/${cat.slug}`}
                     className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-indigo-50 transition"
+                    onClick={() => setToolsOpen(false)}
                   >
                     <span className="text-xl">{cat.icon}</span>
                     <div>

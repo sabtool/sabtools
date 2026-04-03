@@ -181,6 +181,7 @@ export default function ToolRating({ slug, toolName }: ToolRatingProps) {
           <div className="flex items-center gap-0.5">
             {[1, 2, 3, 4, 5].map((star) => (
               <button
+                type="button"
                 key={star}
                 onClick={() => handleStarClick(star)}
                 onMouseEnter={() => !hasRated && setHoverStars(star)}
@@ -216,6 +217,7 @@ export default function ToolRating({ slug, toolName }: ToolRatingProps) {
         <div className="flex items-center gap-2">
           <span className="text-sm text-gray-600 dark:text-gray-300">Helpful?</span>
           <button
+            type="button"
             onClick={() => handleHelpful(true)}
             disabled={hasRated}
             aria-label="This tool was helpful"
@@ -233,6 +235,7 @@ export default function ToolRating({ slug, toolName }: ToolRatingProps) {
             Yes
           </button>
           <button
+            type="button"
             onClick={() => handleHelpful(false)}
             disabled={hasRated}
             aria-label="This tool was not helpful"

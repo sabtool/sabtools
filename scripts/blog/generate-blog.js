@@ -129,12 +129,18 @@ function appendBlogPost(post) {
   const insertRegex = /,(\s*)\n\];/;
   const noCommaRegex = /}(\s*)\n\];/;
 
+  // Handle empty array case: blogPosts = [] or blogPosts = [\n]
+  const emptyArrayRegex = /\[\s*\];/;
+
   if (content.match(insertRegex)) {
     // Already has trailing comma — just insert the new post
     content = content.replace(insertRegex, `,${postStr}\n];`);
   } else if (content.match(noCommaRegex)) {
     // No trailing comma — add one
     content = content.replace(noCommaRegex, `},${postStr}\n];`);
+  } else if (content.match(emptyArrayRegex)) {
+    // Empty array — insert first post without leading comma
+    content = content.replace(emptyArrayRegex, `[${postStr}\n];`);
   } else {
     // Fallback: find last closing bracket
     const lastBracket = content.lastIndexOf("];");

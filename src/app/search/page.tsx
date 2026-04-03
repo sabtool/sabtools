@@ -9,7 +9,7 @@ import { trackSearch } from "@/lib/analytics";
 
 export default function SearchPage() {
   return (
-    <Suspense fallback={<div className="max-w-7xl mx-auto px-4 py-8 text-center text-gray-400">Loading...</div>}>
+    <Suspense fallback={<div className="max-w-7xl mx-auto px-4 py-8 text-center text-gray-500">Loading...</div>}>
       <SearchContent />
     </Suspense>
   );
@@ -54,9 +54,9 @@ function SearchContent() {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search 460+ free tools..."
+          placeholder={`Search ${tools.length}+ free tools...`}
           className="w-full max-w-xl px-5 py-3 rounded-xl border border-gray-200 shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none text-lg"
-          aria-label="Search 460+ free online tools"
+          aria-label={`Search ${tools.length}+ free online tools`}
           autoFocus
         />
       </div>
@@ -84,7 +84,7 @@ function SearchContent() {
       ) : (
         <div className="text-center py-12">
           <div className="text-6xl mb-4">🛠️</div>
-          <p className="text-gray-500 mb-4">Start typing to search our 460+ free tools</p>
+          <p className="text-gray-500 mb-4">Start typing to search our {tools.length}+ free tools</p>
           <div className="flex flex-wrap justify-center gap-2 mt-6">
             {categories.slice(0, 8).map((cat) => (
               <Link

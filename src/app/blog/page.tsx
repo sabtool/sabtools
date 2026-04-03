@@ -15,6 +15,13 @@ export const metadata: Metadata = {
       "Expert articles on personal finance, tax planning, and free online tools for Indians.",
     url: "https://sabtools.in/blog",
     type: "website",
+    locale: "en_IN",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog — Financial Tips, Tax Guides & Tool Tutorials | SabTools.in",
+    description:
+      "Expert articles on personal finance, tax planning, and free online tools for Indians.",
   },
 };
 
@@ -52,8 +59,8 @@ export default function BlogPage() {
                 <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-600 text-white uppercase tracking-wide">
                   {post.category}
                 </span>
-                <span className="text-xs text-gray-400 flex items-center gap-1">
-                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <span className="text-xs text-gray-500 flex items-center gap-1">
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   {post.readTime}
                 </span>
               </div>
@@ -64,7 +71,7 @@ export default function BlogPage() {
                 {post.description}
               </p>
               <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
-                <span className="text-xs text-gray-400">
+                <span className="text-xs text-gray-500">
                   {new Date(post.date).toLocaleDateString("en-IN", {
                     year: "numeric",
                     month: "long",

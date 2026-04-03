@@ -5,16 +5,21 @@ import { tools, categories } from "@/lib/tools";
 
 export const metadata: Metadata = {
   title: "About SabTools.in — India's Largest Free Online Tools Platform",
-  description: `SabTools.in provides ${460}+ free online tools including EMI calculators, SIP calculators, GST tools, text utilities, developer tools, image tools, and more — all built for India. No signup, 100% free.`,
+  description: `SabTools.in provides ${tools.length}+ free online tools including EMI calculators, SIP calculators, GST tools, text utilities, developer tools, image tools, and more — all built for India. No signup, 100% free.`,
   keywords: ["sabtools", "free online tools", "india tools", "calculator", "converter", "sabtools.in about"],
   alternates: { canonical: "https://sabtools.in/about" },
   openGraph: {
     title: "About SabTools.in — India's Largest Free Online Tools Platform",
-    description: "460+ free online tools for calculators, converters, text, developer, image, SEO, and more. Made for India.",
+    description: `${tools.length}+ free online tools for calculators, converters, text, developer, image, SEO, and more. Made for India.`,
     url: "https://sabtools.in/about",
     type: "website",
     locale: "en_IN",
     siteName: "SabTools.in",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About SabTools.in — India's Largest Free Online Tools Platform",
+    description: `${tools.length}+ free online tools for calculators, converters, text, developer, image, SEO, and more. Made for India.`,
   },
 };
 
