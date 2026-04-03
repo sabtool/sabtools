@@ -1,9 +1,11 @@
 {
   "bloggedTools": [
     "emi-calculator",
-    "percentage-calculator"
+    "percentage-calculator",
+    "sip-calculator",
+    "age-calculator"
   ],
   "lastCategory": "math",
-  "totalPosts": 2,
-  "lastRun": "2026-04-02T11:24:44.078Z"
+  "totalPosts": 4,
+  "lastRun": "2026-04-02T21:55:30.342Z"
 }
