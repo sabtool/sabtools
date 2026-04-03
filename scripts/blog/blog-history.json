@@ -5,9 +5,10 @@
     "sip-calculator",
     "age-calculator",
     "gst-calculator",
-    "bmi-calculator"
+    "bmi-calculator",
+    "fd-calculator"
   ],
-  "lastCategory": "math",
-  "totalPosts": 6,
-  "lastRun": "2026-04-03T08:09:12.294Z"
+  "lastCategory": "finance",
+  "totalPosts": 7,
+  "lastRun": "2026-04-03T11:56:50.243Z"
 }
