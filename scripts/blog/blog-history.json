@@ -3,9 +3,10 @@
     "emi-calculator",
     "percentage-calculator",
     "sip-calculator",
-    "age-calculator"
+    "age-calculator",
+    "gst-calculator"
   ],
-  "lastCategory": "math",
-  "totalPosts": 4,
-  "lastRun": "2026-04-02T21:55:30.342Z"
+  "lastCategory": "finance",
+  "totalPosts": 5,
+  "lastRun": "2026-04-03T05:53:07.099Z"
 }
