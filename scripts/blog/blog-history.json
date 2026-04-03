@@ -4,9 +4,10 @@
     "percentage-calculator",
     "sip-calculator",
     "age-calculator",
-    "gst-calculator"
+    "gst-calculator",
+    "bmi-calculator"
   ],
-  "lastCategory": "finance",
-  "totalPosts": 5,
-  "lastRun": "2026-04-03T05:53:07.099Z"
+  "lastCategory": "math",
+  "totalPosts": 6,
+  "lastRun": "2026-04-03T08:09:12.294Z"
 }
