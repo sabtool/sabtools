@@ -4,6 +4,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import AdBanner from "@/components/AdBanner";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import { tools } from "@/lib/tools";
 
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
@@ -281,6 +282,35 @@ export default async function BlogPostPage({
                 </div>
               </Link>
             ))}
+          </div>
+        </section>
+
+        {/* Popular Tools — blog-to-tool internal links */}
+        <section className="mt-12 border-t border-gray-200 pt-8">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Popular Free Tools</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {tools
+              .filter((t) => {
+                const postKw = new Set(post.keywords.map((k) => k.toLowerCase()));
+                return (
+                  t.slug === post.toolSlug ||
+                  t.category === post.category.toLowerCase() ||
+                  t.keywords.some((k) => postKw.has(k.toLowerCase()))
+                );
+              })
+              .slice(0, 8)
+              .map((t) => (
+                <Link
+                  key={t.slug}
+                  href={`/tools/${t.slug}`}
+                  className="flex items-center gap-2 p-3 bg-white rounded-xl border border-gray-100 hover:border-indigo-200 hover:shadow-sm transition group"
+                >
+                  <span className="text-lg shrink-0">{t.icon}</span>
+                  <span className="text-xs font-medium text-gray-700 group-hover:text-indigo-600 transition truncate">
+                    {t.name}
+                  </span>
+                </Link>
+              ))}
           </div>
         </section>
 

@@ -6,6 +6,7 @@ import RecentlyUsed from "@/components/RecentlyUsed";
 import FavoriteTools from "@/components/FavoriteTools";
 import ToolOfTheDay from "@/components/ToolOfTheDay";
 import { categories, tools } from "@/lib/tools";
+import { getAllPosts } from "@/lib/blog";
 
 export default function HomePage() {
   const popularTools = [
@@ -223,6 +224,52 @@ export default function HomePage() {
             </div>
           );
         })}
+      </section>
+
+      {/* Latest Blog Posts — homepage-to-blog internal links */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+        <div className="text-center mb-10">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Latest Guides & Tips</h2>
+          <p className="text-gray-500 mt-2">Learn how to make the most of our free tools</p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {getAllPosts().slice(0, 4).map((post) => (
+            <Link
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              className="group block bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg hover:border-indigo-200 transition-all duration-300 hover:-translate-y-1"
+            >
+              {post.image && (
+                <img
+                  src={post.image.src}
+                  alt={post.image.alt}
+                  width={400}
+                  height={210}
+                  loading="lazy"
+                  className="w-full h-36 object-cover"
+                />
+              )}
+              <div className="p-4">
+                <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-600">
+                  {post.category}
+                </span>
+                <h3 className="font-bold text-gray-800 group-hover:text-indigo-600 transition text-sm mt-2 line-clamp-2">
+                  {post.title}
+                </h3>
+                <p className="text-xs text-gray-500 mt-1 line-clamp-2">{post.description}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+        <div className="text-center mt-8">
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 hover:text-indigo-700 transition"
+          >
+            View All Articles
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+          </Link>
+        </div>
       </section>
 
       {/* Why Choose Section */}

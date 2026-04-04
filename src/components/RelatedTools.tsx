@@ -1,16 +1,43 @@
 import Link from "next/link";
 import { tools, type Tool } from "@/lib/tools";
 
+/**
+ * Enhanced RelatedTools — shows same-category tools + cross-category keyword matches.
+ * This improves internal linking for SEO (crawl equity distribution).
+ */
 export default function RelatedTools({ currentSlug, category }: { currentSlug: string; category: string }) {
-  const related = tools
-    .filter((t) => t.category === category && t.slug !== currentSlug)
-    .slice(0, 6);
+  const current = tools.find((t) => t.slug === currentSlug);
+  const currentKeywords = new Set(
+    (current?.keywords || []).map((k) => k.toLowerCase())
+  );
 
+  // Same-category tools (excluding current)
+  const sameCategory = tools
+    .filter((t) => t.category === category && t.slug !== currentSlug)
+    .slice(0, 4);
+
+  // Cross-category tools matched by keyword overlap
+  const crossCategory = currentKeywords.size > 0
+    ? tools
+        .filter((t) => t.category !== category && t.slug !== currentSlug)
+        .map((t) => {
+          const overlap = (t.keywords || []).filter((k) =>
+            currentKeywords.has(k.toLowerCase())
+          ).length;
+          return { tool: t, overlap };
+        })
+        .filter((item) => item.overlap > 0)
+        .sort((a, b) => b.overlap - a.overlap)
+        .slice(0, 3)
+        .map((item) => item.tool)
+    : [];
+
+  const related = [...sameCategory, ...crossCategory];
   if (related.length === 0) return null;
 
   return (
     <div className="mt-12">
-      <h2 className="text-xl font-bold text-gray-900 mb-4">🔧 Related Tools</h2>
+      <h2 className="text-xl font-bold text-gray-900 mb-4">Related Tools</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {related.map((tool: Tool) => (
           <Link

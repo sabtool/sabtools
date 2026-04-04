@@ -1,6 +1,7 @@
 import Breadcrumb from "@/components/Breadcrumb";
 import AdBanner from "@/components/AdBanner";
 import RelatedTools from "@/components/RelatedTools";
+import RelatedBlogPosts from "@/components/RelatedBlogPosts";
 import ShareButtons from "@/components/ShareButtons";
 import WhatsAppShareResult from "@/components/WhatsAppShareResult";
 import EmbedCode from "@/components/EmbedCode";
@@ -182,8 +183,31 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
           <ToolRating slug={tool.slug} toolName={tool.name} />
         </div>
 
-        {/* Related Tools */}
+        {/* Related Blog Guides — tool-to-blog internal links */}
+        <RelatedBlogPosts toolSlug={tool.slug} category={tool.category} keywords={tool.keywords} />
+
+        {/* Related Tools — same-category + cross-category keyword matches */}
         <RelatedTools currentSlug={tool.slug} category={tool.category} />
+
+        {/* Browse More Categories — cross-category crawl paths */}
+        <div className="mt-10">
+          <h2 className="text-lg font-bold text-gray-900 mb-3">Explore More Categories</h2>
+          <div className="flex flex-wrap gap-2">
+            {categories
+              .filter((c) => c.slug !== tool.category)
+              .slice(0, 8)
+              .map((c) => (
+                <a
+                  key={c.slug}
+                  href={`/category/${c.slug}`}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gray-50 hover:bg-indigo-50 border border-gray-200 hover:border-indigo-200 rounded-full text-xs font-medium text-gray-700 hover:text-indigo-700 transition"
+                >
+                  <span>{c.icon}</span>
+                  <span>{c.name}</span>
+                </a>
+              ))}
+          </div>
+        </div>
 
         <AdBanner format="rectangle" className="mt-8" />
       </div>
