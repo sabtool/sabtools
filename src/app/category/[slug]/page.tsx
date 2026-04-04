@@ -187,8 +187,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const toolCount = tools.filter((t) => t.category === slug).length;
   const desc = categoryDescriptions[slug] || defaultCategoryDesc;
   return {
-    title: `${cat.name} — ${toolCount} Free Online Tools for India | SabTools.in`,
-    description: `${desc.intro.slice(0, 155)}...`,
+    title: `${cat.name} — ${toolCount} Free Online Tools for India`,
+    description: desc.intro.length > 155 ? desc.intro.slice(0, desc.intro.lastIndexOf(" ", 152)) + "." : desc.intro,
     keywords: [cat.name.toLowerCase(), ...cat.description.toLowerCase().split(", ").slice(0, 5), "free tools", "online tools", "sabtools", "india"],
     alternates: {
       canonical: `https://sabtools.in/category/${slug}`,
@@ -200,6 +200,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "website",
       locale: "en_IN",
       siteName: "SabTools.in",
+      images: [{ url: "https://sabtools.in/og-image.png", width: 1200, height: 630, alt: `${cat.name} — Free Online Tools | SabTools.in` }],
     },
   };
 }

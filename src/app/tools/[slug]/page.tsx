@@ -17,10 +17,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const catName = cat?.name || "Online Tools";
 
   // Build unique, descriptive title (under 60 chars when possible)
-  const title = `${tool.name} Online Free - ${catName} | SabTools.in`;
+  const title = `${tool.name} Online Free - ${catName}`;
 
   // Build rich description with India focus (under 160 chars)
-  const desc = `${tool.description}. Free online ${tool.name.toLowerCase()} — no signup, instant results. Works on mobile & desktop. Made for India.`;
+  const desc = `${tool.description}. Free online ${tool.name.toLowerCase()} — no signup, instant results. Works on mobile & desktop.`;
 
   // Expanded keywords with long-tail variants
   const keywords = [
@@ -43,6 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       languages: {
         en: `https://sabtools.in/tools/${slug}`,
         hi: `https://sabtools.in/hi/tools/${slug}`,
+        "x-default": `https://sabtools.in/tools/${slug}`,
       },
     },
     openGraph: {
@@ -54,7 +55,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       siteName: "SabTools.in",
       images: [
         {
-          url: "https://sabtools.in/og-image.svg",
+          url: "https://sabtools.in/og-image.png",
           width: 1200,
           height: 630,
           alt: `${tool.name} - SabTools.in`,
@@ -65,7 +66,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       card: "summary_large_image",
       title: `${tool.name} - Free Online Tool | SabTools.in`,
       description: `${tool.description}. Free, instant results, no signup.`,
-      images: ["https://sabtools.in/og-image.svg"],
+      images: ["https://sabtools.in/og-image.png"],
     },
     other: {
       "rating": "general",

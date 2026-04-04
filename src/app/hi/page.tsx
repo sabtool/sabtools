@@ -4,24 +4,26 @@ import { hindiTools } from "@/lib/hindi";
 import { tools } from "@/lib/tools";
 
 export const metadata: Metadata = {
-  title: "SabTools.in - 290+ मुफ्त ऑनलाइन टूल्स हिंदी में",
-  description: "मुफ्त ऑनलाइन टूल्स — EMI कैलकुलेटर, SIP कैलकुलेटर, GST कैलकुलेटर, शब्द गणक और 290+ टूल्स। बिना साइनअप, 100% मुफ्त।",
+  title: `${hindiTools.length}+ मुफ्त ऑनलाइन टूल्स हिंदी में`,
+  description: `मुफ्त ऑनलाइन टूल्स — EMI कैलकुलेटर, SIP कैलकुलेटर, GST कैलकुलेटर, शब्द गणक और ${hindiTools.length}+ टूल्स। बिना साइनअप, 100% मुफ्त।`,
   alternates: {
     canonical: "https://sabtools.in/hi",
-    languages: { en: "https://sabtools.in", hi: "https://sabtools.in/hi" },
+    languages: { en: "https://sabtools.in", hi: "https://sabtools.in/hi", "x-default": "https://sabtools.in" },
   },
   openGraph: {
-    title: "SabTools.in - 290+ मुफ्त ऑनलाइन टूल्स हिंदी में",
-    description: "मुफ्त ऑनलाइन टूल्स — EMI कैलकुलेटर, SIP कैलकुलेटर, GST कैलकुलेटर और 290+ टूल्स। 100% मुफ्त।",
+    title: `SabTools.in - ${hindiTools.length}+ मुफ्त ऑनलाइन टूल्स हिंदी में`,
+    description: `मुफ्त ऑनलाइन टूल्स — EMI कैलकुलेटर, SIP कैलकुलेटर, GST कैलकुलेटर और ${hindiTools.length}+ टूल्स। 100% मुफ्त।`,
     url: "https://sabtools.in/hi",
     type: "website",
     locale: "hi_IN",
     siteName: "SabTools.in",
+    images: [{ url: "https://sabtools.in/og-image.png", width: 1200, height: 630, alt: "SabTools.in - मुफ्त ऑनलाइन टूल्स" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SabTools.in - 290+ मुफ्त ऑनलाइन टूल्स हिंदी में",
+    title: `SabTools.in - ${hindiTools.length}+ मुफ्त ऑनलाइन टूल्स हिंदी में`,
     description: "मुफ्त ऑनलाइन टूल्स — 100% मुफ्त, बिना साइनअप।",
+    images: ["https://sabtools.in/og-image.png"],
   },
 };
 
@@ -40,7 +42,7 @@ export default function HindiHomePage() {
           <span className="text-gray-900">हिंदी में</span>
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          EMI कैलकुलेटर, SIP कैलकुलेटर, GST कैलकुलेटर, इनकम टैक्स कैलकुलेटर और 290+ टूल्स। बिल्कुल मुफ्त, बिना साइनअप।
+          EMI कैलकुलेटर, SIP कैलकुलेटर, GST कैलकुलेटर, इनकम टैक्स कैलकुलेटर और {hindiTools.length}+ टूल्स। बिल्कुल मुफ्त, बिना साइनअप।
         </p>
       </div>
 

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | SabTools.in",
   },
   description:
-    "India's #1 free online tools website. 460+ tools including EMI Calculator, SIP Calculator, GST Calculator, AI Writing Tools, PDF Tools, Image Tools & more. 100% free, no signup required. Made for India.",
+    "India's #1 free online tools website. 460+ tools — EMI, SIP, GST calculators, AI tools, PDF tools & more. 100% free, no signup.",
   keywords: [
     "free online tools",
     "free online calculator",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     description: "India's #1 free online tools website. Calculators, Converters, AI Tools, PDF Tools, Developer Tools & more. 100% free.",
     images: [
       {
-        url: "https://sabtools.in/og-image.svg",
+        url: "https://sabtools.in/og-image.png",
         width: 1200,
         height: 630,
         alt: "SabTools.in - 460+ Free Online Tools for India",
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SabTools.in - 460+ Free Online Tools",
     description: "India's #1 free online tools website. 460+ tools — 100% free, no signup.",
-    images: ["https://sabtools.in/og-image.svg"],
+    images: ["https://sabtools.in/og-image.png"],
   },
   robots: {
     index: true,
@@ -95,6 +95,7 @@ export const metadata: Metadata = {
     languages: {
       en: "https://sabtools.in",
       hi: "https://sabtools.in/hi",
+      "x-default": "https://sabtools.in",
     },
   },
   verification: {
@@ -121,12 +122,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon.svg" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
-        <meta name="theme-color" content="#4f46e5" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="SabTools" />

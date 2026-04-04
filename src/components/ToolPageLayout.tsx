@@ -46,26 +46,9 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
       priceCurrency: "INR",
       availability: "https://schema.org/InStock",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      ratingCount: "1250",
-      bestRating: "5",
-      worstRating: "1",
-    },
     inLanguage: ["en", "hi"],
     isAccessibleForFree: true,
     featureList: tool.keywords.join(", "),
-  };
-
-  const breadcrumbLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://sabtools.in" },
-      { "@type": "ListItem", position: 2, name: cat?.name || "", item: `https://sabtools.in/category/${tool.category}` },
-      { "@type": "ListItem", position: 3, name: tool.name, item: `https://sabtools.in/tools/${tool.slug}` },
-    ],
   };
 
   // HowTo schema — enables rich step-by-step snippets in Google search
@@ -94,7 +77,6 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToLd) }} />
       <TrackToolVisit slug={tool.slug} />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">

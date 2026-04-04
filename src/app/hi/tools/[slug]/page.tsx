@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: `${ht.description}। मुफ्त ऑनलाइन ${ht.name} — बिना साइनअप, तुरंत परिणाम। SabTools.in पर।`,
     alternates: {
       canonical: `https://sabtools.in/hi/tools/${slug}`,
-      languages: { en: `https://sabtools.in/tools/${slug}`, hi: `https://sabtools.in/hi/tools/${slug}` },
+      languages: { en: `https://sabtools.in/tools/${slug}`, hi: `https://sabtools.in/hi/tools/${slug}`, "x-default": `https://sabtools.in/tools/${slug}` },
     },
     openGraph: {
       title: `${ht.name} — मुफ्त ऑनलाइन टूल | SabTools.in`,
@@ -31,9 +31,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "website",
       locale: "hi_IN",
       siteName: "SabTools.in",
+      images: [{ url: "https://sabtools.in/og-image.png", width: 1200, height: 630, alt: `${ht.name} — SabTools.in` }],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title: `${ht.name} — मुफ्त ऑनलाइन टूल`,
       description: `${ht.description}। 100% मुफ्त, बिना साइनअप।`,
     },

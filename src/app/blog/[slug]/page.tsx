@@ -19,7 +19,7 @@ export async function generateMetadata({
   const post = getPostBySlug(slug);
   if (!post) return {};
   return {
-    title: `${post.title} | SabTools.in Blog`,
+    title: `${post.title} — Guide`,
     description: post.description,
     keywords: post.keywords,
     alternates: { canonical: `https://sabtools.in/blog/${slug}` },
@@ -29,6 +29,7 @@ export async function generateMetadata({
       url: `https://sabtools.in/blog/${slug}`,
       type: "article",
       publishedTime: post.date,
+      modifiedTime: post.date,
       siteName: "SabTools.in",
       locale: "en_IN",
       ...(post.image && {
@@ -54,8 +55,16 @@ export default async function BlogPostPage({
   if (!post) notFound();
 
   const allPosts = getAllPosts();
+  const postKws = new Set(post.keywords.map((k) => k.toLowerCase()));
   const relatedPosts = allPosts
     .filter((p) => p.slug !== post.slug)
+    .map((p) => {
+      let score = 0;
+      if (p.category === post.category) score += 3;
+      p.keywords.forEach((k) => { if (postKws.has(k.toLowerCase())) score += 1; });
+      return { ...p, score };
+    })
+    .sort((a, b) => b.score - a.score)
     .slice(0, 3);
 
   const articleJsonLd = {
@@ -64,16 +73,17 @@ export default async function BlogPostPage({
     headline: post.title,
     description: post.description,
     datePublished: post.date,
+    dateModified: post.date,
     author: {
-      "@type": "Organization",
-      name: "SabTools.in",
-      url: "https://sabtools.in",
+      "@type": "Person",
+      name: "SabTools Team",
+      url: "https://sabtools.in/about",
     },
     publisher: {
       "@type": "Organization",
       name: "SabTools.in",
       url: "https://sabtools.in",
-      logo: { "@type": "ImageObject", url: "https://sabtools.in/logo.svg" },
+      logo: { "@type": "ImageObject", url: "https://sabtools.in/og-image.png" },
     },
     mainEntityOfPage: {
       "@type": "WebPage",

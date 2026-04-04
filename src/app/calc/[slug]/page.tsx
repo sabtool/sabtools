@@ -24,22 +24,24 @@ export async function generateMetadata({
   if (!page) return {};
 
   return {
-    title: `${page.title} | SabTools.in`,
+    title: page.title,
     description: page.description,
     keywords: [...page.keywords, "free online tool", "sabtools", "india", "calculator", "no signup"],
     alternates: { canonical: `https://sabtools.in/calc/${slug}` },
     openGraph: {
-      title: `${page.title} | SabTools.in`,
+      title: `${page.title} — Free Calculator`,
       description: page.description,
       url: `https://sabtools.in/calc/${slug}`,
       type: "website",
       locale: "en_IN",
       siteName: "SabTools.in",
+      images: [{ url: "https://sabtools.in/og-image.png", width: 1200, height: 630, alt: `${page.title} — SabTools.in` }],
     },
     twitter: {
       card: "summary_large_image",
       title: page.title,
       description: page.description,
+      images: ["https://sabtools.in/og-image.png"],
     },
     other: {
       rating: "general",
@@ -77,13 +79,6 @@ export default async function CalcPage({
       "@type": "Offer",
       price: "0",
       priceCurrency: "INR",
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      ratingCount: "1250",
-      bestRating: "5",
-      worstRating: "1",
     },
   };
 

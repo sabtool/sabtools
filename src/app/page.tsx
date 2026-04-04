@@ -34,7 +34,7 @@ export default function HomePage() {
     "@type": "Organization",
     name: "SabTools.in",
     url: "https://sabtools.in",
-    logo: "https://sabtools.in/logo.svg",
+    logo: "https://sabtools.in/og-image.png",
     description: `India's #1 free online tools website with ${tools.length}+ tools.`,
     sameAs: [],
     contactPoint: {
@@ -129,7 +129,7 @@ export default function HomePage() {
               <span className="text-gray-900">All </span>
               <span className="gradient-text">Free Online Tools</span>
               <br />
-              <span className="text-gray-900">in One Place</span>
+              <span className="text-gray-900"> in One Place</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
               Calculators, Converters, Text Tools, Developer Tools, Image Tools & more.

@@ -8,6 +8,8 @@ export const dynamic = "force-static";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://sabtools.in";
   const now = new Date().toISOString();
+  // Stable date for pages that rarely change (avoids misleading Google with build-time dates)
+  const stableDate = "2026-03-15T00:00:00.000Z";
 
   // Homepage
   const staticPages: MetadataRoute.Sitemap = [
@@ -25,31 +27,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: now,
+      lastModified: stableDate,
       changeFrequency: "monthly",
       priority: 0.4,
     },
     {
       url: `${baseUrl}/privacy`,
-      lastModified: now,
+      lastModified: stableDate,
       changeFrequency: "monthly",
       priority: 0.3,
     },
     {
       url: `${baseUrl}/terms`,
-      lastModified: now,
+      lastModified: stableDate,
       changeFrequency: "monthly",
       priority: 0.3,
     },
     {
       url: `${baseUrl}/disclaimer`,
-      lastModified: now,
+      lastModified: stableDate,
       changeFrequency: "monthly",
       priority: 0.3,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: now,
+      lastModified: stableDate,
       changeFrequency: "monthly",
       priority: 0.3,
     },
@@ -106,15 +108,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  // Search page
-  const searchPage: MetadataRoute.Sitemap = [
-    {
-      url: `${baseUrl}/search`,
-      lastModified: now,
-      changeFrequency: "daily" as const,
-      priority: 0.5,
-    },
-  ];
-
-  return [...staticPages, ...categoryPages, ...toolPages, ...hindiToolPages, ...calcPages, ...searchPage, ...blogListPage, ...blogPages];
+  return [...staticPages, ...categoryPages, ...toolPages, ...hindiToolPages, ...calcPages, ...blogListPage, ...blogPages];
 }

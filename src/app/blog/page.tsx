@@ -5,12 +5,12 @@ import AdBanner from "@/components/AdBanner";
 import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog — Financial Tips, Tax Guides & Tool Tutorials | SabTools.in",
+  title: "Blog — Financial Tips, Tax Guides & Tool Tutorials",
   description:
     "Read expert articles on EMI calculation, SIP investing, GST rates, income tax tips, and how to use free online tools. Practical financial guides for Indians.",
   alternates: { canonical: "https://sabtools.in/blog" },
   openGraph: {
-    title: "Blog — Financial Tips, Tax Guides & Tool Tutorials | SabTools.in",
+    title: "Blog — Financial Tips, Tax Guides & Tool Tutorials",
     description:
       "Expert articles on personal finance, tax planning, and free online tools for Indians.",
     url: "https://sabtools.in/blog",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog — Financial Tips, Tax Guides & Tool Tutorials | SabTools.in",
+    title: "Blog — Financial Tips, Tax Guides & Tool Tutorials",
     description:
       "Expert articles on personal finance, tax planning, and free online tools for Indians.",
   },
@@ -34,7 +34,7 @@ export default function BlogPage() {
 
       <div className="mb-12 text-center">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3 tracking-tight">
-          Blog
+          Financial Tips, Tax Guides & Tool Tutorials
         </h1>
         <p className="text-lg text-gray-500 max-w-2xl mx-auto">
           Financial tips, tax guides, investment insights, and tool tutorials

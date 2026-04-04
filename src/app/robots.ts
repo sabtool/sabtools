@@ -8,17 +8,17 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/_next/image/", "/embed/", "/api/"],
+        disallow: ["/_next/image/", "/embed/", "/api/", "/search"],
       },
       {
         userAgent: "Googlebot",
         allow: ["/", "/_next/static/"],
-        disallow: ["/embed/"],
+        disallow: ["/embed/", "/search"],
       },
       {
         userAgent: "Bingbot",
         allow: "/",
-        disallow: ["/embed/"],
+        disallow: ["/embed/", "/search"],
       },
       {
         userAgent: "AdsBot-Google",
