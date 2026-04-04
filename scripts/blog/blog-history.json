@@ -3,9 +3,14 @@
     "emi-calculator",
     "percentage-calculator",
     "sip-calculator",
-    "age-calculator"
+    "age-calculator",
+    "gst-calculator",
+    "bmi-calculator",
+    "fd-calculator",
+    "word-counter",
+    "ppf-calculator"
   ],
-  "lastCategory": "math",
-  "totalPosts": 4,
-  "lastRun": "2026-04-02T21:55:30.342Z"
+  "lastCategory": "finance",
+  "totalPosts": 9,
+  "lastRun": "2026-04-03T21:51:27.033Z"
 }
