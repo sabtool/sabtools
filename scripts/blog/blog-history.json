@@ -8,9 +8,10 @@
     "bmi-calculator",
     "fd-calculator",
     "word-counter",
-    "ppf-calculator"
+    "ppf-calculator",
+    "json-formatter"
   ],
-  "lastCategory": "finance",
-  "totalPosts": 9,
-  "lastRun": "2026-04-03T21:51:27.033Z"
+  "lastCategory": "developer",
+  "totalPosts": 10,
+  "lastRun": "2026-04-04T05:16:40.049Z"
 }
