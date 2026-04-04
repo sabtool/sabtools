@@ -9,63 +9,85 @@ interface WhatsAppShareResultProps {
 }
 
 /**
- * Extracts result data from .result-card elements on the page.
+ * Extracts result data from ALL .result-card elements on the page.
  *
- * Most tool result cards follow this HTML pattern:
- *   <div class="result-card ...">
- *     <div class="grid ...">           ← grid container
- *       <div class="... rounded-xl ...">  ← individual result box
- *         <div>Monthly EMI</div>          ← label (shorter text)
- *         <div>₹21,700</div>             ← value (has ₹, %, or numbers)
- *       </div>
- *       ...more boxes
- *     </div>
- *   </div>
+ * Supports 3 common tool result patterns:
+ *  1. Grid pattern (EMI, GST, SIP): grid > boxes > [label, value]
+ *  2. Flat pattern (BMI, Age): centered text with large numbers
+ *  3. Mixed: any combination of the above
  *
- * We walk the DOM tree and extract label-value pairs from each box.
+ * Uses innerText to get visible text and pairs consecutive lines
+ * where one looks like a label and the next like a value.
  */
 function extractResultFromPage(toolName: string, slug: string): string {
   const fallback = `I just used ${toolName} on SabTools.in! Try it free: https://sabtools.in/tools/${slug}`;
 
-  const card = document.querySelector(".result-card");
-  if (!card) return fallback;
+  const cards = document.querySelectorAll(".result-card");
+  if (!cards.length) return fallback;
 
   const lines: string[] = [];
 
-  // Get all direct children of the result card, and their children
-  // The pattern is: result-card > grid-container > individual-boxes
-  const allDivs = card.querySelectorAll("div");
+  cards.forEach((card) => {
+    const el = card as HTMLElement;
 
-  allDivs.forEach((div) => {
-    const children = div.children;
-    // We want divs that have exactly 2 child divs (label + value)
-    if (children.length !== 2) return;
+    // Strategy 1: Look for divs with exactly 2 children (label + value boxes)
+    const allDivs = el.querySelectorAll("div");
+    allDivs.forEach((div) => {
+      const children = div.children;
+      if (children.length !== 2) return;
 
-    const first = children[0] as HTMLElement;
-    const second = children[1] as HTMLElement;
+      const first = children[0] as HTMLElement;
+      const second = children[1] as HTMLElement;
+      const t1 = first.textContent?.trim() || "";
+      const t2 = second.textContent?.trim() || "";
 
-    // Both must be div/span/p elements with text
-    const firstText = first.textContent?.trim() || "";
-    const secondText = second.textContent?.trim() || "";
+      if (!t1 || !t2) return;
+      // Label: short text without currency. Value: has numbers/currency
+      const isLabel = t1.length < 50 && !/[₹$]/.test(t1);
+      const isValue = /[₹$]/.test(t2) || /\d{2,}/.test(t2);
+      if (!isLabel || !isValue) return;
+      // Skip visual bars like "Principal (48.0%) Interest (52.0%)"
+      if (t1.includes("%)") || t2.includes("%)")) return;
 
-    if (!firstText || !secondText) return;
+      const line = `${t1}: ${t2}`;
+      if (!lines.includes(line)) lines.push(line);
+    });
 
-    // One should be a label (no currency/number-heavy), one should be a value
-    const hasValue = /[₹$%]|^\d/.test(secondText) || /\d{2,}/.test(secondText);
-    const isLabel = firstText.length < 40 && !/[₹$]/.test(firstText);
+    // Strategy 2: Use innerText for flat/centered cards (BMI, Age, etc.)
+    if (lines.length === 0) {
+      const rawText = el.innerText || "";
+      const textLines = rawText
+        .split("\n")
+        .map((l) => l.trim())
+        .filter((l) => l.length > 0 && l.length < 80);
 
-    // Skip if both look like labels or both look like values
-    if (!hasValue || !isLabel) return;
+      // Pair consecutive lines: label then value, optionally followed by status
+      for (let i = 0; i < textLines.length - 1; i++) {
+        const current = textLines[i];
+        const next = textLines[i + 1];
 
-    // Skip percentage breakdowns like "Principal (54.2%)"
-    if (firstText.includes("(") && firstText.includes("%)")) return;
+        // Current is a label (short, no big numbers/currency)
+        const currentIsLabel = current.length < 40 && !/[₹$]/.test(current) && !/^\d+[\d.,]*$/.test(current);
+        // Next is a value (has numbers, currency, or percentage)
+        const nextIsValue = /[₹$%]/.test(next) || /\d/.test(next);
 
-    // Skip if the "value" is just a single digit or very short
-    if (secondText.length < 2) return;
+        if (currentIsLabel && nextIsValue) {
+          let line = `${current}: ${next}`;
+          i++; // Skip the value line
 
-    const line = `${firstText}: ${secondText}`;
-    if (!lines.includes(line)) {
-      lines.push(line);
+          // Check if next line is a status/category (e.g. "Normal", "Healthy")
+          if (i + 1 < textLines.length) {
+            const status = textLines[i + 1];
+            const isStatus = status.length < 25 && /^[A-Z]/.test(status) && !/\d/.test(status);
+            if (isStatus) {
+              line += ` (${status})`;
+              i++; // Skip the status line too
+            }
+          }
+
+          if (!lines.includes(line)) lines.push(line);
+        }
+      }
     }
   });
 
