@@ -9,9 +9,10 @@
     "fd-calculator",
     "word-counter",
     "ppf-calculator",
-    "json-formatter"
+    "json-formatter",
+    "compound-interest-calculator"
   ],
-  "lastCategory": "developer",
-  "totalPosts": 10,
-  "lastRun": "2026-04-04T05:16:40.049Z"
+  "lastCategory": "finance",
+  "totalPosts": 11,
+  "lastRun": "2026-04-04T07:39:51.390Z"
 }
