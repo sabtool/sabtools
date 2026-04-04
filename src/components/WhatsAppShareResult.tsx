@@ -10,72 +10,78 @@ interface WhatsAppShareResultProps {
 
 /**
  * Extracts result data from .result-card elements on the page.
- * Looks for label/value pairs inside each card.
+ *
+ * Most tool result cards follow this HTML pattern:
+ *   <div class="result-card ...">
+ *     <div class="grid ...">           ← grid container
+ *       <div class="... rounded-xl ...">  ← individual result box
+ *         <div>Monthly EMI</div>          ← label (shorter text)
+ *         <div>₹21,700</div>             ← value (has ₹, %, or numbers)
+ *       </div>
+ *       ...more boxes
+ *     </div>
+ *   </div>
+ *
+ * We walk the DOM tree and extract label-value pairs from each box.
  */
 function extractResultFromPage(toolName: string, slug: string): string {
-  const cards = document.querySelectorAll(".result-card");
-  if (!cards.length) {
-    return `I just used ${toolName} on SabTools.in! Try it free: https://sabtools.in/tools/${slug}`;
-  }
+  const fallback = `I just used ${toolName} on SabTools.in! Try it free: https://sabtools.in/tools/${slug}`;
+
+  const card = document.querySelector(".result-card");
+  if (!card) return fallback;
 
   const lines: string[] = [];
 
-  cards.forEach((card) => {
-    // Strategy 1: Look for label + value pairs (most common pattern)
-    // Labels are usually small text like "Monthly EMI", "Total Interest" etc.
-    // Values are usually large bold text with numbers/currency
-    const items = card.querySelectorAll("[class*='rounded']");
-    items.forEach((item) => {
-      const label = item.querySelector("[class*='text-xs'], [class*='text-sm']");
-      const value = item.querySelector("[class*='text-2xl'], [class*='text-xl'], [class*='text-3xl'], [class*='font-extrabold'], [class*='font-bold']");
-      if (label && value && label !== value) {
-        const labelText = label.textContent?.trim();
-        const valueText = value.textContent?.trim();
-        if (labelText && valueText && valueText !== labelText) {
-          lines.push(`${labelText}: ${valueText}`);
-        }
-      }
-    });
+  // Get all direct children of the result card, and their children
+  // The pattern is: result-card > grid-container > individual-boxes
+  const allDivs = card.querySelectorAll("div");
 
-    // Strategy 2: If no pairs found, try direct text content from grid children
-    if (lines.length === 0) {
-      const gridItems = card.querySelectorAll("[class*='grid'] > div, [class*='flex'] > div");
-      gridItems.forEach((item) => {
-        const texts = Array.from(item.querySelectorAll("div, span, p"))
-          .map((el) => el.textContent?.trim())
-          .filter(Boolean);
-        if (texts.length >= 2) {
-          // Usually label is first, value is second (or vice versa)
-          const hasNumber = texts.find((t) => /[₹%\d]/.test(t || ""));
-          const hasLabel = texts.find((t) => t !== hasNumber && !/^[₹%\d.,\s]+$/.test(t || ""));
-          if (hasNumber && hasLabel) {
-            lines.push(`${hasLabel}: ${hasNumber}`);
-          }
-        }
-      });
+  allDivs.forEach((div) => {
+    const children = div.children;
+    // We want divs that have exactly 2 child divs (label + value)
+    if (children.length !== 2) return;
+
+    const first = children[0] as HTMLElement;
+    const second = children[1] as HTMLElement;
+
+    // Both must be div/span/p elements with text
+    const firstText = first.textContent?.trim() || "";
+    const secondText = second.textContent?.trim() || "";
+
+    if (!firstText || !secondText) return;
+
+    // One should be a label (no currency/number-heavy), one should be a value
+    const hasValue = /[₹$%]|^\d/.test(secondText) || /\d{2,}/.test(secondText);
+    const isLabel = firstText.length < 40 && !/[₹$]/.test(firstText);
+
+    // Skip if both look like labels or both look like values
+    if (!hasValue || !isLabel) return;
+
+    // Skip percentage breakdowns like "Principal (54.2%)"
+    if (firstText.includes("(") && firstText.includes("%)")) return;
+
+    // Skip if the "value" is just a single digit or very short
+    if (secondText.length < 2) return;
+
+    const line = `${firstText}: ${secondText}`;
+    if (!lines.includes(line)) {
+      lines.push(line);
     }
   });
 
-  // Remove duplicates
-  const uniqueLines = [...new Set(lines)];
-
-  if (uniqueLines.length === 0) {
-    return `I just used ${toolName} on SabTools.in! Try it free: https://sabtools.in/tools/${slug}`;
-  }
+  if (lines.length === 0) return fallback;
 
   // Build a card-style WhatsApp message
   const border = "━━━━━━━━━━━━━━━━━━━━";
-  const message = [
+  return [
     `📊 *${toolName} — Result*`,
     border,
-    ...uniqueLines.map((line) => `▸ ${line}`),
+    ...lines.map((line) => `▸ ${line}`),
     border,
     ``,
     `🔗 Try it free: https://sabtools.in/tools/${slug}`,
     `⚡ Powered by SabTools.in`,
   ].join("\n");
-
-  return message;
 }
 
 export default function WhatsAppShareResult({ toolName, slug, getResultText }: WhatsAppShareResultProps) {
