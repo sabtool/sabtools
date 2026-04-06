@@ -22,9 +22,10 @@
     "currency-converter",
     "binary-calculator",
     "in-hand-salary-calculator",
-    "image-to-jpg"
+    "image-to-jpg",
+    "timezone-converter"
   ],
-  "lastCategory": "image",
-  "totalPosts": 23,
-  "lastRun": "2026-04-06T17:33:52.776Z"
+  "lastCategory": "datetime",
+  "totalPosts": 24,
+  "lastRun": "2026-04-06T21:54:13.741Z"
 }
