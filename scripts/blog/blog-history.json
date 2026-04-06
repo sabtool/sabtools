@@ -21,9 +21,10 @@
     "pdf-to-image",
     "currency-converter",
     "binary-calculator",
-    "in-hand-salary-calculator"
+    "in-hand-salary-calculator",
+    "image-to-jpg"
   ],
-  "lastCategory": "career",
-  "totalPosts": 22,
-  "lastRun": "2026-04-06T12:04:01.550Z"
+  "lastCategory": "image",
+  "totalPosts": 23,
+  "lastRun": "2026-04-06T17:33:52.776Z"
 }
