@@ -11,9 +11,23 @@
     "ppf-calculator",
     "json-formatter",
     "compound-interest-calculator",
-    "image-compressor"
+    "image-compressor",
+    "income-tax-calculator",
+    "qr-code-generator",
+    "salary-calculator",
+    "password-generator",
+    "home-loan-calculator",
+    "love-calculator",
+    "pdf-to-image",
+    "currency-converter",
+    "binary-calculator",
+    "in-hand-salary-calculator",
+    "image-to-jpg",
+    "timezone-converter",
+    "serp-preview",
+    "mobile-number-tracker"
   ],
-  "lastCategory": "image",
-  "totalPosts": 12,
-  "lastRun": "2026-04-04T11:04:46.007Z"
+  "lastCategory": "whatsapp",
+  "totalPosts": 26,
+  "lastRun": "2026-04-07T08:45:53.165Z"
 }
