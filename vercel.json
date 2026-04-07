@@ -2,9 +2,25 @@
   "redirects": [
     { "source": "/products", "destination": "/", "permanent": true },
     { "source": "/products/", "destination": "/", "permanent": true },
-    { "source": "/product/:slug*", "destination": "/tools/:slug*", "permanent": true },
-    { "source": "/product/:slug*/", "destination": "/tools/:slug*", "permanent": true },
     { "source": "/tool/:slug*", "destination": "/tools/:slug*", "permanent": true },
+
+    { "source": "/product/:slug*/feed/", "destination": "/", "permanent": true },
+    { "source": "/product/:slug*/feed", "destination": "/", "permanent": true },
+    { "source": "/product/:slug*", "destination": "/", "permanent": true },
+    { "source": "/product-category/:slug*/feed/", "destination": "/", "permanent": true },
+    { "source": "/product-category/:slug*/feed", "destination": "/", "permanent": true },
+    { "source": "/product-category/:slug*", "destination": "/", "permanent": true },
+    { "source": "/product-tag/:slug*/feed/", "destination": "/", "permanent": true },
+    { "source": "/product-tag/:slug*/feed", "destination": "/", "permanent": true },
+    { "source": "/product-tag/:slug*", "destination": "/", "permanent": true },
+    { "source": "/shop-2/:path*", "destination": "/", "permanent": true },
+    { "source": "/checkout/", "destination": "/", "permanent": true },
+    { "source": "/checkout", "destination": "/", "permanent": true },
+    { "source": "/brand/:slug*", "destination": "/", "permanent": true },
+    { "source": "/wp-login.php", "destination": "/", "permanent": true },
+    { "source": "/wp-admin/:path*", "destination": "/", "permanent": true },
+    { "source": "/privacy-policy/", "destination": "/privacy", "permanent": true },
+
     { "source": "/:path*", "has": [{ "type": "host", "value": "sabtools.vercel.app" }], "destination": "https://sabtools.in/:path*", "permanent": true },
     { "source": "/:path*", "has": [{ "type": "host", "value": "sabtools-two.vercel.app" }], "destination": "https://sabtools.in/:path*", "permanent": true }
   ],
