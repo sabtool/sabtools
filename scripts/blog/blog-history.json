@@ -25,9 +25,10 @@
     "image-to-jpg",
     "timezone-converter",
     "serp-preview",
-    "mobile-number-tracker"
+    "mobile-number-tracker",
+    "hra-calculator"
   ],
-  "lastCategory": "whatsapp",
-  "totalPosts": 26,
-  "lastRun": "2026-04-07T08:45:53.165Z"
+  "lastCategory": "tax",
+  "totalPosts": 27,
+  "lastRun": "2026-04-07T12:09:35.921Z"
 }
