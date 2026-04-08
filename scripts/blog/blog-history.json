@@ -28,9 +28,10 @@
     "mobile-number-tracker",
     "hra-calculator",
     "steel-weight-calculator",
-    "protein-intake-calculator"
+    "protein-intake-calculator",
+    "rent-receipt-generator"
   ],
-  "lastCategory": "health",
-  "totalPosts": 29,
-  "lastRun": "2026-04-07T22:02:30.463Z"
+  "lastCategory": "tax",
+  "totalPosts": 30,
+  "lastRun": "2026-04-08T06:06:44.526Z"
 }
