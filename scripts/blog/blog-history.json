@@ -30,9 +30,10 @@
     "steel-weight-calculator",
     "protein-intake-calculator",
     "rent-receipt-generator",
-    "emi-affordability-calculator"
+    "emi-affordability-calculator",
+    "transformer-calculator"
   ],
-  "lastCategory": "shopping",
-  "totalPosts": 31,
-  "lastRun": "2026-04-08T08:45:49.017Z"
+  "lastCategory": "electrical",
+  "totalPosts": 32,
+  "lastRun": "2026-04-08T12:09:02.571Z"
 }
