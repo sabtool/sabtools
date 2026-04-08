@@ -32,9 +32,10 @@
     "rent-receipt-generator",
     "emi-affordability-calculator",
     "transformer-calculator",
-    "gpa-calculator"
+    "gpa-calculator",
+    "calorie-calculator"
   ],
-  "lastCategory": "education",
-  "totalPosts": 33,
-  "lastRun": "2026-04-08T18:56:40.072Z"
+  "lastCategory": "health",
+  "totalPosts": 34,
+  "lastRun": "2026-04-08T22:08:41.635Z"
 }
