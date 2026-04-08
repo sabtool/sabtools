@@ -29,9 +29,10 @@
     "hra-calculator",
     "steel-weight-calculator",
     "protein-intake-calculator",
-    "rent-receipt-generator"
+    "rent-receipt-generator",
+    "emi-affordability-calculator"
   ],
-  "lastCategory": "tax",
-  "totalPosts": 30,
-  "lastRun": "2026-04-08T06:06:44.526Z"
+  "lastCategory": "shopping",
+  "totalPosts": 31,
+  "lastRun": "2026-04-08T08:45:49.017Z"
 }
