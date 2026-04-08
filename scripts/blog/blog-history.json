@@ -31,9 +31,10 @@
     "protein-intake-calculator",
     "rent-receipt-generator",
     "emi-affordability-calculator",
-    "transformer-calculator"
+    "transformer-calculator",
+    "gpa-calculator"
   ],
-  "lastCategory": "electrical",
-  "totalPosts": 32,
-  "lastRun": "2026-04-08T12:09:02.571Z"
+  "lastCategory": "education",
+  "totalPosts": 33,
+  "lastRun": "2026-04-08T18:56:40.072Z"
 }
