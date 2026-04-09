@@ -37,9 +37,10 @@
     "css-gradient-generator",
     "wire-size-calculator",
     "cgpa-to-percentage",
-    "irrigation-calculator"
+    "irrigation-calculator",
+    "wedding-date-finder"
   ],
-  "lastCategory": "agriculture",
-  "totalPosts": 38,
-  "lastRun": "2026-04-09T18:12:44.072Z"
+  "lastCategory": "wedding",
+  "totalPosts": 39,
+  "lastRun": "2026-04-09T22:02:49.213Z"
 }
