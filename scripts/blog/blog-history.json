@@ -34,9 +34,10 @@
     "transformer-calculator",
     "gpa-calculator",
     "calorie-calculator",
-    "css-gradient-generator"
+    "css-gradient-generator",
+    "wire-size-calculator"
   ],
-  "lastCategory": "css",
-  "totalPosts": 35,
-  "lastRun": "2026-04-09T06:07:45.653Z"
+  "lastCategory": "electrical",
+  "totalPosts": 36,
+  "lastRun": "2026-04-09T08:55:40.166Z"
 }
