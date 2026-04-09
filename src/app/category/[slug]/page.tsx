@@ -5,6 +5,7 @@ import { categories, tools } from "@/lib/tools";
 import ToolCard from "@/components/ToolCard";
 import Breadcrumb from "@/components/Breadcrumb";
 import AdBanner from "@/components/AdBanner";
+import NewsletterSignup from "@/components/NewsletterSignup";
 
 /* ── Unique category descriptions for SEO (avoids thin/duplicate content) ── */
 const categoryDescriptions: Record<string, { intro: string; whoUses: string; whyUse: string }> = {
@@ -318,6 +319,31 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
             ...and {catTools.length - 8} more tools. Explore all {catTools.length} {cat.name.toLowerCase()} above.
           </p>
         )}
+      </div>
+
+      {/* Newsletter */}
+      <div className="mt-10">
+        <NewsletterSignup />
+      </div>
+
+      {/* Browse Other Categories */}
+      <div className="mt-10">
+        <h2 className="text-lg font-bold text-gray-900 mb-3">Explore More Categories</h2>
+        <div className="flex flex-wrap gap-2">
+          {categories
+            .filter((c) => c.slug !== slug)
+            .slice(0, 10)
+            .map((c) => (
+              <Link
+                key={c.slug}
+                href={`/category/${c.slug}`}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gray-50 hover:bg-indigo-50 border border-gray-200 hover:border-indigo-200 rounded-full text-xs font-medium text-gray-700 hover:text-indigo-700 transition"
+              >
+                <span>{c.icon}</span>
+                <span>{c.name}</span>
+              </Link>
+            ))}
+        </div>
       </div>
     </div>
   );

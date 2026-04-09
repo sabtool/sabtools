@@ -12,6 +12,8 @@ import DownloadPDF from "@/components/DownloadPDF";
 import ToolRating from "@/components/ToolRating";
 import ToolUsageCounter from "@/components/ToolUsageCounter";
 import ReviewedBy from "@/components/ReviewedBy";
+import Testimonials from "@/components/Testimonials";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import TrustBadges from "@/components/TrustBadges";
 import type { Tool } from "@/lib/tools";
 import { categories } from "@/lib/tools";
@@ -237,6 +239,9 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
           Last updated: April 2026
         </div>
 
+        {/* User Testimonials — social proof */}
+        <Testimonials category={tool.category} toolSlug={tool.slug} />
+
         {/* User Rating — engagement signal */}
         <div className="mt-8">
           <ToolRating slug={tool.slug} toolName={tool.name} />
@@ -247,6 +252,11 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
 
         {/* Related Tools — same-category + cross-category keyword matches */}
         <RelatedTools currentSlug={tool.slug} category={tool.category} />
+
+        {/* Newsletter Signup */}
+        <div className="mt-10">
+          <NewsletterSignup />
+        </div>
 
         {/* Browse More Categories — cross-category crawl paths */}
         <div className="mt-10">

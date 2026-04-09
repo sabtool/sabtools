@@ -7,6 +7,7 @@ import FavoriteTools from "@/components/FavoriteTools";
 import ToolOfTheDay from "@/components/ToolOfTheDay";
 import { categories, tools } from "@/lib/tools";
 import { getAllPosts } from "@/lib/blog";
+import NewsletterSignup from "@/components/NewsletterSignup";
 
 export default function HomePage() {
   const popularTools = [
@@ -36,11 +37,27 @@ export default function HomePage() {
     url: "https://sabtools.in",
     logo: "https://sabtools.in/og-image.png",
     description: `India's #1 free online tools website with ${tools.length}+ tools.`,
-    sameAs: [],
+    sameAs: [
+      "https://twitter.com/sabtools",
+      "https://youtube.com/@sabtools",
+      "https://linkedin.com/company/sabtools",
+      "https://github.com/sabtool",
+    ],
+    founder: {
+      "@type": "Person",
+      name: "Rakesh Kushwaha",
+      jobTitle: "Founder & Lead Developer",
+    },
+    foundingDate: "2025",
+    areaServed: {
+      "@type": "Country",
+      name: "India",
+    },
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer support",
       url: "https://sabtools.in/contact",
+      email: "contact@sabtools.in",
       availableLanguage: ["English", "Hindi"],
     },
   };
@@ -270,6 +287,11 @@ export default function HomePage() {
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
           </Link>
         </div>
+      </section>
+
+      {/* Newsletter Signup */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+        <NewsletterSignup />
       </section>
 
       {/* Why Choose Section */}

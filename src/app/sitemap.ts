@@ -2,6 +2,7 @@ import { MetadataRoute } from "next";
 import { tools, categories } from "@/lib/tools";
 import { getAllPosts } from "@/lib/blog";
 import { programmaticPages } from "@/lib/programmatic-pages";
+import { authors } from "@/lib/authors";
 
 export const dynamic = "force-static";
 
@@ -108,5 +109,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...categoryPages, ...toolPages, ...hindiToolPages, ...calcPages, ...blogListPage, ...blogPages];
+  // Author profile pages
+  const authorPages: MetadataRoute.Sitemap = authors.map((author) => ({
+    url: `${baseUrl}/author/${author.slug}`,
+    lastModified: stableDate,
+    changeFrequency: "monthly" as const,
+    priority: 0.5,
+  }));
+
+  return [...staticPages, ...categoryPages, ...toolPages, ...hindiToolPages, ...calcPages, ...blogListPage, ...blogPages, ...authorPages];
 }

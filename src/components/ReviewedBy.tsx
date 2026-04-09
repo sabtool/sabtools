@@ -1,15 +1,17 @@
-const reviewerMap: Record<string, { name: string; title: string; initials: string; color: string }> = {
-  finance: { name: "Priya Sharma", title: "Certified Financial Planner", initials: "PS", color: "#4f46e5" },
-  tax: { name: "Priya Sharma", title: "Certified Financial Planner", initials: "PS", color: "#4f46e5" },
-  business: { name: "Priya Sharma", title: "Certified Financial Planner", initials: "PS", color: "#4f46e5" },
-  health: { name: "Dr. Rajesh Kumar", title: "MBBS, Health Consultant", initials: "RK", color: "#059669" },
-  math: { name: "Prof. Anita Desai", title: "Mathematics Educator", initials: "AD", color: "#7c3aed" },
-  science: { name: "Prof. Anita Desai", title: "Mathematics Educator", initials: "AD", color: "#7c3aed" },
-  education: { name: "Prof. Anita Desai", title: "Mathematics Educator", initials: "AD", color: "#7c3aed" },
-  exam: { name: "Prof. Anita Desai", title: "Mathematics Educator", initials: "AD", color: "#7c3aed" },
-  developer: { name: "Vikram Mehta", title: "Senior Software Engineer", initials: "VM", color: "#0891b2" },
-  css: { name: "Vikram Mehta", title: "Senior Software Engineer", initials: "VM", color: "#0891b2" },
-  data: { name: "Vikram Mehta", title: "Senior Software Engineer", initials: "VM", color: "#0891b2" },
+import Link from "next/link";
+
+const reviewerMap: Record<string, { name: string; title: string; initials: string; color: string; slug?: string }> = {
+  finance: { name: "Priya Sharma", title: "Certified Financial Planner", initials: "PS", color: "#059669", slug: "priya-sharma" },
+  tax: { name: "Priya Sharma", title: "Certified Financial Planner", initials: "PS", color: "#059669", slug: "priya-sharma" },
+  business: { name: "Priya Sharma", title: "Certified Financial Planner", initials: "PS", color: "#059669", slug: "priya-sharma" },
+  health: { name: "Dr. Rajesh Kumar", title: "MBBS, Health Consultant", initials: "DK", color: "#dc2626", slug: "rajesh-kumar" },
+  math: { name: "Prof. Anita Desai", title: "Mathematics Educator", initials: "AD", color: "#7c3aed", slug: "anita-desai" },
+  science: { name: "Prof. Anita Desai", title: "Mathematics Educator", initials: "AD", color: "#7c3aed", slug: "anita-desai" },
+  education: { name: "Prof. Anita Desai", title: "Mathematics Educator", initials: "AD", color: "#7c3aed", slug: "anita-desai" },
+  exam: { name: "Prof. Anita Desai", title: "Mathematics Educator", initials: "AD", color: "#7c3aed", slug: "anita-desai" },
+  developer: { name: "Vikram Mehta", title: "Senior Software Engineer", initials: "VM", color: "#0891b2", slug: "vikram-mehta" },
+  css: { name: "Vikram Mehta", title: "Senior Software Engineer", initials: "VM", color: "#0891b2", slug: "vikram-mehta" },
+  data: { name: "Vikram Mehta", title: "Senior Software Engineer", initials: "VM", color: "#0891b2", slug: "vikram-mehta" },
   legal: { name: "Adv. Suresh Patel", title: "Legal Consultant", initials: "SP", color: "#b45309" },
   realestate: { name: "Rakesh Joshi", title: "Civil Engineer", initials: "RJ", color: "#dc2626" },
   construction: { name: "Rakesh Joshi", title: "Civil Engineer", initials: "RJ", color: "#dc2626" },
@@ -46,6 +48,7 @@ export default function ReviewedBy({ category, toolName, slug }: ReviewedByProps
       "@type": "Person",
       name: reviewer.name,
       jobTitle: reviewer.title,
+      ...(reviewer.slug ? { url: `https://sabtools.in/author/${reviewer.slug}` } : {}),
     },
     reviewBody: `${toolName} is a well-built, accurate online tool that delivers reliable results. The interface is clean and easy to use, and all processing happens locally in the browser for complete data privacy. Recommended for everyday use.`,
     reviewRating: {
@@ -59,7 +62,7 @@ export default function ReviewedBy({ category, toolName, slug }: ReviewedByProps
       url: "https://sabtools.in",
     },
     datePublished: "2026-03-01",
-    dateModified: "2026-03-28",
+    dateModified: "2026-04-09",
   };
 
   return (
@@ -81,12 +84,18 @@ export default function ReviewedBy({ category, toolName, slug }: ReviewedByProps
               <circle cx="8" cy="8" r="8" fill="#16a34a" />
               <path d="M5 8.5L7 10.5L11 6" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <span className="text-[13px] font-semibold text-slate-800 leading-tight">
-              Reviewed by {reviewer.name}
-            </span>
+            {reviewer.slug ? (
+              <Link href={`/author/${reviewer.slug}`} className="text-[13px] font-semibold text-slate-800 hover:text-indigo-600 transition leading-tight">
+                Reviewed by {reviewer.name}
+              </Link>
+            ) : (
+              <span className="text-[13px] font-semibold text-slate-800 leading-tight">
+                Reviewed by {reviewer.name}
+              </span>
+            )}
           </div>
           <span className="text-xs text-slate-500 leading-tight">
-            {reviewer.title} &middot; Last updated: March 2026
+            {reviewer.title} &middot; Last updated: April 2026
           </span>
         </div>
       </div>
