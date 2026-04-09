@@ -25,9 +25,20 @@
     "image-to-jpg",
     "timezone-converter",
     "serp-preview",
-    "mobile-number-tracker"
+    "mobile-number-tracker",
+    "hra-calculator",
+    "steel-weight-calculator",
+    "protein-intake-calculator",
+    "rent-receipt-generator",
+    "emi-affordability-calculator",
+    "transformer-calculator",
+    "gpa-calculator",
+    "calorie-calculator",
+    "css-gradient-generator",
+    "wire-size-calculator",
+    "cgpa-to-percentage"
   ],
-  "lastCategory": "whatsapp",
-  "totalPosts": 26,
-  "lastRun": "2026-04-07T08:45:53.165Z"
+  "lastCategory": "education",
+  "totalPosts": 37,
+  "lastRun": "2026-04-09T12:11:39.170Z"
 }
