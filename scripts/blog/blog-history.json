@@ -35,9 +35,10 @@
     "gpa-calculator",
     "calorie-calculator",
     "css-gradient-generator",
-    "wire-size-calculator"
+    "wire-size-calculator",
+    "cgpa-to-percentage"
   ],
-  "lastCategory": "electrical",
-  "totalPosts": 36,
-  "lastRun": "2026-04-09T08:55:40.166Z"
+  "lastCategory": "education",
+  "totalPosts": 37,
+  "lastRun": "2026-04-09T12:11:39.170Z"
 }
