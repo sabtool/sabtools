@@ -33,9 +33,10 @@
     "emi-affordability-calculator",
     "transformer-calculator",
     "gpa-calculator",
-    "calorie-calculator"
+    "calorie-calculator",
+    "css-gradient-generator"
   ],
-  "lastCategory": "health",
-  "totalPosts": 34,
-  "lastRun": "2026-04-08T22:08:41.635Z"
+  "lastCategory": "css",
+  "totalPosts": 35,
+  "lastRun": "2026-04-09T06:07:45.653Z"
 }
