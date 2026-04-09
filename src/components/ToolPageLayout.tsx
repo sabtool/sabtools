@@ -12,6 +12,7 @@ import DownloadPDF from "@/components/DownloadPDF";
 import ToolRating from "@/components/ToolRating";
 import ToolUsageCounter from "@/components/ToolUsageCounter";
 import ReviewedBy from "@/components/ReviewedBy";
+import TrustBadges from "@/components/TrustBadges";
 import type { Tool } from "@/lib/tools";
 import { categories } from "@/lib/tools";
 import { getToolContent } from "@/lib/tool-content";
@@ -110,6 +111,8 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
           </div>
         </div>
 
+        <TrustBadges />
+
         <AdBanner format="horizontal" className="mb-8" />
 
         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8">
@@ -127,21 +130,90 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
         {/* SEO Content — unique per category to avoid thin/duplicate content */}
         <div className="mt-12 prose prose-gray max-w-none">
           <h2 className="text-xl font-bold text-gray-800">About {tool.name}</h2>
-          <p className="text-gray-600">{content.about}</p>
+          <p className="text-gray-600 leading-relaxed">{content.about}</p>
 
-          <h3 className="text-lg font-semibold text-gray-800 mt-6">How to Use {tool.name} — Step by Step</h3>
-          <ol className="text-gray-600 list-decimal list-inside space-y-2">
+          {/* What Is Section */}
+          {content.whatIs && (
+            <>
+              <h2 className="text-xl font-bold text-gray-800 mt-8">What is {tool.name}?</h2>
+              <p className="text-gray-600 leading-relaxed">{content.whatIs}</p>
+            </>
+          )}
+
+          {/* Key Features */}
+          {content.keyFeatures && content.keyFeatures.length > 0 && (
+            <>
+              <h2 className="text-xl font-bold text-gray-800 mt-8">Key Features of {tool.name}</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
+                {content.keyFeatures.map((feature, i) => (
+                  <div key={i} className="flex items-start gap-2.5 p-3 bg-gray-50 rounded-xl border border-gray-100">
+                    <span className="text-indigo-500 mt-0.5 shrink-0">✦</span>
+                    <span className="text-gray-600 text-sm leading-relaxed">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+
+          <h3 className="text-lg font-semibold text-gray-800 mt-8">How to Use {tool.name} — Step by Step</h3>
+          <ol className="text-gray-600 space-y-3 mt-3">
             {content.howToSteps.map((step, i) => (
-              <li key={i}>{step}</li>
+              <li key={i} id={`step-${i + 1}`} className="flex items-start gap-3">
+                <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-indigo-50 text-indigo-600 text-sm font-bold shrink-0 mt-0.5">
+                  {i + 1}
+                </span>
+                <span className="leading-relaxed">{step}</span>
+              </li>
             ))}
           </ol>
 
-          <h3 className="text-lg font-semibold text-gray-800 mt-6">Why Choose {tool.name} on SabTools.in?</h3>
-          <ul className="text-gray-600 list-disc list-inside space-y-2">
+          {/* Real-World Examples */}
+          {content.realWorldExamples && content.realWorldExamples.length > 0 && (
+            <>
+              <h2 className="text-xl font-bold text-gray-800 mt-8">Real-World Examples</h2>
+              <div className="space-y-3 mt-3">
+                {content.realWorldExamples.map((example, i) => (
+                  <div key={i} className="flex items-start gap-3 p-4 bg-blue-50/50 rounded-xl border border-blue-100/50">
+                    <span className="text-blue-500 text-lg shrink-0">📌</span>
+                    <p className="text-gray-600 text-sm leading-relaxed">{example}</p>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+
+          <h3 className="text-lg font-semibold text-gray-800 mt-8">Why Choose {tool.name} on SabTools.in?</h3>
+          <ul className="text-gray-600 space-y-2 mt-3">
             {content.benefits.map((benefit, i) => (
-              <li key={i}>{benefit}</li>
+              <li key={i} className="flex items-start gap-2">
+                <span className="text-green-500 mt-1 shrink-0">✓</span>
+                <span className="leading-relaxed">{benefit}</span>
+              </li>
             ))}
           </ul>
+
+          {/* Tips & Best Practices */}
+          {content.tipsAndBestPractices && content.tipsAndBestPractices.length > 0 && (
+            <>
+              <h2 className="text-xl font-bold text-gray-800 mt-8">Tips & Best Practices</h2>
+              <div className="space-y-2 mt-3">
+                {content.tipsAndBestPractices.map((tip, i) => (
+                  <div key={i} className="flex items-start gap-2.5 p-3 bg-amber-50/50 rounded-lg border border-amber-100/50">
+                    <span className="text-amber-500 shrink-0">💡</span>
+                    <span className="text-gray-600 text-sm leading-relaxed">{tip}</span>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+
+          {/* Indian Context Section */}
+          {content.indianContext && (
+            <>
+              <h2 className="text-xl font-bold text-gray-800 mt-8">{tool.name} for Indian Users</h2>
+              <p className="text-gray-600 leading-relaxed">{content.indianContext}</p>
+            </>
+          )}
 
           {tool.keywords.length > 0 && (
             <>
@@ -159,6 +231,11 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
 
         {/* Expert Review — E-E-A-T signal for Google */}
         <ReviewedBy category={tool.category} toolName={tool.name} slug={tool.slug} />
+
+        {/* Last Updated — freshness signal */}
+        <div className="mt-3 text-xs text-gray-400">
+          Last updated: April 2026
+        </div>
 
         {/* User Rating — engagement signal */}
         <div className="mt-8">

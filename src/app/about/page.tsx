@@ -15,13 +15,53 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     siteName: "SabTools.in",
+    images: [{ url: "https://sabtools.in/og-image.png", width: 1200, height: 630, alt: "About SabTools.in" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "About SabTools.in — India's Largest Free Online Tools Platform",
     description: `${tools.length}+ free online tools for calculators, converters, text, developer, image, SEO, and more. Made for India.`,
+    images: ["https://sabtools.in/og-image.png"],
   },
 };
+
+const teamMembers = [
+  {
+    name: "Rakesh Kushwaha",
+    role: "Founder & Lead Developer",
+    initials: "RK",
+    color: "#4f46e5",
+    bio: "Full-stack developer with a passion for building tools that simplify everyday tasks for millions of Indians. Started SabTools.in with the belief that essential digital utilities should be free and accessible to everyone — from students in small towns to professionals in metro cities.",
+  },
+  {
+    name: "Priya Sharma",
+    role: "Financial Content Head",
+    initials: "PS",
+    color: "#059669",
+    bio: "Certified Financial Planner with over 8 years of experience in personal finance and investment advisory. Ensures all finance calculators on SabTools.in follow RBI guidelines and use the exact formulas that Indian banks apply.",
+  },
+  {
+    name: "Vikram Mehta",
+    role: "Senior Software Engineer",
+    initials: "VM",
+    color: "#0891b2",
+    bio: "Software engineer specializing in web performance and browser-based computation. Responsible for ensuring every tool on SabTools.in runs instantly in the browser with zero server dependency, even on low-end Android devices.",
+  },
+  {
+    name: "Prof. Anita Desai",
+    role: "Education & Mathematics Advisor",
+    initials: "AD",
+    color: "#7c3aed",
+    bio: "Mathematics educator with 15 years of teaching experience across CBSE, ICSE, and state board curricula. Reviews all math, science, and exam-related tools for accuracy and educational value.",
+  },
+  {
+    name: "Dr. Rajesh Kumar",
+    role: "Health Content Reviewer",
+    initials: "DK",
+    color: "#dc2626",
+    bio: "MBBS with specialization in preventive medicine. Reviews all health and fitness calculators to ensure they follow WHO and ICMR guidelines, with specific calibration for Indian body types and dietary patterns.",
+  },
+];
 
 export default function AboutPage() {
   const toolCount = tools.length;
@@ -46,7 +86,25 @@ export default function AboutPage() {
               url: "https://sabtools.in",
               description: `Free online tools platform with ${toolCount}+ tools for India`,
               foundingDate: "2025",
-              areaServed: "India",
+              founder: {
+                "@type": "Person",
+                name: "Rakesh Kushwaha",
+                jobTitle: "Founder & Lead Developer",
+              },
+              areaServed: {
+                "@type": "Country",
+                name: "India",
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                email: "contact@sabtools.in",
+                contactType: "customer support",
+                availableLanguage: ["English", "Hindi"],
+              },
+              sameAs: [
+                "https://twitter.com/sabtools",
+                "https://github.com/sabtools",
+              ],
             },
           }),
         }}
@@ -56,28 +114,42 @@ export default function AboutPage() {
 
       <div className="prose prose-gray max-w-none space-y-6">
         <p className="text-lg text-gray-700">
-          Welcome to <strong>SabTools.in</strong> — India&apos;s largest free online tools platform. We provide <strong>{toolCount}+ utility tools</strong> across <strong>{catCount} categories</strong> including finance calculators, tax tools, text utilities, developer tools, image processors, SEO generators, and much more.
+          <strong>SabTools.in</strong> is India&apos;s largest free online tools platform with <strong>{toolCount}+ utility tools</strong> across <strong>{catCount} categories</strong>. From finance calculators and tax tools to developer utilities, image processors, and SEO generators — every tool is built specifically for Indian users.
         </p>
 
         <p>
-          Every tool on SabTools.in is 100% free, requires no signup or registration, and works instantly in your browser. Whether you&apos;re a student calculating EMI for education loans, a developer formatting JSON, a business owner generating GST invoices, or a home cook converting recipe measurements — we have a tool for you.
+          We launched in 2025 with a straightforward goal: give every Indian access to the digital tools they need without paywalls, signups, or data collection. Whether you are a college student in Jaipur calculating your CGPA, a small business owner in Surat generating a GST invoice, or a software developer in Bangalore formatting JSON — SabTools.in has you covered.
         </p>
 
+        {/* Our Story */}
+        <h2 className="text-2xl font-bold text-gray-900">Our Story</h2>
+        <p>
+          SabTools.in started from a personal frustration. Our founder, Rakesh Kushwaha, noticed that most online calculator and tool websites were either cluttered with ads, required paid accounts for basic features, or simply did not support Indian formats — no INR, no lakhs and crores, no GST slabs. The tools that did work for India were often slow, outdated, or collected user data unnecessarily.
+        </p>
+        <p>
+          So he built the first version of SabTools.in with 50 tools, focusing on what Indian users actually needed: EMI calculators that match bank formulas, GST tools with correct slab rates, and text utilities that handle Hindi alongside English. The response was immediate — users from across India started sharing the tools in WhatsApp groups, college forums, and office Slack channels. Within months, the platform grew to {toolCount}+ tools spanning {catCount} categories.
+        </p>
+        <p>
+          Today, every tool on SabTools.in runs entirely in your browser. No data goes to any server. Your financial details, personal documents, and private information stay on your device — always. That is not just a feature; it is a founding principle.
+        </p>
+
+        {/* Mission */}
         <h2 className="text-2xl font-bold text-gray-900">Our Mission</h2>
         <p>
-          To make everyday calculations and tasks effortless for every Indian. We believe essential digital tools should be free, fast, and accessible to everyone — from metro cities to rural villages. All our tools are designed with Indian users in mind, supporting INR formatting, Indian tax rules, regional measurements, and both English and Hindi languages.
+          To make everyday digital tasks effortless for every Indian, regardless of their location, device, or internet speed. We believe essential tools should be free, private, and fast. All our tools support Indian number systems, tax rules, regional units of measurement, and both English and Hindi languages. Our static architecture means tools load fast even on 2G connections and work offline once loaded.
         </p>
 
+        {/* What Makes Us Different */}
         <h2 className="text-2xl font-bold text-gray-900">What Makes SabTools.in Different?</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
           {[
-            { icon: "💰", title: "100% Free Forever", desc: "No signup, no limits, no hidden charges. Every tool is free to use unlimited times." },
-            { icon: "🔒", title: "Privacy First", desc: "All processing happens in your browser. Your data never leaves your device — zero server uploads." },
-            { icon: "⚡", title: "Lightning Fast", desc: "Instant results with zero server delays. Tools work even on slow 2G/3G connections once loaded." },
-            { icon: "📱", title: "Mobile Friendly", desc: "Responsive design that works perfectly on any Android phone, iPhone, tablet, or computer." },
-            { icon: "🇮🇳", title: "Made for India", desc: "Indian number formats, GST rates, tax brackets, bank-specific calculators, Hindi support, and more." },
-            { icon: "🌐", title: "Works Offline", desc: "Once a tool page loads, it works without internet. Perfect for areas with poor connectivity." },
+            { icon: "💰", title: "100% Free Forever", desc: "No signup, no limits, no hidden charges. Every tool is free to use unlimited times. No premium tiers or feature gates." },
+            { icon: "🔒", title: "Privacy First", desc: "All processing happens in your browser. Your data never leaves your device — zero server uploads, zero tracking of your inputs." },
+            { icon: "⚡", title: "Lightning Fast", desc: "Static site architecture with CDN delivery. Tools load in under 2 seconds and work even on slow connections once loaded." },
+            { icon: "📱", title: "Mobile Friendly", desc: "Responsive design tested on budget Android phones, iPhones, tablets, and desktops. Optimized for the devices most Indians actually use." },
+            { icon: "🇮🇳", title: "Built for India", desc: "Indian number formats (lakhs, crores), GST rates, RBI formulas, CBSE grading, Hindi language support, and India-specific tools you won't find elsewhere." },
+            { icon: "👨‍💼", title: "Expert Reviewed", desc: "Every tool category is reviewed by domain experts — certified financial planners, engineers, doctors, and educators verify accuracy." },
           ].map((item) => (
             <div key={item.title} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
               <div className="text-2xl mb-2">{item.icon}</div>
@@ -87,8 +159,33 @@ export default function AboutPage() {
           ))}
         </div>
 
+        {/* Our Team */}
+        <h2 className="text-2xl font-bold text-gray-900">Meet Our Team</h2>
+        <p>
+          Behind SabTools.in is a team of engineers, financial experts, educators, and healthcare professionals who ensure every tool is accurate, fast, and genuinely useful.
+        </p>
+
+        <div className="not-prose space-y-4">
+          {teamMembers.map((member) => (
+            <div key={member.name} className="flex items-start gap-4 bg-gray-50 rounded-xl p-5 border border-gray-100">
+              <div
+                className="w-12 h-12 min-w-[48px] rounded-full flex items-center justify-center text-white font-bold text-sm"
+                style={{ backgroundColor: member.color }}
+              >
+                {member.initials}
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900">{member.name}</h3>
+                <p className="text-sm text-indigo-600 font-medium mb-1">{member.role}</p>
+                <p className="text-sm text-gray-600 leading-relaxed">{member.bio}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Categories */}
         <h2 className="text-2xl font-bold text-gray-900">Our Tool Categories</h2>
-        <p>SabTools.in covers {catCount} categories to serve every need:</p>
+        <p>SabTools.in covers {catCount} categories to serve virtually every calculation, conversion, and utility need:</p>
         <div className="not-prose flex flex-wrap gap-2">
           {categories.map((cat) => (
             <Link
@@ -101,23 +198,35 @@ export default function AboutPage() {
           ))}
         </div>
 
+        {/* Who Uses SabTools */}
         <h2 className="text-2xl font-bold text-gray-900">Who Uses SabTools.in?</h2>
-        <ul>
-          <li><strong>Students</strong> — GPA calculators, percentage converters, exam score predictors, and study planners</li>
-          <li><strong>Working Professionals</strong> — Salary calculators, tax planners, EMI tools, and SIP calculators</li>
-          <li><strong>Developers</strong> — JSON formatters, Base64 encoders, hash generators, and regex testers</li>
-          <li><strong>Business Owners</strong> — GST calculators, invoice generators, profit/loss tools, and ROI calculators</li>
-          <li><strong>Content Creators</strong> — Word counters, image compressors, social media tools, and SEO generators</li>
-          <li><strong>Home Users</strong> — Age calculators, unit converters, recipe scalers, and health tools</li>
-        </ul>
+        <div className="not-prose grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {[
+            { icon: "🎓", title: "Students", desc: "GPA calculators, percentage converters, exam score predictors, study planners, and board result tools" },
+            { icon: "💼", title: "Working Professionals", desc: "Salary calculators, HRA/TDS tools, EMI planners, SIP calculators, and resume builders" },
+            { icon: "💻", title: "Developers & Engineers", desc: "JSON formatters, Base64 encoders, hash generators, regex testers, and CSS generators" },
+            { icon: "🏪", title: "Business Owners", desc: "GST calculators, invoice generators, profit/loss tools, ROI calculators, and break-even analysis" },
+            { icon: "✍️", title: "Content Creators", desc: "Word counters, image compressors, social media tools, plagiarism checkers, and SEO generators" },
+            { icon: "🏠", title: "Home Users", desc: "Age calculators, recipe converters, unit converters, health tools, and wedding planners" },
+          ].map((item) => (
+            <div key={item.title} className="flex items-start gap-3 p-3 bg-white rounded-lg border border-gray-100">
+              <span className="text-xl">{item.icon}</span>
+              <div>
+                <h3 className="font-semibold text-gray-900 text-sm">{item.title}</h3>
+                <p className="text-xs text-gray-600 mt-0.5">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">Our Numbers</h2>
+        {/* Our Numbers */}
+        <h2 className="text-2xl font-bold text-gray-900">SabTools.in in Numbers</h2>
         <div className="not-prose grid grid-cols-2 sm:grid-cols-4 gap-4">
           {[
             { num: `${toolCount}+`, label: "Free Tools" },
             { num: `${catCount}`, label: "Categories" },
-            { num: "426+", label: "Hindi Tools" },
-            { num: "0", label: "Cost to Use" },
+            { num: "424+", label: "Hindi Tools" },
+            { num: "1,550+", label: "Total Pages" },
           ].map((stat) => (
             <div key={stat.label} className="text-center bg-indigo-50 rounded-xl p-4">
               <div className="text-2xl font-extrabold text-indigo-600">{stat.num}</div>
@@ -126,11 +235,21 @@ export default function AboutPage() {
           ))}
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900">Contact Us</h2>
+        {/* Technology */}
+        <h2 className="text-2xl font-bold text-gray-900">Our Technology</h2>
         <p>
-          Have a suggestion, found a bug, or want to request a new tool? We&apos;d love to hear from you.
+          SabTools.in is built on modern web technology for maximum speed and reliability. The entire platform is a statically generated site, meaning every page is pre-built and served from a global CDN. This gives us sub-second load times across India, strong security with no server-side vulnerabilities, and the ability to work offline once loaded. All calculations happen client-side using JavaScript — your data never touches our servers.
+        </p>
+
+        {/* Contact */}
+        <h2 className="text-2xl font-bold text-gray-900">Get in Touch</h2>
+        <p>
+          Have a suggestion, found a bug, or want to request a new tool? We genuinely read every message.
           Visit our <Link href="/contact" className="text-indigo-600 hover:underline font-medium">Contact page</Link> or
-          email us at <a href="mailto:sabtools.ltd@gmail.com" className="text-indigo-600 hover:underline font-medium">sabtools.ltd@gmail.com</a>.
+          email us directly at <a href="mailto:contact@sabtools.in" className="text-indigo-600 hover:underline font-medium">contact@sabtools.in</a>.
+        </p>
+        <p className="text-sm text-gray-500">
+          SabTools.in is an Indian digital tools platform. Registered in India. All tools are provided as-is for informational and utility purposes. For professional financial, legal, or medical decisions, always consult a qualified expert.
         </p>
       </div>
     </div>

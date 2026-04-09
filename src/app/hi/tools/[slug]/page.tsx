@@ -58,12 +58,52 @@ export default async function HindiToolPage({ params }: { params: Promise<{ slug
     inLanguage: "hi",
     applicationCategory: "UtilityApplication",
     operatingSystem: "Any",
-    offers: { "@type": "Offer", price: "0", priceCurrency: "INR" },
+    browserRequirements: "Requires JavaScript",
+    author: { "@type": "Organization", name: "SabTools.in", url: "https://sabtools.in" },
+    offers: { "@type": "Offer", price: "0", priceCurrency: "INR", availability: "https://schema.org/InStock" },
+    isAccessibleForFree: true,
+  };
+
+  const howToLd = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: `${ht.name} का उपयोग कैसे करें`,
+    description: `${ht.name} SabTools.in पर मुफ्त उपलब्ध है। इसे इस्तेमाल करने का तरीका जानें।`,
+    inLanguage: "hi",
+    step: ht.howToSteps.map((step, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      text: step,
+      url: `https://sabtools.in/hi/tools/${slug}#step-${i + 1}`,
+    })),
+    tool: { "@type": "HowToTool", name: "वेब ब्राउज़र" },
+    totalTime: "PT1M",
+    estimatedCost: { "@type": "MonetaryAmount", currency: "INR", value: "0" },
+  };
+
+  const hindiFaqs = [
+    { q: `${ht.name} क्या है?`, a: `${ht.name} SabTools.in पर उपलब्ध एक मुफ्त ऑनलाइन टूल है। ${ht.description}। यह आपके ब्राउज़र में काम करता है और किसी साइनअप की आवश्यकता नहीं है।` },
+    { q: `क्या ${ht.name} मुफ्त है?`, a: `हाँ, ${ht.name} 100% मुफ्त है। कोई छिपे हुए शुल्क नहीं, कोई साइनअप नहीं। आप इसे असीमित बार उपयोग कर सकते हैं।` },
+    { q: `क्या मेरा डेटा सुरक्षित है?`, a: `बिल्कुल। सभी गणना आपके ब्राउज़र में होती है। आपका डेटा कभी किसी सर्वर पर नहीं भेजा जाता।` },
+    { q: `क्या यह मोबाइल पर काम करता है?`, a: `हाँ, ${ht.name} सभी डिवाइस पर काम करता है — Android फोन, iPhone, टैबलेट और कंप्यूटर।` },
+  ];
+
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    inLanguage: "hi",
+    mainEntity: hindiFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
   };
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
         <Breadcrumb
           items={[
@@ -120,6 +160,23 @@ export default async function HindiToolPage({ params }: { params: Promise<{ slug
             <li>भारत के लिए बना — भारतीय नंबर फॉर्मेट, GST, EMI और भी बहुत कुछ</li>
           </ul>
         </div>
+
+        {/* Hindi FAQ Section */}
+        <section className="mt-10">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">अक्सर पूछे जाने वाले प्रश्न</h2>
+          <div className="space-y-3">
+            {hindiFaqs.map((faq, i) => (
+              <details key={i} className="border border-gray-200 rounded-xl overflow-hidden">
+                <summary className="px-5 py-4 bg-white hover:bg-gray-50 cursor-pointer font-semibold text-gray-800 text-sm sm:text-base">
+                  {faq.q}
+                </summary>
+                <div className="px-5 pb-4 text-sm text-gray-600 leading-relaxed bg-gray-50">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
 
         <RelatedTools currentSlug={slug} category={tool.category} />
         <AdBanner format="rectangle" className="mt-8" />

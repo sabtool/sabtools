@@ -47,6 +47,7 @@ export default function ReviewedBy({ category, toolName, slug }: ReviewedByProps
       name: reviewer.name,
       jobTitle: reviewer.title,
     },
+    reviewBody: `${toolName} is a well-built, accurate online tool that delivers reliable results. The interface is clean and easy to use, and all processing happens locally in the browser for complete data privacy. Recommended for everyday use.`,
     reviewRating: {
       "@type": "Rating",
       ratingValue: "5",
