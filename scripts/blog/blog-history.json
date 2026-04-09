@@ -36,9 +36,10 @@
     "calorie-calculator",
     "css-gradient-generator",
     "wire-size-calculator",
-    "cgpa-to-percentage"
+    "cgpa-to-percentage",
+    "irrigation-calculator"
   ],
-  "lastCategory": "education",
-  "totalPosts": 37,
-  "lastRun": "2026-04-09T12:11:39.170Z"
+  "lastCategory": "agriculture",
+  "totalPosts": 38,
+  "lastRun": "2026-04-09T18:12:44.072Z"
 }
