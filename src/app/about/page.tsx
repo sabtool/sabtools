@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import { tools, categories } from "@/lib/tools";
+import { authors } from "@/lib/authors";
 
 export const metadata: Metadata = {
   title: "About SabTools.in — India's Largest Free Online Tools Platform",
@@ -25,43 +26,7 @@ export const metadata: Metadata = {
   },
 };
 
-const teamMembers = [
-  {
-    name: "Rakesh Kushwaha",
-    role: "Founder & Lead Developer",
-    initials: "RK",
-    color: "#4f46e5",
-    bio: "Full-stack developer with a passion for building tools that simplify everyday tasks for millions of Indians. Started SabTools.in with the belief that essential digital utilities should be free and accessible to everyone — from students in small towns to professionals in metro cities.",
-  },
-  {
-    name: "Priya Sharma",
-    role: "Financial Content Head",
-    initials: "PS",
-    color: "#059669",
-    bio: "Certified Financial Planner with over 8 years of experience in personal finance and investment advisory. Ensures all finance calculators on SabTools.in follow RBI guidelines and use the exact formulas that Indian banks apply.",
-  },
-  {
-    name: "Vikram Mehta",
-    role: "Senior Software Engineer",
-    initials: "VM",
-    color: "#0891b2",
-    bio: "Software engineer specializing in web performance and browser-based computation. Responsible for ensuring every tool on SabTools.in runs instantly in the browser with zero server dependency, even on low-end Android devices.",
-  },
-  {
-    name: "Prof. Anita Desai",
-    role: "Education & Mathematics Advisor",
-    initials: "AD",
-    color: "#7c3aed",
-    bio: "Mathematics educator with 15 years of teaching experience across CBSE, ICSE, and state board curricula. Reviews all math, science, and exam-related tools for accuracy and educational value.",
-  },
-  {
-    name: "Dr. Rajesh Kumar",
-    role: "Health Content Reviewer",
-    initials: "DK",
-    color: "#dc2626",
-    bio: "MBBS with specialization in preventive medicine. Reviews all health and fitness calculators to ensure they follow WHO and ICMR guidelines, with specific calibration for Indian body types and dietary patterns.",
-  },
-];
+const teamMembers = authors;
 
 export default function AboutPage() {
   const toolCount = tools.length;
@@ -167,7 +132,7 @@ export default function AboutPage() {
 
         <div className="not-prose space-y-4">
           {teamMembers.map((member) => (
-            <div key={member.name} className="flex items-start gap-4 bg-gray-50 rounded-xl p-5 border border-gray-100">
+            <Link key={member.name} href={`/author/${member.slug}`} className="flex items-start gap-4 bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/30 transition group block">
               <div
                 className="w-12 h-12 min-w-[48px] rounded-full flex items-center justify-center text-white font-bold text-sm"
                 style={{ backgroundColor: member.color }}
@@ -175,11 +140,11 @@ export default function AboutPage() {
                 {member.initials}
               </div>
               <div>
-                <h3 className="font-bold text-gray-900">{member.name}</h3>
+                <h3 className="font-bold text-gray-900 group-hover:text-indigo-700 transition">{member.name}</h3>
                 <p className="text-sm text-indigo-600 font-medium mb-1">{member.role}</p>
                 <p className="text-sm text-gray-600 leading-relaxed">{member.bio}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
