@@ -45,7 +45,7 @@ export default function HomePage() {
     ],
     founder: {
       "@type": "Person",
-      name: "Rakesh Kushwaha",
+      name: "Rakesh Seervi",
       jobTitle: "Founder & Lead Developer",
     },
     foundingDate: "2025",

@@ -16,8 +16,8 @@ export interface Author {
 
 export const authors: Author[] = [
   {
-    slug: "rakesh-kushwaha",
-    name: "Rakesh Kushwaha",
+    slug: "rakesh-seervi",
+    name: "Rakesh Seervi",
     role: "Founder & Lead Developer",
     initials: "RK",
     color: "#4f46e5",
@@ -43,10 +43,10 @@ export const authors: Author[] = [
       "security",
     ],
     longBio:
-      "Rakesh Kushwaha is the founder and lead developer of SabTools.in, India's largest free online tools platform. A self-taught full-stack developer from Uttar Pradesh, Rakesh began coding during his engineering studies and quickly developed a deep interest in building browser-based utilities that require zero server dependency.\n\nBefore launching SabTools.in in 2025, Rakesh worked with multiple Indian startups and freelance clients, building web applications focused on performance and accessibility. He noticed a persistent gap in the Indian digital ecosystem: most online tool websites were either behind paywalls, filled with intrusive ads, or simply did not cater to Indian formats like lakhs, crores, and GST slabs. This frustration became the founding motivation for SabTools.in.\n\nRakesh personally architects the platform's static-first approach, ensuring every tool runs entirely in the user's browser with zero data sent to any server. He leads the development of all developer tools, SEO utilities, CSS generators, data processing tools, and image processors on the platform. Under his technical leadership, SabTools.in achieves sub-second load times across India, even on budget Android devices and 2G connections.\n\nHe is passionate about making technology accessible to Bharat — not just India's metro cities but also tier-2 and tier-3 towns where internet speeds are inconsistent and devices are often entry-level. Every architectural decision on SabTools.in reflects this commitment to inclusivity and performance.",
+      "Rakesh Seervi is the founder and lead developer of SabTools.in, India's largest free online tools platform. A self-taught full-stack developer from Uttar Pradesh, Rakesh began coding during his engineering studies and quickly developed a deep interest in building browser-based utilities that require zero server dependency.\n\nBefore launching SabTools.in in 2025, Rakesh worked with multiple Indian startups and freelance clients, building web applications focused on performance and accessibility. He noticed a persistent gap in the Indian digital ecosystem: most online tool websites were either behind paywalls, filled with intrusive ads, or simply did not cater to Indian formats like lakhs, crores, and GST slabs. This frustration became the founding motivation for SabTools.in.\n\nRakesh personally architects the platform's static-first approach, ensuring every tool runs entirely in the user's browser with zero data sent to any server. He leads the development of all developer tools, SEO utilities, CSS generators, data processing tools, and image processors on the platform. Under his technical leadership, SabTools.in achieves sub-second load times across India, even on budget Android devices and 2G connections.\n\nHe is passionate about making technology accessible to Bharat — not just India's metro cities but also tier-2 and tier-3 towns where internet speeds are inconsistent and devices are often entry-level. Every architectural decision on SabTools.in reflects this commitment to inclusivity and performance.",
     socialLinks: {
       twitter: "sabtools",
-      linkedin: "rakeshkushwaha",
+      linkedin: "rakeshseervi",
     },
   },
   {

@@ -76,9 +76,9 @@ export default async function BlogPostPage({
     dateModified: post.date,
     author: {
       "@type": "Person",
-      name: "Rakesh Kushwaha",
-      url: "https://sabtools.in/author/rakesh-kushwaha",
-      sameAs: ["https://linkedin.com/in/rakeshkushwaha"],
+      name: "Rakesh Seervi",
+      url: "https://sabtools.in/author/rakesh-seervi",
+      sameAs: ["https://linkedin.com/in/rakeshseervi"],
     },
     publisher: {
       "@type": "Organization",

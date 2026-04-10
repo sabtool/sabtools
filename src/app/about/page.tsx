@@ -53,7 +53,7 @@ export default function AboutPage() {
               foundingDate: "2025",
               founder: {
                 "@type": "Person",
-                name: "Rakesh Kushwaha",
+                name: "Rakesh Seervi",
                 jobTitle: "Founder & Lead Developer",
               },
               areaServed: {
@@ -91,7 +91,7 @@ export default function AboutPage() {
         {/* Our Story */}
         <h2 className="text-2xl font-bold text-gray-900">Our Story</h2>
         <p>
-          SabTools.in started from a personal frustration. Our founder, Rakesh Kushwaha, noticed that most online calculator and tool websites were either cluttered with ads, required paid accounts for basic features, or simply did not support Indian formats — no INR, no lakhs and crores, no GST slabs. The tools that did work for India were often slow, outdated, or collected user data unnecessarily.
+          SabTools.in started from a personal frustration. Our founder, Rakesh Seervi, noticed that most online calculator and tool websites were either cluttered with ads, required paid accounts for basic features, or simply did not support Indian formats — no INR, no lakhs and crores, no GST slabs. The tools that did work for India were often slow, outdated, or collected user data unnecessarily.
         </p>
         <p>
           So he built the first version of SabTools.in with 50 tools, focusing on what Indian users actually needed: EMI calculators that match bank formulas, GST tools with correct slab rates, and text utilities that handle Hindi alongside English. The response was immediate — users from across India started sharing the tools in WhatsApp groups, college forums, and office Slack channels. Within months, the platform grew to {toolCount}+ tools spanning {catCount} categories.

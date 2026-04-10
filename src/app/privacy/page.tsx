@@ -67,9 +67,9 @@ export default function PrivacyPage() {
           1. Data Controller
         </h2>
         <p>
-          SabTools.in is owned and operated by <strong>Rakesh Kushwaha</strong>,
+          SabTools.in is owned and operated by <strong>Rakesh Seervi</strong>,
           an individual based in India. For the purposes of the DPDP Act 2023,
-          Rakesh Kushwaha is the Data Fiduciary responsible for the processing
+          Rakesh Seervi is the Data Fiduciary responsible for the processing
           of your personal data through this website.
         </p>
         <ul className="list-disc pl-6 space-y-1">
@@ -77,7 +77,7 @@ export default function PrivacyPage() {
             <strong>Website:</strong> SabTools.in
           </li>
           <li>
-            <strong>Operator:</strong> Rakesh Kushwaha
+            <strong>Operator:</strong> Rakesh Seervi
           </li>
           <li>
             <strong>Country:</strong> India
@@ -674,7 +674,7 @@ export default function PrivacyPage() {
         <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 mt-4">
           <ul className="space-y-2">
             <li>
-              <strong>Name:</strong> Rakesh Kushwaha
+              <strong>Name:</strong> Rakesh Seervi
             </li>
             <li>
               <strong>Email:</strong>{" "}
