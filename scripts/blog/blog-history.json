@@ -36,9 +36,11 @@
     "calorie-calculator",
     "css-gradient-generator",
     "wire-size-calculator",
-    "cgpa-to-percentage"
+    "cgpa-to-percentage",
+    "irrigation-calculator",
+    "wedding-date-finder"
   ],
-  "lastCategory": "education",
-  "totalPosts": 37,
-  "lastRun": "2026-04-09T12:11:39.170Z"
+  "lastCategory": "wedding",
+  "totalPosts": 39,
+  "lastRun": "2026-04-09T22:02:49.213Z"
 }
