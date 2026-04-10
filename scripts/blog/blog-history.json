@@ -40,9 +40,10 @@
     "irrigation-calculator",
     "wedding-date-finder",
     "privacy-policy-generator",
-    "flashcard-maker"
+    "flashcard-maker",
+    "csv-viewer-editor"
   ],
-  "lastCategory": "student",
-  "totalPosts": 41,
-  "lastRun": "2026-04-10T08:57:12.298Z"
+  "lastCategory": "charts",
+  "totalPosts": 42,
+  "lastRun": "2026-04-10T12:06:21.018Z"
 }
