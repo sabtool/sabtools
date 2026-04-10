@@ -136,7 +136,7 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
                   <a
                     href={`https://twitter.com/${author.socialLinks.twitter}`}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="nofollow noopener noreferrer"
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-gray-200 rounded-full text-sm text-gray-600 hover:text-indigo-600 hover:border-indigo-200 transition"
                   >
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -149,7 +149,7 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
                   <a
                     href={`https://www.linkedin.com/in/${author.socialLinks.linkedin}`}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="nofollow noopener noreferrer"
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-gray-200 rounded-full text-sm text-gray-600 hover:text-indigo-600 hover:border-indigo-200 transition"
                   >
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

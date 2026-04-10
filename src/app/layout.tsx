@@ -10,6 +10,7 @@ import RecentCalculations from "@/components/RecentCalculations";
 import KeyboardShortcuts from "@/components/KeyboardShortcuts";
 import BackToTop from "@/components/BackToTop";
 import ReadingProgress from "@/components/ReadingProgress";
+import CookieConsent from "@/components/CookieConsent";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -21,11 +22,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://sabtools.in"),
   title: {
-    default: "SabTools.in - 460+ Free Online Tools | Calculators, Converters, AI Tools & More",
+    default: "SabTools.in — 460+ Free Online Tools for India",
     template: "%s | SabTools.in",
   },
   description:
-    "India's #1 free online tools website. 460+ tools — EMI, SIP, GST calculators, AI tools, PDF tools & more. 100% free, no signup.",
+    "460+ free online tools — EMI, SIP, GST calculators, AI tools, PDF tools & more. 100% free, no signup. Trusted by Indians.",
   keywords: [
     "free online tools",
     "free online calculator",
@@ -62,8 +63,8 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://sabtools.in",
     siteName: "SabTools.in",
-    title: "SabTools.in - 460+ Free Online Tools for India",
-    description: "India's #1 free online tools website. Calculators, Converters, AI Tools, PDF Tools, Developer Tools & more. 100% free.",
+    title: "SabTools.in — 460+ Free Online Tools for India",
+    description: "460+ free online tools — calculators, converters, AI tools, PDF tools, developer tools & more. 100% free, no signup.",
     images: [
       {
         url: "https://sabtools.in/og-image.png",
@@ -76,7 +77,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "SabTools.in - 460+ Free Online Tools",
-    description: "India's #1 free online tools website. 460+ tools — 100% free, no signup.",
+    description: "460+ free online tools for India — calculators, converters, AI & more. 100% free, no signup.",
     images: ["https://sabtools.in/og-image.png"],
   },
   robots: {
@@ -133,6 +134,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* AdSense: uncomment and replace with real publisher ID after approval */}
         {/* <meta name="google-adsense-account" content="ca-pub-YOURPUBID" /> */}
         <meta name="p:domain_verify" content="2979c659d48751bc3545b2d2d9df6662" />
+        <link rel="alternate" type="application/rss+xml" title="SabTools.in Blog" href="/feed.xml" />
       </head>
       <body className="min-h-screen flex flex-col">
         <noscript>
@@ -154,6 +156,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <KeyboardShortcuts />
         <BackToTop />
         <ReadingProgress />
+        <CookieConsent />
       </body>
     </html>
   );

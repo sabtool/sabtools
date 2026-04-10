@@ -16,8 +16,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const cat = categories.find((c) => c.slug === tool.category);
   const catName = cat?.name || "Online Tools";
 
-  // Build unique, descriptive title (under 60 chars when possible)
-  const title = `${tool.name} Online Free - ${catName}`;
+  // Build unique, descriptive title (under 60 chars)
+  const title = `Free ${tool.name} Online — ${tool.description.split(".")[0].split(",")[0]}`;
 
   // Build rich description with India focus (under 160 chars)
   const desc = `${tool.description}. Free online ${tool.name.toLowerCase()} — no signup, instant results. Works on mobile & desktop.`;

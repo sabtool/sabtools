@@ -54,7 +54,7 @@ export default function ContactPage() {
     const data = new FormData(form);
 
     try {
-      const res = await fetch("https://formsubmit.co/ajax/sabtools.ltd@gmail.com", {
+      const res = await fetch("https://formsubmit.co/ajax/contact@sabtools.in", {
         method: "POST",
         headers: { Accept: "application/json" },
         body: data,
@@ -191,7 +191,7 @@ export default function ContactPage() {
                       <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
-                      <span>Something went wrong. Please try again or email us directly at <strong>sabtools.ltd@gmail.com</strong>.</span>
+                      <span>Something went wrong. Please try again or email us directly at <strong>contact@sabtools.in</strong>.</span>
                     </div>
                   )}
 
@@ -238,10 +238,10 @@ export default function ContactPage() {
                   <div>
                     <div className="text-sm font-semibold text-gray-700">Email</div>
                     <a
-                      href="mailto:sabtools.ltd@gmail.com"
+                      href="mailto:contact@sabtools.in"
                       className="text-indigo-600 hover:text-indigo-700 text-sm break-all transition"
                     >
-                      sabtools.ltd@gmail.com
+                      contact@sabtools.in
                     </a>
                   </div>
                 </div>
@@ -360,10 +360,10 @@ export default function ContactPage() {
                 "@type": "Organization",
                 name: "SabTools.in",
                 url: "https://sabtools.in",
-                email: "sabtools.ltd@gmail.com",
+                email: "contact@sabtools.in",
                 contactPoint: {
                   "@type": "ContactPoint",
-                  email: "sabtools.ltd@gmail.com",
+                  email: "contact@sabtools.in",
                   contactType: "customer support",
                   availableLanguage: ["English", "Hindi"],
                 },

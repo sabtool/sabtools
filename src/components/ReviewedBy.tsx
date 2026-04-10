@@ -33,44 +33,11 @@ interface ReviewedByProps {
   slug: string;
 }
 
-export default function ReviewedBy({ category, toolName, slug }: ReviewedByProps) {
+export default function ReviewedBy({ category }: ReviewedByProps) {
   const reviewer = getReviewer(category);
-
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    itemReviewed: {
-      "@type": "SoftwareApplication",
-      name: toolName,
-      url: `https://sabtools.in/tools/${slug}`,
-    },
-    author: {
-      "@type": "Person",
-      name: reviewer.name,
-      jobTitle: reviewer.title,
-      ...(reviewer.slug ? { url: `https://sabtools.in/author/${reviewer.slug}` } : {}),
-    },
-    reviewBody: `${toolName} is a well-built, accurate online tool that delivers reliable results. The interface is clean and easy to use, and all processing happens locally in the browser for complete data privacy. Recommended for everyday use.`,
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: "5",
-      bestRating: "5",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "SabTools.in",
-      url: "https://sabtools.in",
-    },
-    datePublished: "2026-03-01",
-    dateModified: "2026-04-09",
-  };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <div className="flex items-center gap-3 px-4 py-2.5 border border-indigo-100 rounded-[10px] bg-slate-50 max-w-[480px] mt-4">
         <div
           className="w-10 h-10 min-w-[40px] rounded-full flex items-center justify-center text-white text-sm font-bold tracking-wide"

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us — SabTools.in | Free Online Tools for India",
+  title: "Contact Us — Free Online Tools Platform",
   description: "Get in touch with the SabTools.in team. Report bugs, request new tools, share feedback, or explore business partnerships. We typically respond within 24-48 hours.",
   alternates: { canonical: "https://sabtools.in/contact" },
   openGraph: {

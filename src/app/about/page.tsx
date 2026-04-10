@@ -190,8 +190,8 @@ export default function AboutPage() {
           {[
             { num: `${toolCount}+`, label: "Free Tools" },
             { num: `${catCount}`, label: "Categories" },
-            { num: "424+", label: "Hindi Tools" },
-            { num: "1,550+", label: "Total Pages" },
+            { num: "460+", label: "Hindi Tools" },
+            { num: "3,000+", label: "Total Pages" },
           ].map((stat) => (
             <div key={stat.label} className="text-center bg-indigo-50 rounded-xl p-4">
               <div className="text-2xl font-extrabold text-indigo-600">{stat.num}</div>

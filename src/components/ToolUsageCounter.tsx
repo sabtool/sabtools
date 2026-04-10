@@ -6,16 +6,6 @@ interface ToolUsageCounterProps {
   slug: string;
 }
 
-function hashSlug(slug: string): number {
-  let hash = 0;
-  for (let i = 0; i < slug.length; i++) {
-    const char = slug.charCodeAt(i);
-    hash = (hash << 5) - hash + char;
-    hash |= 0;
-  }
-  return Math.abs(hash % 45001) + 5000;
-}
-
 function formatNumber(n: number): string {
   return n.toLocaleString("en-IN");
 }
@@ -25,9 +15,7 @@ export default function ToolUsageCounter({ slug }: ToolUsageCounterProps) {
   const [targetCount, setTargetCount] = useState(0);
 
   useEffect(() => {
-    const baseCount = hashSlug(slug);
-
-    // Track real visits in localStorage
+    // Track real visits in localStorage only
     let visits = 0;
     try {
       const key = `usage_${slug}`;
@@ -39,8 +27,7 @@ export default function ToolUsageCounter({ slug }: ToolUsageCounterProps) {
       // localStorage unavailable
     }
 
-    const total = baseCount + visits;
-    setTargetCount(total);
+    setTargetCount(visits);
 
     // Animated count-up over ~1 second
     const duration = 1000;
@@ -53,11 +40,11 @@ export default function ToolUsageCounter({ slug }: ToolUsageCounterProps) {
       const progress = current / steps;
       // Ease-out curve
       const eased = 1 - Math.pow(1 - progress, 3);
-      const value = Math.round(eased * total);
+      const value = Math.round(eased * visits);
       setDisplayCount(value);
 
       if (current >= steps) {
-        setDisplayCount(total);
+        setDisplayCount(visits);
         clearInterval(interval);
       }
     }, stepTime);
@@ -86,7 +73,7 @@ export default function ToolUsageCounter({ slug }: ToolUsageCounterProps) {
       <span role="img" aria-label="fire">
         🔥
       </span>
-      Used {formatNumber(displayCount)}+ times
+      You&apos;ve used this {formatNumber(displayCount)} {displayCount === 1 ? "time" : "times"}
       <svg
         width="14"
         height="14"

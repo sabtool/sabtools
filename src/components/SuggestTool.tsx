@@ -104,7 +104,7 @@ export default function SuggestTool() {
           `Submitted by: ${suggestion.email || "Anonymous"}\n` +
           `Date: ${new Date().toLocaleDateString()}`
       );
-      window.open(`mailto:sabtools.ltd@gmail.com?subject=${subject}&body=${body}`, "_self");
+      window.open(`mailto:contact@sabtools.in?subject=${subject}&body=${body}`, "_self");
 
       setSubmitted(true);
     },

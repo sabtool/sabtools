@@ -150,23 +150,10 @@ export default function ToolRating({ slug, toolName }: ToolRatingProps) {
 
   return (
     <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 sm:p-5">
-      {/* Aggregate rating display */}
+      {/* Rating header */}
       <div className="flex items-center gap-3 mb-3">
-        <div className="flex items-center gap-0.5">
-          {[1, 2, 3, 4, 5].map((star) => {
-            const rating = parseFloat(displayRating);
-            const filled = star <= Math.floor(rating);
-            const isHalf = !filled && star === Math.ceil(rating) && rating % 1 >= 0.3;
-            return (
-              <StarIcon key={star} filled={filled} half={isHalf} />
-            );
-          })}
-        </div>
         <span className="text-sm font-semibold text-gray-900 dark:text-white">
-          {displayRating}/5
-        </span>
-        <span className="text-sm text-gray-500 dark:text-gray-400">
-          based on {displayCount.toLocaleString()} ratings
+          {hasRated ? `Your rating: ${userStars}/5` : "How would you rate this tool?"}
         </span>
       </div>
 

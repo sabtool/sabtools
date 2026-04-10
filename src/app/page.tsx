@@ -36,7 +36,7 @@ export default function HomePage() {
     name: "SabTools.in",
     url: "https://sabtools.in",
     logo: "https://sabtools.in/og-image.png",
-    description: `India's #1 free online tools website with ${tools.length}+ tools.`,
+    description: `India's leading free online tools platform with ${tools.length}+ tools. Free calculators, converters, AI tools and more.`,
     sameAs: [
       "https://twitter.com/sabtools",
       "https://youtube.com/@sabtools",
