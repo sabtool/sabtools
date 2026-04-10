@@ -41,7 +41,7 @@ export default function HomePage() {
       "https://twitter.com/sabtools",
       "https://youtube.com/@sabtools",
       "https://linkedin.com/company/sabtools",
-      "https://github.com/sabtool",
+      "https://github.com/sabtool/sabtools",
     ],
     founder: {
       "@type": "Person",

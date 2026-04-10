@@ -76,8 +76,8 @@ export default function IncomeTaxCalculator() {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="text-sm font-semibold text-gray-700 block mb-2">Annual Income (₹)</label>
-          <input type="number" placeholder="e.g. 1200000" value={income} onChange={(e) => setIncome(e.target.value)} className="calc-input" />
+          <label htmlFor="annual-income" className="text-sm font-semibold text-gray-700 block mb-2">Annual Income (₹)</label>
+          <input id="annual-income" type="number" placeholder="e.g. 1200000" value={income} onChange={(e) => setIncome(e.target.value)} className="calc-input" />
         </div>
         <div>
           <label className="text-sm font-semibold text-gray-700 block mb-2">Tax Regime</label>

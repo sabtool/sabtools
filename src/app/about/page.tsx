@@ -68,7 +68,9 @@ export default function AboutPage() {
               },
               sameAs: [
                 "https://twitter.com/sabtools",
-                "https://github.com/sabtools",
+                "https://youtube.com/@sabtools",
+                "https://linkedin.com/company/sabtools",
+                "https://github.com/sabtool/sabtools",
               ],
             },
           }),
@@ -132,19 +134,26 @@ export default function AboutPage() {
 
         <div className="not-prose space-y-4">
           {teamMembers.map((member) => (
-            <Link key={member.name} href={`/author/${member.slug}`} className="flex items-start gap-4 bg-gray-50 rounded-xl p-5 border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/30 transition group block">
+            <div key={member.name} className="flex items-start gap-4 bg-gray-50 rounded-xl p-5 border border-gray-100">
               <div
                 className="w-12 h-12 min-w-[48px] rounded-full flex items-center justify-center text-white font-bold text-sm"
                 style={{ backgroundColor: member.color }}
               >
                 {member.initials}
               </div>
-              <div>
-                <h3 className="font-bold text-gray-900 group-hover:text-indigo-700 transition">{member.name}</h3>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <Link href={`/author/${member.slug}`} className="font-bold text-gray-900 hover:text-indigo-700 transition">{member.name}</Link>
+                  {member.socialLinks?.linkedin && (
+                    <a href={`https://linkedin.com/in/${member.socialLinks.linkedin}`} target="_blank" rel="nofollow noopener noreferrer" className="text-blue-600 hover:text-blue-800 transition" aria-label={`${member.name} LinkedIn`}>
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                  )}
+                </div>
                 <p className="text-sm text-indigo-600 font-medium mb-1">{member.role}</p>
                 <p className="text-sm text-gray-600 leading-relaxed">{member.bio}</p>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
 
