@@ -23,6 +23,7 @@ const toolComponents: Record<string, AnyComponent> = {
   "mutual-fund-calculator": dynamic(() => import("./MutualFundCalculator")),
   "car-loan-calculator": dynamic(() => import("./CarLoanCalculator")),
   "home-loan-calculator": dynamic(() => import("./HomeLoanCalculator")),
+  "home-loan-prepayment-calculator": dynamic(() => import("./HomeLoanPrepaymentCalculator")),
   "education-loan-calculator": dynamic(() => import("./EducationLoanCalculator")),
   "inflation-calculator": dynamic(() => import("./InflationCalculator")),
   "cagr-calculator": dynamic(() => import("./CagrCalculator")),
@@ -191,6 +192,7 @@ const toolComponents: Record<string, AnyComponent> = {
   "salary-hike-calculator": dynamic(() => import("./SalaryHikeCalculator")),
   "electricity-bill-calculator": dynamic(() => import("./ElectricityBillCalculator")),
   "gold-price-calculator": dynamic(() => import("./GoldPriceCalculator")),
+  "eighth-pay-commission-calculator": dynamic(() => import("./EighthPayCommissionCalculator")),
 
   // Fun & Utility (10)
   "typing-speed-test": dynamic(() => import("./TypingSpeedTest")),
@@ -310,6 +312,7 @@ const toolComponents: Record<string, AnyComponent> = {
   "brick-calculator": dynamic(() => import("./BrickCalculator")),
   "cement-calculator": dynamic(() => import("./CementCalculator")),
   "interior-cost-estimator": dynamic(() => import("./InteriorCostEstimator")),
+  "property-capital-gains-tax-calculator": dynamic(() => import("./PropertyCapitalGainsTaxCalculator")),
 
   // Electrical & Engineering (6)
   "wire-size-calculator": dynamic(() => import("./WireSizeCalculator")),
@@ -519,7 +522,7 @@ const toolComponents: Record<string, AnyComponent> = {
   "wedding-food-calculator": dynamic(() => import("./WeddingFoodCalculator")),
   "emi-vs-rent-calculator": dynamic(() => import("./EmiVsRentCalculator")),
   "indian-name-meaning": dynamic(() => import("./IndianNameMeaning")),
-  "govt-scheme-checker": dynamic(() => import("./GovtSchemeChecker")),
+  "govt-scheme-eligibility-finder": dynamic(() => import("./GovtSchemeEligibilityFinder")),
 };
 
 function ComingSoonWrapper({ name }: { name: string }) {

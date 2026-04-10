@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 export default function DailyInterestCalculator() {
   const [amount, setAmount] = useState("");
   const [loanDate, setLoanDate] = useState("");
-  const [releaseDate, setReleaseDate] = useState("");
+  const [releaseDate, setReleaseDate] = useState(new Date().toISOString().split("T")[0]);
 
   const result = useMemo(() => {
     const principal = parseFloat(amount);

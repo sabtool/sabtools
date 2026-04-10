@@ -27,6 +27,7 @@
     { "source": "/blog/gst-for-small-business-india", "destination": "/blog/gst-guide-small-business-india", "permanent": true },
     { "source": "/blog/nps-ppf-elss-comparison-2026", "destination": "/blog/nps-vs-ppf-vs-elss-best-tax-saving-2026", "permanent": true },
 
+    { "source": "/tools/govt-scheme-checker", "destination": "/tools/govt-scheme-eligibility-finder", "permanent": true },
     { "source": "/author/rakesh-kushwaha", "destination": "/author/rakesh-seervi", "permanent": true },
 
     { "source": "/:path*", "has": [{ "type": "host", "value": "sabtools.vercel.app" }], "destination": "https://sabtools.in/:path*", "permanent": true },
