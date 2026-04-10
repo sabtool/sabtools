@@ -8106,7 +8106,7 @@ const blogPosts: BlogPost[] = [
     <h2>Privacy Policy Generator for India — Why It Matters</h2>
     <p><a href="/tools/privacy-policy-generator">Privacy Policy Generator</a> is built specifically for Indian users. The interface supports Indian numbering (lakhs, crores), INR formatting, and references Indian standards and regulations where applicable. With 900+ million internet users in India, we've designed this tool to be fast even on 3G/4G networks and work smoothly on budget smartphones.</p>
 
-    <p>SabTools.in is India's #1 free tools website, trusted by students, professionals, and businesses across all states. We keep our tools updated with the latest Indian standards and regulations so you always get accurate results.</p>
+    <p>SabTools.in is one of India's leading free tools platforms, trusted by students, professionals, and businesses across all states. We keep our tools updated with the latest Indian standards and regulations so you always get accurate results.</p>
   
     <h2>Related Tools You Might Find Useful</h2>
     <p>If you found Privacy Policy Generator helpful, you'll love these related tools on SabTools.in:</p>

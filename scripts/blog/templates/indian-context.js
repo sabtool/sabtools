@@ -20,7 +20,7 @@ function generateIndianContext(tool, keywords) {
     <h2>${tool.name} for India — Why It Matters</h2>
     <p><a href="/tools/${tool.slug}">${tool.name}</a> ${context}</p>
 
-    <p>SabTools.in is India's #1 free tools website, trusted by students, professionals, and businesses across all states. We keep our tools updated with the latest Indian standards and regulations so you always get accurate results.</p>
+    <p>SabTools.in is one of India's leading free tools platforms, trusted by students, professionals, and businesses across all states. We keep our tools updated with the latest Indian standards and regulations so you always get accurate results.</p>
   `;
 }
 
