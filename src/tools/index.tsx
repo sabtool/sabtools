@@ -15,6 +15,7 @@ const toolComponents: Record<string, AnyComponent> = {
   "ppf-calculator": dynamic(() => import("./PpfCalculator")),
   "compound-interest-calculator": dynamic(() => import("./CompoundInterestCalculator")),
   "simple-interest-calculator": dynamic(() => import("./SimpleInterestCalculator")),
+  "daily-interest-calculator": dynamic(() => import("./DailyInterestCalculator")),
   "income-tax-calculator": dynamic(() => import("./IncomeTaxCalculator")),
   "gratuity-calculator": dynamic(() => import("./GratuityCalculator")),
   "lumpsum-calculator": dynamic(() => import("./LumpsumCalculator")),
