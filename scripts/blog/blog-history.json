@@ -38,9 +38,10 @@
     "wire-size-calculator",
     "cgpa-to-percentage",
     "irrigation-calculator",
-    "wedding-date-finder"
+    "wedding-date-finder",
+    "privacy-policy-generator"
   ],
-  "lastCategory": "wedding",
-  "totalPosts": 39,
-  "lastRun": "2026-04-09T22:02:49.213Z"
+  "lastCategory": "security",
+  "totalPosts": 40,
+  "lastRun": "2026-04-10T06:21:00.080Z"
 }
