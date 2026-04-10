@@ -39,9 +39,10 @@
     "cgpa-to-percentage",
     "irrigation-calculator",
     "wedding-date-finder",
-    "privacy-policy-generator"
+    "privacy-policy-generator",
+    "flashcard-maker"
   ],
-  "lastCategory": "security",
-  "totalPosts": 40,
-  "lastRun": "2026-04-10T06:21:00.080Z"
+  "lastCategory": "student",
+  "totalPosts": 41,
+  "lastRun": "2026-04-10T08:57:12.298Z"
 }
