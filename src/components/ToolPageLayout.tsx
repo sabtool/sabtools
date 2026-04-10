@@ -232,7 +232,7 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
         <ToolFaq toolName={tool.name} description={tool.description} customFaqs={content.faqs} />
 
         {/* Expert Review — E-E-A-T signal for Google */}
-        <ReviewedBy category={tool.category} toolName={tool.name} slug={tool.slug} />
+        <ReviewedBy category={tool.category} />
 
         {/* Last Updated — freshness signal */}
         <div className="mt-3 text-xs text-gray-400">

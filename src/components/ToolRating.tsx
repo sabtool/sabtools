@@ -8,29 +8,6 @@ interface ToolRatingProps {
   toolName: string;
 }
 
-/* Deterministic hash from slug string to a number */
-function hashSlug(slug: string): number {
-  let hash = 0;
-  for (let i = 0; i < slug.length; i++) {
-    hash = (hash << 5) - hash + slug.charCodeAt(i);
-    hash |= 0;
-  }
-  return Math.abs(hash);
-}
-
-/* Pseudo-random rating count between 500-5000, deterministic per slug */
-function getRatingCount(slug: string): number {
-  const h = hashSlug(slug);
-  return 500 + (h % 4501);
-}
-
-/* Pseudo-random star rating between 4.5-4.9, deterministic per slug */
-function getBaseRating(slug: string): number {
-  const h = hashSlug(slug + "_rating");
-  const options = [4.5, 4.6, 4.7, 4.8, 4.9];
-  return options[h % options.length];
-}
-
 interface StoredRating {
   stars: number;
   helpful: boolean | null;
@@ -60,37 +37,6 @@ function saveRating(slug: string, rating: StoredRating): void {
   }
 }
 
-function StarIcon({ filled, half }: { filled: boolean; half?: boolean }) {
-  if (half) {
-    return (
-      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
-        <defs>
-          <linearGradient id="halfStar">
-            <stop offset="50%" stopColor="#6366f1" />
-            <stop offset="50%" stopColor="transparent" />
-          </linearGradient>
-        </defs>
-        <path
-          d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
-          fill="url(#halfStar)"
-          stroke="#6366f1"
-          strokeWidth={1.5}
-        />
-      </svg>
-    );
-  }
-  return (
-    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
-      <path
-        d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
-        fill={filled ? "#6366f1" : "none"}
-        stroke={filled ? "#6366f1" : "#c7d2fe"}
-        strokeWidth={1.5}
-      />
-    </svg>
-  );
-}
-
 export default function ToolRating({ slug, toolName }: ToolRatingProps) {
   const [mounted, setMounted] = useState(false);
   const [userStars, setUserStars] = useState(0);
@@ -98,9 +44,6 @@ export default function ToolRating({ slug, toolName }: ToolRatingProps) {
   const [helpful, setHelpful] = useState<boolean | null>(null);
   const [hasRated, setHasRated] = useState(false);
   const [showThankYou, setShowThankYou] = useState(false);
-
-  const baseRating = getBaseRating(slug);
-  const ratingCount = getRatingCount(slug);
 
   useEffect(() => {
     setMounted(true);
@@ -143,10 +86,6 @@ export default function ToolRating({ slug, toolName }: ToolRatingProps) {
 
   if (!mounted) return <div className="h-24" />;
 
-  const displayRating = userStars > 0
-    ? ((baseRating * ratingCount + userStars) / (ratingCount + 1)).toFixed(1)
-    : baseRating.toFixed(1);
-  const displayCount = userStars > 0 ? ratingCount + 1 : ratingCount;
 
   return (
     <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 sm:p-5">

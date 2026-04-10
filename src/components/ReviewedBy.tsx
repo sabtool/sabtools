@@ -29,8 +29,6 @@ function getReviewer(category: string) {
 
 interface ReviewedByProps {
   category: string;
-  toolName: string;
-  slug: string;
 }
 
 export default function ReviewedBy({ category }: ReviewedByProps) {
