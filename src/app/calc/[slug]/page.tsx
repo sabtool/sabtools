@@ -115,7 +115,7 @@ export default async function CalcPage({
   };
 
   // JSON-LD: FAQPage
-  const faqItems = [
+  const defaultFaqItems = [
     {
       q: `What is ${page.h1}?`,
       a: `${page.h1} is a free online tool on SabTools.in. ${page.description} It runs entirely in your browser with no signup required.`,
@@ -137,6 +137,8 @@ export default async function CalcPage({
       a: `This calculator uses standard financial formulas and is highly accurate. However, actual results may vary slightly based on specific bank terms, policies and rounding methods.`,
     },
   ];
+
+  const faqItems = page.faqs && page.faqs.length > 0 ? page.faqs : defaultFaqItems;
 
   const faqLd = {
     "@context": "https://schema.org",
