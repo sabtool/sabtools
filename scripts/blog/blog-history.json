@@ -41,9 +41,11 @@
     "wedding-date-finder",
     "privacy-policy-generator",
     "flashcard-maker",
-    "csv-viewer-editor"
+    "csv-viewer-editor",
+    "text-reverser",
+    "screen-resolution-checker"
   ],
-  "lastCategory": "charts",
-  "totalPosts": 42,
-  "lastRun": "2026-04-10T12:06:21.018Z"
+  "lastCategory": "fun",
+  "totalPosts": 44,
+  "lastRun": "2026-04-10T21:57:36.509Z"
 }
