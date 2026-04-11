@@ -43,9 +43,10 @@
     "flashcard-maker",
     "csv-viewer-editor",
     "text-reverser",
-    "screen-resolution-checker"
+    "screen-resolution-checker",
+    "road-trip-planner"
   ],
-  "lastCategory": "fun",
-  "totalPosts": 44,
-  "lastRun": "2026-04-10T21:57:36.509Z"
+  "lastCategory": "vehicle",
+  "totalPosts": 45,
+  "lastRun": "2026-04-11T05:21:55.660Z"
 }
