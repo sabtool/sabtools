@@ -46,9 +46,10 @@
     "screen-resolution-checker",
     "road-trip-planner",
     "rashi-calculator",
-    "affidavit-generator"
+    "affidavit-generator",
+    "marks-percentage-calculator"
   ],
-  "lastCategory": "legal",
-  "totalPosts": 47,
-  "lastRun": "2026-04-11T11:19:23.503Z"
+  "lastCategory": "exam",
+  "totalPosts": 48,
+  "lastRun": "2026-04-11T16:02:25.841Z"
 }
