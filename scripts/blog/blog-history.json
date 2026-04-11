@@ -45,9 +45,10 @@
     "text-reverser",
     "screen-resolution-checker",
     "road-trip-planner",
-    "rashi-calculator"
+    "rashi-calculator",
+    "affidavit-generator"
   ],
-  "lastCategory": "astrology",
-  "totalPosts": 46,
-  "lastRun": "2026-04-11T07:55:54.745Z"
+  "lastCategory": "legal",
+  "totalPosts": 47,
+  "lastRun": "2026-04-11T11:19:23.503Z"
 }
