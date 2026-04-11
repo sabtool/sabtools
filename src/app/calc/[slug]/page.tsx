@@ -209,42 +209,41 @@ export default async function CalcPage({
         <AdBanner format="horizontal" className="mt-8" />
 
         {/* Unique SEO Content */}
-        <div className="mt-12 prose prose-gray max-w-none">
-          <h2 className="text-xl font-bold text-gray-800">
-            About {page.h1}
-          </h2>
+        <div className="mt-12 prose prose-gray max-w-none prose-headings:text-gray-800 prose-h2:text-xl prose-h2:font-bold prose-h2:mt-10 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-gray-200 prose-h3:text-lg prose-h3:font-semibold prose-h3:mt-8 prose-h3:mb-3 prose-table:border-collapse prose-table:w-full prose-th:bg-gray-100 prose-th:text-left prose-th:px-4 prose-th:py-2 prose-th:border prose-th:border-gray-200 prose-th:text-sm prose-th:font-semibold prose-td:px-4 prose-td:py-2 prose-td:border prose-td:border-gray-200 prose-td:text-sm prose-strong:text-gray-800 prose-li:text-gray-600 prose-p:text-gray-600 prose-p:leading-relaxed">
           <div
-            className="text-gray-600 leading-relaxed"
             dangerouslySetInnerHTML={{ __html: page.content }}
           />
         </div>
 
-        {/* How to use */}
-        <div className="mt-8 prose prose-gray max-w-none">
-          <h3 className="text-lg font-semibold text-gray-800">
-            How to use {page.h1}?
-          </h3>
-          <ol className="text-gray-600 list-decimal list-inside space-y-1">
-            <li>Enter the required values in the input fields above</li>
-            <li>The results will be calculated automatically in real-time</li>
-            <li>Adjust values to compare different scenarios</li>
-            <li>Share or bookmark for future reference</li>
-          </ol>
-        </div>
+        {/* Generic how-to and why sections — only shown for pages without custom content */}
+        {(!page.faqs || page.faqs.length === 0) && (
+          <>
+            <div className="mt-8 prose prose-gray max-w-none">
+              <h3 className="text-lg font-semibold text-gray-800">
+                How to use {page.h1}?
+              </h3>
+              <ol className="text-gray-600 list-decimal list-inside space-y-1">
+                <li>Enter the required values in the input fields above</li>
+                <li>The results will be calculated automatically in real-time</li>
+                <li>Adjust values to compare different scenarios</li>
+                <li>Share or bookmark for future reference</li>
+              </ol>
+            </div>
 
-        {/* Why use section */}
-        <div className="mt-8 prose prose-gray max-w-none">
-          <h3 className="text-lg font-semibold text-gray-800">
-            Why use SabTools.in?
-          </h3>
-          <ul className="text-gray-600 list-disc list-inside space-y-1">
-            <li>100% free — no signup, no limits, no hidden fees</li>
-            <li>Lightning fast — runs instantly in your browser</li>
-            <li>Privacy first — your data never leaves your device</li>
-            <li>Mobile friendly — works on any phone, tablet or computer</li>
-            <li>Made for India — Indian formats, banks, taxes &amp; more</li>
-          </ul>
-        </div>
+            <div className="mt-8 prose prose-gray max-w-none">
+              <h3 className="text-lg font-semibold text-gray-800">
+                Why use SabTools.in?
+              </h3>
+              <ul className="text-gray-600 list-disc list-inside space-y-1">
+                <li>100% free — no signup, no limits, no hidden fees</li>
+                <li>Lightning fast — runs instantly in your browser</li>
+                <li>Privacy first — your data never leaves your device</li>
+                <li>Mobile friendly — works on any phone, tablet or computer</li>
+                <li>Made for India — Indian formats, banks, taxes &amp; more</li>
+              </ul>
+            </div>
+          </>
+        )}
 
         {/* Also try the main tool link */}
         <div className="mt-8 p-4 bg-indigo-50 rounded-xl border border-indigo-100">

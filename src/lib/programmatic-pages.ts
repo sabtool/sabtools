@@ -476,26 +476,38 @@ export const programmaticPages: ProgrammaticPage[] = [
 
 <h2>Tax Benefits of ELSS Under Section 80C</h2>
 <p>ELSS is one of the most popular tax-saving instruments in India because of its attractive tax benefits:</p>
+<div style="overflow-x:auto">
+<table>
+<thead><tr><th>Tax Bracket (Old Regime)</th><th>Annual ELSS Investment</th><th>Tax Saved (incl. 4% Cess)</th></tr></thead>
+<tbody>
+<tr><td>30% (Income above Rs 10L)</td><td>Rs 1,50,000</td><td><strong>Rs 46,800</strong></td></tr>
+<tr><td>20% (Income Rs 5L - 10L)</td><td>Rs 1,50,000</td><td><strong>Rs 31,200</strong></td></tr>
+<tr><td>5% (Income Rs 2.5L - 5L)</td><td>Rs 1,50,000</td><td><strong>Rs 7,800</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Key points to remember:</strong></p>
 <ul>
 <li><strong>Deduction up to Rs 1.5 Lakh:</strong> Investments in ELSS qualify for tax deduction under Section 80C up to Rs 1,50,000 per financial year. This is shared with other 80C instruments like PPF, EPF, NSC, life insurance premiums, and home loan principal repayment.</li>
-<li><strong>Tax Savings Based on Slab:</strong> If you are in the 30% tax bracket (income above Rs 10 lakh under old regime), investing Rs 1.5 lakh in ELSS saves you Rs 46,800 in taxes (including 4% cess). In the 20% bracket, you save Rs 31,200.</li>
 <li><strong>Old Regime Only:</strong> Section 80C deductions are available only under the Old Tax Regime. If you have opted for the New Tax Regime (default from FY 2023-24), you cannot claim 80C deductions.</li>
 <li><strong>No Upper Limit on Investment:</strong> While the tax deduction is capped at Rs 1.5 lakh, you can invest any amount in ELSS. Additional investments beyond Rs 1.5 lakh won't give extra tax benefits but will still earn equity returns.</li>
 </ul>
 
 <h2>ELSS Lock-in Period Explained</h2>
 <p>ELSS has the <strong>shortest lock-in period of 3 years</strong> among all Section 80C tax-saving options. Here is how it compares:</p>
+<div style="overflow-x:auto">
 <table>
-<thead><tr><th>Investment</th><th>Lock-in Period</th></tr></thead>
+<thead><tr><th>Investment Option</th><th>Lock-in Period</th><th>Returns Type</th></tr></thead>
 <tbody>
-<tr><td>ELSS Mutual Fund</td><td><strong>3 years</strong></td></tr>
-<tr><td>Tax Saving FD</td><td>5 years</td></tr>
-<tr><td>NSC (National Savings Certificate)</td><td>5 years</td></tr>
-<tr><td>PPF (Public Provident Fund)</td><td>15 years</td></tr>
-<tr><td>Sukanya Samriddhi Yojana</td><td>21 years</td></tr>
-<tr><td>Life Insurance (ULIP)</td><td>5 years</td></tr>
+<tr style="background:#f0fdf4"><td><strong>ELSS Mutual Fund</strong></td><td><strong>3 years (shortest)</strong></td><td>Market-linked (12-15%)</td></tr>
+<tr><td>Tax Saving FD</td><td>5 years</td><td>Fixed (6.5-7.5%)</td></tr>
+<tr><td>NSC (National Savings Certificate)</td><td>5 years</td><td>Fixed (7.7%)</td></tr>
+<tr><td>PPF (Public Provident Fund)</td><td>15 years</td><td>Fixed (7.1%)</td></tr>
+<tr><td>Sukanya Samriddhi Yojana</td><td>21 years</td><td>Fixed (8.2%)</td></tr>
+<tr><td>Life Insurance (ULIP)</td><td>5 years</td><td>Market-linked</td></tr>
 </tbody>
 </table>
+</div>
 <p>An important detail: in ELSS SIP, each monthly installment has its own 3-year lock-in. Your April 2026 SIP becomes redeemable in April 2029, May 2026 SIP in May 2029, and so on. After the initial 3 years, your earliest SIP installments start unlocking every month, effectively creating a rolling liquidity stream.</p>
 
 <h2>LTCG Tax on ELSS Returns</h2>
@@ -505,33 +517,46 @@ export const programmaticPages: ProgrammaticPage[] = [
 <li><strong>Gains above Rs 1.25 lakh are taxed at 12.5%</strong> (increased from 10% in Budget 2024, effective from July 23, 2024).</li>
 <li>There is no indexation benefit available for equity LTCG.</li>
 </ul>
-<p>For example, if you invested Rs 5 lakh through ELSS SIP over 3 years and your total value grew to Rs 7 lakh, your gain is Rs 2 lakh. After deducting the Rs 1.25 lakh exemption, you pay 12.5% tax on Rs 75,000, which is Rs 9,375. Your effective tax on the total gain is just about 4.7%.</p>
+<div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:16px 20px;margin:16px 0">
+<p style="margin:0;font-weight:600;color:#166534">Example Calculation:</p>
+<p style="margin:8px 0 0 0;color:#15803d">If you invested Rs 5 lakh through ELSS SIP over 3 years and your total value grew to Rs 7 lakh, your gain is Rs 2 lakh. After deducting the Rs 1.25 lakh exemption, you pay 12.5% tax on Rs 75,000 = <strong>Rs 9,375</strong>. Your effective tax on the total gain is just about <strong>4.7%</strong>.</p>
+</div>
 
 <h2>ELSS Returns: Historical Performance</h2>
 <p>ELSS funds have historically delivered strong returns due to their equity exposure:</p>
-<ul>
-<li><strong>1-Year Average:</strong> 12-18% (varies significantly based on market conditions)</li>
-<li><strong>3-Year Average:</strong> 12-15% CAGR</li>
-<li><strong>5-Year Average:</strong> 14-18% CAGR</li>
-<li><strong>10-Year Average:</strong> 12-16% CAGR</li>
-</ul>
-<p>Note: Past performance does not guarantee future results. ELSS returns are market-linked and can be negative in short periods. However, equity investments held for 7+ years have historically delivered positive real returns (above inflation) in India.</p>
+<div style="overflow-x:auto">
+<table>
+<thead><tr><th>Time Period</th><th>Average ELSS Returns (CAGR)</th><th>Remarks</th></tr></thead>
+<tbody>
+<tr><td>1 Year</td><td>12-18%</td><td>Varies significantly based on market conditions</td></tr>
+<tr><td>3 Years</td><td>12-15%</td><td>Covers one full lock-in cycle</td></tr>
+<tr><td>5 Years</td><td>14-18%</td><td>Medium-term wealth creation</td></tr>
+<tr><td>10 Years</td><td>12-16%</td><td>Long-term compounding benefits</td></tr>
+</tbody>
+</table>
+</div>
+<p><em>Note: Past performance does not guarantee future results. ELSS returns are market-linked and can be negative in short periods. However, equity investments held for 7+ years have historically delivered positive real returns (above inflation) in India.</em></p>
 
 <h2>ELSS vs PPF vs Tax Saving FD: Which is Better?</h2>
 <p>Here is a detailed comparison of the three most popular Section 80C investments:</p>
+<div style="overflow-x:auto">
 <table>
 <thead><tr><th>Feature</th><th>ELSS</th><th>PPF</th><th>Tax Saving FD</th></tr></thead>
 <tbody>
-<tr><td>Returns (Expected)</td><td>12-15% p.a.</td><td>7.1% p.a. (fixed by govt)</td><td>6.5-7.5% p.a.</td></tr>
-<tr><td>Lock-in Period</td><td>3 years</td><td>15 years</td><td>5 years</td></tr>
-<tr><td>Risk Level</td><td>High (market-linked)</td><td>Zero (govt backed)</td><td>Very Low (bank backed)</td></tr>
-<tr><td>Tax on Returns</td><td>12.5% LTCG above Rs 1.25L</td><td>Fully tax-free</td><td>Taxed at slab rate</td></tr>
-<tr><td>SIP Option</td><td>Yes (monthly)</td><td>Yes (yearly/monthly)</td><td>No (lump sum only)</td></tr>
-<tr><td>Premature Withdrawal</td><td>Not allowed before 3 years</td><td>Partial after 7 years</td><td>Not allowed</td></tr>
-<tr><td>Best For</td><td>Aggressive investors</td><td>Conservative investors</td><td>Risk-averse investors</td></tr>
+<tr><td><strong>Returns (Expected)</strong></td><td>12-15% p.a.</td><td>7.1% p.a.</td><td>6.5-7.5% p.a.</td></tr>
+<tr><td><strong>Lock-in Period</strong></td><td>3 years</td><td>15 years</td><td>5 years</td></tr>
+<tr><td><strong>Risk Level</strong></td><td>High (market-linked)</td><td>Zero (govt backed)</td><td>Very Low (bank backed)</td></tr>
+<tr><td><strong>Tax on Returns</strong></td><td>12.5% LTCG above Rs 1.25L</td><td>Fully tax-free</td><td>Taxed at slab rate</td></tr>
+<tr><td><strong>SIP Option</strong></td><td>Yes (monthly)</td><td>Yes (yearly/monthly)</td><td>No (lump sum only)</td></tr>
+<tr><td><strong>Premature Withdrawal</strong></td><td>Not allowed before 3 years</td><td>Partial after 7 years</td><td>Not allowed</td></tr>
+<tr><td><strong>Best For</strong></td><td>Aggressive investors</td><td>Conservative investors</td><td>Risk-averse investors</td></tr>
 </tbody>
 </table>
-<p><strong>Verdict:</strong> ELSS is ideal for investors with a long-term horizon (5+ years) who want higher returns and can tolerate short-term market volatility. PPF is better for conservative investors who prioritize capital safety. Tax Saving FDs suit those who want guaranteed returns with no risk at all.</p>
+</div>
+<div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;padding:16px 20px;margin:16px 0">
+<p style="margin:0;font-weight:600;color:#1e40af">Verdict:</p>
+<p style="margin:8px 0 0 0;color:#1d4ed8">ELSS is ideal for investors with a long-term horizon (5+ years) who want higher returns and can tolerate short-term market volatility. PPF is better for conservative investors who prioritize capital safety. Tax Saving FDs suit those who want guaranteed returns with no risk at all.</p>
+</div>
 
 <h2>How to Use This ELSS SIP Calculator</h2>
 <ol>
@@ -552,19 +577,34 @@ export const programmaticPages: ProgrammaticPage[] = [
 </ul>
 
 <h2>Who Should Invest in ELSS?</h2>
-<p>ELSS is suitable for the following types of investors:</p>
-<ul>
-<li><strong>Salaried individuals</strong> in the old tax regime looking to save tax under Section 80C</li>
-<li><strong>First-time equity investors</strong> who want a disciplined, tax-efficient entry into the stock market</li>
-<li><strong>Young professionals</strong> (25-40 age group) with a long investment horizon and moderate-to-high risk appetite</li>
-<li><strong>Investors who have already maxed out EPF/PPF</strong> and need additional 80C deductions with better return potential</li>
-<li><strong>Anyone seeking better post-tax returns</strong> than Fixed Deposits and PPF over 5+ year periods</li>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0">
+<div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:16px">
+<p style="margin:0 0 8px 0;font-weight:700;color:#166534">Ideal For</p>
+<ul style="margin:0;padding-left:18px;color:#15803d">
+<li>Salaried individuals in old tax regime</li>
+<li>First-time equity investors</li>
+<li>Young professionals (25-40 age)</li>
+<li>Investors with maxed out EPF/PPF</li>
+<li>Anyone seeking better post-tax returns than FD</li>
 </ul>
-<p>ELSS may not be ideal for senior citizens dependent on regular income, ultra-conservative investors who cannot tolerate any capital loss, or those who have opted for the New Tax Regime (where 80C deductions are not available).</p>
+</div>
+<div style="background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:16px">
+<p style="margin:0 0 8px 0;font-weight:700;color:#991b1b">May Not Suit</p>
+<ul style="margin:0;padding-left:18px;color:#b91c1c">
+<li>Senior citizens needing regular income</li>
+<li>Ultra-conservative investors</li>
+<li>Those in New Tax Regime</li>
+<li>Investors who cannot tolerate any loss</li>
+<li>People needing money within 3 years</li>
+</ul>
+</div>
+</div>
 
 <h2>Top ELSS Funds in India (2026)</h2>
 <p>Some of the well-known ELSS fund categories available for SIP investment include large-cap oriented ELSS funds, multi-cap/flexi-cap ELSS funds, and mid-cap tilted ELSS funds. Performance varies year to year, so always check the latest ratings and track record before investing. Look for funds with a consistent 5-year and 10-year track record, low expense ratios, and experienced fund managers.</p>
-<p><em>Disclaimer: This calculator provides estimates based on assumed return rates. Actual ELSS mutual fund returns are market-linked and can vary. Past performance does not guarantee future results. Please consult a SEBI-registered financial advisor before making investment decisions.</em></p>`,
+<div style="background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:16px 20px;margin:16px 0">
+<p style="margin:0;font-size:14px;color:#92400e"><strong>Disclaimer:</strong> This calculator provides estimates based on assumed return rates. Actual ELSS mutual fund returns are market-linked and can vary. Past performance does not guarantee future results. Please consult a SEBI-registered financial advisor before making investment decisions.</p>
+</div>`,
     defaults: {},
     faqs: [
       { q: "What is ELSS and how is it different from other mutual funds?", a: "ELSS (Equity Linked Savings Scheme) is a type of equity mutual fund that qualifies for tax deduction under Section 80C of the Income Tax Act. Unlike regular equity funds, ELSS has a mandatory 3-year lock-in period but offers tax savings up to Rs 46,800 per year (in the 30% tax bracket). It invests at least 80% in equities." },
