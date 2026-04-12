@@ -50,9 +50,10 @@
     "marks-percentage-calculator",
     "wedding-budget-calculator",
     "grade-calculator",
-    "sentence-counter"
+    "sentence-counter",
+    "cat-percentile-calculator"
   ],
-  "lastCategory": "text",
-  "totalPosts": 51,
-  "lastRun": "2026-04-12T08:09:09.606Z"
+  "lastCategory": "exam",
+  "totalPosts": 52,
+  "lastRun": "2026-04-12T11:49:54.276Z"
 }
