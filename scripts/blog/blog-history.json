@@ -49,9 +49,10 @@
     "affidavit-generator",
     "marks-percentage-calculator",
     "wedding-budget-calculator",
-    "grade-calculator"
+    "grade-calculator",
+    "sentence-counter"
   ],
-  "lastCategory": "education",
-  "totalPosts": 50,
-  "lastRun": "2026-04-12T06:12:23.654Z"
+  "lastCategory": "text",
+  "totalPosts": 51,
+  "lastRun": "2026-04-12T08:09:09.606Z"
 }
