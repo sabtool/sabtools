@@ -51,9 +51,10 @@
     "wedding-budget-calculator",
     "grade-calculator",
     "sentence-counter",
-    "cat-percentile-calculator"
+    "cat-percentile-calculator",
+    "timetable-generator"
   ],
-  "lastCategory": "exam",
-  "totalPosts": 52,
-  "lastRun": "2026-04-12T11:49:54.276Z"
+  "lastCategory": "student",
+  "totalPosts": 53,
+  "lastRun": "2026-04-12T17:04:35.763Z"
 }
