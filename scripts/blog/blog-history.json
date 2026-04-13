@@ -53,9 +53,10 @@
     "sentence-counter",
     "cat-percentile-calculator",
     "timetable-generator",
-    "matrix-calculator"
+    "matrix-calculator",
+    "neet-score-predictor"
   ],
-  "lastCategory": "science",
-  "totalPosts": 54,
-  "lastRun": "2026-04-12T21:53:02.666Z"
+  "lastCategory": "exam",
+  "totalPosts": 55,
+  "lastRun": "2026-04-13T07:28:04.620Z"
 }
