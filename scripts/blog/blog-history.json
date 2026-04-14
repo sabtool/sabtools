@@ -58,9 +58,10 @@
     "land-measurement-converter",
     "image-to-base64",
     "email-leak-checker",
-    "date-difference-calculator"
+    "date-difference-calculator",
+    "truth-or-dare"
   ],
-  "lastCategory": "datetime",
-  "totalPosts": 59,
-  "lastRun": "2026-04-13T22:31:34.529Z"
+  "lastCategory": "fun",
+  "totalPosts": 60,
+  "lastRun": "2026-04-14T06:20:38.342Z"
 }
