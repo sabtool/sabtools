@@ -62,9 +62,10 @@
     "truth-or-dare",
     "markdown-preview",
     "photo-frame-maker",
-    "solar-panel-calculator"
+    "solar-panel-calculator",
+    "percentage-to-cgpa"
   ],
-  "lastCategory": "electrical",
-  "totalPosts": 63,
-  "lastRun": "2026-04-14T18:49:24.429Z"
+  "lastCategory": "education",
+  "totalPosts": 64,
+  "lastRun": "2026-04-14T22:32:59.371Z"
 }
