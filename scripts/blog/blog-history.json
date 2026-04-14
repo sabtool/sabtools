@@ -59,9 +59,10 @@
     "image-to-base64",
     "email-leak-checker",
     "date-difference-calculator",
-    "truth-or-dare"
+    "truth-or-dare",
+    "markdown-preview"
   ],
-  "lastCategory": "fun",
-  "totalPosts": 60,
-  "lastRun": "2026-04-14T06:20:38.342Z"
+  "lastCategory": "data",
+  "totalPosts": 61,
+  "lastRun": "2026-04-14T09:59:49.712Z"
 }
