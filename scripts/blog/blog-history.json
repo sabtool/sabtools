@@ -60,9 +60,10 @@
     "email-leak-checker",
     "date-difference-calculator",
     "truth-or-dare",
-    "markdown-preview"
+    "markdown-preview",
+    "photo-frame-maker"
   ],
-  "lastCategory": "data",
-  "totalPosts": 61,
-  "lastRun": "2026-04-14T09:59:49.712Z"
+  "lastCategory": "image",
+  "totalPosts": 62,
+  "lastRun": "2026-04-14T15:03:42.928Z"
 }
