@@ -66,9 +66,10 @@
     "percentage-to-cgpa",
     "handwriting-page-generator",
     "seed-rate-calculator",
-    "rent-vs-buy-calculator"
+    "rent-vs-buy-calculator",
+    "date-add-subtract"
   ],
-  "lastCategory": "business",
-  "totalPosts": 67,
-  "lastRun": "2026-04-15T14:54:56.429Z"
+  "lastCategory": "datetime",
+  "totalPosts": 68,
+  "lastRun": "2026-04-15T18:50:29.318Z"
 }
