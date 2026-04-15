@@ -65,9 +65,10 @@
     "solar-panel-calculator",
     "percentage-to-cgpa",
     "handwriting-page-generator",
-    "seed-rate-calculator"
+    "seed-rate-calculator",
+    "rent-vs-buy-calculator"
   ],
-  "lastCategory": "agriculture",
-  "totalPosts": 66,
-  "lastRun": "2026-04-15T10:01:23.531Z"
+  "lastCategory": "business",
+  "totalPosts": 67,
+  "lastRun": "2026-04-15T14:54:56.429Z"
 }
