@@ -63,9 +63,10 @@
     "markdown-preview",
     "photo-frame-maker",
     "solar-panel-calculator",
-    "percentage-to-cgpa"
+    "percentage-to-cgpa",
+    "handwriting-page-generator"
   ],
-  "lastCategory": "education",
-  "totalPosts": 64,
-  "lastRun": "2026-04-14T22:32:59.371Z"
+  "lastCategory": "student",
+  "totalPosts": 65,
+  "lastRun": "2026-04-15T06:22:03.898Z"
 }
