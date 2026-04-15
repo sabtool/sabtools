@@ -64,9 +64,10 @@
     "photo-frame-maker",
     "solar-panel-calculator",
     "percentage-to-cgpa",
-    "handwriting-page-generator"
+    "handwriting-page-generator",
+    "seed-rate-calculator"
   ],
-  "lastCategory": "student",
-  "totalPosts": 65,
-  "lastRun": "2026-04-15T06:22:03.898Z"
+  "lastCategory": "agriculture",
+  "totalPosts": 66,
+  "lastRun": "2026-04-15T10:01:23.531Z"
 }
