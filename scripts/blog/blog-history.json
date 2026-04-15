@@ -67,9 +67,10 @@
     "handwriting-page-generator",
     "seed-rate-calculator",
     "rent-vs-buy-calculator",
-    "date-add-subtract"
+    "date-add-subtract",
+    "resume-score-checker"
   ],
-  "lastCategory": "datetime",
-  "totalPosts": 68,
-  "lastRun": "2026-04-15T18:50:29.318Z"
+  "lastCategory": "career",
+  "totalPosts": 69,
+  "lastRun": "2026-04-15T22:28:13.792Z"
 }
