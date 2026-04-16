@@ -71,9 +71,10 @@
     "resume-score-checker",
     "gemstone-recommendation",
     "upi-qr-generator",
-    "graph-paper-generator"
+    "graph-paper-generator",
+    "website-speed-estimator"
   ],
-  "lastCategory": "student",
-  "totalPosts": 72,
-  "lastRun": "2026-04-16T15:15:29.304Z"
+  "lastCategory": "seo",
+  "totalPosts": 73,
+  "lastRun": "2026-04-16T18:49:26.199Z"
 }
