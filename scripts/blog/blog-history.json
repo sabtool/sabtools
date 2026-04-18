@@ -80,9 +80,10 @@
     "plywood-calculator",
     "htaccess-generator",
     "pdf-to-word",
-    "blood-pressure-checker"
+    "blood-pressure-checker",
+    "experience-calculator"
   ],
-  "lastCategory": "health",
-  "totalPosts": 81,
-  "lastRun": "2026-04-18T08:05:32.769Z"
+  "lastCategory": "career",
+  "totalPosts": 82,
+  "lastRun": "2026-04-18T11:51:28.998Z"
 }
