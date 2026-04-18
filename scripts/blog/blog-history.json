@@ -79,9 +79,10 @@
     "text-shadow-generator",
     "plywood-calculator",
     "htaccess-generator",
-    "pdf-to-word"
+    "pdf-to-word",
+    "blood-pressure-checker"
   ],
-  "lastCategory": "pdf",
-  "totalPosts": 80,
-  "lastRun": "2026-04-18T05:53:13.956Z"
+  "lastCategory": "health",
+  "totalPosts": 81,
+  "lastRun": "2026-04-18T08:05:32.769Z"
 }
