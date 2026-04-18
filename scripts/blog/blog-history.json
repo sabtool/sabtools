@@ -82,9 +82,10 @@
     "pdf-to-word",
     "blood-pressure-checker",
     "experience-calculator",
-    "nakshatra-calculator"
+    "nakshatra-calculator",
+    "assignment-word-counter"
   ],
-  "lastCategory": "astrology",
-  "totalPosts": 83,
-  "lastRun": "2026-04-18T17:04:53.786Z"
+  "lastCategory": "student",
+  "totalPosts": 84,
+  "lastRun": "2026-04-18T21:52:46.826Z"
 }
