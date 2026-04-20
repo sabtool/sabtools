@@ -90,9 +90,10 @@
     "json-to-csv",
     "water-tds-calculator",
     "stopwatch",
-    "bmr-calculator"
+    "bmr-calculator",
+    "case-converter"
   ],
-  "lastCategory": "health",
-  "totalPosts": 91,
-  "lastRun": "2026-04-20T10:59:47.452Z"
+  "lastCategory": "text",
+  "totalPosts": 92,
+  "lastRun": "2026-04-20T15:05:40.350Z"
 }
