@@ -92,9 +92,10 @@
     "stopwatch",
     "bmr-calculator",
     "case-converter",
-    "keyword-density-checker"
+    "keyword-density-checker",
+    "price-per-unit-comparator"
   ],
-  "lastCategory": "seo",
-  "totalPosts": 93,
-  "lastRun": "2026-04-20T18:11:05.512Z"
+  "lastCategory": "shopping",
+  "totalPosts": 94,
+  "lastRun": "2026-04-20T22:29:51.974Z"
 }
