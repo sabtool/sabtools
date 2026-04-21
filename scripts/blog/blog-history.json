@@ -93,9 +93,10 @@
     "bmr-calculator",
     "case-converter",
     "keyword-density-checker",
-    "price-per-unit-comparator"
+    "price-per-unit-comparator",
+    "plot-area-calculator"
   ],
-  "lastCategory": "shopping",
-  "totalPosts": 94,
-  "lastRun": "2026-04-20T22:29:51.974Z"
+  "lastCategory": "realestate",
+  "totalPosts": 95,
+  "lastRun": "2026-04-21T06:24:39.284Z"
 }
