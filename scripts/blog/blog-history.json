@@ -95,9 +95,10 @@
     "keyword-density-checker",
     "price-per-unit-comparator",
     "plot-area-calculator",
-    "gas-cylinder-calculator"
+    "gas-cylinder-calculator",
+    "farm-profit-calculator"
   ],
-  "lastCategory": "cooking",
-  "totalPosts": 96,
-  "lastRun": "2026-04-21T10:05:39.131Z"
+  "lastCategory": "agriculture",
+  "totalPosts": 97,
+  "lastRun": "2026-04-21T15:01:09.950Z"
 }
