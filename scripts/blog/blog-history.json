@@ -98,9 +98,10 @@
     "gas-cylinder-calculator",
     "farm-profit-calculator",
     "aspect-ratio-calculator",
-    "advanced-discount-calculator"
+    "advanced-discount-calculator",
+    "image-to-pdf"
   ],
-  "lastCategory": "shopping",
-  "totalPosts": 99,
-  "lastRun": "2026-04-21T22:26:04.020Z"
+  "lastCategory": "pdf",
+  "totalPosts": 100,
+  "lastRun": "2026-04-22T06:24:30.555Z"
 }
