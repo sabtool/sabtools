@@ -99,9 +99,10 @@
     "farm-profit-calculator",
     "aspect-ratio-calculator",
     "advanced-discount-calculator",
-    "image-to-pdf"
+    "image-to-pdf",
+    "would-you-rather"
   ],
-  "lastCategory": "pdf",
-  "totalPosts": 100,
-  "lastRun": "2026-04-22T06:24:30.555Z"
+  "lastCategory": "fun",
+  "totalPosts": 101,
+  "lastRun": "2026-04-22T10:05:53.635Z"
 }
