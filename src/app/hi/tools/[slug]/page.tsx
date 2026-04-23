@@ -7,6 +7,15 @@ import AdBanner from "@/components/AdBanner";
 import ShareButtons from "@/components/ShareButtons";
 import RelatedTools from "@/components/RelatedTools";
 import ToolRenderer from "@/app/tools/[slug]/ToolRenderer";
+import {
+  SITE_URL,
+  ORG_ID,
+  webApplicationNode,
+  breadcrumbNode,
+  howToNode,
+  faqPageNode,
+  buildGraph,
+} from "@/lib/schema";
 
 export function generateStaticParams() {
   return hindiTools.map((t) => ({ slug: t.slug }));
@@ -49,38 +58,6 @@ export default async function HindiToolPage({ params }: { params: Promise<{ slug
 
   const cat = categories.find((c) => c.slug === tool.category);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: ht.name,
-    description: ht.description,
-    url: `https://sabtools.in/hi/tools/${slug}`,
-    inLanguage: "hi",
-    applicationCategory: "UtilityApplication",
-    operatingSystem: "Any",
-    browserRequirements: "Requires JavaScript",
-    author: { "@type": "Organization", name: "SabTools.in", url: "https://sabtools.in" },
-    offers: { "@type": "Offer", price: "0", priceCurrency: "INR", availability: "https://schema.org/InStock" },
-    isAccessibleForFree: true,
-  };
-
-  const howToLd = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    name: `${ht.name} का उपयोग कैसे करें`,
-    description: `${ht.name} SabTools.in पर मुफ्त उपलब्ध है। इसे इस्तेमाल करने का तरीका जानें।`,
-    inLanguage: "hi",
-    step: ht.howToSteps.map((step, i) => ({
-      "@type": "HowToStep",
-      position: i + 1,
-      text: step,
-      url: `https://sabtools.in/hi/tools/${slug}#step-${i + 1}`,
-    })),
-    tool: { "@type": "HowToTool", name: "वेब ब्राउज़र" },
-    totalTime: "PT1M",
-    estimatedCost: { "@type": "MonetaryAmount", currency: "INR", value: "0" },
-  };
-
   const hindiFaqs = [
     { q: `${ht.name} क्या है?`, a: `${ht.name} SabTools.in पर उपलब्ध एक मुफ्त ऑनलाइन टूल है। ${ht.description}। यह आपके ब्राउज़र में काम करता है और किसी साइनअप की आवश्यकता नहीं है।` },
     { q: `क्या ${ht.name} मुफ्त है?`, a: `हाँ, ${ht.name} 100% मुफ्त है। कोई छिपे हुए शुल्क नहीं, कोई साइनअप नहीं। आप इसे असीमित बार उपयोग कर सकते हैं।` },
@@ -88,22 +65,48 @@ export default async function HindiToolPage({ params }: { params: Promise<{ slug
     { q: `क्या यह मोबाइल पर काम करता है?`, a: `हाँ, ${ht.name} सभी डिवाइस पर काम करता है — Android फोन, iPhone, टैबलेट और कंप्यूटर।` },
   ];
 
-  const faqLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    inLanguage: "hi",
-    mainEntity: hindiFaqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.q,
-      acceptedAnswer: { "@type": "Answer", text: faq.a },
-    })),
-  };
+  // Single @graph references the shared Organization via @id (defined on homepage).
+  // Override the default tool @id so Hindi and English versions are distinct entities.
+  const hindiToolGraph = buildGraph([
+    {
+      ...webApplicationNode({
+        slug,
+        name: ht.name,
+        description: ht.description,
+        featureList: tool.keywords,
+        category: cat?.name || "Online Tool",
+        inLanguage: "hi-IN",
+      }),
+      "@id": `${SITE_URL}/hi/tools/${slug}#application`,
+      url: `${SITE_URL}/hi/tools/${slug}`,
+    },
+    breadcrumbNode([
+      { name: "होम", url: `${SITE_URL}/hi` },
+      { name: cat?.name || "Tools", url: `${SITE_URL}/category/${tool.category}` },
+      { name: ht.name },
+    ]),
+    {
+      ...howToNode({
+        name: `${ht.name} का उपयोग कैसे करें`,
+        description: `${ht.name} SabTools.in पर मुफ्त उपलब्ध है। इसे इस्तेमाल करने का तरीका जानें।`,
+        steps: ht.howToSteps.map((step, i) => ({
+          name: step.length > 60 ? step.substring(0, 57) + "..." : step,
+          text: step,
+          url: `${SITE_URL}/hi/tools/${slug}#step-${i + 1}`,
+        })),
+        inLanguage: "hi-IN",
+      }),
+      tool: { "@type": "HowToTool", name: "वेब ब्राउज़र" },
+      totalTime: "PT1M",
+      estimatedCost: { "@type": "MonetaryAmount", currency: "INR", value: "0" },
+      publisher: { "@id": ORG_ID },
+    },
+    faqPageNode(hindiFaqs, "hi-IN"),
+  ]);
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hindiToolGraph) }} />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
         <Breadcrumb
           items={[

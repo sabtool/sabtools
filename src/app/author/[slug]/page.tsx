@@ -4,6 +4,12 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import { categories } from "@/lib/tools";
 import { authors, getAuthorBySlug } from "@/lib/authors";
+import {
+  SITE_URL,
+  ORG_ID,
+  breadcrumbNode,
+  buildGraph,
+} from "@/lib/schema";
 
 /* ── Static params for all author pages ── */
 export function generateStaticParams() {
@@ -54,47 +60,52 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
     .map((slug) => categories.find((c) => c.slug === slug))
     .filter(Boolean) as (typeof categories)[number][];
 
-  /* Person schema */
-  const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: author.name,
-    jobTitle: author.role,
-    description: author.bio,
-    url: `https://sabtools.in/author/${author.slug}`,
-    worksFor: {
-      "@type": "Organization",
-      name: "SabTools.in",
-      url: "https://sabtools.in",
-      description: "India's largest free online tools platform",
-    },
-    knowsAbout: author.expertise,
-    ...(() => {
-      const links: string[] = [];
-      if (author.socialLinks?.twitter) links.push(`https://twitter.com/${author.socialLinks.twitter}`);
-      if (author.socialLinks?.linkedin) links.push(`https://www.linkedin.com/in/${author.socialLinks.linkedin}`);
-      return links.length > 0 ? { sameAs: links } : {};
-    })(),
-  };
+  /* Collect social profile URLs once so both Person.sameAs and the rendered
+     buttons stay in sync. */
+  const socialLinks: string[] = [];
+  if (author.socialLinks?.twitter) socialLinks.push(`https://twitter.com/${author.socialLinks.twitter}`);
+  if (author.socialLinks?.linkedin) socialLinks.push(`https://www.linkedin.com/in/${author.socialLinks.linkedin}`);
 
-  /* ProfilePage schema */
-  const profilePageSchema = {
-    "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    name: `${author.name} — ${author.role}`,
-    description: author.bio,
-    url: `https://sabtools.in/author/${author.slug}`,
-    mainEntity: {
+  const personId = `${SITE_URL}/author/${author.slug}#person`;
+  const profileUrl = `${SITE_URL}/author/${author.slug}`;
+
+  /* Single @graph: ProfilePage → Person → references Organization via @id.
+     The Person uses a stable @id so tools, blog posts, and the homepage can
+     all link back to the same author entity in the Knowledge Graph. */
+  const authorGraph = buildGraph([
+    {
+      "@type": "ProfilePage",
+      "@id": `${profileUrl}#profilepage`,
+      name: `${author.name} — ${author.role}`,
+      description: author.bio,
+      url: profileUrl,
+      inLanguage: "en-IN",
+      mainEntity: { "@id": personId },
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      about: { "@id": personId },
+    },
+    {
       "@type": "Person",
+      "@id": personId,
       name: author.name,
+      givenName: author.name.split(" ")[0],
+      familyName: author.name.split(" ").slice(1).join(" ") || undefined,
       jobTitle: author.role,
+      description: author.bio,
+      url: profileUrl,
+      image: `${SITE_URL}/authors/${author.slug}.png`,
+      worksFor: { "@id": ORG_ID },
+      knowsAbout: author.expertise,
+      knowsLanguage: ["en", "hi"],
+      nationality: { "@type": "Country", name: "India" },
+      ...(socialLinks.length > 0 ? { sameAs: socialLinks } : {}),
     },
-    isPartOf: {
-      "@type": "WebSite",
-      name: "SabTools.in",
-      url: "https://sabtools.in",
-    },
-  };
+    breadcrumbNode([
+      { name: "Home", url: `${SITE_URL}/` },
+      { name: "About", url: `${SITE_URL}/about` },
+      { name: author.name },
+    ]),
+  ]);
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
@@ -106,14 +117,10 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
         ]}
       />
 
-      {/* JSON-LD schemas */}
+      {/* JSON-LD @graph: ProfilePage + Person + BreadcrumbList, linked via @id */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(authorGraph) }}
       />
 
       {/* Author Header */}

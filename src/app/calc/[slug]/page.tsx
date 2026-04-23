@@ -9,6 +9,13 @@ import RelatedTools from "@/components/RelatedTools";
 import ShareButtons from "@/components/ShareButtons";
 import ToolFaq from "@/components/ToolFaq";
 import CalcToolRenderer from "./ToolRenderer";
+import {
+  SITE_URL,
+  ORG_ID,
+  breadcrumbNode,
+  faqPageNode,
+  buildGraph,
+} from "@/lib/schema";
 
 export function generateStaticParams() {
   return programmaticPages.map((p) => ({ slug: p.slug }));
@@ -66,55 +73,7 @@ export default async function CalcPage({
 
   const cat = categories.find((c) => c.slug === tool.category);
 
-  // JSON-LD: WebApplication
-  const webAppLd = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: page.h1,
-    description: page.description,
-    url: `https://sabtools.in/calc/${slug}`,
-    applicationCategory: "UtilityApplication",
-    operatingSystem: "Any",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "INR",
-    },
-  };
-
-  // JSON-LD: BreadcrumbList
-  const breadcrumbLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://sabtools.in",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: cat?.name || "Tools",
-        item: `https://sabtools.in/category/${tool.category}`,
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: tool.name,
-        item: `https://sabtools.in/tools/${tool.slug}`,
-      },
-      {
-        "@type": "ListItem",
-        position: 4,
-        name: page.h1,
-        item: `https://sabtools.in/calc/${slug}`,
-      },
-    ],
-  };
-
-  // JSON-LD: FAQPage
+  // JSON-LD: FAQPage defaults
   const defaultFaqItems = [
     {
       q: `What is ${page.h1}?`,
@@ -140,32 +99,42 @@ export default async function CalcPage({
 
   const faqItems = page.faqs && page.faqs.length > 0 ? page.faqs : defaultFaqItems;
 
-  const faqLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqItems.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: f.a,
+  // Single @graph: WebApplication + BreadcrumbList + FAQPage.
+  // Publisher is linked via @id to the homepage Organization entity.
+  const calcGraph = buildGraph([
+    {
+      "@type": "WebApplication",
+      "@id": `${SITE_URL}/calc/${slug}#application`,
+      name: page.h1,
+      description: page.description,
+      url: `${SITE_URL}/calc/${slug}`,
+      applicationCategory: "UtilityApplication",
+      operatingSystem: "All",
+      browserRequirements: "Requires JavaScript. Requires HTML5.",
+      inLanguage: "en-IN",
+      isAccessibleForFree: true,
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "INR",
+        availability: "https://schema.org/InStock",
       },
-    })),
-  };
+      publisher: { "@id": ORG_ID },
+    },
+    breadcrumbNode([
+      { name: "Home", url: `${SITE_URL}/` },
+      { name: cat?.name || "Tools", url: `${SITE_URL}/category/${tool.category}` },
+      { name: tool.name, url: `${SITE_URL}/tools/${tool.slug}` },
+      { name: page.h1 },
+    ]),
+    faqPageNode(faqItems, "en-IN"),
+  ]);
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(calcGraph) }}
       />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">

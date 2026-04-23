@@ -6,6 +6,13 @@ import ToolCard from "@/components/ToolCard";
 import Breadcrumb from "@/components/Breadcrumb";
 import AdBanner from "@/components/AdBanner";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import {
+  SITE_URL,
+  ORG_ID,
+  breadcrumbNode,
+  faqPageNode,
+  buildGraph,
+} from "@/lib/schema";
 
 /* ── Unique category descriptions for SEO (avoids thin/duplicate content) ── */
 const categoryDescriptions: Record<string, { intro: string; whoUses: string; whyUse: string; metaDesc: string }> = {
@@ -277,81 +284,63 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
   const catTools = tools.filter((t) => t.category === slug);
   const desc = categoryDescriptions[slug] || defaultCategoryDesc;
 
-  const collectionLd = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    name: `${cat.name} - Free Online Tools`,
-    description: desc.intro,
-    url: `https://sabtools.in/category/${slug}`,
-    numberOfItems: catTools.length,
-    hasPart: catTools.slice(0, 10).map((t) => ({
-      "@type": "WebApplication",
-      name: t.name,
-      url: `https://sabtools.in/tools/${t.slug}`,
-    })),
-  };
+  const categoryFaqs = [
+    {
+      q: `What ${cat.name.toLowerCase()} are available on SabTools.in?`,
+      a: `SabTools.in offers ${catTools.length} free ${cat.name.toLowerCase()} including ${catTools.slice(0, 5).map(t => t.name).join(", ")}, and more. All tools are free with no signup required.`,
+    },
+    {
+      q: `Are these ${cat.name.toLowerCase()} free to use?`,
+      a: `Yes, all ${catTools.length} ${cat.name.toLowerCase()} on SabTools.in are completely free. No signup, no hidden charges, and no usage limits. Use them as many times as you need.`,
+    },
+    {
+      q: `Who uses these ${cat.name.toLowerCase()}?`,
+      a: desc.whoUses,
+    },
+  ];
 
-  const itemListLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: `${cat.name} — Free Online Tools`,
-    description: `${catTools.length} free ${cat.name.toLowerCase()} on SabTools.in`,
-    numberOfItems: catTools.length,
-    itemListElement: catTools.map((t, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      name: t.name,
-      url: `https://sabtools.in/tools/${t.slug}`,
-    })),
-  };
-
-  const breadcrumbLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://sabtools.in" },
-      { "@type": "ListItem", position: 2, name: cat.name, item: `https://sabtools.in/category/${slug}` },
-    ],
-  };
-
-  // FAQ schema for category page
-  const faqLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: `What ${cat.name.toLowerCase()} are available on SabTools.in?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `SabTools.in offers ${catTools.length} free ${cat.name.toLowerCase()} including ${catTools.slice(0, 5).map(t => t.name).join(", ")}, and more. All tools are free with no signup required.`,
-        },
-      },
-      {
-        "@type": "Question",
-        name: `Are these ${cat.name.toLowerCase()} free to use?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `Yes, all ${catTools.length} ${cat.name.toLowerCase()} on SabTools.in are completely free. No signup, no hidden charges, and no usage limits. Use them as many times as you need.`,
-        },
-      },
-      {
-        "@type": "Question",
-        name: `Who uses these ${cat.name.toLowerCase()}?`,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: desc.whoUses,
-        },
-      },
-    ],
-  };
+  // Single @graph: CollectionPage + ItemList + BreadcrumbList + FAQPage,
+  // with publisher linked via @id to the homepage Organization entity.
+  const categoryGraph = buildGraph([
+    {
+      "@type": "CollectionPage",
+      "@id": `${SITE_URL}/category/${slug}#collectionpage`,
+      name: `${cat.name} - Free Online Tools`,
+      description: desc.intro,
+      url: `${SITE_URL}/category/${slug}`,
+      inLanguage: "en-IN",
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      publisher: { "@id": ORG_ID },
+      numberOfItems: catTools.length,
+      hasPart: catTools.slice(0, 10).map((t) => ({
+        "@type": "WebApplication",
+        name: t.name,
+        url: `${SITE_URL}/tools/${t.slug}`,
+      })),
+    },
+    {
+      "@type": "ItemList",
+      "@id": `${SITE_URL}/category/${slug}#itemlist`,
+      name: `${cat.name} — Free Online Tools`,
+      description: `${catTools.length} free ${cat.name.toLowerCase()} on SabTools.in`,
+      numberOfItems: catTools.length,
+      itemListElement: catTools.map((t, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: t.name,
+        url: `${SITE_URL}/tools/${t.slug}`,
+      })),
+    },
+    breadcrumbNode([
+      { name: "Home", url: `${SITE_URL}/` },
+      { name: cat.name },
+    ]),
+    faqPageNode(categoryFaqs, "en-IN"),
+  ]);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryGraph) }} />
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: cat.name }]} />
 
       <div className="mb-10">

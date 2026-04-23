@@ -3,6 +3,13 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import { tools, categories } from "@/lib/tools";
 import { authors } from "@/lib/authors";
+import {
+  SITE_URL,
+  ORG_ID,
+  organizationNode,
+  breadcrumbNode,
+  buildGraph,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "About SabTools.in — India's Largest Free Online Tools Platform",
@@ -39,41 +46,27 @@ export default function AboutPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "AboutPage",
-            name: "About SabTools.in",
-            description: `SabTools.in is India's largest free online tools platform with ${toolCount}+ tools across ${catCount} categories.`,
-            url: "https://sabtools.in/about",
-            mainEntity: {
-              "@type": "Organization",
-              name: "SabTools.in",
-              url: "https://sabtools.in",
-              description: `Free online tools platform with ${toolCount}+ tools for India`,
-              foundingDate: "2025",
-              founder: {
-                "@type": "Person",
-                name: "Rakesh Seervi",
-                jobTitle: "Founder & Lead Developer",
+          __html: JSON.stringify(
+            buildGraph([
+              {
+                "@type": "AboutPage",
+                "@id": `${SITE_URL}/about#aboutpage`,
+                name: "About SabTools.in",
+                description: `SabTools.in is a free online tools platform with ${toolCount}+ tools across ${catCount} categories built for Indian users.`,
+                url: `${SITE_URL}/about`,
+                inLanguage: "en-IN",
+                mainEntity: { "@id": ORG_ID },
+                isPartOf: { "@id": `${SITE_URL}/#website` },
               },
-              areaServed: {
-                "@type": "Country",
-                name: "India",
-              },
-              contactPoint: {
-                "@type": "ContactPoint",
-                email: "contact@sabtools.in",
-                contactType: "customer support",
-                availableLanguage: ["English", "Hindi"],
-              },
-              sameAs: [
-                "https://twitter.com/sabtools",
-                "https://youtube.com/@sabtools",
-                "https://linkedin.com/company/sabtools",
-                "https://github.com/sabtool/sabtools",
-              ],
-            },
-          }),
+              // Full Organization definition — matches the homepage entity via @id,
+              // giving the About page explicit publisher authority for quality raters.
+              organizationNode(),
+              breadcrumbNode([
+                { name: "Home", url: `${SITE_URL}/` },
+                { name: "About Us" },
+              ]),
+            ])
+          ),
         }}
       />
 

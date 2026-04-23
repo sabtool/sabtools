@@ -8,6 +8,16 @@ import ToolOfTheDay from "@/components/ToolOfTheDay";
 import { categories, tools } from "@/lib/tools";
 import { getAllPosts } from "@/lib/blog";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import {
+  SITE_URL,
+  ORG_ID,
+  FOUNDER_ID,
+  SUPPORTED_LANGUAGES,
+  organizationNode,
+  webSiteNode,
+  faqPageNode,
+  buildGraph,
+} from "@/lib/schema";
 
 export default function HomePage() {
   const popularTools = [
@@ -17,117 +27,63 @@ export default function HomePage() {
 
   const popular = popularTools.map((slug) => tools.find((t) => t.slug === slug)!).filter(Boolean);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "SabTools.in",
-    url: "https://sabtools.in",
-    description: `${tools.length}+ Free Online Tools - Calculators, Converters, AI Tools, PDF Tools, Developer Tools & More`,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://sabtools.in/search?q={search_term_string}",
-      "query-input": "required name=search_term_string",
+  const homepageFaqs = [
+    {
+      q: "Is SabTools.in completely free?",
+      a: `Yes! All ${tools.length}+ tools on SabTools.in are 100% free with no signup, no limits, and no hidden fees. Every tool runs directly in your browser.`,
     },
-  };
+    {
+      q: "Is my data safe on SabTools.in?",
+      a: "Absolutely. All tools process your data locally in your browser using client-side JavaScript. No files or data are uploaded to any server. Your privacy is fully protected.",
+    },
+    {
+      q: "How many tools does SabTools.in have?",
+      a: `SabTools.in offers ${tools.length}+ free online tools across ${categories.length} categories including Finance Calculators, AI Writing Tools, Developer Tools, Image Tools, PDF Tools, SEO Tools, and more.`,
+    },
+    {
+      q: "Does SabTools.in work on mobile phones?",
+      a: "Yes, SabTools.in is fully responsive and works on all devices — mobile phones, tablets, and desktops. You can even install it as a PWA (Progressive Web App) for quick access.",
+    },
+    {
+      q: "Do I need to create an account to use tools?",
+      a: "No account or signup is required. Simply visit any tool page and start using it immediately. All tools are accessible without any registration.",
+    },
+  ];
 
-  const orgLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "SabTools.in",
-    url: "https://sabtools.in",
-    logo: "https://sabtools.in/og-image.png",
-    description: `India's leading free online tools platform with ${tools.length}+ tools. Free calculators, converters, AI tools and more.`,
-    sameAs: [
-      "https://twitter.com/sabtools",
-      "https://youtube.com/@sabtools",
-      "https://linkedin.com/company/sabtools",
-      "https://github.com/sabtool/sabtools",
-    ],
-    founder: {
+  // Single @graph with all homepage entities — Organization anchors the Knowledge
+  // Graph identity; other pages across the site link back to it via @id (see lib/schema.ts).
+  const homepageGraph = buildGraph([
+    organizationNode(),
+    webSiteNode(),
+    {
       "@type": "Person",
+      "@id": FOUNDER_ID,
       name: "Rakesh Seervi",
+      url: `${SITE_URL}/author/rakesh-seervi`,
       jobTitle: "Founder & Lead Developer",
+      worksFor: { "@id": ORG_ID },
+      sameAs: [
+        "https://twitter.com/sabtools",
+        "https://www.linkedin.com/in/rakeshseervi",
+      ],
     },
-    foundingDate: "2025",
-    areaServed: {
-      "@type": "Country",
-      name: "India",
+    {
+      "@type": "ItemList",
+      name: "Popular Free Online Tools",
+      numberOfItems: popular.length,
+      itemListElement: popular.map((tool, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: tool.name,
+        url: `${SITE_URL}/tools/${tool.slug}`,
+      })),
     },
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "customer support",
-      url: "https://sabtools.in/contact",
-      email: "contact@sabtools.in",
-      availableLanguage: ["English", "Hindi"],
-    },
-  };
-
-  const itemListLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Popular Free Online Tools",
-    numberOfItems: popular.length,
-    itemListElement: popular.map((tool, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      name: tool.name,
-      url: `https://sabtools.in/tools/${tool.slug}`,
-    })),
-  };
-
-  const faqLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Is SabTools.in completely free?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `Yes! All ${tools.length}+ tools on SabTools.in are 100% free with no signup, no limits, and no hidden fees. Every tool runs directly in your browser.`,
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Is my data safe on SabTools.in?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Absolutely. All tools process your data locally in your browser using client-side JavaScript. No files or data are uploaded to any server. Your privacy is fully protected.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How many tools does SabTools.in have?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: `SabTools.in offers ${tools.length}+ free online tools across ${categories.length} categories including Finance Calculators, AI Writing Tools, Developer Tools, Image Tools, PDF Tools, SEO Tools, and more.`,
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Does SabTools.in work on mobile phones?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, SabTools.in is fully responsive and works on all devices — mobile phones, tablets, and desktops. You can even install it as a PWA (Progressive Web App) for quick access.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do I need to create an account to use tools?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "No account or signup is required. Simply visit any tool page and start using it immediately. All tools are accessible without any registration.",
-        },
-      },
-    ],
-  };
+    faqPageNode(homepageFaqs, SUPPORTED_LANGUAGES[0]),
+  ]);
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageGraph) }} />
 
       {/* Hero Section */}
       <section className="relative overflow-visible">
@@ -324,19 +280,19 @@ export default function HomePage() {
           <p className="text-gray-500 mt-2">Everything you need to know about SabTools.in</p>
         </div>
         <div className="space-y-4">
-          {(faqLd.mainEntity as Array<{ name: string; acceptedAnswer: { text: string } }>).map((faq, i) => (
+          {homepageFaqs.map((faq, i) => (
             <details
               key={i}
               className="group bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden"
             >
               <summary className="flex items-center justify-between cursor-pointer px-6 py-4 font-semibold text-gray-800 hover:text-indigo-600 transition-colors">
-                {faq.name}
+                {faq.q}
                 <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
               <div className="px-6 pb-4 text-gray-600 leading-relaxed">
-                {faq.acceptedAnswer.text}
+                {faq.a}
               </div>
             </details>
           ))}

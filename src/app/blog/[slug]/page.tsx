@@ -5,6 +5,14 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AdBanner from "@/components/AdBanner";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { tools } from "@/lib/tools";
+import {
+  SITE_URL,
+  ORG_ID,
+  FOUNDER_ID,
+  breadcrumbNode,
+  faqPageNode,
+  buildGraph,
+} from "@/lib/schema";
 
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
@@ -67,72 +75,64 @@ export default async function BlogPostPage({
     .sort((a, b) => b.score - a.score)
     .slice(0, 3);
 
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    description: post.description,
-    datePublished: post.date,
-    dateModified: post.date,
-    author: {
-      "@type": "Person",
-      name: "Rakesh Seervi",
-      url: "https://sabtools.in/author/rakesh-seervi",
-      sameAs: ["https://linkedin.com/in/rakeshseervi"],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "SabTools.in",
-      url: "https://sabtools.in",
-      logo: { "@type": "ImageObject", url: "https://sabtools.in/og-image.png" },
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://sabtools.in/blog/${post.slug}`,
-    },
-    keywords: post.keywords.join(", "),
-    ...(post.image && {
-      image: {
-        "@type": "ImageObject",
-        url: `https://sabtools.in${post.image.src}`,
-        width: post.image.width,
-        height: post.image.height,
-        caption: post.image.alt,
-      },
-    }),
-    inLanguage: "en",
-    isAccessibleForFree: true,
-  };
-
-  // BreadcrumbList schema is handled by the Breadcrumb component below
-
   // Extract FAQ items from blog content (matches <h3> questions followed by <p> answers)
   const faqMatches = [...post.content.matchAll(/<h3[^>]*>(.*?)<\/h3>\s*<p[^>]*>(.*?)<\/p>/gi)];
-  const faqLd = faqMatches.length >= 2 ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqMatches.map((m) => ({
-      "@type": "Question",
-      name: m[1].replace(/<[^>]*>/g, ""),
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: m[2].replace(/<[^>]*>/g, ""),
+  const extractedFaqs = faqMatches.length >= 2
+    ? faqMatches.map((m) => ({
+        q: m[1].replace(/<[^>]*>/g, ""),
+        a: m[2].replace(/<[^>]*>/g, ""),
+      }))
+    : [];
+
+  // Single @graph: Article + BreadcrumbList + (optional) FAQPage.
+  // Author and publisher are linked via @id to the shared entities declared on the homepage.
+  const blogNodes: Record<string, unknown>[] = [
+    {
+      "@type": "Article",
+      "@id": `${SITE_URL}/blog/${post.slug}#article`,
+      headline: post.title,
+      description: post.description,
+      datePublished: post.date,
+      dateModified: post.date,
+      author: { "@id": FOUNDER_ID },
+      publisher: { "@id": ORG_ID },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `${SITE_URL}/blog/${post.slug}`,
       },
-    })),
-  } : null;
+      keywords: post.keywords.join(", "),
+      articleSection: post.category,
+      ...(post.image && {
+        image: {
+          "@type": "ImageObject",
+          url: `${SITE_URL}${post.image.src}`,
+          width: post.image.width,
+          height: post.image.height,
+          caption: post.image.alt,
+        },
+      }),
+      inLanguage: "en-IN",
+      isAccessibleForFree: true,
+    },
+    breadcrumbNode([
+      { name: "Home", url: `${SITE_URL}/` },
+      { name: "Blog", url: `${SITE_URL}/blog` },
+      { name: post.title },
+    ]),
+  ];
+
+  if (extractedFaqs.length > 0) {
+    blogNodes.push(faqPageNode(extractedFaqs, "en-IN"));
+  }
+
+  const blogGraph = buildGraph(blogNodes);
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogGraph) }}
       />
-      {faqLd && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
-        />
-      )}
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
         <Breadcrumb

@@ -18,6 +18,15 @@ import TrustBadges from "@/components/TrustBadges";
 import type { Tool } from "@/lib/tools";
 import { categories } from "@/lib/tools";
 import { getToolContent } from "@/lib/tool-content";
+import {
+  SITE_URL,
+  ORG_ID,
+  SUPPORTED_LANGUAGES,
+  webApplicationNode,
+  breadcrumbNode,
+  howToNode,
+  buildGraph,
+} from "@/lib/schema";
 
 interface ToolPageLayoutProps {
   tool: Tool;
@@ -28,59 +37,48 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
   const cat = categories.find((c) => c.slug === tool.category);
   const content = getToolContent(tool.name, tool.description, tool.category, tool.keywords);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: tool.name,
-    description: tool.description,
-    url: `https://sabtools.in/tools/${tool.slug}`,
-    applicationCategory: "UtilityApplication",
-    operatingSystem: "Any",
-    browserRequirements: "Requires JavaScript",
-    softwareVersion: "1.0",
-    author: {
-      "@type": "Organization",
-      name: "SabTools.in",
-      url: "https://sabtools.in",
+  // Build a single @graph with WebApplication + BreadcrumbList + HowTo.
+  // FAQPage is emitted separately by ToolFaq so the schema matches its visible content.
+  const toolGraph = buildGraph([
+    webApplicationNode({
+      slug: tool.slug,
+      name: tool.name,
+      description: tool.description,
+      featureList: tool.keywords,
+      category: cat?.name || "Online Tool",
+      inLanguage: SUPPORTED_LANGUAGES,
+    }),
+    breadcrumbNode([
+      { name: "Home", url: `${SITE_URL}/` },
+      { name: cat?.name || "Tools", url: `${SITE_URL}/category/${tool.category}` },
+      { name: tool.name },
+    ]),
+    {
+      ...howToNode({
+        name: `How to Use ${tool.name} Online`,
+        description: `Step-by-step guide to using ${tool.name} on SabTools.in — free, no signup required.`,
+        steps: content.howToSteps.map((step, i) => ({
+          name: step.length > 60 ? step.substring(0, 57) + "..." : step,
+          text: step,
+          url: `${SITE_URL}/tools/${tool.slug}#step-${i + 1}`,
+        })),
+        inLanguage: SUPPORTED_LANGUAGES[0],
+      }),
+      tool: { "@type": "HowToTool", name: "Web Browser" },
+      supply: { "@type": "HowToSupply", name: "Internet Connection" },
+      totalTime: "PT1M",
+      estimatedCost: {
+        "@type": "MonetaryAmount",
+        currency: "INR",
+        value: "0",
+      },
+      publisher: { "@id": ORG_ID },
     },
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "INR",
-      availability: "https://schema.org/InStock",
-    },
-    inLanguage: ["en", "hi"],
-    isAccessibleForFree: true,
-    featureList: tool.keywords.join(", "),
-  };
-
-  // HowTo schema — enables rich step-by-step snippets in Google search
-  const howToLd = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    name: `How to Use ${tool.name} Online`,
-    description: `Step-by-step guide to using ${tool.name} on SabTools.in — free, no signup required.`,
-    step: content.howToSteps.map((step, i) => ({
-      "@type": "HowToStep",
-      position: i + 1,
-      name: step.length > 60 ? step.substring(0, 57) + "..." : step,
-      text: step,
-      url: `https://sabtools.in/tools/${tool.slug}#step-${i + 1}`,
-    })),
-    tool: { "@type": "HowToTool", name: "Web Browser" },
-    supply: { "@type": "HowToSupply", name: "Internet Connection" },
-    totalTime: "PT1M",
-    estimatedCost: {
-      "@type": "MonetaryAmount",
-      currency: "INR",
-      value: "0",
-    },
-  };
+  ]);
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolGraph) }} />
       <TrackToolVisit slug={tool.slug} />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
         <Breadcrumb
