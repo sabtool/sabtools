@@ -103,9 +103,10 @@
     "would-you-rather",
     "bytes-converter",
     "emi-vs-rent-calculator",
-    "recipe-unit-converter"
+    "recipe-unit-converter",
+    "ai-rap-lyrics-generator"
   ],
-  "lastCategory": "cooking",
-  "totalPosts": 104,
-  "lastRun": "2026-04-22T22:34:48.300Z"
+  "lastCategory": "ai",
+  "totalPosts": 105,
+  "lastRun": "2026-04-23T06:28:43.953Z"
 }
