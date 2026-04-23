@@ -104,9 +104,10 @@
     "bytes-converter",
     "emi-vs-rent-calculator",
     "recipe-unit-converter",
-    "ai-rap-lyrics-generator"
+    "ai-rap-lyrics-generator",
+    "study-time-planner"
   ],
-  "lastCategory": "ai",
-  "totalPosts": 105,
-  "lastRun": "2026-04-23T06:28:43.953Z"
+  "lastCategory": "education",
+  "totalPosts": 106,
+  "lastRun": "2026-04-23T10:10:27.318Z"
 }
