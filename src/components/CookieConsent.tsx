@@ -27,6 +27,15 @@ export default function CookieConsent() {
     } catch {
       // silently fail
     }
+    // Notify GoogleAnalytics (and any future consent-aware scripts) so they
+    // can start without requiring a page reload.
+    try {
+      window.dispatchEvent(
+        new CustomEvent("sabtools:consent", { detail: { consent: choice } })
+      );
+    } catch {
+      // CustomEvent unsupported on very old browsers — no-op.
+    }
     setVisible(false);
   }
 

@@ -88,10 +88,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative overflow-visible">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50" />
-        <div className="absolute inset-0 opacity-30" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(99, 102, 241, 0.15) 1px, transparent 0)`,
-          backgroundSize: '32px 32px',
-        }} />
+        <div className="absolute inset-0 opacity-30 hero-pattern" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 text-center">
           <div className="animate-fade-in-up">
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur rounded-full px-4 py-1.5 text-sm font-medium text-indigo-600 shadow-sm border border-indigo-100 mb-6">
@@ -219,6 +216,7 @@ export default function HomePage() {
                   width={400}
                   height={210}
                   loading="lazy"
+                  decoding="async"
                   className="w-full h-36 object-cover"
                 />
               )}

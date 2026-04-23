@@ -133,6 +133,16 @@ export default async function BlogPostPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogGraph) }}
       />
+      {/* LCP optimization: preload the hero image so the browser starts fetching
+          it in parallel with CSS/JS (report §2.3, expected ~300-400ms LCP gain). */}
+      {post.image && (
+        <link
+          rel="preload"
+          as="image"
+          href={post.image.src}
+          fetchPriority="high"
+        />
+      )}
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
         <Breadcrumb
@@ -181,6 +191,8 @@ export default async function BlogPostPage({
                 width={post.image.width}
                 height={post.image.height}
                 loading="eager"
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-auto"
               />
               <figcaption className="text-xs text-gray-400 text-center py-2 bg-gray-50">

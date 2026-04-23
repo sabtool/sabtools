@@ -1,5 +1,6 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import { compressImage } from "@/lib/image-compress-worker";
 
 export default function ImageCompressor() {
   const [originalFile, setOriginalFile] = useState<File | null>(null);
@@ -7,7 +8,15 @@ export default function ImageCompressor() {
   const [compressedUrl, setCompressedUrl] = useState("");
   const [originalSize, setOriginalSize] = useState(0);
   const [compressedSize, setCompressedSize] = useState(0);
+  const [busy, setBusy] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  // Revoke any old object URL when the component is replaced, to avoid leaks.
+  useEffect(() => {
+    return () => {
+      if (compressedUrl) URL.revokeObjectURL(compressedUrl);
+    };
+  }, [compressedUrl]);
 
   const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -17,30 +26,19 @@ export default function ImageCompressor() {
     compress(file, quality);
   };
 
-  const compress = (file: File, q: number) => {
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      const img = new Image();
-      img.onload = () => {
-        const canvas = document.createElement("canvas");
-        canvas.width = img.width;
-        canvas.height = img.height;
-        const ctx = canvas.getContext("2d")!;
-        ctx.drawImage(img, 0, 0);
-        canvas.toBlob(
-          (blob) => {
-            if (blob) {
-              setCompressedUrl(URL.createObjectURL(blob));
-              setCompressedSize(blob.size);
-            }
-          },
-          "image/jpeg",
-          q
-        );
-      };
-      img.src = e.target?.result as string;
-    };
-    reader.readAsDataURL(file);
+  const compress = async (file: File, q: number) => {
+    setBusy(true);
+    try {
+      const blob = await compressImage(file, q, "image/jpeg");
+      // Free the previous object URL before creating a new one.
+      setCompressedUrl((prev) => {
+        if (prev) URL.revokeObjectURL(prev);
+        return URL.createObjectURL(blob);
+      });
+      setCompressedSize(blob.size);
+    } finally {
+      setBusy(false);
+    }
   };
 
   const handleQualityChange = (q: number) => {
@@ -93,10 +91,13 @@ export default function ImageCompressor() {
             </div>
           </div>
 
-          {compressedUrl && (
+          {compressedUrl && !busy && (
             <a href={compressedUrl} download={`compressed-${originalFile.name}`} className="btn-primary inline-block text-center text-sm">
               Download Compressed Image
             </a>
+          )}
+          {busy && (
+            <div className="text-sm text-gray-500 italic">Compressing... (runs off the main thread so the UI stays responsive)</div>
           )}
         </>
       )}
