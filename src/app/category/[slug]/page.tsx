@@ -13,6 +13,7 @@ import {
   faqPageNode,
   buildGraph,
 } from "@/lib/schema";
+import { categoryPillars } from "@/lib/category-pillars";
 
 /* ── Unique category descriptions for SEO (avoids thin/duplicate content) ── */
 const categoryDescriptions: Record<string, { intro: string; whoUses: string; whyUse: string; metaDesc: string }> = {
@@ -283,21 +284,27 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
 
   const catTools = tools.filter((t) => t.category === slug);
   const desc = categoryDescriptions[slug] || defaultCategoryDesc;
+  const pillar = categoryPillars[slug]; // may be undefined for non-priority categories
 
-  const categoryFaqs = [
-    {
-      q: `What ${cat.name.toLowerCase()} are available on SabTools.in?`,
-      a: `SabTools.in offers ${catTools.length} free ${cat.name.toLowerCase()} including ${catTools.slice(0, 5).map(t => t.name).join(", ")}, and more. All tools are free with no signup required.`,
-    },
-    {
-      q: `Are these ${cat.name.toLowerCase()} free to use?`,
-      a: `Yes, all ${catTools.length} ${cat.name.toLowerCase()} on SabTools.in are completely free. No signup, no hidden charges, and no usage limits. Use them as many times as you need.`,
-    },
-    {
-      q: `Who uses these ${cat.name.toLowerCase()}?`,
-      a: desc.whoUses,
-    },
-  ];
+  // Build the FAQ list: use pillar FAQs if present (substantive, 5 questions),
+  // otherwise fall back to the generic 3-question set. This keeps schema
+  // compliance (only emit what's visible) while avoiding filler FAQs.
+  const categoryFaqs = pillar?.pillarFaqs?.length
+    ? pillar.pillarFaqs
+    : [
+        {
+          q: `What ${cat.name.toLowerCase()} are available on SabTools.in?`,
+          a: `SabTools.in offers ${catTools.length} free ${cat.name.toLowerCase()} including ${catTools.slice(0, 5).map(t => t.name).join(", ")}, and more. All tools are free with no signup required.`,
+        },
+        {
+          q: `Are these ${cat.name.toLowerCase()} free to use?`,
+          a: `Yes, all ${catTools.length} ${cat.name.toLowerCase()} on SabTools.in are completely free. No signup, no hidden charges, and no usage limits. Use them as many times as you need.`,
+        },
+        {
+          q: `Who uses these ${cat.name.toLowerCase()}?`,
+          a: desc.whoUses,
+        },
+      ];
 
   // Single @graph: CollectionPage + ItemList + BreadcrumbList + FAQPage,
   // with publisher linked via @id to the homepage Organization entity.
@@ -363,15 +370,54 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
 
       <AdBanner format="horizontal" className="mt-10" />
 
-      {/* Unique SEO content section */}
-      <div className="mt-12 prose prose-gray max-w-none">
-        <h2 className="text-xl font-bold text-gray-900">Who Uses These {cat.name}?</h2>
+      {/* Unique SEO content section — pillar content when available */}
+      <div className="mt-12 prose prose-gray max-w-none prose-headings:text-gray-900 prose-h2:text-xl prose-h2:font-bold prose-h2:mt-10 prose-h3:text-lg prose-h3:font-semibold">
+
+        {pillar && (
+          <>
+            <h2>What are {cat.name}?</h2>
+            <p className="text-gray-700 leading-relaxed">{pillar.whatIs}</p>
+
+            <h2>Key Features &amp; Capabilities</h2>
+            <div className="not-prose grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+              {pillar.keyFeatures.map((f) => (
+                <div key={f.title} className="bg-indigo-50/50 border border-indigo-100 rounded-xl p-4">
+                  <h3 className="font-semibold text-gray-900 mb-1">{f.title}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{f.description}</p>
+                </div>
+              ))}
+            </div>
+
+            <h2>Common Use Cases</h2>
+            <div className="not-prose space-y-4 my-6">
+              {pillar.useCases.map((u, i) => (
+                <div key={u.title} className="flex gap-4 bg-white border border-gray-200 rounded-xl p-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 text-white font-bold flex items-center justify-center">
+                    {i + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">{u.title}</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">{u.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <h2>How to Choose the Right Tool</h2>
+            <p className="text-gray-700 leading-relaxed">{pillar.howToChoose}</p>
+
+            <h2>{cat.name} Built for India</h2>
+            <p className="text-gray-700 leading-relaxed">{pillar.indianContext}</p>
+          </>
+        )}
+
+        <h2>Who Uses These {cat.name}?</h2>
         <p className="text-gray-600">{desc.whoUses}</p>
 
-        <h2 className="text-xl font-bold text-gray-900 mt-6">Why Use {cat.name} on SabTools.in?</h2>
+        <h2>Why Use {cat.name} on SabTools.in?</h2>
         <p className="text-gray-600">{desc.whyUse}</p>
 
-        <h2 className="text-xl font-bold text-gray-900 mt-6">Popular Tools in This Category</h2>
+        <h2>Popular Tools in This Category</h2>
         <ul className="text-gray-600">
           {catTools.slice(0, 8).map((t) => (
             <li key={t.slug}>
@@ -385,6 +431,35 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           <p className="text-gray-500 mt-2">
             ...and {catTools.length - 8} more tools. Explore all {catTools.length} {cat.name.toLowerCase()} above.
           </p>
+        )}
+
+        {pillar && pillar.pillarFaqs.length > 0 && (
+          <>
+            <h2>Frequently Asked Questions</h2>
+            <div className="not-prose space-y-3 my-6">
+              {pillar.pillarFaqs.map((faq, i) => (
+                <details
+                  key={i}
+                  className="group bg-white border border-gray-200 rounded-xl overflow-hidden"
+                >
+                  <summary className="cursor-pointer px-5 py-4 font-medium text-gray-900 hover:bg-gray-50 flex items-center justify-between">
+                    <span>{faq.q}</span>
+                    <svg
+                      className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-3"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="px-5 pb-4 text-sm text-gray-600 leading-relaxed">
+                    {faq.a}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </>
         )}
       </div>
 
