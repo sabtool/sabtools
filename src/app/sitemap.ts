@@ -6,25 +6,23 @@ import { authors } from "@/lib/authors";
 
 export const dynamic = "force-static";
 
+/**
+ * Main sitemap - English content + non-translated pages (blog, calc, authors, static)
+ * This file produces /sitemap.xml
+ * Hindi content lives in /sitemap-hi.xml (see src/app/sitemap-hi/route.ts)
+ * Both are referenced from /sitemap-index.xml
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://sabtools.in";
   const now = new Date().toISOString();
-  // Stable date for pages that rarely change (avoids misleading Google with build-time dates)
   const stableDate = "2026-03-15T00:00:00.000Z";
 
-  // Homepage
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: now,
       changeFrequency: "daily",
       priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/hi`,
-      lastModified: now,
-      changeFrequency: "daily",
-      priority: 0.9,
     },
     {
       url: `${baseUrl}/about`,
@@ -74,14 +72,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  // All tool pages (Hindi)
-  const hindiToolPages: MetadataRoute.Sitemap = tools.map((tool) => ({
-    url: `${baseUrl}/hi/tools/${tool.slug}`,
-    lastModified: now,
-    changeFrequency: "weekly" as const,
-    priority: 0.7,
-  }));
-
   // Blog listing page
   const blogListPage: MetadataRoute.Sitemap = [
     {
@@ -117,5 +107,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...staticPages, ...categoryPages, ...toolPages, ...hindiToolPages, ...calcPages, ...blogListPage, ...blogPages, ...authorPages];
+  return [
+    ...staticPages,
+    ...categoryPages,
+    ...toolPages,
+    ...calcPages,
+    ...blogListPage,
+    ...blogPages,
+    ...authorPages,
+  ];
 }
