@@ -149,10 +149,18 @@ export const relatedPillars: Record<string, string[]> = {
   indiaguide: ["utility", "tax", "business"],
   // New in Batch 8
   science: ["math", "developer", "exam"],
-  construction: ["business", "math", "converters"],
-  exam: ["career", "science", "indiaguide"],
+  construction: ["realestate", "electrical", "math"],
+  exam: ["career", "education", "science"],
   business: ["finance", "tax", "career"],
-  utility: ["indiaguide", "security", "business"],
+  utility: ["indiaguide", "vehicle", "legal"],
   charts: ["developer", "seo", "text"],
   career: ["business", "finance", "exam"],
+  // New in Batch 9
+  realestate: ["construction", "tax", "finance"],
+  legal: ["indiaguide", "tax", "utility"],
+  astrology: ["indiaguide", "health", "fun"],
+  vehicle: ["indiaguide", "utility", "finance"],
+  education: ["exam", "career", "science"],
+  agriculture: ["indiaguide", "converters", "business"],
+  electrical: ["construction", "math", "converters"],
 };

@@ -1719,6 +1719,531 @@ export const categoryPillars: Record<string, CategoryPillar> = {
     ],
   },
 
+  realestate: {
+    whatIs:
+      "Real estate tools on SabTools.in cover the measurement, quantity, cost, and tax math that a homeowner, tenant, investor, or broker runs every time property changes hands in India — how to convert an irregular plot's dimensions to a precise square-foot area, how many litres of paint for a 1,200 sq ft flat, how many tiles for a given floor area with a given tile size, how many bricks for a boundary wall of specified length and height, how many cement bags for a house slab of known volume, what a full interior finishing budget looks like for a 2BHK vs 3BHK, and how much capital-gains tax is due on a long-held flat sold at a gain. These are the questions that come up the week before every property purchase, the month before every renovation, and the year every property sale closes — and answering them on paper or in Excel usually produces 10-20% estimation error. Each tool here is purpose-built for one class of question with Indian market defaults (INR pricing, tier-2 city rates, RERA-compliant carpet-area definitions).",
+    keyFeatures: [
+      {
+        title: "Irregular-plot and rectangular-plot support",
+        description:
+          "Plot Area Calculator handles rectangular, L-shaped, trapezoidal, and triangular plots in square feet, square metres, acres, and bigha/guntha regional units. Enter corner dimensions or side-and-angle inputs; the tool returns area and also flags whether the plot conforms to standard BBMP/MCD setback rules for its zone.",
+      },
+      {
+        title: "Material quantity with Indian-market-rate costing",
+        description:
+          "Tile Calculator, Brick Calculator, Cement Calculator, and Paint Calculator each output material quantity with 8-12% wastage allowance built in, and multiply by 2025 tier-2-city market rates — ₹45-90 per tile (basic to premium vitrified), ₹8-11 per clay brick, ₹380-420 per cement bag, ₹150-250 per litre emulsion. Override with your supplier quote for a precise BOQ.",
+      },
+      {
+        title: "Full-interior turnkey budgeting",
+        description:
+          "Interior Cost Estimator builds a phased budget for a full interior fit-out — modular kitchen (₹2.5-6 lakh for a 2BHK), wardrobes (₹45,000-90,000 per piece), false-ceiling (₹80-150/sq ft), wall painting (included), electrical and plumbing fittings, furniture, and 10-15% designer fee. Broken into phases so you can pay in tranches aligned to completion milestones.",
+      },
+      {
+        title: "Capital-gains and Section 54 tax computation",
+        description:
+          "Property Capital Gains Tax Calculator handles short-term vs long-term classification (24-month holding for property), cost-indexation per the CBDT cost-inflation-index table, and Section 54 reinvestment exemption into another residential property. Returns the taxable gain and tax due under current rates.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Before property purchase — area and price verification",
+        description:
+          "Use Plot Area Calculator to verify the seller's claimed plot dimensions match the registered documents. A 10-15% overstatement of plot area is the single most common form of pre-contract misrepresentation in land deals — 30 minutes with the tool and the property card saves ₹2-5 lakh on the inflated price.",
+      },
+      {
+        title: "Renovation and interior planning",
+        description:
+          "Moving into a new flat and planning renovation: Tile Calculator gives exact tile count for the living and bedrooms, Paint Calculator budgets the ceiling and wall paint, Interior Cost Estimator gives the turnkey all-in figure for comparing contractor quotes. Run these before the first contractor meeting so you know when their quote is ₹3 lakh above market.",
+      },
+      {
+        title: "Boundary-wall and small-build estimation",
+        description:
+          "Brick Calculator for a boundary-wall or an extension room: enter length, height, and wall type (single-brick, double-brick); returns bricks needed, cement and sand mortar volume. Cement Calculator sizes the foundation slab. Paint Calculator covers the exterior coat. Together these replace three different contractor pitches with one sanity-checked material list.",
+      },
+      {
+        title: "Property sale and tax planning",
+        description:
+          "Selling a flat held for 8 years at a ₹15 lakh gain: Property Capital Gains Tax Calculator computes indexed cost, long-term gain, and Section 54 exemption if you are reinvesting. Together with the Income Tax calculators in the tax category, this gives the exact net proceeds after tax so you can size the next flat's down payment correctly.",
+      },
+    ],
+    howToChoose:
+      "For plot and area measurement — Plot Area Calculator handles all common plot shapes; for an irregular multi-corner plot, break into triangles and sum the results. For material quantity — Tile Calculator, Brick Calculator, Cement Calculator, Paint Calculator; each one is single-purpose, so use several in sequence for a full BOQ. For turnkey budgeting — Interior Cost Estimator is the fastest path from 'how much will the flat cost to finish' to a line-item number. For tax on sale — Property Capital Gains Tax Calculator; also check the HRA Exemption and Income Tax tools in the tax category if you are reinvesting for a self-occupied house. For construction-grade dimensioning (staircase, roof, structural), the Concrete Calculator, Steel Weight Calculator, Staircase Calculator, and Water Tank Calculator in the Construction category are more appropriate than these finishing-focused tools. Workflow order for a new property: Plot Area Calculator → Tile Calculator + Brick Calculator + Cement Calculator + Paint Calculator → Interior Cost Estimator → (purchase) → (renovate) → Property Capital Gains Tax Calculator (when eventually selling).",
+    indianContext:
+      "Indian property transactions run on a specific set of conventions that global tools get wrong. Plot areas are regionally measured — square feet (most metros), square metres (some MCD listings), acres (peri-urban), bigha (North India, varies by state from 1,600 sq ft in Punjab to 27,225 sq ft in West Bengal), guntha (Maharashtra, Karnataka — 1,089 sq ft), kanal (Punjab — 5,445 sq ft), cent (Tamil Nadu, Kerala — 435 sq ft). Our Plot Area Calculator converts between all of these correctly. The RERA Act 2016 mandates that listing sizes be quoted in carpet area, not super-built-up; but pre-RERA listings and many secondary-market transactions still quote super-built-up, which is typically 25-30% higher than carpet. The Carpet Area Calculator in the Business category handles that conversion. Capital-gains tax on property follows Section 48 of the Income Tax Act — 2024 saw major changes abolishing indexation for most LTCG except one 'grandfathered' class, and our Property Capital Gains Tax Calculator reflects the post-Finance-Act-2024 rules with a toggle for the grandfathered case. Stamp duty and registration charges are state-specific (5-7% across states) and covered separately in the Tax category's Stamp Duty Calculator.",
+    pillarFaqs: [
+      {
+        q: "Does the Plot Area Calculator handle bigha, guntha, and other regional units?",
+        a: "Yes — bigha (Punjab 1,600 sq ft; UP 27,000 sq ft; WB 27,225 sq ft), guntha (Maharashtra/Karnataka 1,089 sq ft), kanal (Punjab 5,445 sq ft), cent (Tamil Nadu/Kerala 435 sq ft), gaj (Delhi/Haryana 9 sq ft / 1 sq yard), and marla (Punjab 272 sq ft / 225 sq yards depending on the local variant). Pick the correct state-specific variant, since sub-state variations exist.",
+      },
+      {
+        q: "How accurate is the Interior Cost Estimator in 2025?",
+        a: "It uses 2025 tier-2-city Indian market rates (Pune, Hyderabad, Ahmedabad, Jaipur, Kochi, Chandigarh). Tier-1 cities (Mumbai, Delhi, Bengaluru, Chennai) run 20-35% higher; smaller towns 10-20% lower. Always override the per-item rates with your actual designer or modular-kitchen brand quote before treating it as a binding number.",
+      },
+      {
+        q: "Does Property Capital Gains Tax Calculator cover the 2024 LTCG changes?",
+        a: "Yes — Finance Act 2024 removed indexation benefit for property LTCG from 23 July 2024 onward, replaced by a flat 12.5% tax. A grandfathered provision lets sellers of properties acquired before 23 July 2024 choose the better of (a) 12.5% without indexation or (b) 20% with indexation. Our calculator presents both figures side-by-side so you can pick the lower number.",
+      },
+      {
+        q: "Why does the Paint Calculator suggest different quantity for primer vs finish coat?",
+        a: "Primer (undercoat) coverage is about 6-8 sq m per litre on unsealed surfaces; finish emulsion is 10-14 sq m per litre per coat. Walls need primer + 2 finish coats; ceilings typically primer + 2 coats. The tool separates these so you order the right quantity of each — buying 20 L of primer when you only need 10 L is a common first-time-renovator error.",
+      },
+      {
+        q: "Can the Brick Calculator handle both single-brick and double-brick walls?",
+        a: "Yes — single-brick (115 mm thick) and double-brick (230 mm thick) walls are both supported, with the right brick count and mortar volume for each. Indian construction typically uses 230 mm external walls and 115 mm internal partitions; the tool defaults to that split and lets you override per-wall.",
+      },
+    ],
+  },
+
+  legal: {
+    whatIs:
+      "Legal and government tools on SabTools.in cover the document-drafting, filing-fee, and identity-verification tasks that come up when citizens interact with Indian courts, departments, and public-records systems — how much court fee is due on a civil suit of given valuation, what format a legal notice should follow for a private dispute (consumer complaint, tenancy, recovery), how to draft an RTI application that will not be rejected on format grounds, how to prepare a generic affidavit for a magistrate's office, and how to look up or verify a voter ID. These are not tools that replace a lawyer — complex litigation, criminal matters, and high-value contracts always require professional advice — but for the 80% of citizen-government interactions that are form-filling and format-following, having a clean one-click generator saves the ₹1,500-₹5,000 that a lawyer's clerk would otherwise charge for the same boilerplate. Every template here follows the format prescribed by the relevant statute (Court Fee Act 1870, RTI Act 2005, Indian Evidence Act affidavit norms).",
+    keyFeatures: [
+      {
+        title: "State-specific court-fee schedule",
+        description:
+          "Court Fee Calculator handles the state-by-state differences — Maharashtra's Bombay Court Fees Act, the central Court Fees Act 1870 (Delhi, UP, etc.), and state amendments. Enter the suit value and suit type (civil recovery, partition, declaration, injunction); the tool returns ad-valorem fee, fixed fee, or hybrid as applicable.",
+      },
+      {
+        title: "Statute-compliant RTI application format",
+        description:
+          "RTI Application Generator produces a formatted application per Section 6 of the RTI Act 2005 — applicant details, public authority, specific information sought (Section 6(2) disallows broad requests), ₹10 fee payment reference, and acknowledgement block. Download as PDF ready for registered post or online filing through the central RTI portal.",
+      },
+      {
+        title: "Affidavit templates with proper attestation language",
+        description:
+          "Affidavit Generator has templates for the common use-cases — name-change, residence, income, single-status, guardian consent, lost-document. Each includes the correct 'Solemnly affirmed' or 'I do hereby declare' preamble, the place-and-date block, and the attestation block for the Executive Magistrate or Notary Public.",
+      },
+      {
+        title: "Voter ID format check and polling-booth lookup",
+        description:
+          "Voter ID Info validates EPIC number format (3 alphabetic + 7 numeric, 10 characters), explains the state-code encoding, and links to the NVSP search interface for finding your polling booth and constituency. Format-only — we never submit your EPIC to Election Commission servers.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Civil litigation preparation",
+        description:
+          "Filing a recovery suit against a tenant for ₹3.5 lakh in arrears: Court Fee Calculator computes the ad-valorem fee under the Maharashtra schedule (roughly ₹35,000 as of 2025 rates for a ₹3.5 lakh civil suit). Use the figure to decide between civil-court filing, small-claims, or invoking arbitration. Pair with a drafted Legal Notice Generator output to document the pre-filing notice period correctly.",
+      },
+      {
+        title: "Consumer-dispute and service-quality complaints",
+        description:
+          "Filing a consumer complaint against an e-commerce platform or a builder: Legal Notice Generator produces the pre-litigation notice that the Consumer Protection Act 2019 requires for a civil claim; Court Fee Calculator figures out the filing fee for the NCDRC or SCDRC depending on claim value.",
+      },
+      {
+        title: "RTI requests for government data and accountability",
+        description:
+          "Seeking information from a public authority — tender-award data, municipal-works spending, a delayed passport status, a pending pension claim: RTI Application Generator produces the statute-compliant format. A well-formatted RTI gets a response in 30 days; a poorly-formatted one is rejected on Section 7(9) grounds with a CIC-appeal cycle that wastes 3-6 months.",
+      },
+      {
+        title: "Affidavit for magistrate and passport offices",
+        description:
+          "Need a name-change affidavit for an EPIC update, a single-status affidavit for passport, a guardian-consent affidavit for a minor's passport, or an affidavit-of-ownership for a lost vehicle RC: Affidavit Generator produces each with the proper attestation block. Print on stamp paper (₹10-₹100 state-dependent) and attest before an Executive Magistrate or Notary.",
+      },
+    ],
+    howToChoose:
+      "For filing-fee calculations — Court Fee Calculator; select your state (where the court is located, not where you live) and the suit type. For civil-dispute notice — Legal Notice Generator covers the common matters (recovery, eviction, consumer, cheque dishonour under Section 138 NI Act). For government-data requests — RTI Application Generator. For sworn declarations — Affidavit Generator with the right template for your use-case. For voter and electoral lookups — Voter ID Info for format validation plus the link to NVSP. When the tool is not enough: any matter involving constitutional or criminal law, any commercial contract above ₹10 lakh, any matrimonial dispute, any land-title question — retain a practising advocate. The tools here cover the 80% boilerplate; the remaining 20% requires legal judgement that cannot be automated. None of these tools submit anything to government servers — they produce a document you download and then file through the official channel (registered post, online portal, in-person submission with stamp paper).",
+    indianContext:
+      "Indian legal documents have formatting conventions encoded in statute and tradition. Court fee is ad-valorem (percentage of suit value) for most civil matters up to a ceiling, plus fixed fees for specific categories (partition, declaration) under the Court Fees Act 1870 (with state-specific amendments). Maharashtra has its own Bombay Court Fees Act 1959; West Bengal and some others have their own schedules. RTI applications must cite the public authority's correct designation (the Central Public Information Officer, not just 'the department'), must pay the ₹10 fee (or ₹2 per page if fewer than 5 pages), must be signed, and must avoid Section 8 exemptions (cabinet papers, foreign relations, criminal investigations). Affidavits are governed by the Indian Evidence Act 1872 and the Notaries Act 1952 — wrong attestation voids the affidavit. Legal notices under Section 138 of the Negotiable Instruments Act for cheque bounce must be sent within 30 days of the bounce, must demand payment within 15 days, and must be by registered post with AD. Our templates follow each of these statutory timelines and cite the relevant section so the receiving party cannot contest format.",
+    pillarFaqs: [
+      {
+        q: "Does Court Fee Calculator cover all Indian states?",
+        a: "Yes — the central Court Fees Act 1870 for states that haven't amended it (Delhi, UP, Bihar, Rajasthan, MP, Haryana, Uttarakhand, Jharkhand, Chhattisgarh), and state-specific schedules for Maharashtra, Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Kerala, Gujarat, Odisha, West Bengal, and Assam. For smaller states, it uses the nearest-matching central/state default with a flag to verify locally.",
+      },
+      {
+        q: "Is the RTI Application Generator's output automatically accepted?",
+        a: "Format acceptance, yes — the template includes all Section 6 required fields. Content acceptance depends on the specificity of your query (Section 7(9) allows refusal of overbroad requests) and whether the information falls under Section 8 exemptions. The tool helps with format; content framing is the applicant's responsibility.",
+      },
+      {
+        q: "Can Affidavit Generator produce an affidavit for a court filing, or only magistrate use?",
+        a: "For magistrate-attested uses (name-change, passport, voter ID), yes — directly. For court-filing affidavits (Order XIX CPC, supporting-affidavit format), the template gives the skeletal structure but court-specific requirements (caption, cause-title, numbered paragraphs) need to be added by a lawyer. The tool fills the 80% common boilerplate; a practising advocate finalises court-specific content.",
+      },
+      {
+        q: "Why does Voter ID Info not show my polling booth directly?",
+        a: "Polling-booth assignments are live data on the ECI's NVSP system and require OTP verification against your registered mobile. We never ask for or transmit your mobile number or EPIC to any government server. The tool validates EPIC format and then deep-links you to the NVSP search page for the live booth lookup under your own session.",
+      },
+      {
+        q: "Is the Legal Notice Generator's output binding on the receiving party?",
+        a: "A legal notice is a pre-litigation formal communication — the receiving party is not bound to comply but is on record as having been given the statutory notice. If they ignore it, you can proceed to filing. The notice's main value is establishing the notice-period start date (15 days for cheque bounce under Section 138 NI Act, 2 months for government departments under Section 80 CPC).",
+      },
+    ],
+  },
+
+  astrology: {
+    whatIs:
+      "Astrology and spiritual tools on SabTools.in cover the Vedic-astrology and panchang computations that millions of Indian families consult for life-event planning — what my Kundli (birth chart) looks like given my birth date, time, and place, which Rashi (moon sign) I was born under, which of the 27 Nakshatras was active at my birth, what is the Panchang (auspicious-time reckoning) for a given date and location, what the numerology of my name suggests, and which gemstone is recommended based on my chart's planetary position. These are tools that sit at the intersection of tradition and computation — the math is fully deterministic (planetary positions are astronomy, Nakshatra division is straightforward arithmetic), and our calculators run the same algorithms that a traditional astrologer would compute by hand, without the 30-minute consultation fee. For the 85% of Hindu families that consult a panchang for marriage muhurat, griha pravesh, vehicle purchase, or naming ceremony, these tools are everyday practical utilities, not niche spirituality.",
+    keyFeatures: [
+      {
+        title: "Lahiri-ayanamsa Vedic chart generation",
+        description:
+          "Kundli Calculator uses the Lahiri ayanamsa (the standard Vedic sidereal reference adopted by the Government of India in 1955) for chart computation. Takes date, time, and place of birth; returns Rasi chart (lagna and planetary house placements), Navamsa chart (D9), and major Dasha sequence (Vimshottari, 120-year cycle).",
+      },
+      {
+        title: "Rashi and Nakshatra with regional-calendar cross-reference",
+        description:
+          "Rashi Calculator returns the Moon's zodiac sign at your birth (the Vedic Rasi, not the Western sun sign). Nakshatra Calculator returns the star/lunar mansion (27 divisions) plus pada (1-4 quarter). Both cross-reference with regional traditions (Tamil, Telugu, Kannada, Malayalam, Marathi) for local name variants.",
+      },
+      {
+        title: "Panchang with muhurat for daily auspicious windows",
+        description:
+          "Panchang Calculator returns the five limbs (tithi, vara, nakshatra, yoga, karana) plus Rahu Kaal, Yamaganda, Gulika Kaal, Abhijit muhurat, and Brahma muhurat for a given date and location. Used for choosing auspicious start times for business, travel, and religious activities.",
+      },
+      {
+        title: "Numerology and gemstone recommendation with planetary basis",
+        description:
+          "Name Numerology Calculator computes the Pythagorean and Chaldean numerology values for a given name, with interpretation aligned to Vedic tradition. Gemstone Recommendation uses the chart's weak and benefic planets to suggest the primary (gemstone for strengthening a beneficial planet) and cautionary stones. Informational only, not a retailer recommendation.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Wedding muhurat and life-event planning",
+        description:
+          "Before finalising a wedding date, families consult Panchang Calculator for the proposed date at the wedding venue's coordinates — checking tithi, nakshatra, and whether Rahu Kaal clashes with the mahurat. Kundli Calculator plus Kundli matching (guna milan, 36 points) determines marriage compatibility for arranged matches; the tool produces the detailed report without astrologer fee.",
+      },
+      {
+        title: "Naming ceremony and new-venture timing",
+        description:
+          "For a child's naming ceremony (Namkaran), Nakshatra Calculator determines the birth nakshatra and suggests names starting with the appropriate syllable per that nakshatra's traditional letter list. For a new business or venture, Panchang Calculator picks an auspicious muhurat avoiding Rahu Kaal and Yamaganda on the planned launch date.",
+      },
+      {
+        title: "Personal chart-reading and life-phase understanding",
+        description:
+          "Generate your Kundli Calculator chart, read the major Dasha periods (which graha's sub-period you are currently in), and understand the chart's strengths and challenges. This is the core of Vedic self-analysis — not a replacement for counselling or professional consultation, but a structured way to frame introspection during major life transitions.",
+      },
+      {
+        title: "Gemstone and numerology guidance",
+        description:
+          "Name Numerology Calculator suggests whether adjusting a name's spelling slightly (adding or removing a letter) would improve its numerological resonance — a common practice for brand names and personal name changes. Gemstone Recommendation suggests the primary gemstone based on the Kundli's chart; buyers then consult a reputable dealer for authenticity and fit.",
+      },
+    ],
+    howToChoose:
+      "For chart generation — Kundli Calculator is the starting point; all other tools can reference the chart it produces. For day-to-day auspicious timing — Panchang Calculator; for a specific date (a wedding date, a grih pravesh, a vehicle purchase), run the Panchang and read the muhurat section. For zodiac-sign introspection — Rashi Calculator for the moon sign (Vedic), Nakshatra Calculator for the birth star. For name-related decisions — Name Numerology Calculator for numerology-based naming or spelling adjustment. For gemstone guidance — Gemstone Recommendation, but always verify with a qualified astrologer before a large purchase (authentic ruby, emerald, or blue sapphire can cost ₹50,000+/carat). None of these tools replace a trained astrologer for complex chart analysis or major life decisions; they replace the ₹500-₹2,000 basic consultation fee for standard computations that are mechanical in nature. Workflow: Kundli Calculator (one-time at birth) → Rashi Calculator / Nakshatra Calculator (one-time reference) → Panchang Calculator (recurring, per event) → Name Numerology / Gemstone Recommendation (one-time, as needed).",
+    indianContext:
+      "Vedic astrology (Jyotish) differs from Western astrology in the fundamental reference frame — Vedic uses the sidereal zodiac (stars as the reference), Western uses the tropical zodiac (seasons as the reference). The difference between them (the ayanamsa) is currently about 24 degrees and growing. Most Indian families follow Vedic; we default to Lahiri ayanamsa (Government of India standard, used by Lal Kitab-tradition astrologers). The birth time must be accurate to the minute — Kundli Calculator cannot correct for inaccurate birth times, and the computed ascendant (lagna) changes every 2 hours, so a 4-hour inaccuracy produces a completely different chart. For births with uncertain time, the tool offers a 'rectification' input where the user enters major life events (career start, marriage, first child) and the tool suggests a corrected time that is consistent with those events under standard Dasha interpretation. Panchang conventions are location-specific — Rahu Kaal is defined by sunrise at the local longitude, so Chennai and Mumbai have different Rahu Kaal for the same calendar date. The tool uses the user's entered location for all timing calculations. Panchang output aligns with the regional variant chosen — North Indian Purnimanta (month ends at full moon) vs South Indian Amavasyanta (month ends at new moon).",
+    pillarFaqs: [
+      {
+        q: "Does Kundli Calculator use Lahiri or Raman ayanamsa?",
+        a: "Lahiri by default — it is the most widely used in India (Government of India standard, adopted 1955). A toggle lets you switch to Raman, Krishnamurti (KP), or Tropical if you follow a different tradition. The chart output will differ slightly between these; Lahiri is the safe default unless your family astrologer uses a specific alternative.",
+      },
+      {
+        q: "How accurate is Panchang Calculator for small towns and villages?",
+        a: "Very accurate — it computes sunrise and sunset at your precise entered latitude/longitude, so Rahu Kaal and other muhurat intervals are location-specific and correct to within 1-2 minutes. For cities, we auto-resolve coordinates from the city name; for villages, enter coordinates directly (Google Maps gives them).",
+      },
+      {
+        q: "Can Nakshatra Calculator give the 'nama' letter for a Namkaran ceremony?",
+        a: "Yes — each of the 27 nakshatras has 4 padas (quarters), and each pada has traditional letters (syllables) associated with it for naming ceremonies. Enter birth date and time; the tool returns the nakshatra, the pada, and the list of 2-4 auspicious starting syllables per traditional Vedic naming guidelines.",
+      },
+      {
+        q: "Is Gemstone Recommendation authoritative, and should I buy based on it alone?",
+        a: "It is informational — it suggests the primary gemstone based on your chart's lagna and weak/benefic planets following standard Jyotish guidelines. It does not replace consultation with a qualified astrologer for final confirmation, nor a certified gemologist for authenticity verification. Authentic ruby, emerald, and blue sapphire can cost ₹50,000+/carat and the counterfeit market is substantial — never buy without laboratory certification.",
+      },
+      {
+        q: "Why does Name Numerology give different numbers under Pythagorean vs Chaldean systems?",
+        a: "The two systems assign different numeric values to letters — Pythagorean uses 1-9 cyclically (A=1, B=2, …, J=1, K=2), while Chaldean uses 1-8 with specific traditional assignments (A=1, B=2, C=3, D=4, E=5, F=8, G=3, …). Chaldean is considered more aligned with Vedic tradition in Indian numerology; Pythagorean is the Western default. We show both so you can reconcile advice from different sources.",
+      },
+    ],
+  },
+
+  vehicle: {
+    whatIs:
+      "Vehicle and transport tools on SabTools.in handle the purchase, ownership, and operating-cost math that every Indian car, bike, or commercial-vehicle owner runs — what is the fuel-cost-per-kilometre at current petrol/diesel/CNG prices, what is the total cost of a planned road trip including tolls and fuel, what insurance premium to expect on a new car's IDV, what tyre size fits a given vehicle's rim specification, how much the car has depreciated after 3-5 years of ownership, and what the highway toll will cost between any two Indian cities on the expressway network. These are the questions that turn a one-line purchase decision or trip plan into a budget-accurate figure. Each tool here uses Indian market data (2025 fuel prices by state, NHAI toll tables, IRDAI-regulated insurance bands, OEM depreciation curves).",
+    keyFeatures: [
+      {
+        title: "State-specific fuel pricing with CNG and EV support",
+        description:
+          "Mileage Calculator takes vehicle odometer + fuel-tank fill data and computes km/litre (petrol/diesel) or km/kg (CNG) or km/kWh (EV). Current state fuel prices (petrol ₹94-110/L, diesel ₹84-100/L across states) are built-in so the cost-per-km output is realistic. For EV owners, home vs public-charging rate toggle shows the 4-8x cost spread.",
+      },
+      {
+        title: "Multi-city route planning with tolls and fuel budget",
+        description:
+          "Road Trip Planner takes origin + destination + intermediate stops, routes through the NHAI expressway and state-highway network, and returns total distance, fuel cost at current state prices, toll charges from the NHAI toll table, and suggested overnight-stop cities for trips over 600 km.",
+      },
+      {
+        title: "IDV-based insurance premium estimation",
+        description:
+          "Car Insurance Estimator uses IRDAI's ready-reckoner depreciation table (5% in year 1, 10% in year 2, rising to 50% by year 5) to compute IDV, then applies 3-5% own-damage premium + ₹20,000-₹40,000 third-party premium (by cc), plus NCB discount for claim-free years. The output range matches what you would see from Policybazaar or Acko for the same car.",
+      },
+      {
+        title: "Tyre-size compatibility and depreciation modelling",
+        description:
+          "Tyre Size Calculator decodes the 195/65R15 format (width / aspect-ratio R rim-diameter), returns speed/load index meaning, and suggests compatible up-size and down-size options within 3% rolling-circumference tolerance. Vehicle Depreciation Calculator models straight-line and declining-balance schedules for resale-value estimation.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Pre-purchase cost-of-ownership analysis",
+        description:
+          "Comparing a petrol vs diesel vs CNG vs EV version of the same car: Mileage Calculator with realistic driving-distance estimate (15,000 km/year for a city driver) gives annual fuel cost. Vehicle Depreciation Calculator gives resale-value difference after 5 years. Car Insurance Estimator gives premium difference. Together these give the true cost-of-ownership that brochure MRP hides.",
+      },
+      {
+        title: "Road trip planning and budgeting",
+        description:
+          "Planning a Delhi-to-Kochi road trip (2,900 km): Road Trip Planner routes through the NH-44 and NH-66 expressway network, computes fuel cost (~₹18,000-22,000 for a petrol sedan), toll charges (~₹4,500-6,000 depending on FASTag type and exempt vehicles), and suggests Agra, Hyderabad, Bengaluru as overnight stops. Total trip cost ± 10% of the actual figure.",
+      },
+      {
+        title: "Insurance renewal and IDV negotiation",
+        description:
+          "Renewing a 4-year-old car's comprehensive insurance: Car Insurance Estimator gives the IRDAI-consistent IDV range (not the low-ball figure some insurers propose). Use this figure to negotiate against the insurer's offered IDV — a ₹50,000 IDV difference translates to ₹4,000-₹5,000 in own-damage-cover difference, which is worth the 15-minute negotiation.",
+      },
+      {
+        title: "Tyre replacement and up-sizing",
+        description:
+          "Tyre Size Calculator confirms whether a suggested 205/55R16 up-size from stock 195/65R15 is safe (rolling circumference within 3% tolerance). For a city-driven sedan, moderate up-sizing improves handling slightly at the cost of ride comfort; the tool flags when the proposed size exceeds safe tolerance bands.",
+      },
+    ],
+    howToChoose:
+      "For cost-of-ownership analysis — Mileage Calculator for fuel efficiency; Vehicle Depreciation Calculator for resale curve; Car Insurance Estimator for insurance premium. Run all three for any pre-purchase comparison. For trip-specific planning — Road Trip Planner for the full itinerary with fuel + tolls; Toll Calculator for point-to-point toll-only queries on specific expressway segments. For vehicle maintenance and upgrades — Tyre Size Calculator for tyre replacement/up-size decisions. For resale timing — Vehicle Depreciation Calculator shows the knee in the depreciation curve (years 3-4 for most cars) where selling yields best trade-off. Workflow for a car purchase: shortlist models → Mileage Calculator for each model → Vehicle Depreciation Calculator → Car Insurance Estimator → total 5-year cost ranking → decide. Workflow for a trip: Road Trip Planner with all stops → note overnight-stay cities → Toll Calculator for FASTag balance requirement → fuel up before departure. None of these tools access live vehicle data; they are calculators, not telematics.",
+    indianContext:
+      "Indian vehicle costs reflect state-specific and central factors that global vehicle-cost tools miss. Fuel prices vary by ₹10-15/L across states due to state VAT — Maharashtra and Karnataka are always among the higher priced, Delhi among the lower. Our Mileage Calculator uses the current state-specific price, not a single national average. Road tolls on NHAI expressways follow a published per-km tariff (₹2.50-4.50/km for cars; ₹5-8/km for trucks) with specific toll-plaza rates published by NHAI; our Road Trip Planner sums these along the route. Tolls are collected via FASTag (RFID) with a 2.5% discount for FASTag users. Car insurance is IRDAI-regulated with specific rules on NCB (no-claim-bonus) that accrues 20-50% discount over 5 claim-free years. Vehicle depreciation follows an empirical curve that is steeper in India than Western markets — 25-30% in year 1 is typical for non-commercial-use cars because of our much-lower resale liquidity. Tyre sizes follow ISO standards globally but Indian OEMs often fit narrower, lower-speed-rated tyres than the same car in Western markets; up-sizing within 3% rolling circumference is generally safe but voids the manufacturer's ride-quality calibration.",
+    pillarFaqs: [
+      {
+        q: "How frequently are fuel prices updated in Mileage Calculator?",
+        a: "Daily — reflecting the daily revision that petrol and diesel pricing has been under since June 2017. State VAT and dealer commission are baked into the retail price we use. For a rough budget, the prices are reliable to within ₹0.50/L; for a high-precision calculation, the variance between morning and afternoon is negligible.",
+      },
+      {
+        q: "Does Road Trip Planner support multiple route options (fastest vs shortest vs cheapest)?",
+        a: "Yes — three modes: fastest (expressway, maximum tolls), shortest (state highways, fewer tolls but more time), cheapest (optimising fuel + toll cost, usually a mix). For a Delhi-to-Mumbai trip, fastest is ~1,450 km via expressway with ~₹3,500 in tolls; cheapest is ~1,500 km via state highways with ~₹2,000 in tolls but 3-4 hours more driving.",
+      },
+      {
+        q: "Can Car Insurance Estimator give me a binding premium or just an estimate?",
+        a: "Estimate — typically within ±10% of the actual quote you'd receive from Acko, Go Digit, HDFC Ergo, ICICI Lombard, or Tata AIG for a comprehensive policy. The tool is for pre-quote budgeting; for the binding quote, you still need to fill each insurer's form or use an aggregator. Final premium depends on exact variant (a car's own-damage cover can vary by ₹500-₹2,000 between otherwise-identical trims).",
+      },
+      {
+        q: "Is Tyre Size Calculator safe to trust for changing tyre size from stock?",
+        a: "For up-size within 3% rolling circumference tolerance, yes — that range preserves speedometer accuracy and fits typical wheel wells. Beyond 3%, speedometer reads wrong and the engine computer's traction-control may behave unexpectedly; the tool flags that. Also verify load index and speed rating — a lower-rated tyre is legal but unsafe; the tool requires load index matching or exceeding the OEM specification.",
+      },
+      {
+        q: "How accurate is Vehicle Depreciation Calculator for Indian second-hand pricing?",
+        a: "Within ±15% of OLX/Cars24/Spinny listings for popular models (Swift, Baleno, Nexon, Creta, City, Dzire, Venue, Bolero) in the 1-5 year age range. For niche or low-volume models (imported luxury, low-sales variants), accuracy drops — always verify against live listings before using the depreciation figure for a binding sale or purchase decision.",
+      },
+    ],
+  },
+
+  education: {
+    whatIs:
+      "Education tools on SabTools.in handle the grade-conversion, GPA-computation, and study-planning math that school, undergraduate, and postgraduate students in India need across their academic arc — converting CGPA to percentage and back, computing GPA on the 4.0 or 10.0 scale used by different institutions, calculating weighted grades across semesters, and building a realistic study schedule that fits exam dates and daily availability. These are tasks that every student does at least half a dozen times across school and college — for scholarship applications, for foreign-university admissions where percentage-to-GPA translation matters, for end-of-semester grade verification, and for actually organising exam preparation. Each tool here uses the specific formulas published by Indian boards and universities (CBSE 9.5 multiplier, VTU/Anna University 10-point scale, IIT 10-point credit-weighted GPA, Delhi University 10-point CGPA).",
+    keyFeatures: [
+      {
+        title: "CGPA-to-percentage conversion per university's published formula",
+        description:
+          "CGPA to Percentage uses each Indian university's officially published formula — CBSE uses (CGPA × 9.5) for Class 10, most engineering universities use (CGPA × 10) - varying by institution. Pick your university; the tool applies the correct multiplier rather than the common (but often incorrect) generic 9.5× approximation.",
+      },
+      {
+        title: "Multi-scale GPA computation with credit weighting",
+        description:
+          "GPA Calculator handles the 4.0 scale (US standard), 10.0 scale (most Indian universities), and 10-point credit-weighted scale (IITs, NITs, BITS). Enter course-level grades and credits; returns semester and cumulative GPA with the right weighting rule per the chosen scale. Supports A/A+/B/B+/C/C+ letter grades and direct numeric input.",
+      },
+      {
+        title: "Grade forecasting for end-of-semester scenario planning",
+        description:
+          "Grade Calculator forecasts final course grade given assignment, quiz, and mid-sem scores weighted per the syllabus. 'What do I need to score on the final to get an A grade' — the tool solves for that minimum target-exam score given current marks and weighting.",
+      },
+      {
+        title: "Study schedule with Pomodoro and spaced-repetition timing",
+        description:
+          "Study Time Planner takes exam date, subjects, daily available hours, and current preparation level; returns a day-by-day schedule with subject rotation, Pomodoro-style focus blocks (25 minutes study + 5 minutes break), and revision sessions spaced per the Ebbinghaus forgetting curve (1 day, 3 days, 7 days, 14 days).",
+      },
+    ],
+    useCases: [
+      {
+        title: "Scholarship and higher-education applications",
+        description:
+          "Applying for a scholarship that requires 'minimum 75% in Class 12': for a CBSE student with a 9.0 CGPA, CGPA to Percentage gives the 85.5% figure (using the CBSE 9.5 multiplier). For foreign MS admissions, converting 10-point GPA to 4.0 scale using the tool's university-specific mapping is essential — WES and ECE's rules vary by institution and a wrong conversion can disqualify the application.",
+      },
+      {
+        title: "Semester-end grade verification",
+        description:
+          "At semester-end, GPA Calculator is useful for verifying your computed GPA matches the official transcript. Discrepancies are common and can be challenged through the examination section within 30 days; running the computation yourself catches them quickly. Also useful for planning next semester's course load based on current CGPA trajectory.",
+      },
+      {
+        title: "Mid-semester grade forecasting",
+        description:
+          "Halfway through a semester with 40% weighting given out so far, Grade Calculator shows the minimum final-exam score needed for an A grade — useful for prioritising study time in the last 3 weeks. If the required score is above realistic performance, the tool effectively tells you that an A is mathematically out of reach and you should optimise for B+.",
+      },
+      {
+        title: "Exam preparation planning",
+        description:
+          "4 weeks before board exams or JEE/NEET finals, Study Time Planner builds a day-by-day schedule covering all subjects with revision spacing. Particularly useful for Class 10/12 students who need structured preparation without a coaching-institute's schedule. Supports mock-test-day insertion and rest-day scheduling.",
+      },
+    ],
+    howToChoose:
+      "For grade-scale conversion — CGPA to Percentage or Percentage to CGPA depending on direction; pick the correct university in the selector for the right multiplier. For credit-weighted GPA computation — GPA Calculator with your scale (4.0 for US applications, 10.0 for Indian). For mid-semester planning — Grade Calculator to see what you need on the final. For exam-prep organisation — Study Time Planner. For competitive-exam score prediction and rank analysis, the Exam & Competitive category has NEET Score Predictor, JEE Rank Predictor, CAT Percentile Calculator, and GATE Score Calculator — those are for after-exam rank estimation, not before-exam prep planning (use Study Time Planner for the latter). Workflow for semester management: Grade Calculator (during semester) → GPA Calculator (end of semester) → CGPA to Percentage (for scholarship/admission applications). Workflow for board-exam prep: Study Time Planner (start of final year) → Grade Calculator (pre-boards) → Board Percentage Calculator (post-result, from the Exam category).",
+    indianContext:
+      "Indian education has a proliferation of grading scales that makes cross-institution comparison non-trivial. CBSE Class 10 uses CGPA out of 10 with a 9.5 multiplier to get indicative percentage. ICSE uses straight percentage. State Boards use percentage with state-specific best-of-N aggregation. Engineering universities follow a mix — Anna University, VTU, JNTU use 10-point scale with different credit-weighting rules; IITs use a 10-point scale with weighted credit GPA; BITS Pilani uses a 10-point scale; NITs follow a 10-point semester GPA. Delhi University moved from percentage to CGPA in 2010, and uses a 10-point CBCS scale with semester-wise weighting. Our tools encode each of these correctly — do not trust a generic 'percentage = CGPA × 9.5' formula for engineering grades, it produces 5-10% off. For admissions abroad, WES and ECE each have their own official mappings that override what the Indian university publishes — our tool supports both WES-mapping and ECE-mapping modes for applications to the US, Canada, UK, and Australia. Study scheduling for Indian students is challenging because the 4-8 week board-exam or entrance-exam window is extremely concentrated — Study Time Planner's weighting of short-horizon, high-density preparation matches the Indian exam reality.",
+    pillarFaqs: [
+      {
+        q: "Why does CGPA to Percentage give a different answer for different universities?",
+        a: "Because each university has a published conversion formula. CBSE uses CGPA × 9.5 (Class 10 only). JNTU uses CGPA × 10 - 7.5 (approximate). Anna University uses semester-GPA-based conversion tables. Delhi University uses (CGPA - 0.75) × 10. Using the wrong formula produces 5-15% variance. Always pick your actual institution in the dropdown.",
+      },
+      {
+        q: "Does GPA Calculator handle repeat courses and grade-improvement cases?",
+        a: "Yes — enter both the original and repeat grade; the tool uses the institution's specific rule (most Indian universities take the higher of the two; some take the average; US institutions typically take only the latest). Pick the rule that matches your transcript's stated policy.",
+      },
+      {
+        q: "Is Grade Calculator's 'minimum exam score' guaranteed to produce the target grade?",
+        a: "Mathematically, yes — given the current marks and weighting, the minimum final score the tool computes will produce exactly the target grade cutoff. In practice, if your course has rounding rules or curve-graded components, the actual required score may be 1-2% different. Treat the tool's output as a firm target with a small buffer.",
+      },
+      {
+        q: "Can Study Time Planner account for daily variation in available study time?",
+        a: "Yes — enter a base daily hours value plus a 'flexible hours range' (e.g., 4 hours base, 6 hours on weekends). The tool allocates more intense sessions to flexible days and lighter recap to base days. For subjects you rank as 'weak', it front-loads study; for 'strong', it emphasises revision.",
+      },
+      {
+        q: "How does Percentage to CGPA handle decimal percentages?",
+        a: "By applying the inverse of your institution's published formula at 2-decimal precision. For CBSE, 87.5% = CGPA 9.21; for JNTU, 87.5% = CGPA 9.5. For applications that insist on whole-number CGPA, round down (rounding up overstates your grade and is commonly flagged by admissions reviewers who cross-check against official transcripts).",
+      },
+    ],
+  },
+
+  agriculture: {
+    whatIs:
+      "Agriculture tools on SabTools.in handle the field-level math that Indian farmers, agronomists, and agri-entrepreneurs use across a crop cycle — how many kilograms of seed per acre for a given crop, how much fertilizer (urea, DAP, MOP) at the recommended NPK dosage, how many litres of irrigation water to apply given soil type and crop stage, what the land area is when measured in the regional units (bigha, guntha, acre, hectare), what the expected yield is given inputs and soil quality, and what the net profit looks like after input costs, labour, and market-yard charges. These are the calculations that determine whether a Kharif or Rabi crop is profitable before planting and whether the harvested output justified the investment afterwards. Each tool here uses ICAR-recommended defaults for Indian crops (paddy, wheat, cotton, sugarcane, maize, pulses, oilseeds) across major regions (Punjab-Haryana plain, Gangetic UP-Bihar, Telangana-AP rainfed, Maharashtra-Karnataka, Tamil Nadu delta).",
+    keyFeatures: [
+      {
+        title: "ICAR-recommended crop-specific seed and fertilizer rates",
+        description:
+          "Seed Rate Calculator takes crop + variety + spacing preferences and returns kg/acre for the recommended density. Fertilizer Calculator takes crop + target yield + soil-test NPK status and returns urea/DAP/MOP quantities to reach the recommended NPK ratio (e.g., paddy at 120:60:40 NPK kg/ha for basmati).",
+      },
+      {
+        title: "Regional-unit land-area conversion",
+        description:
+          "Land Measurement Converter handles bigha (Punjab 1,600 sq ft; UP 27,000 sq ft; WB 27,225 sq ft — regionally variable), guntha (Maharashtra/Karnataka 1,089 sq ft), kanal (Punjab 5,445 sq ft), cent (Tamil Nadu/Kerala 435 sq ft), and converts to the global standard acre (43,560 sq ft) or hectare (107,639 sq ft) for regulatory filings and crop-insurance claims.",
+      },
+      {
+        title: "Soil-and-crop-stage-aware irrigation sizing",
+        description:
+          "Irrigation Calculator takes crop + growth stage + soil type (sandy, loamy, clay) + current weather + method (flood, sprinkler, drip); returns litres per day per acre. Drip systems use 40-60% less water than flood; the tool quantifies the savings.",
+      },
+      {
+        title: "End-to-end crop profit estimation",
+        description:
+          "Farm Profit Calculator builds a profit-loss statement for the crop — seed cost, fertilizer cost, labour (family + hired), irrigation, crop-protection (pesticide/herbicide), harvest, transport to mandi, APMC cess; compared against expected revenue at current MSP or mandi rates. Crop Yield Calculator gives the yield input for this (quintal/acre given inputs and variety).",
+      },
+    ],
+    useCases: [
+      {
+        title: "Pre-season crop planning",
+        description:
+          "Before sowing, farmer runs Seed Rate Calculator (for seed quantity), Fertilizer Calculator (for input cost), Irrigation Calculator (for water budget), and Farm Profit Calculator (for projected margin). A negative projected margin is a signal to either change crop or seek better input pricing from the local FPO or co-operative — far better than discovering the loss after harvest.",
+      },
+      {
+        title: "Land-area verification for sub-division and inheritance",
+        description:
+          "Agricultural families often inherit land measured in the regional unit but registered (in land records) in acres. Land Measurement Converter handles the bigha-to-acre conversion with state-specific multipliers. Critical for sub-division calculations, stamp-duty assessment, and crop-insurance filings which require hectare-denominated areas.",
+      },
+      {
+        title: "Crop-insurance and subsidy applications",
+        description:
+          "PMFBY (crop insurance) and KCC (Kisan Credit Card) applications require specific area declarations, crop-plan details, and expected-yield estimates. Land Measurement Converter standardises the area to hectares (PMFBY requirement); Crop Yield Calculator provides the expected-yield figure that backs the sum insured.",
+      },
+      {
+        title: "Post-harvest profit-loss assessment",
+        description:
+          "After harvest, enter actual yield and actual input costs into Farm Profit Calculator for the post-mortem — did the crop meet projected margin, and what variance was from input side vs output side. Useful for next season's planning (input efficiency) and for negotiating with lenders (cash-flow evidence).",
+      },
+    ],
+    howToChoose:
+      "For pre-season input planning — Seed Rate Calculator for seed; Fertilizer Calculator for NPK; Irrigation Calculator for water. For land-area work — Land Measurement Converter for any regional-unit-to-acre-or-hectare conversion (registration, insurance, sub-division). For output and profit — Crop Yield Calculator for expected yield estimation; Farm Profit Calculator for the full P&L. Workflow for a full season: Land Measurement Converter (confirm area) → Seed Rate Calculator → Fertilizer Calculator → Irrigation Calculator → (sow) → (grow) → (harvest) → Crop Yield Calculator (enter actual) → Farm Profit Calculator (post-mortem). None of these tools replace an agronomist for soil-test-based prescription or a crop-specialist extension officer for variety selection — they are for quick field-level calculations using ICAR defaults, and the farmer's local Krishi Vigyan Kendra (KVK) is the right source for locality-specific variety and input guidance. For very high-value crops (horticulture, spices, plantation), the recommendation margins are tighter and professional agronomist consultation is worth the ₹1,500-₹3,000 fee.",
+    indianContext:
+      "Indian agriculture operates on regional and crop-specific conventions that global farming tools get wrong. Land area in rural records uses regional units — bigha, guntha, kanal, cent, marla — that vary not just by state but sometimes by district within state. Our Land Measurement Converter has the state-and-sometimes-district-specific variants. Seed rates and fertilizer dosages are published by ICAR (Indian Council of Agricultural Research) and state agricultural universities (PAU Ludhiana, GBPUAT Pantnagar, IARI New Delhi, TNAU Coimbatore, PJTSAU Hyderabad); we use the generally-applicable recommendations and flag when your state has a specific override. Irrigation practices are dominated by flood irrigation (especially paddy in Punjab and Haryana) but shifting toward drip (cotton in Maharashtra, horticulture in Karnataka) — our Irrigation Calculator handles all three methods (flood, sprinkler, drip) and quantifies the 40-60% water savings of drip that matter critically for groundwater-stressed regions. Farm profit math must account for MSP vs mandi-rate realities — for crops covered by MSP (paddy, wheat, pulses, oilseeds), the MSP sets a floor; for others (vegetables, fruits), mandi rates can swing 30-50% seasonally. Our Farm Profit Calculator handles both and flags the unhedged price risk on non-MSP crops.",
+    pillarFaqs: [
+      {
+        q: "Do Seed Rate and Fertilizer calculators cover all major Indian crops?",
+        a: "Yes — paddy (basmati and non-basmati variants), wheat, cotton (Bt and non-Bt), maize, sugarcane, soybean, groundnut, mustard, pulses (arhar, moong, urad, chana), and major vegetables (tomato, onion, potato, chilli). For less common crops (spices, horticulture, plantation), the tool provides generic-grain-crop defaults with a flag to verify locally with a KVK or state agri university.",
+      },
+      {
+        q: "How region-specific is the fertilizer recommendation?",
+        a: "Fertilizer Calculator uses ICAR general recommendation as the default, with regional adjustments for paddy (Punjab/Haryana/UP vs delta-region TN/Karnataka), wheat (Northern plain vs Peninsular), cotton (Maharashtra/Gujarat vs Andhra rainfed). If you have a soil-health-card reading, enter NPK status (low/medium/high for each); the tool adjusts dosage accordingly for significant savings in N and potentially P application.",
+      },
+      {
+        q: "Is Land Measurement Converter safe to use for legal/revenue-department documents?",
+        a: "For computation and preliminary filings, yes. For binding legal documents (sale deed, partition agreement, insurance claim), always cross-check with your district's tehsildar office or the state land-records portal — sub-state variations in unit definitions sometimes apply and revenue authorities require their specific variant. Our tool gets to within 99%+ accuracy but revenue law requires exact match.",
+      },
+      {
+        q: "Does Farm Profit Calculator include government subsidies like PM-KISAN?",
+        a: "PM-KISAN is a direct income support scheme (₹6,000/year per eligible farmer family), not a per-crop subsidy — so it is not per-crop-dependent and we capture it separately under 'other income'. For input subsidies (fertilizer subsidy, irrigation subsidy on drip), the tool handles those as reductions in input cost when you enable the 'subsidized rates' toggle for your state.",
+      },
+      {
+        q: "How accurate is Crop Yield Calculator's prediction?",
+        a: "For average input conditions and standard varieties, within ±15% of actual yield for paddy, wheat, and cotton in the major producing states. Accuracy drops for high-value low-volume crops (horticulture, spices) and for extreme weather years. Treat the output as a planning guide for pre-season financial decisions, not as a harvest forecast.",
+      },
+    ],
+  },
+
+  electrical: {
+    whatIs:
+      "Electrical and engineering tools on SabTools.in cover the AC/DC circuit sizing, voltage-drop, power-consumption, and renewable-energy math that electricians, MEP consultants, home DIY-ers, and solar-system designers use across residential, commercial, and industrial installations — what wire gauge to choose for a given load and distance, how much voltage drop to expect across a cable run, what the monthly electricity bill will be given appliance mix and DISCOM tariff, how Ohm's Law applies to a mixed-component circuit, what transformer kVA to specify for a given secondary load, and what solar-panel kW capacity the rooftop can support given geographic latitude. These are tasks that sit in the grey zone between 'an electrician can do it in their head' and 'requires a qualified electrical engineer' — having explicit calculators gives the homeowner a sanity-check against the electrician's quote and the contractor a precise number to cite in their design documents.",
+    keyFeatures: [
+      {
+        title: "Wire sizing per IS 732 and load-current calculation",
+        description:
+          "Wire Size Calculator takes current (A), voltage (V), cable length, ambient temperature, and installation method (open air, conduit, buried); returns minimum conductor cross-section (mm²) per IS 732. Supports copper and aluminium conductor types with correct current-carrying capacity derating for installation environment.",
+      },
+      {
+        title: "Voltage-drop and cable-size verification",
+        description:
+          "Voltage Drop Calculator takes cable length + conductor area + load current; returns voltage drop in V and %. Indian Electricity Rules mandate <3% drop in wiring and <6% from service-entrance to farthest point. Use to verify that chosen wire size meets the code, particularly for long runs (>30 m) in large houses or commercial buildings.",
+      },
+      {
+        title: "Appliance-level monthly-bill projection",
+        description:
+          "Power Consumption Calculator takes appliance list (AC, refrigerator, geyser, lights, fans, TV, washing machine) with wattages and daily hours; computes monthly kWh, then applies your state DISCOM's slab tariff (with fixed charge, meter rent, duty) for the monthly bill in rupees. Shows slab-crossing effects so you see the penalty for moving from slab 2 to slab 3.",
+      },
+      {
+        title: "Ohm's Law and AC-circuit essentials",
+        description:
+          "Ohm's Law Calculator computes V = IR and cyclic variants with inputs in any of the three, plus P = VI for power. Transformer Calculator sizes kVA for given load (kW + power factor + safety margin) and voltage conversion ratio. Solar Panel Calculator computes required kW capacity for a given monthly consumption, given rooftop area and latitude-based insolation.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Residential wiring design verification",
+        description:
+          "Building a new house or renovating the wiring: Wire Size Calculator for each major circuit (AC circuit needs 4 sq mm copper for 16A load; lighting circuit works with 1.5 sq mm for 6A). Voltage Drop Calculator verifies that the kitchen's 25-m-long circuit at 16A stays under 3% drop. Use the output to cross-check the electrician's material list.",
+      },
+      {
+        title: "Electricity-bill reduction and appliance planning",
+        description:
+          "Bill Rs 8,000/month and wondering which appliance is the biggest culprit: Power Consumption Calculator with all appliances entered shows the AC is ₹4,500, geyser is ₹1,200, and the rest is lighting + small appliances. Targeting the AC (setting to 26°C instead of 22°C, using a fan supplement) saves ₹1,500/month — quantified, not guessed.",
+      },
+      {
+        title: "Rooftop solar system sizing",
+        description:
+          "Homeowner considering rooftop solar: Solar Panel Calculator takes monthly consumption (say 600 kWh) + rooftop area + latitude; returns required kW capacity (4.5-5 kWp for most metros), expected generation, payback period at current state net-metering tariff, and subsidy eligibility under PM Surya Ghar Yojana. Pair with Power Consumption Calculator to confirm consumption baseline.",
+      },
+      {
+        title: "Industrial and commercial transformer sizing",
+        description:
+          "Small-manufacturer planning a 50-kW-load installation: Transformer Calculator sizes the required kVA (65-70 kVA with power-factor and safety margin), and suggests 11-kV-to-433-V step-down configuration per standard Indian industrial connection. Use the output for the DISCOM's load-sanction application.",
+      },
+    ],
+    howToChoose:
+      "For electrical design — Wire Size Calculator first (pick the cable); Voltage Drop Calculator second (verify the cable meets code); Ohm's Law Calculator for quick sanity checks. For consumption and billing — Power Consumption Calculator for the monthly-bill projection at your DISCOM's tariff. For transformers — Transformer Calculator for kVA sizing given secondary load and voltage. For solar planning — Solar Panel Calculator for rooftop sizing and ROI. For load calculation and service-connection sizing, the Electrical Load Calculator in the Construction category is appropriate (it focuses on diversified residential/commercial load for service-entrance sizing, whereas Wire Size Calculator here sizes individual circuits). Workflow for a new residential installation: Load calculation (Construction category) → individual circuit Wire Size Calculator → Voltage Drop Calculator verification → (install). Workflow for solar: Power Consumption Calculator (baseline) → Solar Panel Calculator (system sizing) → (install). None of these tools replace a licensed electrical contractor or MEP consultant for the actual design sign-off required by the DISCOM — they provide the numbers that the consultant verifies and applies their licence-seal to.",
+    indianContext:
+      "Indian electrical installations follow IS 732 (code of practice for electrical wiring), IS 1255 (code for installation of power cables), and the Central Electricity Authority's Regulations for Electricity Supply and Utility. Wire sizes are specified in sq mm (1.0, 1.5, 2.5, 4, 6, 10, 16, 25 sq mm common residential sizes), not AWG as in US practice. Domestic voltage is 230 V single-phase, 415 V three-phase — different from the US 120/240 V, so current ratings for the same appliance are about half of the US figure. Safety factors (ambient temperature 45°C derating, installation-method derating) are more aggressive than IEC because Indian ambient conditions run hotter. DISCOM tariffs are slab-structured — the first 100 units/month are at a low slab (₹3-4/unit), 100-300 at a medium slab (₹5-7), 300-500 at a high slab (₹7-9), 500+ at the highest slab (₹8-11). The slab crossing matters — a household at 299 units pays significantly less per unit than at 301 units. Our Power Consumption Calculator shows the slab crossing explicitly. For rooftop solar, India's PM Surya Ghar Yojana (launched 2024) offers subsidy up to ₹78,000 for 3 kW and up to ₹18,000/kW thereafter, plus net-metering at most state DISCOMs; our Solar Panel Calculator incorporates both when you select your state and residential category.",
+    pillarFaqs: [
+      {
+        q: "Is Wire Size Calculator suitable for submitting to a DISCOM for service-connection approval?",
+        a: "It gives the correct wire size per IS 732 and voltage-drop compliance, which is what DISCOM's inspection team checks. However, the formal service-connection application requires the design to be stamped by a licensed electrical contractor (Grade A or B); the tool's output is the engineering basis for the design but the licence seal is still needed. Use the tool to verify the contractor's sizing matches IS 732.",
+      },
+      {
+        q: "How accurate is Power Consumption Calculator's monthly bill projection?",
+        a: "Within ±8% of the actual bill for well-characterised appliance usage — AC usage is the main uncertainty (hours per day, temperature setting). For a baseline projection, enter conservative hours; for a worst-case, enter peak hours. Your DISCOM's exact slab tariff for your state is built in — we refresh slab rates annually and at major tariff-revision events.",
+      },
+      {
+        q: "Does Solar Panel Calculator account for shading on the rooftop?",
+        a: "Partially — it asks for a shading factor (0-50% reduction in usable area). For detailed shading analysis, a solar installer does a site survey with a sun-path assessment; our tool uses an average shading factor of 10-15% for typical Indian urban rooftops. For flat rooftops with no obstructions, enter 0%; for rooftops with heavy overhead shading from neighbouring buildings or trees, enter 30-50%.",
+      },
+      {
+        q: "Is Transformer Calculator precise enough for DISCOM service-application?",
+        a: "For the load-sanction application, yes — DISCOM requires a kVA rating consistent with the connected load and a typical power factor (0.8 lag for industrial, 0.9 for commercial, 0.95 for residential); the tool uses those defaults and lets you override. For the actual transformer purchase specification, the vendor will ask for impedance, tap-changer configuration, and other details that go beyond sizing — those require a consulting engineer.",
+      },
+      {
+        q: "Why does Voltage Drop Calculator use different resistivity for copper vs aluminium?",
+        a: "Aluminium has about 1.6× the resistivity of copper, so for the same current and length, an aluminium cable needs about 1.6× the cross-section to achieve the same voltage drop. The tool applies the correct resistivity per material and returns the right size. Aluminium is cheaper per metre but you end up needing a bigger cable; the Wire Size Calculator's cost comparison feature shows which is cheaper overall for your specific run.",
+      },
+    ],
+  },
+
 };
 
 /**
