@@ -14,6 +14,7 @@ import {
   buildGraph,
 } from "@/lib/schema";
 import { categoryPillars } from "@/lib/category-pillars";
+import { autoLink, relatedPillars } from "@/lib/auto-link";
 
 /* ── Unique category descriptions for SEO (avoids thin/duplicate content) ── */
 const categoryDescriptions: Record<string, { intro: string; whoUses: string; whyUse: string; metaDesc: string }> = {
@@ -376,14 +377,14 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         {pillar && (
           <>
             <h2>What are {cat.name}?</h2>
-            <p className="text-gray-700 leading-relaxed">{pillar.whatIs}</p>
+            <p className="text-gray-700 leading-relaxed">{autoLink(pillar.whatIs, slug)}</p>
 
             <h2>Key Features &amp; Capabilities</h2>
             <div className="not-prose grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
               {pillar.keyFeatures.map((f) => (
                 <div key={f.title} className="bg-indigo-50/50 border border-indigo-100 rounded-xl p-4">
                   <h3 className="font-semibold text-gray-900 mb-1">{f.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{f.description}</p>
+                  <p className="text-sm text-gray-600 leading-relaxed">{autoLink(f.description, slug)}</p>
                 </div>
               ))}
             </div>
@@ -397,17 +398,17 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">{u.title}</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">{u.description}</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">{autoLink(u.description, slug)}</p>
                   </div>
                 </div>
               ))}
             </div>
 
             <h2>How to Choose the Right Tool</h2>
-            <p className="text-gray-700 leading-relaxed">{pillar.howToChoose}</p>
+            <p className="text-gray-700 leading-relaxed">{autoLink(pillar.howToChoose, slug)}</p>
 
             <h2>{cat.name} Built for India</h2>
-            <p className="text-gray-700 leading-relaxed">{pillar.indianContext}</p>
+            <p className="text-gray-700 leading-relaxed">{autoLink(pillar.indianContext, slug)}</p>
           </>
         )}
 
@@ -454,7 +455,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                     </svg>
                   </summary>
                   <div className="px-5 pb-4 text-sm text-gray-600 leading-relaxed">
-                    {faq.a}
+                    {autoLink(faq.a, slug)}
                   </div>
                 </details>
               ))}
@@ -462,6 +463,44 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           </>
         )}
       </div>
+
+      {/* Related topic pillars — cross-silo internal linking for
+         topic-cluster SEO (strategy §3.4). Only surfaces destination
+         categories that actually have full pillar content, so readers
+         never land on a thin category from a "related" chip. */}
+      {pillar && relatedPillars[slug] && (
+        <div className="mt-12">
+          <h2 className="text-lg font-bold text-gray-900 mb-3">Related Topic Pillars</h2>
+          <p className="text-sm text-gray-600 mb-4">
+            These categories pair naturally with {cat.name.toLowerCase()} — readers often move between them.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {relatedPillars[slug]
+              .filter((s) => categoryPillars[s])
+              .map((s) => {
+                const c = categories.find((x) => x.slug === s);
+                if (!c) return null;
+                return (
+                  <Link
+                    key={s}
+                    href={`/category/${s}`}
+                    className="group flex gap-3 bg-white hover:bg-indigo-50/70 border border-gray-200 hover:border-indigo-300 rounded-xl p-4 transition"
+                  >
+                    <div className="text-2xl flex-shrink-0">{c.icon}</div>
+                    <div className="min-w-0">
+                      <div className="font-semibold text-gray-900 group-hover:text-indigo-700 truncate">
+                        {c.name}
+                      </div>
+                      <div className="text-xs text-gray-500 truncate">
+                        {c.description}
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+          </div>
+        </div>
+      )}
 
       {/* Newsletter */}
       <div className="mt-10">

@@ -1148,26 +1148,26 @@ export const categoryPillars: Record<string, CategoryPillar> = {
       {
         title: "E-commerce and logistics address validation",
         description:
-          "PIN Code Validator checks whether the entered PIN matches the entered city/state, flagging mismatches before the order ships. The PIN-to-State/District lookup fills in state automatically from a valid PIN — eliminating the most common data-entry error in Indian e-commerce.",
+          "The PIN Code Lookup checks whether the entered PIN matches the entered city/state, flagging mismatches before the order ships. Use it to fill in state automatically from a valid PIN — eliminating the most common data-entry error in Indian e-commerce. For a broader postal-zone reference, the Indian PIN Code Directory lists all 9 zones.",
       },
       {
         title: "Banking and finance form-filling",
         description:
-          "IFSC Finder returns the branch name, address, and bank for a given IFSC — useful when a customer supplies an IFSC but spells the branch wrong. Reverse IFSC search (bank + branch → IFSC) covers the 'I have the branch but not the IFSC' case.",
+          "The IFSC Code Lookup returns the branch name, address, and bank for a given IFSC — useful when a customer supplies an IFSC but spells the branch wrong. For reverse search (bank + branch → IFSC), the IFSC Bank Details tool handles the 'I have the branch but not the IFSC' case.",
       },
       {
         title: "GST and tax compliance",
         description:
-          "GSTIN Validator checks the 15-character format and state code. It does not confirm registration status against the GSTN (that requires an authenticated API call), but catches the majority of data-entry errors — wrong length, wrong state code, wrong checksum — at the point of invoice entry.",
+          "The GST Number Validator checks the 15-character GSTIN format and state code. It does not confirm registration status against the GSTN (that requires an authenticated API call), but catches the majority of data-entry errors — wrong length, wrong state code, wrong checksum — at the point of invoice entry. For invoice creation itself, the GST Invoice Generator and GST Calculator cover the downstream workflow.",
       },
       {
         title: "Travel and India reference",
         description:
-          "STD Code Finder — which city is code 044 (Chennai), 022 (Mumbai), 080 (Bengaluru). State Capital Finder, Official Languages Finder, and Indian Currency Word Converter (convert '125345' to 'One Lakh Twenty-Five Thousand Three Hundred Forty-Five') handle reference questions that come up constantly in document drafting.",
+          "Reference lookups like which Indian city uses STD code 044 (Chennai), 022 (Mumbai), or 080 (Bengaluru), the Indian Festival Calendar for 2025-2030 religion-filtered holidays, the Indian Calendar for Saka/Vikram Samvat cross-reference, and the Indian Name Meaning tool cover the 'need a quick India fact' questions that come up constantly in document drafting. For railway reservations, the Indian Railway PNR and Train Seat Layout tools help travellers understand coach structure before booking.",
       },
     ],
     howToChoose:
-      "For address data — PIN Code Finder, PIN Code Validator. For banking — IFSC Finder, IFSC Validator. For tax — PAN Validator, GSTIN Validator, TAN Validator. For identity — Aadhaar Format Checker (format only — we never validate authenticity). For reference — STD Code Finder, State Information Finder. Use the validators upstream of data-entry to catch errors; use the finders for reference lookups and auto-filling forms.",
+      "For address data — use the PIN Code Lookup and the broader Indian PIN Code Directory. For banking — IFSC Code Lookup for quick one-off queries, IFSC Bank Details when you need the full branch record. For tax — PAN Card Validator and GST Number Validator; the GST Invoice Generator covers the downstream invoice workflow. For identity — the Aadhaar Validator checks Verhoeff format only (we never validate authenticity against UIDAI from any of these pages), and Aadhaar Masked Generator produces the 4-last-digits redacted form safe to share. For travel and reference — Indian Railway PNR, Train Seat Layout, Indian Festival Calendar, and Indian Name Meaning cover everyday India lookups. Use the validators upstream of data-entry to catch errors; use the lookups for reference and auto-filling forms.",
     indianContext:
       "India's identifier formats are specific to India and usually encoded with more structure than an opaque ID number — a PAN carries category (P=person, C=company, H=HUF, etc.), a GSTIN carries state code, a PIN has region/subregion/delivery-office structure, an IFSC prefixes the bank and sub-identifies the branch. Our validators do not just check length; they check that each positional component is valid in context. For example, a PAN of ABCDE1234F where the fifth letter does not match the first letter of the surname (for individuals) would still pass basic validation but fail semantic validation — we flag both classes of issue and explain the difference. We never submit numbers to UIDAI, Income Tax, or GSTN servers from our page — that would be a privacy violation. Format validation only; authenticity checks are the enterprise's job through authenticated APIs.",
     pillarFaqs: [
