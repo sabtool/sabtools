@@ -110,9 +110,10 @@
     "graphing-calculator",
     "cement-calculator",
     "word-to-pdf",
-    "panchang-calculator"
+    "panchang-calculator",
+    "crop-yield-calculator"
   ],
-  "lastCategory": "astrology",
-  "totalPosts": 111,
-  "lastRun": "2026-04-24T10:12:50.628Z"
+  "lastCategory": "agriculture",
+  "totalPosts": 112,
+  "lastRun": "2026-04-24T14:55:05.694Z"
 }
