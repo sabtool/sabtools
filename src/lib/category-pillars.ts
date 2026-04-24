@@ -1194,6 +1194,531 @@ export const categoryPillars: Record<string, CategoryPillar> = {
     ],
   },
 
+  science: {
+    whatIs:
+      "Science and math tools on SabTools.in cover the symbolic, numeric, and statistical work that students and working engineers do every day — solving a quadratic in closed form, multiplying two matrices, reducing a fraction, checking whether 10007 is prime, computing a t-test, evaluating a trigonometric expression, converting binary to decimal. These are the tasks calculators on phones handle badly (because they are built for arithmetic, not algebra) and spreadsheet software handles awkwardly (because it lacks symbolic reasoning). Each tool here is purpose-built for one class of problem and explains its answer — the Quadratic Solver does not just return roots, it shows the discriminant and whether the roots are real or complex; the Matrix Calculator shows row-reduction steps; the Statistics Calculator shows the formula before plugging in numbers. Good for homework, good for engineering reference, good for the SSC/JEE/GATE student who wants to check their working.",
+    keyFeatures: [
+      {
+        title: "Step-by-step working shown",
+        description:
+          "Every answer includes the intermediate steps — the Quadratic Solver shows discriminant computation and both roots; the Algebra Solver shows each transposition and simplification; the Matrix Calculator shows elementary row operations for row-reduction and inverse. Students learn the method by reading the explanation, not just the answer.",
+      },
+      {
+        title: "Symbolic and numeric modes",
+        description:
+          "The Fraction Calculator works in exact rational arithmetic (no floating-point drift); the Trigonometry Calculator accepts degree or radian input; the Prime Number Checker uses trial division with optimised skip patterns for small primes. Switch between exact and decimal output as the problem demands.",
+      },
+      {
+        title: "Graphing with adjustable ranges",
+        description:
+          "The Graphing Calculator plots y = f(x) for polynomial, rational, exponential, logarithmic, and trigonometric functions with zoom, pan, and grid controls. Useful for visualising behaviour near a root, identifying asymptotes, or sanity-checking a symbolic answer against the curve's shape.",
+      },
+      {
+        title: "Distribution-aware statistics",
+        description:
+          "The Statistics Calculator distinguishes sample vs. population standard deviation, computes mean/median/mode/quartiles, and shows the distribution of the input data. The Probability Calculator covers binomial, Poisson, and normal distributions with tail probabilities and cumulative values.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Homework verification and learning",
+        description:
+          "Use the Algebra Solver to check your working on a homework equation — the tool's step-by-step output tells you where you went wrong, not just that you got the wrong answer. The Quadratic Solver is the fastest way to verify a factoring attempt; the Fraction Calculator catches simplification errors.",
+      },
+      {
+        title: "Engineering and coursework reference",
+        description:
+          "The Matrix Calculator solves up to 4x4 systems for linear algebra coursework and circuit analysis. The Trigonometry Calculator evaluates compound identities for mechanical engineering problems. The Statistics Calculator computes regression coefficients for lab-data analysis. Cite the formula used in your report.",
+      },
+      {
+        title: "Exam preparation checking",
+        description:
+          "JEE and BITSAT aspirants use the Graphing Calculator to visualise conic-section problems and check intuition on function behaviour. NEET physics problems involving projectile motion benefit from the Quadratic Solver for range calculations. The Probability Calculator covers the distribution questions that appear in GATE and actuarial exams.",
+      },
+      {
+        title: "Data science and analyst tasks",
+        description:
+          "Quick statistical summaries (mean, variance, confidence intervals) for a small dataset without opening Python or Excel. The Binary Calculator converts between binary, octal, decimal, and hex for bit-level work and is particularly useful when debugging bitmask flags or IP-subnet arithmetic alongside the network tools in the developer category.",
+      },
+    ],
+    howToChoose:
+      "For algebra problems — Quadratic Solver for degree-2 equations, Algebra Solver for general linear and polynomial equations up to degree 4. For matrix work — Matrix Calculator covers addition, multiplication, inverse, determinant, and eigenvalues up to 4x4. For number work — Fraction Calculator for exact rational arithmetic, Prime Number Checker for primality testing, Binary Calculator for base conversions. For statistics — Statistics Calculator for descriptive stats, Probability Calculator for distribution tail probabilities. For trigonometry — Trigonometry Calculator evaluates any standard identity with degree/radian toggle. For visualisation — the Graphing Calculator handles most classroom functions; it is not a replacement for Desmos or GeoGebra for advanced work, but it is enough for homework and quick sanity checks. Switching between tools is one click — the category navigation is built around problem type, not subject area, so you can go from a Quadratic Solver root to a Graphing Calculator plot to verify the parabola's shape.",
+    indianContext:
+      "Indian school and entrance-exam syllabi (CBSE, ICSE, State Boards, NEET, JEE Main, JEE Advanced, GATE) weight algebra, trigonometry, and probability heavily — Class 10 board exams rely on the Quadratic Solver's exact-roots behaviour, Class 12 CBSE includes matrix operations in the Class 12 curriculum, and JEE regularly asks conic-section identification that the Graphing Calculator visualises in one click. Unlike US-market tools built around AP Calculus and graphing-calculator-on-a-TI-84 conventions, our defaults match Indian textbook conventions: degrees-first for trigonometry (CBSE default), Indian number formatting with lakhs and crores in the Statistics Calculator for data problems drawn from Indian economic datasets, and explicit exact-fraction mode for the rational-arithmetic questions that dominate Class 9-12 algebra. None of these tools require internet once loaded — the computation runs in your browser, so rural students on unstable connections can bookmark the page once and use it offline.",
+    pillarFaqs: [
+      {
+        q: "How large can matrices and systems get in the Matrix Calculator?",
+        a: "Up to 4x4 for inverse and determinant, up to 5x5 for addition and multiplication. Beyond that, numerical stability on small floats becomes an issue in the browser and you are better off using NumPy or Octave. For classroom and exam prep, 4x4 covers everything in CBSE/JEE/GATE syllabi.",
+      },
+      {
+        q: "Does the Quadratic Solver handle complex roots?",
+        a: "Yes. When the discriminant is negative, the Quadratic Solver returns the two complex-conjugate roots in a + bi form and explains that the parabola does not cross the x-axis. Useful for physics problems where 'no real root' has a physical meaning (projectile never reaches target).",
+      },
+      {
+        q: "Is the Graphing Calculator as capable as Desmos?",
+        a: "No — Desmos is a full symbolic graphing platform with implicit functions, inequalities, sliders, and animation. Our Graphing Calculator plots explicit y = f(x) for polynomial, exponential, logarithmic, and trigonometric functions with zoom and pan. It is sufficient for Class 10-12 homework and JEE-level intuition building, not for research-grade visualisation.",
+      },
+      {
+        q: "How does the Prime Number Checker perform on large numbers?",
+        a: "For numbers up to about 10^15, it returns an answer in milliseconds using optimised trial division with wheel factorisation. For larger numbers (cryptographic-grade), the tool will still return an answer but response time grows — and you should use Miller-Rabin probabilistic tests on a proper cryptography library, not a browser tool.",
+      },
+      {
+        q: "Can I use the Statistics Calculator for my research project?",
+        a: "For descriptive statistics, confidence intervals, and basic hypothesis tests (one-sample t-test, chi-square goodness-of-fit), yes. For complex multi-variable regression or ANOVA with interaction terms, we do not replace R, Python's statsmodels, or SPSS — those are the right tool for published research. Our calculator is for quick answers and homework.",
+      },
+    ],
+  },
+
+  construction: {
+    whatIs:
+      "Construction tools on SabTools.in calculate the quantity, cost, and loading figures that decide a residential or small-commercial build — how much concrete for a slab of given thickness, how much steel per cubic metre of concrete at a given reinforcement ratio, how many sheets of plywood for a given floor area with a given sheet size, what a staircase should measure given total rise and tread count, what flooring a given area costs at a given tile price, how much a water tank of given capacity weighs when full. These are the calculations a site supervisor runs every day with a scratchpad; we build them as one-click tools with Indian defaults (IS 456 grades for concrete, Fe 415 and Fe 500 for steel, 19 mm and 12 mm plywood thicknesses). For a homeowner planning a 1,000 sq ft build, these tools turn a contractor's quote into a number you can sanity-check against material quantities before you sign.",
+    keyFeatures: [
+      {
+        title: "IS-code and Indian-standard defaults",
+        description:
+          "Concrete Calculator defaults match IS 456 grades (M15, M20, M25 with 1:2:4, 1:1.5:3, 1:1:2 mix ratios); Steel Weight Calculator uses TMT bar weights per IS 1786 (Fe 415, Fe 500, Fe 550 densities); Plywood Calculator uses IS 303 commercial plywood sheet sizes. Defaults match what your supplier actually sells.",
+      },
+      {
+        title: "Material quantity and cost in one step",
+        description:
+          "Concrete Calculator returns cement bags, sand cubic feet, and coarse-aggregate cubic feet for the mix ratio; Flooring Cost Calculator multiplies area by tile price including 10% wastage allowance; Steel Weight Calculator reports tonnes so you can cross-check against the delivery challan.",
+      },
+      {
+        title: "Dimension safety and code-compliance",
+        description:
+          "Staircase Calculator validates against the Class-II residential standard (max 190 mm riser, min 240 mm tread, min 63° slope); Roof Area Calculator distinguishes flat, pitched, and hip-roof topology and computes the actual slope-length area (not the plan projection).",
+      },
+      {
+        title: "Indian-rupee cost output with 2025 rates",
+        description:
+          "Default unit prices reflect 2025 tier-2-city Indian market rates — ₹380-420 per 50 kg cement bag, ₹65,000-72,000 per tonne of TMT Fe 500, ₹1,800-2,400 per square metre of premium vitrified tile. Override with your supplier's quote to get a like-for-like comparison against the contractor's BOQ.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Home-build BOQ verification",
+        description:
+          "Before signing a build contract, run the Concrete Calculator for each slab and beam in the architect's drawing, total the cement/sand/aggregate, and compare against the contractor's material quantity sheet. A 20% overstatement on cement is not unusual and this 30-minute exercise pays for itself many times over.",
+      },
+      {
+        title: "Renovation and flooring budget",
+        description:
+          "Homeowner replacing tiles in a 1,200 sq ft flat uses the Flooring Cost Calculator with the chosen tile rate and wastage factor to get a material budget. Combine with the Room Paint Visualizer to budget paint quantities — 1 litre covers 10-12 sq m on first coat, 12-14 sq m on second coat; the tool accounts for that and rooms' door/window deductions.",
+      },
+      {
+        title: "Structural steel estimation",
+        description:
+          "The Steel Weight Calculator takes diameter (8 mm, 10 mm, 12 mm, 16 mm, 20 mm, 25 mm) and length to give tonnes. For a small residential build, reinforcement is 80-100 kg per cubic metre of concrete — cross-check this ratio with the Concrete Calculator total volume to spot under- or over-ordering of TMT bars.",
+      },
+      {
+        title: "Water, staircase, and utility dimensioning",
+        description:
+          "Water Tank Calculator sizes overhead and underground tanks by family size and storage days (135 L per person per day is the IS 1172 standard for Indian domestic use); Staircase Calculator checks step geometry against the residential code; Electrical Load Calculator sizes the service connection for a given appliance mix and Pipe Size Calculator sizes plumbing branches for peak simultaneous flow.",
+      },
+    ],
+    howToChoose:
+      "For structural material — Concrete Calculator for any slab, beam, column, or footing volume in cubic metres; Steel Weight Calculator alongside it to convert reinforcement to tonnes. For finishing — Flooring Cost Calculator for tiles, marble, laminate, or vinyl; Room Paint Visualizer for wall paint. For civil dimensioning — Staircase Calculator for step geometry, Roof Area Calculator for pitched or hipped roofs, Water Tank Calculator for tank sizing. For services — Electrical Load Calculator for the kW service connection, Pipe Size Calculator for plumbing branches. For wooden components — Plywood Calculator for doors, kitchen carcasses, and partition work. Most residential builds need 6-8 of these in sequence; run them in the order of the build phases (foundation → structure → finishing) and keep the outputs in a spreadsheet alongside the contractor's BOQ so you can compare line-by-line before payment. None of these tools replace a structural engineer for anything above G+1 construction — they are for sanity-checking quantities, not for load-bearing design decisions.",
+    indianContext:
+      "Indian construction runs on a very specific material palette and set of conventions that the global construction calculators get wrong. Concrete mix is specified as grade (M20, M25) not PSI, with the nominal mix ratio explicit (1:1.5:3 for M20). TMT bars are priced per tonne at a market rate linked to the Mumbai steel index — fluctuating 10-15% month-on-month and always quoted in rupees. Plywood is specified as BWP (Boiling Water Proof, IS 303) or MR (Moisture Resistant) with 19 mm, 12 mm, and 8 mm as the common thicknesses, not the 3/4-inch Imperial dimensions. Water consumption is 135 L per person per day per IS 1172, and tank capacity must also account for the municipal supply's irregular hours (in Chennai or Bengaluru, plan for 2-3 days of storage). Residential stair geometry must match the NBC 2016 code for the local municipal by-laws. Every default in these tools is set for Indian conventions — override only if you are working internationally or in a special case.",
+    pillarFaqs: [
+      {
+        q: "Is the Concrete Calculator suitable for RCC design or just estimation?",
+        a: "Estimation only. It computes material quantities for a given volume at a given mix ratio, which is what you need for procurement and cost budgeting. RCC design — reinforcement placement, development length, moment capacity — requires a licensed structural engineer. For anything above G+1, do not build from this tool's output alone.",
+      },
+      {
+        q: "How accurate are the 2025 material rates in the Flooring Cost Calculator?",
+        a: "Rates are representative averages for tier-2 Indian cities (Bhubaneswar, Nashik, Ludhiana, Coimbatore) based on 2025 market data. Tier-1 cities run 15-25% higher; rural areas 10-20% lower. Always override with your actual supplier quote for the final budget — the tool is for first-cut estimation, not binding quotes.",
+      },
+      {
+        q: "Why does the Staircase Calculator warn about my design even when it looks reasonable?",
+        a: "It checks against the NBC 2016 residential standard: riser between 150-190 mm, tread between 240-300 mm, and a preferred 2R + T = 600 mm comfort rule. Designs outside that range are legal but uncomfortable or fatiguing. The warning is not blocking — you can override and proceed — but it catches the common error of under-tread (narrow step, trip hazard).",
+      },
+      {
+        q: "Does the Water Tank Calculator handle the Chennai-style 2-day-storage requirement?",
+        a: "Yes — there is a 'storage days' input that defaults to 1 day (adequate for metros with 24x7 supply) but accepts 2 or 3 days for cities with intermittent supply. A family of 4 needs 540 L/day at IS 1172 standard; a 2-day storage means a 1,100 L overhead tank plus the underground sump.",
+      },
+      {
+        q: "Can the Electrical Load Calculator tell me whether I need a single-phase or 3-phase connection?",
+        a: "Yes — it sums appliance loads in kW and flags when total diversified load exceeds 5-7 kW (the practical single-phase ceiling for most Indian DISCOMs). Above that, 3-phase is recommended for proper load balancing and to avoid overload on a single phase. Final decision depends on the DISCOM's tariff and connection rules in your state.",
+      },
+    ],
+  },
+
+  exam: {
+    whatIs:
+      "Exam and competitive tools on SabTools.in handle the score-prediction and percentile math that every Indian entrance-exam aspirant faces — given raw marks, what is the likely rank, what score does a target college need, what does a percentile of 87.5 convert to in absolute score, what board percentage do I need to be shortlisted, what is the notional cost of a five-year college programme, am I eligible for a given scholarship. These are calculations that determine career paths for millions of students each year and that are usually done on scratch paper using formulas copied from coaching-institute notes. We turn each into an explicit tool that shows the formula, the inputs, and the answer with caveats. For the NEET/JEE/GATE/CAT aspirant, these tools complement the actual exam — use them after the answer key is released to estimate rank before official results, and during counselling to map rank to likely college admissions.",
+    keyFeatures: [
+      {
+        title: "Historic cutoff data for score-to-rank mapping",
+        description:
+          "NEET Score Predictor and JEE Rank Predictor use the last 5 years of All India Rank distribution data to convert raw/NTA score to expected rank band. Accuracy is ±5-8% of actual rank in most cases — not a guarantee, but a realistic expectation band for counselling decisions.",
+      },
+      {
+        title: "Exam-specific normalisation handled",
+        description:
+          "JEE Main and CAT use session-normalised percentile, not raw score — the tools accept either input and convert correctly. GATE Score Calculator applies the official GATE normalisation formula (GATE score = 350 + 250 × (actual_marks - qualifying_marks) / (topper_marks - qualifying_marks)) with caveats around multi-session normalisation.",
+      },
+      {
+        title: "Board-agnostic percentage computation",
+        description:
+          "Board Percentage Calculator handles CBSE, ICSE, and all State Board schemes — CBSE best-of-5, ICSE best-of-4 (with English compulsory), Tamil Nadu board total, Maharashtra HSC total. Each scheme has its own aggregation rule and the tool applies the right one based on your board selection.",
+      },
+      {
+        title: "Scholarship and eligibility filtering",
+        description:
+          "Scholarship Eligibility Checker covers central schemes (NSP portal scholarships — Post-Matric, Top-Class, Merit-cum-Means for minorities), state schemes (Tamil Nadu Chief Minister's Merit Scholarship, Karnataka Vidyasiri, Gujarat MYSY), and private-sector awards (Tata, KC Mahindra, Reliance Foundation). Enter income, category, and board percentage; the tool returns a ranked list of schemes you qualify for.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Post-exam rank estimation",
+        description:
+          "Answer key is out. Compute raw score. Run NEET Score Predictor or JEE Rank Predictor to get expected AIR band. This is the critical 48-hour window between answer-key release and result announcement where coaching institutes charge ₹3,000-₹5,000 for the same calculation — the tool is free and takes 30 seconds.",
+      },
+      {
+        title: "College choice and counselling planning",
+        description:
+          "Expected rank in hand, use historic branch/college cutoffs to plan JoSAA or state-level counselling preferences. The CAT Percentile Calculator combines with IIM cutoff data to rank realistic target IIMs and alternate schools before the WAT-PI call stage.",
+      },
+      {
+        title: "Board exam target-setting",
+        description:
+          "Class 12 student targeting a specific college uses Board Percentage Calculator to determine the minimum mark per subject that would hit the aggregate target. Works backwards from 'I need 92% for Delhi University Maths' to 'I need 91 in Physics, 95 in Maths, 90 in Chemistry, 92 in English' given the best-of-4 rule.",
+      },
+      {
+        title: "College-cost and scholarship planning",
+        description:
+          "College Fee Calculator estimates 4-year or 5-year total cost including hostel, mess, books, and entrance-processing charges — useful for comparing IIT Delhi vs. a private engineering college. Scholarship Eligibility Checker identifies the schemes that would offset that cost given family income and category.",
+      },
+    ],
+    howToChoose:
+      "For score-to-rank prediction after an exam — NEET Score Predictor for MBBS/BDS, JEE Rank Predictor for engineering (BE/BTech), GATE Score Calculator for postgraduate engineering and PSU recruitment, CAT Percentile Calculator for management. Each uses that exam's specific normalisation. For board marks computation — Board Percentage Calculator for Class 10 or 12 board aggregation (input all subject marks, select your board, tool applies the correct best-of-N rule). For pre-exam planning — Marks Percentage Calculator is the generic percentage-of-total tool for internal/external mark aggregation in college courses and for backward-planning a target aggregate. For finance planning — College Fee Calculator for 4-5 year total cost including hidden fees; Scholarship Eligibility Checker to identify offset schemes. Workflow: most users run score predictor first (after answer key), then college fee planner (during counselling application), then scholarship checker (after admission letter). Use them in that order during the exam-to-admission cycle.",
+    indianContext:
+      "Indian competitive-exam preparation is a high-stakes and high-cost industry — a NEET aspirant in Kota spends ₹4-6 lakh on coaching, a JEE aspirant ₹3-5 lakh, and the difference between rank 500 and rank 5,000 decides whether the family's investment paid off. These tools remove information asymmetry around the rank-prediction and scholarship-eligibility calculations that coaching institutes use as retention hooks. NEET and JEE Main are conducted by NTA with centralised result declaration; cut-offs change year on year based on difficulty, and the historic-cutoff data in our Score Predictor reflects the 5-year rolling window (not the current year, which is not yet known on result day). GATE is conducted by IITs in rotation with a fixed normalisation formula; our GATE Score Calculator matches the official GATE score formula byte-for-byte. Scholarship eligibility changes annually as the NSP portal refreshes; our Eligibility Checker is refreshed every August when the new academic year's schemes open. State-board calculations follow the home state's aggregation rule — Tamil Nadu, Maharashtra, Andhra Pradesh, Kerala, West Bengal each have their own best-of-N rule which our Board Percentage Calculator handles correctly.",
+    pillarFaqs: [
+      {
+        q: "How accurate is the NEET Score Predictor?",
+        a: "For ranks in the 500-50,000 range (which covers most government MBBS admissions through AIQ and state quota), accuracy is typically ±5-8% on the predicted rank. For top 500 and below 50,000, accuracy drops because the score-to-rank curve flattens at the extremes. Always treat the prediction as a band, not a point estimate.",
+      },
+      {
+        q: "Does the JEE Rank Predictor give AIR or category rank?",
+        a: "Both. It outputs All India Rank (AIR) as the primary number and also your category rank (General, EWS, OBC-NCL, SC, ST, PwD) which is what JoSAA uses for allotment. Category rank is usually much better than AIR for reserved categories — ignoring it leads to false conservatism during counselling.",
+      },
+      {
+        q: "What data does the CAT Percentile Calculator use?",
+        a: "It uses the IIM-published percentile-to-normalised-score mapping for the last 5 CAT administrations (three sessions each). Percentile normalisation is session-specific — you cannot compare raw marks across sessions — and our calculator handles that correctly when you enter which session you sat in.",
+      },
+      {
+        q: "Does the Scholarship Eligibility Checker submit applications?",
+        a: "No. It only tells you which schemes you qualify for based on your income, category, and academic performance. Submitting applications requires you to apply through the official portals (NSP portal for central schemes, state portals for state schemes, private websites for corporate scholarships). We will not ask for Aadhaar or bank details.",
+      },
+      {
+        q: "How does the College Fee Calculator handle hostel and mess?",
+        a: "It has a three-tier preset: metro (IIT Delhi, IIT Bombay, IIM A/B/C — premium hostel and mess costs), tier-1 (other IITs, IIMs, NITs — standard), tier-2 (state government colleges, private tier-2). You can also enter custom figures if the college's official fee structure is published. Books and stationery are estimated at ₹15,000-25,000/year depending on the programme.",
+      },
+    ],
+  },
+
+  business: {
+    whatIs:
+      "Business tools on SabTools.in handle the small-business finance math that every founder, freelancer, and shopkeeper needs — GST invoices with correct CGST/SGST/IGST breakup, profit-and-loss on a given sales volume and cost structure, break-even analysis for a new product, ROI on a given investment horizon, home-loan affordability based on income and existing liabilities, rent-vs-buy analysis for the real-estate decision that every mid-career professional faces, and carpet-area vs super-built-up conversion for property purchases. These are the calculations that decide whether a business is viable, whether a home is affordable, and whether an investment is worth it. We build each as a single-purpose tool with Indian defaults — GST slabs (0%, 5%, 12%, 18%, 28%), Indian interest-rate bands for home loans (8-9.5% on floating rate in 2025), and the super-built-up-vs-carpet-area gap that the RERA Act 2016 regulates.",
+    keyFeatures: [
+      {
+        title: "GST-compliant invoicing with HSN/SAC",
+        description:
+          "GST Invoice Generator produces an invoice that matches the GST rules — invoice number with prescribed format, HSN/SAC for each line item, CGST/SGST/IGST split based on intra-state or inter-state supply, total in words, and place of supply. Download as PDF ready for sharing with your customer and uploading to your accountant.",
+      },
+      {
+        title: "Profit-margin and break-even analysis",
+        description:
+          "Profit & Loss Calculator distinguishes gross margin (revenue minus cost of goods) from net margin (after fixed costs). Break-Even Calculator computes unit sales needed to cover fixed costs — the foundation question for every new product launch.",
+      },
+      {
+        title: "ROI with time-value consideration",
+        description:
+          "ROI Calculator separates simple ROI from annualised ROI (CAGR), which matters enormously when comparing short-horizon investments against long-horizon ones. A 50% return over 5 years is 8.4% CAGR — much worse than an 8.4% FD, once you factor in compounding.",
+      },
+      {
+        title: "Home-loan and real-estate decision tools",
+        description:
+          "Home Loan Affordability uses the standard 50% FOIR (fixed-obligation-to-income ratio) rule to compute maximum loan you would realistically be approved for. Rent vs Buy Calculator compares the cost of renting at current rent + inflation against buying at current EMI + maintenance + opportunity cost of down payment, over a 10-20 year horizon.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Invoice generation for small business and freelancers",
+        description:
+          "Freelancer or MSME with a GSTIN uses the GST Invoice Generator to issue compliant invoices without buying Tally or Zoho Books. One-time filling of GSTIN, company name, and bank details; thereafter each invoice is 30 seconds. Share the PDF with the client; the format is accepted by any Indian accountant for input-tax-credit claim.",
+      },
+      {
+        title: "New product pricing and margin planning",
+        description:
+          "D2C founder planning a product launch uses the Profit & Loss Calculator to set the retail price that delivers a 40% gross margin after COGS, then the Break-Even Calculator to estimate monthly units needed to cover Meta/Google ad spend and fulfilment overhead. Iterate on price point until the break-even is feasible in 3-4 months.",
+      },
+      {
+        title: "Investment and return comparison",
+        description:
+          "Investor comparing a real-estate purchase against an SIP uses ROI Calculator to annualise the real-estate return (capital appreciation + net rental yield) and compare it against the Mutual Fund category's historic CAGR. Then uses Rent vs Buy Calculator to quantify the hidden cost of the locked-in down payment.",
+      },
+      {
+        title: "Home buying and affordability planning",
+        description:
+          "Young professional with ₹1.5 lakh monthly income uses Home Loan Affordability to find the maximum loan band (₹75-85 lakh at 50% FOIR, 8.5% rate, 20-year tenure). Then Carpet Area Calculator converts the 1,200 sq ft super-built-up advertised flat into 900 sq ft actual carpet area so you can compare against a RERA-registered project listed by carpet area.",
+      },
+    ],
+    howToChoose:
+      "For invoicing — GST Invoice Generator for B2B invoices where GST input credit matters. For margin analysis — Profit & Loss Calculator for period-level P&L, Break-Even Calculator for unit-economics view. For investment analysis — ROI Calculator for any investment with entry and exit values; pair with the Mutual Fund and FD calculators in the finance category to compare across instruments. For property decisions — Home Loan Affordability first to set the budget ceiling, then Rent vs Buy Calculator for the buy-or-rent choice, then Carpet Area Calculator for comparing properties on a like-for-like floor-area basis. For naming a new venture — Business Name Generator suggests domain-available names filtered by industry keywords. Workflow for a new business: Business Name Generator → Break-Even Calculator → GST Invoice Generator (after incorporation) → ROI Calculator (quarterly review). For a home purchase: Home Loan Affordability → Rent vs Buy Calculator → Carpet Area Calculator → Profit & Loss Calculator (if it is a rental-yield investment).",
+    indianContext:
+      "Indian small business operates on margins that global business-calc tools are not calibrated for. A trader's net margin is often 2-5%; a D2C brand's is 8-15%; a services firm 30-50%. The Profit & Loss Calculator lets you model any of these without forcing the Western mid-market assumption of 20-30% baseline. GST is central to every Indian business with turnover over ₹40 lakh (₹20 lakh for services) — the GST Invoice Generator's CGST/SGST/IGST split, HSN/SAC codes, and B2B vs B2C invoice format all follow the Rule 46 of the CGST Rules 2017. Home-loan terms reflect Indian conditions: floating-rate tenure up to 30 years, prepayment allowed without penalty (floating) or with penalty (fixed), tax benefit under Section 80C on principal and Section 24(b) on interest up to ₹2 lakh. The Rent vs Buy Calculator includes these tax benefits in the buy-side math — leaving them out would systematically bias the answer toward 'rent'. Carpet Area Calculator applies the RERA Act 2016 definition: carpet area excludes external walls, balcony, terrace, and service areas — usually 70-75% of the super-built-up number you see in the builder's brochure.",
+    pillarFaqs: [
+      {
+        q: "Does the GST Invoice Generator submit anything to the GST portal?",
+        a: "No. It produces a compliant invoice PDF that you save to your system and share with your client. Actual GST return filing (GSTR-1 uploads, GSTR-3B payment) still happens on the GSTN portal or through a GSP-integrated accountant. Our tool replaces the 'design an invoice' step, not the return-filing step.",
+      },
+      {
+        q: "How does the Break-Even Calculator handle variable costs that scale with volume?",
+        a: "The tool separates fixed costs (rent, salaries, SaaS subscriptions) from variable cost per unit (COGS, shipping, payment gateway fees). Break-even units = fixed cost ÷ (price per unit − variable cost per unit). If your variable cost itself has a step change (e.g., shipping rate drops above 500 units), model each tier as a separate break-even calculation.",
+      },
+      {
+        q: "Can the Home Loan Affordability tool account for existing loans?",
+        a: "Yes — it asks for your existing EMI obligations (car loan, personal loan, credit card minimum, other EMIs) and factors them into the FOIR (fixed-obligation-to-income ratio) calculation. Banks cap FOIR at 50-55% of net take-home, so existing EMI reduces your new-loan capacity by that amount.",
+      },
+      {
+        q: "Is the Rent vs Buy Calculator biased toward renting?",
+        a: "No — it explicitly models the buy-side tax benefits (Section 80C principal deduction up to ₹1.5 lakh/year, Section 24(b) interest deduction up to ₹2 lakh/year for self-occupied), capital appreciation (default 6% p.a., editable), and rental value that would have been paid if renting. Override any assumption to see how sensitive the answer is to it.",
+      },
+      {
+        q: "Why does the Carpet Area Calculator flag my builder's figures as inflated?",
+        a: "RERA mandates that carpet area be the exact inside-walls area excluding balconies, external walls, and service shafts. Builders often quote 'super-built-up area' which adds 25-30% for common areas. The calculator reverses the super-built-up number to check it falls in the 70-75% range — if it does not, either the builder has misquoted or you are looking at a pre-RERA project.",
+      },
+    ],
+  },
+
+  utility: {
+    whatIs:
+      "Everyday Utility tools on SabTools.in solve the lookup-and-validate tasks that show up constantly in Indian daily life — decoding a vehicle number plate for state and RTO office, looking up an IFSC code to find a bank's branch, checking a PIN code's city and state, validating the format of a PAN card or Aadhaar number, confirming a GST number has the right structure, tracking a railway PNR for current booking status, and looking up a Ration Card's coverage. These are not financial calculations — they are data lookups against authoritative Indian government and RBI sources. Every Indian adult ends up needing three or four of these each month. The alternative is a dozen different government portals, each with its own quirks, CAPTCHAs, and occasional downtime. We index the public data in one place with a consistent interface.",
+    keyFeatures: [
+      {
+        title: "RTO-coded vehicle number decoding",
+        description:
+          "Vehicle Number Info takes a registration plate (MH-01-AB-1234) and decodes state (Maharashtra), RTO office (Mumbai Central), series, and approximate vehicle registration date based on the series progression. Works for pre-BH-series and BH-series plates.",
+      },
+      {
+        title: "IFSC and PIN directory lookup",
+        description:
+          "IFSC Code Lookup returns bank, branch, branch address, city, and state for any valid IFSC. PIN Code Lookup returns city, district, state, and nearby post offices for any 6-digit PIN. Data refreshed against RBI IFSC master list (monthly) and India Post directory (quarterly).",
+      },
+      {
+        title: "Format validation for Indian IDs",
+        description:
+          "PAN Card Validator checks the 10-character format ABCDE1234F and that the 4th character matches the entity type (P for individual, C for company, H for HUF). Aadhaar Validator runs the 12-digit Verhoeff checksum. GST Number Validator checks the 15-character GSTIN structure and state-code prefix. Format only, never authenticity.",
+      },
+      {
+        title: "Real-time PNR and travel lookups",
+        description:
+          "Indian Railway PNR queries the IRCTC public PNR status endpoint for current booking status (confirmed, RAC, waiting list, chart prepared) of any 10-digit PNR. Useful before heading to the station to check whether the WL ticket cleared.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Banking form and cheque preparation",
+        description:
+          "Filling a NEFT or RTGS transfer form needs the IFSC and the bank branch address. The IFSC Code Lookup returns both in one query. For cross-checking a cheque before deposit (especially foreign-source cheques), confirm the beneficiary bank's IFSC matches the MICR code on the cheque.",
+      },
+      {
+        title: "Customer-data validation in small-business CRM",
+        description:
+          "A small business collecting PAN, Aadhaar, and GST numbers from B2B customers runs each through the validators to catch data-entry errors before they cause invoice-reversal headaches. Format validation catches 90%+ of typos at zero cost; authenticity check against the Income Tax or UIDAI APIs is a separate process that requires licensed access.",
+      },
+      {
+        title: "Travel and logistics address verification",
+        description:
+          "E-commerce seller with a Meesho or Amazon storefront uses PIN Code Lookup to verify that the customer-entered city matches the PIN — a mismatch is usually a typo that causes 'undeliverable' returns and ₹100-200 reverse-logistics cost per order. Running the check before shipping saves significantly at scale.",
+      },
+      {
+        title: "Railway journey planning",
+        description:
+          "Indian Railway PNR tracks the status of a waitlisted ticket in the 48 hours before departure. Combined with the tools in the category for train seat layout and station-code lookup (from the India Guide category), a passenger can check 'is my WL/RAC ticket likely to clear' without opening the IRCTC app.",
+      },
+    ],
+    howToChoose:
+      "For ID format checking — PAN Card Validator, Aadhaar Validator, GST Number Validator. Use these at the point of data entry in any form (B2B invoice, HR employee record, KYC document). For address and postal — PIN Code Lookup, plus the broader Indian PIN Code Directory in the India Guide category. For banking — IFSC Code Lookup for quick queries; the IFSC Bank Details lookup in the India Guide category for deeper branch records. For vehicle registration — Vehicle Number Info for decoding the plate. For railway journey — Indian Railway PNR for booking status; the India Guide category has Train Seat Layout and related reference tools. For ration and subsidy lookups — Ration Card Info. None of these tools make authenticated API calls or submit any data to government servers. All lookups run against our published datasets; all format validations run locally in the browser. For sensitive or legal verifications (loan-application KYC, employee onboarding), you still need the authenticated government APIs — these tools are for quick reference and entry-time error catching.",
+    indianContext:
+      "Indian identifier numbers are structured with more information than a typical global ID number — a PAN's fifth letter encodes entity type (P, C, H, A, T, B, L, J, G, F), a GSTIN's first two digits encode the state of registration (07 for Delhi, 27 for Maharashtra, 33 for Tamil Nadu), an IFSC's first four letters encode the bank (SBIN for State Bank of India, HDFC for HDFC Bank, ICIC for ICICI), and a PIN's first digit encodes one of 9 postal zones (1 for Delhi/Haryana/Punjab, 4 for Maharashtra/Goa/MP/Chhattisgarh). Our validators check each positional component against the valid domain — a GSTIN starting with '00' or '38' fails validation because those state codes do not exist. Our lookup tools use the authoritative sources (RBI IFSC master list, India Post PIN directory, MoRTH vehicle registration data) but never submit the queried data back to those services — everything runs against our cached snapshots. This matters for privacy: a foreign-owned service looking up your IFSC is legal and harmless; looking up your Aadhaar on an unofficial service is almost certainly a data-harvesting scam. Never trust an 'Aadhaar verification' service that asks for your Aadhaar number.",
+    pillarFaqs: [
+      {
+        q: "How frequently is the IFSC data refreshed?",
+        a: "Monthly — against the RBI IFSC master file published on the RBI website. Major refresh events (SBI absorbing associate banks, Bank of Baroda absorbing Vijaya and Dena) trigger immediate re-indexing within 24-48 hours. For a specific branch's address before a large NEFT, always cross-check with the account holder's passbook.",
+      },
+      {
+        q: "Does the Aadhaar Validator confirm the number is real?",
+        a: "No — and it never will. Confirming Aadhaar authenticity requires an authenticated API call to UIDAI that only licensed KUAs (KYC User Agencies) can make. We verify that the 12 digits pass the Verhoeff checksum (catches most typos) and flag common invalid patterns (all zeros, all same digit). Never enter your Aadhaar on any service that claims to verify authenticity without licensing.",
+      },
+      {
+        q: "Why does Vehicle Number Info sometimes say 'approximate date'?",
+        a: "Vehicle registration dates are not public information — MoRTH does not publish date-of-registration per plate. We estimate from the registration series progression: if MH-01-AB-xxxx plates were being issued around March 2020 based on public RTI responses, we return 'approximately March 2020' with a 3-6 month uncertainty band.",
+      },
+      {
+        q: "Can I use Indian Railway PNR for past journeys?",
+        a: "PNRs are purged from IRCTC's system about 48 hours after the journey date. Our tool queries the live IRCTC endpoint, so past-journey PNRs return 'not available' or 'flushed'. For ticket-history needs (reimbursement, audit), use IRCTC's 'Booking History' feature while logged in to your account.",
+      },
+      {
+        q: "Is Ration Card Info able to confirm my family's coverage status?",
+        a: "It returns general information about ration-card schemes in each state (BPL, APL, Antyodaya) and the coverage entitlements (rice/wheat quantities per person per month), but it does not query the state-specific ration-card database to confirm your specific card's status — that requires logging in to your state's PDS portal. We are a reference tool, not a government interface.",
+      },
+    ],
+  },
+
+  charts: {
+    whatIs:
+      "Data and chart tools on SabTools.in handle the lightweight data-visualisation and data-transformation tasks that students, analysts, and content creators face daily — building a quick bar or line chart from a CSV, generating an HTML table from tabular data, sketching a flowchart for a process, building a mind-map for a class presentation, editing a CSV without opening Excel, generating a SQL CREATE TABLE statement from a spreadsheet, and converting JSON into a viewable table. These are tasks that are cumbersome in Excel, overkill in Python/Tableau, and impossible on a phone. Each tool here is a single-purpose browser-based utility that runs entirely client-side — your CSV or JSON never leaves your browser, which matters when the data is confidential or you are on a work laptop with strict upload restrictions.",
+    keyFeatures: [
+      {
+        title: "Browser-side data processing",
+        description:
+          "Chart Maker, CSV Viewer & Editor, and JSON to Table Viewer all parse and render entirely in your browser — uploaded files never reach a server. Good for confidential data (payroll, customer lists) where you cannot paste into ChatGPT or upload to a SaaS tool without breaching policy.",
+      },
+      {
+        title: "Export to standard formats",
+        description:
+          "Chart Maker exports PNG and SVG for embedding in reports and presentations. Table Generator outputs HTML, Markdown, and CSV. Flowchart Maker exports PNG and SVG with editable source. Mind Map Generator exports PNG and standardised .opml for re-importing into other mind-map tools.",
+      },
+      {
+        title: "Chart-type and layout flexibility",
+        description:
+          "Chart Maker handles bar, line, pie, donut, scatter, and area charts with colour-scheme presets; axis labels and titles configurable; legend placement adjustable. Mind Map Generator handles radial, tree-left, and tree-right layouts with auto-node-sizing based on content length.",
+      },
+      {
+        title: "SQL and database utilities",
+        description:
+          "SQL Table Generator creates a CREATE TABLE statement (MySQL, PostgreSQL, SQLite dialects) from column headers and inferred types — useful for seeding a database from a spreadsheet. CSV Viewer & Editor handles malformed delimiter quoting and UTF-8 BOM issues that Excel mangles.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Student reports and presentation charts",
+        description:
+          "Class 10-12 or college student presenting data in a project report uses Chart Maker to build a quick bar or pie chart from their tabulated data, exports PNG, and drops it into the PowerPoint. The charts render cleanly at print resolution without the Excel watermark. Mind Map Generator is useful for literature-review mind-maps in humanities projects.",
+      },
+      {
+        title: "Analyst dashboards and reports",
+        description:
+          "Business analyst extracting a one-off chart from a database query uses Chart Maker with CSV paste — faster than opening Tableau, and the output is export-clean. CSV Viewer & Editor handles the 'the database export has inconsistent quoting' cases that break Excel but parse cleanly here.",
+      },
+      {
+        title: "Process documentation and product planning",
+        description:
+          "Product manager sketching a user-flow uses Flowchart Maker for a quick diagram that goes into the PRD. Mind Map Generator captures a feature brainstorm before grooming. Both export SVG, which scales in Confluence and Notion without pixelation.",
+      },
+      {
+        title: "Database development and seed-data generation",
+        description:
+          "Developer converting a business spreadsheet into a database table uses SQL Table Generator to produce the CREATE TABLE with correct NULL/NOT NULL inference, then JSON to Table Viewer to visualise seed data that needs inserting. Combined with the developer-category JSON and SQL tools, this covers the full 'spreadsheet-to-database' workflow.",
+      },
+    ],
+    howToChoose:
+      "For visual charts — Chart Maker covers bar, line, pie, scatter, and area types for most classroom and dashboard needs. For tabular data display — Table Generator for HTML/Markdown tables to embed in blogs and docs; JSON to Table Viewer for API-response payloads. For process diagrams — Flowchart Maker for flowcharts (decision diamonds, process rectangles, terminators); Mind Map Generator for brainstorm/ideation trees. For data transformation — CSV Viewer & Editor for quick CSV edits without Excel; SQL Table Generator for schema generation from CSV. Decision: is the output a visual (chart, flowchart) or a data artifact (SQL, JSON, table)? Visuals → Chart Maker / Flowchart Maker / Mind Map Generator. Data → Table Generator / CSV Viewer & Editor / SQL Table Generator / JSON to Table Viewer. For collaborative or interactive charts (real-time editing, shareable links), these tools do not replace Tableau or Google Sheets — they are for quick one-offs, exports, and one-person work.",
+    indianContext:
+      "Indian students produce a lot of project reports (CBSE, ICSE, CBSE@12, university final-year projects) that require well-presented charts, flowcharts, and tables. The typical school or college has access to a shared MS Office licence at best and no reliable internet at worst — browser-based tools that work offline after first load are a practical fit. For a class-8 student doing a geography project on Indian crop production, Chart Maker builds a state-wise bar chart in 30 seconds from a pasted table; for an MBA student doing a marketing case study, Mind Map Generator captures the competitive landscape before SWOT. For Indian small businesses, CSV Viewer & Editor is useful because bank statements and GST return exports are provided as CSVs that Excel mangles on import (₹ symbols, DD/MM/YYYY dates, leading-zero PAN numbers) — our editor parses them correctly. SQL Table Generator is aimed at the large Indian developer community building line-of-business apps where the data source is always 'the accountant's Excel file' — seeding a database from the spreadsheet is a weekly task.",
+    pillarFaqs: [
+      {
+        q: "Does Chart Maker upload my data to a server?",
+        a: "No. The chart is rendered entirely in your browser using Canvas and SVG — your CSV data is parsed, charted, and exported without any network request. You can verify this by opening your browser's Network tab before pasting the CSV; you will see no upload traffic. Safe for confidential data on a work laptop with upload-blocking policy.",
+      },
+      {
+        q: "What chart types does Chart Maker support and is there a data limit?",
+        a: "Bar (vertical, horizontal, grouped, stacked), line, pie, donut, scatter, area, and combo (bar + line on two y-axes). Data limit is about 10,000 rows before browser rendering slows; for larger datasets use Python (matplotlib, plotly) or Power BI. For classroom and reporting use, 10k rows is well above the typical need.",
+      },
+      {
+        q: "Can Flowchart Maker handle swim-lane diagrams?",
+        a: "Yes — Flowchart Maker supports swim-lanes (horizontal or vertical) with up to 6 lanes. Each node is assigned to a lane via the lane dropdown. For more complex BPMN 2.0 diagrams (boundary events, message flows, data objects), specialised tools like Camunda Modeler or bpmn.io are better fits.",
+      },
+      {
+        q: "Does SQL Table Generator produce valid syntax for all major databases?",
+        a: "MySQL, PostgreSQL, SQLite, and SQL Server dialects are supported with dialect-specific type mapping (e.g., PostgreSQL SERIAL vs MySQL AUTO_INCREMENT). Type inference from CSV samples (INT, VARCHAR, DATE, DECIMAL) works well for clean data; review and adjust before running in production, especially for columns with mixed-type values.",
+      },
+      {
+        q: "Is JSON to Table Viewer able to flatten nested objects?",
+        a: "Yes — it flattens nested objects and arrays to dot-notation column names (customer.address.city, items[0].name). For deeply nested API responses (GraphQL, REST), this is usually what you want for a quick tabular view. If you need a specific extraction path, the JSON tools in the developer category have JSONPath and jq-style extraction.",
+      },
+    ],
+  },
+
+  career: {
+    whatIs:
+      "Career tools on SabTools.in handle the employment-decision math that every salaried professional in India faces across their career arc — building a resume that passes ATS filters, scoring a resume against a specific job description, comparing a salary offer against market rates by role and city, computing the notice-period cost of an early exit, tracking years of experience to the month, forecasting next-year's salary after an appraisal, and converting CTC to in-hand salary after PF/PT/TDS. These are the calculations that decide whether to accept an offer, whether to switch jobs, and whether an appraisal is competitive. Each tool here is built around Indian HR conventions — CTC that bundles employer PF contribution, the 1-3 month notice-period norms, the in-hand-vs-CTC gap of 18-25% after deductions, and the hike bands (10-15% for retention, 25-40% for a switch) that vary by sector and seniority.",
+    keyFeatures: [
+      {
+        title: "ATS-aware resume building",
+        description:
+          "Resume Builder produces a machine-parseable resume (single-column, no tables, no images, standard section headers: Experience, Education, Skills) that passes ATS filters used by Indian recruiting platforms (Naukri, LinkedIn Recruiter, Workday-based careers sites). Five templates, all ATS-clean; export as PDF.",
+      },
+      {
+        title: "Job-description-specific resume scoring",
+        description:
+          "Resume Score Checker parses the job description and your resume; returns keyword match percentage, missing critical keywords, skill-gap list, and suggested additions. Useful before every application — 60%+ match typically passes the ATS; below 60% often fails.",
+      },
+      {
+        title: "In-hand and CTC conversion with deductions",
+        description:
+          "In-Hand Salary Calculator breaks down CTC into fixed pay, variable pay, employer PF, gratuity, and other allowances. Applies employee PF (12%), professional tax (state-specific), and TDS (per old and new regime slabs for FY 2025-26) to get the in-hand monthly figure. Usually 75-82% of stated CTC.",
+      },
+      {
+        title: "Experience and appraisal-hike tracking",
+        description:
+          "Experience Calculator computes total years and months across multiple jobs including concurrent freelance engagements. Appraisal Hike Calculator models the effect of compound annual hikes over a 5-10 year horizon — a 15% annual hike doubles your salary in 5 years; 10% takes 7 years.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Job-search and application preparation",
+        description:
+          "Professional applying to 30-50 roles uses Resume Builder to produce the base resume, then Resume Score Checker before each application to tailor the skills section for that JD. Naukri and LinkedIn applications benefit from 70%+ keyword match; generic resume applications rarely make it past ATS. Also useful before a career coach review.",
+      },
+      {
+        title: "Salary-offer evaluation and negotiation",
+        description:
+          "Receiving a new offer, compare CTC against market rates using Salary Comparison Tool filtered by role, city, and experience band. A senior-backend-engineer role in Bengaluru at ₹35 LPA is below the 50th percentile for 8-year experience; at ₹55 LPA it is the 75th percentile. Use the data for negotiation anchoring.",
+      },
+      {
+        title: "Offer-to-in-hand conversion and budgeting",
+        description:
+          "Before accepting an offer, run the ₹18 LPA CTC through In-Hand Salary Calculator to see it is ₹1.23 lakh/month in hand. For financial-planning integration, pair with the Home Loan Affordability tool in the business category — that ₹1.23 lakh supports about ₹40-50 lakh in home loan capacity at current rates.",
+      },
+      {
+        title: "Notice-period and resignation planning",
+        description:
+          "Professional with a 90-day notice period considers an early exit with a 45-day buyback; Notice Period Calculator quantifies the cost (45 days × daily CTC). Experience Calculator provides the exact tenure for the relieving letter — getting this right matters for the next employer's background check.",
+      },
+    ],
+    howToChoose:
+      "For job search prep — Resume Builder first to produce the base resume; Resume Score Checker for each targeted application. For offer evaluation — Salary Comparison Tool to benchmark the offer against market; In-Hand Salary Calculator to compute monthly take-home; Home Loan Affordability (business category) to compute lending capacity if a house purchase is planned. For current-employment decisions — Notice Period Calculator for exit planning; Appraisal Hike Calculator for long-term compensation forecasting; Experience Calculator for tenure accuracy in resumes and relieving letters. Workflow for a job switch: Resume Builder → Resume Score Checker → (apply) → offer received → Salary Comparison Tool → In-Hand Salary Calculator → Notice Period Calculator → resign. Workflow for appraisal planning: Appraisal Hike Calculator for 5-year forecasting against peers; Salary Comparison Tool to benchmark current compensation; decision to negotiate or switch follows. None of these tools submit your resume or salary data anywhere — all processing is local; nothing reaches our servers; your information stays in your browser.",
+    indianContext:
+      "Indian compensation structure differs sharply from US/EU norms — CTC includes employer PF contribution (12% of basic), gratuity (4.81% of basic annual accrual), variable pay (10-25% of fixed for mid-senior roles), and the in-hand-vs-CTC gap is 18-25% after employee-side deductions. In-Hand Salary Calculator handles all this with Indian defaults: EPF at 12% of basic (capped at ₹1,800/month at the ₹15,000 wage ceiling, or uncapped if company policy opts in), professional tax per state (₹200/month in Maharashtra, Karnataka, West Bengal; ₹208/month in Tamil Nadu), and TDS per current-year slabs under old and new regimes. Notice periods are 30-90 days by convention — 30 days common for junior roles, 60 days for mid-level, 90 days for senior and tech-sensitive roles (banks, consulting firms). Appraisal hikes follow sector norms: IT services 8-15%, IT products 10-20%, BFSI 8-12%, consulting 15-20%, with outliers up to 30%+ for hot skills (LLM engineering, site reliability). Resume conventions are also Indian-specific — the 'passport photo in top-right corner' persists in traditional sectors, though it is disappearing in tech. Our Resume Builder defaults to no-photo, but the legacy template is available for campus placements that still expect it.",
+    pillarFaqs: [
+      {
+        q: "Does the Resume Builder pass all ATS filters?",
+        a: "The templates are designed to pass the major Indian recruiting ATS engines (Naukri, LinkedIn Recruiter, Workday, Taleo, Lever, Greenhouse) — single-column layout, no tables, no images in text flow, standard section headings, machine-parseable dates. No ATS vendor publishes their parsing rules, so no guarantee is absolute, but the templates follow every published ATS best practice.",
+      },
+      {
+        q: "How accurate is Salary Comparison Tool?",
+        a: "Data is aggregated from publicly shared salary data on Glassdoor, AmbitionBox, LinkedIn Salary, and public job postings. Typical accuracy is ±15% on the median for common roles in metro cities; less accurate for niche roles, tier-2/3 cities, and senior (VP+) roles where sample sizes are small. Use it as a directional benchmark, not a precise number.",
+      },
+      {
+        q: "Does In-Hand Salary Calculator cover new-regime and old-regime TDS?",
+        a: "Yes — the calculator has a toggle for FY 2025-26 old regime (with deductions — HRA, LTA, Section 80C, Section 80D, home-loan interest) and new regime (higher standard deduction, lower slabs, no other deductions). Pick whichever is beneficial for you; the tool can compare both in a single run.",
+      },
+      {
+        q: "Can Resume Score Checker detect fake or inflated skills?",
+        a: "No — it checks keyword presence against the job description, not veracity. If you list 'AWS Solutions Architect Professional' without the certification, the tool counts it as a match. The interviewer will still verify; inflating skills is risky at the technical-screen stage. The tool is for legitimate tailoring (moving relevant skills higher), not for misrepresentation.",
+      },
+      {
+        q: "What is the difference between Experience Calculator and Notice Period Calculator?",
+        a: "Experience Calculator computes your total professional experience across all jobs (exact months from joining to leaving each), handling concurrent engagements and career breaks. Notice Period Calculator computes the cost of an early exit from your current job — days you would buy back multiplied by daily CTC, or days you would have to serve if you resign today. Different questions, different tools.",
+      },
+    ],
+  },
+
 };
 
 /**
