@@ -18,6 +18,7 @@ import TrustBadges from "@/components/TrustBadges";
 import type { Tool } from "@/lib/tools";
 import { categories } from "@/lib/tools";
 import { getToolContent } from "@/lib/tool-content";
+import { categoryPillars } from "@/lib/category-pillars";
 import {
   SITE_URL,
   ORG_ID,
@@ -36,6 +37,9 @@ interface ToolPageLayoutProps {
 export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) {
   const cat = categories.find((c) => c.slug === tool.category);
   const content = getToolContent(tool.name, tool.description, tool.category, tool.keywords);
+  // Pillar backlink — only render when the parent category has a full pillar,
+  // so a tool page never links up to a thin category landing page (Report §3.3).
+  const pillar = categoryPillars[tool.category];
 
   // Build a single @graph with WebApplication + BreadcrumbList + HowTo.
   // FAQPage is emitted separately by ToolFaq so the schema matches its visible content.
@@ -247,6 +251,40 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
 
         {/* Related Blog Guides — tool-to-blog internal links */}
         <RelatedBlogPosts toolSlug={tool.slug} category={tool.category} keywords={tool.keywords} />
+
+        {/* Pillar backlink — tool ↗ category topic-pillar. Wires the silo from
+            the leaf back to the branch (Report §3.4 internal-link graph).
+            Only renders for categories we have full pillar content for — a
+            link to a thin page would undermine the signal. */}
+        {pillar && cat && (
+          <div className="mt-10 bg-gradient-to-br from-indigo-50 via-white to-purple-50/50 border border-indigo-100 rounded-2xl p-5 sm:p-6">
+            <div className="flex items-start gap-4">
+              <div className="hidden sm:flex flex-shrink-0 w-12 h-12 rounded-xl bg-white border border-indigo-100 items-center justify-center text-2xl shadow-sm">
+                {cat.icon}
+              </div>
+              <div className="min-w-0 flex-1">
+                <div className="text-xs font-semibold uppercase tracking-wide text-indigo-600 mb-1">
+                  Part of the {cat.name} topic guide
+                </div>
+                <h2 className="text-lg font-bold text-gray-900 mb-2">
+                  New to {cat.name.toLowerCase()}? Read the complete guide.
+                </h2>
+                <p className="text-sm text-gray-600 leading-relaxed mb-4 line-clamp-3">
+                  {pillar.whatIs}
+                </p>
+                <a
+                  href={`/category/${tool.category}`}
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-indigo-700 hover:text-indigo-900 transition"
+                >
+                  Read the full {cat.name} guide
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Related Tools — same-category + cross-category keyword matches */}
         <RelatedTools currentSlug={tool.slug} category={tool.category} />
