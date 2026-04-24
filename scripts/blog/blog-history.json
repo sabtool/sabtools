@@ -112,9 +112,10 @@
     "word-to-pdf",
     "panchang-calculator",
     "crop-yield-calculator",
-    "menstrual-cycle-calculator"
+    "menstrual-cycle-calculator",
+    "ip-address-lookup"
   ],
-  "lastCategory": "health",
-  "totalPosts": 113,
-  "lastRun": "2026-04-24T17:57:11.996Z"
+  "lastCategory": "fun",
+  "totalPosts": 114,
+  "lastRun": "2026-04-24T22:27:26.769Z"
 }
