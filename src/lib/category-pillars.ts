@@ -648,6 +648,552 @@ export const categoryPillars: Record<string, CategoryPillar> = {
     ],
   },
 
+  // ──────────────────────────────────────────────────────────────────────
+  // 9. Fun & Lifestyle Tools — 20 tools
+  // ──────────────────────────────────────────────────────────────────────
+  fun: {
+    whatIs:
+      "Fun tools on SabTools.in are quick, shareable utilities that answer the lighthearted questions people actually search for — how old will I be in 2050, what is my love compatibility with a friend, what does my name look like in fancy fonts, what is today's lucky number. Every tool works instantly in your browser, produces a result you can screenshot and share on Instagram or WhatsApp, and does not ask for sign-ups or push notifications. They are designed for five-second use: open, type, laugh, share, close.",
+    keyFeatures: [
+      {
+        title: "Instant, shareable results",
+        description:
+          "Every fun tool renders a result card designed to screenshot cleanly at 1080×1920 (Instagram Story) or 1080×1080 (square post) so you can share straight from your phone without cropping.",
+      },
+      {
+        title: "No sign-up, no tracking",
+        description:
+          "Age calculators, love calculators, name generators — none of them send your inputs anywhere. Everything runs locally so WhatsApp forwards and status updates stay private.",
+      },
+      {
+        title: "Culturally relevant defaults",
+        description:
+          "Lucky number tools use numerology traditions common in Indian homes, name generators include Hindi, Tamil, Telugu, and Bengali script variants, and festival countdowns cover Diwali, Holi, Eid, Christmas, Pongal, and Onam with 2026 dates.",
+      },
+      {
+        title: "Mobile-first design",
+        description:
+          "Fun tools are used overwhelmingly on phones and during short breaks. Every page loads in under 1.5 seconds on a 4G connection and the interaction surface is optimised for thumb-reach on 6-inch screens.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Sharing on WhatsApp status and Instagram stories",
+        description:
+          "Generate your exact age in years, months, days, hours, and minutes — the result card is already formatted for a Story. The Love Calculator and Friendship Calculator produce shareable compatibility percentages between two names. Stylish Font Generator renders your name in 50+ decorative Unicode styles for bio fields.",
+      },
+      {
+        title: "Planning for birthdays and milestones",
+        description:
+          "The Age Calculator tells you the exact weekday you were born on (useful for astrology questions) and the next milestone birthday. Days Until Birthday counts down to the next one. Life-in-Weeks visualises your life as a grid — a popular reflection tool for New Year posts.",
+      },
+      {
+        title: "Couple and friendship content",
+        description:
+          "Love Calculator, Compatibility Test, Friendship Calculator, and Couple Name Generator are the top four tools by volume in this category. They are meant as conversation starters — not serious relationship advice — and are popular on engagement and anniversary posts.",
+      },
+      {
+        title: "Quick daily-use lifestyle helpers",
+        description:
+          "Random Movie Picker solves the Netflix-paralysis problem, the Flip-a-Coin and Dice-Roller tools settle small arguments, and the Bucket List Generator suggests experiences tuned for Indian travellers — from Ladakh road trips to Andaman scuba dives.",
+      },
+    ],
+    howToChoose:
+      "If you have a date question — age, birthday, retirement countdown — use the date-based calculators. If you are generating content for a post — name generators, font generators, quote generators. If you are settling something by chance — coin flip, dice, wheel of names. If you are planning entertainment — movie picker, random activity, bucket list. None of these need a manual; they are all visual and self-explanatory within three seconds of opening the page.",
+    indianContext:
+      "Fun tools on SabTools.in default to Indian contexts wherever it matters. The Age Calculator supports both Gregorian and Vikram Samvat dates, festival countdowns track the Hindu, Islamic, Christian, and Sikh calendars used across India, and numerology tools use the ank-shastra (Chaldean) system more common in Indian practice than the pure Pythagorean system Western sites use. Name and font generators include Devanagari, Tamil, Telugu, Kannada, Bengali, and Gujarati script options. Where a Western fun site might ask for zip code, ours asks for PIN; where a Western love-test might reference Valentine's Day, ours handles Karva Chauth, Raksha Bandhan, and Propose Day (yes, that is a thing).",
+    pillarFaqs: [
+      {
+        q: "Are love and friendship calculators based on real algorithms?",
+        a: "They are numerology-style scoring systems that apply consistent rules to the letters of two names — so the same inputs always produce the same output, but the output is for entertainment, not a predictor of real compatibility. Use them as a conversation starter or content prompt, not as decision-making advice.",
+      },
+      {
+        q: "Can I embed these tools or share the results to WhatsApp directly?",
+        a: "Yes. Every result card has a 'Share' button that opens the native WhatsApp and Instagram share sheet on mobile. On desktop, the same button copies a pre-formatted text snippet with a link back to the tool. Embedding on blogs and personal pages is allowed with attribution.",
+      },
+      {
+        q: "Why does my lucky number differ from what another site shows?",
+        a: "Most Indian numerology traditions use the Chaldean system (each letter is 1-8, excluding 9); most Western sites use Pythagorean (1-9 in order). Our Lucky Number Calculator lets you pick which system to apply and shows both results side-by-side if you are unsure. Both are legitimate numerology traditions — they just differ by lineage.",
+      },
+      {
+        q: "Are the font generators safe to paste into Instagram bio / WhatsApp / Twitter?",
+        a: "Yes. The Stylish Font Generator produces standard Unicode characters that every modern app renders natively — it is not an image or a font file, so pasting it anywhere works including Instagram, WhatsApp, Discord, X, LinkedIn, and even email signatures.",
+      },
+      {
+        q: "Do you store the names I type into Love Calculator or Couple Name Generator?",
+        a: "No. Every fun tool runs entirely in your browser. We do not log your inputs, do not store results, and do not use the names for any analytics. Refresh the page and everything is gone.",
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────
+  // 10. Unit Converters — 16 tools
+  // ──────────────────────────────────────────────────────────────────────
+  converters: {
+    whatIs:
+      "Unit converters on SabTools.in handle the measurement conversions Indians actually run into — square feet to square metres when buying a flat, bigha to acres when dealing with family land, tola to grams when pricing gold, fahrenheit to celsius when reading an imported appliance manual. Each converter supports multiple regional Indian units (bigha differs by state, so we let you pick; gold units differ by community, so we include them all) alongside the standard international SI units. Everything converts in real time as you type, with full-precision arithmetic — not rounded approximations.",
+    keyFeatures: [
+      {
+        title: "Regional Indian unit coverage",
+        description:
+          "Area, length, and weight converters include Indian units most international tools skip — bigha (with state-specific variants), katha, guntha, cent, ground, tola, masha, ratti, and traditional grain measures where still in use.",
+      },
+      {
+        title: "Real-time bidirectional conversion",
+        description:
+          "Type in either direction and the other side updates instantly. There is no 'convert' button because modern browsers are fast enough to recompute on every keystroke — useful when you are adjusting a number to hit a round target.",
+      },
+      {
+        title: "High precision, human-readable output",
+        description:
+          "Internally we compute with full floating-point precision, then round to the number of decimals that makes sense for the unit — 3 decimals for metres, 2 for kilos, 0 for rupees. No more 1.9999999 when you wanted 2.",
+      },
+      {
+        title: "Bulk and formula-based conversion",
+        description:
+          "Paste a column of numbers (from Excel or a PDF) and convert the whole list at once. The Currency Converter updates daily rates for INR against 30+ major currencies; the Temperature Converter includes Kelvin and Rankine for science use.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Buying or selling property",
+        description:
+          "Indian real-estate listings freely mix sq.ft (apartments), sq.metres (government records), acres (farms), bigha (North Indian land), and cents (South Indian land). The Area Converter translates between all of them with state-specific bigha factors — because 1 bigha in Rajasthan (1,618 m²) is very different from 1 bigha in Assam (1,338 m²) or Bengal (1,337.8 m²).",
+      },
+      {
+        title: "Gold, silver, and jewellery pricing",
+        description:
+          "Gold prices quote per tola (10 g, though historically 11.66 g) or per gram depending on the state and the jeweller. The Gold Unit Converter handles tola, masha, ratti, carat, ounce, and gram with the traditional Indian tola (11.664 g) and the Indian Mint tola (10 g) both available as presets.",
+      },
+      {
+        title: "Cooking with international recipes",
+        description:
+          "A recipe calling for a cup of rice or 350°F oven means different things in different kitchens. The Cooking Converter handles US cup (236 ml) vs metric cup (250 ml), American stick of butter (113 g) vs Indian block, and the oven gas marks still used on some imported appliances.",
+      },
+      {
+        title: "Fuel economy, distance, and speed",
+        description:
+          "India reports fuel economy as km/litre; most imported car specs are in mpg. The Fuel Economy Converter handles both, plus L/100km used in EU specs. Distance converter does km/miles. Speed does kmph/mph/mach.",
+      },
+    ],
+    howToChoose:
+      "Start with what you need to convert. For physical measurements (length, area, volume, weight) — the SI converters with Indian unit support. For money — currency converter with live INR rates. For time — time zone converter covering all Indian and international zones. For special-domain conversions (fuel, cooking, gold) — the dedicated converter for that domain, because those domains have specific unit traditions worth honouring instead of forcing a generic SI conversion.",
+    indianContext:
+      "Indian measurement culture is layered — we use SI for science and engineering, imperial for real estate (sq.ft persists even in metric-era construction), and traditional local units for agriculture, jewellery, and household cooking. A good converter respects all three layers instead of privileging SI. Our converters include state-specific variants (bigha, guntha, katha all differ by state), community-specific variants (tola of 10 g or 11.664 g), and household variants (cup, teaspoon, tablespoon) alongside pure SI. Rupees are formatted in the Indian numbering system (lakh, crore) not the international system (million, billion), with commas in the correct positions.",
+    pillarFaqs: [
+      {
+        q: "Why does my bigha conversion not match what my chacha's farmer friend said?",
+        a: "Bigha is one of the most regionally inconsistent units in India. Rajasthan pucca bigha is 1,618.7 m²; Bengal bigha is 1,337.8 m²; Assam bigha is 1,337.8 m² but rounded differently; UP bigha varies between 2,500 m² (pucca) and 1,008 m² (kaccha). Always select the state in the Area Converter dropdown before converting — that's the only way to match local usage.",
+      },
+      {
+        q: "Is 1 tola 10 grams or 11.664 grams?",
+        a: "Both are used. The Government of India legislated 1 tola = 10 g in 1956, and that is what the Indian Mint and modern gold receipts use. Traditional and customary usage, especially in older transactions and some South Indian states, still uses the British-era tola of 11.664 g (180 grains troy). The Gold Unit Converter offers both — pick 'Modern (10 g)' for today's receipts and 'Traditional (11.664 g)' for family heirloom or historical values.",
+      },
+      {
+        q: "Are the currency conversion rates live?",
+        a: "They refresh daily (typically at 6 AM IST) from the Reserve Bank of India's reference rate data and published mid-market rates. They are suitable for estimation, planning, and informed decisions but not the rate you will actually get at a forex counter — banks and money changers add a 1-3% spread on top of the reference rate.",
+      },
+      {
+        q: "Does the Area Converter support carpet area vs built-up vs super built-up?",
+        a: "Yes, there is a dedicated Carpet Area Converter that toggles between the three definitions using typical Indian ratios (built-up is ~15-20% more than carpet, super built-up adds another 20-30% for common areas). RERA-registered projects must disclose carpet area, so that is our default.",
+      },
+      {
+        q: "Can I convert multiple values at once, like a whole column from Excel?",
+        a: "Yes. Every converter has a Bulk Convert mode where you paste a list of numbers (one per line) and it returns the converted values in the same format, ready to paste back into Excel or Google Sheets.",
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────
+  // 11. Security & Privacy Tools — 11 tools
+  // ──────────────────────────────────────────────────────────────────────
+  security: {
+    whatIs:
+      "Security tools on SabTools.in generate and test credentials without ever sending them to a server. Password generators, strength testers, hash calculators (MD5, SHA-1, SHA-256, SHA-512), UUID generators, base64 encoders — everything runs in your browser using the Web Crypto API. That matters because a password generator that sends your password to its server is not a security tool; it is a credential leak waiting to happen. Every security tool here is auditable in your browser's DevTools Network tab — you will see no outgoing request with the generated value.",
+    keyFeatures: [
+      {
+        title: "Web Crypto API generation",
+        description:
+          "Password Generator uses crypto.getRandomValues() — the same cryptographically secure random number generator used by browsers for TLS. Unlike Math.random(), its output is unpredictable and suitable for credentials.",
+      },
+      {
+        title: "No-upload guarantee",
+        description:
+          "Hash calculators, encoders, and password testers all process your input locally. You can disconnect from the internet after loading the page and every tool still works, which is proof that nothing is phoned home.",
+      },
+      {
+        title: "Compliance-friendly output",
+        description:
+          "Password Generator respects common corporate rules — length 12-32, mandatory uppercase/lowercase/digit/symbol, no ambiguous characters (0/O/I/l/1) for systems with manual entry.",
+      },
+      {
+        title: "Modern crypto standards",
+        description:
+          "Hash calculator includes MD5 (legacy) and SHA-1 (legacy) for compatibility with older systems, plus SHA-256, SHA-384, SHA-512, and SHA-3 variants for modern use. Encoder tools cover base64, URL encoding, and HTML entity encoding.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Generating a unique password for each account",
+        description:
+          "The right way to use the internet is with a different strong password per account, stored in a password manager. Use the Password Generator to create a 20-character mix for each new signup, then paste it into your password manager. The Strength Tester grades your existing passwords so you know which ones to rotate first.",
+      },
+      {
+        title: "Verifying downloaded file integrity",
+        description:
+          "Official Linux ISOs, Aadhaar card downloads from UIDAI, and signed PDFs from the Income Tax portal often publish SHA-256 hashes alongside the file. Drag the file into the Hash Calculator — if the hash matches the one on the official page, your download was not tampered with. If it does not, do not open the file.",
+      },
+      {
+        title: "Backend and DevOps work",
+        description:
+          "UUID Generator produces v4 and v7 UUIDs for database IDs, the Base64 Encoder helps debug tokens in API requests, and the JWT Decoder inspects JSON Web Tokens (decode only — it does not validate signatures, so never trust JWTs just because they decode cleanly).",
+      },
+      {
+        title: "Teaching and learning cryptography",
+        description:
+          "For students and curious learners, watching the same input produce identical hashes across runs, and watching a single-bit change produce a completely different hash (the avalanche effect), is the fastest way to build intuition for why hash-based integrity works.",
+      },
+    ],
+    howToChoose:
+      "For creating a new credential — Password Generator or Passphrase Generator (for human-memorable passwords). For testing an existing credential — Password Strength Tester. For file integrity — Hash Calculator (SHA-256 unless the source publishes a different algorithm). For encoding binary safely in text — Base64 Encoder. For generating database IDs — UUID Generator. For decoding tokens for debugging — JWT Decoder or Base64 Decoder. Each tool has a specific purpose and should not be substituted — do not use a hash as a password, do not use base64 as encryption, do not trust a JWT just because it parsed.",
+    indianContext:
+      "Indian digital services increasingly require strong credentials — banking apps enforce 8-16 character passwords with complexity rules, Aadhaar-linked services require OTP plus password, and corporate VPN and email rules often mandate 12+ characters with quarterly rotation. The Password Generator supports all these profiles with one-click presets (SBI, HDFC, ICICI typical rules; common CorpSec rules). For citizens dealing with DigiLocker, UMANG, and income-tax portal downloads, the Hash Calculator is the fastest way to verify the integrity of downloaded documents before opening them. Our Privacy Policy Generator helps Indian SMEs draft DPDP Act 2023-compliant privacy policies — this matters because the Digital Personal Data Protection Act is now enforceable and non-compliance penalties are serious.",
+    pillarFaqs: [
+      {
+        q: "Is generating a password in my browser as safe as using a password manager?",
+        a: "The generation step itself is as cryptographically secure as any password manager — both use the same Web Crypto RNG under the hood. What a password manager adds that our tool does not is storage and autofill. Generate the password here, then paste it into your Bitwarden / 1Password / Dashlane / iCloud Keychain for storage. Do not rely on browser history or clipboard as long-term storage for passwords.",
+      },
+      {
+        q: "Can I use MD5 for passwords or file integrity?",
+        a: "MD5 is broken for security use — collisions can be generated quickly on commodity hardware. Never use MD5 to hash passwords. For file integrity against accidental corruption (bit flips, partial downloads) MD5 is still fine; for integrity against a malicious attacker, use SHA-256 or better.",
+      },
+      {
+        q: "How long should my password be?",
+        a: "For most services, 16 characters of mixed types gives you roughly 100 bits of entropy — effectively unbreakable by brute force with today's hardware. For high-value accounts (primary email, banking, crypto wallets), go to 20-24 characters. Length matters more than complexity — a 20-character all-lowercase passphrase is stronger than a 10-character 'StrongP@ss1' style password.",
+      },
+      {
+        q: "Do you log the passwords I generate?",
+        a: "No. Generation happens entirely in your browser with no network call. Open your browser's DevTools Network tab while generating — you will see zero outgoing requests. We built it this way specifically because a 'password generator' that sends data to a server is worse than useless; it is a credential honeypot.",
+      },
+      {
+        q: "Is the UUID generator suitable for production database primary keys?",
+        a: "Yes. UUID v4 (random) is suitable as a primary key in virtually any database where you want globally unique identifiers. UUID v7 (time-ordered) is often preferable for databases like Postgres and MySQL where index locality matters — rows inserted close in time will sort close in time, improving B-tree insert performance. Both are produced to RFC 9562 spec.",
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────
+  // 12. PDF Tools — 8 tools
+  // ──────────────────────────────────────────────────────────────────────
+  pdf: {
+    whatIs:
+      "PDF tools on SabTools.in merge, split, compress, convert, and protect PDF files entirely in your browser using PDF.js and pdf-lib — the file never leaves your device. That is uncommon. Most 'free online PDF' sites upload your file to their servers, process it, and delete it 'after one hour' (you have to trust them). When the PDF is a signed rent agreement, a salary slip with your PAN number, a joint-family will, or a hospital discharge summary, that upload is an unacceptable privacy trade-off. Our tools do the same operations locally, at comparable speed, with zero exposure.",
+    keyFeatures: [
+      {
+        title: "Fully client-side processing",
+        description:
+          "Every PDF operation happens in your browser. Your files are not uploaded, not cached server-side, not logged. You can use the tools offline after the page loads — an easy way to verify the claim.",
+      },
+      {
+        title: "Lossless operations where possible",
+        description:
+          "Merging, splitting, reordering, and rotating preserve the original PDF streams byte-for-byte — no re-encoding, no visible quality loss, and no font substitution. Only compression and image-conversion steps re-encode.",
+      },
+      {
+        title: "Password protection and removal",
+        description:
+          "Add user passwords and owner permissions to a PDF, or remove known passwords from PDFs you own. Uses PDFLib's native encryption — the same AES-256 implementation Adobe Acrobat uses.",
+      },
+      {
+        title: "OCR and text extraction",
+        description:
+          "Extract selectable text from text-layer PDFs. For scanned PDFs, the OCR tool runs Tesseract.js in a Web Worker to convert images to text — supports English, Hindi, Tamil, Telugu, Bengali, and Marathi scripts.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Submitting documents to Indian government portals",
+        description:
+          "GSTN, Income Tax e-filing, EPFO, and UIDAI self-service all accept PDF uploads but cap size at 1-5 MB per file. Our PDF Compressor trims typical scanned PDFs by 60-80% without visible degradation — critical when you have a 12 MB scanned rent agreement that the portal rejects.",
+      },
+      {
+        title: "Merging bank statements and invoices",
+        description:
+          "Chartered accountants and startup founders routinely receive monthly PDFs from HDFC, ICICI, SBI, and private banks plus vendor invoices from Zoho, Tally, and QuickBooks. The PDF Merger combines up to 100 files at once with custom ordering — all in one local pass, no uploads.",
+      },
+      {
+        title: "Splitting, extracting pages, and redacting",
+        description:
+          "Splitter extracts specific pages — useful when you need just page 3 (address proof) from a 20-page Aadhaar download, or pages 5-8 (salary certificate) from a passport application booklet. The Redactor blacks out sensitive text (PAN, account numbers) before you share.",
+      },
+      {
+        title: "Converting between PDF and other formats",
+        description:
+          "PDF to JPG/PNG for embedding in slides, JPG/PNG to PDF for uploading photos as 'scanned documents' (many portals accept this), PDF to Word for editing, and Word/Excel to PDF for final submission. All conversions run locally via pdf-lib and dedicated WASM-backed converters.",
+      },
+    ],
+    howToChoose:
+      "For combining — Merge PDF. For taking files apart — Split PDF. For shrinking file size — Compress PDF. For format changes — PDF to JPG, PDF to Word, JPG to PDF, Word to PDF. For adding a password or removing one you own — Protect PDF / Unlock PDF. For extracting text from a scanned document — OCR PDF. Use the compressor with the 'Government Portal' preset when you are about to hit an upload limit — it targets ~500 KB output while keeping text readable on-screen.",
+    indianContext:
+      "Indian digital-government services assume citizens can produce PDFs that fit their specific size caps — GSTN accepts 1 MB/file for certain documents, the Income Tax portal caps at 5 MB, Aadhaar self-service at 2 MB, passport applications at 300 KB for photos and 5 MB for documents. Generic global PDF compressors often overshoot or undershoot these caps; our Compress PDF tool has dedicated presets for each major portal and tells you in advance whether the compressed file will fit. For Indian-language documents (Hindi forms, Tamil judgments, Marathi land records), our OCR tool reads Devanagari, Tamil, Telugu, Bengali, Gujarati, and Kannada scripts — most free global OCR tools only read Latin scripts.",
+    pillarFaqs: [
+      {
+        q: "Are my PDFs really not uploaded anywhere?",
+        a: "Correct. Open your browser's DevTools Network tab before dropping a PDF into any of our tools and watch — there will be no outgoing request containing the file. Processing happens in JavaScript and WebAssembly in your browser. This is also why the tools work offline (try pressing Cmd/Ctrl+Shift+T to duplicate the tab, disconnect from Wi-Fi, and use the tool — it still works).",
+      },
+      {
+        q: "Why is the compressed file smaller but the text looks the same?",
+        a: "PDFs often embed images at higher resolution than screens can display. The compressor downsamples embedded images to 150 DPI (sufficient for on-screen and typical print) and re-encodes them as efficient JPEG 2000 or JPEG. Text — which is stored as vector glyphs — is not re-encoded, so it stays crisp.",
+      },
+      {
+        q: "Can I merge more than 10 PDFs at once?",
+        a: "Yes, up to about 100 PDFs totaling ~500 MB in most modern browsers. Performance depends on your device's RAM. If you need to merge more than that, split into batches of 50 or so.",
+      },
+      {
+        q: "Will Password Protect PDF work against professional unlock services?",
+        a: "It applies AES-256 with the password you supply — the same encryption Adobe Acrobat uses. A strong password (16+ mixed characters) is practically unbreakable without the password. Weak passwords (dictionary words, dates of birth) can be brute-forced by specialised software in hours-to-days. Combine a strong password with the 'disable printing' and 'disable copying' owner permissions for layered protection.",
+      },
+      {
+        q: "Does the PDF to Word conversion preserve formatting?",
+        a: "It preserves text content, paragraph structure, and most tables. Complex layouts (multi-column magazines, PDFs built from image scans, heavy diagrams) often lose some formatting during conversion because Word's document model and PDF's fixed-layout model do not map cleanly. For invoices, letters, and simple reports, the conversion is usually clean enough to edit directly.",
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────
+  // 13. Math & Algebra Tools — 9 tools
+  // ──────────────────────────────────────────────────────────────────────
+  math: {
+    whatIs:
+      "Math tools on SabTools.in solve the specific algebra, arithmetic, and geometry problems that come up in everyday Indian life and school curricula — percentage change when a stock moves, ratios when splitting a bill, LCM/HCF when your child's CBSE homework asks for it, square root and cube root without a bulky scientific calculator. Each tool shows the steps, not just the answer, because understanding how the result was derived is the difference between learning and guessing.",
+    keyFeatures: [
+      {
+        title: "Step-by-step working",
+        description:
+          "Every math tool shows the formula, the substituted values, and the intermediate steps. A 'Why this answer?' section explains the reasoning in plain English suitable for a Class 8-12 student.",
+      },
+      {
+        title: "CBSE/ICSE/State-board aligned",
+        description:
+          "The LCM/HCF tool uses the prime-factor method that NCERT textbooks demonstrate; the Quadratic Equation solver shows discriminant analysis; the Percentage Calculator handles the five most common school variants (what is X% of Y, X is what % of Y, increase/decrease, reverse percentage, difference percentage).",
+      },
+      {
+        title: "Arbitrary-precision arithmetic",
+        description:
+          "Where browser floating-point would introduce rounding (0.1 + 0.2 ≠ 0.3), our calculators use BigInt or string-based arithmetic. Percentages and fractions are computed with integer math where possible to avoid rounding artefacts.",
+      },
+      {
+        title: "Fraction, decimal, and mixed-number output",
+        description:
+          "The Fraction Calculator adds, subtracts, multiplies, and divides fractions and returns results in reduced form (lowest terms), decimal form, and mixed-number form — because different boards and different chapters want different formats.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Helping a child with homework",
+        description:
+          "The LCM/HCF Calculator, Prime Factorization Calculator, and Quadratic Equation Solver cover the most common Class 6-10 math questions. Each shows the steps in the format NCERT expects, so parents can walk through the process with their child instead of just giving the answer.",
+      },
+      {
+        title: "Daily percentage calculations",
+        description:
+          "Shopping discount (₹1,499 at 23% off), restaurant bill with GST and service charge, mobile data plan comparison, loan interest reverse-calculation. The Percentage Calculator handles all five variants with one-click preset buttons labelled by use case.",
+      },
+      {
+        title: "Measurement and geometry",
+        description:
+          "Rooms painted, tiles needed, wallpaper squared up — the Area Calculator (triangle, rectangle, circle, trapezoid, polygon), Volume Calculator (cube, cylinder, cone, sphere), and Surface Area Calculator apply the classic geometry formulas with unit-aware inputs.",
+      },
+      {
+        title: "Competitive exam preparation",
+        description:
+          "SSC, banking, NTPC, and MBA aptitude tests rely heavily on percentages, ratios, averages, LCM/HCF, time-speed-distance, and mixture-alligation. The Averages Calculator, Ratio Calculator, and Time Speed Distance Calculator target these topics with shortcuts (tricks) alongside the textbook method.",
+      },
+    ],
+    howToChoose:
+      "For word-problem homework — the calculator matching the topic: LCM/HCF, Quadratic, Percentage, Ratio, Averages. For real-world numbers — Percentage, Fraction, Ratio. For measurement — Area, Volume, Surface Area. For exam prep — check if the tool has a 'Show trick' or 'Show alternative method' toggle; those expose the shortcut-method answer that competitive exams reward.",
+    indianContext:
+      "Indian school mathematics has a distinct flavour — NCERT, CBSE, ICSE, Tamil Nadu State Board, Maharashtra State Board, and Karnataka State Board each emphasise slightly different solution methods. Our step-by-step outputs follow the NCERT style by default (the most widely adopted), with a toggle for 'Shortcut method' that shows the ratio-and-alligation tricks popular in SSC and banking exam coaching. Competitive-exam students especially look for both — textbook rigour for the answer key, shortcut for the exam clock. Numbers in outputs are formatted in Indian number format (lakh, crore with correctly placed commas) so a currency answer of ₹1,23,45,678 reads naturally, not ₹12,345,678 the international format uses.",
+    pillarFaqs: [
+      {
+        q: "Are the steps shown identical to what NCERT prescribes?",
+        a: "For the core topics (LCM/HCF, quadratic, percentages, ratios), yes — we follow the NCERT textbook method closely enough that the working looks like a well-written answer. For topics where competing methods exist (e.g., prime factorisation vs division method for HCF), the tool shows the default and lets you toggle to the alternative.",
+      },
+      {
+        q: "Why does my percentage answer end in .9999999 sometimes?",
+        a: "If you are seeing floating-point artefacts like 17.999999%, tap the 'Round to 2 decimals' toggle — that is the standard display format. Internally the calculator uses integer math where possible, but very small residuals can slip through when you compound multiple operations. The exact answer (as a reduced fraction) is always shown below the decimal form.",
+      },
+      {
+        q: "Does the Quadratic Equation solver handle complex (non-real) roots?",
+        a: "Yes. When the discriminant is negative, the solver returns complex conjugate roots in the form a ± bi and shows the discriminant calculation so you understand why the roots are complex. For Class 10 where students typically haven't met complex numbers, there is a 'Real roots only' toggle that explains when no real solution exists.",
+      },
+      {
+        q: "Can I use these tools for competitive exam practice?",
+        a: "Yes. We mark the tools most used for SSC, IBPS, CAT, and GATE prep with an 'Exam-ready' tag and enable the shortcut-method toggle by default there. The Time Speed Distance, Ratio, Averages, and Percentage calculators have dedicated shortcut modes covering common exam question patterns.",
+      },
+      {
+        q: "Does the Area Calculator accept inputs in sq.ft, m², and bigha?",
+        a: "For geometric area calculations (given a triangle's sides, or a rectangle's dimensions) inputs are in your chosen length unit — metres, feet, inches — and the answer is in the corresponding area unit. If you need to convert the final area to bigha, cent, or acre, pass it through the Area Converter (in the converters category).",
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────
+  // 14. Date & Time Tools — 9 tools
+  // ──────────────────────────────────────────────────────────────────────
+  datetime: {
+    whatIs:
+      "Date and time tools on SabTools.in compute the answers to the 'exactly how many days?' questions that come up around birthdays, retirement planning, pregnancy tracking, leave calculations, and government-form deadlines. Age in years-months-days, working days between two dates excluding Indian holidays, date after N working days, time elapsed since a given timestamp, time zone conversion between IST and major global zones — each tool uses the IANA time-zone database so daylight-saving transitions and leap years are handled correctly.",
+    keyFeatures: [
+      {
+        title: "IANA time-zone correct",
+        description:
+          "Every date calculation uses the modern IANA tz database (Asia/Kolkata for IST) so leap years, leap seconds, historical DST rules, and zone boundary changes are applied correctly — something naive JavaScript Date arithmetic often gets wrong.",
+      },
+      {
+        title: "Indian public-holiday aware",
+        description:
+          "The Working Days Calculator excludes Sundays, Saturdays (if you choose 5-day week), and a built-in list of Central Government holidays including the 2026 gazetted list. State-specific holidays can be added with one click.",
+      },
+      {
+        title: "Multi-calendar support",
+        description:
+          "Gregorian for civilian use, Vikram Samvat and Saka for tradition, Hijri for Islamic dates. Age Calculator shows all three when enabled, because elders and festival dates use non-Gregorian systems.",
+      },
+      {
+        title: "Second-level precision",
+        description:
+          "Countdown timers, stopwatches, and 'time since' calculators update every second with drift correction, so a 180-day countdown is accurate to the second — not off by 2-3 minutes by the end like lazy JavaScript timers.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Age for exam, passport, and government form eligibility",
+        description:
+          "UPSC, SSC, banking, and state-service forms require 'age as of 1st August 2026' or similar cut-off dates. The Age Calculator computes age in years-months-days for any arbitrary reference date, so eligibility can be confirmed to the day before filling the form.",
+      },
+      {
+        title: "Pregnancy and delivery due date",
+        description:
+          "The Due Date Calculator implements the Naegele rule (LMP + 280 days) with a fetal-age toggle, trimester markers at 13 and 27 weeks, and milestone dates for the first anomaly scan, gestational diabetes test, and second ANC appointment — aligned with Indian obstetric practice.",
+      },
+      {
+        title: "Leave and holiday planning",
+        description:
+          "Working Days Calculator tells you how many earned-leave days you will use if you travel between two dates, factoring in weekends and gazetted holidays. The Leave Planner tool extends this with sandwich-leave analysis (can I bridge two long weekends with 3 leaves?).",
+      },
+      {
+        title: "Retirement, superannuation, and FD maturity dates",
+        description:
+          "Date Difference Calculator tells you the exact duration to your retirement, your FD's maturity date, or a lock-in ending date. Useful for ELSS lock-in (3 years from investment), PPF maturity (15 years), and NPS exit windows (age 60).",
+      },
+    ],
+    howToChoose:
+      "For age / duration between two dates — Age Calculator or Date Difference Calculator. For future-date arithmetic — Add Days to Date, Working Days After Today. For timezone — Time Zone Converter. For countdown or stopwatch — Countdown Timer, Stopwatch. For medical — Due Date Calculator, Gestational Age Calculator. All tools accept manual entry or quick-picks (today, yesterday, 1 Jan this year, etc.).",
+    indianContext:
+      "Indian date usage mixes Gregorian (civilian, legal, corporate), Vikram Samvat (Hindu almanacs and some traditional contexts), Saka (the national calendar used by the Government of India), and Hijri (Islamic religious calendar) — plus dozens of regional New Year conventions (Ugadi, Gudi Padwa, Puthandu, Pohela Boishakh). Our tools show the Gregorian answer by default but can render dates in any of these calendars when enabled. Working-day calculators know the 18 Central Government gazetted holidays and the typical state-declared optional holidays, and update annually as the next year's gazette is published. Date formats default to DD-MM-YYYY (Indian convention) not MM-DD-YYYY (American) or YYYY-MM-DD (ISO) — though ISO is available as a toggle for developers.",
+    pillarFaqs: [
+      {
+        q: "Why does my age calculator result differ from what I used on another site?",
+        a: "Most likely reason: reference-date difference. A birthday of 15 August 1990 gives age 35 on 14 August 2026 but age 36 on 15 August 2026. Confirm both sites use the same reference date. The second reason: some sites count 'full years only' while we also report years-months-days. 35y 11m 29d and 36y 0m 0d are one day apart.",
+      },
+      {
+        q: "Does the Working Days Calculator know about Dussehra and Diwali?",
+        a: "Yes. The built-in holiday list includes all gazetted Central Government holidays plus the major festivals observed across most of India. State-specific holidays (like Ugadi for Karnataka/AP/Telangana or Pohela Boishakh for West Bengal) are added when you select a state from the dropdown.",
+      },
+      {
+        q: "Is the Due Date Calculator a medical advice tool?",
+        a: "No — it implements the standard obstetric formula used by Indian OBGYNs as an initial estimate. Actual due dates and milestone timing should be confirmed by your attending doctor after ultrasound dating. Treat the tool as a starting point for planning, not a substitute for clinical assessment.",
+      },
+      {
+        q: "How accurate is the Time Zone Converter around DST transitions?",
+        a: "It uses the IANA tz database which is the authoritative source for DST rules globally. Around the 'spring forward' and 'fall back' weekends in the US, UK, and EU, the converter correctly applies the 1-hour shift on the right date. India (IST) does not observe DST, so IST ↔ any zone conversion is straightforward year-round.",
+      },
+      {
+        q: "Do your tools handle leap years and the Feb 29 edge case?",
+        a: "Yes. Feb 29 birthdays default to Feb 28 in non-leap years with a toggle for Mar 1 (both conventions exist in Indian legal practice). Year-difference calculations correctly count 2024 as 366 days. The Age Calculator displays a 'leap year' badge when a birthday falls on Feb 29.",
+      },
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────────────────
+  // 15. India Guides — 10 tools
+  // ──────────────────────────────────────────────────────────────────────
+  indiaguide: {
+    whatIs:
+      "India Guide tools on SabTools.in answer the India-specific questions that no global tool gets right — what is the correct format for an Indian postal address, how do I read a PAN or Aadhaar number, what does IFSC code ABCD0012345 tell me about a bank branch, what is the GST number format, how are PIN codes organised, what is my closest post office. These tools exist because an international address-validator does not know that 'Tamil Nadu' and 'Tamilnadu' are both valid state names, that 'Bangalore' and 'Bengaluru' refer to the same city, or that a 6-digit PIN encodes region-delivery-office structure that can be parsed.",
+    keyFeatures: [
+      {
+        title: "Authoritative-source data",
+        description:
+          "PIN code data from India Post's official directory; IFSC code data from the RBI IFSC master list; STD codes from the Department of Telecom; state/district hierarchy from the Ministry of Home Affairs census. Refreshed on a rolling schedule as official sources update.",
+      },
+      {
+        title: "Format validation per Indian conventions",
+        description:
+          "PAN format ABCDE1234F (5 letters + 4 digits + 1 letter); GSTIN 15 characters with state code and checksum; Aadhaar 12 digits with Verhoeff checksum; IFSC 11 characters with 4-letter bank prefix. Each validator knows the structure and points to the specific invalid component.",
+      },
+      {
+        title: "Lookup and reverse lookup",
+        description:
+          "PIN code → city/state; city → PIN codes; IFSC → bank/branch/address; bank+branch → IFSC candidates. Useful for form-filling, cheque printing, and validating customer data in your CRM.",
+      },
+      {
+        title: "DPDP-compliant privacy stance",
+        description:
+          "Lookups run entirely against our published data without sending queries to third-party servers. Your customer's Aadhaar number is never validated against UIDAI's live service from our page — we only check format and checksum, never authenticity.",
+      },
+    ],
+    useCases: [
+      {
+        title: "E-commerce and logistics address validation",
+        description:
+          "PIN Code Validator checks whether the entered PIN matches the entered city/state, flagging mismatches before the order ships. The PIN-to-State/District lookup fills in state automatically from a valid PIN — eliminating the most common data-entry error in Indian e-commerce.",
+      },
+      {
+        title: "Banking and finance form-filling",
+        description:
+          "IFSC Finder returns the branch name, address, and bank for a given IFSC — useful when a customer supplies an IFSC but spells the branch wrong. Reverse IFSC search (bank + branch → IFSC) covers the 'I have the branch but not the IFSC' case.",
+      },
+      {
+        title: "GST and tax compliance",
+        description:
+          "GSTIN Validator checks the 15-character format and state code. It does not confirm registration status against the GSTN (that requires an authenticated API call), but catches the majority of data-entry errors — wrong length, wrong state code, wrong checksum — at the point of invoice entry.",
+      },
+      {
+        title: "Travel and India reference",
+        description:
+          "STD Code Finder — which city is code 044 (Chennai), 022 (Mumbai), 080 (Bengaluru). State Capital Finder, Official Languages Finder, and Indian Currency Word Converter (convert '125345' to 'One Lakh Twenty-Five Thousand Three Hundred Forty-Five') handle reference questions that come up constantly in document drafting.",
+      },
+    ],
+    howToChoose:
+      "For address data — PIN Code Finder, PIN Code Validator. For banking — IFSC Finder, IFSC Validator. For tax — PAN Validator, GSTIN Validator, TAN Validator. For identity — Aadhaar Format Checker (format only — we never validate authenticity). For reference — STD Code Finder, State Information Finder. Use the validators upstream of data-entry to catch errors; use the finders for reference lookups and auto-filling forms.",
+    indianContext:
+      "India's identifier formats are specific to India and usually encoded with more structure than an opaque ID number — a PAN carries category (P=person, C=company, H=HUF, etc.), a GSTIN carries state code, a PIN has region/subregion/delivery-office structure, an IFSC prefixes the bank and sub-identifies the branch. Our validators do not just check length; they check that each positional component is valid in context. For example, a PAN of ABCDE1234F where the fifth letter does not match the first letter of the surname (for individuals) would still pass basic validation but fail semantic validation — we flag both classes of issue and explain the difference. We never submit numbers to UIDAI, Income Tax, or GSTN servers from our page — that would be a privacy violation. Format validation only; authenticity checks are the enterprise's job through authenticated APIs.",
+    pillarFaqs: [
+      {
+        q: "Does 'Validate Aadhaar' check whether the Aadhaar number is real?",
+        a: "No. We only verify that the number is 12 digits and passes the Verhoeff checksum algorithm (which catches most typos). Checking whether an Aadhaar is actually issued requires an authenticated API call to UIDAI, which only licensed entities (KUAs) can make. Never send Aadhaar numbers to unofficial services claiming to verify authenticity — that is almost certainly a data-harvesting scam.",
+      },
+      {
+        q: "How current is the PIN code and IFSC data?",
+        a: "PIN codes are refreshed from India Post's directory quarterly — the underlying data changes rarely (new PINs are added, none are retired). IFSC codes are refreshed from the RBI master list monthly, since bank mergers (SBI absorbing associate banks, Bank of Baroda absorbing Vijaya and Dena) sometimes retire IFSC codes.",
+      },
+      {
+        q: "Why does my PAN pass format validation but my CA says it is invalid?",
+        a: "Format validation checks the 10-character structure and that the fifth letter is A-Z (not a semantic check). Semantic validation — that the fifth letter matches the surname's first letter for individuals, or the entity name's first letter for companies — is an additional check we surface on a separate button. Full authenticity (does this PAN belong to this name) requires an Income Tax Department API call your CA can make.",
+      },
+      {
+        q: "Is there a difference between GSTIN and GSTN?",
+        a: "GSTIN is the 15-character Goods and Services Tax Identification Number assigned to each registered taxpayer. GSTN is the Goods and Services Tax Network — the IT infrastructure operator that runs the portal and APIs. People sometimes use GSTN informally to mean GSTIN, but technically they are different.",
+      },
+      {
+        q: "Can I use the IFSC lookup result directly on my cheque or NEFT form?",
+        a: "Yes — the branch address returned is the RBI-published address that banks accept. However, always cross-check with your account holder's passbook or the bank's own website before a high-value transfer, because branches occasionally relocate and the RBI file takes a few weeks to reflect changes.",
+      },
+    ],
+  },
+
 };
 
 /**
