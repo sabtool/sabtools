@@ -2244,6 +2244,606 @@ export const categoryPillars: Record<string, CategoryPillar> = {
     ],
   },
 
+  cooking: {
+    whatIs:
+      "Cooking and kitchen tools on SabTools.in handle the everyday culinary math that home cooks, food bloggers, and small-restaurant operators run constantly — converting a US recipe's cup measurements to Indian metric, scaling a 4-person dish to 12, computing the exact cooking time for a different rice quantity or pressure-cooker setting, looking up the calorie and macro content of common Indian dishes, working out how many days a domestic LPG cylinder will last given monthly usage, and checking water-quality TDS to decide whether your filter still works. These are not specialist tools — they are the small calculations that come up at the prep counter, in the kitchen, and on the grocery list every week. Each tool here uses Indian units (grams, millilitres, tablespoons), Indian dish coverage (dal, sabzi, biryani, rasam, idli batter), Indian utility data (Bharat Gas / HP / Indane LPG cylinder weights and burn rates), and Indian water-quality bands (BIS 10500 drinking-water TDS limits).",
+    keyFeatures: [
+      {
+        title: "US-to-Indian recipe unit conversion",
+        description:
+          "Recipe Unit Converter handles cups → grams (ingredient-specific: 1 cup of flour ≠ 1 cup of sugar by weight), tablespoons → ml, ounces → grams, fahrenheit → celsius for oven temperatures, and pounds → kg for meat. Pulls density data for 200+ common Indian and Western ingredients so the gram conversion is accurate, not just volumetric.",
+      },
+      {
+        title: "Recipe scaling and pressure-cooker timing",
+        description:
+          "Cooking Time Calculator scales recipe quantities (4 servings → 12) with non-linear adjustments — cooking time does not scale linearly with quantity (a doubled recipe of dal needs about 1.3× the time, not 2×). Includes pressure-cooker whistle counts for common Indian dishes by quantity.",
+      },
+      {
+        title: "Indian-cuisine calorie and macro database",
+        description:
+          "Indian Food Calorie Counter has the per-100g and per-serving calories, protein, carbs, and fat for 800+ Indian dishes — regional variants (Punjabi rajma vs Maharashtrian, dosa types, biryani styles), restaurant-style vs home-style (the ghee-and-cream difference is significant), and street food (vada pav, pani puri, dosa). Useful for diabetes, weight, and macro-tracking diets.",
+      },
+      {
+        title: "LPG cylinder and water-TDS utilities",
+        description:
+          "Gas Cylinder Calculator estimates remaining days on a domestic 14.2 kg LPG cylinder given monthly cooking hours and burner type — typical Indian family of 4 burns one cylinder in 35-45 days. Water TDS Calculator interprets your TDS-meter reading against BIS limits (acceptable <500 mg/L; rejection >1,500 mg/L) and tells you whether the RO filter is still effective.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Following Western recipes in an Indian kitchen",
+        description:
+          "Recipe Unit Converter takes the '2 cups all-purpose flour, 1 stick butter, 350°F oven' from any US baking recipe and produces '240 g maida, 113 g butter, 175°C oven' in the units your Indian kitchen scale and oven actually display. Particularly useful for cake/cookie/bread recipes where precision matters.",
+      },
+      {
+        title: "Scaling for parties and pot-lucks",
+        description:
+          "Hosting 30 people for dinner: Cooking Time Calculator scales the family rajma recipe from 4 to 30 portions with the right quantity of beans, masala, and pressure-cooker time. Adjusts non-linearly for the bigger pot's slower heat-up time. Pairs with the Wedding Budget Calculator for caterer-budget cross-checks.",
+      },
+      {
+        title: "Diabetic and weight-loss diet planning",
+        description:
+          "Indian Food Calorie Counter gives the calorie load of a typical thali — 2 chapati + dal + sabzi + rice + curd + papad runs 700-900 kcal depending on ghee and oil. Diabetics use it for carb counting (chapati 70 g carbs/100g; rice 78 g carbs/100g) to plan insulin or oral-medication dosing in consultation with their physician.",
+      },
+      {
+        title: "Household utility planning",
+        description:
+          "Gas Cylinder Calculator schedules the next cylinder booking — 35 days into the cycle for a 4-person family, time to book the next refill on the Indane / HP / Bharat Gas portal. Water TDS Calculator decides when the RO filter cartridge needs replacement (TDS below 50 mg/L = filter still working; jump above 200 mg/L = membrane failing).",
+      },
+    ],
+    howToChoose:
+      "For recipe execution — Recipe Unit Converter for the cup/tbsp/oz to gram/ml conversion, Cooking Time Calculator for non-linear scaling and pressure-cooker timing. For diet and nutrition tracking — Indian Food Calorie Counter; pair with the BMI Calculator, BMR Calculator, and Calorie Calculator in the Health category for full diet planning. For household utility — Gas Cylinder Calculator for LPG planning, Water TDS Calculator for filter health. None of these tools replace a registered dietitian for medical-grade nutrition planning (especially for diabetics, kidney patients, pregnancy, or post-op recovery) — for those, they are quick reference tools you bring to your dietitian's appointment, not substitutes for professional advice. Workflow for entertaining: Recipe Unit Converter → Cooking Time Calculator → Indian Food Calorie Counter (for guests with dietary restrictions) → final shopping list. Workflow for monthly household: Gas Cylinder Calculator (track usage) → next refill booking; Water TDS Calculator (monthly check) → filter replacement.",
+    indianContext:
+      "Indian kitchens operate on a different unit system from Western recipes. A 'cup' in a US recipe is 240 ml; in the UK it is 250 ml; in some Indian recipes 'cup' refers to a katori-sized measure of about 200 ml — three different units called the same thing. Our Recipe Unit Converter defaults to the US 240 ml cup but lets you toggle. Indian flour (atta) and Western flour (maida, all-purpose) have different absorption — atta is stoneground whole wheat with bran and absorbs more water, so substituting them 1:1 produces a denser product; the tool flags this. LPG cylinders in India are 14.2 kg (domestic) or 19 kg (commercial) net weight, with subsidised pricing for domestic cylinders capped at 12 per year per household under the DBT-LPG scheme. Burn rate for a typical Indian family with 3-4 stove hours/day is about 25-35 days per 14.2 kg cylinder. Drinking water TDS in Indian municipal supply ranges 50-300 mg/L typically; borewell water can be 300-2,000+ mg/L (especially in coastal Tamil Nadu, parts of Andhra, Rajasthan, Haryana). RO filters reduce TDS by 90-95% and need cartridge replacement when output TDS rises consistently above the BIS 500 mg/L threshold or membrane TDS exceeds 200 mg/L. Indian-cuisine calorie counts depend heavily on ghee/oil — a homemade dal at 80 kcal/100g becomes 130 kcal/100g with a ghee tadka. Indian Food Calorie Counter shows the home-style and restaurant-style figures separately so the diabetic eating out can budget correctly.",
+    pillarFaqs: [
+      {
+        q: "How accurate is Recipe Unit Converter for ingredient density?",
+        a: "Within ±5% for clean reference ingredients (flour, sugar, salt, oil, butter). Variability comes from how compacted the ingredient is — sifted flour weighs less per cup than packed flour, which is why professional baking recipes specify weights, not volumes. For Indian-specific ingredients (besan, ragi flour, jaggery, ghee), we use the same tested density values used in CFTRI nutrition databases.",
+      },
+      {
+        q: "Does Cooking Time Calculator handle pressure-cooker timing for Indian dishes?",
+        a: "Yes — for the major Indian pressure-cooker dishes (rajma, chana, dal, biryani, mutton curry, paya), it returns whistle count by quantity using empirically tested ratios. For modern Instant Pot users, it converts whistles to manual-pressure minutes (1 whistle ≈ 4-5 min on high pressure for most lentils and beans).",
+      },
+      {
+        q: "Is Indian Food Calorie Counter validated against any source?",
+        a: "Built primarily on the IFCT 2017 (Indian Food Composition Tables) published by NIN-ICMR — the official Indian government nutrition database — supplemented with restaurant-style adjustment factors from peer-reviewed studies on home-vs-restaurant cooking oil use. Always verify with a registered dietitian for medical use; the calorie tables are research-grade but not a substitute for personalised dietary advice.",
+      },
+      {
+        q: "How does Gas Cylinder Calculator estimate remaining days?",
+        a: "It takes daily cooking hours, number of burners, and burner type (standard 2-burner gas stove, 3-burner range, induction) to estimate the burn rate. A standard family of 4 with 2-burner stove burns 25-35 days per cylinder. The estimate is ±3-5 days; for a tighter prediction, use the cylinder's tare-weight check (subtract the empty 14.2 kg cylinder weight from the current weight) to know exactly how much LPG remains.",
+      },
+      {
+        q: "Why does Water TDS Calculator say my RO filter is fine but my water tastes metallic?",
+        a: "TDS is one indicator but not the only one — taste can be affected by individual ions (iron, magnesium) without TDS being high. A metallic taste with low TDS often indicates iron contamination from old galvanised pipes; that needs an iron-removal filter or a new pipe section, not RO replacement. Get a full water-quality lab test (₹500-₹1,500) for a complete profile if taste issues persist.",
+      },
+    ],
+  },
+
+  wedding: {
+    whatIs:
+      "Wedding and events tools on SabTools.in cover the budgeting, guest-management, and date-selection math that every Indian wedding requires across the 6-12 months of planning — what a realistic budget breakdown looks like for a 200-guest vs 500-guest wedding (venue, catering, decor, photography, jewellery, attire, music), how to maintain a guest list across multiple events (mehendi, sangeet, haldi, wedding, reception) without manual reconciliation, how to find auspicious wedding dates that satisfy both Hindu panchang muhurat and family travel constraints, what gifts to suggest registry-style for guests who ask, and how to build an end-to-end checklist of every task from save-the-date to thank-you-cards. These tools are aimed at the family member running the wedding logistics — typically the bride's or groom's mother, or an elder cousin — who needs structured calculators, not free-form Excel.",
+    keyFeatures: [
+      {
+        title: "Wedding budget by region and guest count",
+        description:
+          "Wedding Budget Calculator builds a full budget breakdown by category — venue (25-35%), catering (15-25%), decor (8-15%), photography/videography (5-10%), jewellery (15-25% if including), attire (5-10%), music/entertainment (3-7%), invitations (1-3%), miscellaneous (5-10%). Defaults reflect 2025 Indian metro and tier-2 city rates; total range 8-40+ lakh for 200-guest weddings.",
+      },
+      {
+        title: "Multi-event guest list with attendance tracking",
+        description:
+          "Guest List Manager handles the typical Indian wedding's 4-6 events (mehendi, haldi, sangeet, wedding, reception, after-party). Each guest entry tracks RSVP per event, dietary restrictions, accommodation needs, and gift-tracking. Export to CSV for vendor coordination; aggregate counts feed into Wedding Budget Calculator's catering line.",
+      },
+      {
+        title: "Panchang-aware auspicious wedding dates",
+        description:
+          "Wedding Date Finder cross-references the Hindu panchang for vivah muhurat (the auspicious nakshatra-tithi-yoga combination for marriage), with location-specific Rahu Kaal exclusion and family travel feasibility (avoiding monsoon, exam-season, fasting months for the involved families). Returns 8-12 candidate dates over the next 12-18 months.",
+      },
+      {
+        title: "Gift registry and guest-suggestion calculator",
+        description:
+          "Gift Registry Calculator suggests gift price ranges by guest relationship (close family ₹15,000-50,000; distant family ₹5,000-15,000; close friends ₹3,000-8,000; colleagues and acquaintances ₹1,500-3,000). Useful for guests asking 'what should I gift'; also useful for the couple in registering at e-commerce stores at price points guests will actually use.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Initial planning and budget setting",
+        description:
+          "Three months into a 12-month engagement, run Wedding Budget Calculator with target guest count and city tier; produces an 8-40 lakh estimate broken down by category. Use this to set the family's financial commitment ceiling before any vendor commitments are made — 'we have ₹25 lakh' converts to specific category caps that prevent overruns later.",
+      },
+      {
+        title: "Vendor coordination via guest count",
+        description:
+          "Once invitations are out, Guest List Manager tracks RSVPs across 5 events. Vendor coordination requires per-event counts — caterer needs +20% buffer, mandap decorator needs exact, photographer team-sizing needs adult vs child split. The tool exports per-event guest lists in the format vendors expect.",
+      },
+      {
+        title: "Date-finalisation with both families",
+        description:
+          "Wedding Date Finder produces 8-12 muhurat candidates over the planning window. Cross-check with both families' calendars (no conflicting weddings, no major exams in the family, no travel-restricted seasons), then narrow to 2-3 finalists for the priest's verification with the kundli match.",
+      },
+      {
+        title: "Gift expectations and registry creation",
+        description:
+          "Bride/groom asked by close friends what to gift: Gift Registry Calculator suggests price ranges by relationship; couple registers at Pepperfry, Urban Ladder, or D2C brands at the suggested price points. For close family, tradition often calls for jewellery or cash — the tool flags those conventions to discuss with elders rather than auto-suggesting registry items.",
+      },
+    ],
+    howToChoose:
+      "For initial planning — Wedding Budget Calculator first to set the financial frame; Wedding Date Finder for the 8-12 candidate dates; Event Checklist Generator for the master to-do list of 200+ tasks across 12 months. For active planning — Guest List Manager for the recurring tracking; Gift Registry Calculator when guests ask. For pre-wedding panchang verification — Kundli Calculator and Panchang Calculator in the Astrology category cover the muhurat sign-off and the kundli matching (guna milan, 36 points). For day-of logistics — Event Checklist Generator covers the choreography (timing for mehendi sequence, baraat arrival, varmala, pheras, vidaai). Workflow: Wedding Date Finder (month 0) → Wedding Budget Calculator (month 0-1) → Event Checklist Generator (month 0-12, ongoing) → Guest List Manager (month 3-6, after invitations) → Gift Registry Calculator (month 3-6, when asked). Note: none of these tools replace a wedding planner for a complex multi-city or destination wedding — for those, consider a planner; the tools cover the 80% of mid-size urban Indian weddings where the family runs logistics directly.",
+    indianContext:
+      "Indian weddings are uniquely complex among global wedding traditions — multiple ceremonies (mehendi, haldi, sangeet, wedding, reception) over 3-7 days, often across two cities (bride's hometown and groom's hometown for separate receptions), with regional variations (a Sikh anand karaj differs from a Tamil thali ceremony differs from a Bengali bishakta differ from a Marwari pheras). Our tools default to a generic North-Indian Hindu wedding (the most common single template) but offer regional toggles for Sikh, Christian, Muslim nikah, and major South-Indian variants (Tamil, Telugu, Malayalam, Kannada). Vivah muhurat is calculated per a strict set of criteria — auspicious nakshatra (Rohini, Mrigashira, Magha, Uttara Phalguni, Hasta, Swati, Anuradha, Mula, Uttara Ashadha, Uttara Bhadrapada, Revati most auspicious), suitable tithi (avoiding amavasya, ashtami, navami, chaturdashi), and yoga (avoiding Vyatipata, Vaidhriti, Parigha, Vishkambha). Our Wedding Date Finder applies all of these per Lahiri ayanamsa and excludes the malefic combinations. Wedding budgeting in India 2025 — a 200-guest tier-2 city wedding ranges ₹8-15 lakh; the same 200 guests in Mumbai/Delhi metro ranges ₹15-30 lakh; a 500-guest farmhouse-style wedding can easily reach ₹40-80 lakh; high-end designer-driven weddings exceed ₹1 crore.",
+    pillarFaqs: [
+      {
+        q: "Is Wedding Budget Calculator's output realistic for tier-3 cities and small towns?",
+        a: "It defaults to tier-1 metro rates and tier-2 city rates with toggles. For tier-3 (Belgaum, Tirupati, Allahabad-style) and rural weddings, expect 30-50% lower than the tier-2 figures — venue and catering are the largest reductions; jewellery and photography are largely city-independent. Override with local-vendor quotes for the binding budget; the tool gives the first-cut frame.",
+      },
+      {
+        q: "Does Wedding Date Finder support non-Hindu wedding traditions?",
+        a: "Hindu and Sikh muhurat (with anand karaj appropriate dates) are fully supported. For Muslim nikah, the date selection is largely non-astrological (Friday is preferred, Ramadan and certain mourning months are avoided); the tool returns valid dates with those exclusions. For Christian and inter-faith weddings, the tool returns dates the venue is available without astrological constraints — apply your own family preferences for season and day-of-week.",
+      },
+      {
+        q: "How does Guest List Manager handle complex family relationships?",
+        a: "Each guest entry includes a 'relationship' field with about 40 standard tags (mother's brother's family, father's elder cousin, paternal grandmother's first cousin's daughter — Indian family tree depth is real). RSVP tracking is per event, so a guest can be confirmed for wedding but tentative for sangeet. Export filtered lists by relationship for tasks like 'send invitations only to the 50 closest family members'.",
+      },
+      {
+        q: "Can Wedding Budget Calculator factor in the bride/groom-side splits?",
+        a: "Yes — there is a toggle for 'who pays what' allocation: traditional split (bride's family pays catering and venue, groom's family pays for jewellery and reception), modern split (50-50 on most categories), or fully borne by one side. Each scenario produces a side-wise breakdown so the financial commitments are clear before wedding-vendor signups begin.",
+      },
+      {
+        q: "Is Event Checklist Generator customisable for our specific family traditions?",
+        a: "Yes — start with the regional template (North Indian, South Indian, Bengali, Sikh, Marwari, Gujarati, Maharashtrian, Christian, Muslim, etc.) and add or remove sub-events. The base list has 200+ tasks; most weddings need 80-150 of those depending on the events being hosted. Add custom tasks (specific to your family's traditions) inline; the tool reorders by phase (12-month, 6-month, 3-month, 1-month, week-of, day-of, post-wedding).",
+      },
+    ],
+  },
+
+  shopping: {
+    whatIs:
+      "Shopping and consumer-finance tools on SabTools.in cover the price, discount, and affordability math that every Indian online and offline shopper runs across the year — what a 'flat 60% off plus extra 10% on prepaid' deal actually saves you (it is not 70%), how to compare two competing prices when one is GST-inclusive and the other is GST-exclusive, whether a ₹85,000 phone on no-cost EMI is genuinely no-cost or hides interest in inflated MRP, how to compare prices per gram or per litre across pack sizes (the 1-kg pack is sometimes more expensive than the 500-g pack), and what cashback and credit-card-reward stacking actually nets after rotating offers. These are tools that turn marketing-speak into rupees so the shopper makes informed decisions during the Big Billion Day, the Great Indian Sale, and weekly grocery runs.",
+    keyFeatures: [
+      {
+        title: "Multi-discount stacking computation",
+        description:
+          "Advanced Discount Calculator handles the realistic Indian e-commerce stack — 'flat X% off + extra Y% on prepaid + bank Z% cashback + coupon code W%' — and computes the true effective discount, which is rarely the sum of percentages. A 60% + 10% + 10% stack delivers ~67.6% off, not 80%. Useful for comparing Flipkart Plus deal vs Amazon Pay deal where the stack composition differs.",
+      },
+      {
+        title: "GST-inclusive and GST-exclusive price reconciliation",
+        description:
+          "GST Inclusive Exclusive takes any price + GST rate (5%, 12%, 18%, 28%); converts between inclusive (the customer-facing price) and exclusive (the vendor invoice price) views. Critical when comparing a B2B vendor's quote (often ex-GST) against a retailer's customer-facing price (GST-inclusive).",
+      },
+      {
+        title: "True-cost EMI affordability check",
+        description:
+          "EMI Affordability Calculator combines the EMI with credit-card processing fees (1-2% on no-cost EMI cards), foregone cashback opportunity (paying full would have given 5% cashback), and the inflated MRP that some 'no-cost EMI' offers carry (the cash price is often 5-10% lower). Returns the true effective rate of the EMI offer — sometimes 10-15% APR even when advertised as 'no cost'.",
+      },
+      {
+        title: "Price-per-unit comparison across pack sizes",
+        description:
+          "Price Per Unit Comparator takes 2-5 competing products with different pack sizes (500g vs 1kg vs 5kg), prices, and unit (g/kg/L/ml/piece); returns price-per-base-unit ranking. Surprisingly often the 1-kg pack is more expensive per gram than the 500-g pack at promotional prices — the tool catches that.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Sale-season deal evaluation",
+        description:
+          "Big Billion Day or Great Indian Sale season: a phone listed at 'flat 40% + 10% bank discount + ₹3,000 exchange + ₹2,000 coupon + 6-months no-cost EMI'. Advanced Discount Calculator computes the true post-stack price; EMI Affordability Calculator checks whether the no-cost EMI is genuinely interest-free vs hiding cost in MRP. Together these decisions take 5 minutes and save ₹3,000-₹8,000 of misunderstood discounting.",
+      },
+      {
+        title: "B2B vs B2C price reconciliation",
+        description:
+          "Buying office supplies for a small business: vendor A quotes ₹5,000 ex-GST, vendor B quotes ₹6,200 inclusive. GST Inclusive Exclusive reveals vendor A's effective price is ₹5,900 (with 18% GST), making vendor B's ₹6,200 inclusive cost the equivalent of ₹5,254 + 18% GST — vendor B is actually cheaper despite the higher headline number.",
+      },
+      {
+        title: "Grocery-run optimisation",
+        description:
+          "Weekly grocery shop comparing 5 oil brands at varying pack sizes (500ml ₹120, 1L ₹220, 5L ₹950, 15L ₹2,650): Price Per Unit Comparator instantly shows the 5L is ₹190/L (cheapest) vs 15L at ₹176.67/L. The 15L wins for a family of 5, but a couple is better off with the 5L — tool also flags that consideration.",
+      },
+      {
+        title: "Cashback and reward stacking",
+        description:
+          "Cashback Calculator compounds credit-card reward + Amazon Pay reward + merchant cashback for the optimal combination on a given purchase. ₹50,000 phone with 5% credit-card reward + 10% Pay Later cashback + 2% merchant promo nets ~₹8,500 in real value if all stack — useful when choosing payment instrument at checkout.",
+      },
+    ],
+    howToChoose:
+      "For deal evaluation — Advanced Discount Calculator for headline-stack vs effective-saving; EMI Affordability Calculator for any 'no-cost EMI' marketed offer. For price reconciliation — GST Inclusive Exclusive for B2B-vs-B2C or vendor comparisons; Price Per Unit Comparator for cross-pack-size comparisons. For payment optimisation — Cashback Calculator for stacking reward instruments at checkout. For pre-purchase affordability cross-check, the EMI Calculator and Home Loan Affordability tools in the Finance and Business categories give the household-level affordability frame; for tax implications, the GST Calculator and HRA Exemption Calculator in the Tax category cover any tax-deductible spending. Workflow for a major purchase (electronics, appliances): Advanced Discount Calculator → EMI Affordability Calculator → Cashback Calculator → final decision. Workflow for grocery and household: Price Per Unit Comparator → buy. None of these tools enforce restraint — they give the rupees-on-the-table figure; the discipline of 'do I actually need this' is left to the shopper.",
+    indianContext:
+      "Indian e-commerce's discount-stacking complexity is unique globally. A typical Big Billion Day deal looks like: '40% flat off + 10% bank discount on HDFC/ICICI/SBI cards + 5% cashback on Flipkart Pay Later + ₹3,000 exchange bonus + 9-month no-cost EMI + ₹2,500 coupon'. Each component has different applicability rules (HDFC discount only on credit, not debit; cashback only on Pay Later not on UPI; coupon only above ₹50,000), and the order in which stacks compose changes the final price. Advanced Discount Calculator codes these rules so the calculation is correct. GST is everywhere in Indian retail — packed FMCG (5-18% depending on item), electronics (18%), restaurants (5%), services (18%), gold and silver (3% + cess). B2B invoicing is GST-exclusive (the vendor adds GST and the buyer claims input credit); B2C is GST-inclusive (the customer-facing price is final). Conflating the two is a common error in small-business purchasing. EMI offers are dominated by no-cost EMI marketing — the underlying economics is that the merchant absorbs the 12-15% APR cost of the lender (Bajaj Finserv, ZestMoney, Bharat Pe Pay Later, etc.) and bakes it into a higher MRP than the cash price; our EMI Affordability Calculator backs out this hidden cost. Cashback in India is dominated by credit-card reward points (HDFC Infinia, Axis Magnus, ICICI Emeralde) and pay-later platforms (Flipkart Pay Later, Amazon Pay Later, Lazypay), each with different stacking rules.",
+    pillarFaqs: [
+      {
+        q: "Why is my computed effective discount lower than the sum of percentages?",
+        a: "Because percentages compose multiplicatively, not additively. 60% off then 10% off on the discounted price = (1 - 0.6) × (1 - 0.1) = 0.36, i.e., 64% effective discount, not 70%. Add a third 10% and you get 67.6%, not 80%. Advanced Discount Calculator does the multiplication correctly so you don't get surprised at checkout.",
+      },
+      {
+        q: "Does GST Inclusive Exclusive handle different GST rates?",
+        a: "Yes — 5%, 12%, 18%, 28%, plus the special-purpose rates (3% on gold, 0.25% on rough diamonds, 18% with reverse charge on legal services), plus state-supplemented cess (cess on luxury cars, tobacco, aerated beverages). The right rate depends on the item's HSN code; if you don't know the HSN, the tool's HSN lookup helper finds it.",
+      },
+      {
+        q: "How does EMI Affordability Calculator detect 'hidden' interest in no-cost EMI?",
+        a: "It compares the EMI total (EMI × tenure) against the cash price with similar discount stacks applied. If the EMI total exceeds the cash price by more than the merchant's stated 'processing fee' (1-2%), the difference is hidden interest. Also compares the MRP at no-cost EMI vs the cash-price MRP — if they differ, that gap is hidden interest. Most no-cost EMI offers carry 8-15% effective APR.",
+      },
+      {
+        q: "Is Price Per Unit Comparator only for groceries or does it work for other shopping?",
+        a: "Any unit-priced item — groceries (price per kg, per L, per piece), pharmacy (price per tablet, per ml), electronics (price per GB for storage, price per TB for hard drives), construction materials (price per kg, per metre, per piece), even data plans (price per GB of monthly data). Anything where a unit price comparison makes sense.",
+      },
+      {
+        q: "Can Cashback Calculator track time-bound offers that change weekly?",
+        a: "It calculates the stack you enter at the moment of calculation; it does not track or notify you when offers expire. For an always-current offer reference, you need a deal-aggregator app (Cashkaro, Magicpin, Pricebaba). The tool is for 'I have these specific offers right now, what is the best stack' — not 'tell me what offers exist this week'.",
+      },
+    ],
+  },
+
+  whatsapp: {
+    whatIs:
+      "WhatsApp and UPI tools on SabTools.in cover the messaging-link generation, payment-QR creation, contact-attribution, and bank-IFSC-lookup tasks that every Indian small business and personal user runs around India's two dominant retail-tech platforms — WhatsApp (530+ million Indian users) and UPI (12+ billion monthly transactions). These tools handle: generating a wa.me click-to-chat link with pre-filled message for marketing campaigns, formatting WhatsApp messages with bold/italic/strikethrough using the platform's special syntax, creating a UPI QR code with intent URL that any UPI app can scan, looking up which carrier owns a mobile number (and approximate state) for vendor-onboarding KYC, and finding bank-branch details from an IFSC code for payment routing. Each tool is purpose-built for the Indian retail-tech reality where WhatsApp Business and UPI together handle the bulk of small-business messaging and payments.",
+    keyFeatures: [
+      {
+        title: "WhatsApp click-to-chat link generation",
+        description:
+          "WhatsApp Link Generator produces wa.me URLs with pre-filled message text. Format: https://wa.me/91XXXXXXXXXX?text=Hi%20-%20interested%20in%20your%20product. Use in WhatsApp Business marketing, in QR posters, in email signatures, and in 'Chat with us' buttons on websites. Supports international format and the right URL-encoding for Indian regional languages.",
+      },
+      {
+        title: "WhatsApp text formatting with bold/italic/strike",
+        description:
+          "WhatsApp Formatter inserts the platform's formatting syntax — *bold* (asterisks), _italic_ (underscores), ~strikethrough~ (tildes), ```monospace``` (triple-backticks). Useful for marketing broadcasts and well-formatted business communications. Renders a live preview of how the message will look in WhatsApp before you send.",
+      },
+      {
+        title: "UPI QR code with intent URL",
+        description:
+          "UPI QR Generator produces a payment QR following the UPI intent-URL specification — upi://pay?pa=name@upi&pn=Display+Name&mc=1234&am=500.00&cu=INR. Compatible with all UPI apps (PhonePe, Google Pay, Paytm, Amazon Pay, BHIM, etc). Specify amount or leave blank for customer-entered amount. Print the QR for shop counters or use in invoices.",
+      },
+      {
+        title: "Mobile-carrier and IFSC-bank lookup",
+        description:
+          "Mobile Number Tracker resolves an Indian mobile number to its carrier (Airtel, Jio, Vi, BSNL/MTNL) and approximate originating state — useful for vendor-onboarding background checks (does the carrier-state match the claimed business address?). IFSC Bank Details returns full branch records for any IFSC.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Small-business WhatsApp marketing",
+        description:
+          "D2C founder running a WhatsApp campaign: WhatsApp Link Generator produces personalised wa.me links per channel (one for Instagram bio, one for Facebook ad, one for the website's chat button) with channel-tagged pre-filled messages — e.g., 'Hi, came from Insta — 10% off code'. Track which channel generated the conversation by the pre-filled text alone.",
+      },
+      {
+        title: "Shop-counter UPI payment acceptance",
+        description:
+          "Kirana, restaurant, salon, or service vendor: UPI QR Generator produces a payment QR with the UPI ID and merchant name (and optionally MCC code for transaction categorisation). Print the QR for the counter; customers scan with any UPI app and pay. Far simpler than a card-payment terminal and accepted at zero merchant fee.",
+      },
+      {
+        title: "Customer-onboarding KYC sanity check",
+        description:
+          "Vendor onboarding new clients: Mobile Number Tracker confirms the claimed phone number's carrier and state aligns with the claimed business location. A Mumbai vendor with a Bihar-circle Airtel number is not automatically suspicious, but a B2B vendor claiming to be in Bengaluru with a Kerala-circle BSNL number is worth a phone-verification call. IFSC Bank Details cross-checks the bank/branch on a vendor's bank-detail submission.",
+      },
+      {
+        title: "WhatsApp business broadcast formatting",
+        description:
+          "Marketing broadcast to 200 customers: WhatsApp Formatter ensures the *Headline* is bold, the price-point is _italicised_ for emphasis, and ~old-price~ is struck through. The 30-second formatting investment dramatically increases broadcast read-through compared to plain-text. Use within WhatsApp Business API or manual broadcasts.",
+      },
+    ],
+    howToChoose:
+      "For WhatsApp marketing — WhatsApp Link Generator for click-to-chat URLs; WhatsApp Formatter for broadcast text. For UPI payments — UPI QR Generator for shop-counter or invoice QR; for app integration, the UPI intent URL is what payment SDKs consume. For KYC and verification — Mobile Number Tracker for phone-number provenance; IFSC Bank Details for bank-account verification. For deeper Indian-identity validation, the Utility category has PAN Card Validator, Aadhaar Validator, GST Number Validator, and Vehicle Number Info covering the document side. Workflow for a new D2C launch: WhatsApp Link Generator (channel-tagged links) → UPI QR Generator (payment-acceptance) → Mobile Number Tracker / IFSC Bank Details (vendor-side KYC). For high-volume operations, WhatsApp Business API and a UPI gateway (Razorpay, Cashfree, PhonePe Gateway) are the right stack — these tools cover the manual and small-volume cases without the ₹15,000-50,000/month gateway fees.",
+    indianContext:
+      "WhatsApp and UPI together define Indian retail-tech in 2025 — WhatsApp has 530+ million Indian users (more than any other country), and UPI processes 12-15 billion transactions per month with India accounting for 46% of global real-time payment volume. The wa.me click-to-chat URL is a Meta-published format that all WhatsApp clients support; URL-encoding the pre-filled message correctly is critical for non-English text (Hindi, Tamil, Bengali, etc.) — our WhatsApp Link Generator handles UTF-8 encoding correctly. UPI uses the intent-URL specification published by NPCI (National Payments Corporation of India); the parameters are: pa (payee address, the UPI ID), pn (payee name), am (amount in INR), tn (transaction note), cu (currency, always INR), and optionally mc (MCC code), tr (transaction reference). Our UPI QR Generator validates each field per the specification. Indian mobile-number portability has been live since 2011, so a number's carrier today may differ from its origin carrier — our Mobile Number Tracker shows the original carrier (from MNP records) plus a flag if the number has been ported. Bank IFSCs are RBI-published; our IFSC Bank Details data refreshes monthly to track bank-branch consolidations and the periodic IFSC migrations that happen when banks restructure (SBI absorbing associate banks in 2017, Bank of Baroda absorbing Vijaya/Dena in 2019).",
+    pillarFaqs: [
+      {
+        q: "Does WhatsApp Link Generator's link work even if the receiver doesn't have WhatsApp installed?",
+        a: "If the receiver doesn't have WhatsApp, clicking the wa.me link opens WhatsApp's web onboarding page — they cannot chat without installing the app. For receivers without WhatsApp, the link is effectively non-functional. For mass marketing, this is rarely a concern (530+ million Indian users), but for B2B applications targeting senior decision-makers without WhatsApp, fall back to email or SMS.",
+      },
+      {
+        q: "Is UPI QR Generator's output accepted by all UPI apps?",
+        a: "Yes — the QR format is standardised by NPCI and all certified UPI apps (PhonePe, Google Pay, Paytm, Amazon Pay, BHIM, WhatsApp Pay, MobiKwik, Cred, Slice Pay, etc.) read it. Apps display the merchant name and the amount; the customer confirms with their UPI PIN. For a static counter QR (no fixed amount), the customer enters the amount; for a dynamic QR (e.g., per-invoice), include the amount in the QR's intent URL.",
+      },
+      {
+        q: "How accurate is Mobile Number Tracker?",
+        a: "Original carrier and circle (state) lookup is ~95% accurate using the MNP-aware NPCI/TRAI public lookup data we mirror. Current carrier (post-MNP) is shown when the number has been ported in the last 5 years. We never display the subscriber's name, address, or any personal information — that requires authenticated access via TSP licensed entities, which we are not.",
+      },
+      {
+        q: "Can WhatsApp Formatter handle long-form messages with multiple paragraphs?",
+        a: "Yes — formatting works across paragraphs (each paragraph can have its own bold/italic spans). WhatsApp's UI rendering treats each formatting marker independently, so *bold across multiple lines* renders correctly. The platform doesn't support headings or bullet lists natively, but well-placed bold + spacing achieves a similar visual hierarchy.",
+      },
+      {
+        q: "What is the difference between IFSC Bank Details here and the IFSC Code Lookup in the India Guide category?",
+        a: "Same underlying data (RBI IFSC master list) — the difference is the use case. IFSC Code Lookup (India Guide category) is the quick 'one IFSC, return branch' tool. IFSC Bank Details (here, in the WhatsApp & UPI category) handles the bulk and reverse-lookup cases for KYC and onboarding scenarios — bulk-validate 50 IFSCs from a vendor list, reverse-lookup 'all SBI branches in Mumbai with PIN starting 4000', etc.",
+      },
+    ],
+  },
+
+  css: {
+    whatIs:
+      "CSS and design tools on SabTools.in cover the visual-effect generators that frontend developers, designers, and content creators use to produce CSS snippets without hand-writing the cubic-bezier curves, inset-shadow stacks, multi-stop gradients, and HSL colour adjustments by hand. These are not heavy-weight design systems (those are Figma's job) but small purpose-built tools for the specific moments — 'I need a smooth purple-to-pink gradient', 'I need a subtle box-shadow that doesn't look 2014', 'I need a 12-colour brand palette starting from this primary', 'I need glassmorphism with the right backdrop-filter blur', 'I need a text shadow that reads as elevated rather than cheap'. Each tool produces clipboard-ready CSS that drops directly into a stylesheet, Tailwind config, or styled-components template. The output uses modern CSS (custom properties, oklch() where supported, fallbacks for older browsers).",
+    keyFeatures: [
+      {
+        title: "Live-preview gradient generation",
+        description:
+          "CSS Gradient Generator handles 2-stop, 3-stop, multi-stop linear gradients with angle control and radial gradients with origin and shape control. Supports oklch() / oklab() colour interpolation for perceptually-uniform gradients, with fallback to RGB-interpolated for older browsers. Output includes vendor prefixes for cross-browser support.",
+      },
+      {
+        title: "Multi-layer box and text shadows",
+        description:
+          "Box Shadow Generator stacks 1-4 shadow layers (each with x, y, blur, spread, colour, and inset toggle). Text Shadow Generator handles 1-3 layered text shadows with x/y/blur/colour controls. Both export the CSS and a Tailwind-class equivalent (where the values match Tailwind's scale).",
+      },
+      {
+        title: "Border-radius and glassmorphism live designers",
+        description:
+          "Border Radius Generator handles 8-corner control (top-left, top-right, bottom-right, bottom-left, plus the elliptical x/y per-corner variant) with copy-paste CSS. Glassmorphism Generator combines backdrop-filter blur, semi-transparent background, border, and inner shadow into the modern frosted-glass look popularised by Apple Big Sur and now standard in dashboards.",
+      },
+      {
+        title: "Colour-palette generation with brand-consistent harmony",
+        description:
+          "Color Palette Generator takes a primary colour and produces 10-12 palette variants — analogous, complementary, split-complementary, triadic, tetradic, monochromatic. Outputs hex, RGB, HSL, and oklch() for each colour; also generates Tailwind config-ready palette objects (50/100/200/.../900) using lightness ramping from the primary.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Landing-page hero design",
+        description:
+          "Designer building a landing-page hero: CSS Gradient Generator produces the brand-aligned hero gradient (e.g., indigo-600 to purple-700 at 135deg); Box Shadow Generator adds the depth on the hero CTA; Border Radius Generator rounds the CTA to 12px. Five minutes vs an hour of hand-tuning. Output drops into the existing Tailwind classes without conflict.",
+      },
+      {
+        title: "Component-library theming",
+        description:
+          "Building a component library or theme: Color Palette Generator from the brand primary produces the 10-step Tailwind-compatible palette; Box Shadow Generator produces the 5-elevation scale (sm, md, lg, xl, 2xl); Border Radius Generator produces the 4-radius scale (sm, md, lg, xl). Together these establish the design tokens for an entire library in 20 minutes.",
+      },
+      {
+        title: "Marketing-page modern visual effects",
+        description:
+          "Marketing site needing the on-trend modern look: Glassmorphism Generator for the floating-card aesthetic; CSS Gradient Generator for hero and section backgrounds; Text Shadow Generator for the elevated-headline effect. Output is paste-ready CSS that works without a design-system overhaul.",
+      },
+      {
+        title: "Quick prototyping and design experiments",
+        description:
+          "Designer or founder iterating on visual direction: tweak the gradient, the shadow, the radius, the palette — all in browser, all with live preview, all with copy-pasteable output. Beats the cycle of 'change in Figma → export → paste into code → reload → adjust' by 10x for the early-iteration phase before settling on the final direction.",
+      },
+    ],
+    howToChoose:
+      "For colour work — Color Palette Generator first to establish the brand palette; CSS Gradient Generator for hero or section backgrounds. For depth and elevation — Box Shadow Generator for cards, buttons, modals; Text Shadow Generator for hero text and headings. For shape — Border Radius Generator for any non-trivial corner work. For modern aesthetic — Glassmorphism Generator for the frosted-card look. For colour-format conversion (hex ↔ RGB ↔ HSL) and one-off colour-utility tasks, the Color Picker & Converter and HEX to RGB Converter in the Developer category are more appropriate. For lower-level CSS tasks (CSS Grid layout, Flexbox layout, Tailwind CSS class generation, SVG editing), the corresponding tools in the Developer and Charts categories are the right fit. Workflow for a new design system: Color Palette Generator → Box Shadow Generator (5-step elevation scale) → Border Radius Generator (4-step radius scale) → CSS Gradient Generator (hero) → Glassmorphism Generator (floating UI). Workflow for one-off design work: pick the specific generator for the effect you need; copy CSS; paste into your stylesheet.",
+    indianContext:
+      "The Indian frontend developer community is large and growing — over 5 million developers in 2025, with a heavy concentration in service companies (TCS, Infosys, Wipro, Tech Mahindra, Cognizant) and the product/D2C space (Zerodha, Razorpay, CRED, Meesho, Zomato, Swiggy). Most Indian developers learn through bootcamps and self-study where deep CSS expertise is uncommon — these generators bridge the 'I know HTML and Tailwind but cubic-bezier curves and multi-stop radial gradients are still hard' gap that affects most working developers. The output is always paste-ready Tailwind-compatible CSS because the Tailwind ecosystem dominates Indian frontend (about 70%+ of new projects in 2025 use Tailwind). For developers building for the Indian audience specifically, lower-end devices and slower networks impose performance constraints — our Box Shadow Generator flags multi-layer shadows that would harm rendering performance on entry-level Android phones; CSS Gradient Generator suggests using gradient backgrounds judiciously since they are slightly more expensive than solid colours on low-RAM devices. Glassmorphism and backdrop-filter blur are flagged as 'use sparingly' on low-end target devices because the GPU compositing cost is real.",
+    pillarFaqs: [
+      {
+        q: "Does the output of these generators work in all browsers?",
+        a: "Modern evergreen browsers (Chrome 90+, Safari 15+, Firefox 88+, Edge 90+) — yes, all output works without prefixes. For Internet Explorer 11 and older Safari, multi-stop gradients work, basic shadows work, but oklch() colour interpolation and backdrop-filter (used in Glassmorphism Generator) do not — the tool flags those features as 'modern only' and provides RGB-fallback CSS for older browsers if you toggle the legacy-compat option.",
+      },
+      {
+        q: "Are the colour palettes accessible (WCAG-compliant)?",
+        a: "Color Palette Generator includes a contrast-ratio checker — any palette pair that fails WCAG AA (4.5:1 for normal text, 3:1 for large text) is flagged. AA-compliance is the typical web target; AAA (7:1 for normal text) is shown for accessibility-focused projects. The tool does not auto-correct failing colours — that is a design judgement call — but you see the violation immediately and can adjust.",
+      },
+      {
+        q: "Can I save my generator settings as a preset?",
+        a: "Yes — each generator has a 'save preset' button that stores the current settings in browser local-storage. Saved presets persist across sessions and can be exported as JSON for sharing or version-control commit. There is no cloud-sync; presets are device-local for privacy.",
+      },
+      {
+        q: "Do the generators produce CSS or Tailwind-class output?",
+        a: "Both — toggle between raw CSS (for any project) and Tailwind classes (for Tailwind projects, including arbitrary-value syntax like `shadow-[0_2px_8px_rgba(0,0,0,0.1)]` for non-standard values). For values that match Tailwind's default scale, the tool returns the named class (`shadow-md`); for off-scale values, it returns the arbitrary-value class.",
+      },
+      {
+        q: "Why does Glassmorphism Generator's preview look different from my final website?",
+        a: "Glassmorphism depends on what is *behind* the frosted glass — a colourful background reads more glassy; a uniform background looks flatter. The generator's preview uses a default colourful background; your actual website may have different content behind the glass card. To preview accurately, paste the generated CSS into your dev environment and check against your real background.",
+      },
+    ],
+  },
+
+  data: {
+    whatIs:
+      "Data tools on SabTools.in cover the JSON, CSV, Markdown, image, and aspect-ratio conversions that developers, content creators, and analysts run constantly when moving data between systems — converting JSON to CSV (and back), diffing two text blocks to see line-level changes, previewing Markdown in real time before publishing, encoding an image to Base64 for inline embedding, and computing aspect-ratios for video and image work. Each tool runs entirely in your browser with no upload — your data never leaves your device, which matters when the data is from a confidential database export, a customer file, or a work-laptop with strict upload policies. These complement the developer-category tools (JSON Formatter, JSON Validator, etc.) by focusing on the data-transformation rather than the data-validation side.",
+    keyFeatures: [
+      {
+        title: "Bidirectional JSON ↔ CSV with deep nesting handled",
+        description:
+          "JSON to CSV Converter flattens nested objects and arrays to dot-notation column names (customer.address.city, items[0].name) for spreadsheet-compatible output. CSV to JSON Converter parses the inverse, supports custom delimiters (comma, tab, semicolon, pipe), handles quoted fields with embedded commas, and detects character encoding (UTF-8, UTF-8-BOM, ISO-8859-1).",
+      },
+      {
+        title: "Line-level text diff with side-by-side view",
+        description:
+          "Text Diff Checker takes two text blocks and produces a side-by-side or unified diff showing additions (green), deletions (red), and unchanged lines. Useful for comparing two versions of a configuration file, two drafts of an article, or two blocks of generated code. Word-level diff toggle highlights smaller-than-line changes.",
+      },
+      {
+        title: "Live Markdown rendering with GFM extensions",
+        description:
+          "Markdown Preview renders Markdown as you type, supporting GitHub Flavored Markdown extensions — task lists (- [x]), tables, fenced code blocks with syntax highlighting, autolinks. Useful for previewing README files, blog drafts, and Markdown emails before publishing. Output as HTML for paste into WordPress, Notion, or other platforms.",
+      },
+      {
+        title: "Base64 image encoding and aspect-ratio computation",
+        description:
+          "Image to Base64 takes any image (PNG, JPG, SVG, WebP) and produces the data: URI for inline-embedding in HTML/CSS — useful for small icons that should not require an extra HTTP request. Aspect Ratio Calculator computes width:height ratios for video (16:9, 21:9, 4:3, 1:1, 9:16) and converts between resolution dimensions (1920x1080 = 16:9 = 1.778:1).",
+      },
+    ],
+    useCases: [
+      {
+        title: "Database-export and spreadsheet-import workflows",
+        description:
+          "Developer extracting JSON from a REST API and needing it in Excel: JSON to CSV Converter with the right key-flattening produces a CSV that opens cleanly in Excel/Google Sheets. The reverse (a business user submits an Excel file that needs to seed a database): CSV to JSON Converter produces structured JSON that the developer's import script consumes.",
+      },
+      {
+        title: "Code-review and configuration-change comparison",
+        description:
+          "Two versions of a YAML/JSON config file with subtle differences: Text Diff Checker highlights every changed line. Useful for pre-commit code review, debugging 'why is this version of the config breaking', and tracking changes through CI/CD pipelines without spinning up a full diff tool.",
+      },
+      {
+        title: "Content authoring with Markdown",
+        description:
+          "Blog writer drafting in Markdown: Markdown Preview renders the post as you type, surface bug catches before publishing (broken table syntax, missing list-marker, wrong fenced code language). Final HTML output pastes into WordPress, Ghost, Notion, or any other CMS that accepts HTML.",
+      },
+      {
+        title: "Frontend asset workflows",
+        description:
+          "Frontend developer needing inline data: URI for a small SVG icon — Image to Base64 produces the data-URI that drops into the CSS or HTML. Aspect Ratio Calculator confirms the 1920x1080 source video fits the 16:9 video player container correctly. Both common tasks in modern frontend.",
+      },
+    ],
+    howToChoose:
+      "For format conversion — JSON to CSV Converter and CSV to JSON Converter for tabular ↔ object data; pair with the JSON Formatter, JSON Validator, XML to JSON Converter, and YAML to JSON Converter in the Developer category for the full data-format ecosystem. For diff comparison — Text Diff Checker for any text-comparison need. For documentation and content — Markdown Preview for live rendering. For image and visual — Image to Base64 for embedding small images inline; Aspect Ratio Calculator for video and image dimension work. For lower-level data tasks (encoding, hashing, validation), the Developer category has Hash Generator, URL Encoder/Decoder, HTML Encoder/Decoder, JWT Decoder. Workflow for content-API integration: CSV to JSON Converter (Excel input) → JSON Formatter (verify structure) → use in code → if outputting to spreadsheet, JSON to CSV Converter on the way out. Workflow for content drafting: Markdown Preview during drafting → Word Counter (Text category) for word count → publish. None of these tools transmit your data to a server — all processing is client-side.",
+    indianContext:
+      "Data work in Indian developer and analyst contexts has specific characteristics — bank-statement exports come as CSVs that Excel mangles on import (₹ symbol encoding, DD/MM/YYYY date format vs Excel's MM/DD/YYYY default, leading zeros in PAN numbers stripped by Excel), GST returns export as JSON requiring conversion for spreadsheet review, and education-sector data (CBSE results, university transcripts) often comes in irregular CSV formats with multi-line headers. Our CSV to JSON Converter handles the malformed-quote-and-encoding cases that Excel chokes on. JSON to CSV Converter respects DD/MM/YYYY date formats common in Indian source data (rather than auto-converting to Excel's MM/DD/YYYY which causes off-by-one-month errors). Markdown adoption in Indian content workflows is growing — most documentation in Indian product companies uses Markdown (GitHub README, GitBook docs, Confluence, Notion); blog drafts increasingly start in Markdown before HTML. Indian frontend developers often work with low-bandwidth target users — every kilobyte of asset matters, and Image to Base64's inline-encoding is a sensible technique for icons under 4 KB (saves an HTTP request) but counterproductive for larger images (Base64 is ~33% larger than binary). The tool flags this trade-off when you Base64-encode anything above 4 KB.",
+    pillarFaqs: [
+      {
+        q: "Does CSV to JSON Converter handle Indian-format dates and currency symbols?",
+        a: "Yes — DD/MM/YYYY (and DD-MM-YYYY) date formats are recognised; the parser preserves them as strings rather than auto-converting to Excel-style MM/DD/YYYY. ₹ and ‹ symbols in numeric fields are stripped to leave just the number. Leading zeros (in PAN, Aadhaar, account numbers) are preserved as strings — the Excel default of stripping leading zeros is not applied.",
+      },
+      {
+        q: "How big a file can JSON to CSV Converter handle?",
+        a: "Up to about 50 MB of JSON input (which produces a similar-size CSV) before browser performance degrades. For larger files, a server-side or scripting solution (Python pandas, Node.js stream parsing) is more appropriate. For typical use cases (small-to-mid business data, API responses, configuration files), 50 MB is well above the typical need.",
+      },
+      {
+        q: "Is Text Diff Checker word-level or just line-level?",
+        a: "Both — the default is line-level (showing whole-line additions/deletions). Toggle 'word-level' for finer-grained highlighting that shows changed words within a line — useful for spotting a typo correction or a single-character edit. The diff algorithm is Myers' diff (the same algorithm Git uses) for accurate minimal-change identification.",
+      },
+      {
+        q: "Does Markdown Preview support custom Markdown extensions?",
+        a: "Standard CommonMark plus GitHub Flavored Markdown (GFM) extensions — task lists, tables, fenced code blocks, autolinks, strikethrough. It does not support custom extensions like Pandoc's footnotes, MathJax LaTeX rendering, or Mermaid diagrams. For those, use the relevant specialised tool (Pandoc, KaTeX renderer, Mermaid live editor).",
+      },
+      {
+        q: "When should I NOT use Image to Base64?",
+        a: "When the image is larger than ~4 KB. Base64 encoding adds about 33% size, so a 10 KB image becomes ~13 KB inlined into the HTML/CSS. The browser cannot cache an inlined Base64 image separately from the page, so every page load re-downloads it. For images above 4 KB, a separate HTTP request (and the browser's caching of that asset) is more efficient. The tool flags this when you encode anything above the threshold.",
+      },
+    ],
+  },
+
+  social: {
+    whatIs:
+      "Social media tools on SabTools.in cover the content-creation utilities that creators, marketers, and small-business operators use to ship Instagram, Twitter/X, YouTube, and Facebook posts efficiently — generating Instagram bios that stay under the 150-character limit while including key links, suggesting hashtag bundles for higher discoverability, resizing images to platform-specific dimensions (1080x1080 for IG feed, 1080x1920 for IG/FB story, 1280x720 for YouTube thumbnail), counting tweet characters under the 280-character limit (including links and emojis), generating shareable timestamped YouTube links, and downloading the high-res thumbnail image of any YouTube video. Each tool is purpose-built for one platform-specific task and runs entirely client-side.",
+    keyFeatures: [
+      {
+        title: "Bio length limits with line-break support",
+        description:
+          "Instagram Bio Generator handles the 150-character bio limit with proper UTF-16 counting (emojis count as 2 characters), supports the line-break character that the IG app does not insert by default (must be created via copy-paste from a generator), and flags when the bio approaches the limit so you can cut before publishing.",
+      },
+      {
+        title: "Niche-specific hashtag bundles",
+        description:
+          "Hashtag Generator builds 30-hashtag bundles by niche (food, fashion, fitness, travel, tech, finance, parenting) and target audience (India-specific or global). Mixes large (1M+ posts), medium (100K-1M), and small (10K-100K) hashtags for the engagement-balance algorithm rewards on Instagram and TikTok.",
+      },
+      {
+        title: "Multi-platform image resizing presets",
+        description:
+          "Social Media Image Resizer has presets for every major platform — Instagram (square 1080x1080, story 1080x1920, reel 1080x1920, carousel 1080x1080), Twitter/X (post 1200x675, header 1500x500), Facebook (post 1200x630, cover 851x315, story 1080x1920), LinkedIn (post 1200x627, banner 1584x396), YouTube (thumbnail 1280x720, banner 2560x1440). Crop or fit-and-pad modes.",
+      },
+      {
+        title: "Tweet character counting and YouTube utilities",
+        description:
+          "Tweet Character Counter handles the 280-character limit with link auto-shortening (URLs count as 23 characters regardless of actual length), emoji-aware counting, and per-segment counts for thread tweets. YouTube Timestamp Generator creates &t=120s deep-links to specific moments in a video. YouTube Thumbnail Downloader pulls the maxres thumbnail of any public video.",
+      },
+    ],
+    useCases: [
+      {
+        title: "Influencer or creator bio refresh",
+        description:
+          "Updating IG bio with the new product launch link: Instagram Bio Generator suggests bio templates ('Sharing daily food tips 🍴 | DM for orders') under 150 chars including the link tracking, with line breaks supported. Use the result for IG, then adapt for Twitter (160-char bio limit) and TikTok (80-char bio limit) variants.",
+      },
+      {
+        title: "Daily-posting content workflow",
+        description:
+          "Creator posting daily: Social Media Image Resizer takes the source 1920x1080 image and produces the four required platform variants (IG square, IG story, FB post, Twitter post) in 30 seconds. Hashtag Generator suggests the day's bundle by content theme. Tweet Character Counter ensures the cross-posted Twitter version stays under 280 with the link included.",
+      },
+      {
+        title: "Long-form video clip-sharing",
+        description:
+          "Sharing a specific 3-minute moment from a 60-minute YouTube video: YouTube Timestamp Generator creates the deep-link with the exact start time (and optional end time for embed-style segment sharing). Useful for podcast highlights, lecture clips, and meeting recordings.",
+      },
+      {
+        title: "Thumbnail re-use and inspiration",
+        description:
+          "Researcher or competitor analyst studying YouTube thumbnails: YouTube Thumbnail Downloader pulls the maxres image (1280x720) of any public video for archive or reference. Useful for analysis, benchmarking, and inspiration boards. Always respect copyright — fair use is for analysis, not republication.",
+      },
+    ],
+    howToChoose:
+      "For platform-specific bio and post — Instagram Bio Generator, Tweet Character Counter, Hashtag Generator. For visual content — Social Media Image Resizer for cross-platform sizing; for image generation and editing, the Image category has Image Compressor, Image Resizer, Background Remover, Image Filters, Collage Maker, and 30+ other image tools that complement the platform-specific resizer here. For YouTube creators — YouTube Timestamp Generator for shareable moments; YouTube Thumbnail Downloader for reference. For SEO and content distribution, the SEO category has SERP Preview, Headline Analyzer, Meta Tag Generator, and Open Graph Generator that cover the search-and-share-card side of social distribution. Workflow for a daily creator: take photo → Social Media Image Resizer (4 variants) → caption draft → Hashtag Generator → Tweet Character Counter (for Twitter version) → post. Workflow for video creator: upload to YouTube → YouTube Thumbnail Downloader (verify thumbnail) → YouTube Timestamp Generator (for promotional clips). None of these tools post directly to platforms — they generate the content; you copy-paste to the actual platform.",
+    indianContext:
+      "Indian social-media usage is unique in scale and pattern — India has the world's largest Instagram user base (516+ million), the largest YouTube user base (550+ million), and growing Twitter and Facebook user bases (35+ million and 405+ million respectively). Indian creator economy has exploded — over 8 million active creators across platforms in 2025, with the long tail (1K-10K followers) being the largest segment. Hashtag strategy in India differs from the global norm — region-specific tags (#mumbai, #delhi, #bengaluru, #chennai), language-specific tags (#hindi, #tamil, #telugu, #marathi, #bengali), festival tags (#diwali, #holi, #ganeshchaturthi, #onam, #pongal) drive high local engagement. Our Hashtag Generator includes regional and festival tags as toggles. Image dimensions are platform-standard globally, but Indian creators often need to repurpose for WhatsApp Status (vertical 9:16) which is functionally a sixth platform — Social Media Image Resizer has the WhatsApp Status preset. YouTube creators in India often work in multiple languages — Hindi, Tamil, Telugu, Bengali, Marathi, Kannada, Malayalam, Gujarati — and YouTube Timestamp Generator's deep-links work the same regardless of caption language. Tweet Character Counter handles Hindi/Tamil/Telugu/etc. UTF-16 character counts correctly (Devanagari characters can take 1-2 codepoints depending on conjuncts).",
+    pillarFaqs: [
+      {
+        q: "Does Hashtag Generator return only India-relevant hashtags?",
+        a: "By default, mixed — large global hashtags for reach plus India-specific and regional tags for local engagement. Toggle 'India only' to get only Indian-context hashtags (regional cities, languages, festivals, Indian brands and references). Most successful Indian creators use a 70-30 split (70% Indian-context, 30% global) for the 30-tag bundle on Instagram and TikTok.",
+      },
+      {
+        q: "How does Tweet Character Counter handle URLs?",
+        a: "Twitter automatically counts every URL as 23 characters regardless of actual length — a 50-character link and a 200-character link both count as 23. Our counter applies this rule, so a tweet with 'Read more https://very-long-url.com/article-with-a-lot-of-slashes-and-text' counts the URL portion as 23 characters and the rest of the text directly. Emojis count per UTF-16 codepoint (most emojis are 2 codepoints).",
+      },
+      {
+        q: "Can YouTube Thumbnail Downloader pull thumbnails for private or unlisted videos?",
+        a: "No — thumbnails are only accessible for public videos via the YouTube thumbnail URL pattern (`https://i.ytimg.com/vi/<videoId>/maxresdefault.jpg`). Private and unlisted videos do not expose this URL publicly, so the tool cannot retrieve them. For a video you own, use the YouTube Studio dashboard's thumbnail download.",
+      },
+      {
+        q: "Does Social Media Image Resizer preserve image quality?",
+        a: "It uses high-quality resampling (Lanczos resampling for downscaling, bilinear for upscaling) that preserves detail well. For images that are dramatically smaller than the target size (upscaling 400x300 to 1920x1080), there is unavoidable quality loss; the tool flags this. For typical use (downscaling a 4000x3000 source photo to 1080x1080 IG square), output is visually indistinguishable from the source.",
+      },
+      {
+        q: "Is Instagram Bio Generator's 150-character limit accurate?",
+        a: "Yes — Instagram counts UTF-16 codepoints (most emojis count as 2 chars; a regional indicator flag emoji like 🇮🇳 counts as 4). Our counter mirrors Instagram's exact counting rule, so a bio that fits in our preview will fit in IG. Be aware that some line-break characters take 1 character but display as a visual line break — that is the IG-app peculiarity our tool handles.",
+      },
+    ],
+  },
+
+  student: {
+    whatIs:
+      "Student-tools on SabTools.in cover the school and college productivity utilities that lie in the gap between general academic calculators and specialised exam tools — generating printable graph paper for mathematics homework, building flashcard decks for spaced-repetition study, generating timetables that fit class schedules and study blocks, producing handwriting practice pages for early grades, and counting words against assignment-length requirements. These are the small daily-use utilities that students actually need in school and college — not for entrance-exam prep (the Exam category covers that), not for grade computation (the Education category covers that), but for the in-between productive-study workflow.",
+    keyFeatures: [
+      {
+        title: "Printable graph paper in multiple grid styles",
+        description:
+          "Graph Paper Generator produces graph paper in cm/inch/mm grids, polar paper for trigonometric work, isometric paper for engineering drawing, log/semi-log paper for science graphs, and dot-grid paper for bullet-journal-style notes. Output as PDF for printing at school or home; A4 and US Letter sizes supported.",
+      },
+      {
+        title: "Flashcard creation and spaced-repetition export",
+        description:
+          "Flashcard Maker takes a topic and Q&A pairs (typed in or pasted from a CSV); produces a printable deck for physical study or an Anki-import file for digital spaced-repetition learning. Templates for vocabulary, formulas, history dates, and definition-style flashcards.",
+      },
+      {
+        title: "Class timetable and study schedule generation",
+        description:
+          "Timetable Generator handles class-period timetables (week × subject grid for school) and personal study timetables (subjects × time-blocks for exam prep). Constraints: avoid two classes per teacher in the same period, fit a target hours-per-subject distribution, leave slots for revision and rest.",
+      },
+      {
+        title: "Handwriting and assignment utilities",
+        description:
+          "Handwriting Page Generator produces ruled / 4-line / 2-line / cursive practice pages for early-grade handwriting practice (Indian school standard 4-line for English, 3-line for Hindi/regional script). Assignment Word Counter counts words against assignment length requirements with structure analysis (intro/body/conclusion length).",
+      },
+    ],
+    useCases: [
+      {
+        title: "Math and science homework graph paper",
+        description:
+          "Class 9 student doing geometry homework needs cm-grid graph paper but the school-issued one ran out: Graph Paper Generator produces a printable A4 cm-grid PDF in 30 seconds. Polar paper for Class 11/12 trigonometric coordinate problems; semi-log paper for Class 12 physics graphs. Saves the trip to the stationery shop.",
+      },
+      {
+        title: "Vocabulary and exam-preparation flashcards",
+        description:
+          "GRE/SAT/IELTS vocabulary builder: Flashcard Maker takes a 200-word vocabulary list (with meanings and example sentences), produces an Anki-import file for daily spaced-repetition review. Same workflow for Class 12 biology terminology, history dates, or chemistry formula recall.",
+      },
+      {
+        title: "Personal exam-prep schedule",
+        description:
+          "Class 12 student 90 days before boards: Timetable Generator with subjects (Physics, Chemistry, Maths, English, optional) and target hours per subject (more for weak subjects, less for strong) produces a daily 6-7 hour schedule with rotation and revision blocks. Pairs with the Study Time Planner in the Education category for exam-week-specific scheduling.",
+      },
+      {
+        title: "Early-grade handwriting and primary-school work",
+        description:
+          "Parents teaching primary-grade children at home: Handwriting Page Generator produces 4-line (English) or 3-line (Hindi) practice pages with optional traceable letters for the child to overwrite. Saves the otherwise-required workbook purchase. Useful particularly during school breaks for daily handwriting maintenance.",
+      },
+    ],
+    howToChoose:
+      "For math and science work — Graph Paper Generator covers all standard grid types. For memorisation and revision — Flashcard Maker for term-to-definition and Q&A workflows. For scheduling — Timetable Generator for both school class-timetables and personal study schedules. For early-grade learning — Handwriting Page Generator for English (4-line) and Hindi/regional (3-line) practice. For assignment-length compliance — Assignment Word Counter. For deeper academic-tools, the Education category has GPA Calculator, CGPA to Percentage, Grade Calculator, Study Time Planner; the Exam category has the entrance-exam score predictors (NEET, JEE, GATE, CAT). Workflow for a typical student: Graph Paper Generator (during math/science homework, as needed) → Flashcard Maker (during exam-prep month) → Timetable Generator (at semester start and exam-prep start) → Handwriting Page Generator (early-grade or non-Indian-script learners). Workflow for assignments: Assignment Word Counter (during draft and final). None of these tools replace the textbook, the teacher, or the actual study work — they are the small productivity utilities that smooth the workflow.",
+    indianContext:
+      "Indian school-and-college academic life is intense — CBSE / ICSE / State Boards have heavy paper-and-pen workload in math, science, and language subjects through Class 12, and undergraduate engineering programmes (BE, BTech) similarly use paper-and-pen for submissions. The Graph Paper Generator's 4-line and 3-line variants cover the Indian school standard for English (4-line ruling) and Hindi/regional scripts (3-line) — which differs from the US/UK 3-line ruling and is rarely available in stationery globally. CBSE board exam paper specifically uses 'cm-grid graph paper' for the geometry section in Class 10/12; the tool produces the exact format. Indian college engineering drawing (mechanical, civil) uses 'isometric grid paper' which is hard to find in tier-2/tier-3 city stationery — Graph Paper Generator produces this on demand. Flashcard Maker's Anki-export is appropriate for the technical-terminology-heavy CBSE class-11/12 syllabus (biology, chemistry, history) where memorisation is unavoidable; for engineering and medicine entrance prep, paired with the AI Quiz Generator in the AI category, this gives a strong revision toolkit. Indian schools often have 6-day timetables (Saturday is half-day or full-day), and our Timetable Generator handles 5-day, 6-day, and 7-day weekly cycles. Handwriting practice is heavily emphasised in the Indian primary curriculum (handwriting carries weight in CBSE / ICSE evaluation through Class 8) — Handwriting Page Generator's traceable-letter mode is particularly useful for grades 1-3.",
+    pillarFaqs: [
+      {
+        q: "Can Graph Paper Generator print to A4 with the right margins for Indian school work?",
+        a: "Yes — A4 is the default with 1.5 cm margins (matching CBSE board exam answer-sheet conventions for trim and binding). US Letter is also supported. The PDF output is print-ready; do not scale the print to fit, since that distorts the grid measurements. Use 'actual size' / '100%' in the print dialog.",
+      },
+      {
+        q: "Does Flashcard Maker integrate with Anki, Quizlet, or other apps?",
+        a: "Anki — yes, via .apkg export with proper deck formatting. Quizlet — yes, via .csv export in the Term, Definition format Quizlet imports. Other apps (RemNote, Mochi, SuperMemo) typically import CSV; the tool's CSV output works for those. Pure-printable flashcards — yes, A4 sheet with 8 cards per page, foldable for self-quiz.",
+      },
+      {
+        q: "How does Timetable Generator handle weekend study schedules?",
+        a: "Configurable — for school weekly-class-timetables, weekends are typically class-free (school closes Saturday evening through Sunday). For personal study-prep timetables, weekends can be scheduled for longer (4-6 hour) revision blocks since school class hours are absent. Toggle the 'study type' (school class vs personal study) and the schedule reflects accordingly.",
+      },
+      {
+        q: "Does Handwriting Page Generator support languages other than English and Hindi?",
+        a: "Tamil, Telugu, Kannada, Malayalam, Bengali, Marathi, Gujarati, and Punjabi are supported with the appropriate ruling per regional school conventions (most use 3-line ruling for the script). Urdu is supported with right-to-left reading direction. Other languages can be requested via the feedback link; we add scripts based on user demand.",
+      },
+      {
+        q: "Is Assignment Word Counter different from the general Word Counter in the Text category?",
+        a: "Yes — Assignment Word Counter has additional features for academic-assignment context: structure analysis (estimated intro/body/conclusion length given total length), heading-vs-body word distribution, citation count detection (matches against [1], (Smith, 2020), etc.), and reference-list separation (excludes the bibliography from the body word count). For non-assignment use (general writing), the general Word Counter in the Text category is simpler.",
+      },
+    ],
+  },
+
 };
 
 /**

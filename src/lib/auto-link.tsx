@@ -163,4 +163,13 @@ export const relatedPillars: Record<string, string[]> = {
   education: ["exam", "career", "science"],
   agriculture: ["indiaguide", "converters", "business"],
   electrical: ["construction", "math", "converters"],
+  // New in Batch 10
+  cooking: ["health", "shopping", "indiaguide"],
+  wedding: ["shopping", "fun", "indiaguide"],
+  shopping: ["finance", "cooking", "fun"],
+  whatsapp: ["social", "text", "fun"],
+  css: ["developer", "charts", "image"],
+  data: ["developer", "charts", "converters"],
+  social: ["whatsapp", "seo", "fun"],
+  student: ["education", "exam", "career"],
 };
