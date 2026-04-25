@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import { hindiTools } from "@/lib/hindi";
-import { tools } from "@/lib/tools";
+import { tools, categories } from "@/lib/tools";
+import { categoryPillarsHi } from "@/lib/category-pillars-hi";
 
 export const metadata: Metadata = {
   title: `${hindiTools.length}+ मुफ्त ऑनलाइन टूल्स हिंदी में`,
@@ -46,6 +47,41 @@ export default function HindiHomePage() {
         </p>
       </div>
 
+      {/* Hindi Topic Pillars — entry points into category guides */}
+      <section className="mb-14">
+        <div className="flex items-end justify-between mb-4">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900">विषय गाइड</h2>
+            <p className="text-sm text-gray-500 mt-1">श्रेणी के अनुसार पूरी जानकारी हिंदी में</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+          {Object.keys(categoryPillarsHi).map((slug) => {
+            const c = categories.find((x) => x.slug === slug);
+            if (!c) return null;
+            const toolCount = tools.filter((t) => t.category === slug).length;
+            return (
+              <Link
+                key={slug}
+                href={`/hi/category/${slug}`}
+                className="group flex items-start gap-3 bg-white hover:bg-orange-50/70 border border-gray-200 hover:border-orange-300 rounded-xl p-4 transition"
+              >
+                <div className="text-2xl flex-shrink-0">{c.icon}</div>
+                <div className="min-w-0">
+                  <div className="font-semibold text-gray-900 group-hover:text-orange-700 text-sm leading-tight">
+                    {c.name}
+                  </div>
+                  <div className="text-xs text-gray-500 mt-0.5">
+                    {toolCount} टूल्स
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
+      <h2 className="text-2xl font-bold text-gray-900 mb-4">सभी हिंदी टूल्स</h2>
       {/* Hindi Tools Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {hindiTools.map((ht) => {
@@ -61,9 +97,9 @@ export default function HindiHomePage() {
                   {tool?.icon || "🔧"}
                 </div>
                 <div className="min-w-0">
-                  <h2 className="font-semibold text-gray-800 group-hover:text-indigo-600 transition text-base">
+                  <h3 className="font-semibold text-gray-800 group-hover:text-indigo-600 transition text-base">
                     {ht.name}
-                  </h2>
+                  </h3>
                   <p className="text-sm text-gray-500 mt-1 leading-relaxed line-clamp-2">
                     {ht.description}
                   </p>

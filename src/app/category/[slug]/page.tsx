@@ -14,6 +14,7 @@ import {
   buildGraph,
 } from "@/lib/schema";
 import { categoryPillars } from "@/lib/category-pillars";
+import { categoryPillarsHi } from "@/lib/category-pillars-hi";
 import { autoLink, relatedPillars } from "@/lib/auto-link";
 
 /* ── Unique category descriptions for SEO (avoids thin/duplicate content) ── */
@@ -259,12 +260,24 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!cat) return {};
   const toolCount = tools.filter((t) => t.category === slug).length;
   const desc = categoryDescriptions[slug] || defaultCategoryDesc;
+  const hasHindiPillar = Boolean(categoryPillarsHi[slug]);
   return {
     title: `${cat.name} — ${toolCount} Free Online Tools for India`,
     description: desc.metaDesc,
     keywords: [cat.name.toLowerCase(), ...cat.description.toLowerCase().split(", ").slice(0, 5), "free tools", "online tools", "sabtools", "india"],
     alternates: {
       canonical: `https://sabtools.in/category/${slug}`,
+      // Only declare a Hindi alternate when an actual Hindi pillar exists
+      // for this category — otherwise hreflang would point at a 404.
+      ...(hasHindiPillar
+        ? {
+            languages: {
+              en: `https://sabtools.in/category/${slug}`,
+              hi: `https://sabtools.in/hi/category/${slug}`,
+              "x-default": `https://sabtools.in/category/${slug}`,
+            },
+          }
+        : {}),
     },
     openGraph: {
       title: `${cat.name} — ${toolCount} Free Online Tools | SabTools.in`,

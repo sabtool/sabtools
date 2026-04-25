@@ -1,10 +1,11 @@
 import { tools } from "@/lib/tools";
+import { categoryPillarsHi } from "@/lib/category-pillars-hi";
 
 export const dynamic = "force-static";
 
 /**
- * Hindi sitemap - contains all Hindi tool pages and Hindi homepage
- * Served at /sitemap-hi.xml
+ * Hindi sitemap - contains all Hindi tool pages, Hindi category pillars
+ * and the Hindi homepage. Served at /sitemap-hi.xml
  */
 export async function GET() {
   const baseUrl = "https://sabtools.in";
@@ -17,6 +18,13 @@ export async function GET() {
       changefreq: "daily",
       priority: "0.9",
     },
+    // Hindi category pillar pages — topic-cluster anchors for /hi
+    ...Object.keys(categoryPillarsHi).map((slug) => ({
+      loc: `${baseUrl}/hi/category/${slug}`,
+      lastmod: now,
+      changefreq: "weekly",
+      priority: "0.8",
+    })),
     ...tools.map((tool) => ({
       loc: `${baseUrl}/hi/tools/${tool.slug}`,
       lastmod: now,
