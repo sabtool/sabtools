@@ -49,24 +49,12 @@ export default function ToolFaq({ toolName, description, customFaqs }: ToolFaqPr
           <FaqAccordionItem key={index} question={faq.question} answer={faq.answer} />
         ))}
       </div>
-      {/* FAQ Schema JSON-LD for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: faqs.map((faq) => ({
-              "@type": "Question",
-              name: faq.question,
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: faq.answer,
-              },
-            })),
-          }),
-        }}
-      />
+      {/*
+        FAQPage JSON-LD is intentionally NOT emitted here — it is rendered
+        server-side as part of the unified @graph in ToolPageLayout.tsx so
+        the structured data is one cohesive block and crawlers don't have
+        to reconcile a separate, anonymous FAQPage with the page entity.
+      */}
     </section>
   );
 }

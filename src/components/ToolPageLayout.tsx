@@ -24,10 +24,28 @@ import {
   ORG_ID,
   SUPPORTED_LANGUAGES,
   webApplicationNode,
+  webPageNode,
   breadcrumbNode,
+  breadcrumbIdFor,
   howToNode,
+  faqPageNode,
   buildGraph,
 } from "@/lib/schema";
+
+/**
+ * Derive a short, human HowToStep name from the full step text without
+ * the trailing-ellipsis hack used previously (Google's docs flag those
+ * as low-quality in rich results). Cuts on the first sentence boundary
+ * if there is one, otherwise on the last word boundary before 70 chars.
+ */
+function shortStepName(step: string): string {
+  const trimmed = step.trim();
+  if (trimmed.length <= 70) return trimmed;
+  const sentenceEnd = trimmed.search(/[.!?]\s/);
+  if (sentenceEnd > 0 && sentenceEnd <= 70) return trimmed.slice(0, sentenceEnd);
+  const wordCut = trimmed.slice(0, 70).lastIndexOf(" ");
+  return wordCut > 30 ? trimmed.slice(0, wordCut) : trimmed.slice(0, 70);
+}
 
 interface ToolPageLayoutProps {
   tool: Tool;
@@ -41,30 +59,59 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
   // so a tool page never links up to a thin category landing page (Report §3.3).
   const pillar = categoryPillars[tool.category];
 
-  // Build a single @graph with WebApplication + BreadcrumbList + HowTo.
-  // FAQPage is emitted separately by ToolFaq so the schema matches its visible content.
+  // Build a unified @graph that anchors all per-page schemas (WebPage,
+  // WebApplication, BreadcrumbList, HowTo, FAQPage) under stable @ids and
+  // cross-references them — see Advanced SEO Strategy §Appendix A and
+  // Google's "About a page" structured-data guidance. Consolidating the
+  // FAQPage here (previously emitted client-side from ToolFaq.tsx) keeps
+  // crawlers from having to merge two disconnected blocks.
+  const pageUrl = `${SITE_URL}/tools/${tool.slug}`;
+  const webAppId = `${pageUrl}#application`;
+  const webPageId = `${pageUrl}#webpage`;
+  const breadcrumbId = breadcrumbIdFor(pageUrl);
+
+  // Compose featureList from content.keyFeatures (rich capability statements)
+  // and fall back to tool.keywords. Capped to 12 entries — Google ignores past
+  // ~10 and a long list can look spammy.
+  const featureList = [...(content.keyFeatures ?? []), ...(tool.keywords ?? [])]
+    .filter(Boolean)
+    .slice(0, 12);
+
   const toolGraph = buildGraph([
+    webPageNode({
+      url: pageUrl,
+      name: `${tool.name} — Free Online ${cat?.name || "Tool"}`,
+      description: tool.description,
+      inLanguage: SUPPORTED_LANGUAGES,
+      primaryEntityId: webAppId,
+      breadcrumbId,
+      dateModified: "2026-04-25",
+    }),
     webApplicationNode({
       slug: tool.slug,
       name: tool.name,
       description: tool.description,
-      featureList: tool.keywords,
+      featureList,
       category: cat?.name || "Online Tool",
       inLanguage: SUPPORTED_LANGUAGES,
+      mainEntityOfPage: webPageId,
     }),
-    breadcrumbNode([
-      { name: "Home", url: `${SITE_URL}/` },
-      { name: cat?.name || "Tools", url: `${SITE_URL}/category/${tool.category}` },
-      { name: tool.name },
-    ]),
+    breadcrumbNode(
+      [
+        { name: "Home", url: `${SITE_URL}/` },
+        { name: cat?.name || "Tools", url: `${SITE_URL}/category/${tool.category}` },
+        { name: tool.name },
+      ],
+      breadcrumbId
+    ),
     {
       ...howToNode({
         name: `How to Use ${tool.name} Online`,
         description: `Step-by-step guide to using ${tool.name} on SabTools.in — free, no signup required.`,
         steps: content.howToSteps.map((step, i) => ({
-          name: step.length > 60 ? step.substring(0, 57) + "..." : step,
+          name: shortStepName(step),
           text: step,
-          url: `${SITE_URL}/tools/${tool.slug}#step-${i + 1}`,
+          url: `${pageUrl}#step-${i + 1}`,
         })),
         inLanguage: SUPPORTED_LANGUAGES[0],
       }),
@@ -78,6 +125,16 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
       },
       publisher: { "@id": ORG_ID },
     },
+    // FAQPage in the same @graph — was previously a separate <script> tag
+    // from ToolFaq.tsx (now removed). Same questions/answers, same language.
+    ...(content.faqs && content.faqs.length > 0
+      ? [
+          faqPageNode(
+            content.faqs.map((f) => ({ q: f.question, a: f.answer })),
+            SUPPORTED_LANGUAGES[0]
+          ),
+        ]
+      : []),
   ]);
 
   return (

@@ -96,6 +96,9 @@ export interface WebApplicationNodeInput {
   inLanguage?: readonly string[] | string;
   /** If the tool has a named human reviewer/author (for E-E-A-T), pass their person @id */
   authorId?: string;
+  /** `@id` of the WebPage that hosts this WebApplication — bidirectional link to keep
+   *  the entity graph internally consistent. */
+  mainEntityOfPage?: string;
 }
 
 /**
@@ -125,6 +128,7 @@ export function webApplicationNode(input: WebApplicationNodeInput) {
     featureList: input.featureList,
     publisher: { "@id": ORG_ID },
     ...(input.authorId ? { author: { "@id": input.authorId } } : {}),
+    ...(input.mainEntityOfPage ? { mainEntityOfPage: { "@id": input.mainEntityOfPage } } : {}),
   };
 }
 
@@ -134,18 +138,69 @@ export interface BreadcrumbItem {
 }
 
 /**
+ * Stable @id helper for the BreadcrumbList that anchors a given page URL —
+ * lets WebPage / WebApplication nodes reference the breadcrumb via @id.
+ */
+export const breadcrumbIdFor = (pageUrl: string) => `${pageUrl}#breadcrumb`;
+
+/**
  * BreadcrumbList — emit on every non-homepage URL.
  * The last item should not have a url (it is the current page).
+ *
+ * Pass `id` to give the node a stable `@id` that other nodes (e.g. WebPage)
+ * can cross-reference. Without it the node is anonymous, which is fine for
+ * isolated pages but loses entity-graph cohesion on tool pages.
  */
-export function breadcrumbNode(items: BreadcrumbItem[]) {
+export function breadcrumbNode(items: BreadcrumbItem[], id?: string) {
   return {
     "@type": "BreadcrumbList",
+    ...(id ? { "@id": id } : {}),
     itemListElement: items.map((item, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: item.name,
       ...(item.url ? { item: item.url } : {}),
     })),
+  };
+}
+
+export interface WebPageNodeInput {
+  /** Full canonical URL of the page, e.g. https://sabtools.in/tools/emi-calculator */
+  url: string;
+  name: string;
+  description: string;
+  inLanguage?: readonly string[] | string;
+  /** Optional `@id` of the page's primary entity (WebApplication, Article, etc.) */
+  primaryEntityId?: string;
+  /** Optional `@id` of the BreadcrumbList that goes with this page */
+  breadcrumbId?: string;
+  /** ISO 8601 date — when the page was first published */
+  datePublished?: string;
+  /** ISO 8601 date — when the page was last meaningfully updated */
+  dateModified?: string;
+}
+
+/**
+ * WebPage — the canonical anchor schema.org expects every URL to declare.
+ * Most rich-result eligibility is unaffected by its absence, but it's the
+ * recommended pattern (Google docs, "About a page") and it lets us tie the
+ * WebApplication / FAQPage / BreadcrumbList nodes to a single page entity.
+ */
+export function webPageNode(input: WebPageNodeInput) {
+  const lang = input.inLanguage ?? SUPPORTED_LANGUAGES;
+  return {
+    "@type": "WebPage",
+    "@id": `${input.url}#webpage`,
+    url: input.url,
+    name: input.name,
+    description: input.description,
+    inLanguage: lang,
+    isPartOf: { "@id": WEBSITE_ID },
+    publisher: { "@id": ORG_ID },
+    ...(input.primaryEntityId ? { mainEntity: { "@id": input.primaryEntityId } } : {}),
+    ...(input.breadcrumbId ? { breadcrumb: { "@id": input.breadcrumbId } } : {}),
+    ...(input.datePublished ? { datePublished: input.datePublished } : {}),
+    ...(input.dateModified ? { dateModified: input.dateModified } : {}),
   };
 }
 
