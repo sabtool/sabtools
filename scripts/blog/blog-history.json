@@ -115,9 +115,10 @@
     "menstrual-cycle-calculator",
     "ip-address-lookup",
     "gift-registry-calculator",
-    "staircase-calculator"
+    "staircase-calculator",
+    "readability-checker"
   ],
-  "lastCategory": "construction",
-  "totalPosts": 116,
-  "lastRun": "2026-04-25T08:13:10.017Z"
+  "lastCategory": "text",
+  "totalPosts": 117,
+  "lastRun": "2026-04-25T11:57:43.561Z"
 }
