@@ -10,10 +10,13 @@ import {
   ORG_ID,
   WEBSITE_ID,
   breadcrumbNode,
+  breadcrumbIdFor,
   faqPageNode,
   buildGraph,
+  personIdFor,
 } from "@/lib/schema";
 import { categoryPillarsHi } from "@/lib/category-pillars-hi";
+import { getAuthorByCategory } from "@/lib/authors";
 
 /**
  * Hindi-side category pillar pages. Mirrors the English `/category/{slug}`
@@ -78,36 +81,54 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
   const catTools = tools.filter((t) => t.category === slug);
   const hindiSlugSet = new Set(hindiToolSlugs);
   const pageUrl = `${SITE_URL}/hi/category/${slug}`;
+  const webPageId = `${pageUrl}#webpage`;
+  const collectionPageId = `${pageUrl}#collectionpage`;
+  const itemListId = `${pageUrl}#itemlist`;
+  const hiBreadcrumbId = breadcrumbIdFor(pageUrl);
 
-  // Single @graph: WebPage (hi-IN) + ItemList + BreadcrumbList + FAQPage (hi-IN).
-  // Cross-references the homepage Organization & WebSite via @id.
+  // E-E-A-T reviewer attribution — same domain expert who reviews English
+  // category tools also signs off on the Hindi pillar (Strategy §2.4).
+  const categoryReviewer = getAuthorByCategory(slug);
+
+  // Single @graph: WebPage → CollectionPage → ItemList (mainEntity) →
+  // BreadcrumbList (breadcrumb), all cross-linked via @id, plus FAQPage.
+  // Same entity-graph cohesion as the English pillar — Google sees them
+  // as language alternates of one CollectionPage entity.
   const graph = buildGraph([
     {
       "@type": "WebPage",
-      "@id": `${pageUrl}#webpage`,
+      "@id": webPageId,
       url: pageUrl,
       name: `${cat.name} — हिंदी में`,
       description: pillar.whatIs,
       inLanguage: "hi-IN",
       isPartOf: { "@id": WEBSITE_ID },
       publisher: { "@id": ORG_ID },
-      breadcrumb: { "@id": `${pageUrl}#breadcrumb` },
+      breadcrumb: { "@id": hiBreadcrumbId },
+      mainEntity: { "@id": collectionPageId },
     },
     {
       "@type": "CollectionPage",
-      "@id": `${pageUrl}#collectionpage`,
+      "@id": collectionPageId,
       name: `${cat.name} — हिंदी`,
       url: pageUrl,
       inLanguage: "hi-IN",
       isPartOf: { "@id": WEBSITE_ID },
       publisher: { "@id": ORG_ID },
+      mainEntity: { "@id": itemListId },
+      breadcrumb: { "@id": hiBreadcrumbId },
+      ...(categoryReviewer
+        ? { reviewedBy: { "@id": personIdFor(categoryReviewer.slug) } }
+        : {}),
+      dateModified: "2026-04-25",
       numberOfItems: catTools.length,
     },
     {
       "@type": "ItemList",
-      "@id": `${pageUrl}#itemlist`,
+      "@id": itemListId,
       name: `${cat.name} — मुफ्त ऑनलाइन टूल्स`,
       numberOfItems: catTools.length,
+      itemListOrder: "https://schema.org/ItemListOrderAscending",
       itemListElement: catTools.map((t, i) => ({
         "@type": "ListItem",
         position: i + 1,
@@ -122,7 +143,7 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
         { name: "होम", url: `${SITE_URL}/hi` },
         { name: cat.name },
       ],
-      `${pageUrl}#breadcrumb`,
+      hiBreadcrumbId,
     ),
     faqPageNode(pillar.pillarFaqs, "hi-IN"),
   ]);

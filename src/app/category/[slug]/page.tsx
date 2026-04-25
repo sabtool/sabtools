@@ -10,10 +10,13 @@ import {
   SITE_URL,
   ORG_ID,
   breadcrumbNode,
+  breadcrumbIdFor,
   faqPageNode,
   buildGraph,
+  personIdFor,
 } from "@/lib/schema";
 import { categoryPillars } from "@/lib/category-pillars";
+import { getAuthorByCategory } from "@/lib/authors";
 import { categoryPillarsHi } from "@/lib/category-pillars-hi";
 import { autoLink, relatedPillars } from "@/lib/auto-link";
 
@@ -328,18 +331,47 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         },
       ];
 
-  // Single @graph: CollectionPage + ItemList + BreadcrumbList + FAQPage,
-  // with publisher linked via @id to the homepage Organization entity.
+  // Stable @ids so the CollectionPage can cross-reference the ItemList
+  // and BreadcrumbList via { "@id": ... } — entity-graph cohesion
+  // (Strategy §2.4 / Appendix A).
+  const categoryUrl = `${SITE_URL}/category/${slug}`;
+  const collectionPageId = `${categoryUrl}#collectionpage`;
+  const itemListId = `${categoryUrl}#itemlist`;
+  const categoryBreadcrumbId = breadcrumbIdFor(categoryUrl);
+
+  // E-E-A-T reviewer attribution: pull the same domain expert who reviews
+  // tools in this category, matched via authors[].categories. Using a
+  // Person @id from the homepage's Organization.member set so Google sees
+  // the named reviewer as part of the publisher's expert team.
+  const categoryReviewer = getAuthorByCategory(slug);
+
+  // Single @graph: CollectionPage → ItemList (mainEntity) → BreadcrumbList
+  // (breadcrumb), all cross-linked via @id, plus FAQPage. Publisher and
+  // reviewer link to the homepage Organization & Person entities by @id.
   const categoryGraph = buildGraph([
     {
       "@type": "CollectionPage",
-      "@id": `${SITE_URL}/category/${slug}#collectionpage`,
+      "@id": collectionPageId,
       name: `${cat.name} - Free Online Tools`,
       description: desc.intro,
-      url: `${SITE_URL}/category/${slug}`,
+      url: categoryUrl,
       inLanguage: "en-IN",
       isPartOf: { "@id": `${SITE_URL}/#website` },
       publisher: { "@id": ORG_ID },
+      // Cross-references — let crawlers traverse the graph instead of
+      // treating the ItemList and BreadcrumbList as orphan nodes.
+      mainEntity: { "@id": itemListId },
+      breadcrumb: { "@id": categoryBreadcrumbId },
+      // Pillar topical link (when this category has a hand-written pillar)
+      ...(pillar ? { about: { "@id": `${SITE_URL}/#${slug}-topic` } } : {}),
+      // Named expert reviewer for E-E-A-T signal — references the Person
+      // node already declared on the homepage member set (Batch 19).
+      ...(categoryReviewer
+        ? { reviewedBy: { "@id": personIdFor(categoryReviewer.slug) } }
+        : {}),
+      // Last-updated freshness signal — tracked manually and bumped on
+      // each major batch so the date stays meaningful.
+      dateModified: "2026-04-25",
       numberOfItems: catTools.length,
       hasPart: catTools.slice(0, 10).map((t) => ({
         "@type": "WebApplication",
@@ -349,10 +381,14 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     },
     {
       "@type": "ItemList",
-      "@id": `${SITE_URL}/category/${slug}#itemlist`,
+      "@id": itemListId,
       name: `${cat.name} — Free Online Tools`,
       description: `${catTools.length} free ${cat.name.toLowerCase()} on SabTools.in`,
       numberOfItems: catTools.length,
+      // Tools are listed in the order defined in lib/tools.ts (most
+      // popular first within the category) — declare it so crawlers
+      // know this isn't an arbitrary shuffle.
+      itemListOrder: "https://schema.org/ItemListOrderAscending",
       itemListElement: catTools.map((t, i) => ({
         "@type": "ListItem",
         position: i + 1,
@@ -360,10 +396,13 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         url: `${SITE_URL}/tools/${t.slug}`,
       })),
     },
-    breadcrumbNode([
-      { name: "Home", url: `${SITE_URL}/` },
-      { name: cat.name },
-    ]),
+    breadcrumbNode(
+      [
+        { name: "Home", url: `${SITE_URL}/` },
+        { name: cat.name },
+      ],
+      categoryBreadcrumbId
+    ),
     faqPageNode(categoryFaqs, "en-IN"),
   ]);
 
