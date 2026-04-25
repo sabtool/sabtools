@@ -30,6 +30,8 @@ export const metadata: Metadata = {
     title: "About SabTools.in — India's Largest Free Online Tools Platform",
     description: `${tools.length}+ free online tools for calculators, converters, text, developer, image, SEO, and more. Made for India.`,
     images: ["https://sabtools.in/og-image.png"],
+    creator: "@sabtools",
+    site: "@sabtools",
   },
 };
 

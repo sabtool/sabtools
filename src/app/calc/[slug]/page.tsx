@@ -49,6 +49,8 @@ export async function generateMetadata({
       title: page.title,
       description: page.description,
       images: ["https://sabtools.in/og-image.png"],
+      creator: "@sabtools",
+      site: "@sabtools",
     },
     other: {
       rating: "general",

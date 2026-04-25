@@ -43,15 +43,37 @@ export async function generateMetadata({
       modifiedTime: post.date,
       siteName: "SabTools.in",
       locale: "en_IN",
-      ...(post.image && {
-        images: [{ url: `https://sabtools.in${post.image.src}`, width: post.image.width, height: post.image.height, alt: post.image.alt }],
-      }),
+      // Always emit at least one og:image — falls back to the sitewide
+      // brand card when the post has no custom hero image. Pages without
+      // og:image render with no preview card on social platforms, which
+      // tanks click-through (Strategy §2.6 — every URL needs a preview).
+      images: post.image
+        ? [
+            {
+              url: `https://sabtools.in${post.image.src}`,
+              width: post.image.width,
+              height: post.image.height,
+              alt: post.image.alt,
+            },
+          ]
+        : [
+            {
+              url: "https://sabtools.in/og-image.png",
+              width: 1200,
+              height: 630,
+              alt: post.title,
+            },
+          ],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.description,
-      ...(post.image && { images: [`https://sabtools.in${post.image.src}`] }),
+      images: post.image
+        ? [`https://sabtools.in${post.image.src}`]
+        : ["https://sabtools.in/og-image.png"],
+      creator: "@sabtools",
+      site: "@sabtools",
     },
   };
 }

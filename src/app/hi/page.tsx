@@ -25,6 +25,8 @@ export const metadata: Metadata = {
     title: `SabTools.in - ${hindiTools.length}+ मुफ्त ऑनलाइन टूल्स हिंदी में`,
     description: "मुफ्त ऑनलाइन टूल्स — 100% मुफ्त, बिना साइनअप।",
     images: ["https://sabtools.in/og-image.png"],
+    creator: "@sabtools",
+    site: "@sabtools",
   },
 };
 

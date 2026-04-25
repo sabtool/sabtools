@@ -16,12 +16,24 @@ export const metadata: Metadata = {
     url: "https://sabtools.in/blog",
     type: "website",
     locale: "en_IN",
+    siteName: "SabTools.in",
+    images: [
+      {
+        url: "https://sabtools.in/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "SabTools.in Blog — Financial Tips, Tax Guides & Tool Tutorials",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Blog — Financial Tips, Tax Guides & Tool Tutorials",
     description:
       "Expert articles on personal finance, tax planning, and free online tools for Indians.",
+    images: ["https://sabtools.in/og-image.png"],
+    creator: "@sabtools",
+    site: "@sabtools",
   },
 };
 

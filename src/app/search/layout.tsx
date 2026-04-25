@@ -19,11 +19,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     siteName: "SabTools.in",
+    images: [
+      {
+        url: "https://sabtools.in/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Search 460+ Free Online Tools — SabTools.in",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Search Tools — SabTools.in",
     description: "Search 460+ free online tools on SabTools.in.",
+    images: ["https://sabtools.in/og-image.png"],
+    creator: "@sabtools",
+    site: "@sabtools",
   },
 };
 

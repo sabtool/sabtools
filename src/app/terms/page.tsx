@@ -14,12 +14,23 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     siteName: "SabTools.in",
+    images: [
+      {
+        url: "https://sabtools.in/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Terms of Service — SabTools.in",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Terms of Service — SabTools.in",
     description:
       "Comprehensive Terms of Service for SabTools.in free online tools.",
+    images: ["https://sabtools.in/og-image.png"],
+    creator: "@sabtools",
+    site: "@sabtools",
   },
 };
 

@@ -46,6 +46,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title,
       description,
       images: ["https://sabtools.in/og-image.png"],
+      creator: "@sabtools",
+      site: "@sabtools",
     },
   };
 }

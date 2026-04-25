@@ -12,11 +12,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     siteName: "SabTools.in",
+    images: [
+      {
+        url: "https://sabtools.in/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Disclaimer — SabTools.in",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Disclaimer — SabTools.in",
     description: "Disclaimer for SabTools.in free online tools and calculators.",
+    images: ["https://sabtools.in/og-image.png"],
+    creator: "@sabtools",
+    site: "@sabtools",
   },
 };
 

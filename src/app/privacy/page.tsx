@@ -14,12 +14,23 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     siteName: "SabTools.in",
+    images: [
+      {
+        url: "https://sabtools.in/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Privacy Policy — SabTools.in",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Privacy Policy — SabTools.in",
     description:
       "Privacy Policy for SabTools.in — DPDP Act 2023 compliant. Learn how we handle your personal data.",
+    images: ["https://sabtools.in/og-image.png"],
+    creator: "@sabtools",
+    site: "@sabtools",
   },
 };
 
