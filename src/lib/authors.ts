@@ -183,3 +183,23 @@ export function getAuthorBySlug(slug: string): Author | undefined {
 export function getAllAuthors(): Author[] {
   return authors;
 }
+
+/**
+ * Resolve the most appropriate Author for a given tool-category slug.
+ *
+ * The `authors[]` array already declares which categories each expert
+ * reviews via `Author.categories`. Returns the first author whose list
+ * includes the slug — otherwise undefined, in which case callers should
+ * fall back to the founder.
+ *
+ * Used by the blog Article schema (E-E-A-T author attribution per post)
+ * and could replace the parallel `reviewerMap` in `components/ReviewedBy.tsx`
+ * over time so the two stay in sync from a single source of truth.
+ */
+export function getAuthorByCategory(categorySlug: string): Author | undefined {
+  if (!categorySlug) return undefined;
+  const lc = categorySlug.toLowerCase();
+  return authors.find((a) =>
+    a.categories.some((c) => c.toLowerCase() === lc)
+  );
+}

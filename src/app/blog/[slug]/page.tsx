@@ -15,7 +15,9 @@ import {
   breadcrumbNode,
   faqPageNode,
   buildGraph,
+  personIdFor,
 } from "@/lib/schema";
+import { getAuthorByCategory } from "@/lib/authors";
 
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
@@ -278,7 +280,17 @@ export default async function BlogPostPage({
       description: post.description,
       datePublished: post.date,
       dateModified: post.date,
-      author: { "@id": FOUNDER_ID },
+      // Author attribution by domain expertise: walk the resolved category
+      // through `authors[].categories` so a Finance post is bylined to
+      // Priya Sharma (CFP), a Health post to Dr. Rajesh Kumar (MBBS),
+      // etc. Falls back to the founder when no expert claims that category
+      // — same E-E-A-T model Google rewards in YMYL rich-results.
+      author: {
+        "@id":
+          (resolvedCategorySlug
+            ? personIdFor(getAuthorByCategory(resolvedCategorySlug)?.slug ?? "rakesh-seervi")
+            : FOUNDER_ID),
+      },
       publisher: { "@id": ORG_ID },
       mainEntityOfPage: { "@id": webPageId },
       isPartOf: { "@id": WEBSITE_ID },
@@ -287,15 +299,25 @@ export default async function BlogPostPage({
       wordCount,
       ...(aboutArray.length > 0 ? { about: aboutArray } : {}),
       ...(mentionsArray.length > 0 ? { mentions: mentionsArray } : {}),
-      ...(post.image && {
-        image: {
-          "@type": "ImageObject",
-          url: `${SITE_URL}${post.image.src}`,
-          width: post.image.width,
-          height: post.image.height,
-          caption: post.image.alt,
-        },
-      }),
+      // Article rich-results require `image`. Always emit one — use the
+      // post's hero image when available, otherwise fall back to the
+      // sitewide brand card so Google's eligibility check doesn't fail
+      // on posts that never got a custom screenshot.
+      image: post.image
+        ? {
+            "@type": "ImageObject",
+            url: `${SITE_URL}${post.image.src}`,
+            width: post.image.width,
+            height: post.image.height,
+            caption: post.image.alt,
+          }
+        : {
+            "@type": "ImageObject",
+            url: `${SITE_URL}/og-image.png`,
+            width: 1200,
+            height: 630,
+            caption: post.title,
+          },
       inLanguage: "en-IN",
       isAccessibleForFree: true,
     },
