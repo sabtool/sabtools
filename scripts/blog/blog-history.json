@@ -116,9 +116,10 @@
     "ip-address-lookup",
     "gift-registry-calculator",
     "staircase-calculator",
-    "readability-checker"
+    "readability-checker",
+    "event-checklist-generator"
   ],
-  "lastCategory": "text",
-  "totalPosts": 117,
-  "lastRun": "2026-04-25T11:57:43.561Z"
+  "lastCategory": "wedding",
+  "totalPosts": 118,
+  "lastRun": "2026-04-25T17:24:26.562Z"
 }
