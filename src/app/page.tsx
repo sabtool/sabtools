@@ -6,6 +6,7 @@ import RecentlyUsed from "@/components/RecentlyUsed";
 import FavoriteTools from "@/components/FavoriteTools";
 import ToolOfTheDay from "@/components/ToolOfTheDay";
 import { categories, tools } from "@/lib/tools";
+import { categoryPillars } from "@/lib/category-pillars";
 import { getAllPosts } from "@/lib/blog";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import {
@@ -26,6 +27,29 @@ export default function HomePage() {
   ];
 
   const popular = popularTools.map((slug) => tools.find((t) => t.slug === slug)!).filter(Boolean);
+
+  // Topic Hubs — categories that have a full pillar guide. Rendered as the
+  // first content block after the hero so the homepage's primary signal to
+  // Google is "this site has 30 topic-cluster hubs", not "this site has a
+  // long unsorted tool list" (Advanced SEO Strategy §3.3 — topical authority).
+  // Order is hand-picked with the highest-intent verticals first.
+  const pillarHubOrder = [
+    "finance", "tax", "business", "indiaguide", "realestate", "vehicle", "health",
+    "education", "exam", "career", "legal", "construction", "agriculture", "electrical",
+    "developer", "ai", "seo", "image", "pdf", "text", "math", "science",
+    "converters", "datetime", "charts", "data", "css", "security", "utility",
+    "cooking", "wedding", "shopping", "whatsapp", "social", "student",
+    "fun", "astrology",
+  ];
+  const topicHubs = pillarHubOrder
+    .filter((slug) => categoryPillars[slug])
+    .map((slug) => {
+      const cat = categories.find((c) => c.slug === slug);
+      const pillar = categoryPillars[slug];
+      const count = tools.filter((t) => t.category === slug).length;
+      return cat ? { cat, pillar, count } : null;
+    })
+    .filter((x): x is { cat: typeof categories[number]; pillar: typeof categoryPillars[string]; count: number } => x !== null);
 
   const homepageFaqs = [
     {
@@ -78,6 +102,23 @@ export default function HomePage() {
         url: `${SITE_URL}/tools/${tool.slug}`,
       })),
     },
+    // Topic Hubs ItemList — exposes our 30 pillar guides as a structured
+    // collection so Google can crawl them as the site's primary topic
+    // clusters rather than discovering them only via the long category
+    // list lower on the page.
+    {
+      "@type": "ItemList",
+      name: "Topic Guides on SabTools.in",
+      description:
+        "Comprehensive topic-cluster guides — each one explains a category and curates the tools inside it.",
+      numberOfItems: topicHubs.length,
+      itemListElement: topicHubs.map(({ cat }, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: `${cat.name} Guide`,
+        url: `${SITE_URL}/category/${cat.slug}`,
+      })),
+    },
     faqPageNode(homepageFaqs, SUPPORTED_LANGUAGES[0]),
   ]);
 
@@ -115,6 +156,67 @@ export default function HomePage() {
         <AdBanner format="horizontal" />
       </div>
 
+      {/* Topic Guides — the homepage's primary topical-authority signal.
+          Sits above the popular-tools grid so the first thing Google sees
+          after the hero is "30 pillar topic hubs", not a tool dump.
+          Cards link to /category/{slug} where the full pillar guide lives.
+       */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+        <div className="flex items-end justify-between mb-8 flex-col sm:flex-row gap-4 text-center sm:text-left">
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">📚 Explore Topic Guides</h2>
+            <p className="text-gray-500 mt-2 max-w-2xl">
+              Deep, India-focused guides for every category — read these before picking a tool, or use the tool grid below.
+            </p>
+          </div>
+          <Link
+            href="#all-tools"
+            className="text-sm font-semibold text-indigo-600 hover:text-indigo-700 transition shrink-0"
+          >
+            Skip to tool list →
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {topicHubs.map(({ cat, pillar, count }) => {
+            // Trim the pillar's whatIs to the first sentence (or 140 chars)
+            // so the card stays visually balanced and crawlers see a unique
+            // teaser per hub instead of the same boilerplate everywhere.
+            const teaser = (() => {
+              const text = pillar.whatIs.trim();
+              const sentenceEnd = text.search(/[.!?]\s/);
+              const cut = sentenceEnd > 60 && sentenceEnd <= 180 ? sentenceEnd + 1 : 140;
+              return text.length <= cut ? text : text.slice(0, cut).trim() + "…";
+            })();
+            return (
+              <Link
+                key={cat.slug}
+                href={`/category/${cat.slug}`}
+                className="group relative bg-white rounded-2xl border border-gray-100 p-5 hover:border-indigo-200 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 flex flex-col"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${cat.color} flex items-center justify-center text-white text-xl shadow-sm group-hover:scale-105 transition`}>
+                    {cat.icon}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 text-base group-hover:text-indigo-600 transition">
+                      {cat.name} Guide
+                    </h3>
+                    <p className="text-xs text-gray-500">{count} tools · India-focused</p>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed flex-1">{teaser}</p>
+                <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-indigo-600 group-hover:gap-2 transition-all">
+                  Read the {cat.name} guide
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </span>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
       {/* Tool of the Day */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-8">
         <ToolOfTheDay />
@@ -139,29 +241,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Categories */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
-        <div className="text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">📂 Browse by Category</h2>
-          <p className="text-gray-500 mt-2">Find the right tool for your needs</p>
+      {/* Compact category nav — every category gets a homepage link, but
+          we no longer duplicate the rich pillar-card presentation done in
+          the Topic Guides section above. This gives crawlers the full set
+          of category links and users a quick jump-list, without making
+          the homepage feel redundant. */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+        <div className="text-center mb-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">📂 All Categories</h2>
+          <p className="text-gray-500 mt-2">Jump to any category — {categories.length} in total</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="flex flex-wrap justify-center gap-2">
           {categories.map((cat) => {
             const count = tools.filter((t) => t.category === cat.slug).length;
             return (
               <Link
                 key={cat.slug}
                 href={`/category/${cat.slug}`}
-                className="glass-card p-6 group block"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-white hover:bg-indigo-50 border border-gray-200 hover:border-indigo-200 rounded-full text-sm font-medium text-gray-700 hover:text-indigo-700 transition shadow-sm"
               >
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${cat.color} flex items-center justify-center text-white text-2xl mb-4 shadow-lg group-hover:scale-110 transition`}>
-                  {cat.icon}
-                </div>
-                <h3 className="font-bold text-gray-800 text-lg mb-1">{cat.name}</h3>
-                <p className="text-sm text-gray-500 mb-3">{cat.description}</p>
-                <span className="text-xs font-semibold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">
-                  {count} tools
-                </span>
+                <span>{cat.icon}</span>
+                <span>{cat.name}</span>
+                <span className="text-xs text-gray-400">{count}</span>
               </Link>
             );
           })}
@@ -174,7 +275,7 @@ export default function HomePage() {
       </div>
 
       {/* All Tools Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+      <section id="all-tools" className="max-w-7xl mx-auto px-4 sm:px-6 py-16 scroll-mt-20">
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">🛠️ All Tools</h2>
           <p className="text-gray-500 mt-2">Complete list of all {tools.length} free online tools</p>
