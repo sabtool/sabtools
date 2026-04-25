@@ -15,7 +15,9 @@ import {
   howToNode,
   faqPageNode,
   buildGraph,
+  personIdFor,
 } from "@/lib/schema";
+import { getAuthorByCategory } from "@/lib/authors";
 
 export function generateStaticParams() {
   return hindiTools.map((t) => ({ slug: t.slug }));
@@ -79,6 +81,13 @@ export default async function HindiToolPage({ params }: { params: Promise<{ slug
         featureList: tool.keywords,
         category: cat?.name || "Online Tool",
         inLanguage: "hi-IN",
+        // E-E-A-T author attribution — same category expert validates
+        // the Hindi version of the tool. Links via @id to the Person
+        // node declared on the homepage Organization.member set.
+        authorId: (() => {
+          const expert = getAuthorByCategory(tool.category);
+          return expert ? personIdFor(expert.slug) : undefined;
+        })(),
       }),
       "@id": `${SITE_URL}/hi/tools/${slug}#application`,
       url: `${SITE_URL}/hi/tools/${slug}`,

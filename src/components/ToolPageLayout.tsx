@@ -37,7 +37,9 @@ import {
   faqPageNode,
   videoObjectNode,
   buildGraph,
+  personIdFor,
 } from "@/lib/schema";
+import { getAuthorByCategory } from "@/lib/authors";
 
 /**
  * Derive a short, human HowToStep name from the full step text without
@@ -116,6 +118,15 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
       category: cat?.name || "Online Tool",
       inLanguage: SUPPORTED_LANGUAGES,
       mainEntityOfPage: webPageId,
+      // E-E-A-T author attribution — same domain expert who reviews the
+      // category (Priya Sharma for Finance, Dr. Rajesh Kumar for Health,
+      // etc.) is declared as the WebApplication author. Links via @id
+      // to the Person node already in the homepage Organization.member
+      // set, keeping the entity graph internally consistent.
+      authorId: (() => {
+        const expert = getAuthorByCategory(tool.category);
+        return expert ? personIdFor(expert.slug) : undefined;
+      })(),
     }),
     breadcrumbNode(
       [
