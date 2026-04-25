@@ -143,7 +143,7 @@ export default function ImageFormatConverter() {
         />
         {image ? (
           <div className="space-y-3">
-            <img src={image} alt="Image preview" className="max-h-48 mx-auto rounded-lg shadow" loading="lazy" />
+            <img src={image} alt="Source image preview before format conversion" className="max-h-48 mx-auto rounded-lg shadow" loading="lazy" />
             <p className="text-sm text-gray-600">
               <span className="font-semibold">{fileName}</span> • {originalFormat} • {formatBytes(originalSize)} • {dimensions.w}×{dimensions.h}px
             </p>

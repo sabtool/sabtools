@@ -204,8 +204,12 @@ async function main() {
     keywords: keywords.meta,
     toolSlug: tool.slug,
     image: {
+      // Richer alt text helps both screen-reader users and image search.
+      // Pattern: "<Tool Name> — Free Online <description> Tool on SabTools.in"
+      // matches the descriptive style we ship for older posts and gives Google
+      // a real subject line rather than a generic "Tool" string.
       src: `/blog/${tool.slug}.webp`,
-      alt: `${tool.name} — Free Online Tool on SabTools.in`,
+      alt: `${tool.name} — Free Online ${tool.description} Tool on SabTools.in`,
       width: 1200,
       height: 630,
     },

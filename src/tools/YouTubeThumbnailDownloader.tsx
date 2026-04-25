@@ -74,7 +74,7 @@ export default function YouTubeThumbnailDownloader() {
                   Open / Download
                 </a>
               </div>
-              <img src={t.url} alt={t.name} className="w-full rounded-lg shadow-sm" loading="lazy" />
+              <img src={t.url} alt={`YouTube thumbnail (${t.name}) at ${t.width}×${t.height} pixels`} className="w-full rounded-lg shadow-sm" loading="lazy" />
             </div>
           ))}
         </div>

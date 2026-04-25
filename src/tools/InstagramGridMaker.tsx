@@ -122,7 +122,7 @@ export default function InstagramGridMaker() {
             >
               {previewPieces.map((src, i) => (
                 <div key={i} className="relative group cursor-pointer" onClick={() => downloadPiece(i)}>
-                  <img src={src} alt={`Piece ${i + 1}`} className="w-full rounded-md border border-gray-200" />
+                  <img src={src} alt={`Instagram grid piece ${i + 1}`} className="w-full rounded-md border border-gray-200" />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center rounded-md opacity-0 group-hover:opacity-100 transition">
                     <span className="text-white font-bold text-lg">{i + 1}</span>
                   </div>
@@ -144,7 +144,7 @@ export default function InstagramGridMaker() {
               </div>
               <div className="grid grid-cols-3 gap-0.5">
                 {previewPieces.map((src, i) => (
-                  <img key={i} src={src} alt={`Grid ${i + 1}`} className="w-full aspect-square object-cover" />
+                  <img key={i} src={src} alt={`Instagram profile preview tile ${i + 1}`} className="w-full aspect-square object-cover" />
                 ))}
               </div>
             </div>

@@ -33,7 +33,7 @@ export default function QrCodeGenerator() {
       {qrUrl && (
         <div className="result-card text-center">
           <canvas ref={canvasRef} className="hidden" />
-          <img src={qrUrl} alt="QR Code" width={size} height={size} className="mx-auto rounded-xl border border-gray-200" />
+          <img src={qrUrl} alt={`Generated QR code for: ${text.slice(0, 60)}${text.length > 60 ? "…" : ""}`} width={size} height={size} className="mx-auto rounded-xl border border-gray-200" />
           <button onClick={download} className="btn-primary mt-4 text-sm !py-2 !px-5">Download QR Code</button>
         </div>
       )}

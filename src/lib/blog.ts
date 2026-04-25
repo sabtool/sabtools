@@ -2932,7 +2932,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "sip-calculator",
     image: {
       src: "/blog/sip-calculator.webp",
-      alt: "SIP Calculator — Free Online Tool on SabTools.in",
+      alt: "SIP Calculator — Free Online Calculate Systematic Investment Plan returns for Mutual Funds Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -3073,7 +3073,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "age-calculator",
     image: {
       src: "/blog/age-calculator.webp",
-      alt: "Age Calculator — Free Online Tool on SabTools.in",
+      alt: "Age Calculator — Free Online Calculate exact age in years, months, days from date of birth Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -3210,7 +3210,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "gst-calculator",
     image: {
       src: "/blog/gst-calculator.webp",
-      alt: "GST Calculator — Free Online Tool on SabTools.in",
+      alt: "GST Calculator — Free Online Calculate GST amount and total price with 5%, 12%, 18%, 28% rates Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -3351,7 +3351,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "bmi-calculator",
     image: {
       src: "/blog/bmi-calculator.webp",
-      alt: "BMI Calculator — Free Online Tool on SabTools.in",
+      alt: "BMI Calculator — Free Online Calculate Body Mass Index and check health category Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -3488,7 +3488,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "fd-calculator",
     image: {
       src: "/blog/fd-calculator.webp",
-      alt: "FD Calculator — Free Online Tool on SabTools.in",
+      alt: "FD Calculator — Free Online Calculate Fixed Deposit maturity amount and interest earned Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -3629,7 +3629,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "word-counter",
     image: {
       src: "/blog/word-counter.webp",
-      alt: "Word Counter — Free Online Tool on SabTools.in",
+      alt: "Word Counter — Free Online Count words, characters, sentences and paragraphs in text Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -3766,7 +3766,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "ppf-calculator",
     image: {
       src: "/blog/ppf-calculator.webp",
-      alt: "PPF Calculator — Free Online Tool on SabTools.in",
+      alt: "PPF Calculator — Free Online Calculate Public Provident Fund maturity with yearly compounding Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -3907,7 +3907,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "json-formatter",
     image: {
       src: "/blog/json-formatter.webp",
-      alt: "JSON Formatter — Free Online Tool on SabTools.in",
+      alt: "JSON Formatter — Free Online Format, validate and beautify JSON data with syntax highlighting Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -4044,7 +4044,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "compound-interest-calculator",
     image: {
       src: "/blog/compound-interest-calculator.webp",
-      alt: "Compound Interest Calculator — Free Online Tool on SabTools.in",
+      alt: "Compound Interest Calculator — Free Online Calculate compound interest with different compounding frequencies Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -4185,7 +4185,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "image-compressor",
     image: {
       src: "/blog/image-compressor.webp",
-      alt: "Image Compressor — Free Online Tool on SabTools.in",
+      alt: "Image Compressor — Free Online Compress images to reduce file size without losing quality Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -4322,7 +4322,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "income-tax-calculator",
     image: {
       src: "/blog/income-tax-calculator.webp",
-      alt: "Income Tax Calculator — Free Online Tool on SabTools.in",
+      alt: "Income Tax Calculator — Free Online Calculate income tax under Old & New regime for India FY 2024-25 Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -4463,7 +4463,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "qr-code-generator",
     image: {
       src: "/blog/qr-code-generator.webp",
-      alt: "QR Code Generator — Free Online Tool on SabTools.in",
+      alt: "QR Code Generator — Free Online Generate QR codes for URLs, text, WiFi, phone numbers Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -4600,7 +4600,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "salary-calculator",
     image: {
       src: "/blog/salary-calculator.webp",
-      alt: "Salary Calculator — Free Online Tool on SabTools.in",
+      alt: "Salary Calculator — Free Online Calculate in-hand salary from CTC with PF, Tax & deductions Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -4741,7 +4741,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "password-generator",
     image: {
       src: "/blog/password-generator.webp",
-      alt: "Password Generator — Free Online Tool on SabTools.in",
+      alt: "Password Generator — Free Online Generate strong, secure random passwords with custom length and characters Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -4878,7 +4878,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "home-loan-calculator",
     image: {
       src: "/blog/home-loan-calculator.webp",
-      alt: "Home Loan Calculator — Free Online Tool on SabTools.in",
+      alt: "Home Loan Calculator — Free Online Calculate home loan EMI with year-wise principal vs interest breakdown Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -5019,7 +5019,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "love-calculator",
     image: {
       src: "/blog/love-calculator.webp",
-      alt: "Love Calculator — Free Online Tool on SabTools.in",
+      alt: "Love Calculator — Free Online Fun love compatibility calculator - check your love percentage Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -5156,7 +5156,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "pdf-to-image",
     image: {
       src: "/blog/pdf-to-image.webp",
-      alt: "PDF to Image — Free Online Tool on SabTools.in",
+      alt: "PDF to Image — Free Online Get PDF file info and extract text content from PDF files Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -5293,7 +5293,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "currency-converter",
     image: {
       src: "/blog/currency-converter.webp",
-      alt: "Currency Converter — Free Online Tool on SabTools.in",
+      alt: "Currency Converter — Free Online Convert between INR, USD, EUR, GBP, AED, SAR, JPY and more currencies Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -5430,7 +5430,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "binary-calculator",
     image: {
       src: "/blog/binary-calculator.webp",
-      alt: "Binary Calculator — Free Online Tool on SabTools.in",
+      alt: "Binary Calculator — Free Online Binary arithmetic (add, subtract, AND, OR, XOR, NOT, shift) with decimal, octal and hex conversion Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -5567,7 +5567,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "in-hand-salary-calculator",
     image: {
       src: "/blog/in-hand-salary-calculator.webp",
-      alt: "In-Hand Salary Calculator — Free Online Tool on SabTools.in",
+      alt: "In-Hand Salary Calculator — Free Online Calculate monthly in-hand salary from CTC with detailed payslip including PF, tax and deductions Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -5704,7 +5704,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "image-to-jpg",
     image: {
       src: "/blog/image-to-jpg.webp",
-      alt: "Image to JPG Converter — Free Online Tool on SabTools.in",
+      alt: "Image to JPG Converter — Free Online Convert PNG, WebP, BMP images to JPG format Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -5841,7 +5841,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "timezone-converter",
     image: {
       src: "/blog/timezone-converter.webp",
-      alt: "Timezone Converter — Free Online Tool on SabTools.in",
+      alt: "Timezone Converter — Free Online Convert time between different timezones worldwide Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -5978,7 +5978,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "serp-preview",
     image: {
       src: "/blog/serp-preview.webp",
-      alt: "SERP Preview — Free Online Tool on SabTools.in",
+      alt: "SERP Preview — Free Online Preview how your page looks in Google search results with real-time character counts Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -6115,7 +6115,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "mobile-number-tracker",
     image: {
       src: "/blog/mobile-number-tracker.webp",
-      alt: "Mobile Number Tracker — Free Online Tool on SabTools.in",
+      alt: "Mobile Number Tracker — Free Online Identify Indian mobile operator and telecom circle from phone number Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -6252,7 +6252,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "hra-calculator",
     image: {
       src: "/blog/hra-calculator.webp",
-      alt: "HRA Exemption Calculator — Free Online Tool on SabTools.in",
+      alt: "HRA Exemption Calculator — Free Online Calculate HRA exemption for income tax under Section 10(13A) Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -6389,7 +6389,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "steel-weight-calculator",
     image: {
       src: "/blog/steel-weight-calculator.webp",
-      alt: "Steel Weight Calculator — Free Online Tool on SabTools.in",
+      alt: "Steel Weight Calculator — Free Online Calculate weight of TMT bars, flat bars, angles, channels, pipes & plates with cost estimation Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -6526,7 +6526,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "protein-intake-calculator",
     image: {
       src: "/blog/protein-intake-calculator.webp",
-      alt: "Protein Intake Calculator — Free Online Tool on SabTools.in",
+      alt: "Protein Intake Calculator — Free Online Calculate daily protein needs based on weight, activity and fitness goal Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -6663,7 +6663,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "rent-receipt-generator",
     image: {
       src: "/blog/rent-receipt-generator.webp",
-      alt: "Rent Receipt Generator — Free Online Tool on SabTools.in",
+      alt: "Rent Receipt Generator — Free Online Generate rent receipts for HRA tax exemption claims Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -6800,7 +6800,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "emi-affordability-calculator",
     image: {
       src: "/blog/emi-affordability-calculator.webp",
-      alt: "EMI Affordability Calculator — Free Online Tool on SabTools.in",
+      alt: "EMI Affordability Calculator — Free Online Calculate max affordable EMI based on salary using 50% rule with loan amount table Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -6937,7 +6937,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "transformer-calculator",
     image: {
       src: "/blog/transformer-calculator.webp",
-      alt: "Transformer Calculator — Free Online Tool on SabTools.in",
+      alt: "Transformer Calculator — Free Online Calculate transformer turns ratio, secondary voltage/turns and power transfer Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -7074,7 +7074,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "gpa-calculator",
     image: {
       src: "/blog/gpa-calculator.webp",
-      alt: "GPA Calculator — Free Online Tool on SabTools.in",
+      alt: "GPA Calculator — Free Online Calculate SGPA/CGPA with 10-point and 4-point grading scales Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -7211,7 +7211,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "calorie-calculator",
     image: {
       src: "/blog/calorie-calculator.webp",
-      alt: "Calorie Calculator — Free Online Tool on SabTools.in",
+      alt: "Calorie Calculator — Free Online Calculate daily calorie intake for weight loss, gain or maintenance Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -7348,7 +7348,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "css-gradient-generator",
     image: {
       src: "/blog/css-gradient-generator.webp",
-      alt: "CSS Gradient Generator — Free Online Tool on SabTools.in",
+      alt: "CSS Gradient Generator — Free Online Create beautiful CSS linear and radial gradients with live preview Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -7485,7 +7485,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "wire-size-calculator",
     image: {
       src: "/blog/wire-size-calculator.webp",
-      alt: "Wire Size Calculator — Free Online Tool on SabTools.in",
+      alt: "Wire Size Calculator — Free Online Calculate recommended wire size in sq mm for Indian standards based on current, voltage and cable length Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -7622,7 +7622,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "cgpa-to-percentage",
     image: {
       src: "/blog/cgpa-to-percentage.webp",
-      alt: "CGPA to Percentage — Free Online Tool on SabTools.in",
+      alt: "CGPA to Percentage — Free Online Convert CGPA to percentage using CBSE, VTU & other formulas Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -7759,7 +7759,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "irrigation-calculator",
     image: {
       src: "/blog/irrigation-calculator.webp",
-      alt: "Irrigation Calculator — Free Online Tool on SabTools.in",
+      alt: "Irrigation Calculator — Free Online Calculate water requirement, irrigation schedule, pump capacity and electricity cost for crops Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -7896,7 +7896,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "wedding-date-finder",
     image: {
       src: "/blog/wedding-date-finder.webp",
-      alt: "Wedding Date Finder — Free Online Tool on SabTools.in",
+      alt: "Wedding Date Finder — Free Online Find auspicious wedding dates (Shubh Muhurat) based on Hindu Panchang for 2025-2027 Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -8033,7 +8033,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "privacy-policy-generator",
     image: {
       src: "/blog/privacy-policy-generator.webp",
-      alt: "Privacy Policy Generator — Free Online Tool on SabTools.in",
+      alt: "Privacy Policy Generator — Free Online Generate a free privacy policy for your website or app Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -8170,7 +8170,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "flashcard-maker",
     image: {
       src: "/blog/flashcard-maker.webp",
-      alt: "Flashcard Maker — Free Online Tool on SabTools.in",
+      alt: "Flashcard Maker — Free Online Create study flashcards with flip animation, shuffle, progress tracking and study mode scoring Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -8307,7 +8307,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "csv-viewer-editor",
     image: {
       src: "/blog/csv-viewer-editor.webp",
-      alt: "CSV Viewer & Editor — Free Online Tool on SabTools.in",
+      alt: "CSV Viewer & Editor — Free Online Upload or paste CSV data, view in editable table with sort, filter and export Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -8444,7 +8444,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "text-reverser",
     image: {
       src: "/blog/text-reverser.webp",
-      alt: "Text Reverser — Free Online Tool on SabTools.in",
+      alt: "Text Reverser — Free Online Reverse any text string character by character Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -8581,7 +8581,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "screen-resolution-checker",
     image: {
       src: "/blog/screen-resolution-checker.webp",
-      alt: "Screen Resolution Checker — Free Online Tool on SabTools.in",
+      alt: "Screen Resolution Checker — Free Online Check your current screen resolution, DPI and device pixel ratio Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -8718,7 +8718,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "road-trip-planner",
     image: {
       src: "/blog/road-trip-planner.webp",
-      alt: "Road Trip Planner — Free Online Tool on SabTools.in",
+      alt: "Road Trip Planner — Free Online Plan road trips with fuel cost, time estimate, toll and per-person cost split Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -8855,7 +8855,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "rashi-calculator",
     image: {
       src: "/blog/rashi-calculator.webp",
-      alt: "Rashi Calculator — Free Online Tool on SabTools.in",
+      alt: "Rashi Calculator — Free Online Find your Rashi (zodiac sign) by date of birth or name letter with personality traits Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -8992,7 +8992,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "affidavit-generator",
     image: {
       src: "/blog/affidavit-generator.webp",
-      alt: "Affidavit Generator — Free Online Tool on SabTools.in",
+      alt: "Affidavit Generator — Free Online Generate affidavits for name change, address proof, income declaration and self declaration Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -9129,7 +9129,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "marks-percentage-calculator",
     image: {
       src: "/blog/marks-percentage-calculator.webp",
-      alt: "Marks Percentage Calculator — Free Online Tool on SabTools.in",
+      alt: "Marks Percentage Calculator — Free Online Calculate percentage, grade and pass/fail status for single or multiple subjects Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -9266,7 +9266,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "wedding-budget-calculator",
     image: {
       src: "/blog/wedding-budget-calculator.webp",
-      alt: "Wedding Budget Calculator — Free Online Tool on SabTools.in",
+      alt: "Wedding Budget Calculator — Free Online Plan wedding budget with auto-allocation for venue, catering, decoration and per-plate estimate Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -9403,7 +9403,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "grade-calculator",
     image: {
       src: "/blog/grade-calculator.webp",
-      alt: "Grade Calculator — Free Online Tool on SabTools.in",
+      alt: "Grade Calculator — Free Online Calculate percentage, grade and pass/fail status for multiple subjects Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -9540,7 +9540,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "sentence-counter",
     image: {
       src: "/blog/sentence-counter.webp",
-      alt: "Sentence Counter — Free Online Tool on SabTools.in",
+      alt: "Sentence Counter — Free Online Count sentences, words, characters, paragraphs with reading and speaking time estimates Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -9677,7 +9677,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "cat-percentile-calculator",
     image: {
       src: "/blog/cat-percentile-calculator.webp",
-      alt: "CAT Percentile Calculator — Free Online Tool on SabTools.in",
+      alt: "CAT Percentile Calculator — Free Online Estimate CAT percentile from section-wise scores with IIM cutoff reference Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -9814,7 +9814,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "timetable-generator",
     image: {
       src: "/blog/timetable-generator.webp",
-      alt: "Timetable Generator — Free Online Tool on SabTools.in",
+      alt: "Timetable Generator — Free Online Create school or college timetable with color-coded subjects, print and download as PNG Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -9951,7 +9951,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "matrix-calculator",
     image: {
       src: "/blog/matrix-calculator.webp",
-      alt: "Matrix Calculator — Free Online Tool on SabTools.in",
+      alt: "Matrix Calculator — Free Online Add, subtract, multiply matrices. Calculate transpose, determinant and inverse for 2x2, 3x3, 4x4 Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -10088,7 +10088,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "neet-score-predictor",
     image: {
       src: "/blog/neet-score-predictor.webp",
-      alt: "NEET Score Predictor — Free Online Tool on SabTools.in",
+      alt: "NEET Score Predictor — Free Online Predict NEET score, percentile and expected college category from correct/wrong answers Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -10225,7 +10225,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "land-measurement-converter",
     image: {
       src: "/blog/land-measurement-converter.webp",
-      alt: "Land Measurement Converter — Free Online Tool on SabTools.in",
+      alt: "Land Measurement Converter — Free Online Convert between Acre, Hectare, Bigha, Guntha, Cent, Kanal, Marla, Biswa, Katha and more Indian land units Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -10362,7 +10362,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "image-to-base64",
     image: {
       src: "/blog/image-to-base64.webp",
-      alt: "Image to Base64 — Free Online Tool on SabTools.in",
+      alt: "Image to Base64 — Free Online Convert images to Base64 encoded string for embedding in code Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -10499,7 +10499,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "email-leak-checker",
     image: {
       src: "/blog/email-leak-checker.webp",
-      alt: "Email Leak Checker — Free Online Tool on SabTools.in",
+      alt: "Email Leak Checker — Free Online Check if your email was in a data breach and get security recommendations Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -10636,7 +10636,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "date-difference-calculator",
     image: {
       src: "/blog/date-difference-calculator.webp",
-      alt: "Date Difference Calculator — Free Online Tool on SabTools.in",
+      alt: "Date Difference Calculator — Free Online Calculate difference between two dates in days, months, years Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -10773,7 +10773,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "truth-or-dare",
     image: {
       src: "/blog/truth-or-dare.webp",
-      alt: "Truth or Dare — Free Online Tool on SabTools.in",
+      alt: "Truth or Dare — Free Online Truth or Dare game with Mild, Medium and Spicy difficulty levels Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -10910,7 +10910,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "markdown-preview",
     image: {
       src: "/blog/markdown-preview.webp",
-      alt: "Markdown Preview — Free Online Tool on SabTools.in",
+      alt: "Markdown Preview — Free Online Write and preview Markdown with live rendering Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -11047,7 +11047,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "photo-frame-maker",
     image: {
       src: "/blog/photo-frame-maker.webp",
-      alt: "Photo Frame Maker — Free Online Tool on SabTools.in",
+      alt: "Photo Frame Maker — Free Online Add beautiful frames to photos including Polaroid, wood, Diwali and Christmas styles Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -11184,7 +11184,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "solar-panel-calculator",
     image: {
       src: "/blog/solar-panel-calculator.webp",
-      alt: "Solar Panel Calculator — Free Online Tool on SabTools.in",
+      alt: "Solar Panel Calculator — Free Online Calculate solar panel system size, cost, savings and payback period for Indian cities Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -11321,7 +11321,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "percentage-to-cgpa",
     image: {
       src: "/blog/percentage-to-cgpa.webp",
-      alt: "Percentage to CGPA — Free Online Tool on SabTools.in",
+      alt: "Percentage to CGPA — Free Online Convert percentage to CGPA using multiple university formulas Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -11458,7 +11458,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "handwriting-page-generator",
     image: {
       src: "/blog/handwriting-page-generator.webp",
-      alt: "Handwriting Page Generator — Free Online Tool on SabTools.in",
+      alt: "Handwriting Page Generator — Free Online Generate 4-line Hindi, 2-line English & ruled handwriting practice pages with name/date header Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -11595,7 +11595,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "seed-rate-calculator",
     image: {
       src: "/blog/seed-rate-calculator.webp",
-      alt: "Seed Rate Calculator — Free Online Tool on SabTools.in",
+      alt: "Seed Rate Calculator — Free Online Calculate seed requirement per crop with germination rate adjustment, spacing info and cost estimate Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -11732,7 +11732,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "rent-vs-buy-calculator",
     image: {
       src: "/blog/rent-vs-buy-calculator.webp",
-      alt: "Rent vs Buy Calculator — Free Online Tool on SabTools.in",
+      alt: "Rent vs Buy Calculator — Free Online Compare total cost of buying vs renting a property over a period Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -11869,7 +11869,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "date-add-subtract",
     image: {
       src: "/blog/date-add-subtract.webp",
-      alt: "Date Add/Subtract — Free Online Tool on SabTools.in",
+      alt: "Date Add/Subtract — Free Online Add or subtract days, months, years from a date Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -12006,7 +12006,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "resume-score-checker",
     image: {
       src: "/blog/resume-score-checker.webp",
-      alt: "Resume Score Checker — Free Online Tool on SabTools.in",
+      alt: "Resume Score Checker — Free Online Analyze your resume for keywords, sections, formatting and ATS compatibility with a score out of 100 Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -12143,7 +12143,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "gemstone-recommendation",
     image: {
       src: "/blog/gemstone-recommendation.webp",
-      alt: "Gemstone Recommendation — Free Online Tool on SabTools.in",
+      alt: "Gemstone Recommendation — Free Online Get recommended gemstone based on Rashi with weight, metal, finger & mantra details Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -12280,7 +12280,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "upi-qr-generator",
     image: {
       src: "/blog/upi-qr-generator.webp",
-      alt: "UPI QR Generator — Free Online Tool on SabTools.in",
+      alt: "UPI QR Generator — Free Online Generate UPI payment QR codes for GPay, PhonePe, Paytm and more Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -12417,7 +12417,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "graph-paper-generator",
     image: {
       src: "/blog/graph-paper-generator.webp",
-      alt: "Graph Paper Generator — Free Online Tool on SabTools.in",
+      alt: "Graph Paper Generator — Free Online Generate printable graph, ruled, dot grid, isometric & blank paper in A4/Letter with custom colors Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -12554,7 +12554,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "website-speed-estimator",
     image: {
       src: "/blog/website-speed-estimator.webp",
-      alt: "Website Speed Estimator — Free Online Tool on SabTools.in",
+      alt: "Website Speed Estimator — Free Online Estimate page load time based on resources, get speed score and optimization tips Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -12691,7 +12691,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "area-converter",
     image: {
       src: "/blog/area-converter.webp",
-      alt: "Area Converter — Free Online Tool on SabTools.in",
+      alt: "Area Converter — Free Online Convert between sq meters, sq feet, acres, hectares & more Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -12828,7 +12828,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "guest-list-manager",
     image: {
       src: "/blog/guest-list-manager.webp",
-      alt: "Guest List Manager — Free Online Tool on SabTools.in",
+      alt: "Guest List Manager — Free Online Manage wedding guest list with RSVP tracking, categories, side filters and text export Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -12965,7 +12965,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "water-tank-calculator",
     image: {
       src: "/blog/water-tank-calculator.webp",
-      alt: "Water Tank Calculator — Free Online Tool on SabTools.in",
+      alt: "Water Tank Calculator — Free Online Calculate water tank size based on family members with overhead & underground recommendations Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -13102,7 +13102,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "text-shadow-generator",
     image: {
       src: "/blog/text-shadow-generator.webp",
-      alt: "Text Shadow Generator — Free Online Tool on SabTools.in",
+      alt: "Text Shadow Generator — Free Online Generate CSS text-shadow with multiple layers and live preview Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -13239,7 +13239,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "plywood-calculator",
     image: {
       src: "/blog/plywood-calculator.webp",
-      alt: "Plywood Calculator — Free Online Tool on SabTools.in",
+      alt: "Plywood Calculator — Free Online Calculate plywood sheets needed for walls, ceiling & floor with 10% wastage and cost estimate Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -13376,7 +13376,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "htaccess-generator",
     image: {
       src: "/blog/htaccess-generator.webp",
-      alt: ".htaccess Generator — Free Online Tool on SabTools.in",
+      alt: ".htaccess Generator — Free Online Generate .htaccess rules for HTTPS, redirects, GZIP, caching, IP blocking and more Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -13513,7 +13513,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "pdf-to-word",
     image: {
       src: "/blog/pdf-to-word.webp",
-      alt: "PDF to Word — Free Online Tool on SabTools.in",
+      alt: "PDF to Word — Free Online Extract text from PDF files and download as editable text document Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -13650,7 +13650,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "blood-pressure-checker",
     image: {
       src: "/blog/blood-pressure-checker.webp",
-      alt: "Blood Pressure Checker — Free Online Tool on SabTools.in",
+      alt: "Blood Pressure Checker — Free Online Check blood pressure category: Normal, Elevated, Stage 1/2 Hypertension Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -13787,7 +13787,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "experience-calculator",
     image: {
       src: "/blog/experience-calculator.webp",
-      alt: "Experience Calculator — Free Online Tool on SabTools.in",
+      alt: "Experience Calculator — Free Online Calculate total work experience across multiple jobs with overlap detection in years, months and days Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -13924,7 +13924,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "nakshatra-calculator",
     image: {
       src: "/blog/nakshatra-calculator.webp",
-      alt: "Nakshatra Calculator — Free Online Tool on SabTools.in",
+      alt: "Nakshatra Calculator — Free Online Find your birth Nakshatra (star) with deity, symbol & compatible nakshatras Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -14061,7 +14061,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "assignment-word-counter",
     image: {
       src: "/blog/assignment-word-counter.webp",
-      alt: "Assignment Word Counter — Free Online Tool on SabTools.in",
+      alt: "Assignment Word Counter — Free Online Count words, characters, sentences with handwritten page estimate and target word progress bar Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -14198,7 +14198,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "kundli-calculator",
     image: {
       src: "/blog/kundli-calculator.webp",
-      alt: "Kundli Calculator — Free Online Tool on SabTools.in",
+      alt: "Kundli Calculator — Free Online Generate basic Kundli with Sun sign, Moon sign (Rashi), ruling planet, element & compatibility Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -14335,7 +14335,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "appraisal-hike-calculator",
     image: {
       src: "/blog/appraisal-hike-calculator.webp",
-      alt: "Appraisal Hike Calculator — Free Online Tool on SabTools.in",
+      alt: "Appraisal Hike Calculator — Free Online Calculate new CTC after hike or reverse-calculate hike % with industry average comparison Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -14472,7 +14472,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "ai-poem-generator",
     image: {
       src: "/blog/ai-poem-generator.webp",
-      alt: "AI Poem Generator — Free Online Tool on SabTools.in",
+      alt: "AI Poem Generator — Free Online Generate poems in Haiku, Limerick, Sonnet, Free Verse, Rhyming & Acrostic styles with mood selection Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -14609,7 +14609,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "json-to-csv",
     image: {
       src: "/blog/json-to-csv.webp",
-      alt: "JSON to CSV Converter — Free Online Tool on SabTools.in",
+      alt: "JSON to CSV Converter — Free Online Convert JSON data to CSV format for spreadsheets Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -14746,7 +14746,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "water-tds-calculator",
     image: {
       src: "/blog/water-tds-calculator.webp",
-      alt: "Water TDS Calculator — Free Online Tool on SabTools.in",
+      alt: "Water TDS Calculator — Free Online Check water TDS quality classification and get purifier recommendation (UV, RO, RO+UV) Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -14883,7 +14883,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "stopwatch",
     image: {
       src: "/blog/stopwatch.webp",
-      alt: "Stopwatch — Free Online Tool on SabTools.in",
+      alt: "Stopwatch — Free Online Online stopwatch with lap timing and millisecond precision Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -15020,7 +15020,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "bmr-calculator",
     image: {
       src: "/blog/bmr-calculator.webp",
-      alt: "BMR Calculator — Free Online Tool on SabTools.in",
+      alt: "BMR Calculator — Free Online Calculate Basal Metabolic Rate and daily calorie needs Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -15157,7 +15157,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "case-converter",
     image: {
       src: "/blog/case-converter.webp",
-      alt: "Case Converter — Free Online Tool on SabTools.in",
+      alt: "Case Converter — Free Online Convert text to UPPERCASE, lowercase, Title Case, Sentence case Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -15294,7 +15294,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "keyword-density-checker",
     image: {
       src: "/blog/keyword-density-checker.webp",
-      alt: "Keyword Density Checker — Free Online Tool on SabTools.in",
+      alt: "Keyword Density Checker — Free Online Analyze keyword density and frequency in your content Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -15431,7 +15431,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "price-per-unit-comparator",
     image: {
       src: "/blog/price-per-unit-comparator.webp",
-      alt: "Price Per Unit Comparator — Free Online Tool on SabTools.in",
+      alt: "Price Per Unit Comparator — Free Online Compare price per unit across products in kg/g/L/ml/pieces to find the best value Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -15568,7 +15568,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "plot-area-calculator",
     image: {
       src: "/blog/plot-area-calculator.webp",
-      alt: "Plot Area Calculator — Free Online Tool on SabTools.in",
+      alt: "Plot Area Calculator — Free Online Calculate plot area in sq ft, sq m, acres, bigha, guntha and cents Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -15705,7 +15705,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "gas-cylinder-calculator",
     image: {
       src: "/blog/gas-cylinder-calculator.webp",
-      alt: "Gas Cylinder Calculator — Free Online Tool on SabTools.in",
+      alt: "Gas Cylinder Calculator — Free Online Calculate how long a 14.2kg LPG cylinder lasts and compare with induction cooking cost Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -15842,7 +15842,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "farm-profit-calculator",
     image: {
       src: "/blog/farm-profit-calculator.webp",
-      alt: "Farm Profit Calculator — Free Online Tool on SabTools.in",
+      alt: "Farm Profit Calculator — Free Online Calculate farm profit with detailed cost breakdown for seeds, fertilizer, labor, irrigation and transport Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -15979,7 +15979,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "aspect-ratio-calculator",
     image: {
       src: "/blog/aspect-ratio-calculator.webp",
-      alt: "Aspect Ratio Calculator — Free Online Tool on SabTools.in",
+      alt: "Aspect Ratio Calculator — Free Online Calculate and convert aspect ratios for images and videos Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -16116,7 +16116,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "advanced-discount-calculator",
     image: {
       src: "/blog/advanced-discount-calculator.webp",
-      alt: "Advanced Discount Calculator — Free Online Tool on SabTools.in",
+      alt: "Advanced Discount Calculator — Free Online Calculate single, double (stacked) and bulk discounts with effective discount comparison Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -16253,7 +16253,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "image-to-pdf",
     image: {
       src: "/blog/image-to-pdf.webp",
-      alt: "Image to PDF — Free Online Tool on SabTools.in",
+      alt: "Image to PDF — Free Online Convert multiple images to PDF with A4, Letter and Legal page sizes Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -16390,7 +16390,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "would-you-rather",
     image: {
       src: "/blog/would-you-rather.webp",
-      alt: "Would You Rather — Free Online Tool on SabTools.in",
+      alt: "Would You Rather — Free Online Fun Would You Rather game with 50+ questions and percentage results Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -16527,7 +16527,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "bytes-converter",
     image: {
       src: "/blog/bytes-converter.webp",
-      alt: "Bytes Converter — Free Online Tool on SabTools.in",
+      alt: "Bytes Converter — Free Online Convert between Bytes, KB, MB, GB, TB and PB data units Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -16664,7 +16664,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "emi-vs-rent-calculator",
     image: {
       src: "/blog/emi-vs-rent-calculator.webp",
-      alt: "EMI vs Rent Calculator — Free Online Tool on SabTools.in",
+      alt: "EMI vs Rent Calculator — Free Online Compare total cost of buying property vs renting with break-even analysis and yearly comparison Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -16801,7 +16801,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "recipe-unit-converter",
     image: {
       src: "/blog/recipe-unit-converter.webp",
-      alt: "Recipe Unit Converter — Free Online Tool on SabTools.in",
+      alt: "Recipe Unit Converter — Free Online Convert between cups, tablespoons, teaspoons, grams, ml with ingredient-specific densities Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -16938,7 +16938,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "ai-rap-lyrics-generator",
     image: {
       src: "/blog/ai-rap-lyrics-generator.webp",
-      alt: "AI Rap Lyrics Generator — Free Online Tool on SabTools.in",
+      alt: "AI Rap Lyrics Generator — Free Online Generate rap lyrics with 2 verses and chorus in Motivational, Street & Bollywood styles with AABB rhyme Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -17075,7 +17075,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "study-time-planner",
     image: {
       src: "/blog/study-time-planner.webp",
-      alt: "Study Time Planner — Free Online Tool on SabTools.in",
+      alt: "Study Time Planner — Free Online Generate a study schedule based on subjects and available hours per day Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -17212,7 +17212,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "baby-name-generator",
     image: {
       src: "/blog/baby-name-generator.webp",
-      alt: "Baby Name Generator — Free Online Tool on SabTools.in",
+      alt: "Baby Name Generator — Free Online Generate baby names with meanings - filter by letter, gender and origin Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -17349,7 +17349,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "graphing-calculator",
     image: {
       src: "/blog/graphing-calculator.webp",
-      alt: "Graphing Calculator — Free Online Tool on SabTools.in",
+      alt: "Graphing Calculator — Free Online Plot math functions like y=x², sin(x), cos(x) on an interactive coordinate system with zoom and pan Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -17486,7 +17486,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "cement-calculator",
     image: {
       src: "/blog/cement-calculator.webp",
-      alt: "Cement Calculator — Free Online Tool on SabTools.in",
+      alt: "Cement Calculator — Free Online Calculate cement, sand and aggregate for plastering, brickwork and concrete Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -17623,7 +17623,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "word-to-pdf",
     image: {
       src: "/blog/word-to-pdf.webp",
-      alt: "Word to PDF — Free Online Tool on SabTools.in",
+      alt: "Word to PDF — Free Online Convert text content to PDF document with title and formatting Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -17760,7 +17760,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "panchang-calculator",
     image: {
       src: "/blog/panchang-calculator.webp",
-      alt: "Panchang Calculator — Free Online Tool on SabTools.in",
+      alt: "Panchang Calculator — Free Online Get daily Panchang with Tithi, Nakshatra, Yoga, Karana & Vaar for any date Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -17897,7 +17897,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "crop-yield-calculator",
     image: {
       src: "/blog/crop-yield-calculator.webp",
-      alt: "Crop Yield Calculator — Free Online Tool on SabTools.in",
+      alt: "Crop Yield Calculator — Free Online Calculate expected crop yield, revenue and profit for rice, wheat, sugarcane, cotton and more Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -18034,7 +18034,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "menstrual-cycle-calculator",
     image: {
       src: "/blog/menstrual-cycle-calculator.webp",
-      alt: "Menstrual Cycle Calculator — Free Online Tool on SabTools.in",
+      alt: "Menstrual Cycle Calculator — Free Online Track menstrual cycle, fertile window, ovulation day with calendar view Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -18171,7 +18171,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "ip-address-lookup",
     image: {
       src: "/blog/ip-address-lookup.webp",
-      alt: "IP Address Lookup — Free Online Tool on SabTools.in",
+      alt: "IP Address Lookup — Free Online Find your public IP address and basic location information Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -18308,7 +18308,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "gift-registry-calculator",
     image: {
       src: "/blog/gift-registry-calculator.webp",
-      alt: "Gift Registry Calculator — Free Online Tool on SabTools.in",
+      alt: "Gift Registry Calculator — Free Online Estimate wedding gifts by guest category and calculate return gift budget Tool on SabTools.in",
       width: 1200,
       height: 630,
     },
@@ -18445,7 +18445,7 @@ const blogPosts: BlogPost[] = [
     toolSlug: "staircase-calculator",
     image: {
       src: "/blog/staircase-calculator.webp",
-      alt: "Staircase Calculator — Free Online Tool on SabTools.in",
+      alt: "Staircase Calculator — Free Online Calculate staircase steps, riser height, tread depth & stringer length with IS code validation Tool on SabTools.in",
       width: 1200,
       height: 630,
     },

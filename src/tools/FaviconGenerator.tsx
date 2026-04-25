@@ -33,7 +33,7 @@ export default function FaviconGenerator() {
       {results.length > 0 && (
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">{results.map(({ size, url }) => (
           <div key={size} className="bg-gray-50 rounded-xl p-4 text-center border border-gray-100">
-            <img src={url} alt={`${size}x${size}`} width={Math.min(size, 64)} height={Math.min(size, 64)} className="mx-auto mb-2" style={{ imageRendering: "pixelated" }} />
+            <img src={url} alt={`Generated favicon at ${size}x${size} pixels`} width={Math.min(size, 64)} height={Math.min(size, 64)} className="mx-auto mb-2" style={{ imageRendering: "pixelated" }} />
             <div className="text-xs font-bold text-gray-700">{size}×{size}</div>
             <a href={url} download={`favicon-${size}x${size}.png`} className="text-xs text-indigo-600 hover:underline">Download</a>
           </div>
