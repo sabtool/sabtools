@@ -4,11 +4,14 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import AdBanner from "@/components/AdBanner";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
-import { tools } from "@/lib/tools";
+import { tools, categories } from "@/lib/tools";
+import { categoryPillars } from "@/lib/category-pillars";
 import {
   SITE_URL,
   ORG_ID,
+  WEBSITE_ID,
   FOUNDER_ID,
+  breadcrumbIdFor,
   breadcrumbNode,
   faqPageNode,
   buildGraph,
@@ -84,24 +87,99 @@ export default async function BlogPostPage({
       }))
     : [];
 
-  // Single @graph: Article + BreadcrumbList + (optional) FAQPage.
+  // ── Entity-linking: walk the post body for tool-name mentions so we can emit
+  //    schema.org `about` (the primary tool) and `mentions` (other tools the
+  //    post references). Linking via @id ties this Article into the same
+  //    Knowledge-Graph entities declared on tool pages, which is the pattern
+  //    Google's Article rich-result docs recommend (Strategy §2.4 / Appendix A).
+  const plainText = post.content
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&[a-z]+;/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const wordCount = plainText.split(" ").filter(Boolean).length;
+
+  // Find every tool whose name appears in the body — case-insensitive,
+  // word-boundary match. Sort longest-name-first so "Home Loan EMI Calculator"
+  // wins over "EMI Calculator" when both are present.
+  const sortedTools = [...tools].sort((a, b) => b.name.length - a.name.length);
+  const mentionedSlugs = new Set<string>();
+  const lower = plainText.toLowerCase();
+  for (const t of sortedTools) {
+    const needle = t.name.toLowerCase();
+    if (needle.length < 6) continue; // skip tiny names that match noise
+    // word-boundary check around the match position
+    const idx = lower.indexOf(needle);
+    if (idx === -1) continue;
+    const before = idx === 0 ? " " : lower[idx - 1];
+    const after = idx + needle.length >= lower.length ? " " : lower[idx + needle.length];
+    if (/[a-z0-9]/.test(before) || /[a-z0-9]/.test(after)) continue;
+    mentionedSlugs.add(t.slug);
+  }
+  // Don't double-count the primary tool (it goes in `about`, not `mentions`).
+  if (post.toolSlug) mentionedSlugs.delete(post.toolSlug);
+  // Cap mentions at 8 — beyond that the schema bloats without helping discovery.
+  const mentionsArray = [...mentionedSlugs].slice(0, 8).map((s) => ({
+    "@id": `${SITE_URL}/tools/${s}#application`,
+  }));
+
+  // Build the `about` array: primary tool entity + the category pillar (if it
+  // exists) — gives Google a clear signal of what this article is "about" at
+  // both the specific (tool) and topical (category) level.
+  const aboutArray: Record<string, unknown>[] = [];
+  if (post.toolSlug) {
+    aboutArray.push({ "@id": `${SITE_URL}/tools/${post.toolSlug}#application` });
+  }
+  // Match the post's category against our slug list (post.category is human-readable like "Finance")
+  const categorySlug = categories.find(
+    (c) => c.name.toLowerCase().includes(post.category.toLowerCase()) ||
+           c.slug === post.category.toLowerCase()
+  )?.slug;
+  if (categorySlug && categoryPillars[categorySlug]) {
+    aboutArray.push({ "@id": `${SITE_URL}/category/${categorySlug}#collectionpage` });
+  }
+
+  const pageUrl = `${SITE_URL}/blog/${post.slug}`;
+  const articleId = `${pageUrl}#article`;
+  const webPageId = `${pageUrl}#webpage`;
+  const breadcrumbId = breadcrumbIdFor(pageUrl);
+
+  // Single @graph:
+  //   WebPage (article hub) → Article (mainEntity, with about/mentions linking
+  //   back to tool & pillar entities by @id) → BreadcrumbList → (optional) FAQPage.
   // Author and publisher are linked via @id to the shared entities declared on the homepage.
   const blogNodes: Record<string, unknown>[] = [
     {
+      "@type": "WebPage",
+      "@id": webPageId,
+      url: pageUrl,
+      name: post.title,
+      description: post.description,
+      inLanguage: "en-IN",
+      isPartOf: { "@id": WEBSITE_ID },
+      publisher: { "@id": ORG_ID },
+      breadcrumb: { "@id": breadcrumbId },
+      mainEntity: { "@id": articleId },
+      datePublished: post.date,
+      dateModified: post.date,
+    },
+    {
       "@type": "Article",
-      "@id": `${SITE_URL}/blog/${post.slug}#article`,
+      "@id": articleId,
       headline: post.title,
       description: post.description,
       datePublished: post.date,
       dateModified: post.date,
       author: { "@id": FOUNDER_ID },
       publisher: { "@id": ORG_ID },
-      mainEntityOfPage: {
-        "@type": "WebPage",
-        "@id": `${SITE_URL}/blog/${post.slug}`,
-      },
+      mainEntityOfPage: { "@id": webPageId },
+      isPartOf: { "@id": WEBSITE_ID },
       keywords: post.keywords.join(", "),
       articleSection: post.category,
+      wordCount,
+      ...(aboutArray.length > 0 ? { about: aboutArray } : {}),
+      ...(mentionsArray.length > 0 ? { mentions: mentionsArray } : {}),
       ...(post.image && {
         image: {
           "@type": "ImageObject",
@@ -114,11 +192,14 @@ export default async function BlogPostPage({
       inLanguage: "en-IN",
       isAccessibleForFree: true,
     },
-    breadcrumbNode([
-      { name: "Home", url: `${SITE_URL}/` },
-      { name: "Blog", url: `${SITE_URL}/blog` },
-      { name: post.title },
-    ]),
+    breadcrumbNode(
+      [
+        { name: "Home", url: `${SITE_URL}/` },
+        { name: "Blog", url: `${SITE_URL}/blog` },
+        { name: post.title },
+      ],
+      breadcrumbId,
+    ),
   ];
 
   if (extractedFaqs.length > 0) {
