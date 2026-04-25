@@ -131,19 +131,89 @@ export default async function BlogPostPage({
   if (post.toolSlug) {
     aboutArray.push({ "@id": `${SITE_URL}/tools/${post.toolSlug}#application` });
   }
-  // Match the post's category against our slug list (post.category is human-readable like "Finance")
-  const categorySlug = categories.find(
-    (c) => c.name.toLowerCase().includes(post.category.toLowerCase()) ||
-           c.slug === post.category.toLowerCase()
-  )?.slug;
-  if (categorySlug && categoryPillars[categorySlug]) {
-    aboutArray.push({ "@id": `${SITE_URL}/category/${categorySlug}#collectionpage` });
+  // Resolve the post's category to a real Tool category slug (Batch 17). The
+  // `post.category` field is a human-readable label like "Finance", "Tax &
+  // Salary", or "WhatsApp & UPI". Resolution order:
+  //   1. If the post is tied to a specific tool (post.toolSlug), use *that*
+  //      tool's category — most accurate, never wrong.
+  //   2. Otherwise match the label against `categories[].name` (tolerant
+  //      lowercase / contains match).
+  //   3. Last resort: try the label as a slug directly.
+  // We then use this slug for two things: the schema `about` link to the
+  // category pillar, AND the breadcrumb-trail node `Home → Blog → Category
+  // → Post` so users and crawlers see the topic-cluster hierarchy.
+  const primaryTool = post.toolSlug
+    ? tools.find((t) => t.slug === post.toolSlug)
+    : undefined;
+  const labelLc = post.category.toLowerCase().trim();
+  // Multi-pass match — most-specific to least, so "Utility" picks slug
+  // "utility" (Everyday Utility) instead of substring-matching the earlier
+  // "Fun & Utility" entry. Tool-derived match wins when the post is tied
+  // to a specific tool because that's never wrong.
+  const resolvedCategorySlug =
+    primaryTool?.category ??
+    categories.find((c) => c.name.toLowerCase() === labelLc)?.slug ??
+    categories.find((c) => c.slug === labelLc)?.slug ??
+    // "Tax" → "Tax & Salary", "Math" → "Math & Numbers" (label is the
+    // canonical first-segment of the category name).
+    categories.find((c) => {
+      const head = c.name.toLowerCase().split(/\s+(?:&|and)\s+/)[0];
+      return head === labelLc;
+    })?.slug ??
+    // Tolerant containment as a last resort. Examples this catches:
+    //   "Image" → "Image Tools"           (name starts with label)
+    //   "Tax & Salary" → "Tax & Salary"   (already exact above)
+    //   "Real Estate" → "Real Estate"     (already exact above)
+    //   "Construction" → "Construction"   (already exact above)
+    categories.find((c) => {
+      const cn = c.name.toLowerCase();
+      return cn.startsWith(labelLc + " ") || cn.endsWith(" " + labelLc);
+    })?.slug;
+  const resolvedCategory = resolvedCategorySlug
+    ? categories.find((c) => c.slug === resolvedCategorySlug)
+    : undefined;
+  if (resolvedCategorySlug && categoryPillars[resolvedCategorySlug]) {
+    aboutArray.push({
+      "@id": `${SITE_URL}/category/${resolvedCategorySlug}#collectionpage`,
+    });
   }
 
   const pageUrl = `${SITE_URL}/blog/${post.slug}`;
   const articleId = `${pageUrl}#article`;
   const webPageId = `${pageUrl}#webpage`;
   const breadcrumbId = breadcrumbIdFor(pageUrl);
+
+  // Single source of truth for the 3- or 4-level breadcrumb trail used by
+  // both the visual <Breadcrumb> component AND the BreadcrumbList JSON-LD.
+  // When the post resolves to a real tool category, we slot the category in
+  // as the third trail node so Google sees the full topic-cluster path:
+  //   Home → Blog → {Category Pillar} → {Post Title}
+  // This is the pattern Google's BreadcrumbList rich-result spec recommends
+  // for category-organised content (Strategy §2.4 / §3.3 internal-link silo).
+  const trailNodes: Array<{ name: string; url?: string }> = [
+    { name: "Home", url: `${SITE_URL}/` },
+    { name: "Blog", url: `${SITE_URL}/blog` },
+  ];
+  if (resolvedCategory) {
+    trailNodes.push({
+      name: resolvedCategory.name,
+      url: `${SITE_URL}/category/${resolvedCategory.slug}`,
+    });
+  }
+  trailNodes.push({ name: post.title });
+
+  // Same trail expressed for the visual component (uses path-only hrefs).
+  const visualTrail: Array<{ label: string; href?: string }> = [
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog" },
+  ];
+  if (resolvedCategory) {
+    visualTrail.push({
+      label: resolvedCategory.name,
+      href: `/category/${resolvedCategory.slug}`,
+    });
+  }
+  visualTrail.push({ label: post.title });
 
   // Single @graph:
   //   WebPage (article hub) → Article (mainEntity, with about/mentions linking
@@ -192,14 +262,7 @@ export default async function BlogPostPage({
       inLanguage: "en-IN",
       isAccessibleForFree: true,
     },
-    breadcrumbNode(
-      [
-        { name: "Home", url: `${SITE_URL}/` },
-        { name: "Blog", url: `${SITE_URL}/blog` },
-        { name: post.title },
-      ],
-      breadcrumbId,
-    ),
+    breadcrumbNode(trailNodes, breadcrumbId),
   ];
 
   if (extractedFaqs.length > 0) {
@@ -226,13 +289,7 @@ export default async function BlogPostPage({
       )}
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
-        <Breadcrumb
-          items={[
-            { label: "Home", href: "/" },
-            { label: "Blog", href: "/blog" },
-            { label: post.title },
-          ]}
-        />
+        <Breadcrumb items={visualTrail} />
 
         <article className="blog-article">
           {/* Header */}
