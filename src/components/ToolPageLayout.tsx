@@ -20,6 +20,12 @@ import { categories } from "@/lib/tools";
 import { getToolContent } from "@/lib/tool-content";
 import { categoryPillars } from "@/lib/category-pillars";
 import {
+  toolVideos,
+  embedUrlFor,
+  watchUrlFor,
+  defaultThumbnailFor,
+} from "@/lib/tool-videos";
+import {
   SITE_URL,
   ORG_ID,
   SUPPORTED_LANGUAGES,
@@ -29,6 +35,7 @@ import {
   breadcrumbIdFor,
   howToNode,
   faqPageNode,
+  videoObjectNode,
   buildGraph,
 } from "@/lib/schema";
 
@@ -76,6 +83,12 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
   const featureList = [...(content.keyFeatures ?? []), ...(tool.keywords ?? [])]
     .filter(Boolean)
     .slice(0, 12);
+
+  // Optional tutorial video (lib/tool-videos.ts). When present we both embed
+  // it on the page AND emit a VideoObject in the @graph. Without the embed,
+  // Google flags the schema as "phantom" and demotes the rich-result.
+  const video = toolVideos[tool.slug];
+  const videoId = `${pageUrl}#video`;
 
   const toolGraph = buildGraph([
     webPageNode({
@@ -133,6 +146,23 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
             content.faqs.map((f) => ({ q: f.question, a: f.answer })),
             SUPPORTED_LANGUAGES[0]
           ),
+        ]
+      : []),
+    // VideoObject — only emitted when a real walkthrough video exists in the
+    // tool-videos registry (and is rendered as an iframe below). See §2.4.
+    ...(video
+      ? [
+          videoObjectNode({
+            id: videoId,
+            name: video.name,
+            description: video.description,
+            thumbnailUrl: video.thumbnailUrl ?? defaultThumbnailFor(video.youtubeId),
+            uploadDate: video.uploadDate,
+            duration: video.duration,
+            contentUrl: watchUrlFor(video.youtubeId),
+            embedUrl: embedUrlFor(video.youtubeId),
+            inLanguage: video.inLanguage ?? SUPPORTED_LANGUAGES[0],
+          }),
         ]
       : []),
   ]);
@@ -286,6 +316,27 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
             </>
           )}
         </div>
+
+        {/* Tutorial video (only renders when an entry exists in lib/tool-videos.ts).
+            Privacy-enhanced YouTube embed (youtube-nocookie.com) so Core Web
+            Vitals don't take a hit from third-party JS until the user plays. */}
+        {video && (
+          <section className="mt-12">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">{video.name}</h2>
+            <p className="text-sm text-gray-600 mb-4">{video.description}</p>
+            <div className="relative aspect-video rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-black">
+              <iframe
+                src={embedUrlFor(video.youtubeId)}
+                title={video.name}
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+          </section>
+        )}
 
         {/* FAQ Section with Schema — unique per category */}
         <ToolFaq toolName={tool.name} description={tool.description} customFaqs={content.faqs} />

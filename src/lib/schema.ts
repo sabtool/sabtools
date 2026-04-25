@@ -251,6 +251,56 @@ export function howToNode(params: {
   };
 }
 
+export interface VideoObjectNodeInput {
+  /** Video name / headline shown in rich results */
+  name: string;
+  /** 2-3 sentence description (~50-160 chars). */
+  description: string;
+  /** Public thumbnail URL — Google requires at least 1. Use the YouTube
+   *  hqdefault for embedded YouTube videos: https://i.ytimg.com/vi/{ID}/hqdefault.jpg */
+  thumbnailUrl: string;
+  /** ISO 8601 — when the video was first uploaded. */
+  uploadDate: string;
+  /** ISO 8601 duration, e.g. "PT3M12S" for 3 min 12 sec. */
+  duration?: string;
+  /** Public watch page (e.g. https://www.youtube.com/watch?v=XXXX). */
+  contentUrl?: string;
+  /** Embed URL (e.g. https://www.youtube-nocookie.com/embed/XXXX). */
+  embedUrl?: string;
+  /** Stable @id so other graph nodes (WebApplication, Article) can cross-reference. */
+  id?: string;
+  /** Publisher Organization @id; defaults to the shared ORG_ID. */
+  publisherId?: string;
+  inLanguage?: string | readonly string[];
+}
+
+/**
+ * VideoObject node — emitted on tool pages that have a tutorial / walkthrough
+ * video. Follows the schema.org rich-result spec for video carousels.
+ *
+ * Ground rules (Strategy §2.4):
+ *   - Only emit if the video actually exists on the page or is linked. Phantom
+ *     VideoObjects without a real `<iframe>` or visible link get penalised.
+ *   - Use youtube-nocookie.com for the embed URL — privacy-enhanced and
+ *     loads less third-party JS so it doesn't tank LCP.
+ *   - thumbnailUrl is required; YouTube's hqdefault always exists.
+ */
+export function videoObjectNode(input: VideoObjectNodeInput) {
+  return {
+    "@type": "VideoObject",
+    ...(input.id ? { "@id": input.id } : {}),
+    name: input.name,
+    description: input.description,
+    thumbnailUrl: input.thumbnailUrl,
+    uploadDate: input.uploadDate,
+    inLanguage: input.inLanguage ?? "en-IN",
+    ...(input.duration ? { duration: input.duration } : {}),
+    ...(input.contentUrl ? { contentUrl: input.contentUrl } : {}),
+    ...(input.embedUrl ? { embedUrl: input.embedUrl } : {}),
+    publisher: { "@id": input.publisherId ?? ORG_ID },
+  };
+}
+
 /**
  * Wraps one or more nodes into a schema.org @graph block.
  * This is the recommended emission pattern for pages with multiple schema types.
