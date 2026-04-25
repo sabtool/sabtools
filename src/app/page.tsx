@@ -9,13 +9,14 @@ import { categories, tools } from "@/lib/tools";
 import { categoryPillars } from "@/lib/category-pillars";
 import { getAllPosts } from "@/lib/blog";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import { authors } from "@/lib/authors";
 import {
   SITE_URL,
-  ORG_ID,
-  FOUNDER_ID,
   SUPPORTED_LANGUAGES,
   organizationNode,
   webSiteNode,
+  personNode,
+  personIdFor,
   faqPageNode,
   buildGraph,
 } from "@/lib/schema";
@@ -74,23 +75,56 @@ export default function HomePage() {
     },
   ];
 
+  // Build sameAs URL list from author socialLinks for the founder.
+  const founder = authors.find((a) => a.slug === "rakesh-seervi")!;
+  const founderSameAs: string[] = [];
+  if (founder.socialLinks?.twitter) founderSameAs.push(`https://twitter.com/${founder.socialLinks.twitter}`);
+  if (founder.socialLinks?.linkedin) founderSameAs.push(`https://www.linkedin.com/in/${founder.socialLinks.linkedin}`);
+
   // Single @graph with all homepage entities — Organization anchors the Knowledge
   // Graph identity; other pages across the site link back to it via @id (see lib/schema.ts).
+  // The Person nodes for every named expert author are emitted here too so the
+  // homepage acts as the canonical authority hub for E-E-A-T signals; subpages
+  // reference each author via personIdFor(slug) without re-declaring them.
+  const memberRefs = authors.map((a) => ({ "@id": personIdFor(a.slug) }));
+
   const homepageGraph = buildGraph([
-    organizationNode(),
-    webSiteNode(),
     {
-      "@type": "Person",
-      "@id": FOUNDER_ID,
-      name: "Rakesh Seervi",
-      url: `${SITE_URL}/author/rakesh-seervi`,
-      jobTitle: "Founder & Lead Developer",
-      worksFor: { "@id": ORG_ID },
-      sameAs: [
-        "https://twitter.com/sabtools",
-        "https://www.linkedin.com/in/rakeshseervi",
-      ],
+      ...organizationNode(),
+      // member array ties every named author into the Organization entity,
+      // so Google sees a single coherent expert team rather than scattered
+      // unrelated Person nodes (Strategy §2.4 / Appendix A).
+      member: memberRefs,
     },
+    webSiteNode(),
+    // Founder gets the rich personNode treatment with full credentials —
+    // FOUNDER_ID matches personIdFor("rakesh-seervi") so anywhere that
+    // references FOUNDER_ID resolves to this canonical Person entity.
+    personNode({
+      slug: founder.slug,
+      name: founder.name,
+      jobTitle: founder.role,
+      description: founder.bio,
+      knowsAbout: founder.expertise,
+      sameAs: founderSameAs,
+    }),
+    // Other named authors as full Person nodes too — gives every blog post
+    // and tool page a real human entity to attribute through.
+    ...authors
+      .filter((a) => a.slug !== founder.slug)
+      .map((a) => {
+        const sameAs: string[] = [];
+        if (a.socialLinks?.twitter) sameAs.push(`https://twitter.com/${a.socialLinks.twitter}`);
+        if (a.socialLinks?.linkedin) sameAs.push(`https://www.linkedin.com/in/${a.socialLinks.linkedin}`);
+        return personNode({
+          slug: a.slug,
+          name: a.name,
+          jobTitle: a.role,
+          description: a.bio,
+          knowsAbout: a.expertise,
+          sameAs,
+        });
+      }),
     {
       "@type": "ItemList",
       name: "Popular Free Online Tools",

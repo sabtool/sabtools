@@ -87,6 +87,63 @@ export function webSiteNode() {
   };
 }
 
+/**
+ * Stable @id helper for an author Person node — used when other nodes
+ * (Article, WebApplication, ProfilePage) need to cross-reference the
+ * author by @id without duplicating the full Person declaration.
+ */
+export const personIdFor = (authorSlug: string) =>
+  `${SITE_URL}/author/${authorSlug}#person`;
+
+export interface PersonNodeInput {
+  /** Author slug — also used to derive the canonical URL and @id. */
+  slug: string;
+  /** Full display name, including any honorific (e.g. "Dr. Rajesh Kumar"). */
+  name: string;
+  /** Job title at SabTools (e.g. "Founder & Lead Developer"). */
+  jobTitle: string;
+  /** One-paragraph bio shown in the schema's `description`. */
+  description: string;
+  /** Topics/skills the person is known to be expert in — populates `knowsAbout`. */
+  knowsAbout: readonly string[];
+  /** Public profile URLs (Twitter, LinkedIn, etc.) — populates `sameAs`. */
+  sameAs?: readonly string[];
+  /** Optional override of the Person image URL; defaults to /authors/{slug}.png */
+  image?: string;
+  /** Languages the person can converse / write in — defaults to en + hi. */
+  knowsLanguage?: readonly string[];
+}
+
+/**
+ * Person — the canonical entity for a named human author / reviewer
+ * (E-E-A-T: Experience, Expertise, Authoritativeness, Trustworthiness).
+ * Emit the rich version of this node anywhere the person is the primary
+ * entity (homepage where they're the founder, ProfilePage). Other pages
+ * (Article, WebApplication) reference by @id only via `personIdFor()`.
+ */
+export function personNode(input: PersonNodeInput) {
+  const url = `${SITE_URL}/author/${input.slug}`;
+  const nameParts = input.name.replace(/^(Dr\.?|Prof\.?|Mr\.?|Mrs\.?|Ms\.?)\s+/i, "").split(" ");
+  const honorificMatch = input.name.match(/^(Dr\.?|Prof\.?|Mr\.?|Mrs\.?|Ms\.?)\s+/i);
+  return {
+    "@type": "Person",
+    "@id": personIdFor(input.slug),
+    name: input.name,
+    ...(honorificMatch ? { honorificPrefix: honorificMatch[1].replace(/\.$/, "") } : {}),
+    givenName: nameParts[0],
+    ...(nameParts.length > 1 ? { familyName: nameParts.slice(1).join(" ") } : {}),
+    jobTitle: input.jobTitle,
+    description: input.description,
+    url,
+    image: input.image ?? `${SITE_URL}/authors/${input.slug}.png`,
+    worksFor: { "@id": ORG_ID },
+    knowsAbout: [...input.knowsAbout],
+    knowsLanguage: input.knowsLanguage ? [...input.knowsLanguage] : ["en", "hi"],
+    nationality: { "@type": "Country", name: "India" },
+    ...(input.sameAs && input.sameAs.length > 0 ? { sameAs: [...input.sameAs] } : {}),
+  };
+}
+
 export interface WebApplicationNodeInput {
   slug: string;
   name: string;

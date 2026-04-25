@@ -6,7 +6,8 @@ import { categories } from "@/lib/tools";
 import { authors, getAuthorBySlug } from "@/lib/authors";
 import {
   SITE_URL,
-  ORG_ID,
+  personNode,
+  personIdFor,
   breadcrumbNode,
   buildGraph,
 } from "@/lib/schema";
@@ -66,12 +67,14 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
   if (author.socialLinks?.twitter) socialLinks.push(`https://twitter.com/${author.socialLinks.twitter}`);
   if (author.socialLinks?.linkedin) socialLinks.push(`https://www.linkedin.com/in/${author.socialLinks.linkedin}`);
 
-  const personId = `${SITE_URL}/author/${author.slug}#person`;
+  const personId = personIdFor(author.slug);
   const profileUrl = `${SITE_URL}/author/${author.slug}`;
 
   /* Single @graph: ProfilePage → Person → references Organization via @id.
      The Person uses a stable @id so tools, blog posts, and the homepage can
-     all link back to the same author entity in the Knowledge Graph. */
+     all link back to the same author entity in the Knowledge Graph.
+     personNode() centralises the canonical Person shape — same builder is
+     used on the homepage so the two emissions can never drift apart. */
   const authorGraph = buildGraph([
     {
       "@type": "ProfilePage",
@@ -84,22 +87,14 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
       isPartOf: { "@id": `${SITE_URL}/#website` },
       about: { "@id": personId },
     },
-    {
-      "@type": "Person",
-      "@id": personId,
+    personNode({
+      slug: author.slug,
       name: author.name,
-      givenName: author.name.split(" ")[0],
-      familyName: author.name.split(" ").slice(1).join(" ") || undefined,
       jobTitle: author.role,
       description: author.bio,
-      url: profileUrl,
-      image: `${SITE_URL}/authors/${author.slug}.png`,
-      worksFor: { "@id": ORG_ID },
       knowsAbout: author.expertise,
-      knowsLanguage: ["en", "hi"],
-      nationality: { "@type": "Country", name: "India" },
-      ...(socialLinks.length > 0 ? { sameAs: socialLinks } : {}),
-    },
+      sameAs: socialLinks,
+    }),
     breadcrumbNode([
       { name: "Home", url: `${SITE_URL}/` },
       { name: "About", url: `${SITE_URL}/about` },
