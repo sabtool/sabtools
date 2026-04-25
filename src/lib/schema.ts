@@ -178,6 +178,13 @@ export interface WebPageNodeInput {
   datePublished?: string;
   /** ISO 8601 date — when the page was last meaningfully updated */
   dateModified?: string;
+  /**
+   * CSS selectors marking the parts of the page best suited for voice
+   * read-out (Google Assistant / Speakable rich-result spec). Typically
+   * the FAQ block — short Q&A pairs that answer one question each.
+   * When provided, emits a SpeakableSpecification on the WebPage node.
+   */
+  speakableSelectors?: readonly string[];
 }
 
 /**
@@ -201,6 +208,14 @@ export function webPageNode(input: WebPageNodeInput) {
     ...(input.breadcrumbId ? { breadcrumb: { "@id": input.breadcrumbId } } : {}),
     ...(input.datePublished ? { datePublished: input.datePublished } : {}),
     ...(input.dateModified ? { dateModified: input.dateModified } : {}),
+    ...(input.speakableSelectors && input.speakableSelectors.length > 0
+      ? {
+          speakable: {
+            "@type": "SpeakableSpecification",
+            cssSelector: [...input.speakableSelectors],
+          },
+        }
+      : {}),
   };
 }
 

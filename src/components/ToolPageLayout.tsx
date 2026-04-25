@@ -99,6 +99,14 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
       primaryEntityId: webAppId,
       breadcrumbId,
       dateModified: "2026-04-25",
+      // Voice-search optimisation (Strategy §2.4 / Speakable rich-result
+      // spec). Targets the FAQ block, which is the part of the page best
+      // suited to be read aloud by Google Assistant: short Q&A pairs that
+      // each answer one specific question. The class hooks come from
+      // ToolFaq.tsx (`#faq-speakable .faq-q`, `#faq-speakable .faq-a`).
+      ...(content.faqs && content.faqs.length > 0
+        ? { speakableSelectors: ["#faq-speakable .faq-q", "#faq-speakable .faq-a"] }
+        : {}),
     }),
     webApplicationNode({
       slug: tool.slug,

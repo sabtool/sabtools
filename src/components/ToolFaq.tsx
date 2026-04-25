@@ -42,7 +42,10 @@ export default function ToolFaq({ toolName, description, customFaqs }: ToolFaqPr
       ];
 
   return (
-    <section className="mt-12">
+    // Stable id/class used by the SpeakableSpecification cssSelector on the
+    // page's WebPage node — so Google Assistant knows which DOM nodes are
+    // the canonical Q&A pairs to read aloud (Strategy §2.4).
+    <section id="faq-speakable" className="mt-12 faq-speakable">
       <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
       <div className="space-y-3">
         {faqs.map((faq, index) => (
@@ -63,13 +66,17 @@ function FaqAccordionItem({ question, answer }: { question: string; answer: stri
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border border-gray-200 rounded-xl overflow-hidden">
+    <div className="border border-gray-200 rounded-xl overflow-hidden faq-item">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between px-5 py-4 text-left bg-white hover:bg-gray-50 transition"
         aria-expanded={isOpen}
       >
-        <span className="font-semibold text-gray-800 text-sm sm:text-base pr-4">{question}</span>
+        {/* `faq-q` / `faq-a` classes are addressed by the page's
+            speakable cssSelector. Answer is always rendered (under
+            hidden until expanded) so crawlers can read it without
+            executing the open-state JS. */}
+        <span className="font-semibold text-gray-800 text-sm sm:text-base pr-4 faq-q">{question}</span>
         <svg
           className={`w-5 h-5 text-gray-400 shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
           fill="none"
@@ -80,7 +87,7 @@ function FaqAccordionItem({ question, answer }: { question: string; answer: stri
         </svg>
       </button>
       {isOpen && (
-        <div className="px-5 pb-4 text-sm text-gray-600 leading-relaxed bg-gray-50">
+        <div className="px-5 pb-4 text-sm text-gray-600 leading-relaxed bg-gray-50 faq-a">
           {answer}
         </div>
       )}

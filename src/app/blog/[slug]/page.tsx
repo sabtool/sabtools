@@ -233,6 +233,21 @@ export default async function BlogPostPage({
       mainEntity: { "@id": articleId },
       datePublished: post.date,
       dateModified: post.date,
+      // Voice-search optimisation (Speakable rich-result spec). Articles
+      // are read aloud most cleanly when Google Assistant targets the
+      // page title + lead paragraph; we mark those with a stable hook
+      // (`.blog-article header h1`, `.blog-article header p`) so the
+      // assistant skips ads, breadcrumbs, share buttons, etc.
+      speakable: {
+        "@type": "SpeakableSpecification",
+        cssSelector: [
+          ".blog-article header h1",
+          ".blog-article header p",
+          ...(extractedFaqs.length > 0
+            ? [".blog-content h3", ".blog-content h3 + p"]
+            : []),
+        ],
+      },
     },
     {
       "@type": "Article",
