@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: `मुफ्त ऑनलाइन टूल्स — EMI कैलकुलेटर, SIP कैलकुलेटर, GST कैलकुलेटर, शब्द गणक और ${hindiTools.length}+ टूल्स। बिना साइनअप, 100% मुफ्त।`,
   alternates: {
     canonical: "https://sabtools.in/hi",
-    languages: { en: "https://sabtools.in", hi: "https://sabtools.in/hi", "x-default": "https://sabtools.in" },
+    languages: { "en-IN": "https://sabtools.in", "hi-IN": "https://sabtools.in/hi", "x-default": "https://sabtools.in" },
   },
   openGraph: {
     title: `SabTools.in - ${hindiTools.length}+ मुफ्त ऑनलाइन टूल्स हिंदी में`,

@@ -9,7 +9,9 @@ import {
   personNode,
   personIdFor,
   breadcrumbNode,
+  breadcrumbIdFor,
   buildGraph,
+  BUILD_DATE,
 } from "@/lib/schema";
 
 /* ── Static params for all author pages ── */
@@ -71,16 +73,26 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
 
   const personId = personIdFor(author.slug);
   const profileUrl = `${SITE_URL}/author/${author.slug}`;
+  const profilePageId = `${profileUrl}#profilepage`;
+  const breadcrumbId = breadcrumbIdFor(profileUrl);
 
   /* Single @graph: ProfilePage → Person → references Organization via @id.
      The Person uses a stable @id so tools, blog posts, and the homepage can
      all link back to the same author entity in the Knowledge Graph.
      personNode() centralises the canonical Person shape — same builder is
-     used on the homepage so the two emissions can never drift apart. */
+     used on the homepage so the two emissions can never drift apart.
+
+     Cohesion notes:
+     - ProfilePage.dateModified bumps with BUILD_DATE so any author-bio edit
+       is signalled to crawlers on the very next deploy.
+     - ProfilePage.breadcrumb cross-references the BreadcrumbList by @id,
+       matching the WebPage ↔ BreadcrumbList pattern on tool/calc pages.
+     - Person.mainEntityOfPage → ProfilePage closes the bidirectional loop
+       (ProfilePage.mainEntity → Person was already there). */
   const authorGraph = buildGraph([
     {
       "@type": "ProfilePage",
-      "@id": `${profileUrl}#profilepage`,
+      "@id": profilePageId,
       name: `${author.name} — ${author.role}`,
       description: author.bio,
       url: profileUrl,
@@ -88,6 +100,8 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
       mainEntity: { "@id": personId },
       isPartOf: { "@id": `${SITE_URL}/#website` },
       about: { "@id": personId },
+      breadcrumb: { "@id": breadcrumbId },
+      dateModified: BUILD_DATE,
     },
     personNode({
       slug: author.slug,
@@ -96,12 +110,16 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
       description: author.bio,
       knowsAbout: author.expertise,
       sameAs: socialLinks,
+      mainEntityOfPage: profilePageId,
     }),
-    breadcrumbNode([
-      { name: "Home", url: `${SITE_URL}/` },
-      { name: "About", url: `${SITE_URL}/about` },
-      { name: author.name },
-    ]),
+    breadcrumbNode(
+      [
+        { name: "Home", url: `${SITE_URL}/` },
+        { name: "About", url: `${SITE_URL}/about` },
+        { name: author.name },
+      ],
+      breadcrumbId
+    ),
   ]);
 
   return (

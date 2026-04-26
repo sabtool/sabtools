@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: `${ht.description}। मुफ्त ऑनलाइन ${ht.name} — बिना साइनअप, तुरंत परिणाम। SabTools.in पर।`,
     alternates: {
       canonical: `https://sabtools.in/hi/tools/${slug}`,
-      languages: { en: `https://sabtools.in/tools/${slug}`, hi: `https://sabtools.in/hi/tools/${slug}`, "x-default": `https://sabtools.in/tools/${slug}` },
+      languages: { "en-IN": `https://sabtools.in/tools/${slug}`, "hi-IN": `https://sabtools.in/hi/tools/${slug}`, "x-default": `https://sabtools.in/tools/${slug}` },
     },
     openGraph: {
       title: `${ht.name} — मुफ्त ऑनलाइन टूल | SabTools.in`,

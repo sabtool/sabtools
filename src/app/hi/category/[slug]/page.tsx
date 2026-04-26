@@ -48,8 +48,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     alternates: {
       canonical: `https://sabtools.in/hi/category/${slug}`,
       languages: {
-        en: `https://sabtools.in/category/${slug}`,
-        hi: `https://sabtools.in/hi/category/${slug}`,
+        "en-IN": `https://sabtools.in/category/${slug}`,
+        "hi-IN": `https://sabtools.in/hi/category/${slug}`,
         "x-default": `https://sabtools.in/category/${slug}`,
       },
     },

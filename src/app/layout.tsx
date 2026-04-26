@@ -96,8 +96,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://sabtools.in",
     languages: {
-      en: "https://sabtools.in",
-      hi: "https://sabtools.in/hi",
+      "en-IN": "https://sabtools.in",
+      "hi-IN": "https://sabtools.in/hi",
       "x-default": "https://sabtools.in",
     },
   },

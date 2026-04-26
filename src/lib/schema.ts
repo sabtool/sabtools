@@ -142,6 +142,12 @@ export interface PersonNodeInput {
   image?: string;
   /** Languages the person can converse / write in — defaults to en + hi. */
   knowsLanguage?: readonly string[];
+  /** `@id` of the ProfilePage that hosts this Person — bidirectional link
+   *  back to the page entity, mirroring the WebApplication ↔ WebPage pattern.
+   *  Pass on the author profile page only; other emissions (homepage,
+   *  inline byline references) leave this off because they aren't *the*
+   *  authoritative page for the Person. */
+  mainEntityOfPage?: string;
 }
 
 /**
@@ -171,6 +177,7 @@ export function personNode(input: PersonNodeInput) {
     knowsLanguage: input.knowsLanguage ? [...input.knowsLanguage] : ["en", "hi"],
     nationality: { "@type": "Country", name: "India" },
     ...(input.sameAs && input.sameAs.length > 0 ? { sameAs: [...input.sameAs] } : {}),
+    ...(input.mainEntityOfPage ? { mainEntityOfPage: { "@id": input.mainEntityOfPage } } : {}),
   };
 }
 

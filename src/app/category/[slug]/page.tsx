@@ -276,8 +276,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       ...(hasHindiPillar
         ? {
             languages: {
-              en: `https://sabtools.in/category/${slug}`,
-              hi: `https://sabtools.in/hi/category/${slug}`,
+              "en-IN": `https://sabtools.in/category/${slug}`,
+              "hi-IN": `https://sabtools.in/hi/category/${slug}`,
               "x-default": `https://sabtools.in/category/${slug}`,
             },
           }

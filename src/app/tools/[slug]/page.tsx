@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { tools, categories } from "@/lib/tools";
+import { hindiToolSlugs } from "@/lib/hindi";
 import ToolPageLayout from "@/components/ToolPageLayout";
 import ToolRenderer from "./ToolRenderer";
 import ToolTracker from "@/components/ToolTracker";
@@ -40,11 +41,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     keywords,
     alternates: {
       canonical: `https://sabtools.in/tools/${slug}`,
-      languages: {
-        en: `https://sabtools.in/tools/${slug}`,
-        hi: `https://sabtools.in/hi/tools/${slug}`,
-        "x-default": `https://sabtools.in/tools/${slug}`,
-      },
+      // Only declare a Hindi alternate when an actual `/hi/tools/{slug}`
+      // exists (hindiTools is a subset — 424 of 428 tools). Without this
+      // gate, hreflang for the 4-5 English-only tools points at a 404,
+      // which makes Google drop the entire language cluster (per the
+      // hreflang spec's bidirectional-resolution requirement).
+      languages: hindiToolSlugs.includes(slug)
+        ? {
+            "en-IN": `https://sabtools.in/tools/${slug}`,
+            "hi-IN": `https://sabtools.in/hi/tools/${slug}`,
+            "x-default": `https://sabtools.in/tools/${slug}`,
+          }
+        : {
+            "en-IN": `https://sabtools.in/tools/${slug}`,
+            "x-default": `https://sabtools.in/tools/${slug}`,
+          },
     },
     openGraph: {
       title: `${tool.name} - Free ${catName} | SabTools.in`,
