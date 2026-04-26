@@ -361,13 +361,10 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
         {/* FAQ Section with Schema — unique per category */}
         <ToolFaq toolName={tool.name} description={tool.description} customFaqs={content.faqs} />
 
-        {/* Expert Review — E-E-A-T signal for Google */}
+        {/* Expert Review — E-E-A-T signal for Google.
+            ReviewedBy renders the "Last updated" line itself (driven by
+            BUILD_MONTH_YEAR), so no separate freshness pill is needed. */}
         <ReviewedBy category={tool.category} />
-
-        {/* Last Updated — freshness signal */}
-        <div className="mt-3 text-xs text-gray-400">
-          Last updated: April 2026
-        </div>
 
         {/* User Testimonials — social proof */}
         <Testimonials category={tool.category} toolSlug={tool.slug} />

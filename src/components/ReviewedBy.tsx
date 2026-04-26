@@ -1,69 +1,61 @@
 import Link from "next/link";
+import { getAuthorByCategory, getAuthorBySlug, type Author } from "@/lib/authors";
+import { BUILD_MONTH_YEAR } from "@/lib/schema";
 
-const reviewerMap: Record<string, { name: string; title: string; initials: string; color: string; slug?: string }> = {
-  finance: { name: "Priya Sharma", title: "Certified Financial Planner", initials: "PS", color: "#059669", slug: "priya-sharma" },
-  tax: { name: "Priya Sharma", title: "Certified Financial Planner", initials: "PS", color: "#059669", slug: "priya-sharma" },
-  business: { name: "Priya Sharma", title: "Certified Financial Planner", initials: "PS", color: "#059669", slug: "priya-sharma" },
-  health: { name: "Dr. Rajesh Kumar", title: "MBBS, Health Consultant", initials: "DK", color: "#dc2626", slug: "rajesh-kumar" },
-  math: { name: "Prof. Anita Desai", title: "Mathematics Educator", initials: "AD", color: "#7c3aed", slug: "anita-desai" },
-  science: { name: "Prof. Anita Desai", title: "Mathematics Educator", initials: "AD", color: "#7c3aed", slug: "anita-desai" },
-  education: { name: "Prof. Anita Desai", title: "Mathematics Educator", initials: "AD", color: "#7c3aed", slug: "anita-desai" },
-  exam: { name: "Prof. Anita Desai", title: "Mathematics Educator", initials: "AD", color: "#7c3aed", slug: "anita-desai" },
-  developer: { name: "Vikram Mehta", title: "Senior Software Engineer", initials: "VM", color: "#0891b2", slug: "vikram-mehta" },
-  css: { name: "Vikram Mehta", title: "Senior Software Engineer", initials: "VM", color: "#0891b2", slug: "vikram-mehta" },
-  data: { name: "Vikram Mehta", title: "Senior Software Engineer", initials: "VM", color: "#0891b2", slug: "vikram-mehta" },
-  legal: { name: "Adv. Suresh Patel", title: "Legal Consultant", initials: "SP", color: "#b45309" },
-  realestate: { name: "Rakesh Joshi", title: "Civil Engineer", initials: "RJ", color: "#dc2626" },
-  construction: { name: "Rakesh Joshi", title: "Civil Engineer", initials: "RJ", color: "#dc2626" },
-  electrical: { name: "Rakesh Joshi", title: "Civil Engineer", initials: "RJ", color: "#dc2626" },
-  cooking: { name: "Meera Iyer", title: "Nutritionist & Chef", initials: "MI", color: "#ea580c" },
-  agriculture: { name: "Dr. Arun Singh", title: "Agricultural Scientist", initials: "AS", color: "#16a34a" },
-};
-
-const defaultReviewer = { name: "SabTools Editorial Team", title: "Expert Review Panel", initials: "ST", color: "#4f46e5" };
-
-function getReviewer(category: string) {
-  const key = category.toLowerCase().replace(/[^a-z]/g, "");
-  return reviewerMap[key] || defaultReviewer;
-}
+/**
+ * Visible "Reviewed by" byline shown beneath each tool's FAQ block.
+ *
+ * Uses the same `getAuthorByCategory()` helper that powers the schema-level
+ * E-E-A-T attribution (WebApplication.author, Article.author,
+ * CollectionPage.reviewedBy) so the visible byline and the structured-data
+ * author can never drift apart. When no author claims the category, falls
+ * back to the founder rather than inventing a phantom reviewer — every
+ * named human on this surface has a real `/author/{slug}` profile page
+ * with a full Person schema, which is what Google's E-E-A-T signal
+ * actually rewards.
+ *
+ * "Last updated" derives from `BUILD_MONTH_YEAR` so the human label and
+ * the schema `dateModified` both bump on each Vercel deploy.
+ */
 
 interface ReviewedByProps {
+  /** Tool category slug, e.g. "finance" or "css". */
   category: string;
 }
 
 export default function ReviewedBy({ category }: ReviewedByProps) {
-  const reviewer = getReviewer(category);
+  // Resolve the canonical reviewer for this category, falling back to the
+  // founder when no expert covers it (e.g. legal, construction, electrical
+  // — categories that don't have a dedicated domain expert). The founder
+  // is always present, so this never returns undefined.
+  const reviewer: Author =
+    getAuthorByCategory(category) ?? getAuthorBySlug("rakesh-seervi")!;
 
   return (
-    <>
-      <div className="flex items-center gap-3 px-4 py-2.5 border border-indigo-100 rounded-[10px] bg-slate-50 max-w-[480px] mt-4">
-        <div
-          className="w-10 h-10 min-w-[40px] rounded-full flex items-center justify-center text-white text-sm font-bold tracking-wide"
-          style={{ backgroundColor: reviewer.color }}
-        >
-          {reviewer.initials}
-        </div>
-        <div className="flex flex-col gap-0.5">
-          <div className="flex items-center gap-1.5">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="min-w-[16px]" aria-hidden="true">
-              <circle cx="8" cy="8" r="8" fill="#16a34a" />
-              <path d="M5 8.5L7 10.5L11 6" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            {reviewer.slug ? (
-              <Link href={`/author/${reviewer.slug}`} className="text-[13px] font-semibold text-slate-800 hover:text-indigo-600 transition leading-tight">
-                Reviewed by {reviewer.name}
-              </Link>
-            ) : (
-              <span className="text-[13px] font-semibold text-slate-800 leading-tight">
-                Reviewed by {reviewer.name}
-              </span>
-            )}
-          </div>
-          <span className="text-xs text-slate-500 leading-tight">
-            {reviewer.title} &middot; Last updated: April 2026
-          </span>
-        </div>
+    <div className="flex items-center gap-3 px-4 py-2.5 border border-indigo-100 rounded-[10px] bg-slate-50 max-w-[480px] mt-4">
+      <div
+        className="w-10 h-10 min-w-[40px] rounded-full flex items-center justify-center text-white text-sm font-bold tracking-wide"
+        style={{ backgroundColor: reviewer.color }}
+      >
+        {reviewer.initials}
       </div>
-    </>
+      <div className="flex flex-col gap-0.5">
+        <div className="flex items-center gap-1.5">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="min-w-[16px]" aria-hidden="true">
+            <circle cx="8" cy="8" r="8" fill="#16a34a" />
+            <path d="M5 8.5L7 10.5L11 6" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          <Link
+            href={`/author/${reviewer.slug}`}
+            className="text-[13px] font-semibold text-slate-800 hover:text-indigo-600 transition leading-tight"
+          >
+            Reviewed by {reviewer.name}
+          </Link>
+        </div>
+        <span className="text-xs text-slate-500 leading-tight">
+          {reviewer.role} &middot; Last updated: {BUILD_MONTH_YEAR}
+        </span>
+      </div>
+    </div>
   );
 }

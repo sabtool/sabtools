@@ -41,6 +41,20 @@ export const SUPPORTED_LANGUAGES = ["en-IN", "hi-IN"] as const;
 export const BUILD_DATE = new Date().toISOString().slice(0, 10);
 
 /**
+ * Human-friendly build-date label, e.g. "April 2026".
+ *
+ * Used in user-facing "Last updated: …" surfaces (ReviewedBy byline,
+ * tool-page footer) so the visible freshness label and the schema
+ * `dateModified` are derived from the same source — no more drift
+ * between what Google sees and what visitors read.
+ */
+export const BUILD_MONTH_YEAR = new Date().toLocaleString("en-US", {
+  month: "long",
+  year: "numeric",
+  timeZone: "UTC",
+});
+
+/**
  * The Organization entity — the "anchor" every other schema should reference
  * via { "@id": ORG_ID }. Emit this on the homepage and the About page only;
  * other pages should reference the @id instead of redeclaring it.
