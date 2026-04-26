@@ -14,6 +14,7 @@ import {
   faqPageNode,
   buildGraph,
   personIdFor,
+  BUILD_DATE,
 } from "@/lib/schema";
 import { categoryPillarsHi } from "@/lib/category-pillars-hi";
 import { getAuthorByCategory } from "@/lib/authors";
@@ -120,7 +121,7 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
       ...(categoryReviewer
         ? { reviewedBy: { "@id": personIdFor(categoryReviewer.slug) } }
         : {}),
-      dateModified: "2026-04-25",
+      dateModified: BUILD_DATE,
       numberOfItems: catTools.length,
     },
     {

@@ -25,6 +25,22 @@ export const FOUNDER_ID = `${SITE_URL}/author/rakesh-seervi#person`;
 export const SUPPORTED_LANGUAGES = ["en-IN", "hi-IN"] as const;
 
 /**
+ * Build-time freshness signal.
+ *
+ * Resolves at module-evaluation time which, for our static export, is the
+ * build moment on Vercel. Every static page rendered in a given deployment
+ * therefore reports the same `dateModified`, and that date advances on
+ * each subsequent deploy — giving Google a real freshness signal instead
+ * of the previously hardcoded literal that became stale the moment we
+ * shipped a new version.
+ *
+ * ISO 8601 (YYYY-MM-DD), UTC. Schema.org accepts both date and dateTime;
+ * we use the date form because the time component would imply minute-level
+ * granularity that we don't actually maintain.
+ */
+export const BUILD_DATE = new Date().toISOString().slice(0, 10);
+
+/**
  * The Organization entity — the "anchor" every other schema should reference
  * via { "@id": ORG_ID }. Emit this on the homepage and the About page only;
  * other pages should reference the @id instead of redeclaring it.

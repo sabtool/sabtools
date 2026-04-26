@@ -38,6 +38,7 @@ import {
   videoObjectNode,
   buildGraph,
   personIdFor,
+  BUILD_DATE,
 } from "@/lib/schema";
 import { getAuthorByCategory } from "@/lib/authors";
 
@@ -100,7 +101,7 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
       inLanguage: SUPPORTED_LANGUAGES,
       primaryEntityId: webAppId,
       breadcrumbId,
-      dateModified: "2026-04-25",
+      dateModified: BUILD_DATE,
       // Voice-search optimisation (Strategy §2.4 / Speakable rich-result
       // spec). Targets the FAQ block, which is the part of the page best
       // suited to be read aloud by Google Assistant: short Q&A pairs that

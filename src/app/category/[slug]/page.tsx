@@ -14,6 +14,7 @@ import {
   faqPageNode,
   buildGraph,
   personIdFor,
+  BUILD_DATE,
 } from "@/lib/schema";
 import { categoryPillars } from "@/lib/category-pillars";
 import { getAuthorByCategory } from "@/lib/authors";
@@ -369,9 +370,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
       ...(categoryReviewer
         ? { reviewedBy: { "@id": personIdFor(categoryReviewer.slug) } }
         : {}),
-      // Last-updated freshness signal — tracked manually and bumped on
-      // each major batch so the date stays meaningful.
-      dateModified: "2026-04-25",
+      // Last-updated freshness signal. Resolves to the deploy date on
+      // every Vercel build — Google sees a real freshness signal that
+      // advances on each release rather than a stale literal.
+      dateModified: BUILD_DATE,
       numberOfItems: catTools.length,
       hasPart: catTools.slice(0, 10).map((t) => ({
         "@type": "WebApplication",
