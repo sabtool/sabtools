@@ -120,9 +120,10 @@
     "event-checklist-generator",
     "name-numerology-calculator",
     "youtube-thumbnail-downloader",
-    "average-calculator"
+    "average-calculator",
+    "power-consumption-calculator"
   ],
-  "lastCategory": "math",
-  "totalPosts": 121,
-  "lastRun": "2026-04-26T08:44:58.238Z"
+  "lastCategory": "electrical",
+  "totalPosts": 122,
+  "lastRun": "2026-04-26T11:59:59.378Z"
 }
