@@ -121,9 +121,10 @@
     "name-numerology-calculator",
     "youtube-thumbnail-downloader",
     "average-calculator",
-    "power-consumption-calculator"
+    "power-consumption-calculator",
+    "pdf-page-remover"
   ],
-  "lastCategory": "electrical",
-  "totalPosts": 122,
-  "lastRun": "2026-04-26T11:59:59.378Z"
+  "lastCategory": "pdf",
+  "totalPosts": 123,
+  "lastRun": "2026-04-26T17:24:57.193Z"
 }
