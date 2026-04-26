@@ -118,9 +118,10 @@
     "staircase-calculator",
     "readability-checker",
     "event-checklist-generator",
-    "name-numerology-calculator"
+    "name-numerology-calculator",
+    "youtube-thumbnail-downloader"
   ],
-  "lastCategory": "astrology",
-  "totalPosts": 119,
-  "lastRun": "2026-04-25T21:55:14.111Z"
+  "lastCategory": "social",
+  "totalPosts": 120,
+  "lastRun": "2026-04-26T06:30:27.367Z"
 }
