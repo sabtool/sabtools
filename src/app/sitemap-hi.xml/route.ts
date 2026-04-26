@@ -1,4 +1,4 @@
-import { tools } from "@/lib/tools";
+import { hindiToolSlugs } from "@/lib/hindi";
 import { categoryPillarsHi } from "@/lib/category-pillars-hi";
 
 export const dynamic = "force-static";
@@ -6,6 +6,11 @@ export const dynamic = "force-static";
 /**
  * Hindi sitemap - contains all Hindi tool pages, Hindi category pillars
  * and the Hindi homepage. Served at /sitemap-hi.xml
+ *
+ * Tools are filtered to `hindiToolSlugs` only — `tools` includes English-
+ * only entries that don't have a `/hi/tools/<slug>` page (the route's
+ * generateStaticParams emits only hindiTools), and listing them here
+ * pointed crawlers at 404 URLs which is a sitemap-quality penalty.
  */
 export async function GET() {
   const baseUrl = "https://sabtools.in";
@@ -25,8 +30,9 @@ export async function GET() {
       changefreq: "weekly",
       priority: "0.8",
     })),
-    ...tools.map((tool) => ({
-      loc: `${baseUrl}/hi/tools/${tool.slug}`,
+    // Only tools with a Hindi version — anything else 404s under /hi/tools.
+    ...hindiToolSlugs.map((slug) => ({
+      loc: `${baseUrl}/hi/tools/${slug}`,
       lastmod: now,
       changefreq: "weekly",
       priority: "0.7",

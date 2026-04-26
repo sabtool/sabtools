@@ -13,9 +13,14 @@ import {
   SITE_URL,
   ORG_ID,
   breadcrumbNode,
+  breadcrumbIdFor,
+  webPageNode,
   faqPageNode,
   buildGraph,
+  personIdFor,
+  BUILD_DATE,
 } from "@/lib/schema";
+import { getAuthorByCategory } from "@/lib/authors";
 
 export function generateStaticParams() {
   return programmaticPages.map((p) => ({ slug: p.slug }));
@@ -101,15 +106,37 @@ export default async function CalcPage({
 
   const faqItems = page.faqs && page.faqs.length > 0 ? page.faqs : defaultFaqItems;
 
-  // Single @graph: WebApplication + BreadcrumbList + FAQPage.
-  // Publisher is linked via @id to the homepage Organization entity.
+  // Single @graph: WebPage + WebApplication + BreadcrumbList + FAQPage.
+  // Mirrors the cohesion pattern in ToolPageLayout — WebPage anchors the URL
+  // and cross-references the WebApplication (mainEntity) and BreadcrumbList
+  // (breadcrumb) via stable @id, so the entity graph reads as one unit.
+  // Author is the same domain expert who reviews the parent tool's category
+  // (E-E-A-T parity with /tools/{slug} schema). dateModified bumps on every
+  // Vercel deploy via BUILD_DATE.
+  const pageUrl = `${SITE_URL}/calc/${slug}`;
+  const webAppId = `${pageUrl}#application`;
+  const webPageId = `${pageUrl}#webpage`;
+  const breadcrumbId = breadcrumbIdFor(pageUrl);
+
+  const expert = getAuthorByCategory(tool.category);
+  const authorId = expert ? personIdFor(expert.slug) : undefined;
+
   const calcGraph = buildGraph([
-    {
-      "@type": "WebApplication",
-      "@id": `${SITE_URL}/calc/${slug}#application`,
+    webPageNode({
+      url: pageUrl,
       name: page.h1,
       description: page.description,
-      url: `${SITE_URL}/calc/${slug}`,
+      inLanguage: "en-IN",
+      primaryEntityId: webAppId,
+      breadcrumbId,
+      dateModified: BUILD_DATE,
+    }),
+    {
+      "@type": "WebApplication",
+      "@id": webAppId,
+      name: page.h1,
+      description: page.description,
+      url: pageUrl,
       applicationCategory: "UtilityApplication",
       operatingSystem: "All",
       browserRequirements: "Requires JavaScript. Requires HTML5.",
@@ -122,13 +149,18 @@ export default async function CalcPage({
         availability: "https://schema.org/InStock",
       },
       publisher: { "@id": ORG_ID },
+      mainEntityOfPage: { "@id": webPageId },
+      ...(authorId ? { author: { "@id": authorId } } : {}),
     },
-    breadcrumbNode([
-      { name: "Home", url: `${SITE_URL}/` },
-      { name: cat?.name || "Tools", url: `${SITE_URL}/category/${tool.category}` },
-      { name: tool.name, url: `${SITE_URL}/tools/${tool.slug}` },
-      { name: page.h1 },
-    ]),
+    breadcrumbNode(
+      [
+        { name: "Home", url: `${SITE_URL}/` },
+        { name: cat?.name || "Tools", url: `${SITE_URL}/category/${tool.category}` },
+        { name: tool.name, url: `${SITE_URL}/tools/${tool.slug}` },
+        { name: page.h1 },
+      ],
+      breadcrumbId
+    ),
     faqPageNode(faqItems, "en-IN"),
   ]);
 
