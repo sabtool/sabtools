@@ -139,6 +139,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="SabTools" />
+        {/* Chrome / Edge "Add to home screen" + general OS app-list
+            integration. Mirrors apple-mobile-web-app-title for non-Apple
+            platforms. */}
+        <meta name="application-name" content="SabTools" />
+        {/* Windows / Edge tile customisation — pinned shortcut renders
+            with the brand indigo (#4f46e5) instead of OS default. */}
+        <meta name="msapplication-TileColor" content="#4f46e5" />
+        <meta name="msapplication-TileImage" content="/icon-192.png" />
         {/* AdSense: uncomment and replace with real publisher ID after approval */}
         {/* <meta name="google-adsense-account" content="ca-pub-YOURPUBID" /> */}
         <meta name="p:domain_verify" content="2979c659d48751bc3545b2d2d9df6662" />
