@@ -127,9 +127,10 @@
     "cashback-calculator",
     "cron-expression-generator",
     "youtube-timestamp-generator",
-    "whatsapp-formatter"
+    "whatsapp-formatter",
+    "rd-calculator"
   ],
-  "lastCategory": "whatsapp",
-  "totalPosts": 128,
-  "lastRun": "2026-04-27T19:56:08.511Z"
+  "lastCategory": "finance",
+  "totalPosts": 129,
+  "lastRun": "2026-04-27T22:36:09.289Z"
 }
