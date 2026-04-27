@@ -10,6 +10,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "SabTools.in — मुफ्त ऑनलाइन टूल्स हिंदी में",
+        type: "image/png",
       },
     ],
   },

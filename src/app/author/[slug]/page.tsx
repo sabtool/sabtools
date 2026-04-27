@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       username: author.slug,
       locale: "en_IN",
       siteName: "SabTools.in",
-      images: [{ url: "https://sabtools.in/og-image.png", width: 1200, height: 630, alt: title }],
+      images: [{ url: "https://sabtools.in/og-image.png", width: 1200, height: 630, alt: title, type: "image/png" }],
     },
     twitter: {
       card: "summary_large_image",

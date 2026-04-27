@@ -70,7 +70,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       locale: "hi_IN",
       alternateLocale: ["en_IN"],
       siteName: "SabTools.in",
-      images: [{ url: "https://sabtools.in/og-image.png", width: 1200, height: 630, alt: `${cat.name} — SabTools.in` }],
+      images: [{ url: "https://sabtools.in/og-image.png", width: 1200, height: 630, alt: `${cat.name} — SabTools.in`, type: "image/png" }],
     },
     twitter: {
       card: "summary_large_image",

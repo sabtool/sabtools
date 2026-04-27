@@ -85,6 +85,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
           width: 1200,
           height: 630,
           alt: `${tool.name} — Free Online Tool on SabTools.in`,
+          type: "image/png",
         },
       ],
     },

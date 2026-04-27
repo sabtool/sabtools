@@ -76,6 +76,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "SabTools.in - 460+ Free Online Tools for India",
+        type: "image/png",
       },
     ],
   },

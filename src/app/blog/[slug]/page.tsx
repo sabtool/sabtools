@@ -94,6 +94,12 @@ export async function generateMetadata({
               width: post.image.width,
               height: post.image.height,
               alt: post.image.alt,
+              // Explicit MIME hint — auto-blog generates WebP heroes,
+              // declaring the type lets Facebook's crawler skip the
+              // pre-fetch round-trip it normally does to verify image
+              // format. Also surfaces image:type as a Google Image
+              // Search ranking signal.
+              type: post.image.src.endsWith(".webp") ? "image/webp" : "image/png",
             },
           ]
         : [
@@ -102,6 +108,7 @@ export async function generateMetadata({
               width: 1200,
               height: 630,
               alt: post.title,
+              type: "image/png",
             },
           ],
     },

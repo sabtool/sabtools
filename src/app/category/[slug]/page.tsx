@@ -304,7 +304,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       // actually exists at /hi/category/{slug}.
       ...(hasHindiPillar ? { alternateLocale: ["hi_IN"] } : {}),
       siteName: "SabTools.in",
-      images: [{ url: "https://sabtools.in/og-image.png", width: 1200, height: 630, alt: `${cat.name} — Free Online Tools | SabTools.in` }],
+      images: [{ url: "https://sabtools.in/og-image.png", width: 1200, height: 630, alt: `${cat.name} — Free Online Tools | SabTools.in`, type: "image/png" }],
     },
     twitter: {
       card: "summary_large_image",

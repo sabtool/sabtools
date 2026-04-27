@@ -32,6 +32,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "SabTools.in Blog — Financial Tips, Tax Guides & Tool Tutorials",
+        type: "image/png",
       },
     ],
   },

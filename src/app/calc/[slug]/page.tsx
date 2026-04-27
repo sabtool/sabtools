@@ -48,7 +48,7 @@ export async function generateMetadata({
       type: "website",
       locale: "en_IN",
       siteName: "SabTools.in",
-      images: [{ url: "https://sabtools.in/og-image.png", width: 1200, height: 630, alt: `${page.title} — SabTools.in` }],
+      images: [{ url: "https://sabtools.in/og-image.png", width: 1200, height: 630, alt: `${page.title} — SabTools.in`, type: "image/png" }],
     },
     twitter: {
       card: "summary_large_image",

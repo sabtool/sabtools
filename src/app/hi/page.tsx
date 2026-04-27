@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     locale: "hi_IN",
     alternateLocale: ["en_IN"],
     siteName: "SabTools.in",
-    images: [{ url: "https://sabtools.in/og-image.png", width: 1200, height: 630, alt: "SabTools.in - मुफ्त ऑनलाइन टूल्स" }],
+    images: [{ url: "https://sabtools.in/og-image.png", width: 1200, height: 630, alt: "SabTools.in - मुफ्त ऑनलाइन टूल्स", type: "image/png" }],
   },
   twitter: {
     card: "summary_large_image",
