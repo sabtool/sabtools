@@ -63,6 +63,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       url: `https://sabtools.in/tools/${slug}`,
       type: "website",
       locale: "en_IN",
+      // og:locale:alternate gated on the same hindiToolSlugs check as
+      // the hreflang declaration above — only declare the Hindi alternate
+      // when /hi/tools/{slug} actually exists, otherwise OG consumers
+      // (Facebook share crawler, etc.) hit a 404.
+      ...(hindiToolSlugs.includes(slug) ? { alternateLocale: ["hi_IN"] } : {}),
       siteName: "SabTools.in",
       images: [
         {

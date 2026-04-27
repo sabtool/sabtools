@@ -59,6 +59,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       url: `https://sabtools.in/hi/category/${slug}`,
       type: "website",
       locale: "hi_IN",
+      alternateLocale: ["en_IN"],
       siteName: "SabTools.in",
       images: [{ url: "https://sabtools.in/og-image.png", width: 1200, height: 630, alt: `${cat.name} — SabTools.in` }],
     },

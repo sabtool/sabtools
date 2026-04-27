@@ -61,6 +61,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
+    // og:locale:alternate mirrors hreflang — tells Facebook / LinkedIn /
+    // other Open Graph consumers that a Hindi-locale version of this URL
+    // exists at /hi. Pages with both locales surfaced get a richer share
+    // preview on Indian social platforms (Strategy §2.6 / Batch 27).
+    alternateLocale: ["hi_IN"],
     url: "https://sabtools.in",
     siteName: "SabTools.in",
     title: "SabTools.in — 460+ Free Online Tools for India",

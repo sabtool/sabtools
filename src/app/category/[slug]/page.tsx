@@ -289,6 +289,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       url: `https://sabtools.in/category/${slug}`,
       type: "website",
       locale: "en_IN",
+      // og:locale:alternate gated on the same `hasHindiPillar` check as
+      // hreflang above — only declare the Hindi alternate when the pillar
+      // actually exists at /hi/category/{slug}.
+      ...(hasHindiPillar ? { alternateLocale: ["hi_IN"] } : {}),
       siteName: "SabTools.in",
       images: [{ url: "https://sabtools.in/og-image.png", width: 1200, height: 630, alt: `${cat.name} — Free Online Tools | SabTools.in` }],
     },
