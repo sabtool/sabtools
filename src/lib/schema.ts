@@ -82,13 +82,20 @@ export function organizationNode() {
     name: "SabTools",
     alternateName: ["Sabtools.in", "SabTools.in"],
     url: `${SITE_URL}/`,
+    // Organization.logo points at icon-512.png (a real 512×512 PNG in
+    // /public). Earlier this referenced /logo.png which was never
+    // committed — Google's Knowledge Graph crawler hit a 404 on every
+    // org-logo lookup, weakening the brand-card eligibility signal.
     logo: {
       "@type": "ImageObject",
-      url: `${SITE_URL}/logo.png`,
+      url: `${SITE_URL}/icon-512.png`,
       width: 512,
       height: 512,
     },
-    image: `${SITE_URL}/logo.png`,
+    // Generic brand image — og-image.png is the 1200×630 share card
+    // that already ships in /public, used everywhere else as the
+    // sitewide OG fallback.
+    image: `${SITE_URL}/og-image.png`,
     description:
       "SabTools.in is a free online tools platform for Indian users, offering 460+ calculators, converters, and utilities in English and Hindi. Every tool runs in the browser with zero data sent to any server.",
     foundingDate: "2025",
@@ -177,7 +184,12 @@ export interface PersonNodeInput {
   knowsAbout: readonly string[];
   /** Public profile URLs (Twitter, LinkedIn, etc.) — populates `sameAs`. */
   sameAs?: readonly string[];
-  /** Optional override of the Person image URL; defaults to /authors/{slug}.png */
+  /** Optional override of the Person image URL; defaults to the
+   *  sitewide brand share card (`/og-image.png`) since per-author
+   *  portraits aren't shipped yet. The previous default was
+   *  `/authors/{slug}.png` which 404'd because that directory was
+   *  never created — Google saw broken Person.image on every author
+   *  reference, hurting E-E-A-T entity attribution. */
   image?: string;
   /** Languages the person can converse / write in — defaults to en + hi. */
   knowsLanguage?: readonly string[];
@@ -210,7 +222,7 @@ export function personNode(input: PersonNodeInput) {
     jobTitle: input.jobTitle,
     description: input.description,
     url,
-    image: input.image ?? `${SITE_URL}/authors/${input.slug}.png`,
+    image: input.image ?? `${SITE_URL}/og-image.png`,
     worksFor: { "@id": ORG_ID },
     knowsAbout: [...input.knowsAbout],
     knowsLanguage: input.knowsLanguage ? [...input.knowsLanguage] : ["en", "hi"],
