@@ -42,6 +42,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const pillar = categoryPillarsHi[slug];
   if (!cat || !pillar) return {};
   const toolCount = tools.filter((t) => t.category === slug).length;
+
+  // Twitter byline from the resolved category reviewer (same person the
+  // CollectionPage's `reviewedBy` schema field points at).
+  const reviewer = getAuthorByCategory(slug);
+  const twitterCreator = reviewer?.socialLinks?.twitter
+    ? `@${reviewer.socialLinks.twitter}`
+    : "@sabtools";
+
   return {
     title: `${cat.name} — हिंदी में ${toolCount} मुफ्त ऑनलाइन टूल्स`,
     description: `${cat.name} — ${toolCount} मुफ्त ऑनलाइन टूल्स हिंदी में। बिना साइनअप, तुरंत परिणाम। SabTools.in पर।`,
@@ -68,7 +76,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: `${cat.name} — हिंदी में मुफ्त टूल्स`,
       description: `${toolCount} मुफ्त ${cat.name} हिंदी में। बिना साइनअप।`,
       images: ["https://sabtools.in/og-image.png"],
-      creator: "@sabtools",
+      creator: twitterCreator,
       site: "@sabtools",
     },
   };

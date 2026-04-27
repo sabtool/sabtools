@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { tools, categories } from "@/lib/tools";
 import { hindiToolSlugs } from "@/lib/hindi";
+import { getAuthorByCategory } from "@/lib/authors";
 import ToolPageLayout from "@/components/ToolPageLayout";
 import ToolRenderer from "./ToolRenderer";
 import ToolTracker from "@/components/ToolTracker";
@@ -34,6 +35,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     "sabtools",
     "no signup",
   ];
+
+  // Resolve the tool's category reviewer for the Twitter card byline.
+  // Same author the WebApplication.author @id resolves to in Batch 23 —
+  // when an expert claims the category and has a public Twitter handle,
+  // surface them on the share preview; otherwise fall back to the brand.
+  const expert = getAuthorByCategory(tool.category);
+  const twitterCreator = expert?.socialLinks?.twitter
+    ? `@${expert.socialLinks.twitter}`
+    : "@sabtools";
 
   return {
     title,
@@ -83,7 +93,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: `${tool.name} — Free Online ${catName} | SabTools.in`,
       description: `Try ${tool.name} free — ${tool.description.toLowerCase()}. No signup, instant results, works on mobile. Built for India.`,
       images: ["https://sabtools.in/og-image.png"],
-      creator: "@sabtools",
+      creator: twitterCreator,
       site: "@sabtools",
     },
     other: {

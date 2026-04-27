@@ -28,6 +28,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const ht = getHindiTool(slug);
   const tool = tools.find((t) => t.slug === slug);
   if (!ht || !tool) return {};
+
+  // Resolve the same domain expert the schema uses for the WebApplication
+  // author @id, then surface them on the Twitter card byline. Mirrors
+  // the English tool page behaviour from this batch.
+  const expert = getAuthorByCategory(tool.category);
+  const twitterCreator = expert?.socialLinks?.twitter
+    ? `@${expert.socialLinks.twitter}`
+    : "@sabtools";
+
   return {
     title: `${ht.name} — मुफ्त ऑनलाइन ${ht.name}`,
     description: `${ht.description}। मुफ्त ऑनलाइन ${ht.name} — बिना साइनअप, तुरंत परिणाम। SabTools.in पर।`,
@@ -50,7 +59,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: `${ht.name} — मुफ्त ऑनलाइन टूल`,
       description: `${ht.description}। 100% मुफ्त, बिना साइनअप।`,
       images: ["https://sabtools.in/og-image.png"],
-      creator: "@sabtools",
+      creator: twitterCreator,
       site: "@sabtools",
     },
   };

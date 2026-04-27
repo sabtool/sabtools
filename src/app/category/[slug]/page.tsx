@@ -265,6 +265,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const toolCount = tools.filter((t) => t.category === slug).length;
   const desc = categoryDescriptions[slug] || defaultCategoryDesc;
   const hasHindiPillar = Boolean(categoryPillarsHi[slug]);
+
+  // Resolve the same domain expert that the page schema's `reviewedBy`
+  // field already points at (Batch 22), so the Twitter card byline is
+  // aligned. When no expert claims this category, fall back to brand.
+  const reviewer = getAuthorByCategory(slug);
+  const twitterCreator = reviewer?.socialLinks?.twitter
+    ? `@${reviewer.socialLinks.twitter}`
+    : "@sabtools";
+
   return {
     title: `${cat.name} — ${toolCount} Free Online Tools for India`,
     description: desc.metaDesc,
@@ -301,7 +310,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: `${cat.name} — ${toolCount} Free Online Tools`,
       description: `${cat.description}. ${toolCount} free tools available. No signup, instant results.`,
       images: ["https://sabtools.in/og-image.png"],
-      creator: "@sabtools",
+      creator: twitterCreator,
       site: "@sabtools",
     },
   };
