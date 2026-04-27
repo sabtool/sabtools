@@ -124,9 +124,10 @@
     "power-consumption-calculator",
     "pdf-page-remover",
     "room-paint-visualizer",
-    "cashback-calculator"
+    "cashback-calculator",
+    "cron-expression-generator"
   ],
-  "lastCategory": "shopping",
-  "totalPosts": 125,
-  "lastRun": "2026-04-27T07:58:31.076Z"
+  "lastCategory": "developer",
+  "totalPosts": 126,
+  "lastRun": "2026-04-27T11:27:43.660Z"
 }
