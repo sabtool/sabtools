@@ -16,7 +16,6 @@ import {
   organizationNode,
   webSiteNode,
   personNode,
-  personIdFor,
   faqPageNode,
   buildGraph,
 } from "@/lib/schema";
@@ -86,16 +85,12 @@ export default function HomePage() {
   // The Person nodes for every named expert author are emitted here too so the
   // homepage acts as the canonical authority hub for E-E-A-T signals; subpages
   // reference each author via personIdFor(slug) without re-declaring them.
-  const memberRefs = authors.map((a) => ({ "@id": personIdFor(a.slug) }));
+  // organizationNode() now includes member references inline (Batch 42), so
+  // the homepage no longer needs to override the array — same Org schema
+  // surfaces consistently on every page that emits it.
 
   const homepageGraph = buildGraph([
-    {
-      ...organizationNode(),
-      // member array ties every named author into the Organization entity,
-      // so Google sees a single coherent expert team rather than scattered
-      // unrelated Person nodes (Strategy §2.4 / Appendix A).
-      member: memberRefs,
-    },
+    organizationNode(),
     webSiteNode(),
     // Founder gets the rich personNode treatment with full credentials —
     // FOUNDER_ID matches personIdFor("rakesh-seervi") so anywhere that

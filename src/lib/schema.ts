@@ -107,6 +107,20 @@ export function organizationNode() {
       "https://www.linkedin.com/company/sabtools",
       "https://github.com/sabtool",
     ],
+    // Member references — Person @ids of every named expert on the
+    // editorial team. The full Person nodes are declared once on the
+    // homepage; here we reference them by @id so any page that calls
+    // organizationNode() (homepage, /about) sees the same expert team
+    // attached to the Organization, not just on the homepage. Slugs
+    // are kept in sync with `authors[]` by the visible-byline parity
+    // check (Batch 25 / ReviewedBy.tsx).
+    member: [
+      { "@id": personIdFor("rakesh-seervi") },
+      { "@id": personIdFor("priya-sharma") },
+      { "@id": personIdFor("vikram-mehta") },
+      { "@id": personIdFor("anita-desai") },
+      { "@id": personIdFor("dr-rajesh-kumar") },
+    ],
   };
 }
 
