@@ -2,8 +2,9 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
-import { categories } from "@/lib/tools";
-import { authors, getAuthorBySlug } from "@/lib/authors";
+import { categories, tools } from "@/lib/tools";
+import { authors, getAuthorBySlug, getAuthorByCategory } from "@/lib/authors";
+import { getAllPosts, type BlogPost } from "@/lib/blog";
 import {
   SITE_URL,
   personNode,
@@ -79,6 +80,35 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
     .map((slug) => categories.find((c) => c.slug === slug))
     .filter(Boolean) as (typeof categories)[number][];
 
+  /* Resolve posts attributed to this author. The blog detail page (Batch 21)
+     resolves the author of each post via getAuthorByCategory(post.toolSlug
+     → tool.category). We replicate that chain here so the author profile
+     page surfaces only the posts that are *actually* attributed to them
+     in the Article.author @id. Founder is the fallback for posts where
+     no expert claims the category — we mirror that on the founder's
+     profile page so /author/rakesh-seervi shows uncovered-category
+     posts, not just his own categories. */
+  const allPosts = getAllPosts();
+  const founderSlug = "rakesh-seervi";
+  const isFounder = author.slug === founderSlug;
+  const authorPosts: BlogPost[] = allPosts
+    .filter((post) => {
+      if (!post.toolSlug) return isFounder; // unattributed posts attribute to the founder
+      const t = tools.find((tt) => tt.slug === post.toolSlug);
+      if (!t) return isFounder;
+      const expert = getAuthorByCategory(t.category);
+      const resolvedSlug = expert?.slug ?? founderSlug;
+      return resolvedSlug === author.slug;
+    })
+    // Most recent first — the visible list and the schema both surface
+    // the freshest content as the strongest authority signal.
+    .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+
+  // Cap the visible list and the schema reference at 10 posts. Beyond
+  // that the schema gets noisy without helping discovery (the sitemap
+  // already lists every post for full crawl coverage).
+  const visibleAuthorPosts = authorPosts.slice(0, 10);
+
   /* Collect social profile URLs once so both Person.sameAs and the rendered
      buttons stay in sync. */
   const socialLinks: string[] = [];
@@ -124,15 +154,31 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
         cssSelector: ["#bio-speakable p"],
       },
     },
-    personNode({
-      slug: author.slug,
-      name: author.name,
-      jobTitle: author.role,
-      description: author.bio,
-      knowsAbout: author.expertise,
-      sameAs: socialLinks,
-      mainEntityOfPage: profilePageId,
-    }),
+    {
+      ...personNode({
+        slug: author.slug,
+        name: author.name,
+        jobTitle: author.role,
+        description: author.bio,
+        knowsAbout: author.expertise,
+        sameAs: socialLinks,
+        mainEntityOfPage: profilePageId,
+      }),
+      // Person.subjectOf — articles authored/reviewed by this person.
+      // Each Article's @id is the same one declared on /blog/{slug}#article
+      // so the entity graph treats them as one canonical Article entity
+      // referenced from both the post detail page (Article.author → Person)
+      // and the author profile page (Person.subjectOf → Article). Closes
+      // the bidirectional Person ↔ Article relationship that was previously
+      // one-way.
+      ...(visibleAuthorPosts.length > 0
+        ? {
+            subjectOf: visibleAuthorPosts.map((post) => ({
+              "@id": `${SITE_URL}/blog/${post.slug}#article`,
+            })),
+          }
+        : {}),
+    },
     breadcrumbNode(
       [
         { name: "Home", url: `${SITE_URL}/` },
@@ -235,6 +281,49 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
           ))}
         </div>
       </div>
+
+      {/* Recent Articles by Author — closes the visible side of the
+          Person ↔ Article bidirectional link declared in the schema
+          above. Shows the 6 most recent posts attributed to this author
+          (out of the 10 the schema references). Internal-link signal
+          plus an active-author E-E-A-T cue ("this expert is currently
+          publishing"). */}
+      {visibleAuthorPosts.length > 0 && (
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            Recent Articles by {author.name.split(" ")[0]}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {visibleAuthorPosts.slice(0, 6).map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="flex flex-col gap-1 bg-gray-50 rounded-xl p-4 border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50/50 transition group"
+              >
+                <h3 className="font-semibold text-gray-900 group-hover:text-indigo-700 transition text-sm leading-snug line-clamp-2">
+                  {post.title}
+                </h3>
+                <p className="text-xs text-gray-500 line-clamp-2">{post.description}</p>
+                <p className="text-xs text-gray-400 mt-1">
+                  {new Date(post.date).toLocaleDateString("en-IN", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </p>
+              </Link>
+            ))}
+          </div>
+          {authorPosts.length > 6 && (
+            <p className="text-sm text-gray-500 mt-3">
+              {author.name.split(" ")[0]} has reviewed {authorPosts.length} articles in total.{" "}
+              <Link href="/blog" className="text-indigo-600 hover:underline font-medium">
+                Browse all blog posts →
+              </Link>
+            </p>
+          )}
+        </div>
+      )}
 
       {/* Categories Reviewed */}
       {authorCategories.length > 0 && (
