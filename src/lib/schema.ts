@@ -16,6 +16,8 @@
  *     ])) }} />
  */
 
+import { authors } from "./authors";
+
 export const SITE_URL = "https://sabtools.in";
 export const ORG_ID = `${SITE_URL}/#organization`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
@@ -115,23 +117,13 @@ export function organizationNode() {
       "https://github.com/sabtool",
     ],
     // Member references — Person @ids of every named expert on the
-    // editorial team. The full Person nodes are declared once on the
-    // homepage; here we reference them by @id so any page that calls
-    // organizationNode() (homepage, /about) sees the same expert team
-    // attached to the Organization, not just on the homepage. Slugs
-    // are kept in sync with `authors[]` by the visible-byline parity
-    // check (Batch 25 / ReviewedBy.tsx).
-    member: [
-      { "@id": personIdFor("rakesh-seervi") },
-      { "@id": personIdFor("priya-sharma") },
-      { "@id": personIdFor("vikram-mehta") },
-      { "@id": personIdFor("anita-desai") },
-      // Note: slug is `rajesh-kumar` (not `dr-rajesh-kumar`) — the
-      // honorific is part of the display name, not the URL slug.
-      // Earlier this had `dr-rajesh-kumar` and Google saw a dangling
-      // @id that didn't match any Person declaration.
-      { "@id": personIdFor("rajesh-kumar") },
-    ],
+    // editorial team. Auto-derived from `authors[]` so the member
+    // array can never drift out of sync with the actual Person
+    // declarations. Earlier this was hardcoded and one slug was
+    // wrong (`dr-rajesh-kumar` vs the correct `rajesh-kumar`),
+    // creating a dangling @id reference for ~6 weeks until Batch 47.
+    // Pulling from authors[] makes that bug class impossible.
+    member: authors.map((a) => ({ "@id": personIdFor(a.slug) })),
   };
 }
 
