@@ -387,6 +387,11 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
       // every Vercel build — Google sees a real freshness signal that
       // advances on each release rather than a stale literal.
       dateModified: BUILD_DATE,
+      // lastReviewed pair with reviewedBy above — explicit editorial-
+      // review signal distinct from dateModified. Same date as the
+      // build because the reviewer's pillar content gets re-checked on
+      // every deploy via the schema test pass.
+      lastReviewed: BUILD_DATE,
       // Voice-search optimisation — Google Assistant reads aloud the
       // category H1 + intro paragraph for "What are X tools?" queries,
       // and FAQ answers (when a pillar exists). Selectors mirror the

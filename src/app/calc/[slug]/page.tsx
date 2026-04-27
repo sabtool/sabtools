@@ -130,6 +130,10 @@ export default async function CalcPage({
       primaryEntityId: webAppId,
       breadcrumbId,
       dateModified: BUILD_DATE,
+      // Editorial-review pair (E-E-A-T). Same person who's the parent
+      // tool's WebApplication.author also reviewed this calc page.
+      lastReviewed: BUILD_DATE,
+      ...(authorId ? { reviewedById: authorId } : {}),
       // Voice-search optimisation — Google Assistant reads aloud the FAQ
       // pairs that match these selectors. Same hooks the tool page uses.
       speakableSelectors: ["#faq-speakable .faq-q", "#faq-speakable .faq-a"],

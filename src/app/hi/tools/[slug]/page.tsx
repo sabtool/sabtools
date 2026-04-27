@@ -98,6 +98,11 @@ export default async function HindiToolPage({ params }: { params: Promise<{ slug
   const webPageId = `${pageUrl}#webpage`;
   const breadcrumbId = breadcrumbIdFor(pageUrl);
 
+  // Resolve the category expert once — same person becomes both the
+  // WebApplication author and the WebPage reviewedBy (Batch 36).
+  const categoryExpert = getAuthorByCategory(tool.category);
+  const expertPersonId = categoryExpert ? personIdFor(categoryExpert.slug) : undefined;
+
   const hindiToolGraph = buildGraph([
     webPageNode({
       url: pageUrl,
@@ -107,6 +112,8 @@ export default async function HindiToolPage({ params }: { params: Promise<{ slug
       primaryEntityId: webAppId,
       breadcrumbId,
       dateModified: BUILD_DATE,
+      lastReviewed: BUILD_DATE,
+      ...(expertPersonId ? { reviewedById: expertPersonId } : {}),
       // Voice-search optimisation in Hindi — Google Assistant on
       // hi-IN devices reads aloud FAQ pairs matching these selectors.
       speakableSelectors: ["#faq-speakable .faq-q", "#faq-speakable .faq-a"],
@@ -123,10 +130,7 @@ export default async function HindiToolPage({ params }: { params: Promise<{ slug
         // E-E-A-T author attribution — same category expert validates
         // the Hindi version of the tool. Links via @id to the Person
         // node declared on the homepage Organization.member set.
-        authorId: (() => {
-          const expert = getAuthorByCategory(tool.category);
-          return expert ? personIdFor(expert.slug) : undefined;
-        })(),
+        authorId: expertPersonId,
       }),
       "@id": webAppId,
       url: pageUrl,

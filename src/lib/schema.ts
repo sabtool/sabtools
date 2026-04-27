@@ -272,6 +272,13 @@ export interface WebPageNodeInput {
   datePublished?: string;
   /** ISO 8601 date — when the page was last meaningfully updated */
   dateModified?: string;
+  /** ISO 8601 date — when the page content was last *reviewed* for
+   *  accuracy by a named expert. Distinct from `dateModified` (which
+   *  bumps on any edit). E-E-A-T signal Google explicitly surfaces. */
+  lastReviewed?: string;
+  /** `@id` of the Person/Organization that performed the last review.
+   *  Pair with `lastReviewed` to make the editorial review attributable. */
+  reviewedById?: string;
   /**
    * CSS selectors marking the parts of the page best suited for voice
    * read-out (Google Assistant / Speakable rich-result spec). Typically
@@ -302,6 +309,8 @@ export function webPageNode(input: WebPageNodeInput) {
     ...(input.breadcrumbId ? { breadcrumb: { "@id": input.breadcrumbId } } : {}),
     ...(input.datePublished ? { datePublished: input.datePublished } : {}),
     ...(input.dateModified ? { dateModified: input.dateModified } : {}),
+    ...(input.lastReviewed ? { lastReviewed: input.lastReviewed } : {}),
+    ...(input.reviewedById ? { reviewedBy: { "@id": input.reviewedById } } : {}),
     ...(input.speakableSelectors && input.speakableSelectors.length > 0
       ? {
           speakable: {

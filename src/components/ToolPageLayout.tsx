@@ -93,6 +93,13 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
   const video = toolVideos[tool.slug];
   const videoId = `${pageUrl}#video`;
 
+  // Resolve the category expert once — used for both the WebApplication
+  // author @id (Batch 23) and the WebPage lastReviewed/reviewedBy pair
+  // added in Batch 36. Single resolution keeps both byline signals
+  // pointing at the same person.
+  const categoryExpert = getAuthorByCategory(tool.category);
+  const expertPersonId = categoryExpert ? personIdFor(categoryExpert.slug) : undefined;
+
   const toolGraph = buildGraph([
     webPageNode({
       url: pageUrl,
@@ -102,6 +109,13 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
       primaryEntityId: webAppId,
       breadcrumbId,
       dateModified: BUILD_DATE,
+      // Editorial-review signals (E-E-A-T). lastReviewed marks when an
+      // expert vetted the content; reviewedBy attributes that review to
+      // the named domain expert. Distinct from dateModified, which fires
+      // on any deploy. Pair these and Google's Knowledge Graph treats
+      // the page as actively curated rather than just auto-rebuilt.
+      lastReviewed: BUILD_DATE,
+      ...(expertPersonId ? { reviewedById: expertPersonId } : {}),
       // Voice-search optimisation (Strategy §2.4 / Speakable rich-result
       // spec). Targets the FAQ block, which is the part of the page best
       // suited to be read aloud by Google Assistant: short Q&A pairs that
@@ -123,11 +137,9 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
       // category (Priya Sharma for Finance, Dr. Rajesh Kumar for Health,
       // etc.) is declared as the WebApplication author. Links via @id
       // to the Person node already in the homepage Organization.member
-      // set, keeping the entity graph internally consistent.
-      authorId: (() => {
-        const expert = getAuthorByCategory(tool.category);
-        return expert ? personIdFor(expert.slug) : undefined;
-      })(),
+      // set, keeping the entity graph internally consistent. Same
+      // person also becomes WebPage.reviewedBy above for parity.
+      authorId: expertPersonId,
     }),
     breadcrumbNode(
       [

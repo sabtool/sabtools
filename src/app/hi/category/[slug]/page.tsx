@@ -116,6 +116,14 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
       publisher: { "@id": ORG_ID },
       breadcrumb: { "@id": hiBreadcrumbId },
       mainEntity: { "@id": collectionPageId },
+      dateModified: BUILD_DATE,
+      // Editorial-review pair — same expert that the CollectionPage's
+      // reviewedBy field already points at, surfaced on the WebPage so
+      // crawlers see the editorial-review signal at the page level too.
+      lastReviewed: BUILD_DATE,
+      ...(categoryReviewer
+        ? { reviewedBy: { "@id": personIdFor(categoryReviewer.slug) } }
+        : {}),
       // Voice-search optimisation in Hindi — Google Assistant on
       // Hindi-locale devices reads aloud the H1 + intro paragraph and
       // FAQ pairs. Mirrors the English pillar selectors.
