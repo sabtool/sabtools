@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                      xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>SabTools</ShortName>
+  <LongName>SabTools.in — Free Online Tools for India</LongName>
+  <Description>Search 460+ free online tools — calculators, converters, AI tools, PDF tools, developer tools and more. 100% free, no signup.</Description>
+  <Tags>sabtools tools calculator india converter pdf finance free</Tags>
+  <Contact>support@sabtools.in</Contact>
+  <Image height="16" width="16" type="image/x-icon">https://sabtools.in/favicon.ico</Image>
+  <Image height="64" width="64" type="image/png">https://sabtools.in/icon-192.png</Image>
+  <Url type="text/html"
+       method="get"
+       template="https://sabtools.in/search?q={searchTerms}" />
+  <Url type="application/opensearchdescription+xml"
+       rel="self"
+       template="https://sabtools.in/opensearch.xml" />
+  <Query role="example" searchTerms="emi calculator" />
+  <moz:SearchForm>https://sabtools.in/search</moz:SearchForm>
+  <Developer>SabTools.in</Developer>
+  <Attribution>Search powered by SabTools.in</Attribution>
+  <SyndicationRight>open</SyndicationRight>
+  <AdultContent>false</AdultContent>
+  <Language>en-IN</Language>
+  <Language>hi-IN</Language>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <InputEncoding>UTF-8</InputEncoding>
+</OpenSearchDescription>

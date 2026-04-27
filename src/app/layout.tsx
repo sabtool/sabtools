@@ -142,6 +142,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* <meta name="google-adsense-account" content="ca-pub-YOURPUBID" /> */}
         <meta name="p:domain_verify" content="2979c659d48751bc3545b2d2d9df6662" />
         <link rel="alternate" type="application/rss+xml" title="SabTools.in Blog" href="/feed.xml" />
+        {/* OpenSearch description — browsers (Chrome/Edge/Firefox) detect
+            this and offer to add SabTools as an address-bar search engine.
+            Once added, users hit Tab in the URL bar and search the site
+            directly. The XML at /opensearch.xml points the search action
+            at /search?q={searchTerms}, matching the WebSite SearchAction
+            already declared in the homepage JSON-LD. */}
+        <link
+          rel="search"
+          type="application/opensearchdescription+xml"
+          title="SabTools.in"
+          href="/opensearch.xml"
+        />
       </head>
       <body className="min-h-screen flex flex-col">
         <noscript>
