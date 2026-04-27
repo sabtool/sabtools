@@ -29,6 +29,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const description = `Meet ${author.name}, ${author.role} at SabTools.in. ${author.bio}`;
   const url = `https://sabtools.in/author/${author.slug}`;
 
+  // Split the display name into firstName / familyName for OG profile
+  // fields. Strip a leading honorific (Dr., Prof., Mr., etc.) since the
+  // honorific is not the given name — same logic as personNode().
+  const cleanName = author.name.replace(/^(Dr\.?|Prof\.?|Mr\.?|Mrs\.?|Ms\.?)\s+/i, "");
+  const nameParts = cleanName.split(" ");
+  const firstName = nameParts[0];
+  const lastName = nameParts.length > 1 ? nameParts.slice(1).join(" ") : undefined;
+
   return {
     title,
     description,
@@ -39,6 +47,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description,
       url,
       type: "profile",
+      // OG profile fields — Facebook, LinkedIn use these to render the
+      // author byline accurately on share previews. `username` mirrors
+      // the URL slug so the link resolves to /author/{slug}.
+      firstName,
+      ...(lastName ? { lastName } : {}),
+      username: author.slug,
       locale: "en_IN",
       siteName: "SabTools.in",
       images: [{ url: "https://sabtools.in/og-image.png", width: 1200, height: 630, alt: title }],

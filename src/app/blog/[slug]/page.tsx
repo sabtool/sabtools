@@ -32,22 +32,31 @@ export async function generateMetadata({
   const post = getPostBySlug(slug);
   if (!post) return {};
 
-  // Resolve the post's domain expert (E-E-A-T author) so the Twitter card's
-  // `creator` handle attributes the post to the actual reviewer rather than
-  // always defaulting to the brand handle. When the post is tied to a
-  // specific tool, that tool's category drives the lookup; otherwise we
-  // fall back to the founder/brand. Same resolution chain matches the
-  // Article.author @id emitted in the page component below — keeping the
-  // social-card byline and structured-data byline aligned.
+  // Resolve the post's domain expert (E-E-A-T author) — used for both
+  // the Twitter `creator` handle and the OG `article:author` URL. When the
+  // post is tied to a specific tool, that tool's category drives the
+  // lookup; otherwise we fall back to the founder/brand. Same resolution
+  // chain matches the Article.author @id emitted in the page component
+  // below — keeping the social-card byline and structured-data byline
+  // aligned.
   let twitterCreator = "@sabtools";
+  let articleAuthorUrl: string | undefined;
   if (post.toolSlug) {
-    const tool = tools.find((t) => t.slug === post.toolSlug);
-    if (tool) {
-      const expert = getAuthorByCategory(tool.category);
-      if (expert?.socialLinks?.twitter) {
-        twitterCreator = `@${expert.socialLinks.twitter}`;
+    const t = tools.find((tt) => tt.slug === post.toolSlug);
+    if (t) {
+      const expert = getAuthorByCategory(t.category);
+      if (expert) {
+        articleAuthorUrl = `https://sabtools.in/author/${expert.slug}`;
+        if (expert.socialLinks?.twitter) {
+          twitterCreator = `@${expert.socialLinks.twitter}`;
+        }
       }
     }
+  }
+  // Fall back to founder profile when no expert claims this post —
+  // mirrors the schema fallback in the page component.
+  if (!articleAuthorUrl) {
+    articleAuthorUrl = "https://sabtools.in/author/rakesh-seervi";
   }
 
   return {
@@ -62,6 +71,15 @@ export async function generateMetadata({
       type: "article",
       publishedTime: post.date,
       modifiedTime: post.date,
+      // OG article:author URL points at the resolved expert's profile —
+      // social platforms (Facebook, LinkedIn) use this to render an
+      // author byline on the share preview, mirroring twitter:creator.
+      authors: [articleAuthorUrl],
+      // article:section = the post's human-readable category label, and
+      // article:tag = its keyword set. Both are read by Facebook for
+      // contextual feed targeting and aren't covered by JSON-LD alone.
+      section: post.category,
+      tags: post.keywords,
       siteName: "SabTools.in",
       locale: "en_IN",
       // Always emit at least one og:image — falls back to the sitewide
