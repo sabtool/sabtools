@@ -126,9 +126,10 @@
     "room-paint-visualizer",
     "cashback-calculator",
     "cron-expression-generator",
-    "youtube-timestamp-generator"
+    "youtube-timestamp-generator",
+    "whatsapp-formatter"
   ],
-  "lastCategory": "social",
-  "totalPosts": 127,
-  "lastRun": "2026-04-27T16:09:47.511Z"
+  "lastCategory": "whatsapp",
+  "totalPosts": 128,
+  "lastRun": "2026-04-27T19:56:08.511Z"
 }
