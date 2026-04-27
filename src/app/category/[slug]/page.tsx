@@ -310,7 +310,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       card: "summary_large_image",
       title: `${cat.name} — ${toolCount} Free Online Tools`,
       description: `${cat.description}. ${toolCount} free tools available. No signup, instant results.`,
-      images: ["https://sabtools.in/og-image.png"],
+      images: [
+        {
+          url: "https://sabtools.in/og-image.png",
+          alt: `${cat.name} — Free Online Tools | SabTools.in`,
+        },
+      ],
       creator: twitterCreator,
       site: "@sabtools",
     },

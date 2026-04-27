@@ -116,9 +116,22 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: post.title,
       description: post.description,
+      // Object form (with `alt`) so the rendered card includes
+      // twitter:image:alt for screen readers — Twitter's
+      // accessibility spec recommends this for every card image.
       images: post.image
-        ? [`https://sabtools.in${post.image.src}`]
-        : ["https://sabtools.in/og-image.png"],
+        ? [
+            {
+              url: `https://sabtools.in${post.image.src}`,
+              alt: post.image.alt,
+            },
+          ]
+        : [
+            {
+              url: "https://sabtools.in/og-image.png",
+              alt: post.title,
+            },
+          ],
       creator: twitterCreator,
       site: "@sabtools",
     },

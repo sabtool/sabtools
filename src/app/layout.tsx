@@ -84,7 +84,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SabTools.in - 460+ Free Online Tools",
     description: "460+ free online tools for India — calculators, converters, AI & more. 100% free, no signup.",
-    images: ["https://sabtools.in/og-image.png"],
+    images: [
+      {
+        url: "https://sabtools.in/og-image.png",
+        alt: "SabTools.in - 460+ Free Online Tools for India",
+      },
+    ],
     creator: "@sabtools",
     site: "@sabtools",
   },

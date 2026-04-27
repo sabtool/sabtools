@@ -37,7 +37,12 @@ export const metadata: Metadata = {
     title: "Privacy Policy — SabTools.in",
     description:
       "Privacy Policy for SabTools.in — DPDP Act 2023 compliant. Learn how we handle your personal data.",
-    images: ["https://sabtools.in/og-image.png"],
+    images: [
+      {
+        url: "https://sabtools.in/og-image.png",
+        alt: "Privacy Policy — SabTools.in",
+      },
+    ],
     creator: "@sabtools",
     site: "@sabtools",
   },

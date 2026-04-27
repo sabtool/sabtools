@@ -41,7 +41,12 @@ export const metadata: Metadata = {
     title: "Blog — Financial Tips, Tax Guides & Tool Tutorials",
     description:
       "Expert articles on personal finance, tax planning, and free online tools for Indians.",
-    images: ["https://sabtools.in/og-image.png"],
+    images: [
+      {
+        url: "https://sabtools.in/og-image.png",
+        alt: "SabTools.in Blog — Financial Tips, Tax Guides & Tool Tutorials",
+      },
+    ],
     creator: "@sabtools",
     site: "@sabtools",
   },

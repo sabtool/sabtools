@@ -34,7 +34,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Disclaimer — SabTools.in",
     description: "Disclaimer for SabTools.in free online tools and calculators.",
-    images: ["https://sabtools.in/og-image.png"],
+    images: [
+      {
+        url: "https://sabtools.in/og-image.png",
+        alt: "Disclaimer — SabTools.in",
+      },
+    ],
     creator: "@sabtools",
     site: "@sabtools",
   },

@@ -16,7 +16,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://sabtools.in/og-image.png"],
+    images: [
+      {
+        url: "https://sabtools.in/og-image.png",
+        alt: "SabTools.in — मुफ्त ऑनलाइन टूल्स हिंदी में",
+      },
+    ],
     creator: "@sabtools",
     site: "@sabtools",
   },

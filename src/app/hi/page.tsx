@@ -34,7 +34,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `SabTools.in - ${hindiTools.length}+ मुफ्त ऑनलाइन टूल्स हिंदी में`,
     description: "मुफ्त ऑनलाइन टूल्स — 100% मुफ्त, बिना साइनअप।",
-    images: ["https://sabtools.in/og-image.png"],
+    images: [
+      {
+        url: "https://sabtools.in/og-image.png",
+        alt: "SabTools.in - मुफ्त ऑनलाइन टूल्स हिंदी में",
+      },
+    ],
     creator: "@sabtools",
     site: "@sabtools",
   },

@@ -54,7 +54,12 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: page.title,
       description: page.description,
-      images: ["https://sabtools.in/og-image.png"],
+      images: [
+        {
+          url: "https://sabtools.in/og-image.png",
+          alt: `${page.title} — SabTools.in`,
+        },
+      ],
       creator: "@sabtools",
       site: "@sabtools",
     },

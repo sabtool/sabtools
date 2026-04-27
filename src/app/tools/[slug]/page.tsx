@@ -93,7 +93,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       card: "summary_large_image",
       title: `${tool.name} — Free Online ${catName} | SabTools.in`,
       description: `Try ${tool.name} free — ${tool.description.toLowerCase()}. No signup, instant results, works on mobile. Built for India.`,
-      images: ["https://sabtools.in/og-image.png"],
+      images: [
+        {
+          url: "https://sabtools.in/og-image.png",
+          alt: `${tool.name} — Free Online Tool on SabTools.in`,
+        },
+      ],
       creator: twitterCreator,
       site: "@sabtools",
     },

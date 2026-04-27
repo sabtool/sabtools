@@ -37,7 +37,12 @@ export const metadata: Metadata = {
     title: "Terms of Service — SabTools.in",
     description:
       "Comprehensive Terms of Service for SabTools.in free online tools.",
-    images: ["https://sabtools.in/og-image.png"],
+    images: [
+      {
+        url: "https://sabtools.in/og-image.png",
+        alt: "Terms of Service — SabTools.in",
+      },
+    ],
     creator: "@sabtools",
     site: "@sabtools",
   },

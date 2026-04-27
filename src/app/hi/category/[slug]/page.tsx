@@ -76,7 +76,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       card: "summary_large_image",
       title: `${cat.name} — हिंदी में मुफ्त टूल्स`,
       description: `${toolCount} मुफ्त ${cat.name} हिंदी में। बिना साइनअप।`,
-      images: ["https://sabtools.in/og-image.png"],
+      images: [
+        {
+          url: "https://sabtools.in/og-image.png",
+          alt: `${cat.name} — SabTools.in`,
+        },
+      ],
       creator: twitterCreator,
       site: "@sabtools",
     },
