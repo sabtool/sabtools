@@ -102,6 +102,13 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
       about: { "@id": personId },
       breadcrumb: { "@id": breadcrumbId },
       dateModified: BUILD_DATE,
+      // Voice-search optimisation — when a user asks Google Assistant
+      // "Who is {author.name}?", the bio paragraphs are the cleanest
+      // read-out (no headings, no nav chrome, no buttons).
+      speakable: {
+        "@type": "SpeakableSpecification",
+        cssSelector: ["#bio-speakable p"],
+      },
     },
     personNode({
       slug: author.slug,
@@ -186,8 +193,10 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
         </div>
       </div>
 
-      {/* Detailed Bio */}
-      <div className="mb-8">
+      {/* Detailed Bio — id is a stable hook for Speakable. Voice
+          assistants read aloud the bio paragraphs when the user asks
+          "Who is {author.name}?" via Google Assistant. */}
+      <div id="bio-speakable" className="mb-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">About {author.name.split(" ")[0]}</h2>
         <div className="prose prose-gray max-w-none">
           {author.longBio.split("\n\n").map((paragraph, i) => (

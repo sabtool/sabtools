@@ -130,6 +130,9 @@ export default async function CalcPage({
       primaryEntityId: webAppId,
       breadcrumbId,
       dateModified: BUILD_DATE,
+      // Voice-search optimisation — Google Assistant reads aloud the FAQ
+      // pairs that match these selectors. Same hooks the tool page uses.
+      speakableSelectors: ["#faq-speakable .faq-q", "#faq-speakable .faq-a"],
     }),
     {
       "@type": "WebApplication",
@@ -262,8 +265,11 @@ export default async function CalcPage({
           </p>
         </div>
 
-        {/* FAQ Section */}
-        <div className="mt-12">
+        {/* FAQ Section — id + classes are stable hooks for the
+            SpeakableSpecification declared in the page schema. Voice
+            assistants (Google Assistant) read out elements matching
+            #faq-speakable .faq-q / .faq-a. */}
+        <div id="faq-speakable" className="mt-12">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
             Frequently Asked Questions
           </h2>
@@ -273,7 +279,7 @@ export default async function CalcPage({
                 key={i}
                 className="group bg-white rounded-xl border border-gray-100 overflow-hidden"
               >
-                <summary className="cursor-pointer px-6 py-4 font-medium text-gray-900 hover:bg-gray-50 flex items-center justify-between">
+                <summary className="faq-q cursor-pointer px-6 py-4 font-medium text-gray-900 hover:bg-gray-50 flex items-center justify-between">
                   {faq.q}
                   <svg
                     className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform"
@@ -289,7 +295,7 @@ export default async function CalcPage({
                     />
                   </svg>
                 </summary>
-                <p className="px-6 pb-4 text-gray-600">{faq.a}</p>
+                <p className="faq-a px-6 pb-4 text-gray-600">{faq.a}</p>
               </details>
             ))}
           </div>

@@ -107,6 +107,19 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
       publisher: { "@id": ORG_ID },
       breadcrumb: { "@id": hiBreadcrumbId },
       mainEntity: { "@id": collectionPageId },
+      // Voice-search optimisation in Hindi — Google Assistant on
+      // Hindi-locale devices reads aloud the H1 + intro paragraph and
+      // FAQ pairs. Mirrors the English pillar selectors.
+      speakable: {
+        "@type": "SpeakableSpecification",
+        cssSelector: [
+          "#intro-speakable h1",
+          "#intro-speakable p",
+          ...(pillar.pillarFaqs.length > 0
+            ? ["#faq-speakable .faq-q", "#faq-speakable .faq-a"]
+            : []),
+        ],
+      },
     },
     {
       "@type": "CollectionPage",
@@ -154,7 +167,10 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }} />
       <Breadcrumb items={[{ label: "होम", href: "/hi" }, { label: cat.name }]} />
 
-      <div className="mb-10">
+      {/* id is a stable hook for the SpeakableSpecification declared
+          in the page schema — Google Assistant reads aloud the H1 +
+          intro paragraph for Hindi voice queries about this category. */}
+      <div id="intro-speakable" className="mb-10">
         <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${cat.color} text-white text-3xl shadow-lg mb-4`}>
           {cat.icon}
         </div>
@@ -230,17 +246,17 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
         </p>
       </div>
 
-      {/* Hindi FAQ */}
+      {/* Hindi FAQ — id + classes are speakable hooks (see graph schema) */}
       <div className="mt-12">
         <h2 className="text-xl font-bold text-gray-900 mb-4">अक्सर पूछे जाने वाले प्रश्न</h2>
-        <div className="space-y-3">
+        <div id="faq-speakable" className="space-y-3">
           {pillar.pillarFaqs.map((faq, i) => (
             <details
               key={i}
               className="group bg-white border border-gray-200 rounded-xl overflow-hidden"
             >
               <summary className="cursor-pointer px-5 py-4 font-medium text-gray-900 hover:bg-gray-50 flex items-center justify-between">
-                <span className="pr-4">{faq.q}</span>
+                <span className="faq-q pr-4">{faq.q}</span>
                 <svg
                   className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0"
                   fill="none"
@@ -250,7 +266,7 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
-              <div className="px-5 pb-4 text-sm text-gray-600 leading-relaxed">
+              <div className="faq-a px-5 pb-4 text-sm text-gray-600 leading-relaxed">
                 {faq.a}
               </div>
             </details>

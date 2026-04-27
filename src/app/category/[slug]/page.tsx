@@ -374,6 +374,20 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
       // every Vercel build — Google sees a real freshness signal that
       // advances on each release rather than a stale literal.
       dateModified: BUILD_DATE,
+      // Voice-search optimisation — Google Assistant reads aloud the
+      // category H1 + intro paragraph for "What are X tools?" queries,
+      // and FAQ answers (when a pillar exists). Selectors mirror the
+      // tool/calc page convention.
+      speakable: {
+        "@type": "SpeakableSpecification",
+        cssSelector: [
+          "#intro-speakable h1",
+          "#intro-speakable p",
+          ...(pillar && pillar.pillarFaqs.length > 0
+            ? ["#faq-speakable .faq-q", "#faq-speakable .faq-a"]
+            : []),
+        ],
+      },
       numberOfItems: catTools.length,
       hasPart: catTools.slice(0, 10).map((t) => ({
         "@type": "WebApplication",
@@ -413,7 +427,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryGraph) }} />
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: cat.name }]} />
 
-      <div className="mb-10">
+      {/* id is a stable hook for the SpeakableSpecification declared
+          in the page schema — Google Assistant reads aloud the H1 +
+          intro paragraph when a user asks about this category. */}
+      <div id="intro-speakable" className="mb-10">
         <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${cat.color} text-white text-3xl shadow-lg mb-4`}>
           {cat.icon}
         </div>
@@ -499,14 +516,14 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         {pillar && pillar.pillarFaqs.length > 0 && (
           <>
             <h2>Frequently Asked Questions</h2>
-            <div className="not-prose space-y-3 my-6">
+            <div id="faq-speakable" className="not-prose space-y-3 my-6">
               {pillar.pillarFaqs.map((faq, i) => (
                 <details
                   key={i}
                   className="group bg-white border border-gray-200 rounded-xl overflow-hidden"
                 >
                   <summary className="cursor-pointer px-5 py-4 font-medium text-gray-900 hover:bg-gray-50 flex items-center justify-between">
-                    <span>{faq.q}</span>
+                    <span className="faq-q">{faq.q}</span>
                     <svg
                       className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-3"
                       fill="none"
@@ -516,7 +533,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </summary>
-                  <div className="px-5 pb-4 text-sm text-gray-600 leading-relaxed">
+                  <div className="faq-a px-5 pb-4 text-sm text-gray-600 leading-relaxed">
                     {autoLink(faq.a, slug)}
                   </div>
                 </details>
