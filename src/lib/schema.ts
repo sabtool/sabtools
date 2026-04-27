@@ -19,6 +19,22 @@
 export const SITE_URL = "https://sabtools.in";
 export const ORG_ID = `${SITE_URL}/#organization`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
+
+/**
+ * Reusable Audience node — every primary entity on the site targets
+ * Indian users explicitly. Declaring this on WebApplication, Article,
+ * and CollectionPage strengthens the geo-signal Google's Knowledge
+ * Graph already gets from Organization.areaServed at the brand level.
+ *
+ * Using `geographicArea: Country("India")` is the schema.org-blessed
+ * way to declare a country target — Google Search Console docs cite
+ * this exact pattern as a signal for region-restricted rich-results.
+ */
+export const INDIA_AUDIENCE = {
+  "@type": "Audience",
+  audienceType: "Indian users seeking free online tools",
+  geographicArea: { "@type": "Country", name: "India" },
+};
 export const FOUNDER_ID = `${SITE_URL}/author/rakesh-seervi#person`;
 
 // Keep inLanguage consistent across every schema we emit.
@@ -104,8 +120,17 @@ export function webSiteNode() {
     "@id": WEBSITE_ID,
     url: `${SITE_URL}/`,
     name: "SabTools",
+    alternateName: ["Sabtools.in", "SabTools.in"],
+    description:
+      "Free online tools platform for India — calculators, converters, AI tools, PDF tools, and more. 100% free, no signup, available in English and Hindi.",
     publisher: { "@id": ORG_ID },
+    copyrightHolder: { "@id": ORG_ID },
+    // copyrightYear is the founding year — bumps automatically each
+    // calendar year via getFullYear() so the displayed range stays
+    // current without manual edits.
+    copyrightYear: new Date().getFullYear(),
     inLanguage: SUPPORTED_LANGUAGES,
+    audience: INDIA_AUDIENCE,
     potentialAction: {
       "@type": "SearchAction",
       target: {
@@ -194,22 +219,6 @@ export interface WebApplicationNodeInput {
    *  the entity graph internally consistent. */
   mainEntityOfPage?: string;
 }
-
-/**
- * Reusable Audience node — every primary entity on the site targets
- * Indian users explicitly. Declaring this on WebApplication, Article,
- * and CollectionPage strengthens the geo-signal Google's Knowledge
- * Graph already gets from Organization.areaServed at the brand level.
- *
- * Using `geographicArea: Country("India")` is the schema.org-blessed
- * way to declare a country target — Google Search Console docs cite
- * this exact pattern as a signal for region-restricted rich-results.
- */
-export const INDIA_AUDIENCE = {
-  "@type": "Audience",
-  audienceType: "Indian users seeking free online tools",
-  geographicArea: { "@type": "Country", name: "India" },
-};
 
 /**
  * WebApplication for a tool page. Language defaults to bilingual — pass a
