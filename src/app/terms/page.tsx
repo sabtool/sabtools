@@ -1,5 +1,14 @@
 import { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
+import {
+  SITE_URL,
+  ORG_ID,
+  WEBSITE_ID,
+  breadcrumbNode,
+  breadcrumbIdFor,
+  buildGraph,
+  BUILD_DATE,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Terms of Service — SabTools.in Free Online Tools",
@@ -35,8 +44,39 @@ export const metadata: Metadata = {
 };
 
 export default function TermsPage() {
+  const pageUrl = `${SITE_URL}/terms`;
+  const breadcrumbId = breadcrumbIdFor(pageUrl);
+  const termsGraph = buildGraph([
+    {
+      "@type": "WebPage",
+      "@id": `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: "Terms of Service — SabTools.in",
+      description:
+        "Terms of Service for SabTools.in. Tools are for informational purposes — not financial, medical, or legal advice.",
+      inLanguage: "en-IN",
+      isPartOf: { "@id": WEBSITE_ID },
+      publisher: { "@id": ORG_ID },
+      about: { "@id": ORG_ID },
+      breadcrumb: { "@id": breadcrumbId },
+      dateModified: BUILD_DATE,
+      lastReviewed: BUILD_DATE,
+    },
+    breadcrumbNode(
+      [
+        { name: "Home", url: `${SITE_URL}/` },
+        { name: "Terms of Service" },
+      ],
+      breadcrumbId
+    ),
+  ]);
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(termsGraph) }}
+      />
       <Breadcrumb
         items={[{ label: "Home", href: "/" }, { label: "Terms of Service" }]}
       />

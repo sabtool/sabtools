@@ -1,5 +1,14 @@
 import { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
+import {
+  SITE_URL,
+  ORG_ID,
+  WEBSITE_ID,
+  breadcrumbNode,
+  breadcrumbIdFor,
+  buildGraph,
+  BUILD_DATE,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Disclaimer — SabTools.in Free Online Tools",
@@ -32,8 +41,39 @@ export const metadata: Metadata = {
 };
 
 export default function DisclaimerPage() {
+  const pageUrl = `${SITE_URL}/disclaimer`;
+  const breadcrumbId = breadcrumbIdFor(pageUrl);
+  const disclaimerGraph = buildGraph([
+    {
+      "@type": "WebPage",
+      "@id": `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: "Disclaimer — SabTools.in",
+      description:
+        "Disclaimer for SabTools.in tools and calculators — informational only, not financial, medical, or legal advice.",
+      inLanguage: "en-IN",
+      isPartOf: { "@id": WEBSITE_ID },
+      publisher: { "@id": ORG_ID },
+      about: { "@id": ORG_ID },
+      breadcrumb: { "@id": breadcrumbId },
+      dateModified: BUILD_DATE,
+      lastReviewed: BUILD_DATE,
+    },
+    breadcrumbNode(
+      [
+        { name: "Home", url: `${SITE_URL}/` },
+        { name: "Disclaimer" },
+      ],
+      breadcrumbId
+    ),
+  ]);
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(disclaimerGraph) }}
+      />
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Disclaimer" }]} />
       <h1 className="text-3xl font-extrabold text-gray-900 mb-6">Disclaimer</h1>
       <div className="prose prose-gray max-w-none space-y-4">

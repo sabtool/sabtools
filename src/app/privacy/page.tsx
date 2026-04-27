@@ -1,5 +1,14 @@
 import { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
+import {
+  SITE_URL,
+  ORG_ID,
+  WEBSITE_ID,
+  breadcrumbNode,
+  breadcrumbIdFor,
+  buildGraph,
+  BUILD_DATE,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — SabTools.in Free Online Tools",
@@ -35,8 +44,44 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPage() {
+  // Schema-org doesn't have a "PrivacyPolicy" type, so we use WebPage
+  // with `about: { @id: ORG_ID }` (the policy is *about* the
+  // organization that publishes it). dateModified + lastReviewed bump
+  // with each Vercel deploy via BUILD_DATE so crawlers see this as
+  // actively maintained — important for DPDP compliance signals.
+  const pageUrl = `${SITE_URL}/privacy`;
+  const breadcrumbId = breadcrumbIdFor(pageUrl);
+  const privacyGraph = buildGraph([
+    {
+      "@type": "WebPage",
+      "@id": `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: "Privacy Policy — SabTools.in",
+      description:
+        "Privacy Policy compliant with India's Digital Personal Data Protection (DPDP) Act 2023.",
+      inLanguage: "en-IN",
+      isPartOf: { "@id": WEBSITE_ID },
+      publisher: { "@id": ORG_ID },
+      about: { "@id": ORG_ID },
+      breadcrumb: { "@id": breadcrumbId },
+      dateModified: BUILD_DATE,
+      lastReviewed: BUILD_DATE,
+    },
+    breadcrumbNode(
+      [
+        { name: "Home", url: `${SITE_URL}/` },
+        { name: "Privacy Policy" },
+      ],
+      breadcrumbId
+    ),
+  ]);
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(privacyGraph) }}
+      />
       <Breadcrumb
         items={[{ label: "Home", href: "/" }, { label: "Privacy Policy" }]}
       />
