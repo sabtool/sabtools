@@ -3,6 +3,15 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import AdBanner from "@/components/AdBanner";
 import { getAllPosts } from "@/lib/blog";
+import {
+  SITE_URL,
+  ORG_ID,
+  WEBSITE_ID,
+  breadcrumbNode,
+  breadcrumbIdFor,
+  buildGraph,
+  BUILD_DATE,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Blog — Financial Tips, Tax Guides & Tool Tutorials",
@@ -40,8 +49,68 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   const posts = getAllPosts();
 
+  // JSON-LD schema for the blog index — a Blog node anchoring the URL
+  // plus an ItemList of recent posts (capped to 30) so crawlers can
+  // see the freshest content without parsing the full grid. Each
+  // BlogPosting entry references the canonical Article @id declared
+  // on the post detail page so the entity graph stays cohesive.
+  const pageUrl = `${SITE_URL}/blog`;
+  const blogId = `${pageUrl}#blog`;
+  const blogBreadcrumbId = breadcrumbIdFor(pageUrl);
+  const blogItemListId = `${pageUrl}#post-list`;
+
+  // Cap to 30 most-recent posts — beyond that the schema gets noisy
+  // without helping discovery (sitemap.xml lists every post for full
+  // crawl coverage; this is for surfacing the homepage of the blog).
+  const recentPosts = posts.slice(0, 30);
+
+  const blogIndexGraph = buildGraph([
+    {
+      "@type": "Blog",
+      "@id": blogId,
+      url: pageUrl,
+      name: "SabTools.in Blog",
+      description:
+        "Financial tips, tax guides, investment insights, and tool tutorials for everyday Indians.",
+      inLanguage: "en-IN",
+      isPartOf: { "@id": WEBSITE_ID },
+      publisher: { "@id": ORG_ID },
+      breadcrumb: { "@id": blogBreadcrumbId },
+      dateModified: BUILD_DATE,
+      mainEntity: { "@id": blogItemListId },
+      blogPost: recentPosts.map((post) => ({
+        "@id": `${SITE_URL}/blog/${post.slug}#article`,
+      })),
+    },
+    {
+      "@type": "ItemList",
+      "@id": blogItemListId,
+      name: "Recent posts",
+      description: "Most recent SabTools.in blog posts",
+      numberOfItems: recentPosts.length,
+      itemListOrder: "https://schema.org/ItemListOrderDescending",
+      itemListElement: recentPosts.map((post, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${SITE_URL}/blog/${post.slug}`,
+        name: post.title,
+      })),
+    },
+    breadcrumbNode(
+      [
+        { name: "Home", url: `${SITE_URL}/` },
+        { name: "Blog" },
+      ],
+      blogBreadcrumbId
+    ),
+  ]);
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogIndexGraph) }}
+      />
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Blog" }]} />
 
       <div className="mb-12 text-center">

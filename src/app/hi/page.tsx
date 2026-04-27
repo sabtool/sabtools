@@ -3,6 +3,15 @@ import { Metadata } from "next";
 import { hindiTools } from "@/lib/hindi";
 import { tools, categories } from "@/lib/tools";
 import { categoryPillarsHi } from "@/lib/category-pillars-hi";
+import {
+  SITE_URL,
+  ORG_ID,
+  WEBSITE_ID,
+  breadcrumbNode,
+  breadcrumbIdFor,
+  buildGraph,
+  BUILD_DATE,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: `${hindiTools.length}+ मुफ्त ऑनलाइन टूल्स हिंदी में`,
@@ -32,8 +41,84 @@ export const metadata: Metadata = {
 };
 
 export default function HindiHomePage() {
+  // JSON-LD schema for the Hindi homepage. Mirrors the structure of the
+  // English homepage but with hi-IN inLanguage and Hindi-localised
+  // pillar/tool ItemLists. Organization and WebSite are referenced by
+  // @id only — they're declared in full on the English homepage so the
+  // Knowledge Graph treats both surfaces as the same canonical entities.
+  const pageUrl = `${SITE_URL}/hi`;
+  const webPageId = `${pageUrl}#webpage`;
+  const breadcrumbId = breadcrumbIdFor(pageUrl);
+  const pillarListId = `${pageUrl}#pillar-list`;
+  const toolListId = `${pageUrl}#tool-list`;
+
+  // Hindi pillars in declared-order (matches the visible UI)
+  const hiPillars = Object.keys(categoryPillarsHi)
+    .map((slug) => categories.find((c) => c.slug === slug))
+    .filter(Boolean) as typeof categories;
+
+  // Top N Hindi tools as the ItemList — capped to keep the schema lean.
+  const featuredHiTools = hindiTools.slice(0, 12);
+
+  const hiHomeGraph = buildGraph([
+    {
+      "@type": "WebPage",
+      "@id": webPageId,
+      url: pageUrl,
+      name: `${hindiTools.length}+ मुफ्त ऑनलाइन टूल्स हिंदी में — SabTools.in`,
+      description: `मुफ्त ऑनलाइन टूल्स — EMI कैलकुलेटर, SIP कैलकुलेटर, GST कैलकुलेटर और ${hindiTools.length}+ टूल्स। 100% मुफ्त।`,
+      inLanguage: "hi-IN",
+      isPartOf: { "@id": WEBSITE_ID },
+      publisher: { "@id": ORG_ID },
+      breadcrumb: { "@id": breadcrumbId },
+      dateModified: BUILD_DATE,
+      // The Hindi pillar list is the page's primary entity — the most
+      // important content collection a user (and crawler) lands on.
+      mainEntity: { "@id": pillarListId },
+    },
+    {
+      "@type": "ItemList",
+      "@id": pillarListId,
+      name: "विषय गाइड — हिंदी पिलर पेज",
+      description: "श्रेणी के अनुसार पूरी जानकारी हिंदी में",
+      numberOfItems: hiPillars.length,
+      itemListOrder: "https://schema.org/ItemListOrderAscending",
+      itemListElement: hiPillars.map((c, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: c.name,
+        url: `${SITE_URL}/hi/category/${c.slug}`,
+      })),
+    },
+    {
+      "@type": "ItemList",
+      "@id": toolListId,
+      name: "लोकप्रिय हिंदी टूल्स",
+      description: `${hindiTools.length}+ मुफ्त ऑनलाइन टूल्स हिंदी में — SabTools.in पर`,
+      numberOfItems: featuredHiTools.length,
+      itemListOrder: "https://schema.org/ItemListOrderAscending",
+      itemListElement: featuredHiTools.map((ht, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: ht.name,
+        url: `${SITE_URL}/hi/tools/${ht.slug}`,
+      })),
+    },
+    breadcrumbNode(
+      [
+        { name: "Home", url: `${SITE_URL}/` },
+        { name: "हिंदी" },
+      ],
+      breadcrumbId
+    ),
+  ]);
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(hiHomeGraph) }}
+      />
       {/* Hero */}
       <div className="text-center mb-12">
         <div className="inline-flex items-center gap-2 bg-orange-50 rounded-full px-4 py-1.5 text-sm font-medium text-orange-600 border border-orange-100 mb-6">
