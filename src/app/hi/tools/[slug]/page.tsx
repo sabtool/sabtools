@@ -11,11 +11,14 @@ import {
   SITE_URL,
   ORG_ID,
   webApplicationNode,
+  webPageNode,
   breadcrumbNode,
+  breadcrumbIdFor,
   howToNode,
   faqPageNode,
   buildGraph,
   personIdFor,
+  BUILD_DATE,
 } from "@/lib/schema";
 import { getAuthorByCategory } from "@/lib/authors";
 
@@ -80,9 +83,34 @@ export default async function HindiToolPage({ params }: { params: Promise<{ slug
     { q: `क्या यह मोबाइल पर काम करता है?`, a: `हाँ, ${ht.name} सभी डिवाइस पर काम करता है — Android फोन, iPhone, टैबलेट और कंप्यूटर।` },
   ];
 
-  // Single @graph references the shared Organization via @id (defined on homepage).
-  // Override the default tool @id so Hindi and English versions are distinct entities.
+  // Single @graph mirrors the English ToolPageLayout entity-graph
+  // shape: WebPage anchors the URL and cross-references WebApplication
+  // (mainEntity) + BreadcrumbList (breadcrumb) via stable @id, plus
+  // HowTo and FAQPage as supporting rich-result nodes. Organization,
+  // WebSite, and Person nodes are referenced by @id only — they're
+  // declared in full on the English homepage.
+  //
+  // Override the WebApplication @id so Hindi and English versions are
+  // distinct entities (different URLs, different inLanguage, but the
+  // same author Person via @id — language alternates, not duplicates).
+  const pageUrl = `${SITE_URL}/hi/tools/${slug}`;
+  const webAppId = `${pageUrl}#application`;
+  const webPageId = `${pageUrl}#webpage`;
+  const breadcrumbId = breadcrumbIdFor(pageUrl);
+
   const hindiToolGraph = buildGraph([
+    webPageNode({
+      url: pageUrl,
+      name: `${ht.name} — मुफ्त ऑनलाइन`,
+      description: ht.description,
+      inLanguage: "hi-IN",
+      primaryEntityId: webAppId,
+      breadcrumbId,
+      dateModified: BUILD_DATE,
+      // Voice-search optimisation in Hindi — Google Assistant on
+      // hi-IN devices reads aloud FAQ pairs matching these selectors.
+      speakableSelectors: ["#faq-speakable .faq-q", "#faq-speakable .faq-a"],
+    }),
     {
       ...webApplicationNode({
         slug,
@@ -91,6 +119,7 @@ export default async function HindiToolPage({ params }: { params: Promise<{ slug
         featureList: tool.keywords,
         category: cat?.name || "Online Tool",
         inLanguage: "hi-IN",
+        mainEntityOfPage: webPageId,
         // E-E-A-T author attribution — same category expert validates
         // the Hindi version of the tool. Links via @id to the Person
         // node declared on the homepage Organization.member set.
@@ -99,14 +128,17 @@ export default async function HindiToolPage({ params }: { params: Promise<{ slug
           return expert ? personIdFor(expert.slug) : undefined;
         })(),
       }),
-      "@id": `${SITE_URL}/hi/tools/${slug}#application`,
-      url: `${SITE_URL}/hi/tools/${slug}`,
+      "@id": webAppId,
+      url: pageUrl,
     },
-    breadcrumbNode([
-      { name: "होम", url: `${SITE_URL}/hi` },
-      { name: cat?.name || "Tools", url: `${SITE_URL}/category/${tool.category}` },
-      { name: ht.name },
-    ]),
+    breadcrumbNode(
+      [
+        { name: "होम", url: `${SITE_URL}/hi` },
+        { name: cat?.name || "Tools", url: `${SITE_URL}/category/${tool.category}` },
+        { name: ht.name },
+      ],
+      breadcrumbId
+    ),
     {
       ...howToNode({
         name: `${ht.name} का उपयोग कैसे करें`,
@@ -114,7 +146,7 @@ export default async function HindiToolPage({ params }: { params: Promise<{ slug
         steps: ht.howToSteps.map((step, i) => ({
           name: step.length > 60 ? step.substring(0, 57) + "..." : step,
           text: step,
-          url: `${SITE_URL}/hi/tools/${slug}#step-${i + 1}`,
+          url: `${pageUrl}#step-${i + 1}`,
         })),
         inLanguage: "hi-IN",
       }),
@@ -186,16 +218,17 @@ export default async function HindiToolPage({ params }: { params: Promise<{ slug
           </ul>
         </div>
 
-        {/* Hindi FAQ Section */}
+        {/* Hindi FAQ Section — id + classes are stable hooks for the
+            SpeakableSpecification declared in the page schema (Batch 35). */}
         <section className="mt-10">
           <h2 className="text-xl font-bold text-gray-900 mb-4">अक्सर पूछे जाने वाले प्रश्न</h2>
-          <div className="space-y-3">
+          <div id="faq-speakable" className="space-y-3">
             {hindiFaqs.map((faq, i) => (
               <details key={i} className="border border-gray-200 rounded-xl overflow-hidden">
-                <summary className="px-5 py-4 bg-white hover:bg-gray-50 cursor-pointer font-semibold text-gray-800 text-sm sm:text-base">
+                <summary className="faq-q px-5 py-4 bg-white hover:bg-gray-50 cursor-pointer font-semibold text-gray-800 text-sm sm:text-base">
                   {faq.q}
                 </summary>
-                <div className="px-5 pb-4 text-sm text-gray-600 leading-relaxed bg-gray-50">
+                <div className="faq-a px-5 pb-4 text-sm text-gray-600 leading-relaxed bg-gray-50">
                   {faq.a}
                 </div>
               </details>
