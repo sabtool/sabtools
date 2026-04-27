@@ -126,7 +126,11 @@ export function organizationNode() {
       { "@id": personIdFor("priya-sharma") },
       { "@id": personIdFor("vikram-mehta") },
       { "@id": personIdFor("anita-desai") },
-      { "@id": personIdFor("dr-rajesh-kumar") },
+      // Note: slug is `rajesh-kumar` (not `dr-rajesh-kumar`) — the
+      // honorific is part of the display name, not the URL slug.
+      // Earlier this had `dr-rajesh-kumar` and Google saw a dangling
+      // @id that didn't match any Person declaration.
+      { "@id": personIdFor("rajesh-kumar") },
     ],
   };
 }
@@ -184,12 +188,11 @@ export interface PersonNodeInput {
   knowsAbout: readonly string[];
   /** Public profile URLs (Twitter, LinkedIn, etc.) — populates `sameAs`. */
   sameAs?: readonly string[];
-  /** Optional override of the Person image URL; defaults to the
-   *  sitewide brand share card (`/og-image.png`) since per-author
-   *  portraits aren't shipped yet. The previous default was
-   *  `/authors/{slug}.png` which 404'd because that directory was
-   *  never created — Google saw broken Person.image on every author
-   *  reference, hurting E-E-A-T entity attribution. */
+  /** Optional override of the Person image URL. Defaults to a per-
+   *  author SVG initial-avatar at `/authors/{slug}.svg` (Batch 47) —
+   *  visually matches the round avatar shown in the page UI, with
+   *  the author's color background and white initials. Real
+   *  photographs can be added later by setting this field. */
   image?: string;
   /** Languages the person can converse / write in — defaults to en + hi. */
   knowsLanguage?: readonly string[];
@@ -222,7 +225,7 @@ export function personNode(input: PersonNodeInput) {
     jobTitle: input.jobTitle,
     description: input.description,
     url,
-    image: input.image ?? `${SITE_URL}/og-image.png`,
+    image: input.image ?? `${SITE_URL}/authors/${input.slug}.svg`,
     worksFor: { "@id": ORG_ID },
     knowsAbout: [...input.knowsAbout],
     knowsLanguage: input.knowsLanguage ? [...input.knowsLanguage] : ["en", "hi"],
