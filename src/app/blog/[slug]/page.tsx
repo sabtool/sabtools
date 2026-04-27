@@ -31,6 +31,25 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return {};
+
+  // Resolve the post's domain expert (E-E-A-T author) so the Twitter card's
+  // `creator` handle attributes the post to the actual reviewer rather than
+  // always defaulting to the brand handle. When the post is tied to a
+  // specific tool, that tool's category drives the lookup; otherwise we
+  // fall back to the founder/brand. Same resolution chain matches the
+  // Article.author @id emitted in the page component below — keeping the
+  // social-card byline and structured-data byline aligned.
+  let twitterCreator = "@sabtools";
+  if (post.toolSlug) {
+    const tool = tools.find((t) => t.slug === post.toolSlug);
+    if (tool) {
+      const expert = getAuthorByCategory(tool.category);
+      if (expert?.socialLinks?.twitter) {
+        twitterCreator = `@${expert.socialLinks.twitter}`;
+      }
+    }
+  }
+
   return {
     title: post.title,
     description: post.description,
@@ -74,7 +93,7 @@ export async function generateMetadata({
       images: post.image
         ? [`https://sabtools.in${post.image.src}`]
         : ["https://sabtools.in/og-image.png"],
-      creator: "@sabtools",
+      creator: twitterCreator,
       site: "@sabtools",
     },
   };

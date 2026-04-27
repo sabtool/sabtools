@@ -82,13 +82,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // All blog posts
+  // All blog posts. Posts with a hero screenshot also declare an
+  // `<image:image>` entry so Google can pick them up for Image Search —
+  // the auto-blog generator captures a 1200×630 WebP per post that's an
+  // ideal image-result candidate (high CTR on long-tail tool queries).
   const blogPosts = getAllPosts();
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: post.date || now,
     changeFrequency: "monthly" as const,
     priority: 0.6,
+    ...(post.image ? { images: [`${baseUrl}${post.image.src}`] } : {}),
   }));
 
   // Programmatic calculator pages (/calc/*)
