@@ -68,7 +68,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
           alt: title,
         },
       ],
-      creator: "@sabtools",
+      // Twitter creator = author's own handle when they have one,
+      // else fall back to the brand. Mirrors the blog-post pattern
+      // from Batch 29 — share previews of /author/{slug} now byline
+      // the author themselves on Twitter feeds, not the brand.
+      creator: author.socialLinks?.twitter
+        ? `@${author.socialLinks.twitter}`
+        : "@sabtools",
       site: "@sabtools",
     },
   };
