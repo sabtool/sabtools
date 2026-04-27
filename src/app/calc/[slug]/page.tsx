@@ -19,6 +19,7 @@ import {
   buildGraph,
   personIdFor,
   BUILD_DATE,
+  INDIA_AUDIENCE,
 } from "@/lib/schema";
 import { getAuthorByCategory } from "@/lib/authors";
 
@@ -156,6 +157,7 @@ export default async function CalcPage({
         availability: "https://schema.org/InStock",
       },
       publisher: { "@id": ORG_ID },
+      audience: INDIA_AUDIENCE,
       mainEntityOfPage: { "@id": webPageId },
       ...(authorId ? { author: { "@id": authorId } } : {}),
     },

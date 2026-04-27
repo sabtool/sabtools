@@ -15,6 +15,7 @@ import {
   buildGraph,
   personIdFor,
   BUILD_DATE,
+  INDIA_AUDIENCE,
 } from "@/lib/schema";
 import { categoryPillars } from "@/lib/category-pillars";
 import { getAuthorByCategory } from "@/lib/authors";
@@ -392,6 +393,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
       // build because the reviewer's pillar content gets re-checked on
       // every deploy via the schema test pass.
       lastReviewed: BUILD_DATE,
+      // Geo-targeted audience signal — every category targets Indian
+      // users explicitly. Reinforces Organization.areaServed at the
+      // page-level for region-restricted rich-result eligibility.
+      audience: INDIA_AUDIENCE,
       // Voice-search optimisation — Google Assistant reads aloud the
       // category H1 + intro paragraph for "What are X tools?" queries,
       // and FAQ answers (when a pillar exists). Selectors mirror the

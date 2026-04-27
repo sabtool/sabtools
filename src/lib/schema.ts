@@ -196,6 +196,22 @@ export interface WebApplicationNodeInput {
 }
 
 /**
+ * Reusable Audience node — every primary entity on the site targets
+ * Indian users explicitly. Declaring this on WebApplication, Article,
+ * and CollectionPage strengthens the geo-signal Google's Knowledge
+ * Graph already gets from Organization.areaServed at the brand level.
+ *
+ * Using `geographicArea: Country("India")` is the schema.org-blessed
+ * way to declare a country target — Google Search Console docs cite
+ * this exact pattern as a signal for region-restricted rich-results.
+ */
+export const INDIA_AUDIENCE = {
+  "@type": "Audience",
+  audienceType: "Indian users seeking free online tools",
+  geographicArea: { "@type": "Country", name: "India" },
+};
+
+/**
  * WebApplication for a tool page. Language defaults to bilingual — pass a
  * single string if the specific surface is English-only or Hindi-only.
  */
@@ -219,6 +235,7 @@ export function webApplicationNode(input: WebApplicationNodeInput) {
       priceCurrency: "INR",
       availability: "https://schema.org/InStock",
     },
+    audience: INDIA_AUDIENCE,
     featureList: input.featureList,
     publisher: { "@id": ORG_ID },
     ...(input.authorId ? { author: { "@id": input.authorId } } : {}),

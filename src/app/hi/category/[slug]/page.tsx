@@ -15,6 +15,7 @@ import {
   buildGraph,
   personIdFor,
   BUILD_DATE,
+  INDIA_AUDIENCE,
 } from "@/lib/schema";
 import { categoryPillarsHi } from "@/lib/category-pillars-hi";
 import { getAuthorByCategory } from "@/lib/authors";
@@ -152,6 +153,7 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
         ? { reviewedBy: { "@id": personIdFor(categoryReviewer.slug) } }
         : {}),
       dateModified: BUILD_DATE,
+      audience: INDIA_AUDIENCE,
       numberOfItems: catTools.length,
     },
     {

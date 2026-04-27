@@ -16,6 +16,7 @@ import {
   faqPageNode,
   buildGraph,
   personIdFor,
+  INDIA_AUDIENCE,
 } from "@/lib/schema";
 import { getAuthorByCategory } from "@/lib/authors";
 
@@ -334,6 +335,10 @@ export default async function BlogPostPage({
       keywords: post.keywords.join(", "),
       articleSection: post.category,
       wordCount,
+      // Geo-targeted audience — every guide is written specifically for
+      // Indian users and references INR / RBI / GST / Indian banks.
+      // Reinforces Organization.areaServed at the article level.
+      audience: INDIA_AUDIENCE,
       ...(aboutArray.length > 0 ? { about: aboutArray } : {}),
       ...(mentionsArray.length > 0 ? { mentions: mentionsArray } : {}),
       // Article rich-results require `image`. Always emit one — use the
