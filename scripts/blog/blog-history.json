@@ -129,9 +129,10 @@
     "youtube-timestamp-generator",
     "whatsapp-formatter",
     "rd-calculator",
-    "flooring-cost-calculator"
+    "flooring-cost-calculator",
+    "body-fat-calculator"
   ],
-  "lastCategory": "construction",
-  "totalPosts": 130,
-  "lastRun": "2026-04-28T07:58:02.700Z"
+  "lastCategory": "health",
+  "totalPosts": 131,
+  "lastRun": "2026-04-28T11:27:15.853Z"
 }
