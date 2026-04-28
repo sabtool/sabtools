@@ -128,9 +128,10 @@
     "cron-expression-generator",
     "youtube-timestamp-generator",
     "whatsapp-formatter",
-    "rd-calculator"
+    "rd-calculator",
+    "flooring-cost-calculator"
   ],
-  "lastCategory": "finance",
-  "totalPosts": 129,
-  "lastRun": "2026-04-27T22:36:09.289Z"
+  "lastCategory": "construction",
+  "totalPosts": 130,
+  "lastRun": "2026-04-28T07:58:02.700Z"
 }
