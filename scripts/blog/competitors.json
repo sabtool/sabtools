@@ -1,0 +1,222 @@
+{
+  "_meta": {
+    "description": "Curated competitor data for comparison-style blog posts. The LLM uses this to write 'SabTools vs X' comparisons with accurate competitor URLs, named features, and known limitations. Update quarterly — competitor URLs and features drift over time.",
+    "last_updated": "2026-04-29",
+    "comparison_principles": [
+      "Always link to competitors with real URLs (external links signal we're a credible reference, not a content farm).",
+      "Place SabTools advantageously in the comparison without lying about competitors. Honest comparisons rank better than puff pieces — Google's quality raters can tell.",
+      "Highlight SabTools' genuine wins: no signup required, runs entirely in-browser, no data collection, free with no ad-walls on tools, supports Indian formats.",
+      "Acknowledge competitor strengths where they exist (e.g., BankBazaar's lender pre-approval matching, ClearTax's filing service, Groww's broker integration). This builds trust."
+    ]
+  },
+  "categories": {
+    "finance": {
+      "competitors": [
+        {
+          "name": "BankBazaar",
+          "url": "https://www.bankbazaar.com/",
+          "tagline": "Loan and credit comparison + pre-approval matching",
+          "tools": [
+            { "name": "EMI Calculator", "url": "https://www.bankbazaar.com/finance-tools/emi-calculator.html" },
+            { "name": "Home Loan EMI Calculator", "url": "https://www.bankbazaar.com/home-loan/emi-calculator.html" },
+            { "name": "Personal Loan EMI Calculator", "url": "https://www.bankbazaar.com/personal-loan-emi-calculator.html" },
+            { "name": "FD Calculator", "url": "https://www.bankbazaar.com/fixed-deposit/fd-calculator.html" },
+            { "name": "Tax Calculator", "url": "https://www.bankbazaar.com/tax/income-tax-calculator.html" }
+          ],
+          "strengths": ["Pre-approved loan matching across 50+ lenders", "Detailed lender comparison tables", "Strong domain authority (founded 2008)"],
+          "weaknesses": ["Heavy ad load, mandatory popup dialogs", "Lead-gen overlay collects phone/email aggressively", "Calculator pages bury the actual tool below promotional content", "Tools work less smoothly on slower networks"]
+        },
+        {
+          "name": "Groww",
+          "url": "https://groww.in/",
+          "tagline": "Mutual fund + stock investment platform",
+          "tools": [
+            { "name": "SIP Calculator", "url": "https://groww.in/calculators/sip-calculator" },
+            { "name": "Lumpsum Calculator", "url": "https://groww.in/calculators/lumpsum-calculator" },
+            { "name": "PPF Calculator", "url": "https://groww.in/calculators/ppf-calculator" },
+            { "name": "EMI Calculator", "url": "https://groww.in/calculators/emi-calculator" },
+            { "name": "FD Calculator", "url": "https://groww.in/calculators/fd-calculator" }
+          ],
+          "strengths": ["Clean modern UI", "Direct integration with Groww investing platform", "SEBI-registered broker"],
+          "weaknesses": ["Pushes account opening on every calculator", "Mobile-app-first; web tools are basic", "Doesn't support comparing multiple scenarios side-by-side"]
+        },
+        {
+          "name": "ClearTax",
+          "url": "https://cleartax.in/",
+          "tagline": "Income tax filing platform with tax tools",
+          "tools": [
+            { "name": "Income Tax Calculator", "url": "https://cleartax.in/paytax/TaxCalculator" },
+            { "name": "HRA Calculator", "url": "https://cleartax.in/paytax/hra-calculator" },
+            { "name": "GST Calculator", "url": "https://cleartax.in/s/gst-calculator" },
+            { "name": "Salary Calculator", "url": "https://cleartax.in/s/take-home-salary-calculator" },
+            { "name": "EMI Calculator", "url": "https://cleartax.in/s/emi-calculator" }
+          ],
+          "strengths": ["Strong tax authority (Cleartax handles ITR filing for millions)", "Founded 2011, deep regulatory knowledge", "Detailed walkthrough articles"],
+          "weaknesses": ["Tools are gated behind 'Sign up to save' prompts on most pages", "Older tools have outdated tax slabs until manually updated", "Heavy upselling toward ClearTax's filing service"]
+        },
+        {
+          "name": "ET Money",
+          "url": "https://www.etmoney.com/",
+          "tagline": "Mutual fund + insurance + tax planning app",
+          "tools": [
+            { "name": "Income Tax Calculator", "url": "https://www.etmoney.com/tools-and-calculators/income-tax-calculator" },
+            { "name": "SIP Calculator", "url": "https://www.etmoney.com/tools-and-calculators/sip-calculator" },
+            { "name": "EMI Calculator", "url": "https://www.etmoney.com/tools-and-calculators/emi-calculator" },
+            { "name": "PPF Calculator", "url": "https://www.etmoney.com/tools-and-calculators/ppf-calculator" }
+          ],
+          "strengths": ["Owned by Times Internet (high domain authority)", "Smart deposit feature for over-and-above NPS contributions"],
+          "weaknesses": ["Calculators redirect to ET Money app for full features", "Less detailed than dedicated tool sites"]
+        },
+        {
+          "name": "Paisabazaar",
+          "url": "https://www.paisabazaar.com/",
+          "tagline": "Credit-focused comparison portal (sister site of PolicyBazaar)",
+          "tools": [
+            { "name": "Personal Loan EMI Calculator", "url": "https://www.paisabazaar.com/personal-loan/emi-calculator/" },
+            { "name": "Home Loan EMI Calculator", "url": "https://www.paisabazaar.com/home-loan/emi-calculator/" },
+            { "name": "Credit Score Check", "url": "https://www.paisabazaar.com/credit-score/" }
+          ],
+          "strengths": ["Free credit score check (CIBIL, Experian, Equifax)", "Strong personal loan matching"],
+          "weaknesses": ["Heavy phone-number capture for any tool use", "Calculators load slowly on mobile"]
+        }
+      ]
+    },
+    "tax": {
+      "competitors": [
+        {
+          "name": "ClearTax",
+          "url": "https://cleartax.in/",
+          "tagline": "Tax filing platform — strongest dedicated tax tool brand in India",
+          "tools": [
+            { "name": "Income Tax Calculator", "url": "https://cleartax.in/paytax/TaxCalculator" },
+            { "name": "HRA Calculator", "url": "https://cleartax.in/paytax/hra-calculator" },
+            { "name": "TDS Calculator", "url": "https://cleartax.in/paytax/tds-calculator" }
+          ],
+          "strengths": ["Tax authority in India", "Detailed regulatory explainers", "Updated for current FY"],
+          "weaknesses": ["Push to upgrade to paid filing on every tool", "Email signup gate on saving results"]
+        },
+        {
+          "name": "Tax2win",
+          "url": "https://tax2win.in/",
+          "tagline": "Tax filing assistance + tools",
+          "tools": [
+            { "name": "Income Tax Calculator", "url": "https://tax2win.in/tax-calculator" },
+            { "name": "HRA Calculator", "url": "https://tax2win.in/hra-calculator" }
+          ],
+          "strengths": ["Dedicated tax-only focus", "Updated tax slabs"],
+          "weaknesses": ["Smaller domain authority", "Push toward paid CA-assisted filing"]
+        },
+        {
+          "name": "Quicko",
+          "url": "https://quicko.com/",
+          "tagline": "Stocks + tax filing platform",
+          "tools": [
+            { "name": "Income Tax Calculator", "url": "https://tools.quicko.com/income-tax-calculator/" },
+            { "name": "Capital Gains Tax Calculator", "url": "https://tools.quicko.com/capital-gains-tax-calculator/" }
+          ],
+          "strengths": ["Built specifically for traders/investors", "Strong capital gains tooling"]
+        }
+      ]
+    },
+    "developer": {
+      "competitors": [
+        {
+          "name": "JSONFormatter",
+          "url": "https://jsonformatter.curiousconcept.com/",
+          "tools": [{ "name": "JSON Formatter & Validator", "url": "https://jsonformatter.curiousconcept.com/" }],
+          "strengths": ["Battle-tested, focused single tool"],
+          "weaknesses": ["Older UI", "Heavy ad placements"]
+        },
+        {
+          "name": "FreeFormatter",
+          "url": "https://www.freeformatter.com/",
+          "tools": [
+            { "name": "JSON Formatter", "url": "https://www.freeformatter.com/json-formatter.html" },
+            { "name": "XML Formatter", "url": "https://www.freeformatter.com/xml-formatter.html" }
+          ],
+          "weaknesses": ["Generic global tools, no India-specific format support"]
+        },
+        {
+          "name": "Online JSON Tools",
+          "url": "https://onlinejsontools.com/",
+          "tools": [{ "name": "JSON Formatter", "url": "https://onlinejsontools.com/format-json" }],
+          "strengths": ["Extensive JSON tool collection"],
+          "weaknesses": ["Cluttered UI", "Promotes paid 'all-in-one' Notion-style upsell"]
+        }
+      ]
+    },
+    "image": {
+      "competitors": [
+        {
+          "name": "TinyPNG",
+          "url": "https://tinypng.com/",
+          "tagline": "Image compression with global recognition",
+          "tools": [{ "name": "PNG/JPEG Compressor", "url": "https://tinypng.com/" }],
+          "strengths": ["Industry-standard compression quality", "Strong brand"],
+          "weaknesses": ["Files leave your browser (uploaded to TinyPNG servers)", "Free tier capped at 20 images / 5MB each", "No India-specific use case (govt form size limits, etc.)"]
+        },
+        {
+          "name": "ILoveIMG",
+          "url": "https://www.iloveimg.com/",
+          "tools": [
+            { "name": "Image Compressor", "url": "https://www.iloveimg.com/compress-image" },
+            { "name": "Image Resizer", "url": "https://www.iloveimg.com/resize-image" }
+          ],
+          "strengths": ["Wide tool variety"],
+          "weaknesses": ["Files uploaded to their servers (privacy concern)", "Paid plan upsell"]
+        },
+        {
+          "name": "Squoosh",
+          "url": "https://squoosh.app/",
+          "tagline": "Google's open-source image compressor",
+          "strengths": ["Browser-based (privacy-respecting)", "Open source by Google Chrome team"],
+          "weaknesses": ["Single image at a time", "No India-specific size presets for govt forms"]
+        }
+      ]
+    },
+    "pdf": {
+      "competitors": [
+        {
+          "name": "ILovePDF",
+          "url": "https://www.ilovepdf.com/",
+          "tools": [
+            { "name": "PDF Merger", "url": "https://www.ilovepdf.com/merge_pdf" },
+            { "name": "PDF Compressor", "url": "https://www.ilovepdf.com/compress_pdf" }
+          ],
+          "strengths": ["Comprehensive PDF tool suite", "Strong brand"],
+          "weaknesses": ["Files uploaded to their servers (privacy concern for legal/financial PDFs)", "Aggressive upsell to paid plan"]
+        },
+        {
+          "name": "Smallpdf",
+          "url": "https://smallpdf.com/",
+          "strengths": ["Clean UI", "Wide tool selection"],
+          "weaknesses": ["Free tier has 2-document/day limit", "Files leave your device"]
+        }
+      ]
+    },
+    "default": {
+      "context": "For categories without a dedicated competitor list, fall back to broader tool aggregators",
+      "competitors": [
+        {
+          "name": "RapidTables",
+          "url": "https://www.rapidtables.com/",
+          "weaknesses": ["Generic global tools, no India focus"]
+        },
+        {
+          "name": "Calculator.net",
+          "url": "https://www.calculator.net/",
+          "weaknesses": ["US-centric examples (uses $ not ₹, Western tax brackets)"]
+        }
+      ]
+    }
+  },
+  "sabtools_distinguishing_features": [
+    "100% browser-based — calculations happen on your device, no upload",
+    "No signup or email gate on any tool",
+    "Indian-format support: ₹ currency, lakh/crore, GST, RBI/SEBI rates updated for FY 2025-26",
+    "Bilingual support (English + Hindi) for major tools",
+    "No ads on tool pages (only ads on guide articles)",
+    "Open access — no paid tier upsells on calculators",
+    "Specialized for Indian use cases (Aadhaar/PAN format validation, GST format checks, govt form image size presets)"
+  ]
+}

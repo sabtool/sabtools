@@ -2,11 +2,22 @@
 
 /**
  * Auto Blog Generator — Main Orchestrator
- * 1. Selects next tool to blog about
- * 2. Researches keywords (Google Autocomplete + pools)
- * 3. Generates 1200-1800 word SEO blog post
- * 4. Appends blog post to src/lib/blog.ts
- * 5. Writes current tool slug for screenshot step
+ *
+ * Dispatches one of three post types based on the BLOG_TYPE environment
+ * variable, set by the GitHub Actions workflow:
+ *
+ *   - BLOG_TYPE=tool        → tool-specific guide (composer: llm-composer.js)
+ *   - BLOG_TYPE=comparison  → competitor comparison (composer: comparison-composer.js)
+ *   - BLOG_TYPE=news        → news/trends post with web search (composer: news-composer.js)
+ *
+ * If BLOG_TYPE is unset, defaults to "tool" for backward compatibility.
+ *
+ * Adds a random 0-90 minute sleep at script start so actual publish times
+ * vary day-to-day even though cron triggers are at fixed UTC times. This
+ * is a softer freshness/quality signal than fixed-cadence publishing.
+ *
+ * Falls back to template-based composition (deterministic, no API cost)
+ * when ANTHROPIC_API_KEY is not set — useful for local testing.
  */
 
 const fs = require("fs");
@@ -19,7 +30,7 @@ const CURRENT_TOOL_FILE = path.join(__dirname, ".current-tool.json");
 const { selectTool, markAsBlogged, loadTools } = require("./select-tool");
 const { getKeywordsForTool } = require("./keywords");
 const {
-  composeBlogPost,
+  composeBlogPost: templateComposeBlogPost,
   generateTitle,
   generateMetaDescription,
   calculateReadTime,
@@ -27,15 +38,17 @@ const {
   countWords,
 } = require("./templates/composer");
 
+const { composeBlogPostWithLLM } = require("./llm-composer");
+const { composeComparisonPostWithLLM } = require("./comparison-composer");
+const { composeNewsPostWithLLM } = require("./news-composer");
+
 // ─── Get related tools from same + adjacent categories ───
 function getRelatedTools(tool, allTools) {
-  // Same category tools (exclude self)
   const sameCategory = allTools
     .filter((t) => t.category === tool.category && t.slug !== tool.slug)
     .sort(() => Math.random() - 0.5)
     .slice(0, 4);
 
-  // Popular tools from other categories
   const popularSlugs = [
     "emi-calculator", "sip-calculator", "gst-calculator", "age-calculator",
     "word-counter", "json-formatter", "image-compressor", "percentage-calculator",
@@ -87,6 +100,10 @@ function getBlogCategory(category) {
     whatsapp: "WhatsApp & UPI",
     data: "Data Tools",
     utility: "Everyday Utility",
+    banking: "Banking",
+    fintech: "Fintech",
+    tech: "Tech Updates",
+    news: "News & Updates",
   };
   return map[category] || "Tools";
 }
@@ -95,7 +112,6 @@ function getBlogCategory(category) {
 function appendBlogPost(post) {
   let content = fs.readFileSync(BLOG_FILE, "utf-8");
 
-  // Escape backticks and ${} in blog content for template literal safety
   const safeContent = post.content
     .replace(/\\/g, "\\\\")
     .replace(/`/g, "\\`")
@@ -104,7 +120,6 @@ function appendBlogPost(post) {
   const safeDescription = post.description.replace(/"/g, '\\"');
   const safeTitle = post.title.replace(/"/g, '\\"');
 
-  // Build the blog post object string
   const postStr = `
   {
     slug: "${post.slug}",
@@ -124,25 +139,17 @@ function appendBlogPost(post) {
     content: \`${safeContent}\`,
   }`;
 
-  // Find the end of the blogPosts array and insert before the closing ];
-  // Check if last entry already has a trailing comma to avoid double commas
   const insertRegex = /,(\s*)\n\];/;
   const noCommaRegex = /}(\s*)\n\];/;
-
-  // Handle empty array case: blogPosts = [] or blogPosts = [\n]
   const emptyArrayRegex = /\[\s*\];/;
 
   if (content.match(insertRegex)) {
-    // Already has trailing comma — just insert the new post
     content = content.replace(insertRegex, `,${postStr}\n];`);
   } else if (content.match(noCommaRegex)) {
-    // No trailing comma — add one
     content = content.replace(noCommaRegex, `},${postStr}\n];`);
   } else if (content.match(emptyArrayRegex)) {
-    // Empty array — insert first post without leading comma
     content = content.replace(emptyArrayRegex, `[${postStr}\n];`);
   } else {
-    // Fallback: find last closing bracket
     const lastBracket = content.lastIndexOf("];");
     if (lastBracket !== -1) {
       content =
@@ -155,96 +162,245 @@ function appendBlogPost(post) {
   fs.writeFileSync(BLOG_FILE, content);
 }
 
+// ─── Random sleep at start (0-90 min) — varies actual publish time per cron run ───
+async function applyTimingJitter() {
+  // Skip jitter when DISABLE_BLOG_JITTER=1 (manual runs / debugging).
+  if (process.env.DISABLE_BLOG_JITTER === "1") {
+    console.log("Timing jitter disabled (DISABLE_BLOG_JITTER=1)");
+    return;
+  }
+  const maxMinutes = 90;
+  const jitterMinutes = Math.floor(Math.random() * maxMinutes);
+  const jitterMs = jitterMinutes * 60 * 1000;
+  console.log(
+    `Random timing jitter: sleeping ${jitterMinutes} minutes before generating (cron ran at fixed time, post will publish later)...`
+  );
+  await new Promise((resolve) => setTimeout(resolve, jitterMs));
+  console.log("Jitter complete. Proceeding with generation.\n");
+}
+
+// ─── Title generators for non-tool post types ───
+function generateComparisonTitle(tool) {
+  const year = new Date().getFullYear();
+  const patterns = [
+    `Best Free ${tool.name} in India ${year} — Tools Compared`,
+    `${tool.name}: SabTools vs BankBazaar vs ClearTax — Honest Comparison (${year})`,
+    `${tool.name} Comparison ${year}: Which Free Tool Wins for Indian Users?`,
+    `SabTools vs Top ${tool.name} Alternatives — ${year} Review`,
+  ];
+  const hash = tool.slug.split("").reduce((a, c) => a + c.charCodeAt(0), 0);
+  return patterns[hash % patterns.length];
+}
+
+function generateNewsTitle(topic, category) {
+  // News titles are derived from the actual topic, not patterned. We trim
+  // and prefix with the year for freshness signal.
+  const year = new Date().getFullYear();
+  const trimmed = topic.length > 70 ? topic.substring(0, 67) + "..." : topic;
+  return `${trimmed} (${year} Update)`;
+}
+
 // ─── Main ───
 async function main() {
+  const blogType = process.env.BLOG_TYPE || "tool";
   console.log("=== SabTools Auto Blog Generator ===");
-  console.log("Time:", new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }));
+  console.log("Type:", blogType);
+  console.log(
+    "Time:",
+    new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
+  );
 
-  // 1. Select tool
-  const tool = selectTool();
-  if (!tool) {
-    console.log("No tool available. Exiting.");
+  // 0. Random timing jitter so publish times vary day-to-day.
+  await applyTimingJitter();
+
+  // 1. Dispatch based on type.
+  let post;
+  if (blogType === "comparison") {
+    post = await generateComparisonPost();
+  } else if (blogType === "news") {
+    post = await generateNewsPost();
+  } else {
+    post = await generateToolGuidePost();
+  }
+
+  if (!post) {
+    console.log("Generation aborted (no post produced). Exiting.");
     process.exit(0);
   }
-  console.log(`\n1. Selected tool: ${tool.name} (${tool.slug}) [${tool.category}]`);
 
-  // 2. Research keywords
-  console.log("\n2. Researching keywords...");
+  // 2. Append to blog.ts
+  console.log("\nWriting to src/lib/blog.ts...");
+  appendBlogPost(post);
+  console.log("   Done.");
+
+  // 3. Save current tool info for screenshot step (only for tool/comparison
+  // posts that have a primary tool slug — news posts use a different image).
+  fs.writeFileSync(
+    CURRENT_TOOL_FILE,
+    JSON.stringify({
+      slug: post.toolSlug,
+      name: post.title,
+      blogSlug: post.slug,
+      category: post.category,
+      blogType,
+    })
+  );
+
+  console.log(`\n=== Blog post generated successfully! ===`);
+  console.log(`URL: https://sabtools.in/blog/${post.slug}`);
+}
+
+// ─── Type A: Tool guide ───
+async function generateToolGuidePost() {
+  const tool = selectTool();
+  if (!tool) {
+    console.log("No tool available for guide.");
+    return null;
+  }
+  console.log(`\nSelected tool: ${tool.name} (${tool.slug}) [${tool.category}]`);
+
   const keywords = await getKeywordsForTool(tool);
-  console.log(`   Found ${keywords.all.length} keywords`);
-  console.log(`   Primary: "${keywords.primary}"`);
-  console.log(`   Autocomplete: ${keywords.autocomplete.length} trending terms`);
+  console.log(`Keywords: ${keywords.all.length} total, primary: "${keywords.primary}"`);
 
-  // 3. Get related tools for interlinks
   const allTools = loadTools();
   const relatedTools = getRelatedTools(tool, allTools);
-  console.log(`\n3. Found ${relatedTools.length} related tools for interlinks`);
+  console.log(`Related tools: ${relatedTools.length}`);
 
-  // 4. Generate blog content
-  console.log("\n4. Generating blog content...");
-  const content = composeBlogPost(tool, keywords, relatedTools);
+  // Try LLM composer first; fall back to template if API key missing or call fails.
+  let content;
+  let usedLLM = false;
+  if (process.env.ANTHROPIC_API_KEY) {
+    try {
+      content = await composeBlogPostWithLLM(tool, keywords, relatedTools);
+      usedLLM = true;
+    } catch (err) {
+      console.warn(
+        `LLM composition failed: ${err.message}. Falling back to template.`
+      );
+      content = templateComposeBlogPost(tool, keywords, relatedTools);
+    }
+  } else {
+    console.log("ANTHROPIC_API_KEY not set — using template composer.");
+    content = templateComposeBlogPost(tool, keywords, relatedTools);
+  }
   const wordCount = countWords(content);
-  console.log(`   Word count: ${wordCount}`);
+  console.log(`Generated ${wordCount} words (LLM: ${usedLLM})`);
 
-  // 5. Build blog post object
-  const blogSlug = generateBlogSlug(tool);
-  const title = generateTitle(tool, keywords);
-  const description = generateMetaDescription(tool, keywords);
-  const readTime = calculateReadTime(content);
-  const today = new Date().toISOString().split("T")[0];
+  markAsBlogged(tool.slug, tool.category);
 
-  const post = {
-    slug: blogSlug,
-    title,
-    description,
+  return {
+    slug: generateBlogSlug(tool),
+    title: generateTitle(tool, keywords),
+    description: generateMetaDescription(tool, keywords),
     content,
-    date: today,
+    date: new Date().toISOString().split("T")[0],
     category: getBlogCategory(tool.category),
-    readTime,
+    readTime: calculateReadTime(content),
     keywords: keywords.meta,
     toolSlug: tool.slug,
     image: {
-      // Richer alt text helps both screen-reader users and image search.
-      // Pattern: "<Tool Name> — Free Online <description> Tool on SabTools.in"
-      // matches the descriptive style we ship for older posts and gives Google
-      // a real subject line rather than a generic "Tool" string.
       src: `/blog/${tool.slug}.webp`,
       alt: `${tool.name} — Free Online ${tool.description} Tool on SabTools.in`,
       width: 1200,
       height: 630,
     },
   };
+}
 
-  console.log(`\n5. Blog post ready:`);
-  console.log(`   Title: ${post.title}`);
-  console.log(`   Slug: ${post.slug}`);
-  console.log(`   Words: ${wordCount}`);
-  console.log(`   Keywords: ${post.keywords.join(", ")}`);
-  console.log(`   Image: ${post.image.src}`);
+// ─── Type B: Comparison post ───
+async function generateComparisonPost() {
+  const tool = selectTool();
+  if (!tool) {
+    console.log("No tool available for comparison.");
+    return null;
+  }
+  console.log(`\nComparison post about: ${tool.name} (${tool.slug}) [${tool.category}]`);
 
-  // 6. Append to blog.ts
-  console.log("\n6. Writing to src/lib/blog.ts...");
-  appendBlogPost(post);
-  console.log("   Done!");
+  const keywords = await getKeywordsForTool(tool);
+  const allTools = loadTools();
+  const relatedTools = getRelatedTools(tool, allTools);
 
-  // 7. Mark tool as blogged
+  if (!process.env.ANTHROPIC_API_KEY) {
+    console.warn("ANTHROPIC_API_KEY not set — skipping comparison post (no template fallback).");
+    return null;
+  }
+
+  const content = await composeComparisonPostWithLLM(tool, keywords, relatedTools);
+  const wordCount = countWords(content);
+  console.log(`Generated ${wordCount} words.`);
+
   markAsBlogged(tool.slug, tool.category);
-  console.log(`\n7. Marked ${tool.slug} as blogged`);
 
-  // 8. Save current tool info for screenshot step
-  fs.writeFileSync(
-    CURRENT_TOOL_FILE,
-    JSON.stringify({
-      slug: tool.slug,
-      name: tool.name,
-      blogSlug: post.slug,
-      category: tool.category,
-    })
-  );
-  console.log("8. Saved tool info for screenshot step");
+  const year = new Date().getFullYear();
+  const title = generateComparisonTitle(tool);
+  const description = `Honest comparison of free ${tool.name} options in India for ${year} — features, accuracy, privacy, signup requirements. Picks the best for Indian users.`;
 
-  console.log(`\n=== Blog post generated successfully! ===`);
-  console.log(`URL will be: https://sabtools.in/blog/${post.slug}`);
+  return {
+    slug: `${tool.slug}-comparison-${year}`,
+    title,
+    description: description.substring(0, 160),
+    content,
+    date: new Date().toISOString().split("T")[0],
+    category: getBlogCategory(tool.category),
+    readTime: calculateReadTime(content),
+    keywords: [...keywords.meta, `best ${tool.name.toLowerCase()} india`, `${tool.name.toLowerCase()} comparison`, `free ${tool.name.toLowerCase()}`].slice(0, 10),
+    toolSlug: tool.slug,
+    image: {
+      src: `/blog/${tool.slug}.webp`,
+      alt: `${tool.name} comparison — SabTools vs other free Indian tools (${year})`,
+      width: 1200,
+      height: 630,
+    },
+  };
+}
+
+// ─── Type C: News / trends post ───
+async function generateNewsPost() {
+  if (!process.env.ANTHROPIC_API_KEY) {
+    console.warn("ANTHROPIC_API_KEY not set — skipping news post (web search requires API).");
+    return null;
+  }
+
+  const allTools = loadTools();
+  const result = await composeNewsPostWithLLM(allTools);
+  const { html: content, topic, category, relatedTool } = result;
+  const wordCount = countWords(content);
+  console.log(`Generated ${wordCount} words.`);
+
+  const year = new Date().getFullYear();
+  const today = new Date();
+  const dateSlug = today.toISOString().split("T")[0]; // YYYY-MM-DD
+
+  // News posts have unique slugs based on date + topic to avoid collisions
+  // when the same topic comes up multiple times in a year.
+  const topicSlug = topic
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .substring(0, 60);
+
+  const title = generateNewsTitle(topic, category);
+  const description = `${topic} — what changed, what it means for Indian readers, and how to act on it. Updated ${year}.`;
+
+  return {
+    slug: `news-${dateSlug}-${topicSlug}`,
+    title,
+    description: description.substring(0, 160),
+    content,
+    date: dateSlug,
+    category: getBlogCategory(category) || "News & Updates",
+    readTime: calculateReadTime(content),
+    keywords: [topic.split(" ").slice(0, 4).join(" "), `${category} news india ${year}`, `india ${year} update`].slice(0, 8),
+    toolSlug: relatedTool.slug,
+    image: {
+      // News posts use the linked tool's hero (already generated by auto-blog
+      // for prior tool-guide runs) or fall back to the brand banner.
+      src: `/blog/${relatedTool.slug}.webp`,
+      alt: `${title} — SabTools.in`,
+      width: 1200,
+      height: 630,
+    },
+  };
 }
 
 main().catch((err) => {

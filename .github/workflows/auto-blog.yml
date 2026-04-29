@@ -1,14 +1,30 @@
 name: Auto Blog Generator
 
+# 3 posts per day, ~7-8 hours apart at fixed UTC times. The script then
+# adds a random 0-90 minute delay so the actual publish times vary
+# day-to-day — Google rewards organic publish patterns over rigidly-timed
+# cadences. Set BLOG_TYPE per cron so each slot produces a different kind
+# of post: tool guide / competitor comparison / news & trends.
+
 on:
   schedule:
-    # 5 posts per day, ~4.8 hours apart
-    - cron: '0 0 * * *'    # 5:30 AM IST
-    - cron: '0 5 * * *'    # 10:30 AM IST
-    - cron: '0 10 * * *'   # 3:30 PM IST
-    - cron: '0 15 * * *'   # 8:30 PM IST
-    - cron: '0 20 * * *'   # 1:30 AM IST
-  workflow_dispatch: {}     # Manual trigger button in GitHub UI
+    # Slot 1: 3:30 AM UTC (9:00 AM IST) — TOOL GUIDE
+    - cron: '30 3 * * *'
+    # Slot 2: 9:30 AM UTC (3:00 PM IST) — COMPARISON POST
+    - cron: '30 9 * * *'
+    # Slot 3: 14:30 UTC (8:00 PM IST) — NEWS & TRENDS POST
+    - cron: '30 14 * * *'
+  workflow_dispatch:
+    inputs:
+      blog_type:
+        description: 'Blog post type (tool / comparison / news)'
+        required: true
+        default: 'tool'
+        type: choice
+        options:
+          - tool
+          - comparison
+          - news
 
 concurrency:
   group: auto-blog
@@ -20,7 +36,9 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    # Generous timeout: random jitter (up to 90 min) + LLM generation
+    # (1-3 min) + screenshot (1-2 min) + commit + indexing.
+    timeout-minutes: 130
 
     steps:
       - name: Checkout repository
@@ -40,24 +58,54 @@ jobs:
       - name: Install Puppeteer Chrome
         run: npx puppeteer browsers install chrome
 
+      - name: Determine blog type
+        id: blog-type
+        run: |
+          # Map the cron schedule to the blog type. Manual triggers use the
+          # workflow_dispatch input. Schedule triggers infer the type from
+          # the firing cron expression.
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            BLOG_TYPE="${{ inputs.blog_type }}"
+          else
+            case "${{ github.event.schedule }}" in
+              "30 3 * * *")  BLOG_TYPE="tool" ;;
+              "30 9 * * *")  BLOG_TYPE="comparison" ;;
+              "30 14 * * *") BLOG_TYPE="news" ;;
+              *)             BLOG_TYPE="tool" ;;
+            esac
+          fi
+          echo "BLOG_TYPE=$BLOG_TYPE" >> "$GITHUB_OUTPUT"
+          echo "Selected blog type: $BLOG_TYPE"
+
       - name: Generate blog post
         run: node scripts/blog/generate-blog.js
+        env:
+          BLOG_TYPE: ${{ steps.blog-type.outputs.BLOG_TYPE }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Override the model if cost is a concern. Default is claude-opus-4-7;
+          # set to claude-sonnet-4-6 in repo variables for ~50% cost reduction.
+          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL || 'claude-opus-4-7' }}
 
       - name: Take screenshot
+        # News posts may not have a tool-specific screenshot; the screenshot
+        # script handles this gracefully (writes a brand-banner fallback
+        # rather than failing the workflow).
         run: node scripts/blog/screenshot.js
+        continue-on-error: true
 
       - name: Commit and push
         run: |
           git config user.name "SabTools Bot"
           git config user.email "bot@sabtools.in"
           git add -A
+          BLOG_TYPE="${{ steps.blog-type.outputs.BLOG_TYPE }}"
           TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
           git diff --cached --quiet && echo "No changes to commit" && exit 0
-          git commit -m "blog: auto-publish ${TIMESTAMP}"
+          git commit -m "blog: auto-publish ${BLOG_TYPE} post ${TIMESTAMP}"
           git push
 
       - name: Submit to Google Indexing API
         run: node scripts/blog/index-url.js
         env:
           GOOGLE_SERVICE_ACCOUNT_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_KEY }}
-        continue-on-error: true  # Don't fail workflow if indexing fails
+        continue-on-error: true

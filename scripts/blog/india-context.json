@@ -1,0 +1,136 @@
+{
+  "_meta": {
+    "description": "Curated India-specific facts and context for blog generation. Updated periodically as RBI rates, tax slabs, and bank policies change. The LLM uses this as grounding so generated posts cite real numbers and bank names instead of generic placeholders.",
+    "last_updated": "2026-04-29"
+  },
+  "common": {
+    "currency_format": "Indian numbers use lakhs (1L = 1,00,000) and crores (1C = 1,00,00,000). Format with Indian comma grouping: ₹1,00,000 not ₹100,000.",
+    "fiscal_year": "Indian financial year runs April 1 to March 31. FY 2025-26 covers April 2025 to March 2026.",
+    "popular_indian_banks": ["SBI", "HDFC Bank", "ICICI Bank", "Axis Bank", "Kotak Mahindra Bank", "PNB", "Bank of Baroda", "Canara Bank", "Yes Bank", "IndusInd Bank"],
+    "popular_indian_apps": ["UPI / BHIM", "Paytm", "Google Pay", "PhonePe", "Cred", "Zerodha", "Groww", "Paytm Money"],
+    "indian_states_examples": ["Maharashtra", "Karnataka", "Tamil Nadu", "Delhi", "Uttar Pradesh", "Gujarat", "West Bengal", "Telangana"],
+    "common_personas": [
+      "salaried professional in Bangalore/Mumbai earning ₹12-25L per annum",
+      "small business owner running a retail shop with annual turnover under ₹40L",
+      "college student in tier-2 city preparing for competitive exams",
+      "freelancer/consultant managing GST and quarterly tax payments",
+      "homemaker tracking household budget and grocery expenses",
+      "first-time home loan applicant in NCR/Pune"
+    ]
+  },
+  "finance": {
+    "context": "All finance content must reference Indian banks (SBI, HDFC, ICICI, Axis, Kotak), use INR, follow RBI guidelines, and use Indian number formats (lakhs/crores). Mention specific tax sections (80C, 80D, 80CCD) where relevant.",
+    "current_rates": {
+      "rbi_repo_rate_2026": "5.50%",
+      "home_loan_rates_2026": "8.5% - 9.75% (varies by bank, CIBIL score, and loan-to-value)",
+      "personal_loan_rates_2026": "10.49% - 24% per annum",
+      "car_loan_rates_2026": "8.75% - 11.5% per annum",
+      "fd_rates_2026_general": "6.5% - 7.25% (1-3 year tenure)",
+      "fd_rates_2026_seniors": "7% - 7.75% (senior citizen rates, 0.5% bonus)",
+      "ppf_rate_2026": "7.1% (revised quarterly by Ministry of Finance)",
+      "epf_rate_2025_26": "8.25%",
+      "nps_returns_average_2026": "9-12% (equity-heavy schemes)",
+      "sukanya_samriddhi_2026": "8.2%",
+      "nsc_rate_2026": "7.7%",
+      "kisan_vikas_patra_2026": "7.5%"
+    },
+    "tax_slabs_new_regime_fy_2025_26": {
+      "0_to_3L": "Nil",
+      "3L_to_7L": "5%",
+      "7L_to_10L": "10%",
+      "10L_to_12L": "15%",
+      "12L_to_15L": "20%",
+      "above_15L": "30%",
+      "rebate_under_87a": "Income up to ₹7L gets full rebate (zero tax)"
+    },
+    "tax_slabs_old_regime_fy_2025_26": {
+      "0_to_2.5L": "Nil",
+      "2.5L_to_5L": "5%",
+      "5L_to_10L": "20%",
+      "above_10L": "30%",
+      "rebate_under_87a": "Income up to ₹5L gets full rebate"
+    },
+    "common_deductions_old_regime": {
+      "section_80C": "Up to ₹1.5L (PPF, ELSS, LIC, home loan principal, tuition fees)",
+      "section_80D": "Up to ₹25K self/family + ₹50K parents (₹25K if non-senior)",
+      "section_80CCD_1B": "Additional ₹50K for NPS",
+      "HRA": "Tax exempt portion based on rent paid, salary, and city tier",
+      "section_24B": "Home loan interest up to ₹2L (self-occupied)"
+    },
+    "real_examples": [
+      "Riya from Pune wants to take a ₹50L home loan at 8.75% for 20 years. Her monthly EMI works out to ₹44,186, with total interest payable of ₹56,04,640.",
+      "Arjun, an IT professional earning ₹18L per annum, switches from Old to New tax regime — saves ₹35,000 per year because he doesn't claim 80C+80D deductions anyway.",
+      "Mrs. Sharma starts a ₹5,000/month SIP in a Nifty 50 index fund at 12% expected returns. After 20 years, corpus grows to ₹49.96 lakhs (invested ₹12L, returns ₹37.96L)."
+    ]
+  },
+  "tax": {
+    "context": "Tax content must reference current FY (2025-26 / AY 2026-27), specific Income Tax Act sections, both Old and New regimes, and current TDS rates. Mention Form 16, ITR-1/2/3/4, and Income Tax Department portal where relevant.",
+    "key_dates": {
+      "itr_due_date_2026": "July 31, 2026 (non-audit cases for FY 2025-26)",
+      "advance_tax_dates": "June 15, Sep 15, Dec 15, Mar 15 (15%, 45%, 75%, 100% cumulative)",
+      "form_16_deadline": "June 15 (employer must issue for FY 2025-26)"
+    },
+    "tds_rates": {
+      "salary_section_192": "As per slab rates",
+      "interest_section_194A": "10% if >₹40K (₹50K seniors)",
+      "rent_section_194I": "10% on land/building if >₹2.4L per annum",
+      "professional_fees_194J": "10% if >₹30K"
+    }
+  },
+  "health": {
+    "context": "Health content must follow WHO Asia-Pacific BMI thresholds (overweight ≥23, obese ≥25 — lower than Western 25/30 because South Asians have higher body fat at lower BMI). Reference ICMR dietary guidelines, Indian food composition tables (NIN Hyderabad), and AYUSH where appropriate. Acknowledge regional dietary patterns (vegetarian, North vs South Indian cuisine).",
+    "indian_specific_thresholds": {
+      "bmi_underweight": "<18.5",
+      "bmi_normal_asia": "18.5 - 22.9",
+      "bmi_overweight_asia": "23 - 24.9",
+      "bmi_obese_class1_asia": "25 - 29.9",
+      "bmi_obese_class2_asia": "≥30",
+      "diabetes_prevalence_india": "~11.4% adult population (IDF 2024 estimate)",
+      "hypertension_prevalence": "~30% urban, ~25% rural"
+    },
+    "icmr_recommendations": {
+      "daily_calories_sedentary_male": "2110 kcal",
+      "daily_calories_sedentary_female": "1660 kcal",
+      "protein_rda": "0.8-1g per kg body weight",
+      "water_intake": "2.5-3 liters/day (more in summer)"
+    }
+  },
+  "math": {
+    "context": "Educational/math content for Indian students should reference CBSE, ICSE, and state board curricula. Mention NCERT textbooks where appropriate. Include exam contexts (JEE, NEET, GATE, CAT, board exams). Use Indian education-system terms (CGPA, percentile, semester, internal assessment).",
+    "common_grading_systems": {
+      "cbse_cgpa": "10-point scale, A1 (10) to E (3-4 = pass cutoff)",
+      "anna_university": "10-point CGPA: O (10), A+ (9), A (8), B+ (7), B (6), C (5), F (fail)",
+      "mumbai_university": "7-point CGPA system with percentage equivalents"
+    }
+  },
+  "developer": {
+    "context": "Developer content for Indian audience: reference INR pricing for tools/services, mention Indian dev community resources (CodeChef, GeeksforGeeks, hackathons like Smart India Hackathon). Mention popular Indian tech companies (Infosys, TCS, Wipro, Flipkart, Razorpay, Zerodha). Write for someone who may have only 4G or basic broadband.",
+    "common_use_cases": [
+      "Razorpay/PayU webhook payload validation",
+      "Aadhaar/PAN format validation in forms",
+      "GST number (15-char) format validation",
+      "UPI VPA validation",
+      "Indian phone number (+91) validation"
+    ]
+  },
+  "image": {
+    "context": "Image content for Indian users: mention government form requirements (passport: 4.5×3.5 cm, voter ID: 2×2 inch, Aadhaar enrollment, driving license). Reference image size limits for various Indian govt portals (UPSC: 50KB, SSC: 20-50KB).",
+    "common_size_requirements": {
+      "passport_application": "4.5×3.5 cm, 35-40 KB JPEG",
+      "voter_id_application": "2×2 inch, JPEG",
+      "ssc_exam_photo": "20-50 KB, 200×230 pixels",
+      "upsc_exam_photo": "20-300 KB JPEG"
+    }
+  },
+  "tools_general_indian_use_cases": [
+    "Calculating EMI before applying for a home/car/personal loan from SBI, HDFC, etc.",
+    "Computing GST while issuing invoices for small businesses",
+    "Filing ITR online via the Income Tax e-filing portal",
+    "Compressing photos for government form submissions (Aadhaar, PAN, Passport)",
+    "Generating UPI QR codes for shopkeepers / consultants",
+    "Checking BMI using Asia-Pacific thresholds for Indian populations",
+    "Calculating SIP returns before starting mutual fund investments",
+    "Converting between meters, square feet, acres for property listings",
+    "Calculating power consumption costs based on state electricity tariffs"
+  ]
+}
