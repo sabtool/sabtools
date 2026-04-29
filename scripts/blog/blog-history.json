@@ -133,9 +133,10 @@
     "body-fat-calculator",
     "border-radius-generator",
     "sitemap-generator",
-    "ration-card-info"
+    "ration-card-info",
+    "random-number-generator"
   ],
-  "lastCategory": "utility",
-  "totalPosts": 134,
-  "lastRun": "2026-04-28T23:13:11.678Z"
+  "lastCategory": "math",
+  "totalPosts": 135,
+  "lastRun": "2026-04-29T09:55:29.100Z"
 }
