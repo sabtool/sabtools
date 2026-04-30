@@ -135,9 +135,10 @@
     "sitemap-generator",
     "ration-card-info",
     "random-number-generator",
-    "unix-timestamp-converter"
+    "unix-timestamp-converter",
+    "ai-cold-email-generator"
   ],
-  "lastCategory": "datetime",
-  "totalPosts": 136,
-  "lastRun": "2026-04-29T16:15:12.123Z"
+  "lastCategory": "ai",
+  "totalPosts": 137,
+  "lastRun": "2026-04-30T10:55:07.471Z"
 }
