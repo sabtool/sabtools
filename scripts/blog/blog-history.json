@@ -136,9 +136,10 @@
     "ration-card-info",
     "random-number-generator",
     "unix-timestamp-converter",
-    "ai-cold-email-generator"
+    "ai-cold-email-generator",
+    "pregnancy-calculator"
   ],
-  "lastCategory": "ai",
-  "totalPosts": 137,
-  "lastRun": "2026-04-30T10:55:07.471Z"
+  "lastCategory": "health",
+  "totalPosts": 138,
+  "lastRun": "2026-04-30T16:03:28.654Z"
 }
