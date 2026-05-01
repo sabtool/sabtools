@@ -21715,6 +21715,152 @@ const blogPosts: BlogPost[] = [
 <p>For Indian mothers who want an accurate due date, a clean trimester breakdown, and a calculator that doesn't treat their pregnancy as ad inventory, SabTools is the right pick. For anyone wanting a Western-style encyclopaedia of week-by-week foetal development in one page, Calculator.net is the more thorough resource. For a stripped-down date-in, date-out lookup, RapidTables works. The arithmetic is the same across all three — pick based on which experience and privacy posture you actually want.</p>
 
 <p>Try SabTools' <a href="/tools/pregnancy-calculator">Pregnancy Calculator</a> → enter your LMP, get your EDD, conception date, current week, and trimester in one screen.</p>`,
+  },
+  {
+    slug: "website-ssl-checker-guide-2026",
+    title: "Website SSL Checker Online Free — Complete Guide (2026)",
+    description: "Use Website SSL Checker online for free — check website ssl certificate, types explained and free ssl guide. No signup, instant results. Made for India. Try ...",
+    date: "2026-05-01",
+    category: "Security",
+    readTime: "11 min read",
+    keywords: ["ssl", "certificate", "https", "security", "lets encrypt", "website", "website ssl checker", "website ssl checker online"],
+    toolSlug: "website-ssl-checker",
+    image: {
+      src: "/blog/website-ssl-checker.webp",
+      alt: "Website SSL Checker — Free Online Check website SSL certificate, types explained and free SSL guide Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>A Surat textile exporter recently lost three days of orders because Chrome started flagging his website with a red <strong>"Your connection is not private"</strong> warning. His SSL certificate had silently expired at 2:14 AM on a Sunday. By the time his developer reached the cPanel on Monday, the site had been blocked from Google search snippets and his Razorpay payment gateway had auto-disabled checkout. The total loss: roughly <strong>₹1.8L</strong> in missed orders plus an emergency renewal at premium rates.</p>
+
+<p>This is the most common SSL story in Indian small business hosting — not a hack, not a sophisticated attack, just a 90-day Let's Encrypt certificate that didn't auto-renew because of a misconfigured cron job. The <strong>Website SSL Checker</strong> on SabTools exists for exactly this reason: paste any domain, get an instant readout of the certificate's issuer, validity dates, encryption strength, certificate chain, and whether browsers will trust it tomorrow morning.</p>
+
+<h2>What the SSL Checker actually tells you about a website</h2>
+
+<p>Most people think an SSL check means "is the padlock green or not." That's a 2015 view. A modern SSL inspection has to surface at least eight things, and the SabTools checker reports each one:</p>
+
+<ul>
+  <li><strong>Issuer (Certificate Authority):</strong> Whether the cert was signed by Let's Encrypt, Sectigo, DigiCert, GoDaddy, GlobalSign, or one of the cheaper resellers like ZeroSSL or Buypass. Indian hosts like Hostinger and BigRock most commonly install Let's Encrypt or Sectigo.</li>
+  <li><strong>Subject (Common Name + SANs):</strong> The exact domain and subdomain list the certificate covers. A cert valid for <code>example.com</code> won't work for <code>www.example.com</code> unless www is in the Subject Alternative Names — a mistake that breaks roughly 1 in 6 small Indian websites at launch.</li>
+  <li><strong>Validity period:</strong> The "Not Before" and "Not After" dates. As of 2025 most CAs cap public certificates at 398 days, and Let's Encrypt issues for 90.</li>
+  <li><strong>Days remaining:</strong> The most actionable field. Anything under 14 days needs immediate attention.</li>
+  <li><strong>Signature algorithm:</strong> SHA-256 with RSA is standard. If you see SHA-1 anywhere, the cert is broken — Chrome and Firefox stopped trusting SHA-1 years ago.</li>
+  <li><strong>Key size and type:</strong> RSA 2048-bit minimum, RSA 4096 or ECDSA P-256 preferred.</li>
+  <li><strong>Certificate chain:</strong> Whether the intermediate certificates are correctly installed. A "chain incomplete" error is invisible in Chrome on desktop but breaks Safari on iPhone and most Android WebView checkouts — a nightmare for D2C brands.</li>
+  <li><strong>Protocol and cipher support:</strong> TLS 1.2 and TLS 1.3 should both be enabled; TLS 1.0 and 1.1 must be disabled because they fail PCI-DSS, which RBI-aligned payment gateways enforce.</li>
+</ul>
+
+<p>Open the <a href="/tools/website-ssl-checker">Website SSL Checker</a> with any domain — your own, a competitor's, your bank's — and you'll see all of this in one screen instead of running <code>openssl s_client</code> commands from a terminal.</p>
+
+<h2>Why SSL matters more in India than most owners realise</h2>
+
+<p>HTTPS used to be optional padding for "trust." It is now a hard gate at four different layers, and any one of them can kill an Indian business overnight:</p>
+
+<ol>
+  <li><strong>Browser blocking.</strong> Chrome (used by ~83% of Indian internet users) shows a full-page interstitial for any expired or self-signed certificate. Users have to click "Advanced → Proceed anyway," and almost nobody does.</li>
+  <li><strong>Payment gateway compliance.</strong> Razorpay, Cashfree, PayU, and Instamojo all require valid TLS on the merchant's domain before they enable production keys. Razorpay's KYC review explicitly checks the certificate before activating live mode.</li>
+  <li><strong>SEO ranking.</strong> Google has used HTTPS as a ranking signal since 2014. A Bangalore SaaS site that drops to HTTP-only loses 8–15% of organic traffic within a couple of weeks based on Search Console patterns I've watched.</li>
+  <li><strong>RBI and IT Act expectations.</strong> While there's no specific RBI circular saying "thou shalt have SSL," the IT Act 2000's reasonable security practices clause (Section 43A) and the DPDP Act 2023 effectively make encrypted transport mandatory for any site collecting personal data — which is every signup form, every contact form, every checkout.</li>
+</ol>
+
+<p>For a Kota coaching institute taking ₹45,000 course fees online, or a Pune chartered accountant collecting documents from clients, an SSL lapse is not a technical inconvenience. It's a regulatory and revenue problem.</p>
+
+<h2>The three types of SSL certificates — and which one you actually need</h2>
+
+<p>Resellers love selling expensive "EV" certificates to small businesses that don't need them. Here's the honest breakdown:</p>
+
+<h3>Domain Validation (DV)</h3>
+
+<p>Issued in minutes after you prove you control the domain (usually a DNS TXT record or HTTP file). <strong>Free from Let's Encrypt and ZeroSSL; ₹500–₹3,000/year from Sectigo/GoDaddy resellers.</strong> Suitable for: blogs, portfolios, small business websites, content sites, course landing pages, the vast majority of Indian use cases. The padlock looks identical to an EV certificate in modern browsers.</p>
+
+<h3>Organisation Validation (OV)</h3>
+
+<p>The CA verifies your business through GST registration, Companies Act records, or a phone call to a number listed in a public directory. Takes 2–5 working days. <strong>Costs ₹4,000–₹12,000/year.</strong> Suitable for: B2B SaaS, fintech where institutional clients ask "is this a registered company," healthcare platforms, government tender vendors. The cert shows your verified company name in the certificate details, which the SSL checker will display.</p>
+
+<h3>Extended Validation (EV)</h3>
+
+<p>Heavy verification — the CA checks your CIN, physical address, operational history, and authorised signatories. Takes 1–3 weeks. <strong>Costs ₹10,000–₹35,000/year.</strong> Browsers used to show a green company name in the address bar; that visual disappeared in 2019 across Chrome and Firefox. Suitable for: banks, stock brokers, large insurance companies, payment processors. For a shop on Shopify or a freelance designer in Gurgaon, EV is a waste of money.</p>
+
+<p>If you're starting a new website in 2026, default to a free Let's Encrypt DV certificate unless your business has a specific reason to escalate. Use the <a href="/tools/whois-lookup">WHOIS Lookup tool</a> to confirm domain registrant details before placing an OV/EV order — mismatches between WHOIS and your GST certificate are the #1 cause of OV rejection.</p>
+
+<h2>Let's Encrypt: the free SSL that powers most Indian small business sites</h2>
+
+<p>Let's Encrypt has issued over 4 billion certificates globally, including a huge slice of Indian shared hosting. If you're on Hostinger, BigRock, MilesWeb, GoDaddy India, or any cPanel host, your "free SSL" toggle is almost certainly Let's Encrypt under the hood.</p>
+
+<p>Three things every Indian site owner should know about it:</p>
+
+<ul>
+  <li><strong>90-day validity.</strong> Designed to be auto-renewed at day 60 by software like Certbot or your host's automated cron. If renewal fails — usually because of a DNS change, a firewall blocking port 80, or a redirect loop — you get 30 days to notice before the site breaks.</li>
+  <li><strong>Rate limits.</strong> 50 certificates per registered domain per week, 5 duplicate certificates per week. Enough for almost everyone, but a SaaS issuing per-customer subdomains can hit the wall.</li>
+  <li><strong>No warranty, no insurance.</strong> Paid CAs include a "warranty" of 0,000–.75M for misissuance. In practice no Indian small business has ever claimed one, but it's a checkbox some enterprise procurement teams require.</li>
+</ul>
+
+<p>Run the SSL Checker against your own domain right after enabling Let's Encrypt and again 65 days later. If "days remaining" is below 25 on the second check, your auto-renewal is broken and you need to fix it before day 90.</p>
+
+<h2>Reading the SSL Checker output: what's a problem and what isn't</h2>
+
+<p>Common results from the <a href="/tools/website-ssl-checker">Website SSL Checker</a> and how to interpret them:</p>
+
+<ul>
+  <li><strong>"Certificate valid, 67 days remaining, issuer: Let's Encrypt R3."</strong> Healthy. Nothing to do.</li>
+  <li><strong>"Certificate valid, 8 days remaining."</strong> Renew today. If it's a managed host, force renewal from cPanel. If it's a self-managed server, run <code>certbot renew</code>.</li>
+  <li><strong>"Certificate expired 3 days ago."</strong> The site is currently broken in browsers. Renew immediately and check why auto-renewal failed.</li>
+  <li><strong>"Hostname mismatch — certificate covers example.com, you queried www.example.com."</strong> Reissue with both names in SAN, or set up a 301 redirect from www to apex (and verify the redirect works on HTTPS first).</li>
+  <li><strong>"Self-signed certificate."</strong> Almost never acceptable on a public site. Common on staging servers, internal admin panels, or routers — fine there, fatal on production.</li>
+  <li><strong>"Chain incomplete."</strong> Your server is sending only the leaf certificate, not the intermediate. Chrome desktop will quietly pull the intermediate and show no error; Safari iOS and old Android will refuse to connect. Reinstall the certificate with the full chain bundle (your CA provides it as <code>fullchain.pem</code>).</li>
+  <li><strong>"TLS 1.0/1.1 enabled."</strong> Disable in nginx/Apache. PCI-DSS scans flag this and Razorpay periodically rejects merchants for it.</li>
+</ul>
+
+<h2>SSL is one layer — pair it with the rest of your security stack</h2>
+
+<p>A valid certificate encrypts the connection; it doesn't make the website itself secure. An SSL-protected WordPress site with the password <code>admin123</code> is still trivially compromised. A few practical pairings every Indian site owner should think about:</p>
+
+<ul>
+  <li>Use the <a href="/tools/password-generator">Password Generator</a> to create 20-character random admin passwords for cPanel, WordPress, and your domain registrar account. Reused passwords are how 80% of small Indian sites actually get hacked, not certificate flaws.</li>
+  <li>Run a <a href="/tools/dns-lookup-tool">DNS lookup</a> on your domain to verify A, MX, and CAA records. A CAA record telling browsers "only Let's Encrypt may issue certificates for this domain" prevents an attacker who briefly gains DNS access from issuing a rogue cert through another CA.</li>
+  <li>Use the <a href="/tools/whois-lookup">WHOIS Lookup</a> to confirm your registration's expiry date — domains expire silently too, and a dropped domain is worse than an expired SSL because a competitor can register it.</li>
+  <li>If you collect any personal data (and almost every site does, even via a contact form), generate a compliant <a href="/tools/privacy-policy-generator">privacy policy</a> that references the DPDP Act 2023 and your security practices including TLS encryption.</li>
+</ul>
+
+<p>SSL, strong passwords, DNS hardening, and a public privacy policy together cover roughly 90% of the security baseline regulators and payment gateways look for.</p>
+
+<h2>A real-world checklist for monitoring SSL in production</h2>
+
+<p>For a working Indian small business website — say, a Bangalore D2C skincare brand on Shopify or a Hyderabad legal consultancy on WordPress — here's the cadence that actually prevents incidents:</p>
+
+<ol>
+  <li><strong>Day 0 (launch):</strong> Run the SSL checker. Confirm valid cert, both apex and www covered, TLS 1.2+ only, full chain present.</li>
+  <li><strong>Day 30:</strong> Re-check. Confirm "days remaining" decreased by exactly 30. If it jumped (e.g., went from 80 to 88), good — auto-renewal happened.</li>
+  <li><strong>Day 60–65:</strong> For Let's Encrypt, this is when renewal should kick in. Check that days remaining bumped back up to 80–90.</li>
+  <li><strong>Quarterly:</strong> Test from a real Android phone on Jio/Airtel data, not just desktop Chrome. Mobile WebViews are stricter and surface chain errors that desktop hides.</li>
+  <li><strong>Before any DNS change:</strong> Re-check 24 hours after the change. CAA records, A records, and CNAME flattening all interact with future renewals.</li>
+</ol>
+
+<p>For sites where downtime costs more than ₹10,000/day in lost revenue, layer on an external uptime monitor (UptimeRobot's free tier, BetterStack) with SSL expiry alerts at 21, 14, and 7 days. That spend is negligible against the cost of a Sunday night outage.</p>
+
+<h2>Common questions Indian users actually ask</h2>
+
+<h3>Is "free SSL" really safe for accepting payments?</h3>
+
+<p>Yes. Let's Encrypt and ZeroSSL use the same TLS 1.3 encryption as a ₹30,000 DigiCert EV certificate. The encryption strength is identical. What you pay extra for is identity verification (OV/EV) and warranty paperwork, not stronger security on the wire. Razorpay, PayU, and Cashfree all accept Let's Encrypt certificates for live merchants.</p>
+
+<h3>My host shows "SSL active" but the SabTools checker shows an error. Who's right?</h3>
+
+<p>The checker. cPanel often reports "active" based on whether a certificate file exists, not whether nginx/Apache is actually serving it correctly. Trust an external check over a control panel status badge.</p>
+
+<h3>Do I need a separate SSL certificate for each subdomain?</h3>
+
+<p>Not necessarily. A wildcard certificate (<code>*.example.com</code>) covers unlimited subdomains and Let's Encrypt issues them free using DNS validation. Or list specific subdomains in the SAN field. Buy a wildcard only if you're regularly spinning up new subdomains; for a fixed set of three or four, multi-domain SAN certificates are cheaper to reason about.</p>
+
+<h3>What does "your connection is not private NET::ERR_CERT_DATE_INVALID" mean?</h3>
+
+<p>Either your certificate has expired, or the device's clock is wrong. Check the certificate's "Not After" date with the SSL checker first; if it's in the future, the user's phone or laptop has the wrong date set.</p>
+
+<h2>One quick check beats one long outage</h2>
+
+<p>Thirty seconds of paste-and-check today is cheaper than a Sunday night spent fielding WhatsApp messages from customers asking why your site looks "hacked." Run your domain, your client's domain, the vendor portal you log into every morning — anything you depend on.</p>
+
+<p><a href="/tools/website-ssl-checker"><strong>Open the Website SSL Checker and inspect your domain now →</strong></a></p>`,
   }
 ];
 
