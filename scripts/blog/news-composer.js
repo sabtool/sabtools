@@ -160,7 +160,7 @@ Your output must be journalistically credible. Every factual claim, every rate, 
    - Don't write "BREAKING: RBI Slashes Repo Rate!" if the change is 25 basis points.
    - Don't write "This One Trick Will Save You Thousands" — Indian readers see through this.
 
-# Output format
+# Output format and structure
 
 Return ONLY HTML body content. Use:
 - <h2> for major sections (4-5 sections)
@@ -171,9 +171,23 @@ Return ONLY HTML body content. Use:
 - <a href="..."> for the SabTools tool link
 - <a href="..." rel="noopener" target="_blank"> for external citation links
 
-Word count: 1800-2200 words. Aim for ~2000.
+Word count: 1500-2000 words.
 
-Do not include the post title (h1).`;
+Do not include the post title (h1).
+
+# CRITICAL: How to deliver the final article
+
+You will use web search several times to ground this article in real recent
+events. That's expected. But after your final search, when you start writing
+the actual article, **write the complete article as ONE single continuous
+response**. Do not break it into pieces with brief commentary between
+paragraphs. Do not write "let me also add..." between sections. Compose all
+sections in a single continuous output starting with <h2> and continuing
+through to the final paragraph. Treat the article as a single deliverable,
+not a series of incremental drafts.
+
+If you find yourself wanting to search for more information mid-article,
+search BEFORE you start writing the article body, not during.`;
 }
 
 function buildUserMessage(topic, category, relatedTool, allRelatedTools) {
@@ -251,7 +265,11 @@ async function composeNewsPostWithLLM(allTools) {
   // needed — Anthropic handles the search loop.
   const stream = client.messages.stream({
     model,
-    max_tokens: 16000, // higher for news posts because of search results in context + thinking
+    // News posts need substantially more output budget than tool guides.
+    // Web search interleaves text + tool_use blocks across the response,
+    // and adaptive thinking can also burn through significant token budget.
+    // 24K is generous but well within Opus 4.7's 128K output cap.
+    max_tokens: 24000,
     thinking: { type: "adaptive" },
     output_config: { effort: "high" },
     tools: [
@@ -269,28 +287,58 @@ async function composeNewsPostWithLLM(allTools) {
 
   const message = await stream.finalMessage();
 
-  // News posts may have multiple text blocks interleaved with server tool
-  // use blocks. Concatenate the text blocks to get the final article body.
-  const textBlocks = message.content.filter((b) => b.type === "text");
-  if (textBlocks.length === 0) {
+  // News posts come back as a sequence of interleaved blocks:
+  //   text("Let me search...") → server_tool_use → web_search_tool_result →
+  //   text("Based on results...") → server_tool_use → ... →
+  //   text("Here's the final article body...")  ← the article we want
+  //
+  // The model's intermediate commentary blocks ("let me search X",
+  // "the results show Y") appear BEFORE the last tool use; the final
+  // composed article appears AFTER. So we collect every text block whose
+  // index is greater than the index of the last tool_use / server_tool_use
+  // block. This correctly handles the case where the article itself spans
+  // several adjacent text blocks at the end of the response.
+  let lastToolIndex = -1;
+  message.content.forEach((block, idx) => {
+    if (
+      block.type === "tool_use" ||
+      block.type === "server_tool_use" ||
+      block.type === "web_search_tool_result"
+    ) {
+      lastToolIndex = idx;
+    }
+  });
+
+  const articleTextBlocks = message.content
+    .slice(lastToolIndex + 1)
+    .filter((b) => b.type === "text");
+
+  // Fallback: if no text blocks appeared after the last tool use (the model
+  // ended mid-search or never called a tool), use ALL text blocks. This is
+  // less precise — may include "let me search" commentary — but ensures we
+  // have content to work with rather than failing outright.
+  const allTextBlocks = message.content.filter((b) => b.type === "text");
+  const sourceBlocks =
+    articleTextBlocks.length > 0 ? articleTextBlocks : allTextBlocks;
+
+  if (sourceBlocks.length === 0) {
     throw new Error(
       `LLM returned no text blocks (stop_reason=${message.stop_reason}). Aborting.`
     );
   }
 
-  // The last text block is typically the final article. Earlier text blocks
-  // may be intermediate "let me search for X" / "based on these results"
-  // commentary that isn't part of the article. Heuristic: pick the longest
-  // text block as the article body.
-  const articleBlock = textBlocks.reduce((longest, current) =>
-    current.text.length > longest.text.length ? current : longest
-  );
+  // Concatenate the article text blocks with a blank line between them. This
+  // preserves the model's chosen paragraph structure and is safe against
+  // missing trailing newlines on individual blocks.
+  const html = sourceBlocks
+    .map((b) => b.text)
+    .join("\n\n")
+    .trim();
 
-  const html = articleBlock.text.trim();
   const wordCount = countWords(html);
 
   console.log(
-    `   [LLM-News] Generated ${wordCount} words from ${textBlocks.length} text blocks. Stop: ${message.stop_reason}.`
+    `   [LLM-News] Article assembled from ${sourceBlocks.length} text block(s) (of ${allTextBlocks.length} total in response). ${wordCount} words. Stop: ${message.stop_reason}.`
   );
   if (message.usage) {
     console.log(
@@ -303,9 +351,14 @@ async function composeNewsPostWithLLM(allTools) {
     console.warn(`   [LLM-News] Quality warning: ${violations.join("; ")}`);
   }
 
-  if (wordCount < 1200) {
+  // News posts have a lower word-count floor than tool guides. Web search
+  // overhead (commentary blocks, tool I/O eating into the model's output
+  // budget) means a 2000-word target may produce 800-1500 words of actual
+  // article. Anything under 800 words is suspicious and worth aborting on.
+  const NEWS_MIN_WORDS = 800;
+  if (wordCount < NEWS_MIN_WORDS) {
     throw new Error(
-      `News post too short (${wordCount} words, target ~2000). Aborting.`
+      `News post too short (${wordCount} words, minimum ${NEWS_MIN_WORDS}). Aborting.`
     );
   }
 
