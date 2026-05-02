@@ -4,6 +4,7 @@ import RelatedTools from "@/components/RelatedTools";
 import RelatedBlogPosts from "@/components/RelatedBlogPosts";
 import ShareButtons from "@/components/ShareButtons";
 import WhatsAppShareResult from "@/components/WhatsAppShareResult";
+import AiInsight from "@/components/AiInsight";
 import EmbedCode from "@/components/EmbedCode";
 import ToolFaq from "@/components/ToolFaq";
 import TrackToolVisit from "@/components/TrackToolVisit";
@@ -228,7 +229,7 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
             </div>
             <div className="flex items-center gap-2">
               <FavoriteButton slug={tool.slug} />
-              <DownloadPDF />
+              <DownloadPDF toolName={tool.name} />
               <ShareButtons title={`${tool.name} - Free Online Tool | SabTools.in`} />
             </div>
           </div>
@@ -241,6 +242,15 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8">
           {children}
         </div>
+
+        {/* AI-powered personalized insight on the just-computed result.
+            Lazy: only fires when the user clicks. Hides itself if the
+            Gemini key isn't configured at build time. */}
+        <AiInsight
+          toolName={tool.name}
+          toolSlug={tool.slug}
+          category={cat?.name}
+        />
 
         <div className="mt-6 flex items-center justify-center">
           <WhatsAppShareResult toolName={tool.name} slug={tool.slug} />

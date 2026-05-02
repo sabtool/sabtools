@@ -1,5 +1,6 @@
 "use client";
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
+import { useLiveGoldPrice } from "@/hooks/useLiveGoldPrice";
 
 const PURITY_OPTIONS = [
   { label: "24K (99.9% Pure)", karat: 24, factor: 1.0 },
@@ -14,6 +15,20 @@ export default function GoldPriceCalculator() {
   const [goldPrice, setGoldPrice] = useState("8800");
   const [includeMaking, setIncludeMaking] = useState(false);
   const [makingPercent, setMakingPercent] = useState(10);
+
+  // Auto-populate the gold price field from a live API on first mount,
+  // so users see today's price immediately. They can still override.
+  const { data: liveGold, loading: loadingGold } = useLiveGoldPrice();
+  useEffect(() => {
+    if (liveGold && !goldPrice) {
+      // Default the field once when live data arrives, only if user hasn't
+      // already typed something (goldPrice still default "8800" → use live)
+    }
+    if (liveGold && goldPrice === "8800") {
+      setGoldPrice(String(liveGold.price24K));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [liveGold]);
 
   const fmt = useCallback(
     (n: number) =>
@@ -44,9 +59,27 @@ export default function GoldPriceCalculator() {
   return (
     <div className="space-y-6">
       <div className="bg-gradient-to-r from-amber-50 to-yellow-50 border-2 border-amber-300 rounded-xl p-5 text-center">
-        <div className="text-sm text-amber-700 font-medium mb-1">Enter Today&apos;s 24K Gold Rate (&#8377;/gram)</div>
+        <div className="text-sm text-amber-700 font-medium mb-1 flex items-center justify-center gap-2">
+          {loadingGold ? (
+            <span>Fetching live 24K gold rate…</span>
+          ) : liveGold?.isLive ? (
+            <span className="inline-flex items-center gap-1.5">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              Live 24K Gold Rate (&#8377;/gram)
+            </span>
+          ) : (
+            <span>Enter Today&apos;s 24K Gold Rate (&#8377;/gram)</span>
+          )}
+        </div>
         <div className="text-4xl font-extrabold text-amber-600">&#8377;{goldPrice ? parseInt(goldPrice).toLocaleString("en-IN") : "—"}/g</div>
-        <div className="text-xs text-amber-500 mt-2">Edit the price below to match today&apos;s rate</div>
+        <div className="text-xs text-amber-500 mt-2">
+          {liveGold?.isLive
+            ? `As of ${liveGold.asOf.toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short" })} · You can override below`
+            : "Edit the price below to match today's rate"}
+        </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

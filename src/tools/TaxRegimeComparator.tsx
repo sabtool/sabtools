@@ -1,5 +1,6 @@
 "use client";
 import { useState, useMemo } from "react";
+import { useUrlState } from "@/hooks/useUrlState";
 
 /**
  * Old vs New Tax Regime Comparator (India) — FY 2025-26 / AY 2026-27
@@ -189,14 +190,17 @@ function applyMarginalRelief(tax: number, surcharge: number): number {
 }
 
 export default function TaxRegimeComparator() {
-  const [grossIncome, setGrossIncome] = useState<string>("1500000");
-  const [ageGroup, setAgeGroup] = useState<AgeGroup>("below60");
-  const [sec80C, setSec80C] = useState<string>("150000");
-  const [sec80D, setSec80D] = useState<string>("25000");
-  const [sec80CCD1B, setSec80CCD1B] = useState<string>("0");
-  const [hraExemption, setHraExemption] = useState<string>("0");
-  const [homeLoanInterest, setHomeLoanInterest] = useState<string>("0");
-  const [otherDeductions, setOtherDeductions] = useState<string>("0");
+  // URL-synced inputs for shareable tax regime comparisons
+  const [grossIncome, setGrossIncome] = useUrlState<string>("inc", "1500000");
+  const [ageGroup, setAgeGroupRaw] = useUrlState<string>("age", "below60");
+  const [sec80C, setSec80C] = useUrlState<string>("c", "150000");
+  const [sec80D, setSec80D] = useUrlState<string>("d", "25000");
+  const [sec80CCD1B, setSec80CCD1B] = useUrlState<string>("nps", "0");
+  const [hraExemption, setHraExemption] = useUrlState<string>("hra", "0");
+  const [homeLoanInterest, setHomeLoanInterest] = useUrlState<string>("hl", "0");
+  const [otherDeductions, setOtherDeductions] = useUrlState<string>("oth", "0");
+  // ageGroup needs the AgeGroup literal type narrowing for switch logic
+  const setAgeGroup = (v: AgeGroup) => setAgeGroupRaw(v);
 
   const result = useMemo(() => {
     const inc = parseFloat(grossIncome);
@@ -211,7 +215,7 @@ export default function TaxRegimeComparator() {
       other: parseFloat(otherDeductions) || 0,
     };
 
-    const old = computeOldRegimeTax(inc, ageGroup, deds);
+    const old = computeOldRegimeTax(inc, ageGroup as AgeGroup, deds);
     const newR = computeNewRegimeTax(inc);
 
     const oldSurchargeRate = getSurchargeRate(old.taxableIncome, false);

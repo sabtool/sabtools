@@ -1,10 +1,12 @@
 "use client";
-import { useState, useMemo } from "react";
+import { useMemo } from "react";
+import { useUrlState } from "@/hooks/useUrlState";
 
 export default function SipCalculator() {
-  const [monthly, setMonthly] = useState(10000);
-  const [rate, setRate] = useState(12);
-  const [years, setYears] = useState(15);
+  // URL-synced state: ?m=&r=&y= for shareable calculations
+  const [monthly, setMonthly] = useUrlState("m", 10000);
+  const [rate, setRate] = useUrlState("r", 12);
+  const [years, setYears] = useUrlState("y", 15);
 
   const result = useMemo(() => {
     const p = monthly;

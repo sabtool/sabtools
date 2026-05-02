@@ -1,5 +1,6 @@
 "use client";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { useLiveGoldPrice } from "@/hooks/useLiveGoldPrice";
 
 /**
  * Sovereign Gold Bond (SGB) Returns Calculator
@@ -59,6 +60,16 @@ export default function SgbReturnsCalculator() {
   const [holdingYears, setHoldingYears] = useState<number>(STANDARD_TENURE_YEARS);
   const [originalSubscriber, setOriginalSubscriber] = useState<boolean>(true);
   const [slabRate, setSlabRate] = useState<number>(30);
+
+  // Auto-populate redemption price with today's live gold once on mount.
+  // User can still override (e.g. if they want to test a different scenario).
+  const { data: liveGold } = useLiveGoldPrice();
+  useEffect(() => {
+    if (liveGold?.isLive && redemptionPrice === 11_000) {
+      setRedemptionPrice(liveGold.price24K);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [liveGold]);
 
   const result = useMemo(() => {
     if (
@@ -207,9 +218,18 @@ export default function SgbReturnsCalculator() {
         <div>
           <label
             htmlFor="sgb-redeem"
-            className="text-sm font-semibold text-gray-700 block mb-2"
+            className="text-sm font-semibold text-gray-700 block mb-2 flex items-center gap-2"
           >
             Redemption Price per gram (₹)
+            {liveGold?.isLive && (
+              <span className="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+                </span>
+                LIVE
+              </span>
+            )}
           </label>
           <input
             id="sgb-redeem"

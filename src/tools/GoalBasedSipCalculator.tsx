@@ -1,5 +1,6 @@
 "use client";
-import { useState, useMemo } from "react";
+import { useMemo } from "react";
+import { useUrlState } from "@/hooks/useUrlState";
 
 /**
  * Goal-Based SIP Calculator (India)
@@ -44,11 +45,12 @@ Common India target benchmarks (planning purposes only):
 `;
 
 export default function GoalBasedSipCalculator() {
-  const [targetAmount, setTargetAmount] = useState<number>(10_000_000); // ₹1 Cr
-  const [years, setYears] = useState<number>(15);
-  const [annualReturn, setAnnualReturn] = useState<number>(12);
-  const [inflationRate, setInflationRate] = useState<number>(6);
-  const [adjustForInflation, setAdjustForInflation] = useState<boolean>(false);
+  // URL-synced inputs (?t=&y=&r=&i=&adj=)
+  const [targetAmount, setTargetAmount] = useUrlState("t", 10_000_000); // ₹1 Cr
+  const [years, setYears] = useUrlState("y", 15);
+  const [annualReturn, setAnnualReturn] = useUrlState("r", 12);
+  const [inflationRate, setInflationRate] = useUrlState("i", 6);
+  const [adjustForInflation, setAdjustForInflation] = useUrlState("adj", false);
 
   const result = useMemo(() => {
     if (targetAmount <= 0 || years <= 0 || annualReturn <= 0) return null;

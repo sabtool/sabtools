@@ -1,10 +1,12 @@
 "use client";
-import { useState, useMemo } from "react";
+import { useMemo } from "react";
+import { useUrlState } from "@/hooks/useUrlState";
 
 export default function GstCalculator() {
-  const [amount, setAmount] = useState("");
-  const [gstRate, setGstRate] = useState(18);
-  const [type, setType] = useState<"exclusive" | "inclusive">("exclusive");
+  // URL-synced state: ?a=&r=&t=
+  const [amount, setAmount] = useUrlState<string>("a", "");
+  const [gstRate, setGstRate] = useUrlState("r", 18);
+  const [type, setType] = useUrlState<string>("t", "exclusive");
 
   const result = useMemo(() => {
     const amt = parseFloat(amount);

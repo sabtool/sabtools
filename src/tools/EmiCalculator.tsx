@@ -1,10 +1,13 @@
 "use client";
-import { useState, useMemo } from "react";
+import { useMemo } from "react";
+import { useUrlState } from "@/hooks/useUrlState";
 
 export default function EmiCalculator() {
-  const [principal, setPrincipal] = useState(2500000);
-  const [rate, setRate] = useState(8.5);
-  const [tenure, setTenure] = useState(20);
+  // useUrlState replaces useState — same API, but inputs sync to URL
+  // (?p=&r=&t=) so calculations are shareable / bookmarkable.
+  const [principal, setPrincipal] = useUrlState("p", 2500000);
+  const [rate, setRate] = useUrlState("r", 8.5);
+  const [tenure, setTenure] = useUrlState("t", 20);
 
   const result = useMemo(() => {
     const p = principal;
