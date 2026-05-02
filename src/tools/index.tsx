@@ -208,6 +208,11 @@ const toolComponents: Record<string, AnyComponent> = {
   "emergency-fund-calculator": dynamic(() => import("./EmergencyFundCalculator")),
   "atal-pension-yojana-calculator": dynamic(() => import("./AtalPensionYojanaCalculator")),
   "section-54-exemption-calculator": dynamic(() => import("./Section54ExemptionCalculator")),
+  "professional-tax-calculator": dynamic(() => import("./ProfessionalTaxCalculator")),
+  "msme-eligibility-checker": dynamic(() => import("./MsmeEligibilityChecker")),
+  "bank-holidays-2026-calendar": dynamic(() => import("./BankHolidays2026Calendar")),
+  "nps-retirement-payout-calculator": dynamic(() => import("./NpsRetirementPayoutCalculator")),
+  "nsc-calculator": dynamic(() => import("./NscCalculator")),
 
   // Fun & Utility (10)
   "typing-speed-test": dynamic(() => import("./TypingSpeedTest")),
