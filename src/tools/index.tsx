@@ -198,6 +198,11 @@ const toolComponents: Record<string, AnyComponent> = {
   "tax-regime-comparator": dynamic(() => import("./TaxRegimeComparator")),
   "goal-based-sip-calculator": dynamic(() => import("./GoalBasedSipCalculator")),
   "lakh-crore-converter": dynamic(() => import("./LakhCroreConverter")),
+  "step-up-sip-calculator": dynamic(() => import("./StepUpSipCalculator")),
+  "tds-on-rent-calculator": dynamic(() => import("./TdsOnRentCalculator")),
+  "mahila-samman-calculator": dynamic(() => import("./MahilaSammanCalculator")),
+  "state-road-tax-calculator": dynamic(() => import("./StateRoadTaxCalculator")),
+  "bbmp-property-tax-calculator": dynamic(() => import("./BbmpPropertyTaxCalculator")),
 
   // Fun & Utility (10)
   "typing-speed-test": dynamic(() => import("./TypingSpeedTest")),
