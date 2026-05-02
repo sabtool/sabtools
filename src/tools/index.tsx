@@ -194,6 +194,10 @@ const toolComponents: Record<string, AnyComponent> = {
   "gold-price-calculator": dynamic(() => import("./GoldPriceCalculator")),
   "eighth-pay-commission-calculator": dynamic(() => import("./EighthPayCommissionCalculator")),
   "crypto-tax-calculator": dynamic(() => import("./CryptoTaxCalculator")),
+  "capital-gains-tax-calculator": dynamic(() => import("./CapitalGainsTaxCalculator")),
+  "tax-regime-comparator": dynamic(() => import("./TaxRegimeComparator")),
+  "goal-based-sip-calculator": dynamic(() => import("./GoalBasedSipCalculator")),
+  "lakh-crore-converter": dynamic(() => import("./LakhCroreConverter")),
 
   // Fun & Utility (10)
   "typing-speed-test": dynamic(() => import("./TypingSpeedTest")),
