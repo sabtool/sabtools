@@ -203,6 +203,11 @@ const toolComponents: Record<string, AnyComponent> = {
   "mahila-samman-calculator": dynamic(() => import("./MahilaSammanCalculator")),
   "state-road-tax-calculator": dynamic(() => import("./StateRoadTaxCalculator")),
   "bbmp-property-tax-calculator": dynamic(() => import("./BbmpPropertyTaxCalculator")),
+  "sgb-returns-calculator": dynamic(() => import("./SgbReturnsCalculator")),
+  "fire-number-calculator": dynamic(() => import("./FireNumberCalculator")),
+  "emergency-fund-calculator": dynamic(() => import("./EmergencyFundCalculator")),
+  "atal-pension-yojana-calculator": dynamic(() => import("./AtalPensionYojanaCalculator")),
+  "section-54-exemption-calculator": dynamic(() => import("./Section54ExemptionCalculator")),
 
   // Fun & Utility (10)
   "typing-speed-test": dynamic(() => import("./TypingSpeedTest")),
