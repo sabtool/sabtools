@@ -22407,6 +22407,169 @@ The RBI has reduced the repo rate to 5.25% as of 5 December 2025, and if you hav
 <p>Urea, DAP, and MOP attract 5% GST built into the MRP. If you're invoicing inputs through a registered agri-business, run the breakup through the <a href="/tools/gst-calculator">GST calculator</a> to back out the taxable value cleanly for your books.</p>
 
 <p>Open the <a href="/tools/fertilizer-calculator">Fertilizer Calculator</a>, enter your crop, area in acres or hectares, and your soil test status if you have it — you'll have your bag-by-bag order list and split schedule in under thirty seconds.</p>`,
+  },
+  {
+    slug: "capital-gains-tax-calculator-comparison-2026",
+    title: "Capital Gains Tax Calculator Comparison 2026: Which Free Tool Wins for Indian Users?",
+    description: "Honest comparison of free Capital Gains Tax Calculator options in India for 2026 — features, accuracy, privacy, signup requirements. Picks the best for Indian u",
+    date: "2026-05-02",
+    category: "Tax & Salary",
+    readTime: "10 min read",
+    keywords: ["capital gains tax calculator", "ltcg calculator india", "stcg calculator", "section 111a", "section 112a", "section 112", "ltcg 12.5%", "stcg 20%", "best capital gains tax calculator india", "capital gains tax calculator comparison"],
+    toolSlug: "capital-gains-tax-calculator",
+    image: {
+      src: "/blog/capital-gains-tax-calculator.webp",
+      alt: "Capital Gains Tax Calculator comparison — SabTools vs other free Indian tools (2026)",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>The actual decision: which capital gains calculator handles post-Budget 2024 rates correctly?</h2>
+
+<p>If you sold equity shares, redeemed mutual fund units, exited a property, or liquidated gold this financial year, you're trying to answer one specific question: <strong>how much tax do I owe on these gains for FY 2025-26?</strong> The answer changed materially after Budget 2024 — STCG on equity jumped to 20% under Section 111A, LTCG under Section 112A is now 12.5% with a ₹1.25 lakh exemption, and property sellers got a choice between 12.5% without indexation or 20% with indexation (for assets acquired before 23 July 2024).</p>
+
+<p><strong>Quick verdict:</strong> For a fast, browser-only calculation across asset types with the new rates already baked in, SabTools' <a href="/tools/capital-gains-tax-calculator">Capital Gains Tax Calculator</a> is the cleanest choice — no signup, no upsell pop-up, instant results. <a href="https://tools.quicko.com/capital-gains-tax-calculator/" rel="noopener" target="_blank">Quicko</a> is the strongest competitor for active equity traders who want gains tied to broker imports. <a href="https://cleartax.in/" rel="noopener" target="_blank">ClearTax</a> wins if you need a deeply explained walkthrough but expect signup gates and filing-tier prompts. <a href="https://tax2win.in/" rel="noopener" target="_blank">Tax2win</a> sits in the middle, useful but pushes CA-assisted filing.</p>
+
+<p>The rest of this post gets specific: same scenario fed into each calculator, where each one wins, and where the trade-offs hide.</p>
+
+<h2>What "capital gains tax calculator" actually needs to handle in 2026</h2>
+
+<p>A capital gains calculator is only useful if it knows the rules for your asset class. Post-Budget 2024, the rule set looks like this:</p>
+
+<ul>
+  <li><strong>Listed equity & equity mutual funds (Section 111A / 112A):</strong> STCG (held ≤12 months) taxed at <strong>20%</strong>. LTCG (held >12 months) taxed at <strong>12.5%</strong> on gains above the ₹1,25,000 annual exemption.</li>
+  <li><strong>Debt mutual funds (purchased after 1 April 2023):</strong> Taxed at slab rate regardless of holding period — no indexation, no LTCG benefit.</li>
+  <li><strong>Property / real estate (Section 112):</strong> LTCG threshold is 24 months. Tax is <strong>12.5% without indexation</strong>. For properties acquired before 23 July 2024, sellers can choose 20% with indexation if it produces lower tax.</li>
+  <li><strong>Gold, unlisted shares, debentures:</strong> 24-month threshold, LTCG at 12.5% without indexation.</li>
+  <li><strong>Surcharge & cess:</strong> 4% Health & Education cess applies on top, plus surcharge if total income crosses ₹50L / ₹1Cr / ₹2Cr / ₹5Cr brackets.</li>
+</ul>
+
+<p>If a calculator doesn't ask which asset class, when you bought, when you sold, and (for old property) which method you want to compare — it's giving you a guess. That filter alone eliminates a lot of generic tools.</p>
+
+<h2>Side-by-side: same scenarios across SabTools, ClearTax, Tax2win and Quicko</h2>
+
+<p>Let's run three real scenarios through each.</p>
+
+<h3>Scenario 1: Riya's equity portfolio (LTCG, Section 112A)</h3>
+
+<p>Riya, a Bangalore SaaS engineer, sold listed equity in October 2025 — bought for ₹4,00,000 in 2022, sold for ₹7,50,000. Holding period: 38 months → LTCG.</p>
+
+<ul>
+  <li><strong>Gain:</strong> ₹3,50,000</li>
+  <li><strong>Less ₹1,25,000 exemption (Section 112A):</strong> Taxable LTCG = ₹2,25,000</li>
+  <li><strong>Tax @ 12.5%:</strong> ₹28,125</li>
+  <li><strong>Plus 4% cess:</strong> ₹1,125 → Total ₹29,250</li>
+</ul>
+
+<p>SabTools' <a href="/tools/capital-gains-tax-calculator">Capital Gains Tax Calculator</a> returns this in one screen — pick "Listed Equity / Equity MF", enter dates and amounts, see the exemption applied. <a href="https://tools.quicko.com/capital-gains-tax-calculator/" rel="noopener" target="_blank">Quicko's calculator</a> arrives at the same ₹29,250 and additionally lets you import broker statements (useful if you have 50+ trades). ClearTax handles it correctly inside its filing flow but the standalone calculator nudges you toward signing up to "save your computation".</p>
+
+<h3>Scenario 2: Arjun's Pune flat (property LTCG, choice of methods)</h3>
+
+<p>Arjun bought a 2BHK in Hinjewadi in March 2018 for ₹62,00,000 (stamp duty + registration: ₹3,72,000, total cost ₹65,72,000). He sold in July 2025 for ₹1,05,00,000. Brokerage: ₹1,05,000.</p>
+
+<p>Because the asset was acquired before 23 July 2024, Arjun gets to compare:</p>
+
+<ul>
+  <li><strong>Method A — 12.5% without indexation:</strong> Net gain ≈ ₹38,23,000 → tax ≈ <strong>₹4,77,875</strong> (+ cess)</li>
+  <li><strong>Method B — 20% with indexation:</strong> Indexed cost (CII 2024-25 = 363, CII 2017-18 = 272) ≈ ₹87,69,000 → indexed gain ≈ ₹16,26,000 → tax ≈ <strong>₹3,25,200</strong> (+ cess)</li>
+</ul>
+
+<p>Method B saves Arjun ~₹1.5L. SabTools shows both methods side-by-side and highlights which produces lower tax — exactly the comparison the law gives you the right to make. Quicko handles property LTCG well but its primary UX is built for stocks; the property module asks for the same inputs but doesn't always foreground the dual-method comparison. ClearTax's <a href="https://cleartax.in/" rel="noopener" target="_blank">main tax site</a> has good explainer content on the choice but the standalone property gains calculator is buried inside their filing product.</p>
+
+<h3>Scenario 3: Meera's gold sale</h3>
+
+<p>Meera sold 80g of 22K gold in February 2026 that she'd inherited (cost basis = FMV on date of inheritance, March 2019: ₹2,40,000). Sale value: ₹6,40,000.</p>
+
+<ul>
+  <li><strong>Holding period:</strong> >24 months → LTCG</li>
+  <li><strong>Gain:</strong> ₹4,00,000</li>
+  <li><strong>Tax @ 12.5% (no indexation, post-23 July 2024):</strong> ₹50,000 + 4% cess = ₹52,000</li>
+</ul>
+
+<p>SabTools handles this in the "Gold / Other LTCG" path. None of the competitor calculators got this materially wrong, but Tax2win and ClearTax kept prompting "Want a CA to file this for you?" mid-calculation, which is irritating when you just want a number. If you cross-reference the gold value, SabTools' <a href="/tools/gold-price-calculator">Gold Price Calculator</a> can sanity-check the sale figure against current 22K/24K rates before you compute the tax.</p>
+
+<h2>Where each calculator genuinely wins</h2>
+
+<h3>ClearTax wins on regulatory depth</h3>
+
+<p><a href="https://cleartax.in/" rel="noopener" target="_blank">ClearTax</a> is the most authoritative tax brand in India and it shows in their explainer content. If you're trying to <em>understand</em> Section 111A vs 112A vs 112 — not just compute — their long-form articles next to the calculator are well-edited and updated. Their <a href="https://cleartax.in/paytax/TaxCalculator" rel="noopener" target="_blank">Income Tax Calculator</a> integrates capital gains into your overall tax position, which is genuinely useful at filing time. The trade-off is the constant push toward their paid filing tiers and the email gate when you want to save or download a computation.</p>
+
+<h3>Quicko wins on trader workflows</h3>
+
+<p><a href="https://quicko.com/" rel="noopener" target="_blank">Quicko</a> was built around stocks and F&O traders. Their <a href="https://tools.quicko.com/capital-gains-tax-calculator/" rel="noopener" target="_blank">Capital Gains Tax Calculator</a> handles per-trade granularity, Zerodha/Upstox tax P&L imports, and intraday vs delivery treatment. If you have a few hundred trades a year and need to reconcile broker P&L statements, Quicko is a strong specialist tool. For a single sale or a handful of transactions, it's overkill.</p>
+
+<h3>Tax2win wins on assisted filing pipeline</h3>
+
+<p><a href="https://tax2win.in/" rel="noopener" target="_blank">Tax2win</a>'s strength isn't really the calculator — their <a href="https://tax2win.in/tax-calculator" rel="noopener" target="_blank">Income Tax Calculator</a> is competent but not differentiated. Where they help is the handoff: compute → talk to a CA → get returns filed. If you actually want a paid expert in the loop, their funnel is smoother than ClearTax's.</p>
+
+<h3>SabTools wins on speed, privacy and zero friction</h3>
+
+<p>The SabTools <a href="/tools/capital-gains-tax-calculator">Capital Gains Tax Calculator</a> is built for one job: enter your transaction details, get the right number under FY 2025-26 rules, move on. Specifically:</p>
+
+<ul>
+  <li><strong>Browser-only computation</strong> — your purchase/sale figures never leave your device. Useful when the numbers are sensitive (a property sale, a big equity exit) and you'd rather not paste them into a logged-in account.</li>
+  <li><strong>No signup, no email gate</strong> — no "create an account to save your result" wall.</li>
+  <li><strong>Indian formatting</strong> — lakhs and crores, ₹ symbol, Indian comma grouping. ₹1,05,00,000 displays correctly, not as 10,500,000.</li>
+  <li><strong>Dual-method property comparison</strong> — for pre-23-July-2024 assets, both 12.5% and 20%+indexation are shown in one view.</li>
+  <li><strong>No ad walls on the tool itself</strong> — guide articles carry ads, the calculator doesn't.</li>
+</ul>
+
+<p>None of this means ClearTax or Quicko are bad. It means SabTools is optimised for a different reader: someone who wants a fast, accurate number without a tax-platform relationship.</p>
+
+<h2>Pricing, signups, and the friction tax</h2>
+
+<p>All four calculators are technically free to use. The differences are in what each platform asks of you.</p>
+
+<table>
+  <tr><th>Tool</th><th>Signup required?</th><th>Upsell during use?</th><th>Save/export</th></tr>
+  <tr><td>SabTools</td><td>No</td><td>None</td><td>Free download/print</td></tr>
+  <tr><td>ClearTax</td><td>For saving results</td><td>Filing tiers prompted</td><td>Behind email gate</td></tr>
+  <tr><td>Tax2win</td><td>For saving / CA chat</td><td>CA-assisted filing</td><td>Behind email gate</td></tr>
+  <tr><td>Quicko</td><td>For broker import</td><td>Filing/advisory plans</td><td>Account-bound</td></tr>
+</table>
+
+<p>For a one-off computation — say, you sold one property this year and want to know your tax outflow before you file — SabTools' zero-friction model is the lowest-effort path. For ongoing portfolio reconciliation across hundreds of equity trades, Quicko's account-bound import is worth the signup.</p>
+
+<h2>Privacy and how your data is handled</h2>
+
+<p>Capital gains data is sensitive — sale proceeds reveal net worth, property exits reveal addresses, equity P&L reveals positions. The four tools handle this differently:</p>
+
+<ul>
+  <li><strong>SabTools:</strong> Calculations run client-side in JavaScript. The numbers you enter aren't transmitted to a server, aren't stored against an account, and aren't tied to a profile.</li>
+  <li><strong>ClearTax, Tax2win, Quicko:</strong> All three are full tax-filing platforms. Even when you use only the calculator, you're on their domain with analytics, and any "save" action ties data to an account. This isn't sinister — it's how SaaS works — but it's worth knowing.</li>
+</ul>
+
+<p>If you're computing capital gains on, say, a ₹3Cr property sale, the privacy difference is meaningful. If you're working out tax on a ₹40,000 mutual fund redemption, less so.</p>
+
+<h2>The Section 54 / 54F angle most calculators skip</h2>
+
+<p>If you sold a property or other long-term asset, your tax bill isn't final until you've considered <strong>Section 54</strong> (reinvest in another residential house) or <strong>Section 54F</strong> (sell other LTCG asset and buy a residential house). Post-Budget 2024, both exemptions are capped at ₹10 crore.</p>
+
+<p>Most generic capital gains calculators stop at "here's your LTCG tax". SabTools pairs the capital gains tool with a dedicated <a href="/tools/section-54-exemption-calculator">Section 54 / 54F Exemption Calculator</a> so Arjun (from Scenario 2) can model what happens if he reinvests ₹40L of his ₹38L gain into a new flat — exempting the entire gain. ClearTax discusses Sections 54/54F in articles, but doesn't have a focused interactive calculator at the same depth.</p>
+
+<h2>Common mistakes the calculators won't catch for you</h2>
+
+<p>Even the best calculator computes what you give it. A few things to verify yourself:</p>
+
+<ol>
+  <li><strong>Holding period start date:</strong> For inherited assets, holding period runs from the original purchaser's date, not the inheritance date — but the cost basis becomes the FMV the previous owner paid.</li>
+  <li><strong>Cost of improvement:</strong> For property, you can add genuine capital improvements (not repairs) to cost basis. Calculators give you a field; whether you use it correctly is on you.</li>
+  <li><strong>Brokerage and STT:</strong> Brokerage is deductible from sale value. STT is not deductible for equity LTCG/STCG under 111A/112A — different rule from regular capital gains.</li>
+  <li><strong>Set-off of losses:</strong> STCL can offset both STCG and LTCG; LTCL only offsets LTCG. A single-transaction calculator won't set this off — you do it at filing.</li>
+  <li><strong>Surcharge cliffs:</strong> If your total income (including LTCG) tips over ₹50L, ₹1Cr, ₹2Cr, surcharge applies. Capital gains calculators usually compute the headline rate; surcharge is best handled in a full income-tax calculator.</li>
+</ol>
+
+<h2>Bottom line: when to pick which</h2>
+
+<ul>
+  <li><strong>Pick SabTools' <a href="/tools/capital-gains-tax-calculator">Capital Gains Tax Calculator</a> if</strong> you want a fast, accurate FY 2025-26 number across asset classes without creating an account, especially for property's dual-method comparison. Pair it with the <a href="/tools/section-54-exemption-calculator">Section 54/54F calculator</a> if reinvesting.</li>
+  <li><strong>Pick <a href="https://tools.quicko.com/capital-gains-tax-calculator/" rel="noopener" target="_blank">Quicko</a> if</strong> you're an active trader with broker statements to reconcile and you're already going to file through them.</li>
+  <li><strong>Pick <a href="https://cleartax.in/paytax/TaxCalculator" rel="noopener" target="_blank">ClearTax</a> if</strong> you want long-form regulatory explainers alongside the math and you don't mind the signup for saved results.</li>
+  <li><strong>Pick <a href="https://tax2win.in/" rel="noopener" target="_blank">Tax2win</a> if</strong> you intend to engage a CA for assisted filing and want a smooth handoff from calculation to consultation.</li>
+</ul>
+
+<p>For most people computing one or two transactions before they file ITR-2, the friction-free path wins. While you're at it, the related <a href="/tools/sip-calculator">SIP Calculator</a>, <a href="/tools/epf-calculator">EPF Calculator</a> and <a href="/tools/bank-holidays-2026-calendar">RBI Bank Holidays 2026 Calendar</a> are useful for tax-planning the rest of FY 2025-26 — when's the last working day to invest before 31 March, what's your projected EPF maturity, what does a fresh SIP do to your tax saving.</p>
+
+<p>Try SabTools' <a href="/tools/capital-gains-tax-calculator">Capital Gains Tax Calculator →</a> and get your FY 2025-26 number in under a minute.</p>`,
   }
 ];
 

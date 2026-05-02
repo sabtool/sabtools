@@ -140,9 +140,10 @@
     "pregnancy-calculator",
     "website-ssl-checker",
     "epf-calculator",
-    "fertilizer-calculator"
+    "fertilizer-calculator",
+    "capital-gains-tax-calculator"
   ],
-  "lastCategory": "agriculture",
-  "totalPosts": 141,
-  "lastRun": "2026-05-02T09:39:46.626Z"
+  "lastCategory": "tax",
+  "totalPosts": 142,
+  "lastRun": "2026-05-02T12:58:16.184Z"
 }
