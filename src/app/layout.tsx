@@ -6,7 +6,6 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import InstallPrompt from "@/components/InstallPrompt";
 import SuggestTool from "@/components/SuggestTool";
 import AskSabTools from "@/components/AskSabTools";
-import RecentCalculations from "@/components/RecentCalculations";
 import KeyboardShortcuts from "@/components/KeyboardShortcuts";
 import BackToTop from "@/components/BackToTop";
 import ReadingProgress from "@/components/ReadingProgress";
@@ -185,7 +184,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <InstallPrompt />
         <SuggestTool />
         <AskSabTools />
-        <RecentCalculations />
         <KeyboardShortcuts />
         <BackToTop />
         <ReadingProgress />
