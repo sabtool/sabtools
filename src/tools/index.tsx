@@ -213,6 +213,11 @@ const toolComponents: Record<string, AnyComponent> = {
   "bank-holidays-2026-calendar": dynamic(() => import("./BankHolidays2026Calendar")),
   "nps-retirement-payout-calculator": dynamic(() => import("./NpsRetirementPayoutCalculator")),
   "nsc-calculator": dynamic(() => import("./NscCalculator")),
+  "hra-vs-80gg-calculator": dynamic(() => import("./HraVs80ggCalculator")),
+  "kvp-calculator": dynamic(() => import("./KvpCalculator")),
+  "scss-calculator": dynamic(() => import("./ScssCalculator")),
+  "tax-saving-fd-vs-elss-calculator": dynamic(() => import("./TaxSavingFdVsElssCalculator")),
+  "stp-calculator": dynamic(() => import("./StpCalculator")),
 
   // Fun & Utility (10)
   "typing-speed-test": dynamic(() => import("./TypingSpeedTest")),
