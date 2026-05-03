@@ -22799,6 +22799,151 @@ A cumulative 125 basis points
 <p>That said, "cheaper" is not the same as "cheap." A 10.05% personal loan still costs more than a top-up home loan, a gold loan, or a loan against securities. Personal loans should be the third or fourth option in your funding stack, not the first. And whichever lender you choose — SBI, HDFC, Bajaj Finserv, or someone else — the discipline of running the EMI numbers, comparing total cost over tenure, and matching the loan structure to your actual cash flow is what separates borrowing that builds your financial position from borrowing that erodes it.</p>
 
 <p>Compare offer letters, not advertisements. Ask for written quotes from at least two lenders. Read the prepayment clause before you sign. And if the rate the relationship manager actually offers you is more than 150 basis points above the "starting from" headline, walk away — there's almost certainly a better deal one branch over.</p>`,
+  },
+  {
+    slug: "notice-period-calculator-guide-2026",
+    title: "Free Notice Period Calculator Online — No Signup Required | SabTools",
+    description: "Calculate last working day, days remaining and notice period buyout amount with calendar view. Use our free notice period calculator with no signup. Instant ...",
+    date: "2026-05-03",
+    category: "Career",
+    readTime: "12 min read",
+    keywords: ["notice period", "last working day", "buyout", "resignation", "joining date", "notice period calculator", "notice period calculator gov", "notice period calculator uk"],
+    toolSlug: "notice-period-calculator",
+    image: {
+      src: "/blog/notice-period-calculator.webp",
+      alt: "Notice Period Calculator — Free Online Calculate last working day, days remaining and notice period buyout amount with calendar view Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>You've signed the offer letter from the new company. Joining date: 15 January. Current employer says notice period is 90 days. You did the maths in your head and panicked — that's roughly three months of overlap, hostel-style packing, and a buyout conversation nobody likes. The first thing your HR will ask is: <em>"What's your last working day, and how much do you want to buy out?"</em> If you can't answer that on the spot — with a date and a rupee figure — you've already lost the negotiation.</p>
+
+<p>The Notice Period Calculator on SabTools.in solves exactly this. Punch in your resignation date, your notice period in days, and your monthly salary. It returns your <strong>last working day</strong>, the exact number of days remaining, the buyout amount if you want to leave earlier, and a calendar view so you can see weekends, holidays, and the handover window. No spreadsheet juggling, no counting on fingers across February (which always trips people up).</p>
+
+<h2>Why notice period maths is harder than it looks</h2>
+
+<p>Indian employment contracts vary wildly. A product manager at Infosys in Bangalore typically signs a 90-day notice. A junior developer at a Gurgaon startup may have only 30 days. Mid-level roles at HDFC Bank, ICICI Bank, and most BFSI employers sit at 60-90 days. Tier-1 IT services — TCS, Wipro, Tech Mahindra, Cognizant — almost always insist on 90, with 60-day buyout caps in some grades. Manufacturing, FMCG, and consulting firms often allow 30-60 days but enforce them more flexibly.</p>
+
+<p>The Shops and Establishments Act of most states (Maharashtra, Karnataka, Tamil Nadu, Telangana) sets a minimum of 30 days notice for confirmed employees, but your appointment letter overrides this upward. The Industrial Disputes Act applies only to "workmen", not most white-collar staff. So the contract you signed is what binds you — and inside that contract, the notice period clause usually reads something like: <em>"Either party may terminate by giving 90 days' written notice or salary in lieu of unserved notice period."</em></p>
+
+<p>That phrase — "salary in lieu" — is where buyout maths starts. And here's where most people make their first mistake: they assume "salary" means CTC. It usually doesn't.</p>
+
+<h2>How to calculate your last working day</h2>
+
+<p>The arithmetic is straightforward but error-prone, especially around month-ends. If you submit your resignation on <strong>15 October 2025</strong> and your notice period is 60 days, your last working day is <strong>14 December 2025</strong> — not 15 December. Day 1 of notice is the day after you resign. The calculator handles this off-by-one cleanly so you don't end up arguing with HR over a single day of leave encashment.</p>
+
+<p>Real example. Arjun, a senior software engineer in Hyderabad, resigns on <strong>3 November 2025</strong> with a 90-day clause. The calculator returns his LWD as <strong>1 February 2026</strong>. He cross-checks against his calendar: 27 days of November + 31 of December + 31 of January + 1 of February = 90 days. Correct. Now he negotiates. The new employer wants him onboard by <strong>5 January 2026</strong>. That leaves <strong>27 days of unserved notice</strong> (5 Jan to 1 Feb). He needs a buyout figure for those 27 days.</p>
+
+<p>If you're juggling multiple offer dates and trying to figure out which timeline saves you the most stress, plug each scenario into the calculator separately. Reading dates off a screen is far less risky than counting weeks on a wall calendar in February (which has 28 days, and 29 in leap years like 2028).</p>
+
+<h2>The buyout formula employers actually use</h2>
+
+<p>Most Indian companies calculate buyout on one of three bases. You need to know which one your offer letter specifies before you negotiate.</p>
+
+<ol>
+  <li><strong>Basic salary only</strong> — Used by older PSUs, some MNCs, and many manufacturing firms. If your basic is ₹40,000/month and you owe 30 unserved days, buyout = ₹40,000.</li>
+  <li><strong>Gross monthly salary</strong> — The most common in IT/ITES. Includes basic + HRA + special allowance + fixed bonuses, but excludes variable pay and reimbursements. For a ₹15L CTC, gross monthly is typically around ₹1,05,000-₹1,10,000.</li>
+  <li><strong>Full CTC pro-rated</strong> — The harshest. Includes everything: gratuity, employer PF contribution, insurance premium. For ₹15L CTC, this is ₹1,25,000/month. Some product companies and consulting firms use this.</li>
+</ol>
+
+<p>Worked example. Priya in Pune earns <strong>₹18L CTC</strong>, with monthly gross of ₹1,20,000 and basic of ₹50,000. She has 45 days of unserved notice. Her buyout depends entirely on the contract:</p>
+
+<ul>
+  <li>Basic-only buyout: ₹50,000 × (45/30) = <strong>₹75,000</strong></li>
+  <li>Gross monthly buyout: ₹1,20,000 × (45/30) = <strong>₹1,80,000</strong></li>
+  <li>Full CTC buyout: ₹1,50,000 × (45/30) = <strong>₹2,25,000</strong></li>
+</ul>
+
+<p>That's a ₹1,50,000 swing depending on which clause she signed. Always re-read your appointment letter before quoting a number — the calculator gives you the daily rate; the contract tells you which daily rate applies. If you want to first verify what your gross monthly actually looks like after deductions, run your CTC through the <a href="/tools/in-hand-salary-calculator">in-hand salary calculator</a> to see the breakdown of basic, HRA, PF, and tax — that's the figure HR will use to back-calculate buyout.</p>
+
+<h2>Who pays the buyout — and when the new employer should</h2>
+
+<p>This is the negotiation that decides whether your switch is profitable. Three patterns dominate the Indian market:</p>
+
+<p><strong>1. New employer reimburses fully.</strong> Common when you're being hired into a senior role, niche skillset (cloud architect, data science lead, SAP consultant), or when the new company is desperate to close. Companies like Flipkart, Razorpay, Swiggy, and most Series B+ startups will absorb buyouts up to ₹3-4L for the right candidate. Get this in writing as a "joining bonus" or "notice buyout reimbursement" clause in your offer letter.</p>
+
+<p><strong>2. Split arrangement.</strong> The new employer pays 50% upfront as a sign-on bonus, you pay the rest. Or they reimburse against a 12-24 month service bond — leave before the bond ends and you repay. Read this clause carefully; some bonds compound interest at 12-15% if you exit early.</p>
+
+<p><strong>3. You eat the cost.</strong> Lateral moves at the same level, internal-industry switches, or cases where the hike is already strong (40%+) typically mean you absorb the buyout. If the hike justifies it, the maths still works. Use the <a href="/tools/appraisal-hike-calculator">hike calculator</a> to figure out how many months it takes to recover a ₹2L buyout from a ₹4L annual hike — usually 5-6 months including tax.</p>
+
+<p>Practical tip: never mention the buyout figure to the new HR until they've made a verbal offer. Mention it before, and they'll quietly trim the joining bonus by exactly that amount.</p>
+
+<h2>The hidden costs people forget</h2>
+
+<p>Buyout isn't the only money on the table when you exit. Run through this checklist before you finalise your last working day:</p>
+
+<ul>
+  <li><strong>Leave encashment</strong> — Earned leave (typically 18-30 days/year) gets paid out at basic + DA. If you have 22 days of EL and basic is ₹50,000, that's ₹36,667 added to your final settlement (₹50,000 ÷ 30 × 22).</li>
+  <li><strong>Gratuity</strong> — Payable only if you complete 4 years 240 days. The formula is (Last drawn basic × 15 × years of service) ÷ 26. Quit at 4 years 6 months and you may get nothing; quit at 4 years 240 days and you walk with ~2.6 months of basic. Time your resignation accordingly.</li>
+  <li><strong>Variable pay / bonus</strong> — Most companies forfeit unpaid annual bonuses if you serve notice during the bonus payout cycle. If your appraisal cycle ends in March and bonus pays out in May, resigning in February could cost you ₹1.5-3L depending on your band.</li>
+  <li><strong>Stock options / RSUs</strong> — Unvested ESOPs lapse on your last working day. Vested but unexercised options usually get a 90-day exercise window post-LWD. Check the option agreement.</li>
+  <li><strong>Notice period leave policy</strong> — Many companies disallow leave during notice. If you've planned a Goa trip in December and resign in November, you'll either lose those leaves or extend your LWD.</li>
+</ul>
+
+<p>The calendar view in the calculator is useful here — you can spot whether your LWD falls just before or after a bonus payout, a quarter-end, or a vesting cliff. A two-week shift in resignation date can be worth lakhs.</p>
+
+<h2>Negotiating notice period reduction</h2>
+
+<p>Most Indian managers will negotiate notice down if you ask cleanly. Useful tactics:</p>
+
+<ul>
+  <li><strong>Use accumulated leave to offset notice.</strong> If your contract allows, 20 days of EL can reduce a 90-day notice to 70 days served. Some companies allow up to 50% offset; others don't allow any. Ask in writing.</li>
+  <li><strong>Offer to complete a specific deliverable.</strong> "I'll close the Mumbai client onboarding by 20 December and exit on 31 December" is a far stronger ask than "Can I leave early?". Tie reduction to value delivered.</li>
+  <li><strong>Partial buyout + partial serve.</strong> Serve 60 of 90 days, buy out the remaining 30. Splits the cost and shows good faith.</li>
+  <li><strong>Garden leave for senior roles.</strong> Director-and-above sometimes get sent on garden leave (paid, not working) — useful if you're worried about IP/non-compete clauses.</li>
+</ul>
+
+<p>One non-obvious point: HR's stated buyout policy is often more flexible than the appointment letter suggests. The letter says "salary in lieu", but practice may be "basic in lieu" because the company doesn't want to fight every exit. Ask peers who've recently exited what they actually paid.</p>
+
+<h2>Walking through the calculator</h2>
+
+<p>Three inputs, four outputs. Here's how to use them with real numbers.</p>
+
+<p><strong>Inputs:</strong></p>
+<ol>
+  <li>Resignation date — the day you formally email HR (not the day you tell your manager).</li>
+  <li>Notice period in days — pull this from your appointment letter, not from rumour. 30, 60, 90 are the common values.</li>
+  <li>Monthly salary — use whichever basis your contract specifies (basic, gross, or CTC/12).</li>
+</ol>
+
+<p><strong>Outputs:</strong></p>
+<ul>
+  <li>Last working day — the date you stop being an employee.</li>
+  <li>Days remaining from today — useful as a countdown when you're mid-notice.</li>
+  <li>Buyout amount per day — multiply by unserved days for any negotiation scenario.</li>
+  <li>Calendar view — visually spot weekends, holidays, and milestone dates inside your notice window.</li>
+
+</ul>
+
+<p>Quick scenario. Rohan, a marketing manager in Gurgaon, gets an offer from a Bengaluru fintech with a ₹6L hike. New joining date: <strong>1 February 2026</strong>. Current notice: 60 days. He resigns on <strong>10 December 2025</strong>. Calculator says LWD = <strong>8 February 2026</strong>. He needs to leave 8 days earlier. His gross monthly is ₹1,40,000 → daily rate ₹4,667 → 8-day buyout = <strong>₹37,333</strong>. He asks the new employer for a ₹40K joining bonus to cover it. Approved. Total cost to switch: zero. Total upside: ₹6L hike. That's the kind of calculation you want to run before any conversation, not during.</p>
+
+<h2>While you're job switching: parallel tools to use</h2>
+
+<p>Notice period planning sits inside a larger switch workflow. Three calculations usually run alongside it:</p>
+
+<ul>
+  <li>If you're updating your CV before applying, the <a href="/tools/resume-builder">resume builder</a> gives you Classic, Modern, and Creative templates with print-ready output — most Indian recruiters still prefer single-page Classic for 0-5 years experience and two-page Modern for senior roles.</li>
+  <li>To benchmark whether the new offer is actually competitive, run the numbers through the <a href="/tools/salary-comparison-tool">salary comparison tool</a> — a ₹22L offer in Bangalore is genuinely better than ₹24L in Mumbai once you adjust for rent and living costs.</li>
+  <li>Your existing employer may sweeten with a counter-offer; calculating the percentage hike accurately on a varying base is easier with the <a href="/tools/percentage-calculator">percentage calculator</a> than mental maths.</li>
+  <li>Once your joining bonus and first month's salary land, parking the lump sum into a <a href="/tools/sip-calculator">monthly SIP</a> is the simplest way to convert switch-windfall into long-term wealth — even ₹15,000/month for 20 years at 12% returns becomes ₹1.5 crore.</li>
+</ul>
+
+<h2>Common questions Indian employees ask</h2>
+
+<h3>Can my employer refuse to accept my resignation?</h3>
+<p>No. Resignation is a unilateral act. Your employer can refuse to relieve you early, demand full notice, or claim buyout — but they cannot force you to keep working beyond the notice period. If they withhold your relieving letter or experience certificate, you have recourse through the labour commissioner or a civil suit; in practice, most cases settle once a legal notice is sent.</p>
+
+<h3>Is notice period buyout taxable?</h3>
+<p>The amount you pay as buyout is deducted from your final salary, so it reduces your taxable income that year. Conversely, if your new employer reimburses the buyout as a joining bonus, that <em>is</em> taxable as salary in the year of receipt. Plan accordingly — a ₹2L joining bonus in March pushes that year's tax up by ₹60-65K at the 30% slab.</p>
+
+<h3>What if I'm on probation?</h3>
+<p>Probation notice is almost always shorter — typically 15-30 days, sometimes just 7. Check your offer letter. The calculator works the same way; just enter the shorter notice value.</p>
+
+<h3>Does the calculator handle UK or government notice rules?</h3>
+<p>The tool is calibrated for Indian private-sector contracts. UK notice (statutory minimum 1 week per year of service, capped at 12) and Indian government service rules (CCS Conduct Rules — typically 3 months, with surrender of leave salary in lieu) follow different formulas. For Indian central government employees, the buyout-equivalent is governed by FR 56 and pension rules, not contract law. Use this calculator only for private-sector roles.</p>
+
+<p>The most common mistake is leaving the buyout conversation until your manager pushes for a specific exit date. By then, you're negotiating defensively. Run your numbers first, know your daily rate, know your LWD, and walk into the HR meeting with a printed page that shows you've done the maths.</p>
+
+<p><a href="/tools/notice-period-calculator">Open the Notice Period Calculator with your resignation date and salary →</a></p>`,
   }
 ];
 
