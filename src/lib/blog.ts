@@ -23120,6 +23120,177 @@ A cumulative 125 basis points
 <p>Yes. Copy the generated CSS into your custom utility layer, or translate the values into Tailwind's <code>backdrop-blur-*</code>, <code>bg-white/25</code>, and <code>border-white/20</code> arbitrary-value classes. SabTools outputs raw CSS, so it's framework-agnostic.</p>
 
 <p>Ready to skip the trial-and-error tweaking? <strong>Try SabTools' <a href="/tools/glassmorphism-generator">Glassmorphism Generator</a> →</strong></p>`,
+  },
+  {
+    slug: "news-2026-05-03-old-vs-new-tax-regime-recent-comparison-for-different-income",
+    title: "Old vs New tax regime — recent comparison for different income brac... (2026 Update)",
+    description: "Old vs New tax regime — recent comparison for different income brackets — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-05-03",
+    category: "Tax & Salary",
+    readTime: "11 min read",
+    keywords: ["Old vs New tax", "tax news india 2026", "india 2026 update"],
+    toolSlug: "income-tax-calculator",
+    image: {
+      src: "/blog/income-tax-calculator.webp",
+      alt: "Old vs New tax regime — recent comparison for different income brac... (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>The default regime keeps gaining ground — but the old regime isn't dead yet</h2>
+
+<p>For the first time since the new tax regime was introduced under Section 115BAC, a meaningful share of India's salaried middle class will pay literally zero income tax in FY 2025-26. <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2098406&reg=3&lang=2" rel="noopener" target="_blank">According to the Press Information Bureau release dated February 1, 2025</a>, 
+
+Finance Minister Nirmala Sitharaman announced that there will be no income tax payable up to an income of ₹12 lakh under the new regime, which she described as an average income of ₹1 lakh per month other than special-rate income such as capital gains
+
+.</p>
+
+<p>That single change has rewritten the old-vs-new comparison. For households earning up to roughly ₹13 lakh, the new regime is now almost always the better option — even if you have a home loan, an LIC policy and a maxed-out PPF. But for higher earners, particularly metro-based salaried professionals with HRA, home-loan interest, and aggressive 80C/80D claims, the math still favours the old regime. This post breaks down the comparison bracket by bracket using the slab structures notified for FY 2025-26 (Assessment Year 2026-27).</p>
+
+<h2>What changed in Budget 2025 — and what didn't</h2>
+
+<p>The Union Budget presented on February 1, 2025 left the old regime entirely untouched but rebuilt the new regime from the ground up. <a href="https://www.bajajfinserv.in/investments/income-tax-slabs" rel="noopener" target="_blank">Per Bajaj Finserv's notification of the revised slabs</a>, 
+
+the new income tax slabs under the new regime for FY 2025-26 are: ₹0 to ₹4 lakh – Nil, ₹4 lakh to ₹8 lakh – 5%, ₹8 lakh to ₹12 lakh – 10%, ₹12 lakh to ₹16 lakh – 15%, ₹16 lakh to ₹20 lakh – 20%, ₹20 lakh to ₹24 lakh – 25%, and income above ₹24 lakh taxed at 30%
+
+.</p>
+
+<p>Two more pieces complete the picture. 
+
+The basic exemption limit was raised from ₹3 lakh to ₹4 lakh effective April 1, 2025, and the Section 87A rebate threshold was lifted from ₹7 lakh to ₹12 lakh
+
+. The standard deduction for salaried taxpayers under the new regime stands at ₹75,000 — which is why <a href="https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2098352&reg=3&lang=2" rel="noopener" target="_blank">the Ministry of Finance summary of the Budget</a> states that 
+
+salaried individuals earning up to ₹12.75 lakh per annum will pay nil tax due to the standard deduction of ₹75,000, with the government estimating revenue forgone of about ₹1 lakh crore from these direct tax proposals
+
+.</p>
+
+<h3>The old regime — frozen in time</h3>
+
+<p>The old regime continues with the structure it has carried for years. <a href="https://www.kotak811.com/insights/tax/new-tax-regime" rel="noopener" target="_blank">As Kotak811 summarises for FY 2025-26</a>, 
+
+for individuals below 60 years the old regime slabs remain at: up to ₹2.5 lakh nil, ₹2.5–5 lakh at 5%, ₹5–10 lakh at 20%, and above ₹10 lakh at 30%, with higher basic exemption for senior and super senior citizens
+
+. The standard deduction stays at ₹50,000 and the Section 87A rebate of ₹12,500 still applies, but only up to taxable income of ₹5 lakh.</p>
+
+<p>The old regime also retains the deduction toolkit that has defined Indian tax planning for two decades — Section 80C (₹1.5 lakh), 80D for health insurance, HRA exemption, LTA, home-loan interest under Section 24(b) up to ₹2 lakh for self-occupied property, NPS contributions under 80CCD(1B), and a long list of smaller heads. None of these are available under the new regime, with the narrow exception of the employer NPS contribution under 80CCD(2).</p>
+
+<h2>The bracket-by-bracket comparison for FY 2025-26</h2>
+
+<p>Below is how a salaried individual in any of India's metros — Bangalore, Mumbai, Delhi, Pune, Hyderabad — would actually fare across the income bands that matter. All numbers assume taxable income after the relevant standard deduction.</p>
+
+<h3>Up to ₹7 lakh: new regime, no contest</h3>
+
+<p>At this level the answer is unambiguous. Under the new regime, anyone with gross salary up to ₹7.75 lakh pays zero — the standard deduction of ₹75,000 plus the Section 87A rebate that wipes out tax up to ₹12 lakh of taxable income. Under the old regime, the rebate ceiling has been stuck at ₹5 lakh for years, so a taxable income of ₹7 lakh would attract roughly ₹52,500 in tax (5% on ₹2.5 lakh plus 20% on ₹2 lakh) before any 80C deductions. Even if you fully exhaust 80C and 80D, the new regime wins.</p>
+
+<h3>₹7 lakh to ₹12 lakh: the new regime widens its lead</h3>
+
+<p>This is where Budget 2025 fundamentally changed the calculus. <a href="https://cleartax.in/s/income-tax-slabs" rel="noopener" target="_blank">As ClearTax notes in its FY 2025-26 explainer</a>, 
+
+the tax-free limit was increased to ₹12 lakh in FY 2025-26 from ₹7 lakh in FY 2024-25 due to the increase in the Section 87A rebate limit
+
+. A salaried professional in Hyderabad earning ₹12 lakh CTC pays nil tax under the new regime. Under the old regime, that same person would be taxed at 20% on income above ₹5 lakh — even after claiming the full ₹1.5 lakh under 80C and ₹25,000 under 80D, the tax bill would still cross ₹70,000.</p>
+
+<h3>The marginal relief band: ₹12 lakh to ~₹12.75 lakh</h3>
+
+<p>The cliff just above ₹12 lakh would have created bizarre outcomes — a ₹10,000 raise turning into a ₹61,500 tax shock — so the Budget added a marginal relief mechanism. <a href="https://incometaxindia.gov.in/Documents/Budget/budget-2025/faqs-budget-2025.pdf" rel="noopener" target="_blank">The Income Tax Department's official Budget 2025 FAQ</a> confirms that 
+
+the total income till which marginal relief is available is near about ₹12,75,000
+
+. 
+
+It also clarifies that the rebate is not available on income from capital gains or lottery or any other income on which a special rate has been provided in the Act — it applies only to tax payable on income taxed at slab rates
+
+.</p>
+
+<p><a href="https://www.angelone.in/news/taxation/income-tax-relief-understanding-marginal-tax" rel="noopener" target="_blank">Angel One illustrates this neatly</a>: 
+
+without marginal relief, the tax on ₹12.1 lakh would be calculated normally; with marginal relief applied, the difference between ₹12.1 lakh and ₹12 lakh is ₹10,000, so marginal relief reduces the final tax liability to just ₹10,000
+
+. 
+
+Once income exceeds ₹12.75 lakh, marginal relief no longer applies, and the taxpayer must pay the full tax amount as per the standard rates
+
+.</p>
+
+<h3>₹13 lakh to ₹20 lakh: the break-even zone</h3>
+
+<p>This is the band where the two regimes get closest, and where individual circumstances actually decide the outcome. <a href="https://www.canarahsbclife.com/blog/tax-saving/new-vs-old-tax-regime-fy-2025-26-break-even" rel="noopener" target="_blank">Canara HSBC's FY 2025-26 break-even guide</a> explains the framework: 
+
+to calculate your break-even point, start by estimating your total income and the deductions and exemptions available under the old regime — key deductions include Section 80C, 80D, HRA, LTA and the standard deduction
+
+. 
+
+The break-even salary point is the income level at which tax liability under both regimes is nearly equal — if your deductions meet or exceed the break-even threshold for your income group, opt for the old regime; otherwise, the new regime would be better
+
+.</p>
+
+<p>For a salaried individual at ₹15 lakh CTC in Mumbai, the calculation typically looks like this: under the new regime, after standard deduction of ₹75,000 the taxable income is ₹14.25 lakh, attracting tax of roughly ₹1,05,000 plus cess. Under the old regime to beat that figure, you generally need total deductions and exemptions exceeding ₹4 lakh — combining 80C (₹1.5 lakh), 80D (₹25,000–₹50,000), home-loan interest (up to ₹2 lakh), HRA, NPS 80CCD(1B), and the standard deduction. A Bangalore IT professional paying ₹40,000 monthly rent and an active home-loan EMI usually clears that bar; a freelancer or single-income household without rent or an active loan usually doesn't.</p>
+
+<h3>Above ₹20 lakh: the old regime starts winning back ground</h3>
+
+<p>At higher incomes the old regime's deduction architecture becomes more valuable, but only if the deductions are real. <a href="https://www.zeebiz.com/personal-finance/news-old-vs-new-tax-regime-2026-what-is-the-break-even-point-and-how-it-determines-your-tax-choice-394203" rel="noopener" target="_blank">Tax experts cited by Zee Business</a> note that 
+
+the old regime is more suited for salaried individuals with high HRA, especially in metro cities, where total deductions can often cross the break-even threshold, making the old regime more tax-efficient
+
+. A Delhi-based senior manager on ₹35 lakh CTC with a ₹50,000 monthly rent, an active home loan on a Noida flat, NPS contributions and full 80C utilisation will often save ₹40,000–₹80,000 a year by sticking with the old regime.</p>
+
+<p>There's a counter-pull at the very top. 
+
+Surcharge and cess rules continue to apply over and above slab rates in both regimes, but the new regime caps surcharge at 25% even for very high incomes, versus 37% possible under the old regime
+
+. For taxpayers with income above ₹2 crore, the surcharge differential alone can push the new regime back ahead even when deductions are substantial.</p>
+
+<h2>Run the numbers on your own salary</h2>
+
+<p>Generic break-even tables are useful as a guide, but the right answer always depends on the specific mix of HRA, 80C investments, home-loan interest, and health insurance premiums you actually pay. Before you submit your regime declaration to your employer's payroll team — most companies ask for this in April or May — it's worth running both calculations on your own salary structure. Plug your gross salary, HRA component, basic, deductions, and other allowances into the SabTools <a href="/tools/income-tax-calculator">Income Tax Calculator</a> and compare your liability under both regimes side by side for FY 2024-25 and the new FY 2025-26 structure. The one-screen comparison usually settles the debate in 60 seconds.</p>
+
+<h2>Practical implications for different Indian taxpayers</h2>
+
+<h3>Early-career professionals (₹6-10 lakh CTC)</h3>
+
+<p>Switch to the new regime if you haven't already. The Section 87A rebate makes your tax bill zero up to ₹12 lakh of taxable income, so there is no reason to lock money into illiquid 80C instruments like ELSS or PPF purely for tax saving. Invest in mutual funds for goals, not for tax. 
+
+For those with no or low deductions, the new regime's slab structure, higher rebate, and lower compliance burden make it a natural choice for AY 2026-27
+
+.</p>
+
+<h3>Mid-career salaried with home loan (₹15-25 lakh CTC)</h3>
+
+<p>This is where the work has to be done. If you're paying meaningful HRA in a metro and servicing a home-loan EMI on a self-occupied property, run both calculations carefully. The old regime's combined value from HRA exemption plus ₹2 lakh home-loan interest plus ₹1.5 lakh under 80C can comfortably beat the new regime in this band.</p>
+
+<h3>Senior citizens</h3>
+
+<p><a href="https://www.kotak811.com/insights/tax/new-tax-regime" rel="noopener" target="_blank">Kotak811 confirms that under the old regime</a>, 
+
+for resident senior citizens between 60 and 80 years the basic exemption is ₹3,00,000, and for super seniors above 80 it is ₹5,00,000, with higher bands taxed at 20% and 30% as in earlier years
+
+. The new regime, however, applies the same ₹4 lakh exemption to all individuals regardless of age. For senior citizens with substantial 80D medical insurance claims and Section 80TTB interest deductions, the old regime often remains better.</p>
+
+<h3>Business owners and freelancers</h3>
+
+<p>The choice mechanics are different here. <a href="https://www.referencer.in/Income_Tax/Income_Tax_Rates_AY_2025-26.aspx" rel="noopener" target="_blank">Per the Income Tax referencer</a>, 
+
+the Finance Act 2024 amended Section 115BAC with effect from AY 2024-25 to make the new tax regime the default tax regime for individuals, HUFs, AOPs, BOIs and artificial juridical persons, with eligible taxpayers having the option to opt out
+
+. 
+
+In non-business cases, the option to choose the regime can be exercised every year directly in the ITR filed on or before the due date specified under Section 139(1), but for taxpayers having income from business or profession, the new regime is the default and switching is more restricted
+
+. For a Surat textile trader or a Pune-based freelance consultant, that means the regime decision needs to be filed using Form 10IEA, and once you opt out and back in for business income, future switching is limited.</p>
+
+<h2>What's coming next</h2>
+
+<p>Two developments shape the road ahead. <a href="https://cleartax.in/s/income-tax-slabs" rel="noopener" target="_blank">As noted in ClearTax's slabs explainer</a>, 
+
+the Income Tax Act 2025 was introduced in the previous budget to replace the decades-old Income Tax Act 1961, aimed at simplifying the provisions of income tax, and will come into effect from April 1, 2026
+
+. The new Act preserves the dual-regime structure but rewrites the language and section numbering. Second, <a href="https://www.bajajfinserv.in/insights/income-tax-slab" rel="noopener" target="_blank">Bajaj Finserv reports that</a> 
+
+in the Union Budget 2026-27 presented on February 1, 2026, Finance Minister Nirmala Sitharaman announced no changes to the personal income tax slabs and rates for both the new and old tax regimes
+
+ — meaning the FY 2025-26 structure carries forward into FY 2026-27 unchanged.</p>
+
+<p>For most Indian salaried taxpayers under ₹13 lakh CTC, the practical message is simple: the new regime is now the right default, and the old regime's deduction architecture is mostly relevant only above that threshold or where HRA and home-loan interest stack high. For everyone else, it's worth doing the comparison once a year — typically when your employer asks for your regime declaration in April — and re-running it whenever your salary, rent, or loan situation changes meaningfully. The wrong choice can cost ₹50,000 to ₹1 lakh a year. The right one is a five-minute calculation.</p>`,
   }
 ];
 
