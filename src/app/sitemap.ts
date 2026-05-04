@@ -71,6 +71,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.3,
     },
+    {
+      // Election hub. Updates whenever an election window opens or
+      // whenever Lok Sabha / state election data is refreshed.
+      url: `${baseUrl}/elections`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      // Sports hub. Live cricket scores refresh every minute on-page;
+      // sitemap-level changeFrequency is "daily" because schedules and
+      // upcoming-match cards may shift day-to-day.
+      url: `${baseUrl}/sports`,
+      lastModified: now,
+      changeFrequency: "daily",
+      priority: 0.8,
+    },
   ];
 
   // Category pages — declare a Hindi alternate only when a `/hi/category/{slug}`

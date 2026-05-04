@@ -87,6 +87,14 @@ export default function Header() {
             <Link href="/blog" className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-indigo-600 rounded-lg hover:bg-indigo-50 transition">
               Blog
             </Link>
+            <Link href="/sports" className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-indigo-600 rounded-lg hover:bg-indigo-50 transition flex items-center gap-1">
+              Sports
+              <span className="inline-flex items-center justify-center px-1 py-px rounded text-[9px] font-bold bg-emerald-100 text-emerald-700">LIVE</span>
+            </Link>
+            <Link href="/elections" className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-indigo-600 rounded-lg hover:bg-indigo-50 transition flex items-center gap-1">
+              Elections
+              <span className="inline-flex items-center justify-center px-1 py-px rounded text-[9px] font-bold bg-orange-100 text-orange-700">2026</span>
+            </Link>
             <Link href="/about" className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-indigo-600 rounded-lg hover:bg-indigo-50 transition">
               About
             </Link>
@@ -175,6 +183,14 @@ export default function Header() {
           </Link>
           <Link href="/blog" className="block py-2 text-gray-700 font-medium" onClick={() => setMenuOpen(false)}>
             Blog
+          </Link>
+          <Link href="/sports" className="py-2 text-gray-700 font-medium flex items-center gap-2" onClick={() => setMenuOpen(false)}>
+            Sports
+            <span className="inline-flex items-center justify-center px-1.5 py-px rounded text-[10px] font-bold bg-emerald-100 text-emerald-700">LIVE</span>
+          </Link>
+          <Link href="/elections" className="py-2 text-gray-700 font-medium flex items-center gap-2" onClick={() => setMenuOpen(false)}>
+            Elections
+            <span className="inline-flex items-center justify-center px-1.5 py-px rounded text-[10px] font-bold bg-orange-100 text-orange-700">2026</span>
           </Link>
           <Link href="/about" className="block py-2 text-gray-700 font-medium" onClick={() => setMenuOpen(false)}>
             About
