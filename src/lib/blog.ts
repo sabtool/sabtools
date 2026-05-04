@@ -23291,6 +23291,109 @@ in the Union Budget 2026-27 presented on February 1, 2026, Finance Minister Nirm
  — meaning the FY 2025-26 structure carries forward into FY 2026-27 unchanged.</p>
 
 <p>For most Indian salaried taxpayers under ₹13 lakh CTC, the practical message is simple: the new regime is now the right default, and the old regime's deduction architecture is mostly relevant only above that threshold or where HRA and home-loan interest stack high. For everyone else, it's worth doing the comparison once a year — typically when your employer asks for your regime declaration in April — and re-running it whenever your salary, rent, or loan situation changes meaningfully. The wrong choice can cost ₹50,000 to ₹1 lakh a year. The right one is a five-minute calculation.</p>`,
+  },
+  {
+    slug: "ohms-law-calculator-guide-2026",
+    title: "Free Ohm's Law Calculator Online — No Signup Required | SabTools",
+    description: "Calculate voltage, current, resistance and power using Ohm's law - enter any 2 values. Use our free ohm's law calculator with no signup. Instant results on a...",
+    date: "2026-05-04",
+    category: "Electrical",
+    readTime: "10 min read",
+    keywords: ["ohms law", "voltage", "current", "resistance", "power", "formula", "ohm's law calculator", "ohm's law calculator watts"],
+    toolSlug: "ohms-law-calculator",
+    image: {
+      src: "/blog/ohms-law-calculator.webp",
+      alt: "Ohm's Law Calculator — Free Online Calculate voltage, current, resistance and power using Ohm's law - enter any 2 values Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>Last Diwali, an electrician in Kothrud rewired a friend's flat after the 2,000W geyser kept tripping the MCB every other shower. The fix took ten minutes once he ran the numbers: at India's <strong>230V single-phase mains</strong>, a 2,000W heater pulls roughly 8.7A continuously, and the original 6A miniature circuit breaker simply wasn't rated for the load. That entire diagnosis — load wattage in, current out, MCB rating chosen — is a single application of Ohm's Law. The same arithmetic decides whether your inverter can run the fridge during a power cut, whether a 4 sq mm wire is enough for the new AC, and whether a solar charge controller can handle the panels on your terrace.</p>
+
+<p>The Ohm's Law Calculator on SabTools collapses all four common electrical quantities — <strong>voltage (V), current (I), resistance (R), and power (P)</strong> — into one screen. You enter any two known values and it returns the other two, using the relationships V = IR and P = VI. No flipping between formulas, no remembering whether you square the current or the voltage in the power equation. This guide walks through how Indian users — electricians, hobbyists, ITI students, solar buyers, and anyone trying to understand their electricity bill — actually use it.</p>
+
+<h2>The four quantities and the only two equations you need</h2>
+
+<p>Ohm's Law itself is a single equation: <strong>V = I × R</strong>. Voltage (in volts) equals current (in amperes) multiplied by resistance (in ohms). Stretch it with the power formula <strong>P = V × I</strong> (watts equal volts times amps) and you can derive every combination. Practically, that gives you twelve usable forms — I = V/R, R = V/I, P = I²R, P = V²/R, V = √(P×R), and so on. The calculator hides all of that. You input two numbers, it figures out which formula applies, and shows the remaining two.</p>
+
+<p>A quick sanity anchor that every Indian user should memorise: at <strong>230V mains, every 1,000W of load draws about 4.35A</strong>. So a 1.5-ton split AC pulling around 1,500W draws ~6.5A, a 2,000W microwave draws ~8.7A, a 9kW geyser bank draws ~39A (which is why instant geysers need a dedicated 40A breaker and a 6 sq mm cable run). Once that ratio sits in your head, you can sense-check the calculator's output every time.</p>
+
+<h2>Sizing MCBs and wires for Indian home loads</h2>
+
+<p>The most common real-world reason an Indian homeowner reaches for Ohm's Law is to figure out the right MCB rating before adding a new appliance circuit. The logic runs in two steps: first, current = power ÷ voltage. Then add a 25% headroom (continuous-duty derating) and round up to the nearest standard MCB rating — 6A, 10A, 16A, 20A, 25A, 32A, 40A, 63A.</p>
+
+<ul>
+  <li><strong>1.5-ton 5-star inverter AC (~1,400W):</strong> I = 1400 ÷ 230 = 6.1A. With 25% margin → 7.6A. Use a <strong>10A MCB</strong> on a 2.5 sq mm copper cable.</li>
+  <li><strong>25-litre storage geyser (2,000W):</strong> I = 8.7A. Margin → 10.9A. Use a <strong>16A MCB</strong> with 2.5 sq mm cable on a dedicated circuit.</li>
+  <li><strong>3kW induction hob (3,000W):</strong> I = 13A. Margin → 16.3A. Use a <strong>20A MCB</strong> with 4 sq mm cable.</li>
+  <li><strong>Whole-flat 5kW connected load:</strong> I = 21.7A → <strong>32A main MCB</strong>, 6 sq mm incomer.</li>
+</ul>
+
+<p>The cable thickness matters as much as the breaker. A 2.5 sq mm copper cable is rated for roughly 20A in domestic conduit; pushing 25A continuous through it heats the insulation and accelerates failure. After you've found the current with Ohm's Law, run the same numbers through the <a href="/tools/voltage-drop-calculator">voltage drop calculator</a> to confirm the cable run from the meter board to the appliance stays inside the 3% drop limit recommended by IS 732. A long run from the basement meter board to a fourth-floor flat in a Mumbai building can easily lose 4–5% on undersized wire.</p>
+
+<h2>Worked examples: from a Bangalore PG to a Surat workshop</h2>
+
+<h3>Example 1: Will my 600VA inverter run the fridge?</h3>
+
+<p>A homeowner in Whitefield buys a 600VA / 12V Luminous inverter with a 150Ah tubular battery. The 200-litre fridge is rated 150W running, ~600W on compressor startup. Using Ohm's Law on the DC side: at 12V, the inverter draws I = 150 ÷ 12 ≈ 12.5A continuous from the battery (ignoring inverter losses, which add another ~15%). Real draw ≈ 14.4A. The 150Ah battery, used down to 50% depth of discharge, gives 75Ah usable → 75 ÷ 14.4 ≈ <strong>5.2 hours of fridge runtime</strong>. That answers the actual question — not "is the inverter big enough" but "how long does it last in a BESCOM outage."</p>
+
+<h3>Example 2: LED strip lighting for a Jaipur retail shop</h3>
+
+<p>A saree shop owner wants 15 metres of 12V LED strip behind the display shelves. The strip is rated 4.8W per metre → 72W total. Ohm's Law: I = 72 ÷ 12 = 6A. The cheap ₹250 driver in the box is rated 5A — it'll work for a week and then burn out. Correct choice: a 10A / 120W driver. The same calculation tells you the cable from the driver to the strip should be at least 1 sq mm (and preferably 1.5) to avoid voltage drop dimming the far end.</p>
+
+<h3>Example 3: Heating element resistance check</h3>
+
+<p>A Surat workshop owner suspects the 2kW heating coil in his plastic moulding press is failing. Rated voltage 230V, rated power 2,000W. Expected resistance: R = V² ÷ P = (230 × 230) ÷ 2000 = <strong>26.45Ω</strong>. He measures 41Ω with a multimeter — the coil has degraded, drawing only ~1,290W now and missing the temperature target. Ohm's Law turned a vague "the press feels weak" complaint into a specific replacement decision.</p>
+
+<h2>Solar, battery, and DC system design</h2>
+
+<p>Rooftop solar in India runs on the same physics, just at lower DC voltages. A standard 540W mono-PERC panel typically operates at around 41V open-circuit / 33V at maximum power point, delivering ~16A. String four panels in series for a 5kW system and you're looking at 132V × 16A on the DC side, which the MPPT charge controller converts to 230V AC for the home.</p>
+
+<p>If you're sizing a system from scratch, the <a href="/tools/solar-panel-calculator">solar panel calculator</a> handles the city-specific irradiance, payback, and panel count maths. But the underlying conductor sizing — picking 4 sq mm vs 6 sq mm DC cable from the array to the inverter — is pure Ohm's Law plus voltage drop. At 16A over a 20-metre run, even high-quality solar cable drops about 1.2V on 4 sq mm; on a 33V string, that's a 3.6% loss eating directly into your generation figures.</p>
+
+<p>For battery banks, the same equation governs charge and discharge currents. A 200Ah, 12V lithium battery being charged at 0.5C accepts 100A — that demands 25 sq mm cable, properly crimped lugs, and a fuse rated above 100A. People who skip the calculation end up with melted terminals and insurance arguments.</p>
+
+<h2>Reading your electricity bill through Ohm's Law</h2>
+
+<p>The number on your MSEB, BESCOM, or BSES bill — kilowatt-hours — is just power × time. Ohm's Law gets you to the power figure for any appliance you can measure. A 1.5-ton AC running 8 hours a day at 1,500W consumes 1.5 × 8 = 12 units daily, ~360 units a month. At Maharashtra's tier-3 residential slab of around ₹11.50/unit, that single AC is ₹4,140 a month before fixed charges and electricity duty.</p>
+
+<p>If you want to roll up every appliance in the house and see the full monthly bill, the <a href="/tools/power-consumption-calculator">power consumption calculator</a> already has the appliance database and state-wise tariff slabs built in. Use Ohm's Law when you've got a non-standard load — an industrial sewing machine, a borewell pump, a welding inverter — and need to derive its wattage from the nameplate's voltage and current ratings before you can plug it into the consumption calculator.</p>
+
+<h2>Three-phase, transformers, and power factor — where the simple formula gets caveats</h2>
+
+<p>Indian commercial and industrial connections run on <strong>three-phase 415V, 50Hz</strong>. The basic Ohm's Law still applies per phase, but the total power formula changes: <strong>P = √3 × V<sub>L</sub> × I<sub>L</sub> × cos φ</strong>, where V<sub>L</sub> is line-to-line voltage (415V) and cos φ is the power factor. A 10HP motor (7.46kW shaft output, ~8.5kW electrical input at 88% efficiency) with a power factor of 0.85 draws I = 8500 ÷ (1.732 × 415 × 0.85) ≈ 13.9A per line.</p>
+
+<p>For step-up or step-down transformer problems — common when running 110V imported equipment in India or designing a control panel with a 230V/24V control transformer — the <a href="/tools/transformer-calculator">transformer turns ratio calculator</a> handles primary/secondary voltage and current relationships in one step, but you'll still drop back to Ohm's Law to size the protection on each winding.</p>
+
+<h2>Common mistakes Indian users make</h2>
+
+<ol>
+  <li><strong>Confusing VA with W.</strong> A 600VA inverter is not a 600W inverter. With a 0.8 power factor, it delivers 480W of real power. Plug 600W of resistive load into it and it will trip on overload.</li>
+  <li><strong>Ignoring startup current.</strong> Motors (fridge, AC, water pump) draw 3–7× their running current for the first second. A 1HP submersible pump nameplate-rated at 3.5A may pull 18A on startup, popping a 10A MCB even though steady-state is fine. Use type-C or type-D MCBs for motor loads.</li>
+  <li><strong>Forgetting that resistance changes with temperature.</strong> A heating element measured cold reads lower than its operating resistance. Don't expect P = V²/R measured cold to match the nameplate wattage exactly.</li>
+  <li><strong>Mixing AC and DC blindly.</strong> Ohm's Law works on both, but on AC circuits the "resistance" is really impedance, which factors in inductance and capacitance. For purely resistive loads (heaters, incandescent bulbs, geysers) you can ignore this. For motors and electronics, you can't.</li>
+  <li><strong>Using aluminium wire ratings for copper, or vice-versa.</strong> Aluminium has roughly 1.6× the resistance of copper for the same cross-section. A 4 sq mm aluminium cable is closer to a 2.5 sq mm copper cable in current capacity.</li>
+</ol>
+
+<h2>Quick reference for Indian electricians and DIYers</h2>
+
+<ul>
+  <li><strong>Single-phase mains:</strong> 230V, 50Hz. Current per kW ≈ 4.35A.</li>
+  <li><strong>Three-phase mains:</strong> 415V line-to-line, 50Hz. Current per kW ≈ 1.39A per line at unity PF; ≈1.74A at 0.8 PF.</li>
+  <li><strong>Inverter battery banks:</strong> 12V, 24V, 48V common. Current per kW: 83A / 42A / 21A respectively.</li>
+  <li><strong>USB-C PD:</strong> 5V/9V/15V/20V negotiated. A 65W laptop charger at 20V draws 3.25A.</li>
+  <li><strong>Standard MCB ratings (BIS):</strong> 6, 10, 16, 20, 25, 32, 40, 63A. Pick the next size up after applying 25% headroom.</li>
+  <li><strong>Cable rating thumb rule:</strong> 1.0 sq mm Cu ≈ 11A, 1.5 ≈ 14A, 2.5 ≈ 20A, 4.0 ≈ 27A, 6.0 ≈ 35A, 10.0 ≈ 50A in conduit.</li>
+</ul>
+
+<h2>When the calculator is — and isn't — the right tool</h2>
+
+<p>The Ohm's Law Calculator answers the deterministic question: given two of {V, I, R, P}, what are the other two? That covers 80% of practical electrical work — appliance sizing, fuse selection, battery runtime estimates, LED driver matching, heating element diagnostics, basic solar DC math.</p>
+
+<p>It doesn't handle reactive power (kVAR) for power-factor correction capacitor banks, harmonic distortion in VFD-driven systems, transient analysis for motor starting, or fault-current calculations for switchgear sizing — those need dedicated electrical design software. It also assumes purely resistive behaviour; for AC circuits with significant inductive or capacitive components, the answers are approximate. Most home and small-shop scenarios in India fall well within the simple-resistive bucket, which is why this calculator covers the vast majority of day-to-day questions.</p>
+
+<p>One more honest caveat: the calculator is a maths tool, not a safety substitute. Always isolate the circuit before measuring resistance, never measure resistance on a live circuit, and have a licensed electrician approve any modification to your meter board or sub-distribution panels. The numbers tell you what should happen; physical workmanship — clean terminations, properly torqued connections, correct earthing — decides what actually happens.</p>
+
+<p><a href="/tools/ohms-law-calculator">Open the Ohm's Law Calculator and run your own appliance, battery, or solar numbers →</a></p>`,
   }
 ];
 
