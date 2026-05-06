@@ -24257,6 +24257,127 @@ in the Union Budget 2026-27 presented on February 1, 2026, Finance Minister Nirm
 <p><strong>Is a liquid fund really safe enough for emergency money?</strong> Liquid funds invest in instruments with up to 91-day maturity and have historically had very low drawdowns. They are not as safe as a savings account in the technical sense, but for the Tier 2 portion of an emergency fund the trade-off is widely considered reasonable. For the absolutely-must-have-tomorrow money (Tier 1), keep it in a sweep-in FD or savings account.</p>
 
 <p>Run your numbers and get your three-tier breakdown in under a minute — try SabTools' <a href="/tools/emergency-fund-calculator">Emergency Fund Calculator →</a></p>`,
+  },
+  {
+    slug: "news-2026-05-06-best-fd-rates-2026-across-indian-public-and-private-banks",
+    title: "Best FD rates 2026 across Indian public and private banks (2026 Update)",
+    description: "Best FD rates 2026 across Indian public and private banks — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-05-06",
+    category: "Banking",
+    readTime: "12 min read",
+    keywords: ["Best FD rates 2026", "banking news india 2026", "india 2026 update"],
+    toolSlug: "emi-calculator",
+    image: {
+      src: "/blog/emi-calculator.webp",
+      alt: "Best FD rates 2026 across Indian public and private banks (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>Where FD rates stand as FY 2025-26 closes out</h2>
+
+<p>If you've been waiting for fixed deposit rates to climb back to the 8%+ levels seen during the 2023-24 tightening cycle, the message from the Reserve Bank of India is clear: that ship has sailed. <a href="https://www.jmfinancialservices.in/blogs-and-articles/rbi-monetary-policy-feb-2026-repo-rate-unchanged-at-525percent" rel="noopener" target="_blank">In its February 2026 meeting, the Monetary Policy Committee unanimously voted to hold the policy repo rate at 5.25% with a neutral stance, leaving the Standing Deposit Facility at 5.00% and the Marginal Standing Facility/Bank Rate at 5.50%</a>. <a href="https://edunovations.com/currentaffairs/national/rbi-mpc-april-2026/" rel="noopener" target="_blank">The April 2026 MPC, chaired by RBI Governor Sanjay Malhotra, again opted to keep the repo rate unchanged at 5.25%</a>, signalling that the rate-cutting cycle that brought the repo down through 2025 is now in a wait-and-watch phase.</p>
+
+<p>For depositors, the practical consequence is that bank FD rates have largely stabilised in the 6.45%–6.60% range at scheduled commercial banks for the best general-citizen tenures, with senior citizens getting roughly 50 basis points more, and small finance banks continuing to offer outliers above 8%. <a href="https://www.finnovate.in/learn/blog/rbi-repo-rate-unchanged-april-2026" rel="noopener" target="_blank">According to a Finnovate analysis after the April 2026 MPC, FD rates are unlikely to fall further in the near term, and any future hike scenario could push deposit rates modestly higher — meaning very long FD tenures at current rates may be worth reviewing until the FY27 rate direction becomes clearer</a>.</p>
+
+<p>This guide walks through what India's largest public sector banks, private banks, and small finance banks are actually offering in 2026, who should consider what tenure, and how senior citizens can squeeze out the highest possible yield.</p>
+
+<h2>Why this matters for your savings in 2026</h2>
+
+<p>FDs remain the single largest non-CASA deposit category for Indian households, and for retirees, conservative investors, and those parking emergency funds, they're still the default. But the reward for picking the right bank and right tenure has widened in 2026.</p>
+
+<p>Consider the spread: a 5-year FD of ₹10,00,000 at 6.45% (SBI's general rate) earns roughly ₹37,000 less per year than the same deposit at 7.90% (Suryoday Small Finance Bank). Over five years, that's a difference of nearly ₹2 lakh in interest income. The catch, of course, is risk — small finance banks come with a different deposit insurance reality, and senior depositors should weigh that carefully.</p>
+
+<p>The other reason 2026 matters: <a href="https://www.businesstoday.in/personal-finance/investment/story/repo-rate-unchanged-how-rbis-decision-impacts-your-home-loan-fd-savings-524588-2026-04-08" rel="noopener" target="_blank">as BusinessToday noted after the April 2026 RBI decision, FDs booked before any rate change continue at the earlier rates — a hike helps new depositors, but locked-in deposits continue at the contracted rate</a>. So timing your booking, and avoiding the temptation to break and re-book on small rate moves, becomes a meaningful decision.</p>
+
+<h2>Public sector banks: the safety-first picks</h2>
+
+<p>India's public sector banks remain the default choice for the bulk of household FDs, especially for amounts above the ₹5 lakh DICGC insurance threshold where the implicit sovereign comfort matters. As of April 2026, here's where the major PSU banks stand.</p>
+
+<h3>State Bank of India (SBI)</h3>
+
+<p><a href="https://www.policybazaar.com/fd-interest-rates/state-bank-of-india-fd-rates/" rel="noopener" target="_blank">SBI FD interest rates currently range from 3.05% to 6.45% per annum for general public depositors and from 3.55% to 7.05% per annum for senior citizens, with tax-saving FDs offering 6.05% (general) and 7.05% (seniors) for the 5-year lock-in</a>. <a href="https://cleartax.in/s/sbi-fd-interest-rates" rel="noopener" target="_blank">SBI's flagship special tenure product Amrit Vrishti — a 444-day deposit — offers the highest rates: 6.60% for general depositors and 7.10% for senior citizens, with a minimum deposit of ₹1,000 and no upper cap</a>. Amrit Vrishti has been the most-booked SBI special FD since its launch and remains the sweet spot for SBI customers in 2026.</p>
+
+<h3>Punjab National Bank (PNB)</h3>
+
+<p><a href="https://www.zeebiz.com/personal-finance/banking/news-senior-citizen-fd-rates-april-2026-up-to-74-returns-compare-sbi-pnb-hdfc-bank-icici-bank-393982" rel="noopener" target="_blank">PNB is offering up to 7.4% on its 444-day tenure for senior citizens — among the highest in the public sector pack</a>. For general depositors the same tenure typically prices around 6.85%–6.90%. PNB is therefore worth a look for retirees with surplus liquidity who can lock in for roughly 14-15 months.</p>
+
+<h3>Bank of Baroda and Canara Bank</h3>
+
+<p><a href="https://www.zeebiz.com/personal-finance/banking/news-senior-citizen-fd-rates-april-2026-up-to-74-returns-compare-sbi-pnb-hdfc-bank-icici-bank-393982" rel="noopener" target="_blank">Bank of Baroda is offering up to 7% on long-term deposits for senior citizens, while Canara Bank's senior citizen rates hover around 7%–7.1% on select tenures</a>. <a href="https://www.goodreturns.in/personal-finance/444-days-fd-rates-sbi-canara-bank-pnb-bob-indian-bank-public-sector-banks-best-fd-interest-rates-1504595.html" rel="noopener" target="_blank">For 444-day deposits below ₹3 crore, Canara Bank is offering 6.50% to general individuals and 7% to senior citizens</a>.</p>
+
+<h3>The PSU bank picture</h3>
+
+<p><a href="https://www.businesstoday.in/personal-finance/investment/story/fd-rates-april-2026-check-latest-fixed-deposit-rates-for-public-private-small-finance-banks-526237-2026-04-17" rel="noopener" target="_blank">Per BusinessToday's April 2026 round-up, public sector banks including PNB, Union Bank, Bank of India, Indian Bank, Bank of Baroda, and Canara Bank are offering around 6.60% on their headline tenures, while SBI sits slightly below at about 6.45%</a>. The differences are real but modest — for most PSU bank customers, sticking with the bank where their salary or pension is credited makes more sense than switching for 15–20 basis points.</p>
+
+<h2>Private banks: a slim premium, with caveats</h2>
+
+<p>India's leading private banks have historically offered a small premium over PSU peers, but that gap has narrowed significantly in 2026.</p>
+
+<h3>HDFC Bank</h3>
+
+<p><a href="https://www.policybazaar.com/fd-interest-rates/" rel="noopener" target="_blank">HDFC Bank, India's largest private sector lender, is offering FD rates up to 6.50% per annum for the general public and 7.00% per annum for senior citizens, alongside specialised products like the HealthCover FD</a>. The HealthCover FD is worth flagging for salaried families — it bundles a health insurance benefit with the deposit, which can be useful for first-time investors who haven't yet bought separate health cover.</p>
+
+<h3>ICICI Bank</h3>
+
+<p><a href="https://www.icici.bank.in/personal-banking/deposits/fixed-deposit/fd-interest-rates" rel="noopener" target="_blank">ICICI Bank is offering FD rates ranging from 2.75% to 6.50% per annum, with Tax Saver FDs allowing tax savings of up to ₹46,800 under the old tax regime</a>. The 5-year Tax Saver lock-in remains a meaningful tool for old-regime taxpayers — especially salaried professionals in Bangalore or Mumbai earning ₹12-25 lakh per annum who are still using Section 80C deductions.</p>
+
+<h3>Axis Bank, Kotak Mahindra and others</h3>
+
+<p><a href="https://www.paybima.com/blog/investment-and-tax-planning/latest-fd-rates-2026" rel="noopener" target="_blank">Axis Bank and ICICI Bank are pricing rates of around 6.60% for tenures between 15 and 18 months</a>. Kotak Mahindra Bank and IndusInd Bank are typically 5–10 basis points higher than HDFC/ICICI on the same tenure, but the differences are not large enough to chase.</p>
+
+<h3>Bandhan Bank</h3>
+
+<p><a href="https://newsable.asianetnews.com/gallery/business/latest-fd-interest-rates-april-2026-sbi-hdfc-icici-bank-comparison-11rwvg8" rel="noopener" target="_blank">Bandhan Bank is offering FD rates from 2.95% to 7.25% for the general public and 3.70% to 7.75% for senior citizens — a notable premium over the larger private banks</a>. Bandhan is a scheduled commercial bank (with the same DICGC ₹5 lakh deposit insurance), which makes it a reasonable choice for the high-yield slice of a diversified FD portfolio.</p>
+
+<h2>Small finance banks: where the highest rates live</h2>
+
+<p>If you're chasing absolute returns, small finance banks (SFBs) are unambiguously the place to look in 2026 — but the trade-off is concentration risk and the practical reality that the DICGC ₹5 lakh insurance cap matters far more here than at SBI or HDFC.</p>
+
+<p><a href="https://www.businesstoday.in/personal-finance/investment/story/where-are-fd-rates-highest-now-comparing-small-finance-banks-with-private-public-sector-banks-527681-2026-04-28" rel="noopener" target="_blank">In April 2026, Suryoday Small Finance Bank led the SFB pack with a peak rate of 8.10% on 2–3 year deposits and around 7.90% on 3–5 year tenures, with ESAF Small Finance Bank offering up to 8.00%</a>. <a href="https://www.businesstoday.in/personal-finance/investment/story/april-2026-fd-rates-where-public-private-banks-small-finance-banks-nbfcs-stand-527201-2026-04-24" rel="noopener" target="_blank">A separate BusinessToday round-up showed Suryoday at 7.90%, Jana Small Finance Bank at 7.77%, Utkarsh Small Finance Bank at 7.25%, Ujjivan SFB at 7.20%, with AU and Equitas SFBs at 7.00%</a>.</p>
+
+<p>The picture sharpened further as May 2026 began: <a href="https://www.businesstoday.in/personal-finance/investment/story/fd-rates-senior-citizens-turn-to-fixed-deposits-in-may-2026-amid-market-volatility-528575-2026-05-03" rel="noopener" target="_blank">ESAF Small Finance Bank moved to the top with 8.50%, followed by Shivalik Small Finance Bank at 8.30% and Suryoday Small Finance Bank at 8.25%, with Jana, Equitas, Unity, and Utkarsh clustering around 8.00%</a>.</p>
+
+<h3>The right way to use SFBs</h3>
+
+<p>The standard playbook for an investor in Pune, Hyderabad or Ahmedabad with, say, ₹15 lakh of FD money is to spread the SFB allocation across two or three SFBs in slices of ₹4.5–₹4.9 lakh each (keeping principal + accrued interest under the ₹5 lakh DICGC cover at each bank), and to keep the bulk of the corpus at SBI or another large bank. This way you collect the high-yield premium on a portion without putting concentrated household savings outside the deposit-insurance umbrella.</p>
+
+<h2>Senior citizens still get the best deal in the system</h2>
+
+<p>The single best-kept feature of Indian FD pricing in 2026 is how attractive it remains for the 60+ depositor.</p>
+
+<p><a href="https://www.paisabazaar.com/fixed-deposit/sbi-fd-rates/" rel="noopener" target="_blank">SBI FD rates for senior citizens are 50 basis points higher than the rates offered to other depositors, though this 0.50% per annum premium is offered only to resident senior citizen depositors and is not available to NRE/NRO accounts</a>. SBI also runs a Patrons scheme for super senior citizens (typically 80+) that offers an additional spread on top.</p>
+
+<p><a href="https://www.zeebiz.com/personal-finance/banking/news-senior-citizen-fd-rates-april-2026-up-to-74-returns-compare-sbi-pnb-hdfc-bank-icici-bank-393982" rel="noopener" target="_blank">Senior citizen FD rates in April 2026 sat in the 7%–7.4% range across PSU and private banks: PNB up to 7.4% on a 444-day tenure, SBI up to 7.05% for 5–10 years, Bank of Baroda up to 7% for long-term deposits, and Canara Bank around 7%–7.1% on select tenures</a>. Stack on the SFB premium for senior citizens (typically another 50 basis points over their general rates) and headline yields cross 8.5% at the top of the SFB pack.</p>
+
+<p>One important nuance: the 50 bps senior citizen premium applies only on deposits up to ₹3 crore at most banks. Households with larger deposit corpuses should split between two senior earners (e.g., husband and wife) to maintain the premium across the full corpus.</p>
+
+<h2>What about the borrowing side of your balance sheet?</h2>
+
+<p>FD rates don't move in isolation — the same RBI decisions that have stabilised deposit rates around 6.5% have also reset home loan, car loan and personal loan EMIs through 2025 and into 2026. <a href="https://www.angelone.in/news/economy/rbi-repo-rate-decision-april-2026/what-it-means-for-your-car-loan-emi" rel="noopener" target="_blank">The RBI's April 2026 decision to hold the repo rate at 5.25% signalled stability in car loan EMIs and limited immediate impact on borrowing costs</a>.</p>
+
+<p>For a first-time home loan applicant in NCR or Pune, or a salaried professional juggling a car loan alongside a home loan, this is the moment to recalibrate. If you're parking surplus money in an FD at 6.5%–7% while paying 8.75%–9.25% on a home loan, the spread is real money — every ₹1,00,000 of pre-payment saves you significantly more than the same ₹1,00,000 in an FD earns. Run your numbers properly: use the <a href="/tools/emi-calculator">EMI Calculator</a> to model your existing home, car or personal loan EMI against the 2026 rate environment, then decide whether to deploy fresh savings into a new FD or use them to pre-pay the higher-cost loan. For most households, the clear answer is to clear the high-cost loan first, then build the FD ladder with what's left.</p>
+
+<p>Once you've decided how much surplus to put into FDs versus loan pre-payment, model the maturity using the <a href="/tools/fd-calculator">FD Calculator</a> for one-shot deposits or the <a href="/tools/rd-calculator">RD Calculator</a> if you're planning monthly contributions instead of a lump sum.</p>
+
+<h2>Building your 2026 FD ladder: a practical playbook</h2>
+
+<p>Given the rate environment, here's a sensible blueprint for FY 2025-26:</p>
+
+<ol>
+  <li><strong>Don't lock everything into one tenure.</strong> Split your FD corpus across 1-year, 444-day, 3-year, and 5-year tenures. This gives you a ladder where money matures every 12-18 months and can be redeployed at the prevailing rate.</li>
+  <li><strong>Use special tenures aggressively.</strong> The 444-day Amrit Vrishti at SBI (6.60% general / 7.10% senior) and similar 444-day specials at PNB and BoB are priced higher than their standard 1-year and 2-year buckets. There's no reason to book a plain 1-year deposit when a 444-day special is available at a better rate.</li>
+  <li><strong>Tax-saver FDs only if you're on the old regime.</strong> If you've moved to the new tax regime under FY 2025-26 (which most salaried professionals have), the 5-year tax-saver FD is a poor choice because the 80C deduction is unavailable. A regular 5-year FD is more flexible and pays the same — sometimes higher — rate.</li>
+  <li><strong>Don't chase SFB rates with concentrated capital.</strong> Spread SFB exposure across two or three banks within the DICGC ₹5 lakh per-bank limit. Keep the bulk of your corpus at scheduled commercial banks.</li>
+  <li><strong>Watch for the next MPC.</strong> <a href="https://www.finnovate.in/learn/blog/rbi-mpc-feb-2026-repo-rate-inflation-cpi-base-year-liquidity" rel="noopener" target="_blank">As Finnovate noted after the February 2026 meeting, an MPC pause is not a signal to change long-term plans, and the RBI signalled a wait-and-watch approach to let past cuts transmit while it tracks inflation risks</a>. If RBI shifts back to easing, expect another 25-50 bps haircut on deposit rates over the following two quarters.</li>
+</ol>
+
+<p>For those balancing FDs with equity exposure through SIPs, it's worth running the comparison side by side — model your monthly mutual fund contribution returns using the <a href="/tools/sip-calculator">SIP Calculator</a> and compare the projected corpus against a parallel FD ladder. For most long-horizon goals (retirement 15+ years away, child's college fund), the equity allocation will historically outperform FDs even after taxes; FDs work best for capital preservation, emergency funds, and 1-3 year goals.</p>
+
+<h2>Bottom line for the Indian FD investor in 2026</h2>
+
+<p>The FD market in 2026 is not as exciting as it was 18 months ago, but it's still a meaningful tool. Big-bank rates have settled around 6.45%–6.60% for general depositors and 7%–7.4% for senior citizens at the special tenures. Small finance banks continue to offer 8%+ for those willing to spread risk within DICGC limits. NBFCs sit in between.</p>
+
+<p>The single biggest mistake to avoid in this rate cycle is panic-breaking existing FDs to chase 25-bps higher offers — the premature withdrawal penalty (typically 0.50%–1%) usually wipes out the rate gain. The second-biggest mistake is putting fresh surplus into FDs when you have a home loan running at 8.75%+, where pre-payment delivers a guaranteed, tax-free 8.75% return that no FD in the country currently matches. Run the numbers, build the ladder, keep your senior-citizen premium intact, and treat the FD as the boring, dependable foundation it's meant to be — not the growth engine.</p>`,
   }
 ];
 
