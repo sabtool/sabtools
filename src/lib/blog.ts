@@ -23944,6 +23944,162 @@ in the Union Budget 2026-27 presented on February 1, 2026, Finance Minister Nirm
 <p>The practical takeaway: if you are sitting on a redemption from a maturing FD, an annual bonus, or a property sale corpus, locking in a chunk of it at today's 7%+ SFB rates or 6.5%+ large-bank rates may look like a good decision in hindsight if the RBI delivers another 25–50 bps of cuts later in 2026. For long-tenure capital you genuinely don't need for five years, this is the case for booking now rather than waiting for headline news to do the work for you.</p>
 
 <p>Run the numbers carefully on your specific corpus, tenure, and tax bracket — the 2026 FD market rewards comparison shopping more than it has in years, and the spread between the best and the average has rarely been wider for ordinary savers in Maharashtra, Karnataka, Delhi, and elsewhere who are willing to look beyond the bank where their salary lands.</p>`,
+  },
+  {
+    slug: "electrical-load-calculator-guide-2026",
+    title: "Electrical Load Calculator Guide — How It Works, Tips & Benefits",
+    description: "Free Electrical Load Calculator online — calculate total electrical load, mcb rating, wire size & monthly cost from appliance list. Step-by-step guide with t...",
+    date: "2026-05-06",
+    category: "Construction",
+    readTime: "11 min read",
+    keywords: ["electrical", "load", "mcb", "wire", "watt", "appliance", "single phase", "three phase"],
+    toolSlug: "electrical-load-calculator",
+    image: {
+      src: "/blog/electrical-load-calculator.webp",
+      alt: "Electrical Load Calculator — Free Online Calculate total electrical load, MCB rating, wire size & monthly cost from appliance list Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>Last Diwali, a friend in a new 3BHK in Whitefield switched on his second 1.5-ton AC, and the main MCB tripped. The electrician told him what BESCOM had already flagged on his connection form: his sanctioned load was 5 kW single-phase, but his actual peak demand was crossing 8 kW. Upgrading to three-phase, replacing the meter, redoing the main wire from 4 sq mm to 10 sq mm, and changing the consumer unit cost him ₹38,000 — money he'd have saved if anyone had run a proper load calculation before he furnished the flat.</p>
+
+<p>This is exactly the gap the <a href="/tools/electrical-load-calculator">Electrical Load Calculator</a> is built for. Punch in your appliances, and it returns the total connected load in watts and kilowatts, tells you whether you need a single-phase or three-phase connection, suggests the right MCB rating for each circuit, recommends copper wire sizes per IS 732 norms, and estimates your monthly electricity bill based on your state's tariff. It's the same calculation a licensed electrical contractor does on a Form A application — except you can run it before you pay anyone.</p>
+
+<h2>Why "approximate" load math costs Indian households real money</h2>
+
+<p>Indian discoms — BESCOM in Karnataka, MSEDCL in Maharashtra, BSES and TPDDL in Delhi, TANGEDCO in Tamil Nadu, TSSPDCL in Telangana — all sanction a specific load (in kW) when they give you a connection. If your real consumption regularly exceeds the sanctioned load, three things go wrong: your main MCB trips, the discom can levy excess load penalties (usually 1.5x the fixed-charge component), and your wiring runs hotter than it's rated for, which is the leading cause of residential electrical fires per NCRB data.</p>
+
+<p>The other side of the same coin is over-sanctioning. A homeowner in Pune asks for an 8 kW connection "to be safe", pays a higher security deposit and higher fixed monthly charges, and then runs at 3 kW in actual use. Over a 10-year horizon that's ₹15,000-25,000 in fixed charges they didn't need to pay. The right answer is to size the connection to your actual diversified demand, not to a worst-case fantasy or a rough guess.</p>
+
+<h2>How the calculator builds your load profile</h2>
+
+<p>You start by listing every electrical appliance you'll run, with its wattage and quantity. The calculator already has India-specific defaults loaded in — the kind of values that show up on the rating plate of a BEE 5-star appliance sold in India:</p>
+
+<ul>
+  <li><strong>1.5-ton split AC (5-star inverter):</strong> 1,400-1,500 W</li>
+  <li><strong>1-ton window AC:</strong> 1,100 W</li>
+  <li><strong>Double-door 250L refrigerator:</strong> 150-200 W</li>
+  <li><strong>25L storage geyser:</strong> 2,000 W</li>
+  <li><strong>Front-load washing machine:</strong> 500 W (2,000 W when heating water)</li>
+  <li><strong>Microwave (convection):</strong> 1,200 W</li>
+  <li><strong>Induction cooktop:</strong> 1,800 W</li>
+  <li><strong>Ceiling fan (BLDC):</strong> 30 W; conventional: 75 W</li>
+  <li><strong>9 W LED bulb / 20 W LED tube:</strong> as labelled</li>
+  <li><strong>43-inch LED TV:</strong> 90-110 W</li>
+  <li><strong>Laptop charger:</strong> 65 W; gaming desktop: 350-500 W</li>
+  <li><strong>Mixer-grinder:</strong> 750 W; iron: 1,000 W</li>
+</ul>
+
+<p>Add up the nameplate wattages and you get the <strong>connected load</strong> — the maximum demand if every appliance ran simultaneously at full load. Nobody actually uses a home that way. The calculator then applies a <strong>diversity factor</strong> (typically 0.5-0.7 for residential, lower if you have many appliances) to estimate <strong>maximum demand</strong>, which is the number that matters for your sanctioned load and main MCB.</p>
+
+<h2>A worked example: 3BHK in Hyderabad</h2>
+
+<p>Consider Anjali, who's moving into a new 3BHK in Gachibowli. Her appliance list:</p>
+
+<ul>
+  <li>3 split ACs (1.5 ton): 3 × 1,500 = <strong>4,500 W</strong></li>
+  <li>1 refrigerator: <strong>200 W</strong></li>
+  <li>1 geyser (bathroom 1): <strong>2,000 W</strong></li>
+  <li>1 instant geyser (bathroom 2, 3 kW): <strong>3,000 W</strong></li>
+  <li>1 microwave: <strong>1,200 W</strong></li>
+  <li>1 washing machine: <strong>500 W</strong></li>
+  <li>1 dishwasher: <strong>1,800 W</strong></li>
+  <li>5 ceiling fans: 5 × 75 = <strong>375 W</strong></li>
+  <li>14 LED lights (avg 12 W): <strong>168 W</strong></li>
+  <li>1 TV + set-top box: <strong>150 W</strong></li>
+  <li>2 laptops, router, miscellaneous: <strong>300 W</strong></li>
+  <li>1 mixer + 1 iron (occasional): <strong>1,750 W</strong></li>
+</ul>
+
+<p>Total connected load: <strong>15,943 W ≈ 16 kW</strong>. With a diversity factor of 0.55 (realistic for a family that won't run two geysers, the dishwasher, and three ACs simultaneously), her maximum demand drops to roughly <strong>8.8 kW</strong>. That number sits above the 7 kW threshold most Telangana discoms use for single-phase domestic connections, so Anjali should apply for a <strong>three-phase 10 kW connection</strong>. The fixed-charge difference is real but small (~₹150-250/month extra), and it saves her from MCB trips and a future upgrade headache.</p>
+
+<h2>Single phase vs three phase: where the line actually sits</h2>
+
+<p>Indian domestic supply is 230 V single-phase. Three-phase is 415 V across phases, 230 V phase-to-neutral. Discoms differ slightly, but the practical thresholds in 2026 look like this:</p>
+
+<ul>
+  <li><strong>Up to 5 kW:</strong> single-phase, almost always sufficient — 1-2 BHK with one AC and a geyser</li>
+  <li><strong>5-7 kW:</strong> single-phase still feasible, but borderline — verify with your discom</li>
+  <li><strong>Above 7 kW:</strong> three-phase mandatory in most states (BESCOM, MSEDCL, TSSPDCL, BSES)</li>
+</ul>
+
+<p>Three-phase has two advantages beyond capacity: the load is balanced across phases (your 4 kW geyser doesn't sag the voltage on the lighting circuit), and motors in pumps, lifts, and inverter ACs run smoother. The disadvantage is the meter and consumer unit cost ₹6,000-12,000 more, and you need to balance loads across the three phases when wiring — typically ACs and geysers split between phases R, Y, and B with lighting and small appliances on one phase each.</p>
+
+<h2>MCB ratings: matching the breaker to the circuit</h2>
+
+<p>The MCB (Miniature Circuit Breaker) protects the wire downstream of it from overheating. The rule is simple: <strong>the MCB current rating must be lower than the wire's safe carrying capacity, and higher than the maximum operating current of the load.</strong> For single-phase 230 V circuits, current in amperes equals watts divided by voltage, with a small margin for power factor on motor loads.</p>
+
+<p>A 1.5-ton AC drawing 1,500 W pulls roughly <strong>1500 ÷ 230 ≈ 6.5 A</strong> — but startup inrush can hit 25-30 A for a fraction of a second. So you don't pick a 6 A MCB; you pick a <strong>16 A C-curve MCB</strong> that tolerates motor inrush without nuisance tripping. The calculator handles this automatically — for inductive loads (ACs, fridges, washing machines, pumps) it suggests C-curve breakers; for resistive loads (geysers, lights, heaters) B-curve is fine.</p>
+
+<p>Typical MCB selections for an Indian home:</p>
+
+<ul>
+  <li><strong>Lighting + fan circuit:</strong> 6 A or 10 A B-curve</li>
+  <li><strong>5 A and 6 A general plug points:</strong> 16 A B-curve</li>
+  <li><strong>16 A power points (AC, geyser):</strong> 20 A or 25 A C-curve</li>
+  <li><strong>Kitchen circuit (microwave + induction):</strong> 32 A C-curve</li>
+  <li><strong>Main isolator (single-phase 8 kW):</strong> 40 A DP MCB</li>
+  <li><strong>Main isolator (three-phase 12 kW):</strong> 32 A or 40 A TPN MCB</li>
+</ul>
+
+<p>For added safety against earth leakage — which the National Electrical Code 2011 mandates for all domestic installations — the calculator recommends a <strong>30 mA RCCB</strong> upstream of the MCBs. This is what protects you from electric shock if a child sticks a fork into a socket or a geyser leaks current to the metal body.</p>
+
+<h2>Wire size: the cheapest part to over-spec, the costliest to under-spec</h2>
+
+<p>Copper wire in India is sold by cross-sectional area in square millimetres. Per IS 694 and IS 732, the typical safe ampacity for PVC-insulated copper conductors in conduit is:</p>
+
+<ul>
+  <li><strong>1.0 sq mm:</strong> ~9 A — too thin for anything beyond doorbells; avoid</li>
+  <li><strong>1.5 sq mm:</strong> ~13 A — lights, fans, low-power circuits</li>
+  <li><strong>2.5 sq mm:</strong> ~18 A — 5/6 A sockets, fridge points</li>
+  <li><strong>4.0 sq mm:</strong> ~24 A — ACs, geysers, 16 A sockets</li>
+  <li><strong>6.0 sq mm:</strong> ~31 A — kitchen circuits, sub-mains</li>
+  <li><strong>10 sq mm:</strong> ~43 A — main incomer for 8-10 kW single-phase</li>
+  <li><strong>16 sq mm:</strong> ~58 A — three-phase incomer for 12-15 kW</li>
+</ul>
+
+<p>The calculator picks wire size based on three things: the load current, the run length (longer runs need thicker wire to keep voltage drop under 3%), and whether the cable runs in conduit, on a tray, or buried. Picking 1.5 sq mm for a 1.5-ton AC because "it's cheaper" is the kind of false economy that melts insulation behind the wall and starts fires. Polycab, Havells, Finolex, RR Kabel, and KEI are the reliable Indian brands; ISI-marked wire from any of these is the right floor.</p>
+
+<h2>Monthly bill estimate: state tariffs vary wildly</h2>
+
+<p>This is where most online "load calculators" stop being useful — they assume a flat ₹6/unit and call it a day. Indian electricity tariffs are slab-based and state-specific. A unit costing ₹4.50 in Hyderabad costs ₹9.50 in Maharashtra at the same consumption level. Sample slabs as of FY 2025-26:</p>
+
+<ul>
+  <li><strong>BESCOM (Karnataka):</strong> ₹4.15 (0-50 units) → ₹5.95 → ₹7.55 → ₹8.20 (above 200 units), plus fixed charges</li>
+  <li><strong>MSEDCL (Maharashtra):</strong> ₹4.71 → ₹10.29 → ₹14.55 → ₹16.64 (above 500 units)</li>
+  <li><strong>BSES Rajdhani (Delhi):</strong> ₹3.00 → ₹4.50 → ₹6.50 → ₹7.00 → ₹8.00, with state subsidy zeroing bills under 200 units for many users</li>
+  <li><strong>TANGEDCO (Tamil Nadu):</strong> Heavily subsidized — first 100 units free, then ₹4.60-10.00 in slabs</li>
+  <li><strong>TSSPDCL (Telangana):</strong> ₹1.95 → ₹3.10 → ₹4.80 → ₹7.70 → ₹9.00</li>
+</ul>
+
+<p>The calculator multiplies each appliance's wattage by your estimated daily usage hours, totals monthly kWh (units), then runs that consumption through your state's slab structure. Anjali's Hyderabad household running 3 ACs for 6 hours a day in May, plus the regular base load, lands at roughly 850 units/month — a bill around <strong>₹6,200-6,500</strong> after fixed charges and electricity duty. In Mumbai with the same appliance mix, the same consumption costs ₹11,500+. That's a ₹60,000-a-year difference between cities, driven entirely by tariff structure.</p>
+
+<p>If you're tracking your overall household budget in the same spreadsheet where you've already plugged in your <a href="/tools/emi-calculator">monthly home loan EMI</a> and your <a href="/tools/sip-calculator">SIP commitments</a>, electricity is often the third-largest line item after EMI and groceries — worth modelling carefully rather than guessing.</p>
+
+<h2>How to actually use the calculator (the workflow)</h2>
+
+<ol>
+  <li><strong>Walk through your home with a notepad.</strong> Every appliance, its rated wattage (check the rating plate or BEE label), and how many hours/day it actually runs. Be honest — the AC runs 8 hours in May, not 2.</li>
+  <li><strong>Group by circuit.</strong> Lights and fans on one circuit, kitchen on another, ACs each on dedicated circuits, geysers each on dedicated circuits. The calculator lets you tag appliances by room/circuit so MCB sizing is per-circuit.</li>
+  <li><strong>Pick your state's tariff</strong> from the dropdown. The slabs auto-load.</li>
+  <li><strong>Read the three outputs:</strong> sanctioned load to apply for, MCB + wire schedule for the electrician, monthly bill estimate for budgeting.</li>
+  <li><strong>Print the schedule</strong> and hand it to your contractor before wiring starts. This is the single most useful artefact a homeowner can carry to a new-construction or renovation site.</li>
+</ol>
+
+<p>If you're at the construction stage rather than retrofit, the same logic that drives this calculator drives the other building tools on the site — sizing your <a href="/tools/concrete-calculator">concrete volume for the slab</a>, working out <a href="/tools/steel-weight-calculator">TMT bar requirements for the columns</a>, picking <a href="/tools/pipe-size-calculator">plumbing pipe diameters from fixture units</a>, and finally calculating <a href="/tools/room-paint-visualizer">paint quantity per wall</a>. Each one replaces a contractor's eyeballed guess with a number you can defend on a BOQ.</p>
+
+<h2>Three scenarios where the calculator pays for itself in minutes</h2>
+
+<p><strong>Scenario 1 — Adding an AC in a Mumbai 1BHK.</strong> Existing sanctioned load is 3 kW. New 1-ton AC adds 1,100 W. New maximum demand: ~3.5 kW. Still single-phase, no upgrade needed, just a dedicated 16 A C-curve MCB on a 4 sq mm circuit from the consumer unit. ₹2,500 of wiring, no discom paperwork.</p>
+
+<p><strong>Scenario 2 — Builder flat in Noida with no clue what's wired where.</strong> Ravi's possession letter says 5 kW sanctioned. He runs the calculator on his appliance list: maximum demand comes to 6.2 kW. He applies to BSES for an upgrade to 7 kW <em>before</em> he installs the second AC, paying a one-time ₹3,500 in additional security deposit instead of dealing with summer trips and emergency electrician calls.</p>
+
+<p><strong>Scenario 3 — Small kirana shop in Surat.</strong> Owner runs a deep freezer (350 W), a visi-cooler (200 W), 4 LED lights (60 W), 1 fan (75 W), and a billing computer (150 W). Total ~835 W. Commercial single-phase 2 kW connection is plenty. The <a href="/tools/gst-calculator">monthly GST output workflow</a> and the electricity bill together give him a clean view of fixed operating costs, and he can see that a rooftop 1 kW solar panel at ~₹65,000 would offset 60% of his daytime consumption with payback inside 5 years.</p>
+
+<h2>What the calculator does not replace</h2>
+
+<p>Two things still need a licensed electrical contractor: the actual wiring work itself (and the safety inspection that follows), and the discom-side paperwork for any load enhancement. What the calculator gives you is the <em>specification</em> — the load schedule, the MCB sizes, the wire gauges, the phase configuration. Hand that to your electrician and you'll get an honest quote, because both of you are now reading from the same spec sheet rather than negotiating from his head and your guess.</p>
+
+<p>Open the <a href="/tools/electrical-load-calculator">Electrical Load Calculator</a> and run your appliance list through it before your next wiring decision →</p>`,
   }
 ];
 

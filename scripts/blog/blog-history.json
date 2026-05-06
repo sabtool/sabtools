@@ -146,9 +146,10 @@
     "glassmorphism-generator",
     "ohms-law-calculator",
     "tile-calculator",
-    "hashtag-generator"
+    "hashtag-generator",
+    "electrical-load-calculator"
   ],
-  "lastCategory": "social",
-  "totalPosts": 147,
-  "lastRun": "2026-05-05T11:19:27.913Z"
+  "lastCategory": "construction",
+  "totalPosts": 148,
+  "lastRun": "2026-05-06T07:34:57.023Z"
 }
