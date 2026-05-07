@@ -1,4 +1,9 @@
-"use client";
+// Server Component (no hooks, no event handlers, no browser APIs).
+// Demoted from "use client" as part of the technical-SEO audit (Fix 4):
+// shaves hydration overhead off every tool / blog / category page that
+// embeds an ad slot. When AdSense is wired up later, the loader script
+// should live in a SEPARATE small client component so this wrapper stays
+// server-rendered.
 
 interface AdBannerProps {
   slot?: string;

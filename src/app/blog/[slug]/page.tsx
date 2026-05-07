@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import AdBanner from "@/components/AdBanner";
+import ResponsiveImage from "@/components/ResponsiveImage";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { tools, categories } from "@/lib/tools";
 import { categoryPillars } from "@/lib/category-pillars";
@@ -441,18 +442,18 @@ export default async function BlogPostPage({
             <div className="mt-8 h-px bg-gradient-to-r from-indigo-500 via-purple-400 to-transparent" />
           </header>
 
-          {/* Hero Image */}
+          {/* Hero Image — uses build-time AVIF/WebP responsive variants
+              (see scripts/optimize-images.mjs). priority=true because this
+              is the LCP element on a blog post page. */}
           {post.image && (
             <figure className="mb-8 rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
-              <img
+              <ResponsiveImage
                 src={post.image.src}
                 alt={post.image.alt}
                 width={post.image.width}
                 height={post.image.height}
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
                 className="w-full h-auto"
+                priority
               />
               <figcaption className="text-xs text-gray-400 text-center py-2 bg-gray-50">
                 {post.image.alt}

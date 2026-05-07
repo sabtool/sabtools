@@ -9,6 +9,7 @@ import { categories, tools } from "@/lib/tools";
 import { categoryPillars } from "@/lib/category-pillars";
 import { getAllPosts } from "@/lib/blog";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import ResponsiveImage from "@/components/ResponsiveImage";
 import { authors } from "@/lib/authors";
 import {
   SITE_URL,
@@ -131,17 +132,24 @@ export default function HomePage() {
         url: `${SITE_URL}/tools/${tool.slug}`,
       })),
     },
-    // Topic Hubs ItemList — exposes our 30 pillar guides as a structured
+    // Topic Hubs ItemList — exposes our top pillar guides as a structured
     // collection so Google can crawl them as the site's primary topic
     // clusters rather than discovering them only via the long category
     // list lower on the page.
+    //
+    // Schema-level slice (top 7) trims the inline JSON-LD payload from
+    // 37 ListItems → 7, dropping home raw HTML by ~30 KB. Google rarely
+    // makes use of more than the first ~10 ListItems anyway, and the full
+    // category list is still rendered visually below (line 209), so users
+    // and crawlers following links lose nothing — only the SCHEMA payload
+    // is trimmed. (Fix from technical-SEO audit, item #3.)
     {
       "@type": "ItemList",
-      name: "Topic Guides on SabTools.in",
+      name: "Top Topic Guides on SabTools.in",
       description:
-        "Comprehensive topic-cluster guides — each one explains a category and curates the tools inside it.",
-      numberOfItems: topicHubs.length,
-      itemListElement: topicHubs.map(({ cat }, i) => ({
+        "Highest-traffic topic-cluster guides — each one explains a category and curates the tools inside it.",
+      numberOfItems: Math.min(7, topicHubs.length),
+      itemListElement: topicHubs.slice(0, 7).map(({ cat }, i) => ({
         "@type": "ListItem",
         position: i + 1,
         name: `${cat.name} Guide`,
@@ -340,14 +348,15 @@ export default function HomePage() {
               className="group block bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg hover:border-indigo-200 transition-all duration-300 hover:-translate-y-1"
             >
               {post.image && (
-                <img
+                <ResponsiveImage
                   src={post.image.src}
                   alt={post.image.alt}
                   width={400}
                   height={210}
-                  loading="lazy"
-                  decoding="async"
                   className="w-full h-36 object-cover"
+                  // No `priority` — these blog cards are below-fold on the
+                  // homepage. Lazy-load is the default.
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               )}
               <div className="p-4">

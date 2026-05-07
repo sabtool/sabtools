@@ -11,6 +11,18 @@ youtube-oauth.json
 youtube-token.json
 shorts-output/
 
+# Build-time-generated responsive image variants. The base
+# `public/blog/<slug>.webp` source files ARE committed; the per-size /
+# per-format variants are produced by scripts/optimize-images.mjs during
+# `prebuild` on Vercel. Keeps the repo ~125 MB lighter and means a single
+# regenerate happens per deploy. (technical-SEO audit Fix 5.)
+public/blog/*-w320.webp
+public/blog/*-w320.avif
+public/blog/*-w768.webp
+public/blog/*-w768.avif
+public/blog/*-w1200.webp
+public/blog/*-w1200.avif
+
 # macOS resource forks
 ._*
 .DS_Store

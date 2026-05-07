@@ -12,9 +12,12 @@ import ReadingProgress from "@/components/ReadingProgress";
 import CookieConsent from "@/components/CookieConsent";
 
 export const viewport: Viewport = {
+  // Restore default unrestricted user zoom — `maximumScale` was previously
+  // capped at 5×, an accessibility regression that low-vision users hit and
+  // a Google quality signal we don't want to fail. Browsers default to no
+  // limit, which is the correct behaviour. (Fix from technical-SEO audit.)
   width: "device-width",
   initialScale: 1,
-  maximumScale: 5,
   themeColor: "#4f46e5",
 };
 
@@ -128,9 +131,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        {/*
+          Pre-paint inline script. Does two things synchronously before any
+          content is rendered:
+            1. Theme detection — apply `dark` class if user previously
+               selected dark mode, so the page paints the correct theme
+               from the very first frame (no flash-of-light).
+            2. Hindi `lang` attribute — App Router with output:"export"
+               renders `<html lang="en">` at build time for every route.
+               For /hi and /hi/* we override to `lang="hi"` here. Googlebot
+               executes JS, so it sees the corrected lang on Hindi pages,
+               which strengthens the hi-IN hreflang signal.
+          Keep the body of this script ASCII-only and synchronous.
+          (Both behaviours from the technical-SEO audit fix report.)
+        */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="dark"){document.documentElement.classList.add("dark")}}catch(e){}})();`,
+            __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="dark"){document.documentElement.classList.add("dark")}}catch(e){}try{var p=location.pathname;if(p==="/hi"||p.indexOf("/hi/")===0){document.documentElement.lang="hi"}}catch(e){}})();`,
           }}
         />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
