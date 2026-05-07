@@ -131,7 +131,11 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
       name: tool.name,
       description: tool.description,
       featureList,
+      // Display name for applicationSubCategory ("Finance Calculators")
       category: cat?.name || "Online Tool",
+      // Slug for applicationCategory mapping ("finance" → FinanceApplication)
+      // — Phase 2 Step 2.3 schema.org rich-result optimisation.
+      categorySlug: cat?.slug,
       inLanguage: SUPPORTED_LANGUAGES,
       mainEntityOfPage: webPageId,
       // E-E-A-T author attribution — same domain expert who reviews the

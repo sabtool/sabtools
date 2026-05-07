@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { BRAND } from "@/lib/brand";
+import OrganizationSchema from "@/components/schema/OrganizationSchema";
+import WebSiteSchema from "@/components/schema/WebSiteSchema";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -195,6 +197,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-screen flex flex-col">
+        {/*
+          Global JSON-LD: Organization + WebSite are emitted once per page
+          for the whole site. Per AI_VISIBILITY_ACTION_PLAN.md Step 2.2 —
+          AI crawlers cite the brand identity from these nodes when
+          answering "what is sabtools.in". The home page also emits an
+          Organization + WebSite via its inline @graph (src/lib/schema.ts);
+          because both use the SAME @id (`#organization` / `#website`),
+          Google deduplicates them automatically. (Verified — same @id
+          values are exported as ORG_ID and WEBSITE_ID from schema.ts.)
+        */}
+        <OrganizationSchema />
+        <WebSiteSchema />
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-5KPJ4LPT"

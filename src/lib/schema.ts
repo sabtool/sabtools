@@ -232,7 +232,16 @@ export interface WebApplicationNodeInput {
   name: string;
   description: string;
   featureList?: string[];
+  /** Human-readable category name (used for applicationSubCategory). */
   category?: string;
+  /**
+   * Category slug from src/lib/tools.ts (e.g., "finance", "health", "pdf").
+   * Used to derive the schema.org applicationCategory value via
+   * applicationCategoryForToolCategory(). Phase 2 Step 2.3 — finance
+   * tools should declare FinanceApplication, etc. If omitted, falls back
+   * to the generic UtilityApplication.
+   */
+  categorySlug?: string;
   inLanguage?: readonly string[] | string;
   /** If the tool has a named human reviewer/author (for E-E-A-T), pass their person @id */
   authorId?: string;
@@ -242,8 +251,75 @@ export interface WebApplicationNodeInput {
 }
 
 /**
+ * Map a SabTools tool category slug to the schema.org applicationCategory
+ * value Google's rich-results parser expects. Per AI_VISIBILITY_ACTION_PLAN.md
+ * Step 2.3, finance tools should declare `FinanceApplication` (not the
+ * generic `UtilityApplication`) because Google's rich-result rendering
+ * treats the more specific value as a stronger relevance signal for
+ * money-related searches. Same logic for other domain-specific categories.
+ *
+ * Returns "UtilityApplication" as the fallback for any category not
+ * listed below — this is a safe default per schema.org.
+ */
+function applicationCategoryForToolCategory(category?: string): string {
+  switch (category) {
+    case "finance":
+    case "tax":
+    case "business":
+    case "realestate":
+    case "shopping":
+      return "FinanceApplication";
+    case "health":
+      return "HealthApplication";
+    case "education":
+    case "exam":
+    case "career":
+    case "student":
+      return "EducationalApplication";
+    case "developer":
+    case "ai":
+    case "css":
+    case "data":
+    case "seo":
+    case "security":
+      return "DeveloperApplication";
+    case "image":
+    case "pdf":
+    case "charts":
+      return "DesignApplication";
+    case "fun":
+    case "wedding":
+    case "social":
+    case "whatsapp":
+    case "astrology":
+      return "MultimediaApplication";
+    case "sports":
+      return "GameApplication";
+    case "math":
+    case "science":
+    case "converters":
+    case "datetime":
+    case "text":
+    case "utility":
+    case "indiaguide":
+    case "vehicle":
+    case "construction":
+    case "agriculture":
+    case "electrical":
+    case "legal":
+    case "cooking":
+    default:
+      return "UtilityApplication";
+  }
+}
+
+/**
  * WebApplication for a tool page. Language defaults to bilingual — pass a
  * single string if the specific surface is English-only or Hindi-only.
+ *
+ * applicationCategory is now derived from `input.category` so finance
+ * tools emit `FinanceApplication`, health tools emit `HealthApplication`,
+ * etc. — see applicationCategoryForToolCategory() above. (Phase 2 Step 2.3.)
  */
 export function webApplicationNode(input: WebApplicationNodeInput) {
   const lang = input.inLanguage ?? SUPPORTED_LANGUAGES;
@@ -253,7 +329,7 @@ export function webApplicationNode(input: WebApplicationNodeInput) {
     name: input.name,
     url: `${SITE_URL}/tools/${input.slug}`,
     description: input.description,
-    applicationCategory: "UtilityApplication",
+    applicationCategory: applicationCategoryForToolCategory(input.categorySlug),
     applicationSubCategory: input.category || "OnlineTool",
     operatingSystem: "All",
     browserRequirements: "Requires JavaScript. Requires HTML5.",
