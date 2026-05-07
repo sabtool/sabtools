@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { BRAND } from "@/lib/brand";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -21,14 +22,19 @@ export const viewport: Viewport = {
   themeColor: "#4f46e5",
 };
 
+// All copy below is derived from BRAND (src/lib/brand.ts) — single source
+// of truth per AI_VISIBILITY_ACTION_PLAN.md Step 1.3. Editing the brand
+// description in BRAND propagates to every page that builds metadata
+// from this layout, ensuring AI crawlers see one consistent identity
+// across the entire site.
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sabtools.in"),
+  metadataBase: new URL(BRAND.url),
   title: {
-    default: "SabTools.in — 460+ Free Online Tools for India",
-    template: "%s | SabTools.in",
+    default: `${BRAND.name} — ${BRAND.tagline}`,
+    template: `%s | ${BRAND.name}`,
   },
-  description:
-    "460+ free online tools — EMI, SIP, GST calculators, AI tools, PDF tools & more. 100% free, no signup. Trusted by Indians.",
+  applicationName: BRAND.name,
+  description: BRAND.shortDescription,
   keywords: [
     "free online tools",
     "free online calculator",
@@ -56,9 +62,12 @@ export const metadata: Metadata = {
     "bmi calculator",
     "currency converter",
   ],
-  authors: [{ name: "SabTools.in" }],
-  creator: "SabTools.in",
-  publisher: "SabTools.in",
+  // Authors / publisher / creator all reference the founder by name so
+  // schema.org Person resolution stays consistent with the Person nodes
+  // emitted by personNode() in src/lib/schema.ts (Rakesh Seervi).
+  authors: [{ name: BRAND.founder }],
+  creator: BRAND.name,
+  publisher: BRAND.name,
   category: "Utility Tools",
   openGraph: {
     type: "website",
@@ -68,28 +77,28 @@ export const metadata: Metadata = {
     // exists at /hi. Pages with both locales surfaced get a richer share
     // preview on Indian social platforms (Strategy §2.6 / Batch 27).
     alternateLocale: ["hi_IN"],
-    url: "https://sabtools.in",
-    siteName: "SabTools.in",
-    title: "SabTools.in — 460+ Free Online Tools for India",
-    description: "460+ free online tools — calculators, converters, AI tools, PDF tools, developer tools & more. 100% free, no signup.",
+    url: BRAND.url,
+    siteName: BRAND.name,
+    title: `${BRAND.name} — ${BRAND.tagline}`,
+    description: BRAND.longDescription,
     images: [
       {
-        url: "https://sabtools.in/og-image.png",
+        url: `${BRAND.url}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "SabTools.in - 460+ Free Online Tools for India",
+        alt: `${BRAND.name} — ${BRAND.tagline}`,
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SabTools.in - 460+ Free Online Tools",
-    description: "460+ free online tools for India — calculators, converters, AI & more. 100% free, no signup.",
+    title: `${BRAND.name} — ${BRAND.tagline}`,
+    description: BRAND.shortDescription,
     images: [
       {
-        url: "https://sabtools.in/og-image.png",
-        alt: "SabTools.in - 460+ Free Online Tools for India",
+        url: `${BRAND.url}/og-image.png`,
+        alt: `${BRAND.name} — ${BRAND.tagline}`,
       },
     ],
     creator: "@sabtools",
@@ -107,11 +116,11 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://sabtools.in",
+    canonical: BRAND.url,
     languages: {
-      "en-IN": "https://sabtools.in",
-      "hi-IN": "https://sabtools.in/hi",
-      "x-default": "https://sabtools.in",
+      "en-IN": BRAND.url,
+      "hi-IN": `${BRAND.url}/hi`,
+      "x-default": BRAND.url,
     },
   },
   verification: {
