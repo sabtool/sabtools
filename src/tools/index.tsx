@@ -219,6 +219,14 @@ const toolComponents: Record<string, AnyComponent> = {
   "tax-saving-fd-vs-elss-calculator": dynamic(() => import("./TaxSavingFdVsElssCalculator")),
   "stp-calculator": dynamic(() => import("./StpCalculator")),
 
+  // Sports & Cricket — IPL Phase 1 (6) calculators
+  "ipl-fantasy-points-calculator": dynamic(() => import("./IplFantasyPointsCalculator")),
+  "ipl-required-run-rate-calculator": dynamic(() => import("./IplRequiredRunRateCalculator")),
+  "ipl-nrr-calculator": dynamic(() => import("./IplNrrCalculator")),
+  "ipl-win-probability-calculator": dynamic(() => import("./IplWinProbabilityCalculator")),
+  "ipl-ticket-price-calculator": dynamic(() => import("./IplTicketPriceCalculator")),
+  "ipl-auction-salary-cap-calculator": dynamic(() => import("./IplAuctionSalaryCapCalculator")),
+
   // Fun & Utility (10)
   "typing-speed-test": dynamic(() => import("./TypingSpeedTest")),
   "love-calculator": dynamic(() => import("./LoveCalculator")),

@@ -159,17 +159,18 @@ const SPORTS_LEAGUES = [
   },
 ];
 
+// IPL & cricket calculator tools — these are the calculator slugs that
+// actually exist in our catalog (registered in src/lib/tools.ts and
+// dynamically imported in src/tools/index.tsx). Kept in sync with the
+// IPL Phase 1 build — six tool moat covering the highest-intent IPL
+// calculator queries.
 const SPORTS_TOOLS = [
-  { slug: "run-rate-calculator", name: "Run Rate Calculator", icon: "🏏" },
-  { slug: "net-run-rate-calculator", name: "Net Run Rate (NRR)", icon: "📊" },
-  { slug: "duckworth-lewis-calculator", name: "Duckworth-Lewis (DLS)", icon: "🌧️" },
-  { slug: "fantasy-points-calculator", name: "Fantasy Points", icon: "🎯" },
-  { slug: "cricket-batting-strike-rate", name: "Batting Strike Rate", icon: "⚡" },
-  { slug: "cricket-bowling-economy", name: "Bowling Economy", icon: "🎳" },
-  { slug: "team-name-generator", name: "Team Name Generator", icon: "🎨" },
-  { slug: "tournament-bracket-generator", name: "Tournament Bracket", icon: "🏆" },
-  { slug: "stopwatch-online", name: "Stopwatch", icon: "⏱️" },
-  { slug: "countdown-timer", name: "Countdown Timer", icon: "⏰" },
+  { slug: "ipl-fantasy-points-calculator", name: "IPL Fantasy Points", icon: "🏏" },
+  { slug: "ipl-required-run-rate-calculator", name: "Required Run Rate", icon: "🎯" },
+  { slug: "ipl-nrr-calculator", name: "Net Run Rate (NRR)", icon: "📊" },
+  { slug: "ipl-win-probability-calculator", name: "Win Probability", icon: "🎲" },
+  { slug: "ipl-ticket-price-calculator", name: "IPL Ticket Price", icon: "🎟️" },
+  { slug: "ipl-auction-salary-cap-calculator", name: "Auction Salary Cap", icon: "💰" },
 ];
 
 export default function SportsPage() {
