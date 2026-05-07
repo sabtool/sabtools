@@ -73,17 +73,20 @@ export const metadata: Metadata = {
 
 // === Static schedule data (refresh manually or via auto-blog cron) ===
 
+// Each team's slug matches the canonical entry in src/lib/ipl-data.ts so
+// the cards below can link to the team's dedicated /sports/ipl-2026/teams/
+// detail page.
 const IPL_2026_TEAMS = [
-  { code: "MI", name: "Mumbai Indians", color: "from-blue-500 to-blue-700", titles: 5 },
-  { code: "CSK", name: "Chennai Super Kings", color: "from-yellow-400 to-yellow-600", titles: 5 },
-  { code: "KKR", name: "Kolkata Knight Riders", color: "from-purple-500 to-purple-700", titles: 3 },
-  { code: "GT", name: "Gujarat Titans", color: "from-slate-700 to-slate-900", titles: 1 },
-  { code: "RCB", name: "Royal Challengers Bengaluru", color: "from-red-600 to-red-800", titles: 1 },
-  { code: "RR", name: "Rajasthan Royals", color: "from-pink-500 to-pink-700", titles: 1 },
-  { code: "SRH", name: "Sunrisers Hyderabad", color: "from-orange-500 to-orange-700", titles: 1 },
-  { code: "DC", name: "Delhi Capitals", color: "from-blue-600 to-red-600", titles: 0 },
-  { code: "PBKS", name: "Punjab Kings", color: "from-red-500 to-red-700", titles: 0 },
-  { code: "LSG", name: "Lucknow Super Giants", color: "from-cyan-500 to-blue-600", titles: 0 },
+  { slug: "mumbai-indians", code: "MI", name: "Mumbai Indians", color: "from-blue-500 to-blue-700", titles: 5 },
+  { slug: "chennai-super-kings", code: "CSK", name: "Chennai Super Kings", color: "from-yellow-400 to-yellow-600", titles: 5 },
+  { slug: "kolkata-knight-riders", code: "KKR", name: "Kolkata Knight Riders", color: "from-purple-500 to-purple-700", titles: 3 },
+  { slug: "gujarat-titans", code: "GT", name: "Gujarat Titans", color: "from-slate-700 to-slate-900", titles: 1 },
+  { slug: "royal-challengers-bengaluru", code: "RCB", name: "Royal Challengers Bengaluru", color: "from-red-600 to-red-800", titles: 1 },
+  { slug: "rajasthan-royals", code: "RR", name: "Rajasthan Royals", color: "from-pink-500 to-pink-700", titles: 1 },
+  { slug: "sunrisers-hyderabad", code: "SRH", name: "Sunrisers Hyderabad", color: "from-orange-500 to-orange-700", titles: 1 },
+  { slug: "delhi-capitals", code: "DC", name: "Delhi Capitals", color: "from-blue-600 to-red-600", titles: 0 },
+  { slug: "punjab-kings", code: "PBKS", name: "Punjab Kings", color: "from-red-500 to-red-700", titles: 0 },
+  { slug: "lucknow-super-giants", code: "LSG", name: "Lucknow Super Giants", color: "from-cyan-500 to-blue-600", titles: 0 },
 ];
 
 const SPORTS_LEAGUES = [
@@ -238,26 +241,46 @@ export default function SportsPage() {
           <LiveCricketScores />
         </section>
 
+        {/* === IPL 2026 — link to dedicated hub === */}
+        <section className="mb-10">
+          <Link
+            href="/sports/ipl-2026"
+            className="block bg-gradient-to-br from-blue-600 via-purple-600 to-fuchsia-600 text-white rounded-3xl p-6 shadow-xl hover:shadow-2xl hover:scale-[1.01] transition-all"
+          >
+            <div className="flex items-center justify-between flex-col sm:flex-row gap-3">
+              <div>
+                <div className="text-xs font-bold uppercase tracking-widest opacity-80 mb-1">
+                  🏆 19th Season · 10 Teams · 74 Matches
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-extrabold">IPL 2026 — Complete Hub</h2>
+                <p className="text-sm text-white/90 mt-1 max-w-xl">
+                  Schedule, all 10 teams, 18 years of history (2008-2025), all-time records, points table & calculators.
+                </p>
+              </div>
+              <div className="text-white text-2xl">→</div>
+            </div>
+          </Link>
+        </section>
+
         {/* === IPL 2026 Teams === */}
         <section className="mb-12">
           <div className="flex items-center justify-between mb-4 flex-col sm:flex-row gap-2 sm:gap-0">
             <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
               <span>🏆</span> IPL 2026 — Franchise Teams
             </h2>
-            <a
-              href="https://www.iplt20.com/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/sports/ipl-2026"
               className="text-xs px-3 py-1.5 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700"
             >
-              Official IPL Site ↗
-            </a>
+              View IPL Hub →
+            </Link>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
             {IPL_2026_TEAMS.map((t) => (
-              <div
+              <Link
                 key={t.code}
-                className="rounded-xl overflow-hidden shadow-sm border border-gray-100"
+                href={`/sports/ipl-2026/teams/${t.slug}`}
+                className="block rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md hover:border-indigo-200 hover:-translate-y-0.5 transition-all"
               >
                 <div
                   className={`bg-gradient-to-br ${t.color} text-white p-4 text-center`}
@@ -272,7 +295,7 @@ export default function SportsPage() {
                     {t.name}
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>
