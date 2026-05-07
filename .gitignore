@@ -11,6 +11,13 @@ youtube-oauth.json
 youtube-token.json
 shorts-output/
 
+# Personal content-strategy assets — system prompts, draft posts,
+# editorial calendars. Lives next to the codebase for convenience but
+# must NOT be published to the public GitHub repo (codifies positioning
+# competitors could copy).
+sabtools-content-bot/
+SEO-reports/
+
 # Build-time-generated responsive image variants. The base
 # `public/blog/<slug>.webp` source files ARE committed; the per-size /
 # per-format variants are produced by scripts/optimize-images.mjs during
