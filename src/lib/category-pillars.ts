@@ -99,6 +99,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
         q: "Do you store my income or loan details?",
         a: "No. Every calculator runs entirely in your browser using client-side JavaScript. The numbers you type never touch any server, are never logged, and never leave your device. You can verify this by opening browser DevTools and watching the Network tab while you use the calculator — there is no outgoing request with your inputs.",
       },
+      {
+        q: "Are the calculator outputs updated after every Union Budget?",
+        a: "Yes — within 2-3 weeks of any Budget that changes tax slabs, 80C/80D limits, the 87A rebate ceiling, capital-gains rates, or PPF/EPF interest rates. The FY 2025-26 (AY 2026-27) figures currently in the calculators reflect the post-Budget 2024 changes including the new-regime restructuring and the LTCG-indexation removal for non-equity assets sold after 23 July 2024.",
+      },
+      {
+        q: "Will the EMI calculator work on a budget Android phone over patchy 4G?",
+        a: "Yes. Every finance calculator is statically generated and runs entirely client-side once the page has loaded. After first load, the tool works without an active connection — useful when you are at a bank branch verifying an offer letter on a 2 GB RAM phone. Page-weight on the calculator screen is under 200 KB without third-party scripts.",
+      },
+      {
+        q: "Which finance calculator do most first-time home buyers in metros start with?",
+        a: "Most start with the EMI Calculator on a ₹50-80 lakh principal at the current 8.5-9% home-loan band, then move to the Stamp Duty Calculator (which adds 5-7% to the property cost in Maharashtra, Karnataka, Tamil Nadu) and the Income Tax Calculator to model the Section 24B interest deduction (₹2 lakh ceiling on self-occupied property). Together these three give the realistic monthly cash outflow figure.",
+      },
     ],
   },
 
@@ -176,6 +188,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
       {
         q: "Can I batch-process multiple images at once?",
         a: "The Bulk Image Resizer accepts multiple files and outputs them as a ZIP. For batch compression specifically, the Image Compressor supports drag-and-drop of up to 20 images at once; each is processed in parallel using a Web Worker so a batch of 20 completes in roughly the time one would take on the main thread.",
+      },
+      {
+        q: "Will my image actually stay on my device?",
+        a: "Yes. Every image tool uses the browser's Canvas, OffscreenCanvas, and WebAssembly APIs to decode, transform, and re-encode files entirely in your browser tab. You can verify by opening the Network tab in DevTools and watching: no upload request fires when you drop a file. It is the only architecture safe enough for Aadhaar scans, salary slips, or medical reports.",
+      },
+      {
+        q: "Why does WebP/AVIF compress so much smaller than JPEG?",
+        a: "WebP and AVIF use modern block-based prediction and entropy coding (VP8/VP9 derivatives for WebP, AV1 derivative for AVIF) that achieve 25-50% smaller files than JPEG at equivalent visible quality. AVIF in particular is excellent for photographic content. Both are now supported in every major browser including older Chrome and Firefox; use them where the destination accepts them.",
+      },
+      {
+        q: "Will the government-form-photo presets pass online portal verification?",
+        a: "Yes — the dimensions and DPI presets exactly match published specifications for UPSC, SSC, NEET, JEE, IBPS, RRB, passport, and Aadhaar enrollment. The most common rejection reason at portal upload is wrong file size (over 20 KB for many photo uploads); our presets target that ceiling specifically with quality optimised for facial-recognition acceptance.",
       },
     ],
   },
@@ -255,6 +279,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
         q: "Why are there so many variations of similar tools?",
         a: "Because the prompts make the difference. A 'blog title generator' tuned for tech articles produces substantially better titles than one tuned for cooking blogs. We ship separate tools rather than one generic 'content writer' so the prompt is always specific to the output you need.",
       },
+      {
+        q: "Do these AI tools send my prompt to a third-party model?",
+        a: "Some do, some do not — each tool is explicit about its architecture. Tools that need a large language model (article rewriter, content generator, summarizer, paraphraser) make API calls to a configured LLM provider; those tools list the provider on the page. Pure rule-based tools (text statistics, readability score, syllable count) run client-side. Read the tool's privacy note before pasting sensitive content.",
+      },
+      {
+        q: "Are the outputs original enough to publish on a blog without plagiarism flags?",
+        a: "Generated text is fresh per session — the same prompt yields different output across runs because the underlying models are non-deterministic. That said, AI-generated content without human editing reads templated and triggers low-quality signals on Google. Use these tools as drafting starters, then rewrite in your voice with concrete examples — the way a careful writer uses any first-draft input.",
+      },
+      {
+        q: "Will AI tools work in Hindi or other Indian languages?",
+        a: "The text generation, paraphraser, and summarizer tools handle Hindi, Tamil, Bengali, Marathi, Gujarati, Punjabi, Telugu, Malayalam, and Kannada at quality similar to English. Output quality is highest for Hindi and Tamil (most training data); lower for Konkani, Maithili, and other low-resource languages. Code-mixed Hinglish is handled but flagged as informal register on the readability score.",
+      },
     ],
   },
 
@@ -332,6 +368,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
       {
         q: "Can I save favourite inputs or templates?",
         a: "Not currently — the tools are stateless to preserve the privacy guarantee (nothing saved means nothing to leak). If you find yourself running the same input repeatedly, either bookmark the page URL with a query param (several tools support this) or save a gist locally.",
+      },
+      {
+        q: "Can I use these tools while logged in to a corporate VPN with strict DLP?",
+        a: "Yes — all developer tools are static pages that run in your browser. No outbound request fires for the input you paste; corporate DLP scanners that watch for credential leakage will see nothing because nothing leaves the device. JWTs, API keys, and database connection strings stay in browser memory only. Worst case if the tab crashes, the input is gone — there is no server-side persistence to leak.",
+      },
+      {
+        q: "Why is the regex tester limited to JavaScript flavour?",
+        a: "The tester runs in the browser using JavaScript's native RegExp engine, so the supported features are a subset of PCRE — no recursive patterns, limited Unicode property escapes on older browsers, lookbehind only on modern V8/SpiderMonkey/JavaScriptCore. For PCRE, Python re, or Go regexp validation, run the same pattern in the target environment because edge cases differ. The tool flags the most common JavaScript-vs-PCRE incompatibilities.",
+      },
+      {
+        q: "Do the JSON, XML, and YAML formatters handle multi-MB documents?",
+        a: "JSON formatter handles up to ~10 MB before DOM rendering becomes the bottleneck (the parser itself is faster than that). XML and YAML cap at similar sizes. For larger documents — log dumps, full database exports, multi-megabyte build manifests — use a CLI tool (`jq`, `yq`, `xmllint`) on your local machine; no browser-based formatter will be as fast as a native binary on files that size.",
       },
     ],
   },
@@ -411,6 +459,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
         q: "Do I need structured data on every page?",
         a: "Not every page, but every page type. A blog post needs Article schema. A product page needs Product schema. A recipe needs Recipe schema. Your homepage needs Organization + WebSite schema. Pages that are purely navigational (like a contact page) do not need their own schema types beyond the BreadcrumbList and the site-wide Organization reference.",
       },
+      {
+        q: "Are the schema generators updated for the 2026 Google guidelines?",
+        a: "Yes — the schema generators reflect the post-March-2026 Core Update guidance, including the relaxed FAQPage eligibility for non-product pages, the tightened Article author requirements (must be a Person with sameAs), and the expanded HowTo recipe properties. The Organization schema generator includes the 2026-recommended sameAs profile list and the contactPoint type for AI Overview citations.",
+      },
+      {
+        q: "Will the meta tags I generate trigger truncation in the SERP?",
+        a: "The Meta Tag Generator counts characters as it types and warns when the title exceeds 55 characters or the description exceeds 155 characters. Google sometimes truncates earlier on mobile, sometimes uses longer than the cap on desktop, but writing within the cap minimises the chance of an awkward cut-off in either rendering. The SERP Preview tool shows both desktop and mobile renderings live.",
+      },
+      {
+        q: "Does the OG tag preview match what WhatsApp, Facebook, and LinkedIn actually display?",
+        a: "The preview is rendered against each platform's published Card spec — WhatsApp uses the Open Graph image at a specific aspect ratio (1.91:1 minimum), Facebook prefers 1200 × 630, LinkedIn the same. The preview catches the most common errors: og:image too small, og:title missing, og:description truncated. For a binding test, use Facebook's official Sharing Debugger before launch, since they cache the first crawl.",
+      },
     ],
   },
 
@@ -488,6 +548,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
       {
         q: "Do these tools work offline?",
         a: "Yes — after the initial page load, every text tool works without an internet connection. All the logic is JavaScript running in your browser. You can install SabTools.in as a PWA from your browser menu to keep the tools accessible offline indefinitely.",
+      },
+      {
+        q: "Does the word count match what Microsoft Word or Google Docs reports?",
+        a: "Yes — the Word Counter splits on the same Unicode-word-boundary rules MS Word and Google Docs use, so identical text produces identical counts across the three tools. Differences arise only with hyphenated words and abbreviations: 'state-of-the-art' counts as 4 words in Word and the calculator; some tools count it as 1. The Word Counter shows the rule it applied so you can reconcile any one-off difference.",
+      },
+      {
+        q: "Will the text-formatting tools preserve Hindi or Tamil characters correctly?",
+        a: "Yes. Every text tool uses native JavaScript string handling which is fully Unicode-aware (UTF-16 encoded internally). Devanagari, Tamil, Bengali, Telugu, Malayalam, Gujarati, Punjabi, Kannada, and Odia scripts all round-trip cleanly through case conversion, sorting, search-replace, and reverse operations. Combining characters and conjuncts (jukta-akshara) preserve correctly because we operate on grapheme clusters, not raw code points.",
+      },
+      {
+        q: "Is plagiarism check accurate for academic submissions?",
+        a: "Our plagiarism check is heuristic — it identifies passages that match common-phrase databases and online sources we index. It is not a substitute for university-grade systems like Turnitin, iThenticate, or Urkund which check against subscription databases of student submissions and journals. For a binding academic check (thesis, dissertation, journal submission), use the institution-licensed system; our tool is for self-review during drafting.",
       },
     ],
   },
@@ -567,6 +639,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
         q: "Are my health inputs stored anywhere?",
         a: "No. Every health calculator runs entirely in your browser. Height, weight, age, pregnancy dates — none of it is sent to any server, none of it is logged, none of it is stored between sessions. You can verify this by using the tool with DevTools' Network tab open — no outgoing requests will include your health data.",
       },
+      {
+        q: "Will these calculators give wrong results for South Asian body types?",
+        a: "No — the BMI Calculator uses the WHO Asia-Pacific cut-offs (overweight at 23+ rather than 25+) specifically because South Asian populations develop metabolic risk at lower BMI than the global average. The BMR Calculator uses the Mifflin-St Jeor equation which is more accurate for South Asian subjects than the older Harris-Benedict equation. Both calibrations come from peer-reviewed Indian-cohort studies.",
+      },
+      {
+        q: "Are pregnancy calculators safe to rely on for clinical dating?",
+        a: "For routine LMP-based dating they match what the OBGYN's spreadsheet does (LMP + 280 days). For ultrasound-based dating after 12 weeks, the OBGYN uses scan-derived crown-rump length which is more accurate than menstrual dating; the calculator does not replace that scan. Use the calculator for between-appointment date checks; defer to the doctor's chart at every visit.",
+      },
+      {
+        q: "Does the calorie counter work for vegetarian Indian meals specifically?",
+        a: "Yes — the underlying database includes per-100g and per-serving nutrition for 800+ Indian dishes including all major regional vegetarian preparations (Punjabi rajma, Maharashtrian vada, Gujarati dhokla, South Indian sambhar, Bengali alur dom). Ghee/oil sensitivity is handled with a home-style vs restaurant-style toggle since the same dish at home is often 30-40% lower in calories than the restaurant version.",
+      },
     ],
   },
 
@@ -644,6 +728,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
       {
         q: "Are these numbers good enough to file an actual ITR with?",
         a: "They are good enough to verify a CA's computation or the return your TDS deductor computes, and to plan investments and declarations. For the final ITR filing you will use the official [Income Tax e-filing portal](https://www.incometax.gov.in/iec/foportal/) or a regulated filing service because the portal cross-references your Form 26AS and AIS automatically. Use our tools upstream for planning; use the portal downstream for filing.",
+      },
+      {
+        q: "Are FY 2025-26 / AY 2026-27 changes already reflected in the calculator?",
+        a: "Yes — including the new-regime standard deduction of ₹75,000, the revised ₹7 lakh rebate ceiling under Section 87A, the surcharge cap at 25% for the new regime, and the post-Budget 2024 LTCG and STCG rates on equity. The calculator labels which financial year and assessment year the rate set applies to; if you select FY 2024-25 it loads the older rates for return-filing of last year's income.",
+      },
+      {
+        q: "Why does my employer's TDS sheet show different deductions than this calculator?",
+        a: "Employers compute TDS based on declared investments and projected annual income; if you declared full 80C and HRA upfront and the actual claim differs, the year-end reconciliation produces a refund or additional tax. Our calculator computes the final liability with your real numbers — use it after the fact to estimate your refund and again before next year's declaration to choose the right regime.",
+      },
+      {
+        q: "Does the calculator handle freelance and consultant income correctly?",
+        a: "Yes — for consultants and freelancers eligible under Section 44ADA (gross receipts up to ₹75 lakh, presumptive 50% net profit), the calculator applies the presumptive rule and skips the standard deduction (which is salaried-only). For other freelancers, gross receipts minus actual business expenses go in as 'income from business or profession' and are then aggregated with other heads.",
       },
     ],
   },
@@ -723,6 +819,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
         q: "Do you store the names I type into Love Calculator or Couple Name Generator?",
         a: "No. Every fun tool runs entirely in your browser. We do not log your inputs, do not store results, and do not use the names for any analytics. Refresh the page and everything is gone.",
       },
+      {
+        q: "Are the love-compatibility and lucky-number tools meant seriously?",
+        a: "No — they are entertainment tools that use simple letter-arithmetic and date-arithmetic to produce a number. There is no scientific basis for romantic-compatibility prediction or for daily-luck calculation, and we do not present these results as anything other than fun. They are designed for sharing on Instagram and WhatsApp groups, not for life decisions.",
+      },
+      {
+        q: "Will the funny-name and cool-text generators work for Hindi, Tamil, Bengali names?",
+        a: "Yes — the generators handle Devanagari, Tamil, Bengali, Telugu, Marathi, Gujarati, Punjabi, Kannada, and Malayalam scripts. The fancy-text and decorative-font generators map Latin characters to Unicode look-alikes; for Indian-language input the tools transliterate to Latin first when needed and produce stylised output suitable for chat apps. Output renders correctly on WhatsApp, Telegram, and most social platforms.",
+      },
+      {
+        q: "How private are the inputs to these tools?",
+        a: "Inputs are processed entirely in your browser — names, dates of birth, secret-crush selections never reach our servers. Some fun tools embed share links that include your inputs as URL parameters (so the friend you share with sees your result page); those are visible if the friend forwards the URL. For anything you would not want forwarded, use the 'private mode' toggle that strips inputs from the share URL.",
+      },
     ],
   },
 
@@ -800,6 +908,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
       {
         q: "Can I convert multiple values at once, like a whole column from Excel?",
         a: "Yes. Every converter has a Bulk Convert mode where you paste a list of numbers (one per line) and it returns the converted values in the same format, ready to paste back into Excel or Google Sheets.",
+      },
+      {
+        q: "How accurate is the unit converter at boundary precision?",
+        a: "Length, weight, area, volume conversions use the SI-defined exact ratios — millimetre to inch is 0.03937007874015748 to 16 decimal places, hard-coded. Temperature uses the exact Celsius-Fahrenheit-Kelvin formulas. Currency conversion uses live rates and is therefore accurate within the API provider's bid-ask spread. Cooking volume conversions assume the US 240 ml cup unless you toggle to UK 250 ml or Indian 200 ml.",
+      },
+      {
+        q: "Are the Indian-unit conversions (bigha, guntha, kanal, cent) correct?",
+        a: "Yes — but with the explicit state-specific override since these units vary by region. A bigha is 1,600 sq ft in Punjab/Haryana, 27,000 sq ft in UP, and 27,225 sq ft in West Bengal — the converter asks for state and applies the correct multiplier. Always cross-check with your local revenue records before treating the converter output as binding for legal purposes.",
+      },
+      {
+        q: "Does the currency converter freeze if the exchange-rate API is rate-limited?",
+        a: "The currency converter caches the most recent rates for 60 seconds and falls back to the previous good cache if the live API hits a rate limit or temporary outage. The displayed rate timestamp shows when the rate was last fetched. For a binding rate (large remittance, business invoice), always check the bank's quoted rate at the moment of transaction; published rates can move 0.5-1% intraday.",
       },
     ],
   },
@@ -879,6 +999,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
         q: "Is the UUID generator suitable for production database primary keys?",
         a: "Yes. UUID v4 (random) is suitable as a primary key in virtually any database where you want globally unique identifiers. UUID v7 (time-ordered) is often preferable for databases like Postgres and MySQL where index locality matters — rows inserted close in time will sort close in time, improving B-tree insert performance. Both are produced to RFC 9562 spec.",
       },
+      {
+        q: "Are passwords generated here as random as those from a password manager?",
+        a: "Yes — both use crypto.getRandomValues() under the hood, which is the browser's CSPRNG (cryptographically secure pseudo-random number generator). The randomness quality is identical. What a password manager adds is encrypted storage, autofill, and breach-monitoring; what our tool adds is no-account access and zero-server-storage. Generate here, paste into your password manager for storage.",
+      },
+      {
+        q: "Why do you not offer a 'check if my password was leaked' service?",
+        a: "Such a service requires sending the password (or a hash prefix) to a database of breaches like HaveIBeenPwned. Hash-prefix checking is technically safe (only the first 5 hex characters of the SHA-1 are sent, and the API returns a list of matching suffixes for you to check locally) but it is still a network round-trip we would rather not make in a security-tools context. Use Have I Been Pwned's own page directly when you need that check.",
+      },
+      {
+        q: "Are the SHA-256 and SHA-512 hashes here suitable for blockchain or cryptographic signature use?",
+        a: "Yes for the hashing primitives — SHA-256 and SHA-512 are computed using SubtleCrypto.digest(), which is the browser's native NIST-standardised implementation. The output is bit-identical to OpenSSL or Node.js's crypto.createHash for the same input. For signing (Ed25519, ECDSA, RSA), you need a key-pair workflow; our tools cover hashing only, not signature creation or verification.",
+      },
     ],
   },
 
@@ -956,6 +1088,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
       {
         q: "Does the PDF to Word conversion preserve formatting?",
         a: "It preserves text content, paragraph structure, and most tables. Complex layouts (multi-column magazines, PDFs built from image scans, heavy diagrams) often lose some formatting during conversion because Word's document model and PDF's fixed-layout model do not map cleanly. For invoices, letters, and simple reports, the conversion is usually clean enough to edit directly.",
+      },
+      {
+        q: "Why does the OCR tool sometimes fail on Hindi handwritten notes?",
+        a: "Hindi handwriting recognition is a hard ML problem — printed Devanagari is well-handled because Tesseract has good models for it, but handwriting (especially in mixed-cursive Devanagari + Latin numerals + decorative characters) is much weaker. For typed/printed Hindi PDFs the OCR is reliable; for handwritten notes the result needs heavy post-editing. This is an industry-wide limitation, not a SabTools-specific weakness.",
+      },
+      {
+        q: "Does the protect-PDF feature use the same encryption banks and government use?",
+        a: "Yes — PDFLib's protect tool applies AES-256 encryption (the same algorithm Adobe Acrobat Pro uses, the same FIPS-approved cipher banks use for transit). A 16+ character password with mixed types is practically unbreakable without the password. Weak passwords (dates of birth, common words) are vulnerable to brute-forcing in hours by specialised software regardless of the cipher used.",
+      },
+      {
+        q: "Will compressing a PDF to government-portal size break the readability?",
+        a: "The compressor lets you pick a quality target (high, medium, low) and shows the resulting file size before download. At 'medium' compression, Aadhaar / PAN / mark-sheet PDFs typically compress 60-80% with no visible degradation on screen or print. At 'low' (aggressive), text stays crisp but image-heavy pages lose some detail; we flag if the target size is unreachable without crossing into low-quality mode.",
       },
     ],
   },
@@ -1035,6 +1179,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
         q: "Does the Area Calculator accept inputs in sq.ft, m², and bigha?",
         a: "For geometric area calculations (given a triangle's sides, or a rectangle's dimensions) inputs are in your chosen length unit — metres, feet, inches — and the answer is in the corresponding area unit. If you need to convert the final area to bigha, cent, or acre, pass it through the Area Converter (in the converters category).",
       },
+      {
+        q: "Are the answers from the equation solver verifiable by hand?",
+        a: "Yes — every solver shows the step-by-step working, not just the final answer. For polynomial roots, the tool shows the discriminant calculation, the quadratic formula substitution, and the resulting roots. For systems of linear equations, it shows the matrix-form computation. Use the steps as a working-out reference for school assignments where 'show your work' is required.",
+      },
+      {
+        q: "Does the calculator handle CBSE / ICSE / state-board syllabus differences?",
+        a: "The math itself is universal, but our worked examples are tagged by syllabus where they differ. The CBSE Class 10 trigonometry questions use sin/cos/tan with 30/45/60/90 standard angles; ICSE adds cosec/sec/cot more prominently; some state boards include vectors earlier. The calculator covers the common core so any board's student gets the right number; the example library matches the syllabus you select.",
+      },
+      {
+        q: "Are these calculators allowed in school exams?",
+        a: "Most Indian school boards (CBSE, ICSE, state boards) prohibit any calculator in board exams up to Class 10; Class 11/12 allow non-programmable scientific calculators in physics/chemistry/maths papers but never a phone or web-based tool. Use these calculators for homework, practice tests, and self-study; for actual exams, use the school-permitted hardware calculator.",
+      },
     ],
   },
 
@@ -1112,6 +1268,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
       {
         q: "Do your tools handle leap years and the Feb 29 edge case?",
         a: "Yes. Feb 29 birthdays default to Feb 28 in non-leap years with a toggle for Mar 1 (both conventions exist in Indian legal practice). Year-difference calculations correctly count 2024 as 366 days. The Age Calculator displays a 'leap year' badge when a birthday falls on Feb 29.",
+      },
+      {
+        q: "Does the date difference tool handle the Indian Saka (Hindu Calendar) cross-reference?",
+        a: "Yes — the Hindu Calendar mode toggles between Vikram Samvat (most North Indian states) and Saka Era (national official calendar, used on government documents). Conversion is exact between Gregorian and these systems for any date from 1 CE forward. For Tamil Calendar (Kollam Era), Bengali Calendar (Bangabda), and Malayalam Calendar (Kollavarsham), the tool uses the standard tabular conversion with the regional epoch.",
+      },
+      {
+        q: "Why does the time-zone converter show two Indian Standard Times?",
+        a: "It does not — India uses a single national time zone (IST = UTC+5:30), unlike countries with multiple zones. What the converter sometimes shows is two RFC-compliant abbreviations (IST and INST) which are equivalent. India does not observe daylight saving, so the offset is constant year-round. Some tools also mention 'half-hour offsets' alongside India because UTC+5:30 is one of the world's only half-hour-offset zones.",
+      },
+      {
+        q: "Is the festival-calendar accurate for both lunar (Diwali, Eid) and solar (Pongal, Republic Day) holidays?",
+        a: "Yes — lunar holidays (Diwali, Karva Chauth, Holi, Eid, Janmashtami, Mahavir Jayanti, Buddha Purnima) follow the Indian National Calendar's astronomical computation and are accurate to the day. Solar/civil holidays (Republic Day, Independence Day, Gandhi Jayanti, Pongal, Onam, Vishu) are fixed-date and exact. Regional bank holidays vary by state; the calendar's state-filter shows the holidays observed in that state's banking system.",
       },
     ],
   },
@@ -1191,6 +1359,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
         q: "Can I use the IFSC lookup result directly on my cheque or NEFT form?",
         a: "Yes — the branch address returned is the RBI-published address that banks accept. However, always cross-check with your account holder's passbook or the bank's own website before a high-value transfer, because branches occasionally relocate and the RBI file takes a few weeks to reflect changes.",
       },
+      {
+        q: "Why do PIN codes occasionally return wrong city information?",
+        a: "PIN codes encode region/sub-region/delivery-office structure but several PINs serve overlapping postal localities — a single PIN like 110001 covers central Delhi including Connaught Place, India Gate, Parliament House, and Tilak Marg. The tool returns the dominant locality but flags when multiple sub-localities are valid. For precise locality, use the India Post 'Find PIN' tool which queries the live database.",
+      },
+      {
+        q: "Are these tools suitable for KYC verification at a bank or a fintech?",
+        a: "No — these tools verify the format of a PAN/Aadhaar/GSTIN/IFSC, not its authenticity. Format validation catches typos at the data-entry stage; authenticity validation requires authenticated API calls to UIDAI / Income Tax Department / GSTN that only licensed entities (KUAs, KYC service providers) can make. Banks and fintechs already make those authenticated calls themselves; our tools are for upstream entry-time validation, not regulatory compliance.",
+      },
+      {
+        q: "How current is the IFSC and bank-branch data?",
+        a: "The IFSC master list is refreshed monthly against the Reserve Bank of India's published file. Major bank-merger events (SBI absorbing State Bank of Patiala / Mysore / Hyderabad in 2017, the Punjab National Bank-Oriental Bank-United Bank merger in 2020, Bank of Baroda absorbing Vijaya and Dena) trigger immediate re-indexing within 24-48 hours so the lookup never returns a closed branch's address.",
+      },
     ],
   },
 
@@ -1265,6 +1445,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
       {
         q: "Can I use the Statistics Calculator for my research project?",
         a: "For descriptive statistics, confidence intervals, and basic hypothesis tests (one-sample t-test, chi-square goodness-of-fit), yes. For complex multi-variable regression or ANOVA with interaction terms, we do not replace R, Python's statsmodels, or SPSS — those are the right tool for published research. Our calculator is for quick answers and homework.",
+      },
+      {
+        q: "Are the science calculators aligned with NCERT or international curriculum?",
+        a: "Where the science is universal (Newton's laws, ideal gas, electromagnetism, basic chemistry), the formulas are the same across NCERT, IGCSE, AP, IB, and state boards — the calculator outputs the same number for the same input regardless of curriculum. Where curricula differ in notation or unit conventions (cgs vs SI in older Indian curricula, mole-based vs molarity-based in chemistry), the tool defaults to NCERT/SI and flags non-standard alternatives.",
+      },
+      {
+        q: "Does the chemistry calculator handle Indian-cohort biology and pharma applications?",
+        a: "Yes — molarity, normality, percent-by-weight, percent-by-volume, dilution, and buffer calculations use the standard formulas universal to chemistry globally. For pharmaceutical applications (Indian Pharmacopoeia formulations, dose calculations for Ayurvedic preparations, IS 4707 reagent grades), the calculator provides defaults that match Indian-Pharmacopoeia conventions where they differ from USP or BP.",
+      },
+      {
+        q: "Will physics calculators handle JEE / NEET problem-style inputs correctly?",
+        a: "Yes — the physics calculators take inputs in the way JEE/NEET problems present them (SI units, two significant figures unless specified otherwise, vector components, free-body force balance) and return answers in the same form. The Kinematics, Newton's Laws, Electrostatics, and Optics calculators specifically have JEE-style worked examples with the standard solution patterns examiners reward.",
       },
     ],
   },
@@ -1341,6 +1533,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
         q: "Can the Electrical Load Calculator tell me whether I need a single-phase or 3-phase connection?",
         a: "Yes — it sums appliance loads in kW and flags when total diversified load exceeds 5-7 kW (the practical single-phase ceiling for most Indian DISCOMs). Above that, 3-phase is recommended for proper load balancing and to avoid overload on a single phase. Final decision depends on the DISCOM's tariff and connection rules in your state — see the [Central Electricity Authority](https://cea.nic.in/) for the central-government rules that DISCOMs adapt locally.",
       },
+      {
+        q: "Are the BIS / IS-code defaults updated for the latest amendments?",
+        a: "Yes — the codes referenced (IS 456 for concrete, IS 1786 for steel reinforcement, IS 800 for structural steel, IS 875 for design loads, IS 1893 for seismic, IS 1172 for water-supply) are tracked with their current amendments. Codes are amended periodically; we update defaults within a few weeks of a notification on the BIS portal. For binding compliance, always cross-check the current published amendment number with your structural engineer.",
+      },
+      {
+        q: "Will the Concrete Calculator output match what an actual mixer truck delivers?",
+        a: "Concrete is sold by volume in cubic metres at the truck. The calculator output for cement bags, sand cubic feet, and aggregate cubic feet is for site-mixed concrete; for ready-mix delivered, the truck driver supplies the cubic-metre figure directly. Ready-mix is typically 5-10% more expensive but eliminates wastage from manual mixing. Both routes produce the same final concrete grade if the mix-ratio is identical.",
+      },
+      {
+        q: "Does the Staircase Calculator handle the residential-vs-commercial code difference?",
+        a: "Yes — residential staircases follow NBC 2016 with riser 150-190 mm, tread 240-300 mm, slope ≤63°. Commercial staircases (offices, malls, public buildings) follow stricter NBC standards: riser 150-180 mm max, tread 270-300 mm, slope ≤45°, plus mandatory landings every 12 risers. Toggle the use-case at the top of the calculator and the validation thresholds adjust accordingly.",
+      },
     ],
   },
 
@@ -1415,6 +1619,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
       {
         q: "How does the College Fee Calculator handle hostel and mess?",
         a: "It has a three-tier preset: metro (IIT Delhi, IIT Bombay, IIM A/B/C — premium hostel and mess costs), tier-1 (other IITs, IIMs, NITs — standard), tier-2 (state government colleges, private tier-2). You can also enter custom figures if the college's official fee structure is published. Books and stationery are estimated at ₹15,000-25,000/year depending on the programme.",
+      },
+      {
+        q: "Does the JEE rank predictor account for category-specific cut-offs and reservations?",
+        a: "Yes — once you select your category (General, EWS, OBC-NCL, SC, ST, PwD), the predictor returns both your All India Rank and your category rank. For JoSAA counselling allocation, category rank usually matters more than AIR for reserved categories. For top-100 AIR ranks, both are returned; for categories that lock out reserved-category candidates from certain branches (some IIT specialised programs), the tool flags the eligibility band.",
+      },
+      {
+        q: "Are the historic NEET / JEE cut-offs the actual official figures?",
+        a: "Yes — they are the cut-off marks published by NTA and the JoSAA-counselling cut-offs published by participating IITs/NITs/IIITs after each year's allocation rounds. We update the dataset within 7-10 days of each official cut-off release. The predictor uses a weighted combination of the last 5 years' cut-offs; outliers (such as the 2020 NEET cut-off shift) are flagged so you can interpret the result against that context.",
+      },
+      {
+        q: "Will the calculator help me decide between IIT branches and a top-tier NIT branch?",
+        a: "Indirectly — it gives you the rank-to-branch-cut-off mapping for both ecosystems. The decision itself depends on factors the calculator cannot weigh: branch interest, faculty, placement statistics, location preference, family circumstances. For the rank-to-options mapping the tool is reliable; for the choice between equivalent branches at different institutes, talk to graduating students of those programs and review NIRF rankings.",
       },
     ],
   },
@@ -1491,6 +1707,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
         q: "Why does the Carpet Area Calculator flag my builder's figures as inflated?",
         a: "RERA mandates that carpet area be the exact inside-walls area excluding balconies, external walls, and service shafts. Builders often quote 'super-built-up area' which adds 25-30% for common areas. The calculator reverses the super-built-up number to check it falls in the 70-75% range — if it does not, either the builder has misquoted or you are looking at a pre-RERA project.",
       },
+      {
+        q: "Are the GST invoice templates updated for e-invoicing thresholds?",
+        a: "Yes — e-invoicing is mandatory for businesses with aggregate annual turnover over ₹5 crore (the threshold has reduced from ₹500 crore in 2020 to ₹100 crore in 2021 to ₹10 crore in 2022 to ₹5 crore in 2023). The Invoice Generator outputs both the human-readable PDF and the Invoice Reference Number (IRN) format JSON suitable for IRP upload. Below ₹5 crore the e-invoice is optional but the format remains valid.",
+      },
+      {
+        q: "Does the Break-Even Calculator handle subscription / SaaS pricing models?",
+        a: "Yes — for SaaS or subscription businesses with monthly recurring revenue (MRR) and churn, the calculator includes a churn-adjusted break-even mode. Inputs: monthly customer acquisition cost (CAC), gross margin per customer, and monthly churn rate; output: months until LTV exceeds CAC and cumulative cash-flow break-even. Especially useful for D2C subscription brands and B2B SaaS scaling beyond the initial product-market-fit phase.",
+      },
+      {
+        q: "Why does the Home Loan Affordability tool use 50% FOIR rather than a stricter 35%?",
+        a: "Indian banks themselves use 50-55% as the maximum Fixed Obligation to Income Ratio for home-loan sanction — that is the regulatory ceiling, not a comfort target. A 50% FOIR means half of net take-home goes to EMIs, which is achievable but tight. The tool also shows a 'comfort band' (35-40% FOIR) that leaves room for unforeseen expenses, education costs, retirement savings — most financial planners recommend staying within the comfort band for long-term tenability.",
+      },
     ],
   },
 
@@ -1565,6 +1793,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
       {
         q: "Is Ration Card Info able to confirm my family's coverage status?",
         a: "It returns general information about ration-card schemes in each state (BPL, APL, Antyodaya) and the coverage entitlements (rice/wheat quantities per person per month), but it does not query the state-specific ration-card database to confirm your specific card's status — that requires logging in to your state's PDS portal. We are a reference tool, not a government interface.",
+      },
+      {
+        q: "Why does the Vehicle Number Info sometimes return 'approximate registration date'?",
+        a: "MoRTH publishes RTO codes and registration series progressions but does not publish the exact issue-date for individual plates. We estimate from the public series-progression data — if MH-12-CD plates were being issued around July 2022 based on RTI responses, we return 'approximately July 2022' with a 3-month uncertainty band. For a precise registration date, request a Vehicle Information from the VAHAN portal using your registration number and chassis-number authentication.",
+      },
+      {
+        q: "Is the Indian Railway PNR tool refreshing live or showing cached data?",
+        a: "Live — each query hits IRCTC's public PNR endpoint and returns the current status (CNF, RAC, WL number, chart-prepared status). PNRs purge from IRCTC's system about 48 hours after the journey date, so post-journey PNRs return 'flushed' and are unavailable. For ticket-history needs (reimbursement, audit), use IRCTC's Booking History via a logged-in account.",
+      },
+      {
+        q: "Are the format validators (PAN / Aadhaar / GSTIN) sufficient for invoice issuance?",
+        a: "Format validation is necessary but not sufficient for compliance. A correctly-formatted PAN/GSTIN that does not actually exist will pass the format check but fail when you file your GSTR or claim input credit. For binding verification, businesses use authenticated API calls (PAN bulk verification through NSDL, GSTIN search through GSTN) which require licensing. Our tools catch typos at data entry; the licensed verification happens downstream in the accounting system.",
       },
     ],
   },
@@ -1641,6 +1881,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
         q: "Is JSON to Table Viewer able to flatten nested objects?",
         a: "Yes — it flattens nested objects and arrays to dot-notation column names (customer.address.city, items[0].name). For deeply nested API responses (GraphQL, REST), this is usually what you want for a quick tabular view. If you need a specific extraction path, the JSON tools in the developer category have JSONPath and jq-style extraction.",
       },
+      {
+        q: "Will the chart generator export to formats accepted in academic journals?",
+        a: "Yes — the chart tool exports to SVG (vector, infinitely scalable, editable in Adobe Illustrator and Inkscape), high-resolution PNG (300+ DPI suitable for print and journal submission), and PDF (vector, accepted by most LaTeX workflows and journal submission systems). For scientific journals that require publication-quality figures, the SVG export reproduces correctly at any size without rasterization.",
+      },
+      {
+        q: "Can I overlay multiple datasets in the same chart for comparison?",
+        a: "Yes — line charts, bar charts, and scatter plots all support multiple data series with separate legends, colours (default colour-blind-friendly palette), and axes. The Mixed Chart type allows combining a bar series and a line series on the same axis, useful for revenue-and-trend dashboards. Each series accepts its own data input via paste or CSV upload.",
+      },
+      {
+        q: "Is the chart styling accessible for colour-blind viewers?",
+        a: "Yes — the default palette is the colour-blind-friendly Wong palette (8 colours distinguishable by people with deuteranopia, protanopia, and tritanopia). The high-contrast mode uses thick strokes and pattern fills (dots, hatches, diagonal lines) so charts remain readable when printed in greyscale. Toggle accessibility mode in the chart-style panel.",
+      },
     ],
   },
 
@@ -1715,6 +1967,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
       {
         q: "What is the difference between Experience Calculator and Notice Period Calculator?",
         a: "Experience Calculator computes your total professional experience across all jobs (exact months from joining to leaving each), handling concurrent engagements and career breaks. Notice Period Calculator computes the cost of an early exit from your current job — days you would buy back multiplied by daily CTC, or days you would have to serve if you resign today. Different questions, different tools.",
+      },
+      {
+        q: "Will my resume passed through Resume Builder pass Naukri and LinkedIn ATS systems?",
+        a: "Yes — the templates use single-column layout, no embedded tables in the body, no images mid-text, standard section headings (Experience, Education, Skills), machine-parseable date formats, and ATS-friendly fonts. We tested against the major Indian recruiting ATS engines (Naukri, LinkedIn Recruiter, Workday, Taleo, Lever, Greenhouse) and the templates parse cleanly across all of them. ATS-passing is necessary but not sufficient — the resume content still needs to match the JD.",
+      },
+      {
+        q: "Does the In-Hand Salary calculator handle sign-on bonuses and stock options?",
+        a: "Yes — sign-on bonuses are entered as a one-time amount in year 1 with TDS withholding at the marginal rate. Stock options (RSUs, ESOPs) are tracked with the perquisite valuation rule (FMV at vesting minus exercise price taxed as salary, then capital gains at sale). Different option types (RSU, ESOP-non-listed, ESOP-listed-foreign) have different tax treatment; the calculator labels each.",
+      },
+      {
+        q: "How accurate is the Salary Comparison data for tier-2 cities?",
+        a: "Less accurate than for metros — the data sources (Glassdoor, AmbitionBox, LinkedIn Salary, public job postings) are dominated by metro-based submissions. For Bengaluru, Mumbai, Delhi NCR, Hyderabad, Pune, Chennai roles, accuracy is ±15% on the median. For tier-2 cities (Indore, Coimbatore, Bhubaneswar, Lucknow, Jaipur), sample sizes are smaller and accuracy drops to ±20-25%. Treat the figure as a directional benchmark, not a precise number.",
       },
     ],
   },
@@ -1791,6 +2055,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
         q: "Can the Brick Calculator handle both single-brick and double-brick walls?",
         a: "Yes — single-brick (115 mm thick) and double-brick (230 mm thick) walls are both supported, with the right brick count and mortar volume for each. Indian construction typically uses 230 mm external walls and 115 mm internal partitions; the tool defaults to that split and lets you override per-wall.",
       },
+      {
+        q: "Are the stamp-duty rates current for all Indian states?",
+        a: "Yes — stamp-duty schedules are tracked across all 28 states and 8 union territories with the latest amendments. State governments revise stamp duty in their annual Budgets; we update within 2-3 weeks of any state Budget that changes the rate. For binding transactions, always cross-check with the state's Inspector General of Registration (IGR) portal or the local sub-registrar's office, since state-specific concessions (women buyers, agricultural land, joint ownership) can apply.",
+      },
+      {
+        q: "Does the Property Capital Gains tool handle sold-before-23-July-2024 grandfather rule?",
+        a: "Yes — the post-Budget 2024 rule allows sellers of properties acquired before 23 July 2024 to choose the better of (a) flat 12.5% LTCG without indexation OR (b) 20% LTCG with indexation under Section 48. The tool computes both scenarios and highlights the lower-tax option. Properties acquired on or after 23 July 2024 use the new 12.5% flat rate without indexation, no choice available.",
+      },
+      {
+        q: "Will the Carpet Area Calculator's reverse-engineering catch a builder's overstated super-built-up?",
+        a: "Yes — RERA mandates that any post-2017 RERA-registered project must disclose carpet area; the calculator reverse-engineers the builder's super-built-up claim against the typical 70-75% carpet ratio. If the implied carpet area falls below 70% of super-built-up, the project is either non-RERA or the builder has miscategorised common areas. Always verify against the RERA-registered carpet area on the state RERA portal before finalising.",
+      },
     ],
   },
 
@@ -1865,6 +2141,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
       {
         q: "Is the Legal Notice Generator's output binding on the receiving party?",
         a: "A legal notice is a pre-litigation formal communication — the receiving party is not bound to comply but is on record as having been given the statutory notice. If they ignore it, you can proceed to filing. The notice's main value is establishing the notice-period start date (15 days for cheque bounce under Section 138 NI Act, 2 months for government departments under Section 80 CPC).",
+      },
+      {
+        q: "Are the Court Fee schedules accurate for the state where I am filing?",
+        a: "Yes for the major-court states — Maharashtra (Bombay Court Fees Act 1959), Tamil Nadu, Karnataka, Kerala, Andhra Pradesh, Telangana, Gujarat, Odisha, West Bengal, and Assam each have state-specific schedules tracked by the calculator. For other states, the central Court Fees Act 1870 schedule applies. Always cross-check with your local advocate, since court-fee amendments occasionally update specific item rates without notice.",
+      },
+      {
+        q: "Will an RTI application generated here actually be accepted by a public authority?",
+        a: "Format-wise yes — it complies with Section 6 of the RTI Act 2005, lists the public authority's correct designation, includes the ₹10 fee payment reference, and is signed. Acceptance of the substance depends on whether your query is specific enough (Section 7(9) allows refusal of overbroad requests) and whether the requested information falls under Section 8 exemptions (cabinet papers, foreign relations, criminal investigations). Format-rejection is usually not the issue; content-framing is.",
+      },
+      {
+        q: "Does the Affidavit Generator output need stamp paper and notary attestation?",
+        a: "Yes — affidavits in India must be on non-judicial stamp paper (₹10-₹100 depending on state and use-case) and attested before either an Executive Magistrate (free, requires appointment) or a Notary Public (₹50-₹150 per affidavit). The generator produces the correct text and attestation block; the stamp paper and physical attestation are still required for the affidavit to be legally valid.",
       },
     ],
   },
@@ -1941,6 +2229,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
         q: "Why does Name Numerology give different numbers under Pythagorean vs Chaldean systems?",
         a: "The two systems assign different numeric values to letters — Pythagorean uses 1-9 cyclically (A=1, B=2, …, J=1, K=2), while Chaldean uses 1-8 with specific traditional assignments (A=1, B=2, C=3, D=4, E=5, F=8, G=3, …). Chaldean is considered more aligned with Vedic tradition in Indian numerology; Pythagorean is the Western default. We show both so you can reconcile advice from different sources.",
       },
+      {
+        q: "Is astrology in these tools based on Vedic (Hindu) or Western methodology?",
+        a: "Vedic — the kundali, panchang, dasha, and yoga calculations use the Lahiri ayanamsa (the standard Indian sidereal correction) and follow classical Vedic-astrology principles. Some tools (zodiac sign, simple compatibility) also offer a Western tropical mode for users following that tradition. Toggle the mode at the top of each tool; the calculations differ enough that the same birth time produces slightly different sun/moon positions in the two systems.",
+      },
+      {
+        q: "Are these results suitable for major life decisions like marriage matching?",
+        a: "We treat astrology as a cultural and traditional practice, not a science. For ceremonial-purpose matching (kundali milan / guna dosha for arranged marriage compatibility) the calculations are mathematically correct against classical Vedic rules. For life decisions involving health, finance, or relationships, our tools should not substitute for professional advice from a doctor, financial planner, or counsellor. The numerical output is exact; the interpretation is the practitioner's domain.",
+      },
+      {
+        q: "Why do panchang dates differ from another website I checked?",
+        a: "Panchang calculations depend on the chosen ayanamsa (sidereal correction) and the latitude/longitude of the observer. Lahiri ayanamsa (used by Indian Government Calendar) and Raman ayanamsa (used by some traditional almanacs) produce 1-2 minute differences in muhurta timing. Our tool uses Lahiri by default with a city-selector that adjusts for Indian local time; another website using a different ayanamsa or a non-localised time may show small variations.",
+      },
     ],
   },
 
@@ -2015,6 +2315,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
       {
         q: "How accurate is Vehicle Depreciation Calculator for Indian second-hand pricing?",
         a: "Within ±15% of OLX/Cars24/Spinny listings for popular models (Swift, Baleno, Nexon, Creta, City, Dzire, Venue, Bolero) in the 1-5 year age range. For niche or low-volume models (imported luxury, low-sales variants), accuracy drops — always verify against live listings before using the depreciation figure for a binding sale or purchase decision.",
+      },
+      {
+        q: "Are the highway-toll rates current after the 2025 NHAI revision?",
+        a: "Yes — NHAI revises highway toll rates each April based on the wholesale price index, typically 3-7% annually. The Toll Calculator tracks the current per-km tariff and per-toll-plaza rates after each revision; data is refreshed within 2-3 weeks of the official notification. For state expressways (Mumbai-Pune, Yamuna Expressway, Outer Ring Road Bengaluru) we track the state-specific operator's published rates separately.",
+      },
+      {
+        q: "Does the Mileage Calculator distinguish between BS-VI and older emission standards?",
+        a: "Yes — Bharat Stage VI (BS-VI, mandatory for all new vehicles since April 2020) engines have specific fuel-injection and after-treatment differences that affect real-world mileage. BS-VI petrol vehicles typically lose 5-8% efficiency vs BS-IV due to additional emission controls; BS-VI diesels lose 8-12% from DPF/SCR systems. The calculator's defaults assume BS-VI; toggle for older vehicles to see the comparable figure.",
+      },
+      {
+        q: "Will the Insurance Estimator quote match an aggregator like Policybazaar?",
+        a: "Within ±10% of the actual quote you would receive from Acko, Go Digit, ICICI Lombard, HDFC Ergo, or Tata AIG via Policybazaar. The calculator uses IRDAI's published depreciation schedule and standard premium bands; final premium depends on the exact variant of your car (BS-VI, sunroof or not, alloy wheels), claim history (NCB), add-ons (zero depreciation, return-to-invoice), and the insurer's underwriting margin. Always get a binding quote from at least 3 insurers.",
       },
     ],
   },
@@ -2091,6 +2403,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
         q: "How does Percentage to CGPA handle decimal percentages?",
         a: "By applying the inverse of your institution's published formula at 2-decimal precision. For CBSE, 87.5% = CGPA 9.21; for JNTU, 87.5% = CGPA 9.5. For applications that insist on whole-number CGPA, round down (rounding up overstates your grade and is commonly flagged by admissions reviewers who cross-check against official transcripts).",
       },
+      {
+        q: "Are the GPA-to-percentage conversion formulas correct for the latest CBSE / ICSE / state-board rules?",
+        a: "Yes — CBSE Class 10 uses CGPA × 9.5; the calculator applies this exactly. ICSE uses straight percentage with subject-best-of-N rules. State boards each have their own (Tamil Nadu best-of-5 with first language compulsory; Maharashtra HSC's 6-subject total; Karnataka II PUC's individual subject pass mark). The calculator's board selector picks the right formula. For university-level conversion, the institution's published formula always overrides any generic rule.",
+      },
+      {
+        q: "Will the Study Time Planner work for both board exams and JEE / NEET preparation?",
+        a: "Yes — the planner has separate modes for board-exam prep (4-8 week intensive, equally weighted across CBSE/ICSE subjects) and entrance-exam prep (4-6 month sustained, weighted toward Physics, Chemistry, Maths for JEE; Physics, Chemistry, Biology for NEET). Inputs include current preparation level (beginner/intermediate/advanced) and target rank/percentile; output is a daily 6-7 hour schedule with rotation, revision, and mock-test slots.",
+      },
+      {
+        q: "Does the College Fee Calculator handle hostel, mess, and books across IITs / NITs / state colleges?",
+        a: "Yes — preset tiers cover IIT Delhi/Bombay (premium hostel + mess), other IITs/NITs (standard), state colleges (basic), with overrides for the actual published fee structure where available. Books and stationery are estimated at ₹15,000-₹25,000/year per programme; lab fees, exam fees, and one-time admission costs are added separately. For the binding figure, always check the institute's official fee notification for the current academic year.",
+      },
     ],
   },
 
@@ -2165,6 +2489,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
       {
         q: "How accurate is Crop Yield Calculator's prediction?",
         a: "For average input conditions and standard varieties, within ±15% of actual yield for paddy, wheat, and cotton in the major producing states. Accuracy drops for high-value low-volume crops (horticulture, spices) and for extreme weather years. Treat the output as a planning guide for pre-season financial decisions, not as a harvest forecast.",
+      },
+      {
+        q: "Are the seed-rate and fertilizer recommendations valid for organic farming?",
+        a: "The base recommendations follow conventional ICAR guidance with chemical fertilizer (urea, DAP, MOP) doses. For organic farming, replace chemical fertilizers with their organic equivalents at higher application rates (compost, vermicompost, organic manures provide 2-3% N content vs 46% in urea, so quantity scales 15-20×). The tool has an organic-mode toggle that handles the conversion; for certified organic certification under NPOP, follow the organic standard's specific input list.",
+      },
+      {
+        q: "Will the Crop Yield Calculator predict yield for next season given current weather forecasts?",
+        a: "Partially — the calculator uses the last 5-year average yield for your crop+region as the baseline and applies adjustments for soil quality and inputs. For weather-driven prediction (monsoon strength, drought probability) it uses the IMD long-range forecast where available, but real-time yield depends on factors no tool can predict: timing of rainfall, pest pressure, mid-season inputs. Treat the output as a planning estimate, not a harvest forecast.",
+      },
+      {
+        q: "Are the irrigation calculations valid for paddy in Punjab vs paddy in delta-region Tamil Nadu?",
+        a: "Yes — paddy irrigation requirement varies dramatically by region (4,000-5,000 mm in Punjab/Haryana flood-irrigated paddy vs 1,500-2,000 mm in Cauvery delta with shorter-duration varieties). The calculator's region selector applies the regional water-requirement coefficient. For drip-irrigated paddy (newer water-saving cultivation), water savings can reach 40-60%; the calculator handles the drip-paddy mode separately.",
       },
     ],
   },
@@ -2241,6 +2577,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
         q: "Why does Voltage Drop Calculator use different resistivity for copper vs aluminium?",
         a: "Aluminium has about 1.6× the resistivity of copper, so for the same current and length, an aluminium cable needs about 1.6× the cross-section to achieve the same voltage drop. The tool applies the correct resistivity per material and returns the right size. Aluminium is cheaper per metre but you end up needing a bigger cable; the Wire Size Calculator's cost comparison feature shows which is cheaper overall for your specific run.",
       },
+      {
+        q: "Are the wire-size recommendations safe to use for actual installation?",
+        a: "They are correct per IS 732 for the inputs provided — current, voltage, length, ambient temperature, and installation method. The tool flags when the chosen size barely meets code (within 10% margin) and recommends sizing up. However, for the formal installation, the design must be stamped by a licensed electrical contractor (Grade A or B); the tool's output is the engineering basis, but the licence seal is required for DISCOM approval and insurance compliance.",
+      },
+      {
+        q: "Will the Power Consumption Calculator's monthly bill match what my DISCOM actually charges?",
+        a: "Within ±8% for well-characterised usage. AC usage is the main uncertainty (hours per day, temperature setting, room insulation). The calculator's slab-tariff data is refreshed annually for each state DISCOM; for binding billing reference, check the latest notification on your DISCOM's website. The tool also estimates power-factor surcharge for industrial connections, which residential users do not pay.",
+      },
+      {
+        q: "Does the Solar Panel Calculator account for net-metering tariff differences across states?",
+        a: "Yes — net-metering rules vary by state (Maharashtra, Karnataka, Tamil Nadu, Gujarat each have specific export tariffs and connection-size limits; some states have moved to net-billing instead of net-metering). The calculator's state selector applies the correct tariff and quantifies the payback period. For binding rooftop-solar economics, always check the latest DISCOM circular and the PM Surya Ghar Yojana subsidy eligibility for your residence type.",
+      },
     ],
   },
 
@@ -2315,6 +2663,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
       {
         q: "Why does Water TDS Calculator say my RO filter is fine but my water tastes metallic?",
         a: "TDS is one indicator but not the only one — taste can be affected by individual ions (iron, magnesium) without TDS being high. A metallic taste with low TDS often indicates iron contamination from old galvanised pipes; that needs an iron-removal filter or a new pipe section, not RO replacement. Get a full water-quality lab test (₹500-₹1,500) for a complete profile if taste issues persist.",
+      },
+      {
+        q: "Will the Recipe Unit Converter produce consistent results across multiple sessions?",
+        a: "Yes — the conversion factors are fixed (240 ml US cup, 16 tbsp per cup, 3 tsp per tbsp; ingredient densities from the IFCT 2017 database). For ambient-condition-sensitive ingredients (flour packs differently in monsoon humidity than in dry season), the output is for typical room conditions; in extreme humidity, by-weight measurement is more reliable than by-volume. The tool flags ingredients where humidity matters.",
+      },
+      {
+        q: "Does the Indian Food Calorie Counter handle Jain (no onion/garlic), satvik, and other regional dietary restrictions?",
+        a: "Yes — for Jain meals (no onion, garlic, root vegetables), the calorie database has Jain-mode variants of common dishes (Jain rajma, Jain dal, Jain chana) with the appropriate substitutions. Satvik (Hindu fasting) variants are also available. For specific allergen exclusions (gluten-free, dairy-free, nut-free), the search filters dishes by allergen tag. Always verify with the cook for served meals, since substitutions vary by household.",
+      },
+      {
+        q: "Will the Gas Cylinder Calculator estimate accurately for a small commercial kitchen?",
+        a: "Yes for small-scale commercial use — the calculator handles 19 kg commercial cylinders with input for daily cooking hours, number of stoves, and burner type. A typical small dhaba or tea-stall burns one 19 kg commercial cylinder in 4-6 days. For large-scale (banquet halls, hotels), pipe-supplied LPG or PNG via a city gas distributor is more economical and the cylinder math no longer applies; the tool flags this threshold.",
       },
     ],
   },
@@ -2391,6 +2751,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
         q: "Is Event Checklist Generator customisable for our specific family traditions?",
         a: "Yes — start with the regional template (North Indian, South Indian, Bengali, Sikh, Marwari, Gujarati, Maharashtrian, Christian, Muslim, etc.) and add or remove sub-events. The base list has 200+ tasks; most weddings need 80-150 of those depending on the events being hosted. Add custom tasks (specific to your family's traditions) inline; the tool reorders by phase (12-month, 6-month, 3-month, 1-month, week-of, day-of, post-wedding).",
       },
+      {
+        q: "Are the wedding-budget estimates calibrated for tier-1, tier-2, and tier-3 city costs?",
+        a: "Yes — the budget calculator has city-tier presets. A 300-guest wedding budgets at ₹35-50 lakh in tier-1 cities (Mumbai, Delhi, Bengaluru), ₹20-30 lakh in tier-2 (Pune, Hyderabad, Chennai, Ahmedabad), ₹12-20 lakh in tier-3 (Jaipur, Lucknow, Indore, Coimbatore). Override individual line items (venue, catering, decor, photography) with your actual quotes for a precise budget; the presets are starting estimates, not final figures.",
+      },
+      {
+        q: "Does the Mehndi / Sangeet planning checklist cover regional wedding traditions?",
+        a: "Yes — separate checklists are available for North Indian (Punjabi, Marwari, Bengali, Rajasthani), South Indian (Tamil, Kannada, Telugu, Malayali), and East Indian (Bengali, Odia, Assamese) wedding traditions. Each has the customary functions (Tilak/Roka, Mehndi/Pithi, Sangeet, Haldi, Wedding, Reception) with traditional-event-specific tasks. Toggle between traditions in the tool; mixed-tradition weddings can show two checklists side by side.",
+      },
+      {
+        q: "Will the Save-the-Date / RSVP Generator produce shareable WhatsApp-friendly content?",
+        a: "Yes — outputs include a WhatsApp-optimised text-only format (with date, venue, dress code, contact), a square JPG card (1080×1080 px, ideal for Instagram and WhatsApp status), and a printable PDF for invitation cards. The tool also generates a QR code linking to the RSVP form, useful for tracking guest responses without a paid event-management service.",
+      },
     ],
   },
 
@@ -2465,6 +2837,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
       {
         q: "Can Cashback Calculator track time-bound offers that change weekly?",
         a: "It calculates the stack you enter at the moment of calculation; it does not track or notify you when offers expire. For an always-current offer reference, you need a deal-aggregator app (Cashkaro, Magicpin, Pricebaba). The tool is for 'I have these specific offers right now, what is the best stack' — not 'tell me what offers exist this week'.",
+      },
+      {
+        q: "Why does the Cashback Calculator show different effective rates for HDFC vs ICICI vs Axis cards?",
+        a: "Each card-bank has different reward structures: HDFC's Infinia gives 3.3% on most categories with travel-redemption preference; Axis Magnus gives 12 EDGE Reward points per ₹200 with 1 EDGE = ₹2 redemption value (so 12% on travel); ICICI Emeralde gives 6 reward points per ₹200 (3%). The calculator applies each card's actual reward rate per category (online vs offline, travel vs general, dining vs others) so the effective return reflects what you actually receive at year-end.",
+      },
+      {
+        q: "Are the No-Cost EMI calculations transparent about hidden costs?",
+        a: "Yes — the calculator shows three cost components: the monthly EMI (what the seller charges your card), the merchant's processing fee (1-2% typically, paid upfront), and the inflated MRP gap (the difference between cash price and EMI MRP). When the EMI total + processing fee exceeds the cash price by more than 1-2%, that gap is hidden interest. Most no-cost EMI offers carry 8-15% effective APR even though advertised as 'interest-free'.",
+      },
+      {
+        q: "Does the Price Per Unit Comparator handle bulk-pack savings correctly?",
+        a: "Yes — the tool computes per-base-unit price for each pack size and ranks them lowest-first. Surprisingly often, the supposedly-bulk pack is more expensive per gram during sales (because the smaller pack has the headline-discount sticker). The comparator catches this. For perishable items, the tool also calculates expected-waste-adjusted cost, reducing the effective per-unit advantage of large packs by your typical wastage rate.",
       },
     ],
   },
@@ -2541,6 +2925,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
         q: "What is the difference between IFSC Bank Details here and the IFSC Code Lookup in the India Guide category?",
         a: "Same underlying data (RBI IFSC master list) — the difference is the use case. IFSC Code Lookup (India Guide category) is the quick 'one IFSC, return branch' tool. IFSC Bank Details (here, in the WhatsApp & UPI category) handles the bulk and reverse-lookup cases for KYC and onboarding scenarios — bulk-validate 50 IFSCs from a vendor list, reverse-lookup 'all SBI branches in Mumbai with PIN starting 4000', etc.",
       },
+      {
+        q: "Will the WhatsApp formatting tools work on all Android, iPhone, and WhatsApp Web devices?",
+        a: "Yes — all formatting (bold, italic, strikethrough, monospace) uses WhatsApp's native markdown syntax (asterisks, underscores, tildes, backticks) which is universal across platform versions. The tools handle the syntax automatically; the rendered output looks identical on Android WhatsApp, iPhone WhatsApp, and WhatsApp Web. WhatsApp Business app supports all the same formatting plus quick-replies, which the tools can also generate.",
+      },
+      {
+        q: "Are the WhatsApp Status / Story-style decorative templates current with the latest design trends?",
+        a: "Yes — templates are refreshed monthly with current Indian-festival colour palettes (Diwali, Holi, Eid, Ganesh Chaturthi), trending design styles (gradient backgrounds, neon-glow text, minimal-typography), and platform-specific sizing (square 1:1 for Status, 9:16 vertical for Stories). User-generated content stays on-trend for about 3-4 months before refresh.",
+      },
+      {
+        q: "Will the WhatsApp Group Link Generator's links work on Indian phone numbers?",
+        a: "Yes — generated links use the universal WhatsApp link scheme (wa.me/<phone>?text=<message> or chat.whatsapp.com/<group-id>) which works for any country code including +91. For India-specific use cases (broadcast lists for shop owners, customer-update lists, RSVP confirmations), the group-link approach scales to 1,024 members per group; for larger audiences, use the WhatsApp Business API which the tool also supports through pre-formatted message templates.",
+      },
     ],
   },
 
@@ -2615,6 +3011,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
       {
         q: "Why does Glassmorphism Generator's preview look different from my final website?",
         a: "Glassmorphism depends on what is *behind* the frosted glass — a colourful background reads more glassy; a uniform background looks flatter. The generator's preview uses a default colourful background; your actual website may have different content behind the glass card. To preview accurately, paste the generated CSS into your dev environment and check against your real background.",
+      },
+      {
+        q: "Will the gradient and shadow generators produce code that works in older browsers?",
+        a: "The CSS output uses modern syntax (linear-gradient, radial-gradient, box-shadow, filter) supported by Chrome 90+, Firefox 88+, Safari 14+, Edge 90+. For IE 11 support (rare in modern Indian projects), the tool also outputs the legacy -ms- and -webkit- prefixed forms. For very old Android browsers (Android 4.x stock browser), some advanced features (conic-gradient, backdrop-filter) gracefully degrade; the tool flags affected outputs.",
+      },
+      {
+        q: "Are the color palette suggestions accessible per WCAG 2.1 contrast requirements?",
+        a: "Yes — the palette generator includes contrast scoring against WCAG AA (4.5:1 for normal text, 3:1 for large text) and WCAG AAA (7:1 for normal). When a colour combination fails AA, the tool flags it and suggests the closest passing alternative. For sites targeting Indian government accessibility standards (GIGW), AA is the minimum compliance level; AAA is recommended for older-audience or assistive-tech-heavy users.",
+      },
+      {
+        q: "Will the box-shadow and border-radius outputs work on Tailwind / Bootstrap projects?",
+        a: "Yes — the tool offers two output formats: raw CSS (for vanilla projects) and class-name format (for Tailwind utility-first projects). Tailwind users can copy values like `shadow-[0_8px_24px_rgba(0,0,0,0.15)]` directly. Bootstrap users get equivalent custom-property overrides that match Bootstrap 5's design token system. Both outputs preview live before you copy.",
       },
     ],
   },
@@ -2691,6 +3099,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
         q: "When should I NOT use Image to Base64?",
         a: "When the image is larger than ~4 KB. Base64 encoding adds about 33% size, so a 10 KB image becomes ~13 KB inlined into the HTML/CSS. The browser cannot cache an inlined Base64 image separately from the page, so every page load re-downloads it. For images above 4 KB, a separate HTTP request (and the browser's caching of that asset) is more efficient. The tool flags this when you encode anything above the threshold.",
       },
+      {
+        q: "Will the CSV / JSON / Excel converter handle large files without crashing the browser?",
+        a: "Yes — up to about 50 MB before browser memory becomes the bottleneck. For larger files (full database exports, multi-million-row CSVs), use a streaming CLI tool (Pandas, awk, jq) on your local machine — no browser-based converter will be as fast as a native binary on files that size. The tool flags files approaching the limit and recommends the CLI alternative.",
+      },
+      {
+        q: "Does the Random Sampling tool produce reproducible samples for academic research?",
+        a: "Yes — the random sampling tool accepts a seed value; identical seed produces identical sample, useful for academic work where the methodology must be reproducible. Without a seed, each run produces a fresh random sample using crypto.getRandomValues(). For statistical sampling (stratified, cluster), the tool offers per-stratum sample-size control rather than a flat sample size.",
+      },
+      {
+        q: "Are the chart and pivot-table outputs comparable to Excel / Google Sheets pivots?",
+        a: "For simple aggregations (count, sum, average, median, min, max grouped by a category), yes — output matches Excel and Google Sheets pivots to the cell. For advanced analytics (window functions, regression, time-series decomposition), Excel and Google Sheets are richer because they have built-in functions our tool would need to replicate. For descriptive statistics on Indian census-style data, the pivot tool handles state/district aggregations correctly.",
+      },
     ],
   },
 
@@ -2765,6 +3185,18 @@ export const categoryPillars: Record<string, CategoryPillar> = {
       {
         q: "Is Instagram Bio Generator's 150-character limit accurate?",
         a: "Yes — Instagram counts UTF-16 codepoints (most emojis count as 2 chars; a regional indicator flag emoji like 🇮🇳 counts as 4). Our counter mirrors Instagram's exact counting rule, so a bio that fits in our preview will fit in IG. Be aware that some line-break characters take 1 character but display as a visual line break — that is the IG-app peculiarity our tool handles.",
+      },
+      {
+        q: "Are the Instagram / Twitter / LinkedIn caption generators tuned to each platform's tone?",
+        a: "Yes — Instagram captions are longer (1-3 short paragraphs) with hashtag groups and an emoji pacing. Twitter captions are tight (under 280 chars) with one or two hashtags. LinkedIn captions are professional, story-driven, and longer-form (300-1500 chars). The tone-selector also allows formal/casual/witty/educational variants. Each output is a starting draft; final tone should match your individual voice rather than the generator's default.",
+      },
+      {
+        q: "Will the hashtag suggestions improve Instagram or LinkedIn organic reach?",
+        a: "On Instagram, yes — relevant hashtags expand discoverability into hashtag-feed audiences who do not follow you. The generator picks 15-25 hashtags with a balance of high-volume (1M+ posts) and medium-volume (100K-1M posts) tags, since pure-high-volume hashtags get buried fast. On LinkedIn, hashtags help less than relevant tagging of people and companies; the tool prioritises mention-suggestions over hashtag density.",
+      },
+      {
+        q: "Does the YouTube thumbnail / title generator help with Indian-language channels?",
+        a: "Yes — the title generator handles Hindi, Tamil, Telugu, Bengali, Marathi, Gujarati, Punjabi, Kannada, and Malayalam. Optimal title length is 60-70 characters for Latin scripts; for Indian scripts the visual length is similar despite higher byte count. The thumbnail generator suggests text-overlay sizing that stays readable on mobile (the dominant Indian YouTube viewing surface) — large bold sans-serif typography in your script's native typography is the highest-CTR pattern.",
       },
     ],
   },
@@ -2841,9 +3273,110 @@ export const categoryPillars: Record<string, CategoryPillar> = {
         q: "Is Assignment Word Counter different from the general Word Counter in the Text category?",
         a: "Yes — Assignment Word Counter has additional features for academic-assignment context: structure analysis (estimated intro/body/conclusion length given total length), heading-vs-body word distribution, citation count detection (matches against [1], (Smith, 2020), etc.), and reference-list separation (excludes the bibliography from the body word count). For non-assignment use (general writing), the general Word Counter in the Text category is simpler.",
       },
+      {
+        q: "Are the printable graph papers correctly sized for the CBSE / ICSE board-exam answer-sheet format?",
+        a: "Yes — the cm-grid and mm-grid graph paper outputs match the board-exam answer-sheet trim size (A4 with 1.5 cm binding margin) and grid spacing exactly. For Class 10 board geometry questions, the cm-grid is the right format. For physics/chemistry experimental graphs in Class 11/12, the semi-log and log-log papers handle the typical y-axis-spans-orders-of-magnitude case. Always print at 100% (do not 'fit to page') — scaling distorts the grid measurement.",
+      },
+      {
+        q: "Will the Flashcard Maker work for spaced-repetition apps like Anki and Quizlet?",
+        a: "Yes — the tool exports to Anki's .apkg format (with proper deck and note structure) and Quizlet's CSV format (Term, Definition columns). Both imports work without manual editing. For RemNote, Mochi, and SuperMemo users, the CSV output works for their import workflows too. Cards-per-page printable layout is also available for users who prefer physical flashcards.",
+      },
+      {
+        q: "Does the Timetable Generator handle the Indian 6-day school week?",
+        a: "Yes — Indian schools often have 6-day timetables (Saturday is half-day or full-day) which the generator handles natively along with 5-day and 7-day cycles. Constraints supported: avoid two classes per teacher in the same period, fit a target hours-per-subject distribution per week, leave slots for revision and rest, and accommodate fixed-time blocks (assembly, library, sports). Output is a weekly grid printable on A4.",
+      },
     ],
   },
 
+  // ──────────────────────────────────────────────────────────────────────
+  // 38. Sports & Cricket — 6 tools (Phase 4 Round 3)
+  // ──────────────────────────────────────────────────────────────────────
+  sports: {
+    whatIs:
+      "Sports and cricket tools on SabTools.in handle the scoring, run-rate, and fantasy-points math that every Indian cricket follower runs constantly through IPL season and ICC tournaments — what is the required run rate (RRR) for the chasing team given balls remaining, what is the Net Run Rate (NRR) for a team's league standing, what fantasy points does a player earn for a 50 with two sixes, what is the Duckworth-Lewis-Stern (DLS) revised target for a rain-interrupted match, and what is each franchise's auction-cap remaining after retention. These tools follow the official rules published by the [Board of Control for Cricket in India (BCCI)](https://www.bcci.tv/) for IPL and the ICC for international matches, and are calibrated for the specific quirks of T20 / IPL / ODI / Test scoring that generic cricket calculators miss. For non-cricket sports, athletics-governance and Olympic-discipline tools draw on the [Sports Authority of India](https://sportsauthorityofindia.nic.in/) framework that operates the country's training centres and competitive structure.",
+    keyFeatures: [
+      {
+        title: "T20 / IPL / ODI scoring rules",
+        description:
+          "Required Run Rate (RRR), Current Run Rate (CRR), and chase-difficulty verdict (Easy / Comfortable / Tough / Impossible) are computed against the same scoring conventions BCCI uses for IPL broadcasts. Net Run Rate (NRR) supports multi-match aggregation with the all-out penalty rule (full-overs counted, regardless of when the last wicket fell) and rain-curtailed match handling.",
+      },
+      {
+        title: "Dream11-style fantasy-points engine",
+        description:
+          "IPL Fantasy Points Calculator implements the Dream11 / MyTeam11 / FanCode point structure: batting (1 per run, +4 per boundary, +6 per six, +4/+8/+16 milestone bonuses, strike-rate bonus), bowling (25 per wicket, economy bonus, hauls), fielding (8 per catch, 12 per stumping, 12 per run-out), with Captain ×2 and Vice-Captain ×1.5 multipliers applied to the total.",
+      },
+      {
+        title: "Duckworth-Lewis-Stern (DLS) target calculator",
+        description:
+          "For rain-interrupted matches, the DLS Calculator applies the official ICC DLS resource-table to compute the par score for the chasing team given overs lost. Used for both ODIs and T20Is. Output matches the broadcast-displayed revised target to the run.",
+      },
+      {
+        title: "Auction-cap and team-budget tracking",
+        description:
+          "IPL Auction Cap Calculator tracks each franchise's remaining purse after retention and bidding, with the per-uncapped-player cap, the right-to-match (RTM) handling, and the foreign-player cap (max 4 in playing XI, 8 in squad). Useful during live auction broadcasts to predict which franchise can still afford which marquee player.",
+      },
+    ],
+    useCases: [
+      {
+        title: "IPL fantasy team optimisation",
+        description:
+          "Before the toss, run candidate playing-XI combinations through Fantasy Points Calculator with projected per-player scores, then rank by total. Captain choice (×2 multiplier) typically goes to a top-order batter on a flat pitch or a death-overs bowler on a seam-friendly track. Vice-Captain (×1.5) hedges against the captain underperforming. Used by ~150 million Indian fantasy-cricket players each IPL season.",
+      },
+      {
+        title: "Live chase tracking during a T20 / ODI",
+        description:
+          "Required Run Rate Calculator updates in real-time as wickets fall and overs progress — RRR rising from 9.5 to 12 within two overs signals the chase is slipping. Current Run Rate vs RRR comparison gives the chase-difficulty verdict broadcast pundits use. Pair with NRR Calculator for late-tournament permutations where a team needs a specific margin to qualify.",
+      },
+      {
+        title: "League-table NRR scenarios",
+        description:
+          "Late in IPL or ICC tournaments, the NRR Calculator answers 'we need to win by what margin to qualify?' Inputs: current NRR, runs scored across season, overs faced, opposition's runs/overs. Outputs the minimum win margin (in runs or overs-bowled-out) that takes your team above the 4th-place rival. Used by team analysts and broadcast graphics during decisive matches.",
+      },
+      {
+        title: "Auction strategy and squad planning",
+        description:
+          "Before the IPL mega-auction, franchises model retention vs trade-out scenarios using Auction Cap Calculator to see which player combinations leave maximum auction-purse flexibility. Fans use the same tool to evaluate live-auction decisions and predict which franchise will overspend on a marquee player versus splitting their purse across squad depth.",
+      },
+    ],
+    howToChoose:
+      "For live-match math during a chase — Required Run Rate Calculator and NRR Calculator. For Dream11 / MyTeam11 / FanCode fantasy planning — IPL Fantasy Points Calculator with the captain/vice-captain multiplier toggle. For rain-affected matches — DLS Calculator with overs-lost as input. For pre-auction or live-auction strategy — IPL Auction Cap Calculator. Workflow during an IPL match: NRR Calculator (pre-toss to know what margin matters for league standings) → Fantasy Points Calculator (after lineups confirmed) → Required Run Rate Calculator (live during second innings) → re-check NRR after the result. None of these tools change the cricket itself — they translate the on-field math into clean numbers so you do not have to do mental arithmetic during a tense over.",
+    indianContext:
+      "Indian cricket follows a specific competitive structure governed by BCCI for domestic and the ICC for international fixtures. Domestic first-class cricket (Ranji Trophy, Duleep Trophy, Irani Cup) and limited-overs (Vijay Hazare Trophy, Syed Mushtaq Ali Trophy) feed into the national selection pool; the IPL is the franchise-level T20 league with 10 teams from 2022 onward. Fantasy cricket in India is a regulated sector — Dream11, MyTeam11, FanCode, and others operate under the All India Gaming Federation framework and are recognised as games of skill (not gambling) under the 2017 Public Gaming Act amendments. Our scoring rules match the major fantasy platforms; for tournament-specific rule variations (T10 leagues, women's IPL), the calculator selector adjusts. Beyond cricket, the [Sports Authority of India](https://sportsauthorityofindia.nic.in/) under the [Ministry of Youth Affairs and Sports](https://yas.gov.in/) administers the National Sports Federation framework that supports athletes across 50+ disciplines (athletics, hockey, badminton, wrestling, weightlifting, archery, shooting, boxing). For Olympic-cycle calculations (qualification standards, ranking points, championship cycles), the international federation rules apply and our tools reference those where relevant.",
+    pillarFaqs: [
+      {
+        q: "How accurate are the Fantasy Points Calculator rules vs Dream11 / MyTeam11 actual scoring?",
+        a: "The point structure matches Dream11's published scoring system to the point — 1 per run, +4 per boundary, +6 per six, +4 (30-run), +8 (50-run), +16 (100-run) milestone bonuses, strike-rate range bonuses for batters playing 10+ balls, 25 per wicket for bowlers, economy bonuses for 2+ overs bowled, 8 per catch, 12 per stumping or run-out. Captain and Vice-Captain multipliers (×2 and ×1.5) apply to total points. MyTeam11 and FanCode use slightly different constants; toggle the platform at the top of the calculator.",
+      },
+      {
+        q: "Is the NRR formula correct for the all-out penalty case?",
+        a: "Yes. When a team is bowled out, NRR is calculated as if the team had faced the full quota of overs (20 in T20, 50 in ODI) regardless of when the last wicket fell. This penalises teams that collapse — losing for 95 in 12 overs gives a much worse NRR than scoring 95 over the full 20 overs. The calculator applies this rule automatically when you mark a team as all-out, and the output matches the BCCI-published NRR figures on IPL points tables.",
+      },
+      {
+        q: "Does the DLS calculator match the broadcast-displayed revised target?",
+        a: "Yes — within 1 run of the broadcast figure. The calculator uses the published ICC DLS resource-table (the standard table updated 2024) which is identical to what match referees use. Tiny differences can arise from rounding at intermediate steps; the broadcast usually rounds the par score to the nearest integer, so our output matches once you apply the same rounding. Useful when you missed the live broadcast and want to verify the post-rain target.",
+      },
+      {
+        q: "Will these tools work during a live match on a slow connection?",
+        a: "Yes. Every cricket calculator runs entirely client-side and works after the first page load — no live server queries. Useful during a stadium match where mobile data is weak, or during live broadcast on a second screen where you want to do the math yourself. Inputs (runs, overs, wickets) update the output instantly without any server round-trip.",
+      },
+      {
+        q: "Can fantasy-cricket apps detect or restrict use of external calculators?",
+        a: "No — the tools are read-only calculators that consume the same publicly-broadcast data the apps use. Dream11 and the other platforms cannot detect (and have no policy against) using a third-party calculator alongside their own UI for team selection. Many serious fantasy players use a spreadsheet, a calculator, or a stats tool to optimise team selection; this is the same idea.",
+      },
+      {
+        q: "Why do rotated NRR figures sometimes differ across cricket sites?",
+        a: "Different sites use different rounding conventions and occasionally different conventions for innings declarations. The official BCCI / ICC convention rounds NRR to three decimal places. Some news sites round to two. Some compute NRR at innings-level and aggregate, others compute at series-level — both are mathematically valid but produce minor differences. Our calculator uses the BCCI three-decimal convention to match the official points table.",
+      },
+      {
+        q: "Are these tools useful for non-cricket sports like kabaddi, hockey, or badminton?",
+        a: "The cricket-specific tools (RRR, NRR, fantasy points, DLS, IPL auction) are exclusive to cricket. For other sports, generic calculators (percentage, average, basic statistics) work fine for ranking-table or score math. Dedicated tools for Pro Kabaddi League standings, hockey shootout scenarios, or badminton tournament seeding are on the roadmap; for now, those use the cross-category tools in math, science, and converters.",
+      },
+      {
+        q: "Do the cricket calculators handle women's IPL (WPL) and the women's T20 World Cup?",
+        a: "Yes — the rules are identical (T20 format, same scoring, same NRR rules) so the tools work for WPL and ICC Women's events without modification. Fantasy cricket for women's matches uses the same Dream11 / MyTeam11 / FanCode point structures. The calculator does not distinguish men's vs women's input; you provide the runs and balls and the math is identical.",
+      },
+    ],
+  },
 };
 
 /**

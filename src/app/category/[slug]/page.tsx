@@ -15,6 +15,7 @@ import {
   buildGraph,
   personIdFor,
   BUILD_DATE,
+  BUILD_MONTH_YEAR,
   INDIA_AUDIENCE,
 } from "@/lib/schema";
 import { categoryPillars } from "@/lib/category-pillars";
@@ -463,8 +464,16 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           {cat.icon}
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">{cat.name}</h1>
-        <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">{desc.intro}</p>
-        <p className="text-sm text-gray-500 mt-3">{catTools.length} free tools available — no signup required</p>
+        {/* Phase 4 Task C — visible freshness signal mirrors the Phase 3
+            listicle pattern. BUILD_MONTH_YEAR resolves at build time on
+            Vercel, so every redeploy advances the date — Google sees a
+            real freshness update rather than a hardcoded literal. The
+            same date is also passed to dateModified in the WebPage
+            schema (line 395) so visible text and JSON-LD stay in sync. */}
+        <p className="text-sm text-gray-500 mt-3">
+          Last updated: {BUILD_MONTH_YEAR} · {catTools.length} {catTools.length === 1 ? "tool" : "tools"} in this category — no signup required
+        </p>
+        <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mt-4">{desc.intro}</p>
       </div>
 
       <AdBanner format="horizontal" className="mb-8" />
