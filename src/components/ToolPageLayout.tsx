@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import AdBanner from "@/components/AdBanner";
 import RelatedTools from "@/components/RelatedTools";
@@ -42,6 +43,39 @@ import {
   BUILD_DATE,
 } from "@/lib/schema";
 import { getAuthorByCategory } from "@/lib/authors";
+
+/**
+ * Reciprocal-link map: tool slug → published /best/* listicle that reviews
+ * this tool against its alternatives. Phase 3 Round 2 cleanup — the
+ * listicles already link INTO the tool pages; this map closes the loop
+ * by adding ONE outbound link from the tool page back to the review.
+ *
+ * Rendered inline in the existing "Related Topics" paragraph (bottom of
+ * the educational content block), not as a new section — the constraint
+ * forbids a dedicated section just for this single link.
+ *
+ * Add a new entry here whenever a new /best/* listicle ships. Tools not
+ * in this map render the existing "Related Topics" paragraph unchanged.
+ */
+const bestGuideForSlug: Record<string, { url: string; anchor: string }> = {
+  "gst-calculator": {
+    url: "/best/free-gst-calculator-india",
+    anchor: "Read our honest review of free GST calculators in India",
+  },
+  "emi-calculator": {
+    url: "/best/free-emi-calculator-india",
+    anchor: "Compare this EMI calculator with 6 alternatives — honest review",
+  },
+  "income-tax-calculator": {
+    url: "/best/free-income-tax-calculator-india",
+    anchor:
+      "Compare this with 6 other free income tax calculators (FY 2025-26)",
+  },
+  "compress-pdf": {
+    url: "/best/free-pdf-tools-india",
+    anchor: "See our honest review of free PDF tools for Indian use cases",
+  },
+};
 
 /**
  * Derive a short, human HowToStep name from the full step text without
@@ -358,6 +392,22 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
               <p className="text-gray-600">
                 {tool.name} is commonly used for: {tool.keywords.join(", ")}.
                 Explore more {cat?.name || "tools"} on SabTools.in for all your calculation needs.
+                {/* Phase 3 Round 2: inline reciprocal link to the matching
+                    /best/* listicle. Renders only for the 4 tool slugs that
+                    have a corresponding review (see bestGuideForSlug at top
+                    of this file). Inline in this existing paragraph rather
+                    than a new section — Round 2 constraint. */}
+                {bestGuideForSlug[tool.slug] && (
+                  <>
+                    {" "}
+                    <Link
+                      href={bestGuideForSlug[tool.slug].url}
+                      className="text-indigo-600 hover:text-indigo-800 underline font-medium"
+                    >
+                      {bestGuideForSlug[tool.slug].anchor} →
+                    </Link>
+                  </>
+                )}
               </p>
             </>
           )}

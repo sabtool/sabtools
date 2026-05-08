@@ -203,8 +203,16 @@ export default function HindiHomePage() {
         })}
       </div>
 
-      {/* CTA */}
-      <div className="text-center mt-12">
+      {/* Reciprocal link to the Hindi-tools review hub. Phase 3 Round 2 —
+          closes the loop initiated by /best/hindi-calculator-tools (which
+          links here as its primary CTA). Inline within the existing footer
+          CTA block rather than a new section, per Round 2 constraint. */}
+      <div className="text-center mt-12 space-y-3">
+        <p className="text-sm text-gray-500">
+          <Link href="/best/hindi-calculator-tools" className="text-indigo-600 hover:text-indigo-800 underline font-medium">
+            हिंदी कैलकुलेटर टूल्स की honest review पढ़ें →
+          </Link>
+        </p>
         <Link href="/" className="btn-secondary inline-block">
           View All Tools in English →
         </Link>

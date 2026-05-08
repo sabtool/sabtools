@@ -129,11 +129,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly" as const,
       priority: 0.6,
     })),
-    // === /best/* listicles (Phase 3 Round 1) ===
+    // === /best hub + /best/* listicles (Phase 3 Rounds 1 + 2) ===
     // High-intent comparison guides ranking SabTools tools against
-    // competitor calculators. Priority 0.7 — substantial content pages
-    // that should crawl frequently but rank below the homepage and
-    // category hubs. Updated whenever the comparison data is refreshed.
+    // competitor calculators. Hub at /best (priority 0.8) sits one
+    // step below the homepage in the internal-link graph; child
+    // listicles are 0.7 — substantial content pages that should
+    // crawl frequently but rank below the hub.
+    {
+      url: `${baseUrl}/best`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
     {
       url: `${baseUrl}/best/free-gst-calculator-india`,
       lastModified: now,
