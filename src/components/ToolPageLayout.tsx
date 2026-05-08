@@ -99,7 +99,11 @@ interface ToolPageLayoutProps {
 
 export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) {
   const cat = categories.find((c) => c.slug === tool.category);
-  const content = getToolContent(tool.name, tool.description, tool.category, tool.keywords);
+  // Pass the slug so getToolContent can look up per-slug overrides —
+  // currently the formula section (Phase 4 Task D) for the top-20
+  // financial / tax / math / health tools where the math is the
+  // primary AI-extraction signal.
+  const content = getToolContent(tool.name, tool.description, tool.category, tool.keywords, tool.slug);
   // Pillar backlink — only render when the parent category has a full pillar,
   // so a tool page never links up to a thin category landing page (Report §3.3).
   const pillar = categoryPillars[tool.category];
@@ -337,6 +341,41 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
               </li>
             ))}
           </ol>
+
+          {/* Formula section — Phase 4 Task D. Renders only for the
+              top-20 tool pages (financial, tax, math, health-metric)
+              where the underlying mathematics is the primary
+              AI-extraction signal.
+              Plain-text monospace render so search and AI crawlers can
+              read the formula reliably — image-rendered formulas are
+              opaque to extraction. Tools without a canonical formula
+              skip this section (content.formula is undefined). */}
+          {content.formula && (
+            <>
+              <h2 id="formula" className="text-xl font-bold text-gray-800 mt-8">
+                How {tool.name} Works — The Math
+              </h2>
+              <div className="not-prose mt-3 mb-4 bg-gray-50 border border-gray-200 rounded-2xl p-5">
+                <pre className="overflow-x-auto whitespace-pre font-mono text-sm text-gray-900 leading-relaxed">
+                  {content.formula.formula}
+                </pre>
+              </div>
+              <div className="not-prose mb-4">
+                <p className="text-sm font-semibold text-gray-700 mb-2">Where:</p>
+                <ul className="space-y-1.5 text-sm text-gray-700">
+                  {content.formula.variables.map((v) => (
+                    <li key={v.symbol} className="flex items-start gap-2">
+                      <code className="font-mono text-indigo-700 shrink-0 min-w-[3rem]">
+                        {v.symbol}
+                      </code>
+                      <span className="text-gray-600">{v.description}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <p className="text-gray-600 leading-relaxed">{content.formula.explanation}</p>
+            </>
+          )}
 
           {/* Real-World Examples */}
           {content.realWorldExamples && content.realWorldExamples.length > 0 && (

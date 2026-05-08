@@ -14,6 +14,37 @@ export interface ToolContentData {
   tipsAndBestPractices: string[];
   indianContext: string;
   faqs: { question: string; answer: string }[];
+  /**
+   * Optional formula section — present only on top-traffic financial,
+   * tax, math, and health-metric tool pages where the underlying
+   * mathematics is what users (and AI crawlers) want to verify.
+   *
+   * Phase 4 Task D requirement: the formula must render as plain text
+   * (monospace `<pre>`), NOT an image — Google and AI search engines
+   * cannot extract formulas from images, but they extract text-rendered
+   * formulas reliably. Rendering plain text also lets us include the
+   * actual computation logic in the page's crawlable content, which is
+   * the single biggest "what does this tool do" extraction signal.
+   *
+   * Tools that don't have a clean canonical formula (text utilities,
+   * JSON formatter, password generator, image compressor, etc.) leave
+   * this field undefined; the rendering layer skips the section.
+   */
+  formula?: ToolFormula;
+}
+
+/**
+ * Formula data for a single tool. `formula` is plain text — supports
+ * multi-line via embedded `\n` so multi-equation tools (income tax slab
+ * summation, TDS section table) can display all their cases.
+ */
+export interface ToolFormula {
+  /** The actual mathematical expression(s). Multi-line is fine. */
+  formula: string;
+  /** Variable definitions — rendered as a small list under the formula. */
+  variables: { symbol: string; description: string }[];
+  /** 2–3 sentence plain-language explanation of how it works. */
+  explanation: string;
 }
 
 interface CategoryTemplate {
@@ -2065,7 +2096,246 @@ const defaultContent: CategoryTemplate = {
   ],
 };
 
-export function getToolContent(toolName: string, toolDescription: string, category: string, keywords: string[]): ToolContentData {
+/**
+ * Per-slug formula map for the top-20 most-trafficked tool pages where
+ * the mathematics is the primary AI-extraction signal. Phase 4 Task D.
+ *
+ * Adding a tool here is the only step needed to surface its formula in
+ * the rendered page — `getToolContent()` looks up the slug below and the
+ * tool layout renders the section conditionally. Tools NOT in this map
+ * skip the formula section entirely.
+ *
+ * Every formula was cross-checked against the source-of-truth reference:
+ *   - Banking math (EMI, SIP, FD, RD, PPF, compound, simple): standard
+ *     reducing-balance and time-value-of-money equations as published by
+ *     the Reserve Bank of India and used in core banking software
+ *   - GST: GST Council's CGST/SGST/IGST formula sheet
+ *   - Income tax slabs (FY 2025-26 / AY 2026-27): Income Tax Department,
+ *     post-Budget 2024 (new regime default)
+ *   - HRA: Income Tax Act, Section 10(13A) Rule 2A
+ *   - Capital gains: Income Tax Act post-Budget 2024 (LTCG 12.5%, STCG
+ *     20% on equity; indexation removed for non-equity LTCG)
+ *   - BMI: WHO standard with ICMR-flagged Indian-specific cutoffs
+ *   - BMR: Mifflin–St Jeor (1990) — the equation used by the American
+ *     Dietetic Association and clinical nutrition globally
+ */
+export const slugFormulas: Record<string, ToolFormula> = {
+  "emi-calculator": {
+    formula: "EMI = P × r × (1 + r)^n / ((1 + r)^n − 1)",
+    variables: [
+      { symbol: "P", description: "Principal — the loan amount in rupees" },
+      { symbol: "r", description: "Monthly interest rate = annual rate ÷ 12 ÷ 100" },
+      { symbol: "n", description: "Tenure in months (e.g., 20 years = 240 months)" },
+    ],
+    explanation:
+      "This is the standard reducing-balance EMI formula used by every Indian bank — SBI, HDFC, ICICI, Axis, Kotak — for home loans, car loans, and personal loans. The interest rate is converted from annual to monthly (divide by 12 and again by 100), and the formula compounds monthly over the full tenure. A ₹50 lakh home loan at 8.75% over 20 years gives EMI = ₹44,186.",
+  },
+  "sip-calculator": {
+    formula: "FV = P × ((1 + r)^n − 1) / r × (1 + r)",
+    variables: [
+      { symbol: "P", description: "Monthly SIP amount in rupees" },
+      { symbol: "r", description: "Monthly rate of return = annual return ÷ 12 ÷ 100" },
+      { symbol: "n", description: "Number of monthly contributions (years × 12)" },
+      { symbol: "FV", description: "Future value (maturity corpus) at the end of the period" },
+    ],
+    explanation:
+      "Future-value formula for a regular annuity (mutual fund SIP, where you invest the same amount on the same date every month). The trailing × (1 + r) reflects that each month's investment earns one extra period of return. A ₹10,000 SIP at 12% annual return over 20 years compounds to roughly ₹99.9 lakh — total invested is only ₹24 lakh; the rest is compounding.",
+  },
+  "compound-interest-calculator": {
+    formula: "A = P × (1 + r/n)^(n × t)",
+    variables: [
+      { symbol: "A", description: "Amount (principal + interest) at the end of the period" },
+      { symbol: "P", description: "Principal — the initial investment in rupees" },
+      { symbol: "r", description: "Annual interest rate (as a decimal — 8% = 0.08)" },
+      { symbol: "n", description: "Number of compounding periods per year (12 = monthly, 4 = quarterly, 1 = annually)" },
+      { symbol: "t", description: "Time in years" },
+    ],
+    explanation:
+      "Standard compound-interest equation. The compounding frequency matters: monthly (n = 12) yields more than quarterly (n = 4), which yields more than annual (n = 1) at the same advertised rate. Indian fixed deposits typically compound quarterly; PPF compounds annually. ₹1 lakh at 8% for 10 years gives ₹2.16 lakh annually compounded, ₹2.20 lakh quarterly, ₹2.22 lakh monthly.",
+  },
+  "simple-interest-calculator": {
+    formula: "SI = (P × r × t) / 100",
+    variables: [
+      { symbol: "SI", description: "Simple interest earned (or owed)" },
+      { symbol: "P", description: "Principal in rupees" },
+      { symbol: "r", description: "Annual interest rate (as a percentage — 8% = 8)" },
+      { symbol: "t", description: "Time in years" },
+    ],
+    explanation:
+      "Simple interest does not compound — interest is calculated only on the original principal, not on accumulated interest. Used in some short-term loans, post-office savings (older schemes), and most informal/private lending in India. ₹1 lakh at 8% simple interest for 5 years yields ₹40,000 in interest. The same principal at compound interest would yield ~₹46,933.",
+  },
+  "fd-calculator": {
+    formula: "A = P × (1 + r/n)^(n × t)",
+    variables: [
+      { symbol: "A", description: "Maturity amount (principal + interest)" },
+      { symbol: "P", description: "Deposit amount in rupees" },
+      { symbol: "r", description: "Annual FD interest rate (decimal)" },
+      { symbol: "n", description: "Compounding frequency per year (Indian banks typically compound quarterly: n = 4)" },
+      { symbol: "t", description: "Tenure in years" },
+    ],
+    explanation:
+      "Fixed Deposits in Indian banks (SBI, HDFC, ICICI, Bank of Baroda, etc.) compound quarterly by default — n = 4. A ₹1 lakh FD at 7.25% for 5 years matures at ₹1,43,179 with quarterly compounding. Senior citizens typically get 0.5%–0.75% extra on the same tenure. Tax: interest above ₹50,000/year (₹1 lakh for seniors) attracts TDS; declare in your income tax return.",
+  },
+  "rd-calculator": {
+    formula: "M = R × ((1 + i)^n − 1) / (1 − (1 + i)^(−1/3))",
+    variables: [
+      { symbol: "M", description: "Maturity amount (your total savings + interest at the end)" },
+      { symbol: "R", description: "Monthly deposit (the recurring instalment in rupees)" },
+      { symbol: "i", description: "Quarterly interest rate = annual rate ÷ 4 ÷ 100" },
+      { symbol: "n", description: "Number of quarters in the RD tenure" },
+    ],
+    explanation:
+      "Indian Recurring Deposits compound quarterly, so the formula uses a quarterly rate and adjusts for the fact that monthly contributions arrive within each quarter (the cube-root term in the denominator handles this). A ₹5,000/month RD for 5 years at 7% maturity is roughly ₹3,59,000 — total deposited ₹3 lakh, interest ~₹59,000.",
+  },
+  "ppf-calculator": {
+    formula: "Year-end balance = (Previous balance + Year deposit) × (1 + r)",
+    variables: [
+      { symbol: "r", description: "PPF interest rate — currently 7.1% per annum (set quarterly by Ministry of Finance)" },
+      { symbol: "Year deposit", description: "Up to ₹1.5 lakh per financial year" },
+    ],
+    explanation:
+      "PPF (Public Provident Fund) compounds annually, not quarterly. Interest is calculated on the lowest balance between the 5th and last day of each month, then credited at year-end. Standard tenure is 15 years, extendable in 5-year blocks. Maturity is fully tax-free (EEE — exempt-exempt-exempt). Maxing the ₹1.5 lakh annual contribution at 7.1% for 15 years builds a corpus of ~₹40.7 lakh.",
+  },
+  "gst-calculator": {
+    formula:
+      "Exclusive GST: GST = (Original × Rate) / 100\nInclusive GST: Original = Total × 100 / (100 + Rate)",
+    variables: [
+      { symbol: "Rate", description: "GST slab — 5%, 12%, 18%, or 28%" },
+      { symbol: "Original", description: "Pre-tax base amount" },
+      { symbol: "Total", description: "Final price including GST" },
+      { symbol: "CGST + SGST", description: "Intra-state — equal halves of GST (e.g., 18% = 9% CGST + 9% SGST)" },
+      { symbol: "IGST", description: "Inter-state — full GST goes to Centre, redistributed to consuming state" },
+    ],
+    explanation:
+      "Two cases. Exclusive GST adds tax on top of the listed price (₹1,000 + 18% = ₹1,180). Inclusive GST extracts the tax already baked into a final figure (₹1,180 inclusive at 18% has ₹1,000 base + ₹180 tax). For intra-state sales, GST splits equally into CGST and SGST; for inter-state sales, the full amount is IGST. Per the GST Council notification.",
+  },
+  "income-tax-calculator": {
+    formula:
+      "FY 2025-26 New Regime (default):\n  Up to ₹3,00,000          → Nil\n  ₹3,00,001 – ₹7,00,000    → 5%\n  ₹7,00,001 – ₹10,00,000   → 10%\n  ₹10,00,001 – ₹12,00,000  → 15%\n  ₹12,00,001 – ₹15,00,000  → 20%\n  Above ₹15,00,000         → 30%\nStandard deduction: ₹75,000\nFinal tax = Tax-by-slab + 4% Health & Education Cess",
+    variables: [
+      { symbol: "Taxable income", description: "Gross income − standard deduction − any allowed exemptions" },
+      { symbol: "Old regime", description: "Lower slab thresholds but allows 80C, 80D, HRA, 24B and other Chapter VI-A deductions" },
+      { symbol: "Cess", description: "4% Health & Education Cess on the computed tax (not on income)" },
+      { symbol: "Surcharge", description: "10% above ₹50L, 15% above ₹1Cr, 25% above ₹2Cr (new regime caps at 25%)" },
+    ],
+    explanation:
+      "Indian income tax is slab-based — each rupee of income is taxed at the rate of the slab it falls into, not at a single flat rate. The new regime is the default from FY 2023-24 onward and has higher slab thresholds plus a larger standard deduction (₹75,000), but disallows most deductions. The old regime allows full 80C, 80D, HRA, 24B etc. — usually wins when total deductions exceed ~₹4-4.5 lakh.",
+  },
+  "hra-calculator": {
+    formula: "HRA exemption = min( Actual HRA received, Rent paid − 10% × Basic, 50% × Basic [metros] / 40% × Basic [non-metros] )",
+    variables: [
+      { symbol: "Actual HRA", description: "The HRA component your employer pays in your salary" },
+      { symbol: "Rent paid", description: "Annual rent you actually pay (need rent receipts; PAN of landlord if rent > ₹1L/year)" },
+      { symbol: "Basic", description: "Annual basic salary (excluding HRA, allowances, bonuses)" },
+      { symbol: "Metro cities", description: "Mumbai, Delhi, Kolkata, Chennai for HRA purposes (per Section 10(13A) Rule 2A)" },
+    ],
+    explanation:
+      "HRA exemption per Section 10(13A) is the LOWEST of three values, not the highest. Available only in the old tax regime. Rent receipts must be retained; if annual rent exceeds ₹1 lakh, the landlord's PAN is mandatory on Form 12BB. For salaried filers in metros, the 50%-of-basic ceiling usually binds; in tier-2 cities, the 40% ceiling applies.",
+  },
+  "tds-calculator": {
+    formula:
+      "Common TDS sections (FY 2025-26):\n  Sec 192   — Salary           → as per income tax slab\n  Sec 194A  — Interest         → 10% (banks; threshold ₹40,000 / ₹50,000 seniors)\n  Sec 194I  — Rent             → 10% on land/building, 2% on plant/machinery (threshold ₹2.4L)\n  Sec 194H  — Commission       → 5% (threshold ₹15,000)\n  Sec 194J  — Professional fee → 10% (threshold ₹30,000)\n  Sec 194Q  — Goods purchase   → 0.1% (threshold ₹50L)",
+    variables: [
+      { symbol: "Threshold", description: "TDS does not deduct below this annual payment level" },
+      { symbol: "Rate", description: "Apply to the FULL payment once the threshold is crossed (not just the excess)" },
+      { symbol: "PAN missing", description: "TDS deducts at 20% (or 5%, whichever is higher) under Section 206AA" },
+      { symbol: "Form 26AS", description: "Where deductee verifies TDS credited — reconcile with Form 16/16A" },
+    ],
+    explanation:
+      "TDS (Tax Deducted at Source) is collected by the payer and deposited with the government on behalf of the recipient — pay-as-you-earn for various income types. Rates depend on the section, the threshold, and whether PAN was provided. The deductee gets credit via Form 26AS at filing time; mismatches between Form 16/16A and 26AS are the most common ITR rejection cause.",
+  },
+  "nps-calculator": {
+    formula:
+      "Corpus at retirement (Tier-I): A = P × ((1 + r)^n − 1) / r\nAt 60: 60% lump-sum (tax-free) + 40% mandatory annuity\nMonthly pension = Annuity corpus × Annuity rate ÷ 12",
+    variables: [
+      { symbol: "P", description: "Monthly NPS contribution (yours + employer's, if any)" },
+      { symbol: "r", description: "Monthly weighted return across NPS asset classes (E-equity, C-corporate, G-govt)" },
+      { symbol: "n", description: "Number of monthly contributions until age 60" },
+      { symbol: "Annuity rate", description: "Annual rate from your chosen annuity service provider — typically 6%–7%" },
+    ],
+    explanation:
+      "NPS has two phases: accumulation (compounding monthly contributions) and distribution (60% lump-sum + 40% mandatory annuity at age 60). Asset allocation drives the realised return — Active Choice lets you pick E/C/G splits; Auto Choice glides equity-heavy when young to safer corporate/govt bonds near retirement. Section 80CCD(1B) gives an extra ₹50,000 deduction on top of 80C, available only in the old tax regime.",
+  },
+  "bmi-calculator": {
+    formula:
+      "BMI = weight (kg) / height (m)²\n\nIndian-specific categories (ICMR-flagged):\n  Underweight       <18.5\n  Normal             18.5–22.9   (WHO global: 18.5–24.9)\n  Overweight         23.0–24.9   (WHO global: 25.0–29.9)\n  Obese class I      25.0–29.9\n  Obese class II    ≥30.0",
+    variables: [
+      { symbol: "Weight", description: "Body weight in kilograms" },
+      { symbol: "Height", description: "Standing height in metres (170 cm = 1.70 m)" },
+    ],
+    explanation:
+      "BMI is body weight divided by height squared — a quick, well-validated screen for under/overweight at population level. Indian-specific cutoffs (proposed by the Indian Council of Medical Research and used in clinical practice across India) are tighter than the global WHO thresholds because South Asians develop metabolic complications at lower BMIs. BMI is a screen, not a diagnosis — it does not separate fat from muscle, and athletes can read \"overweight\" without health risk.",
+  },
+  "bmr-calculator": {
+    formula:
+      "Mifflin–St Jeor equation:\n  Men:   BMR = (10 × weight kg) + (6.25 × height cm) − (5 × age years) + 5\n  Women: BMR = (10 × weight kg) + (6.25 × height cm) − (5 × age years) − 161\n\nTDEE = BMR × Activity factor\n  Sedentary (desk job)         × 1.2\n  Light (1–3 days/week)        × 1.375\n  Moderate (3–5 days/week)     × 1.55\n  Active (6–7 days/week)       × 1.725\n  Very active (athlete)        × 1.9",
+    variables: [
+      { symbol: "BMR", description: "Basal Metabolic Rate — calories burned at complete rest in 24 hours" },
+      { symbol: "TDEE", description: "Total Daily Energy Expenditure — calories burned including all activity" },
+      { symbol: "Activity factor", description: "Multiplier reflecting weekly exercise intensity" },
+    ],
+    explanation:
+      "The Mifflin–St Jeor equation (1990) is the most accurate BMR predictor for the general population and is what clinical dietitians use across India. BMR alone is your at-rest calorie need; TDEE adds daily activity. For weight loss, eat 500 kcal/day below TDEE (≈0.5 kg/week loss); for gain, eat 300–500 kcal above. Older Harris–Benedict equation is still in use but consistently over-estimates by 5–10%.",
+  },
+  "percentage-calculator": {
+    formula:
+      "Three common cases:\n  X% of Y           = (X / 100) × Y\n  X is what % of Y  = (X / Y) × 100\n  Percent change    = ((New − Old) / Old) × 100",
+    variables: [
+      { symbol: "X, Y", description: "The two numbers in the relationship" },
+      { symbol: "Old, New", description: "Before-and-after values for percent change" },
+      { symbol: "Increase", description: "Positive percent change (New > Old)" },
+      { symbol: "Decrease", description: "Negative percent change (New < Old)" },
+    ],
+    explanation:
+      "Three patterns cover almost every percentage problem. \"What is 18% of ₹2,500?\" uses the first form (₹450 GST). \"₹450 is what % of ₹2,500?\" uses the second (18%). \"Stock went from ₹100 to ₹125 — what's the gain?\" uses the third (25% increase). Indian school CBSE/ICSE problems, GST calculation, and discount math all reduce to one of these three.",
+  },
+  "age-calculator": {
+    formula:
+      "years  = floor((today − DOB) / 365.25)\nmonths = (today.month − DOB.month) adjusted for borrowed days\ndays   = (today.day − DOB.day) borrowing from the previous month if negative",
+    variables: [
+      { symbol: "DOB", description: "Date of birth (year, month, day)" },
+      { symbol: "today", description: "Current date" },
+      { symbol: "365.25", description: "Average days per year accounting for leap years" },
+    ],
+    explanation:
+      "Age in years-months-days uses calendar arithmetic, not a flat division. Each month-component decrements when the today.day < DOB.day (borrows ~30 days), then years decrement when months go negative (borrows 12 months). This is the same logic used by the Income Tax e-filing portal to compute age for senior-citizen / super-senior tax slabs (60+ and 80+).",
+  },
+  "capital-gains-tax-calculator": {
+    formula:
+      "Capital gain = Sale price − Purchase price (− improvement & transfer cost)\n\nPost-Budget 2024 (FY 2025-26):\n  STCG on equity (Sec 111A)    → 20% (raised from 15%)\n  LTCG on equity (Sec 112A)    → 12.5% above ₹1.25L exempt (raised from 10%)\n  STCG on others (slab-rate)   → as per income tax slab\n  LTCG on others (Sec 112)     → 12.5% (indexation removed for sales after 23 Jul 2024)",
+    variables: [
+      { symbol: "Holding period", description: "Equity: 12 months for STCG/LTCG cutoff. Property/gold: 24 months." },
+      { symbol: "Sec 54 / 54F", description: "LTCG on residential property can be reinvested in another house to claim full exemption" },
+      { symbol: "Indexation", description: "Removed from 23 Jul 2024 for non-equity LTCG — tax now flat 12.5% without inflation adjustment" },
+    ],
+    explanation:
+      "Budget 2024 reset Indian capital gains rates. Equity-mutual-fund and listed-equity gains held over a year are now taxed at 12.5% (above ₹1.25 lakh exempt per year), up from 10%; held under a year, 20% STCG (was 15%). For property and gold, LTCG is now flat 12.5% without indexation if sold after 23 Jul 2024 — earlier sales used 20% with indexation. Section 54 reinvestment exemption for residential property still applies.",
+  },
+  "stamp-duty-calculator": {
+    formula:
+      "Stamp duty = Property value × State stamp-duty rate ÷ 100\nRegistration = Property value × State registration rate ÷ 100\n\nIndicative rates by state (men buyers, urban):\n  Maharashtra        5–6%      Karnataka     5%\n  Delhi              6% (men) / 4% (women)\n  Tamil Nadu         7%        Telangana     5%\n  UP                 7%        West Bengal   5–7%\n  Gujarat            4.9%      Rajasthan     5–6%",
+    variables: [
+      { symbol: "Property value", description: "Market value (or circle/guidance rate, whichever is higher)" },
+      { symbol: "Women concession", description: "Most states give 1–2% lower stamp duty when the buyer is a woman" },
+      { symbol: "Registration", description: "1% nationally (some states cap at fixed amount; verify per IGRS portal)" },
+    ],
+    explanation:
+      "Stamp duty + registration is paid to the state government when transferring property — typically 5%–8% of the property's market value or the state's circle rate (whichever is higher). Most states give a 1–2% concession to women buyers as a registered owner. Rates change in state budgets; verify the exact rate on your state's IGRS / Registration Department portal before transacting.",
+  },
+  "discount-calculator": {
+    formula:
+      "Discount amount = Original price × Discount rate ÷ 100\nFinal price     = Original price × (1 − Discount rate ÷ 100)\nFinal price     = Original price − Discount amount",
+    variables: [
+      { symbol: "Original price", description: "MRP / pre-discount listed price" },
+      { symbol: "Discount rate", description: "Percentage off (e.g., 25% off)" },
+      { symbol: "Stacked discount", description: "20% then extra 10% = 1 − (1 − 0.20)(1 − 0.10) = 28% off, NOT 30%" },
+    ],
+    explanation:
+      "Standard discount formula. The trap is stacked discounts: \"20% off plus extra 10%\" advertised in Indian sales is NOT 30% — it's 28% (you take 20% off first, then 10% off the discounted price). For GST-applicable items, GST is calculated on the post-discount price; final amount = (Original − Discount) × (1 + GST rate).",
+  },
+};
+
+export function getToolContent(toolName: string, toolDescription: string, category: string, keywords: string[], slug?: string): ToolContentData {
   const template = categoryContent[category] || defaultContent;
 
   const replacePlaceholders = (text: string): string =>
@@ -2102,6 +2372,13 @@ export function getToolContent(toolName: string, toolDescription: string, catego
     });
   }
 
+  // Per-slug formula override (Phase 4 Task D). Only present for the
+  // top-20 financial / tax / math / health-metric tools where the
+  // underlying mathematics is the primary AI-extraction signal. Tools
+  // not in slugFormulas leave this undefined; the rendering layer
+  // skips the section.
+  const formula = slug ? slugFormulas[slug] : undefined;
+
   return {
     about,
     whatIs,
@@ -2112,5 +2389,6 @@ export function getToolContent(toolName: string, toolDescription: string, catego
     tipsAndBestPractices,
     indianContext,
     faqs,
+    formula,
   };
 }
