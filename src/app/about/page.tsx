@@ -7,8 +7,10 @@ import { BRAND } from "@/lib/brand";
 import {
   SITE_URL,
   ORG_ID,
+  SUPPORTED_LANGUAGES,
   organizationNode,
   breadcrumbNode,
+  faqPageNode,
   buildGraph,
 } from "@/lib/schema";
 
@@ -49,6 +51,46 @@ export default function AboutPage() {
   const toolCount = BRAND.totalTools;
   const catCount = BRAND.totalCategories;
 
+  // About-page FAQ — 8 questions covering pricing, signup, offline, privacy,
+  // languages, attribution, requests, and accuracy. Both rendered as visible
+  // HTML and emitted as FAQPage JSON-LD inside the same @graph below so
+  // Google sees one canonical FAQ-block per page (avoids duplicate-FAQ
+  // warnings in Search Console). All answers derive numbers from BRAND.
+  const aboutFaqs: { q: string; a: string }[] = [
+    {
+      q: "Is SabTools.in completely free?",
+      a: `Yes. Every one of the ${toolCount}+ tools on SabTools.in is free to use — no subscriptions, no premium tier, no usage limits. The site is funded entirely through unobtrusive display ads, so there is nothing to pay or unlock.`,
+    },
+    {
+      q: "Do I need to sign up or create an account?",
+      a: "No. SabTools.in does not have user accounts at all. You can open any tool and start using it immediately. We don't collect names, emails, or phone numbers, and we don't run a login system that could be breached.",
+    },
+    {
+      q: "Does SabTools.in work without internet?",
+      a: "Most tools work offline once the page has loaded once. The site is a statically generated, client-side application — calculations run in your browser, not on a server. You can install SabTools.in as a Progressive Web App on Android or iOS for fully offline access.",
+    },
+    {
+      q: "How is my data protected when I use a tool?",
+      a: "Your inputs never leave your device. Whether you are calculating EMI on a ₹50 lakh home loan, formatting a private JSON payload, or compressing a personal photo, the computation runs entirely in your browser. No data is uploaded, logged, or stored on our servers — there is no server-side processing for any tool.",
+    },
+    {
+      q: "What languages does SabTools.in support?",
+      a: `English and Hindi. ${BRAND.hindiTools}+ of our ${toolCount}+ tools have full Hindi versions available at /hi, including the EMI calculator, GST calculator, and income tax calculator. Hindi pages declare hreflang correctly so Google serves the right language to the right user.`,
+    },
+    {
+      q: "Who built SabTools.in?",
+      a: `SabTools.in was founded in ${BRAND.founded} by ${BRAND.founder} in India. The platform is maintained by a small team of engineers, financial experts, educators, and healthcare professionals — the same team listed on the "Meet Our Team" section above. Each tool category is reviewed by a domain expert before publication.`,
+    },
+    {
+      q: "How do I request a new tool or report a bug?",
+      a: "Email contact@sabtools.in or use the form on our Contact page. We genuinely read every message. If your suggestion is something other Indian users would benefit from — a new tax slab calculator after a budget announcement, a state-specific stamp-duty tool, a regional festival calendar — it usually ships within 2–4 weeks.",
+    },
+    {
+      q: "Are the calculations accurate?",
+      a: "Yes — within the constraints of the inputs you provide. Our finance calculators use the exact formulas published by RBI and major Indian banks (SBI, HDFC, ICICI). Tax calculators follow the latest Income Tax Department slabs for FY 2025-26 and FY 2026-27. That said, results are for informational purposes — always confirm with a qualified financial advisor or chartered accountant before signing a loan, filing a return, or making a major investment.",
+    },
+  ];
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "About Us" }]} />
@@ -75,6 +117,11 @@ export default function AboutPage() {
                 { name: "Home", url: `${SITE_URL}/` },
                 { name: "About Us" },
               ]),
+              // FAQPage emitted inside the same @graph (NOT a separate <script>)
+              // so Google parses one merged document — avoids the "duplicate
+              // FAQPage" warning some pages generate when FAQ schema is shipped
+              // out-of-band of the page's main graph.
+              faqPageNode(aboutFaqs, SUPPORTED_LANGUAGES[0]),
             ])
           ),
         }}
@@ -217,6 +264,43 @@ export default function AboutPage() {
         <p>
           SabTools.in is built on modern web technology for maximum speed and reliability. The entire platform is a statically generated site, meaning every page is pre-built and served from a global CDN. This gives us sub-second load times across India, strong security with no server-side vulnerabilities, and the ability to work offline once loaded. All calculations happen client-side using JavaScript — your data never touches our servers.
         </p>
+
+        {/* FAQ — visible HTML mirrors the FAQPage JSON-LD emitted in the
+            page graph above. Schema.org rich-results guidelines require the
+            answer text in the schema to match what users actually see, so
+            both blocks are derived from the same `aboutFaqs` array. */}
+        <h2 className="text-2xl font-bold text-gray-900" id="faq">Frequently Asked Questions</h2>
+        <p className="text-gray-600">
+          Common questions we get from new visitors. If your question is not
+          answered here, write to us at{" "}
+          <a href="mailto:contact@sabtools.in" className="text-indigo-600 hover:underline font-medium">
+            contact@sabtools.in
+          </a>
+          .
+        </p>
+        <div className="not-prose space-y-3">
+          {aboutFaqs.map((faq) => (
+            <details
+              key={faq.q}
+              className="group bg-white rounded-xl border border-gray-200 hover:border-indigo-300 transition"
+            >
+              <summary className="cursor-pointer list-none p-5 flex items-start justify-between gap-4">
+                <h3 className="font-semibold text-gray-900 text-base sm:text-lg">{faq.q}</h3>
+                <svg
+                  className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform shrink-0 mt-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-5 pb-5 text-gray-700 text-sm sm:text-base leading-relaxed">
+                {faq.a}
+              </div>
+            </details>
+          ))}
+        </div>
 
         {/* Contact */}
         <h2 className="text-2xl font-bold text-gray-900">Get in Touch</h2>

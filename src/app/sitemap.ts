@@ -129,6 +129,41 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly" as const,
       priority: 0.6,
     })),
+    // === /best/* listicles (Phase 3 Round 1) ===
+    // High-intent comparison guides ranking SabTools tools against
+    // competitor calculators. Priority 0.7 — substantial content pages
+    // that should crawl frequently but rank below the homepage and
+    // category hubs. Updated whenever the comparison data is refreshed.
+    {
+      url: `${baseUrl}/best/free-gst-calculator-india`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/best/free-emi-calculator-india`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/best/free-pdf-tools-india`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/best/free-income-tax-calculator-india`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/best/hindi-calculator-tools`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
   ];
 
   // Category pages — declare a Hindi alternate only when a `/hi/category/{slug}`
