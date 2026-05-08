@@ -139,7 +139,7 @@ async function createIntroCard(outputPath) {
       <text x="${W / 2}" y="280" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="24" letter-spacing="10" font-family="Arial">COMPLETE WALKTHROUGH</text>
 
       <text x="${W / 2}" y="420" text-anchor="middle" fill="white" font-size="90" font-weight="bold" font-family="Arial">SabTools.in</text>
-      <text x="${W / 2}" y="510" text-anchor="middle" fill="#a5b4fc" font-size="40" font-family="Arial">460+ Free Online Tools for India</text>
+      <text x="${W / 2}" y="510" text-anchor="middle" fill="#a5b4fc" font-size="40" font-family="Arial">497+ Free Online Tools for India</text>
 
       <rect x="${W / 2 - 60}" y="550" width="120" height="4" rx="2" fill="#818cf8"/>
 
@@ -175,7 +175,7 @@ async function createOutroCard(outputPath) {
       <text x="${W / 2}" y="250" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="26" letter-spacing="8" font-family="Arial">THANK YOU FOR WATCHING</text>
 
       <text x="${W / 2}" y="380" text-anchor="middle" fill="white" font-size="72" font-weight="bold" font-family="Arial">Visit SabTools.in Today!</text>
-      <text x="${W / 2}" y="450" text-anchor="middle" fill="#a5b4fc" font-size="36" font-family="Arial">460+ Free Tools — No Signup Required</text>
+      <text x="${W / 2}" y="450" text-anchor="middle" fill="#a5b4fc" font-size="36" font-family="Arial">497+ Free Tools — No Signup Required</text>
 
       <rect x="${W / 2 - 220}" y="500" width="440" height="80" rx="40" fill="url(#btn)"/>
       <text x="${W / 2}" y="552" text-anchor="middle" fill="white" font-size="42" font-weight="bold" font-family="Arial">sabtools.in</text>

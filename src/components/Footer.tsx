@@ -1,6 +1,7 @@
 import Link from "next/link";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import { tools, categories } from "@/lib/tools";
+import { BRAND } from "@/lib/brand";
 
 export default function Footer() {
   return (
@@ -37,7 +38,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
-              India&apos;s leading free online tools platform. {tools.length}+ calculators, converters, AI tools, PDF tools, developer tools and more. No signup, no limits, 100% free.
+              India&apos;s leading free online tools platform. {BRAND.totalTools}+ calculators, converters, AI tools, PDF tools, developer tools and more. No signup, no limits, 100% free.
             </p>
           </div>
 

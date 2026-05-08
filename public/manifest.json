@@ -1,7 +1,7 @@
 {
   "name": "SabTools.in - Free Online Tools for India",
   "short_name": "SabTools",
-  "description": "460+ Free Online Tools for India — Calculators, Converters, AI Tools, PDF Tools & More. 100% free, no signup.",
+  "description": "497+ Free Online Tools for India — Calculators, Converters, AI Tools, PDF Tools & More. 100% free, no signup.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -23,7 +23,7 @@
       "sizes": "1200x630",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "SabTools.in homepage with 460+ free online tools"
+      "label": "SabTools.in homepage with 497+ free online tools"
     }
   ],
   "shortcuts": [

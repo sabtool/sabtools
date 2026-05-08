@@ -51,9 +51,9 @@ async function uploadLongVideo(videoPath) {
 
   const youtube = google.youtube({ version: "v3", auth: oauth2Client });
 
-  const title = "460+ FREE Online Tools for India — SabTools.in Complete Walkthrough & Tutorial 2026";
+  const title = "497+ FREE Online Tools for India — SabTools.in Complete Walkthrough & Tutorial 2026";
   const description = [
-    "460+ FREE Online Tools — No Signup, No Download! SabTools.in ka complete walkthrough aur tutorial Hindi mein.",
+    "497+ FREE Online Tools — No Signup, No Download! SabTools.in ka complete walkthrough aur tutorial Hindi mein.",
     "",
     "Is video mein main aapko dikhata hoon SabTools.in ke popular tools kaise use karte hain — EMI Calculator, SIP Calculator, GST Calculator, Age Calculator, Percentage Calculator, QR Code Generator, aur 450+ free tools!",
     "",
@@ -101,7 +101,7 @@ async function uploadLongVideo(videoPath) {
     "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
     "✅ WHY SABTOOLS.IN?",
     "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
-    "✔️ 460+ Free Online Tools",
+    "✔️ 497+ Free Online Tools",
     "✔️ No Signup / No Login Required",
     "✔️ 100% Free — No Hidden Charges",
     "✔️ Your Data is Safe — All Processing in Browser",
@@ -173,7 +173,7 @@ async function uploadLongVideo(videoPath) {
     // Auto-comment with all tool links (SEO backlinks)
     try {
       const commentText = [
-        `🔗 Visit SabTools.in — 460+ FREE Online Tools: https://sabtools.in`,
+        `🔗 Visit SabTools.in — 497+ FREE Online Tools: https://sabtools.in`,
         ``,
         `━━━ Popular Tools (Click to Use FREE) ━━━`,
         ``,

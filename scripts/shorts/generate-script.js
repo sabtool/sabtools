@@ -69,7 +69,7 @@ function generateFallbackScript(tool) {
     narration2,
     cta,
     title: `${tool.name} — How to Use FREE! ${tool.icon} #shorts`,
-    description: `Learn how to use ${tool.name} for free at sabtools.in\nStep-by-step tutorial — no signup needed!\n460+ Free Online Tools for India\n#FreeTools #India #SabTools #HowTo #Tutorial`,
+    description: `Learn how to use ${tool.name} for free at sabtools.in\nStep-by-step tutorial — no signup needed!\n497+ Free Online Tools for India\n#FreeTools #India #SabTools #HowTo #Tutorial`,
     tags: [tool.name.toLowerCase(), "free tools", "india", "sabtools", "how to", "tutorial", tool.category, "free", "online tool", "step by step"],
     demoValues: demoValuesMap[tool.slug] || {},
     fullText: "",
@@ -93,7 +93,7 @@ NARRATION_1: [What to say — 2-3 sentences explaining the tool, mix Hindi-Engli
 SCENE_2: [Show the result/output with specific numbers]
 NARRATION_2: [React to the result, explain why it's useful — 2 sentences]
 
-CTA: [Call to action — mention sabtools.in, "Link comment section mein hai", and "460+ free tools"]
+CTA: [Call to action — mention sabtools.in, "Link comment section mein hai", and "497+ free tools"]
 
 TITLE: [YouTube Short title — catchy, under 60 chars, include emoji]
 DESCRIPTION: [2-3 lines with hashtags — #FreeTools #India #SabTools]

@@ -17,6 +17,7 @@
  */
 
 import { authors } from "./authors";
+import { BRAND } from "./brand";
 
 export const SITE_URL = "https://sabtools.in";
 export const ORG_ID = `${SITE_URL}/#organization`;
@@ -98,8 +99,7 @@ export function organizationNode() {
     // that already ships in /public, used everywhere else as the
     // sitewide OG fallback.
     image: `${SITE_URL}/og-image.png`,
-    description:
-      "SabTools.in is a free online tools platform for Indian users, offering 460+ calculators, converters, and utilities in English and Hindi. Every tool runs in the browser with zero data sent to any server.",
+    description: BRAND.longDescription,
     foundingDate: "2025",
     founder: { "@id": FOUNDER_ID },
     knowsLanguage: ["en", "hi"],

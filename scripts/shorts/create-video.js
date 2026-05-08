@@ -170,7 +170,7 @@ async function createOutroFrame(tool, script, outputPath) {
       <rect x="${W / 2 - 300}" y="${H / 2 - 170}" width="600" height="100" rx="50" fill="url(#btn)"/>
       <text x="${W / 2}" y="${H / 2 - 108}" text-anchor="middle" fill="white" font-size="48" font-weight="bold" font-family="Arial">sabtools.in</text>
 
-      <text x="${W / 2}" y="${H / 2 + 10}" text-anchor="middle" fill="#c7d2fe" font-size="34" font-family="Arial">460+ Free Online Tools</text>
+      <text x="${W / 2}" y="${H / 2 + 10}" text-anchor="middle" fill="#c7d2fe" font-size="34" font-family="Arial">497+ Free Online Tools</text>
       <text x="${W / 2}" y="${H / 2 + 70}" text-anchor="middle" fill="#c7d2fe" font-size="34" font-family="Arial">No Signup Required</text>
       <text x="${W / 2}" y="${H / 2 + 130}" text-anchor="middle" fill="#c7d2fe" font-size="34" font-family="Arial">Made for India</text>
 

@@ -45,7 +45,7 @@ function generateDescription(tool) {
     `✅ Instant Accurate Results\n\n` +
     `${tool.keywords}\n\n` +
     `Try it now: ${toolUrl}\n\n` +
-    `460+ Free Online Tools at SabTools.in\n` +
+    `497+ Free Online Tools at SabTools.in\n` +
     `#${tool.slug.replace(/-/g, "")} #freetool #onlinetool #india #sabtools`,
 
     `Looking for a free ${tool.name.toLowerCase()}? SabTools.in has you covered!\n\n` +
@@ -56,7 +56,7 @@ function generateDescription(tool) {
 
     `FREE ${tool.name} — calculate instantly online!\n\n` +
     `Why SabTools.in?\n` +
-    `🔹 460+ Free Tools\n` +
+    `🔹 497+ Free Tools\n` +
     `🔹 No Signup Required\n` +
     `🔹 Mobile Friendly\n` +
     `🔹 Made for India\n\n` +

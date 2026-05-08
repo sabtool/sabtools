@@ -6,6 +6,7 @@ import RecentlyUsed from "@/components/RecentlyUsed";
 import FavoriteTools from "@/components/FavoriteTools";
 import ToolOfTheDay from "@/components/ToolOfTheDay";
 import { categories, tools } from "@/lib/tools";
+import { BRAND } from "@/lib/brand";
 import { categoryPillars } from "@/lib/category-pillars";
 import { getAllPosts } from "@/lib/blog";
 import NewsletterSignup from "@/components/NewsletterSignup";
@@ -55,7 +56,7 @@ export default function HomePage() {
   const homepageFaqs = [
     {
       q: "Is SabTools.in completely free?",
-      a: `Yes! All ${tools.length}+ tools on SabTools.in are 100% free with no signup, no limits, and no hidden fees. Every tool runs directly in your browser.`,
+      a: `Yes! All ${BRAND.totalTools}+ tools on SabTools.in are 100% free with no signup, no limits, and no hidden fees. Every tool runs directly in your browser.`,
     },
     {
       q: "Is my data safe on SabTools.in?",
@@ -63,7 +64,7 @@ export default function HomePage() {
     },
     {
       q: "How many tools does SabTools.in have?",
-      a: `SabTools.in offers ${tools.length}+ free online tools across ${categories.length} categories including Finance Calculators, AI Writing Tools, Developer Tools, Image Tools, PDF Tools, SEO Tools, and more.`,
+      a: `SabTools.in offers ${BRAND.totalTools}+ free online tools across ${BRAND.totalCategories} categories including Finance Calculators, AI Writing Tools, Developer Tools, Image Tools, PDF Tools, SEO Tools, and more.`,
     },
     {
       q: "Does SabTools.in work on mobile phones?",
@@ -171,7 +172,7 @@ export default function HomePage() {
           <div className="animate-fade-in-up">
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur rounded-full px-4 py-1.5 text-sm font-medium text-indigo-600 shadow-sm border border-indigo-100 mb-6">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              {tools.length}+ Free Tools — No Signup Required
+              {BRAND.totalTools}+ Free Tools — No Signup Required
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
               <span className="text-gray-900">All </span>
@@ -315,7 +316,7 @@ export default function HomePage() {
       <section id="all-tools" className="max-w-7xl mx-auto px-4 sm:px-6 py-16 scroll-mt-20">
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">🛠️ All Tools</h2>
-          <p className="text-gray-500 mt-2">Complete list of all {tools.length} free online tools</p>
+          <p className="text-gray-500 mt-2">Complete list of all {BRAND.totalTools} free online tools</p>
         </div>
         {categories.map((cat) => {
           const catTools = tools.filter((t) => t.category === cat.slug);

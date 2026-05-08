@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { tools, categories } from "@/lib/tools";
+import { BRAND } from "@/lib/brand";
 import ToolCard from "@/components/ToolCard";
 
 const popularToolSlugs = [
@@ -78,7 +79,7 @@ export default function NotFound() {
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search 460+ free tools... (e.g. EMI, GST, password)"
+              placeholder={`Search ${BRAND.totalTools}+ free tools... (e.g. EMI, GST, password)`}
               className="w-full pl-12 pr-5 py-4 rounded-2xl border border-gray-200 shadow-lg shadow-indigo-100/50 focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none text-lg bg-white"
               autoFocus
             />

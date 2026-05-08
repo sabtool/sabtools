@@ -33,3 +33,6 @@ public/blog/*-w1200.avif
 # macOS resource forks
 ._*
 .DS_Store
+
+# Pinterest automation Chrome profile (browser cache + cookies; never ship)
+scripts/pinterest/chrome-profile/

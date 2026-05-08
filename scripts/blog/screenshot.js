@@ -154,7 +154,7 @@ function generatePlaceholder(slug, toolName, category) {
   <rect x="40" y="40" width="${TARGET_WIDTH - 80}" height="${TARGET_HEIGHT - 80}" rx="20" fill="white" opacity="0.15"/>
   <text x="50%" y="42%" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="700" fill="white">${displayName}</text>
   <text x="50%" y="58%" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="white" opacity="0.8">Free Online Tool — SabTools.in</text>
-  <text x="50%" y="72%" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="white" opacity="0.6">460+ Free Tools for India</text>
+  <text x="50%" y="72%" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="white" opacity="0.6">497+ Free Tools for India</text>
 </svg>`;
 
   return svg;

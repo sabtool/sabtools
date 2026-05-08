@@ -4,6 +4,7 @@ import { Suspense, useState, useMemo, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { tools, categories } from "@/lib/tools";
+import { BRAND } from "@/lib/brand";
 import ToolCard from "@/components/ToolCard";
 import { trackSearch } from "@/lib/analytics";
 
@@ -54,9 +55,9 @@ function SearchContent() {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder={`Search ${tools.length}+ free tools...`}
+          placeholder={`Search ${BRAND.totalTools}+ free tools...`}
           className="w-full max-w-xl px-5 py-3 rounded-xl border border-gray-200 shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none text-lg"
-          aria-label={`Search ${tools.length}+ free online tools`}
+          aria-label={`Search ${BRAND.totalTools}+ free online tools`}
           autoFocus
         />
       </div>
@@ -84,7 +85,7 @@ function SearchContent() {
       ) : (
         <div className="text-center py-12">
           <div className="text-6xl mb-4">🛠️</div>
-          <p className="text-gray-500 mb-4">Start typing to search our {tools.length}+ free tools</p>
+          <p className="text-gray-500 mb-4">Start typing to search our {BRAND.totalTools}+ free tools</p>
           <div className="flex flex-wrap justify-center gap-2 mt-6">
             {categories.slice(0, 8).map((cat) => (
               <Link

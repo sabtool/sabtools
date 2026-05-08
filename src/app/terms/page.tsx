@@ -9,11 +9,11 @@ import {
   buildGraph,
   BUILD_DATE,
 } from "@/lib/schema";
+import { BRAND } from "@/lib/brand";
 
 export const metadata: Metadata = {
   title: "Terms of Service — SabTools.in Free Online Tools",
-  description:
-    "Terms of Service for SabTools.in. All 460+ tools are free for personal and commercial use. Results are for informational purposes only — not financial, medical, or legal advice.",
+  description: `Terms of Service for SabTools.in. All ${BRAND.totalTools}+ tools are free for personal and commercial use. Results are for informational purposes only — not financial, medical, or legal advice.`,
   alternates: { canonical: "https://sabtools.in/terms" },
   openGraph: {
     title: "Terms of Service — SabTools.in",
@@ -126,7 +126,7 @@ export default function TermsPage() {
         {/* 2. Description of Service */}
         <h2 className="text-xl font-bold mt-8">2. Description of Service</h2>
         <p>
-          SabTools.in provides a collection of 460+ free online tools spanning
+          SabTools.in provides a collection of {BRAND.totalTools}+ free online tools spanning
           multiple categories, including but not limited to finance calculators
           (EMI, SIP, GST, income tax, mutual fund, FD, RD, PPF, NPS, HRA
           calculators), health and wellness tools (BMI calculator, calorie

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 import { tools, categories } from "@/lib/tools";
 import { authors } from "@/lib/authors";
+import { BRAND } from "@/lib/brand";
 import {
   SITE_URL,
   ORG_ID,
@@ -13,12 +14,12 @@ import {
 
 export const metadata: Metadata = {
   title: "About SabTools.in — India's Largest Free Online Tools Platform",
-  description: `SabTools.in provides ${tools.length}+ free online tools including EMI calculators, SIP calculators, GST tools, text utilities, developer tools, image tools, and more — all built for India. No signup, 100% free.`,
+  description: `SabTools.in provides ${BRAND.totalTools}+ free online tools including EMI calculators, SIP calculators, GST tools, text utilities, developer tools, image tools, and more — all built for India. No signup, 100% free.`,
   keywords: ["sabtools", "free online tools", "india tools", "calculator", "converter", "sabtools.in about"],
   alternates: { canonical: "https://sabtools.in/about" },
   openGraph: {
     title: "About SabTools.in — India's Largest Free Online Tools Platform",
-    description: `${tools.length}+ free online tools for calculators, converters, text, developer, image, SEO, and more. Made for India.`,
+    description: `${BRAND.totalTools}+ free online tools for calculators, converters, text, developer, image, SEO, and more. Made for India.`,
     url: "https://sabtools.in/about",
     type: "website",
     locale: "en_IN",
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "About SabTools.in — India's Largest Free Online Tools Platform",
-    description: `${tools.length}+ free online tools for calculators, converters, text, developer, image, SEO, and more. Made for India.`,
+    description: `${BRAND.totalTools}+ free online tools for calculators, converters, text, developer, image, SEO, and more. Made for India.`,
     images: [
       {
         url: "https://sabtools.in/og-image.png",
@@ -43,8 +44,10 @@ export const metadata: Metadata = {
 const teamMembers = authors;
 
 export default function AboutPage() {
-  const toolCount = tools.length;
-  const catCount = categories.length;
+  // Visible counts MUST match BRAND constants — see src/lib/brand.ts
+  // (per AI Visibility Action Plan: Org/JSON-LD/visible HTML must agree).
+  const toolCount = BRAND.totalTools;
+  const catCount = BRAND.totalCategories;
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">
@@ -199,7 +202,7 @@ export default function AboutPage() {
           {[
             { num: `${toolCount}+`, label: "Free Tools" },
             { num: `${catCount}`, label: "Categories" },
-            { num: "460+", label: "Hindi Tools" },
+            { num: `${BRAND.hindiTools}+`, label: "Hindi Tools" },
             { num: "3,000+", label: "Total Pages" },
           ].map((stat) => (
             <div key={stat.label} className="text-center bg-indigo-50 rounded-xl p-4">
