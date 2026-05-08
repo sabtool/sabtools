@@ -24561,6 +24561,228 @@ The standard slabs (0%, 5%, 12%, 18%, 28%) are built in, and the HSN reference c
 No, they mean the same thing — extracting the base amount from a tax-inclusive total. SabTools labels this as "GST inclusive → base + tax". RapidTables and Calculator.net label it as "before-tax amount" in their sales tax mode.</p>
 
 <p>Try SabTools' <a href="/tools/gst-inclusive-exclusive">GST Inclusive Exclusive calculator</a> → enter your amount, pick the rate, see the CGST/SGST/IGST split instantly.</p>`,
+  },
+  {
+    slug: "news-2026-05-07-upi-transaction-limit-changes-and-new-npci-rules",
+    title: "UPI transaction limit changes and new NPCI rules (2026 Update)",
+    description: "UPI transaction limit changes and new NPCI rules — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-05-07",
+    category: "Banking",
+    readTime: "12 min read",
+    keywords: ["UPI transaction limit changes", "banking news india 2026", "india 2026 update"],
+    toolSlug: "emi-calculator",
+    image: {
+      src: "/blog/emi-calculator.webp",
+      alt: "UPI transaction limit changes and new NPCI rules (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `I have enough grounded material. Writing the article now.
+
+<h2>NPCI rewrites the UPI rulebook: ₹5 lakh limits, balance-check caps, and AutoPay windows</h2>
+
+<p>India's most-used payment rail is no longer a one-size-fits-all ₹1 lakh-per-day system. Over the second half of 2025, the National Payments Corporation of India (NPCI) pushed through two of the most consequential UPI overhauls since the platform's launch — first tightening how often apps can ping bank servers in the August 1 update, then sharply raising per-transaction limits for high-value merchant categories from September 15.</p>
+
+<p>For an Indian who uses GPay or PhonePe to pay the kirana bill, settle an insurance premium, fund a mutual fund SIP, or pay a credit card bill, these changes alter what UPI can and cannot do — and what your bank app will let you check, schedule, or refund. Here is what changed, when it took effect, and how to use it.</p>
+
+<h2>Why this matters: UPI is now too big to leave unregulated</h2>
+
+<p>The scale UPI has reached makes these changes unavoidable. 
+
+Provisional data from the National Payments Corporation of India (NPCI) revealed that as of November 28, 2025, UPI had processed more than 19 billion transactions. The total value of these transactions reached an impressive ₹24.58 lakh crore.
+
+ 
+
+Data released by National Payments Corporation of India (NPCI) has shown that Average daily transaction amount in November stood at 87,721 crore rupees. The month of November recorded 682 million average daily transaction counts, up from 668 million registered in October.
+
+</p>
+
+<p>That 32 per cent year-on-year volume jump is the context for everything NPCI has done this year. Bank servers were getting hammered by background "balance check" and "transaction status" pings every time someone opened a UPI app, slowing down actual payments at peak hours. And the ₹1 lakh per-transaction cap, set years ago when UPI was a small-ticket retail rail, was no longer fit for purpose for insurance premiums, IPO subscriptions, hospital bills, or jewellery purchases.</p>
+
+<p>The fix came in two phases — a "system hygiene" phase on August 1, and a "limit expansion" phase on September 15.</p>
+
+<h2>Phase 1 — August 1, 2025: caps on balance checks, AutoPay windows, chargeback limits</h2>
+
+<p>The August 1 update was about platform stability rather than user-visible features. 
+
+Starting August 1, 2025, major updates to UPI (Unified Payments Interface) usage rules will come into effect across all apps and banks. Issued by the National Payments Corporation of India (NPCI), these rules are designed to improve system performance, reduce fraud risks, and ensure sustainable scalability as UPI continues to grow.
+
+</p>
+
+<h3>Balance checks now capped at 50 per app per day</h3>
+
+<p>If you have a habit of opening PhonePe or Google Pay just to "see the number" — that's now rationed. 
+
+The National Payments Corporation of India (NPCI) has announced new rules for Unified Payments Interface (UPI) transactions, effective August 1, 2025. The rules cap balance inquiries to a maximum of 50 per app per customer daily
+
+. The cap is per app, so if you use both PhonePe and GPay you get 50 each — but the goal is to stop apps from polling the bank API every time the screen refreshes.</p>
+
+<h3>Account-fetch capped at 25 bank accounts per day</h3>
+
+<p>The "account fetch" call — the one that pulls the list of all your linked accounts when you tap "change account" or onboard a new UPI app — has also been throttled. 
+
+You can link up to 25 bank accounts per day via a UPI app using mobile number/account fetch options. This prevents misuse through excessive account
+
+ queries that were straining issuer banks.</p>
+
+<h3>AutoPay shifted to non-peak hours only</h3>
+
+<p>If you have a Netflix subscription, an SIP, an EMI, or an insurance premium running on UPI AutoPay, the debit timing has changed. 
+
+Starting August 1, 2025, new UPI rules are kicking in—and if you're a regular UPI user, this update is worth your attention.
+
+ Per 
+
+the NPCI notified the 'Guidelines on usage of Unified Payments Interface ('UPI') and Application Programming Interface ('API')'
+
+, AutoPay debits now run only outside the system's busiest stretches.</p>
+
+<p>The non-peak windows are 
+
+users authorize their bank for automatic debits on a recurring basis, will only be processed during non-peak hours
+
+ — specifically before 10 am, between 1 pm and 5 pm, and after 9:30 pm. NPCI flagged 10 am–1 pm and 5 pm–9:30 pm as the highest-load windows where real-time payment traffic peaks.</p>
+
+<h3>Chargeback frequency capped to curb misuse</h3>
+
+<p>NPCI also clamped down on a fraud pattern where users were filing repeated chargebacks against the same merchant. 
+
+NPCI sets limits on how many times you can request a chargeback (reversal of payment): A maximum of 10 chargebacks in 30 days. No more than 5 chargebacks to the same person or business.
+
+</p>
+
+<p>For an honest user this is essentially invisible — if you've genuinely been defrauded, you can still file your reversal. The cap is aimed at the small subset of accounts using bulk chargeback filings as a harassment tool.</p>
+
+<h3>Penalties land on apps, not users</h3>
+
+<p>One bit of clarity readers should note: these caps are enforced upstream. 
+
+These apps can face API access restrictions from NPCI · Restrictions on onboarding new UPI customers can also be imposed for non-compliance · No penalty to be imposed on any UPI user by NPCI or the provider bank/app
+
+. The compliance pressure is on Paytm, PhonePe, Google Pay, BHIM, and partner banks — you won't get a fine for hitting your 51st balance check.</p>
+
+<h2>Phase 2 — September 15, 2025: ₹5 lakh per-transaction, ₹10 lakh daily for key categories</h2>
+
+<p>The September update is the one that actually changes what UPI can do for high-ticket Indian payments. 
+
+The National Payments Corporation of India (NPCI) has increased the Unified Payments Interface (UPI) per-transaction limit for certain categories of transactions. The NPCI notified this through a circular issued on August 28, 2025
+
+.</p>
+
+<h3>The new limits at a glance</h3>
+
+<p>The standard P2P (person-to-person) limit stays put. 
+
+However, peer-to-peer (P2P) UPI transactions will continue to follow existing limits, and standard UPI payments will remain capped at Rs 1 lakh per transaction.
+
+ What changes is the verified-merchant (P2M) ceiling for specific sectors.</p>
+
+<p>Per NPCI's August 28 circular and the September 15 implementation:</p>
+
+<ul>
+<li><strong>Per-transaction limit raised from ₹2 lakh to ₹5 lakh</strong> for verified P2M transactions in eligible categories.</li>
+<li><strong>Daily aggregate of ₹10 lakh</strong> across these high-value categories combined.</li>
+<li>P2P, regular merchant retail, and standard UPI payments remain at <strong>₹1 lakh</strong>.</li>
+</ul>
+
+<p>The eligible categories are spelled out in NPCI's addendum. 
+
+Capital markets, insurance, government e-marketplace (EMD) payments, travel, credit card payments, collections, business/merchant payments, and FX Retail via BBPS have all been given a per-transaction cap of Rs 5 lakh.
+
+</p>
+
+<p>Practical translation: a Bangalore salaried professional paying a ₹3.2 lakh annual term insurance premium, a Mumbai investor placing a ₹4 lakh IPO bid (when applicable), a Hyderabad freelancer paying a ₹1.8 lakh corporate credit card bill, or a Pune family booking a ₹2.6 lakh international holiday — all of these are now single-tap UPI flows where they previously needed NEFT, RTGS, or net-banking.</p>
+
+<h3>Banks and apps can still set lower internal caps</h3>
+
+<p>Don't assume your bank will throw the doors open immediately. 
+
+Bank Discretion: While NPCI sets maximum limits, banks and PSPs may set lower caps as per their internal risk policies · Mandatory Compliance: All UPI participants (banks, PSPs, TPAPs, apps) must implemen
+
+t the ceilings. So SBI, HDFC Bank, ICICI Bank and Axis Bank may continue to apply their own per-transaction or per-day caps below the NPCI maximum, especially for newly added beneficiaries or first-time merchants.</p>
+
+<p>If a ₹3 lakh insurance payment fails on UPI, the first thing to check is your bank's own UPI cap — not assume it's an NPCI issue.</p>
+
+<h3>Compliance is on the issuer side</h3>
+
+<p>NPCI has made it clear the responsibility for enforcement sits with banks. 
+
+As per NPCI, UPI limit for IPOs has been raised to ₹5 lakh. Not for regular transactions. Only specific categories like IPO or bill payments allow higher amounts.
+
+ Per the circular, 
+
+issuing banks are required to ensure that the 24-hour cumulative transaction limits are maintained at their end.
+
+</p>
+
+<h2>What an Indian reader should actually do</h2>
+
+<p>The headlines are easy to skim past. The behaviour changes are what matter month to month.</p>
+
+<h3>1. Move your high-value bills off NEFT/RTGS — when eligible</h3>
+
+<p>If you've been routing your annual health insurance, term insurance, or credit card bill above ₹1 lakh through net banking because UPI couldn't handle it, that workaround is over for verified-merchant flows in the listed categories. Per 
+
+NPCI's increased transaction limit of Rs 5 lakh for categories like insurance premiums, capital markets, credit card bills, etc, will come into effect from September 15, 2025. Apart from that, the enhanced aggregate transaction limit for 24 hours for 12 other categories will also be implemented
+
+.</p>
+
+<p>Net result: faster settlement, instant confirmation, and no NEFT batch delay. But verify the merchant is enrolled under the eligible category before you assume the higher cap applies.</p>
+
+<h3>2. Reschedule your AutoPay-based EMIs and SIPs mentally</h3>
+
+<p>If you've set a home loan EMI or a mutual fund SIP on UPI AutoPay assuming the debit hits exactly at 9 am or 6 pm, those clock-on-the-hour debits no longer happen. Mandates now fire in non-peak windows. The money still goes out on the right day — but expect debits before 10 am, between 1–5 pm, or after 9:30 pm.</p>
+
+<p>That nuance matters more than people realise. If you keep a tight current account where the EMI debit needs to land before another auto-debit, the new schedule could collide with existing standing instructions. Treat your statement as the source of truth, not the AutoPay confirmation timestamp.</p>
+
+<p>And if you're recalibrating an EMI altogether — say, you've just taken a fresh home loan from SBI or HDFC Bank, or you're prepaying a chunk of an existing one — model the revised monthly outflow with the <a href="/tools/emi-calculator">EMI Calculator</a> before you set up the new UPI AutoPay mandate. Getting the EMI number right matters more than worrying about which 30-minute window the debit hits in.</p>
+
+<h3>3. Stop reflex-checking your balance</h3>
+
+<p>The 50-balance-check cap won't bite a normal user — average usage is well below that. But people running joint accounts, freelancers reconciling client payments, and anyone who shares a UPI handle with family for household expenses can hit it. Switch to checking balance in your bank's app once a day, not every time you open PhonePe.</p>
+
+<h3>4. If you run a small business, your collections workflow just got better</h3>
+
+<p>For a retail shop owner in Coimbatore or a small B2B distributor in Surat, the ₹5 lakh P2M ceiling is genuine relief. Previously a ₹1.6 lakh wholesale invoice had to be split into two UPI runs or routed through IMPS. From September 15 — assuming your acquirer enables the higher category — collections of up to ₹5 lakh per transaction are single-tap. 
+
+In a
+
+ggregate caps still apply at the daily level, so plan invoicing accordingly.</p>
+
+<h3>5. Track which apps and which banks have rolled out the higher limits</h3>
+
+<p>Implementation is staggered. Even though NPCI's effective date was September 15, individual banks and PSPs roll out at their own pace. 
+
+NPCI Raises UPI per-transaction limits up to ₹5 lakh and daily aggregate limits up to ₹10 lakh across sectors like capital markets, insurance, travel, and more—applicable from 15 September 2025.
+
+ Check the in-app limit in your bank's UPI flow before assuming the new cap is live for you.</p>
+
+<h2>Where this fits in the bigger UPI picture</h2>
+
+<p>Looked at together, the August and September updates send a clear signal about where UPI is heading.</p>
+
+<p>The August rules say: UPI is now critical national infrastructure and cannot be brought down by API spam from over-eager apps. The September rules say: UPI is now mature enough to compete with NEFT/RTGS for serious-money use cases — insurance, securities, credit cards, government payments, foreign exchange via BBPS — not just chai-and-samosa retail.</p>
+
+<p>That shift has knock-on effects. As more high-value flows move to UPI, the case for keeping a separate "premium net banking" relationship for moving large sums weakens. For most salaried Indians earning ₹15–25 lakh per annum, the combination of UPI for payments under ₹1 lakh, UPI verified-merchant for the listed categories up to ₹5 lakh, and IMPS/NEFT only for the genuinely large transfers, is now a workable default.</p>
+
+<p>The volume numbers will keep moving up. 
+
+The growth kept up, with monthly peaks like November 2025 at over ₹19 billion transactions, up 23% from the year before, and the daily average transaction was ₹698 million in 2025.
+
+ NPCI has been clear that further category expansions and limit revisions are on the table as the platform scales.</p>
+
+<h2>What to watch next</h2>
+
+<p>A few open threads to track over the coming quarters:</p>
+
+<ul>
+<li><strong>More categories under the ₹5 lakh cap.</strong> NPCI's circulars use the word "addendum" deliberately — the door is open for more verified-merchant categories to be added. Hospital bills and education fees are obvious candidates.</li>
+<li><strong>Bank-level cap revisions.</strong> Watch your own bank's UPI limit screen. Several private banks were quicker to enable the new ceilings than PSU banks; the gap will narrow over FY 2025-26.</li>
+<li><strong>AutoPay reliability metrics.</strong> The non-peak-hour shift is meant to reduce failed mandates. If you have a long history of "AutoPay declined" SMSes, the failure rate should genuinely drop now.</li>
+<li><strong>Interchange and merchant economics.</strong> Higher transaction sizes inevitably reopen the conversation about who pays for the rail. Watch for any updates on MDR or interchange that NPCI or RBI may push through.</li>
+</ul>
+
+<p>The short version for an Indian household or small business in late 2025: UPI got faster under the hood, got more capable for big payments, and got slightly more rule-bound on the edges. None of those changes require panic. They do require an updated mental model — and a quick pass through your AutoPay mandates, your monthly outflows, and your bank's own per-transaction caps so the next ₹3 lakh insurance premium goes through on the first tap.</p>`,
   }
 ];
 
