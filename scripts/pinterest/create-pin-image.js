@@ -261,7 +261,7 @@ async function createPinImage(tool, outputPath) {
   ctx.fillText("SabTools.in", W / 2, H - 85);
   ctx.font = `${30}px Arial, Helvetica, sans-serif`;
   ctx.fillStyle = "rgba(255,255,255,0.6)";
-  ctx.fillText("497+ Free Online Tools for India", W / 2, H - 35);
+  ctx.fillText("450+ Free Online Tools for India", W / 2, H - 35);
 
   // Save
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });

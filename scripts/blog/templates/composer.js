@@ -65,7 +65,7 @@ function composeBlogPost(tool, keywords, relatedTools) {
 
   // If still under 1200, expand benefits and tips
   if (wordCount < 1200) {
-    const extraParagraph = `<p>With over 497+ free tools available on SabTools.in, ${tool.name} is one of the most popular choices among Indian users. Whether you're a student, professional, or business owner, this tool helps you save time and get accurate results instantly. No registration, no fees — just open and use.</p>`;
+    const extraParagraph = `<p>With over 450+ free tools available on SabTools.in, ${tool.name} is one of the most popular choices among Indian users. Whether you're a student, professional, or business owner, this tool helps you save time and get accurate results instantly. No registration, no fees — just open and use.</p>`;
     content = content.replace("</div><!-- end-conclusion -->", extraParagraph + "</div><!-- end-conclusion -->");
   }
 

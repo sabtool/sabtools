@@ -358,7 +358,7 @@ async function createPinImage(tool, outputPath) {
 
   <div class="stats-row">
     <div class="stat-box">
-      <div class="stat-number">497+</div>
+      <div class="stat-number">450+</div>
       <div class="stat-label">Free Tools</div>
     </div>
     <div class="stat-box">
@@ -373,7 +373,7 @@ async function createPinImage(tool, outputPath) {
 
   <div class="bottom-brand">
     <div class="brand-name">SabTools.in</div>
-    <div class="brand-tagline">497+ Free Online Tools for India</div>
+    <div class="brand-tagline">450+ Free Online Tools for India</div>
   </div>
 </body>
 </html>`;

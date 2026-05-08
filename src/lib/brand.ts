@@ -16,15 +16,33 @@
  *   recommendations entirely. Centralising the description here ensures
  *   every page reinforces the same factual identity.
  *
- * NUMBERS: every count below was verified directly against the codebase
- * on 2026-05-07, NOT taken from the plan (which had stale numbers):
- *   - totalTools = 497    : `grep -cE '^\s*\{ name: "' src/lib/tools.ts`
- *   - totalCategories = 38 : counted in `categories[]` in src/lib/tools.ts
- *   - hindiTools = 424    : counted in `hindiTools[]` in src/lib/hindi.ts
+ * NUMBERS: published as a FLOOR ("450+", "38", "424+"), never the exact
+ * runtime count. This is intentional — the marketing claim is honest
+ * regardless of catalog drift, and we don't have to bump every "450+"
+ * string in the codebase every time a tool is added.
  *
- * If the catalog grows, update these and re-deploy — every page picks up
- * the new numbers from the next build.
+ *   - totalTools = 450        : floor; actual tools[].length is verified
+ *                               by the build-time assert at the bottom
+ *                               of this file (the build fails if the
+ *                               catalog ever shrinks below this floor).
+ *                               A previous header comment claimed "497"
+ *                               but the grep that produced it counted
+ *                               the 38 category objects together with
+ *                               the 459 actual tools — both literal
+ *                               `{ name: "..." }` blocks. The honest
+ *                               count is `tools.length` only.
+ *   - totalCategories = 38    : counted in `categories[]` in src/lib/tools.ts
+ *   - hindiTools = 424        : floor (actual hindiTools[].length is 424
+ *                               at time of writing; rounded down to a
+ *                               clean published value if the array grows).
+ *
+ * To raise the published claim (e.g. to "500+"): bump `totalTools` here
+ * and re-run `next build`. The assert at the bottom of this file fails
+ * the build if `tools[].length < BRAND.totalTools`, so an over-claim
+ * never ships.
  */
+
+import { tools as _tools } from "./tools";
 
 export const BRAND = {
   /** Display name. Used in titles, OG, footers, schema. */
@@ -40,7 +58,7 @@ export const BRAND = {
    * support; reinforces "free tools platform" identity (NOT "store").
    */
   shortDescription:
-    "Free online tools platform with 497+ calculators, converters, PDF tools, image editors, and AI writing utilities — built for Indian users with Hindi support.",
+    "Free online tools platform with 450+ calculators, converters, PDF tools, image editors, and AI writing utilities — built for Indian users with Hindi support.",
   /**
    * Long description for OpenGraph, About page, Organization schema. Used
    * by AI crawlers to build the canonical "what is X" answer for the brand.
@@ -48,7 +66,7 @@ export const BRAND = {
    * privacy posture; flags Hindi capability; no first-person marketing.
    */
   longDescription:
-    "SabTools.in is a free online tools platform offering 497+ tools across 38 categories including GST, EMI, income tax calculators, PDF and image tools, AI writing utilities, sports calculators, and developer resources. All tools run client-side in the browser with zero data collection. 424+ tools are also available in Hindi at /hi. No signup required.",
+    "SabTools.in is a free online tools platform offering 450+ tools across 38 categories including GST, EMI, income tax calculators, PDF and image tools, AI writing utilities, sports calculators, and developer resources. All tools run client-side in the browser with zero data collection. 424+ tools are also available in Hindi at /hi. No signup required.",
   /** Year the site was founded. Used in Organization schema + about page. */
   founded: "2025",
   /** Founder's full name. Used in Organization.founder, about page, articles. */
@@ -57,8 +75,14 @@ export const BRAND = {
   url: "https://sabtools.in",
   /** Logo URL for schema.org/Organization.logo (must be PNG/JPG, ≥ 60×60). */
   logo: "https://sabtools.in/og-image.png",
-  /** Verified tool count. See header comment for source of truth. */
-  totalTools: 497,
+  /**
+   * Published-floor tool count (NOT the exact runtime length).
+   * The build fails if `tools[].length < totalTools` — see assert at
+   * the bottom of this file. Bump in increments of 50 only when the
+   * catalog has grown well past the floor; every visible "450+" string
+   * across the site reads from this constant.
+   */
+  totalTools: 450,
   /** Verified category count (38 includes "Sports & Cricket" added in IPL Phase 1). */
   totalCategories: 38,
   /** Hindi-localized tool count (subset of totalTools). */
@@ -97,3 +121,31 @@ export const BRAND_URL = BRAND.url;
 export const BRAND_SOCIAL_URLS: string[] = (
   Object.values(BRAND.social) as readonly string[]
 ).filter((v) => typeof v === "string" && v.length > 0);
+
+// ────────────────────────────────────────────────────────────────────────────
+// Build-time invariant guard.
+//
+// The marketing claim "450+ tools" must be true. This top-level check runs
+// once when the module is first evaluated — during `next build`, that's
+// before any HTML is rendered, so a mismatch fails the build instead of
+// shipping a false claim. In the production client bundle, the same check
+// is a no-op (it can never fire because tools[] is the same statically
+// imported array that was just verified at build time).
+//
+// If this throws on `next build`:
+//   - tools[] shrunk below the floor → either restore the deleted tools,
+//     OR lower BRAND.totalTools to the largest 50-multiple that's ≤
+//     the new tools.length (e.g. drop "450+" → "400+").
+//
+// If you want to RAISE the claim (e.g. publish "500+"):
+//   - bump BRAND.totalTools above. This assert verifies the new floor
+//     holds before the build allows the change to ship.
+// ────────────────────────────────────────────────────────────────────────────
+if (_tools.length < BRAND.totalTools) {
+  throw new Error(
+    `[BRAND invariant] tools[].length = ${_tools.length} but BRAND.totalTools = ${BRAND.totalTools}. ` +
+      `The published claim "${BRAND.totalTools}+" is no longer honest. ` +
+      `Either lower BRAND.totalTools to ≤ ${_tools.length}, ` +
+      `or add ${BRAND.totalTools - _tools.length} more tools to src/lib/tools.ts.`
+  );
+}

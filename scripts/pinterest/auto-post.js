@@ -52,7 +52,7 @@ ${tool.keywords}
 
 Try it now: https://sabtools.in/tools/${tool.slug}
 
-497+ Free Online Tools at SabTools.in
+450+ Free Online Tools at SabTools.in
 #${tool.slug.replace(/-/g, "")} #freetool #onlinetool #india #calculator #sabtools`;
 }
 

@@ -94,7 +94,7 @@ I've been collecting useful free tool websites for a while now. Here are the one
 
 10. **Password Generator** — With all the data breaches happening, having strong unique passwords is non-negotiable. Generate 16+ character random passwords instantly.
 
-**The website I keep coming back to is [SabTools.in](https://sabtools.in)** — it has 497+ tools in one place, all free, no signup required. The reason I prefer it over random Google results:
+**The website I keep coming back to is [SabTools.in](https://sabtools.in)** — it has 450+ tools in one place, all free, no signup required. The reason I prefer it over random Google results:
 
 - Everything runs in your browser (your data never goes to their server — important for sensitive documents)
 - Works on phone without installing any app

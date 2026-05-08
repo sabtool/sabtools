@@ -26,7 +26,7 @@ const categoryTips = {
   ],
   default: [
     { title: "Bookmark for Reuse", text: "Add the tool to your bookmarks for quick access whenever you need it." },
-    { title: "Try Related Tools", text: "SabTools has 497+ tools — explore related ones for a complete solution." },
+    { title: "Try Related Tools", text: "SabTools has 450+ tools — explore related ones for a complete solution." },
     { title: "Share with Friends", text: "Use the WhatsApp share button to help friends and family with similar tasks." },
   ],
 };

@@ -72,7 +72,7 @@ async function findOrCreateBoard(token, boardName) {
   console.log(`Creating board: ${boardName}`);
   const newBoard = await apiCall("POST", "/boards", token, {
     name: boardName,
-    description: `Free online ${boardName.toLowerCase()} at SabTools.in — No signup required! 497+ tools for India.`,
+    description: `Free online ${boardName.toLowerCase()} at SabTools.in — No signup required! 450+ tools for India.`,
     privacy: "PUBLIC",
   });
 
@@ -116,7 +116,7 @@ function generatePinDescription(tool) {
     `Looking for a free ${tool.name.toLowerCase()}? SabTools.in has you covered! 100% free, no registration, instant results.\n\n` +
     `${tool.keywords}\n\n` +
     `${toolUrl}\n\n` +
-    `497+ Free Online Tools at SabTools.in\n` +
+    `450+ Free Online Tools at SabTools.in\n` +
     `#freetool #onlinecalculator #india #${tool.category} #sabtools`,
 
     `FREE ${tool.name} — calculate instantly online! Perfect for students, professionals, and everyone.\n\n` +

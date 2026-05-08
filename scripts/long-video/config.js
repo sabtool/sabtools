@@ -8,7 +8,7 @@ module.exports = {
   // Site details
   SITE_URL: "https://sabtools.in",
   SITE_NAME: "SabTools.in",
-  SITE_TAGLINE: "497+ Free Online Tools for India",
+  SITE_TAGLINE: "450+ Free Online Tools for India",
 
   // Video settings (landscape 1080p)
   VIDEO_WIDTH: 1920,

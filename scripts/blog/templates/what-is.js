@@ -22,7 +22,7 @@ function generateWhatIs(tool, keywords) {
 
   return `
     <h2>What is ${tool.name}?</h2>
-    <p>${tool.name} is a free online tool that helps you ${tool.description.toLowerCase()}. It's part of SabTools.in's collection of 497+ free tools designed for Indian users. People commonly search for ${kwMention} when they need this type of tool.</p>
+    <p>${tool.name} is a free online tool that helps you ${tool.description.toLowerCase()}. It's part of SabTools.in's collection of 450+ free tools designed for Indian users. People commonly search for ${kwMention} when they need this type of tool.</p>
 
     <p>${context}</p>
 

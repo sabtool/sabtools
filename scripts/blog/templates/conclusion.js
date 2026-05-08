@@ -12,7 +12,7 @@ function generateConclusion(tool, keywords) {
 
     <p><strong><a href="/tools/${tool.slug}">Try ${tool.name} Free — No Signup Required →</a></strong></p>
 
-    <p><em>Last updated: ${new Date().toLocaleDateString("en-IN", { month: "long", year: "numeric" })}. This guide is part of SabTools.in's ${year} tool guides series covering 497+ free online tools for India.</em></p>
+    <p><em>Last updated: ${new Date().toLocaleDateString("en-IN", { month: "long", year: "numeric" })}. This guide is part of SabTools.in's ${year} tool guides series covering 450+ free online tools for India.</em></p>
     </div><!-- end-conclusion -->
   `;
 }

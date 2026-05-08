@@ -76,7 +76,7 @@ async function createThumbnail(outputPath) {
       <rect x="355" y="140" width="4" height="240" rx="2" fill="rgba(129,140,248,0.4)"/>
 
       <!-- Right side: Main text -->
-      <text x="400" y="155" fill="#fbbf24" font-size="32" font-weight="bold" font-family="Arial" filter="url(#textShadow)" letter-spacing="3">497+ FREE TOOLS</text>
+      <text x="400" y="155" fill="#fbbf24" font-size="32" font-weight="bold" font-family="Arial" filter="url(#textShadow)" letter-spacing="3">450+ FREE TOOLS</text>
 
       <text x="400" y="235" fill="white" font-size="72" font-weight="bold" font-family="Arial" filter="url(#textShadow)">SabTools.in</text>
 

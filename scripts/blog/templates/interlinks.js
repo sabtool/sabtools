@@ -7,7 +7,7 @@ function generateInterlinks(tool, relatedTools, keywords) {
   if (!relatedTools || relatedTools.length === 0) {
     return `
       <h2>Explore More Free Tools</h2>
-      <p>SabTools.in offers 497+ free online tools across finance, education, developer, image, PDF, and more categories. <a href="/">Browse all tools</a> to find exactly what you need — no signup, no fees.</p>
+      <p>SabTools.in offers 450+ free online tools across finance, education, developer, image, PDF, and more categories. <a href="/">Browse all tools</a> to find exactly what you need — no signup, no fees.</p>
     `;
   }
 
@@ -21,7 +21,7 @@ function generateInterlinks(tool, relatedTools, keywords) {
     <ul>
       ${links.join("\n      ")}
     </ul>
-    <p>All tools are <strong>100% free</strong> and work instantly in your browser. <a href="/">Explore all 497+ tools on SabTools.in</a>.</p>
+    <p>All tools are <strong>100% free</strong> and work instantly in your browser. <a href="/">Explore all 450+ tools on SabTools.in</a>.</p>
   `;
 }
 
