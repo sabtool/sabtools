@@ -61,9 +61,36 @@ function getToolNameIndex() {
 }
 
 /**
- * Scan `text` for tool-name mentions and return an array of alternating
- * plain-text strings and React <Link> elements. Each tool is linked at
- * most once per paragraph.
+ * Markdown-style external-link syntax used inside category-pillars prose:
+ *   [Anchor text](https://gov.in/path)
+ *
+ * Phase 4 Task A — every category hub adds 2-4 inline links to
+ * authoritative gov.in / international-org sources (RBI, IT Dept,
+ * GST Council, ICMR, WHO, etc.) within the existing whatIs /
+ * howToChoose / indianContext prose. We embed them in the data-file
+ * strings using markdown syntax so the data layer stays serializable
+ * (no JSX in category-pillars.ts), and this autoLink module renders
+ * them as proper external anchors with rel="nofollow noopener" and
+ * target="_blank" — non-fabricated outbound authority signal that
+ * Google's helpful-content system rewards on India-focused tool sites.
+ *
+ * Restricted to https:// to avoid any chance of plain-text URLs being
+ * matched as links accidentally. The regex is non-greedy on both anchor
+ * and URL components so back-to-back links in one paragraph parse cleanly.
+ */
+const EXTERNAL_LINK_RE = /\[([^\]]+)\]\((https:\/\/[^\s)]+)\)/g;
+
+/**
+ * Scan `text` for both external markdown-style links and internal tool-name
+ * mentions, and return an array of plain-text strings interleaved with
+ * React <Link> (internal) and <a> (external) elements.
+ *
+ * Order of operations:
+ *   1. Split text on external [anchor](url) matches — these are
+ *      explicitly authored; the prose string itself decides which
+ *      phrase becomes the anchor.
+ *   2. Run internal tool-name auto-linking on every remaining plain-text
+ *      segment between external-link spans.
  *
  * `_skipCategory` is accepted for signature compatibility with earlier
  * callers but intentionally ignored — see the module doc comment.
@@ -74,21 +101,80 @@ export function autoLink(
 ): React.ReactNode[] {
   if (!text) return [text];
   void _skipCategory;
-  const index = getToolNameIndex();
+
+  // Pass 1 — external markdown-style links (Phase 4 Task A).
+  // Build an array of segments: { type: "text" | "external", value | href, anchor }.
+  type Segment =
+    | { type: "text"; value: string }
+    | { type: "external"; href: string; anchor: string };
+  const segments: Segment[] = [];
+  let lastIndex = 0;
+  EXTERNAL_LINK_RE.lastIndex = 0;
+  for (
+    let m = EXTERNAL_LINK_RE.exec(text);
+    m !== null;
+    m = EXTERNAL_LINK_RE.exec(text)
+  ) {
+    if (m.index > lastIndex) {
+      segments.push({ type: "text", value: text.slice(lastIndex, m.index) });
+    }
+    segments.push({ type: "external", anchor: m[1], href: m[2] });
+    lastIndex = m.index + m[0].length;
+  }
+  if (lastIndex < text.length) {
+    segments.push({ type: "text", value: text.slice(lastIndex) });
+  }
+  if (segments.length === 0) {
+    segments.push({ type: "text", value: text });
+  }
+
+  // Pass 2 — for each text segment, run internal tool-name auto-linking.
+  // External-link spans pass through unchanged. usedSlugs is shared across
+  // all text segments so each tool links at most once per paragraph
+  // (preserves the original anti-spam invariant).
+  const out: React.ReactNode[] = [];
   const usedSlugs = new Set<string>();
+  segments.forEach((seg, segIdx) => {
+    if (seg.type === "external") {
+      out.push(
+        <a
+          key={`ext-${segIdx}`}
+          href={seg.href}
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+          className="text-indigo-600 underline decoration-indigo-300 hover:decoration-indigo-600 transition-colors"
+        >
+          {seg.anchor}
+        </a>
+      );
+      return;
+    }
+    out.push(...autoLinkPlainText(seg.value, segIdx, usedSlugs));
+  });
+  return out;
+}
+
+/**
+ * Internal tool-name auto-linking on a single plain-text segment.
+ * Mutates `usedSlugs` so the "first occurrence per paragraph" rule
+ * spans across all text segments produced by the external-link splitter.
+ */
+function autoLinkPlainText(
+  text: string,
+  segmentKey: number,
+  usedSlugs: Set<string>
+): React.ReactNode[] {
+  if (!text) return [text];
+  const index = getToolNameIndex();
   const matches: MatchRange[] = [];
 
-  // First pass: find all candidate matches, longest-first, non-overlapping.
   for (const entry of index) {
     if (usedSlugs.has(entry.slug)) continue;
-
     const m = entry.pattern.exec(text);
     if (!m) continue;
     const start = m.index;
     const end = m.index + m[0].length;
 
-    // Skip if this match overlaps an already-accepted match (protects the
-    // longest-first invariant on successive scans).
     const overlaps = matches.some(
       (r) => !(end <= r.start || start >= r.end)
     );
@@ -100,7 +186,6 @@ export function autoLink(
 
   if (matches.length === 0) return [text];
 
-  // Sort by start offset so we can walk the string left-to-right.
   matches.sort((a, b) => a.start - b.start);
 
   const out: React.ReactNode[] = [];
@@ -109,7 +194,7 @@ export function autoLink(
     if (m.start > cursor) out.push(text.slice(cursor, m.start));
     out.push(
       <Link
-        key={`${m.slug}-${i}`}
+        key={`${m.slug}-s${segmentKey}-${i}`}
         href={`/tools/${m.slug}`}
         className="text-indigo-600 underline decoration-indigo-200 hover:decoration-indigo-500 transition-colors"
       >
