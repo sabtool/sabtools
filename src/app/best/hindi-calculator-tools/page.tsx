@@ -14,7 +14,9 @@ import {
 } from "@/lib/schema";
 
 const PAGE_URL = `${SITE_URL}/best/hindi-calculator-tools`;
-const PAGE_TITLE = "Best Hindi Calculator Tools (2026) — हिंदी में फ्री कैलकुलेटर";
+// Bare title — layout's title.template appends " | SabTools.in" exactly
+// once. Final rendered <title> stays ≤ 60 chars (46 chars total here).
+const PAGE_TITLE = "Best Hindi Calculator Tools 2026";
 const PAGE_DESC = `A guide to the best free calculator tools available in Hindi — SabTools' ${BRAND.hindiTools}+ Hindi catalog plus genuine alternatives like Google Search Hindi, Indian government portals, Easy Hindi Typing, and select Android apps.`;
 
 export const metadata: Metadata = {

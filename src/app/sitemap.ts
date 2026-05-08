@@ -171,6 +171,59 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
+    // === /compare/* + /alternatives/* (Phase 3 Round 3) ===
+    // Head-to-head comparison pages and alternative-listing pages
+    // ranked SabTools alongside the verified competitor list
+    // (toolvala, indiatoolkit, cleartax, easycalculation, uptools).
+    // Same priority 0.7 as /best/* — they're sibling content surfaces.
+    {
+      url: `${baseUrl}/compare/sabtools-vs-toolvala`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/compare/sabtools-vs-indiatoolkit`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/compare/sabtools-vs-cleartax`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/compare/sabtools-vs-easycalculation`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/compare/sabtools-vs-uptools`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/alternatives/to-toolvala`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/alternatives/to-indiatoolkit`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/alternatives/to-cleartax-calculators`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
   ];
 
   // Category pages — declare a Hindi alternate only when a `/hi/category/{slug}`

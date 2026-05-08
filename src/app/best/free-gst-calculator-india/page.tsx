@@ -14,7 +14,9 @@ import {
 } from "@/lib/schema";
 
 const PAGE_URL = `${SITE_URL}/best/free-gst-calculator-india`;
-const PAGE_TITLE = "Best Free GST Calculator in India (2026) — Honest Comparison";
+// Bare title — layout's title.template appends " | SabTools.in" exactly
+// once. Final rendered <title> stays ≤ 60 chars (52 chars total here).
+const PAGE_TITLE = "Best Free GST Calculator in India 2026";
 const PAGE_DESC =
   "We compared 7 free GST calculators used by Indian businesses — SabTools, ClearTax, EasyCalculation, UpTools, Toolvala, India Toolkit, and GSTGate. Honest pros, cons, and which to pick for which job.";
 

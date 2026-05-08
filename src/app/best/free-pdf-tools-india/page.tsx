@@ -14,7 +14,9 @@ import {
 } from "@/lib/schema";
 
 const PAGE_URL = `${SITE_URL}/best/free-pdf-tools-india`;
-const PAGE_TITLE = "Best Free PDF Tools for India (2026) — 7 Platforms Tested";
+// Bare title — layout's title.template appends " | SabTools.in" exactly
+// once. Final rendered <title> stays ≤ 60 chars (48 chars total here).
+const PAGE_TITLE = "Best Free PDF Tools for India 2026";
 const PAGE_DESC =
   "Indian users need PDF tools for Aadhaar uploads, government forms, exam halltickets, and resume submissions. We tested 7 free platforms — SabTools, iLovePDF, Smallpdf, PDF24, Sejda, ILovePDF, and Soda PDF — on real Indian use cases.";
 

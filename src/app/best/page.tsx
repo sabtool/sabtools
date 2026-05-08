@@ -13,7 +13,12 @@ import {
 } from "@/lib/schema";
 
 const PAGE_URL = `${SITE_URL}/best`;
-const PAGE_TITLE = "Best Free Online Tools in India (2026) | SabTools.in";
+// Page-level title is the bare phrase only — the layout's title.template
+// (`%s | SabTools.in`) appends the brand suffix exactly once. Setting it
+// here with " | SabTools.in" already included would render the suffix
+// twice. Keep page-set portion ≤ 46 chars so the final rendered <title>
+// stays ≤ 60 chars after the 14-char suffix is appended.
+const PAGE_TITLE = "Best Free Online Tools in India (2026)";
 const PAGE_DESC =
   "Honest review hub indexing our best-of guides for free GST, EMI, income tax, and PDF tools — plus the best Hindi calculator platforms — for Indian users.";
 
