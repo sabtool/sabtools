@@ -149,9 +149,10 @@
     "hashtag-generator",
     "electrical-load-calculator",
     "emergency-fund-calculator",
-    "gst-inclusive-exclusive"
+    "gst-inclusive-exclusive",
+    "password-strength-checker"
   ],
-  "lastCategory": "shopping",
-  "totalPosts": 150,
-  "lastRun": "2026-05-07T12:36:43.315Z"
+  "lastCategory": "security",
+  "totalPosts": 151,
+  "lastRun": "2026-05-08T11:40:20.353Z"
 }
