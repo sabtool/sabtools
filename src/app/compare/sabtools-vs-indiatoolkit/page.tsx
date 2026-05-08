@@ -17,7 +17,7 @@ import {
 const PAGE_URL = `${SITE_URL}/compare/sabtools-vs-indiatoolkit`;
 const PAGE_TITLE = "SabTools vs India Toolkit — 2026";
 const PAGE_DESC =
-  "SabTools.in vs IndiaToolkit.in: catalog size claims, finance depth, Hindi support, expert reviews, mobile speed, and where each platform genuinely wins for Indian users.";
+  "SabTools.in vs IndiaToolkit.in: catalog claims, finance depth, Hindi support, expert review, and where each platform genuinely wins.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

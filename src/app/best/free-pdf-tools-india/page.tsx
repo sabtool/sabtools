@@ -18,7 +18,7 @@ const PAGE_URL = `${SITE_URL}/best/free-pdf-tools-india`;
 // once. Final rendered <title> stays ≤ 60 chars (48 chars total here).
 const PAGE_TITLE = "Best Free PDF Tools for India 2026";
 const PAGE_DESC =
-  "Indian users need PDF tools for Aadhaar uploads, government forms, exam halltickets, and resume submissions. We tested 7 free platforms — SabTools, iLovePDF, Smallpdf, PDF24, Sejda, ILovePDF, and Soda PDF — on real Indian use cases.";
+  "7 free PDF platforms tested on Indian use cases (Aadhaar uploads, govt forms, KB-target compress) — SabTools, iLovePDF, Smallpdf, PDF24, Sejda compared.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

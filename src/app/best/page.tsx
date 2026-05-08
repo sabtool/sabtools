@@ -20,7 +20,7 @@ const PAGE_URL = `${SITE_URL}/best`;
 // stays ≤ 60 chars after the 14-char suffix is appended.
 const PAGE_TITLE = "Best Free Online Tools in India (2026)";
 const PAGE_DESC =
-  "Honest review hub indexing our best-of guides for free GST, EMI, income tax, and PDF tools — plus the best Hindi calculator platforms — for Indian users.";
+  "Honest review hub indexing best-of guides for free GST, EMI, income tax, PDF tools, and Hindi calculator platforms for Indian users.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

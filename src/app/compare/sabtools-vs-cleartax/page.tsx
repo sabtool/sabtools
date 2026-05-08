@@ -17,7 +17,7 @@ import {
 const PAGE_URL = `${SITE_URL}/compare/sabtools-vs-cleartax`;
 const PAGE_TITLE = "SabTools vs ClearTax Calculators 2026";
 const PAGE_DESC =
-  "SabTools.in vs ClearTax.in for free calculators only — speed, depth, e-filing integration, and the cases where ClearTax's CA-authored content genuinely wins. Honest comparison.";
+  "SabTools.in vs ClearTax.in calculators: speed, depth, e-filing integration, and where ClearTax's CA-authored content genuinely wins.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

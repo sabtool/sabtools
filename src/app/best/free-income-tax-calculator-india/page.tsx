@@ -18,7 +18,7 @@ const PAGE_URL = `${SITE_URL}/best/free-income-tax-calculator-india`;
 // once. Final rendered <title> stays ≤ 60 chars (57 chars total here).
 const PAGE_TITLE = "Best Income Tax Calculator India FY 2025-26";
 const PAGE_DESC =
-  "We tested 7 free income tax calculators on the same ₹15L and ₹35L salary scenarios for FY 2025-26 (AY 2026-27). Honest comparison of SabTools, ClearTax, Tax2Win, Income Tax Department official, BankBazaar, HDFC Life, and ET Money.";
+  "7 free income tax calculators tested for FY 2025-26 — SabTools, ClearTax, Tax2Win, IT Dept official, BankBazaar, HDFC Life, ET Money. Honest review.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

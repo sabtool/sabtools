@@ -15,7 +15,7 @@ import {
 const PAGE_URL = `${SITE_URL}/alternatives/to-indiatoolkit`;
 const PAGE_TITLE = "India Toolkit Alternatives — 4 Tool Sites";
 const PAGE_DESC =
-  "Honest India Toolkit alternatives ranked by use case — SabTools (deeper finance), Toolvala (TET prep), UpTools (curated), Calculator.net (international). Pick by use case, not just catalog size.";
+  "India Toolkit alternatives ranked by use case — SabTools, Toolvala, UpTools, Calculator.net. Pick by use case, not catalog size.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

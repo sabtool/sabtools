@@ -18,7 +18,7 @@ const PAGE_URL = `${SITE_URL}/best/free-emi-calculator-india`;
 // once. Final rendered <title> stays ≤ 60 chars (52 chars total here).
 const PAGE_TITLE = "Best Free EMI Calculator in India 2026";
 const PAGE_DESC =
-  "We tested 7 free EMI calculators on the same ₹50L home loan and ₹6L car loan scenarios. Honest comparison of SabTools, BankBazaar, ClearTax, HDFC Life, ET Money, Groww, and Paisabazaar.";
+  "Tested 7 free EMI calculators on ₹50L home loan and ₹6L car loan scenarios — SabTools, BankBazaar, ClearTax, HDFC Life, ET Money, Groww, Paisabazaar.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

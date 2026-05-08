@@ -17,7 +17,7 @@ const PAGE_URL = `${SITE_URL}/best/hindi-calculator-tools`;
 // Bare title — layout's title.template appends " | SabTools.in" exactly
 // once. Final rendered <title> stays ≤ 60 chars (46 chars total here).
 const PAGE_TITLE = "Best Hindi Calculator Tools 2026";
-const PAGE_DESC = `A guide to the best free calculator tools available in Hindi — SabTools' ${BRAND.hindiTools}+ Hindi catalog plus genuine alternatives like Google Search Hindi, Indian government portals, Easy Hindi Typing, and select Android apps.`;
+const PAGE_DESC = `Best free calculator tools in Hindi — SabTools' ${BRAND.hindiTools}+ Hindi catalog, Google search Hindi, govt portals, Easy Hindi Typing, Android apps.`;
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

@@ -17,7 +17,7 @@ import {
 const PAGE_URL = `${SITE_URL}/compare/sabtools-vs-easycalculation`;
 const PAGE_TITLE = "SabTools vs EasyCalculation 2026";
 const PAGE_DESC =
-  "SabTools.in vs EasyCalculation.com: India-specific finance depth vs scientific/academic calculator breadth. Where EasyCalculation's chemistry, physics, and math calculators genuinely win.";
+  "SabTools.in vs EasyCalculation.com: India finance depth vs scientific/academic calculator breadth — where each platform genuinely wins.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

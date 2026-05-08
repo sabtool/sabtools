@@ -15,7 +15,7 @@ import {
 const PAGE_URL = `${SITE_URL}/alternatives/to-toolvala`;
 const PAGE_TITLE = "Toolvala Alternatives — 4 Free Tool Sites";
 const PAGE_DESC =
-  "4 honest Toolvala.in alternatives ranked by use case — SabTools, UpTools, Calculator.net, and India Toolkit. Where each platform genuinely wins for Indian users.";
+  "4 honest Toolvala.in alternatives — SabTools, UpTools, Calculator.net, India Toolkit. Where each genuinely wins for Indian users.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

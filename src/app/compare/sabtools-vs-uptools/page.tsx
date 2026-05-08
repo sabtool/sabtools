@@ -17,7 +17,7 @@ import {
 const PAGE_URL = `${SITE_URL}/compare/sabtools-vs-uptools`;
 const PAGE_TITLE = "SabTools vs UpTools — 2026 Comparison";
 const PAGE_DESC =
-  "SabTools.in vs UpTools.in: tool catalog depth, GST rounding modes, PAN/IFSC validators, mini-games, and where UpTools' privacy-first messaging genuinely wins.";
+  "SabTools.in vs UpTools.in: catalog depth, GST rounding modes, PAN/IFSC validators, mini-games, and where UpTools genuinely wins.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

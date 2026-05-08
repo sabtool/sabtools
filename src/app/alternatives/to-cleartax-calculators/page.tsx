@@ -15,7 +15,7 @@ import {
 const PAGE_URL = `${SITE_URL}/alternatives/to-cleartax-calculators`;
 const PAGE_TITLE = "ClearTax Calculator Alternatives 2026";
 const PAGE_DESC =
-  "5 honest alternatives to ClearTax's free calculators — SabTools, Tax2Win, the Income Tax Department portal, BankBazaar, and HDFC Life. Pick by use case, not just brand recall.";
+  "5 ClearTax calculator alternatives — SabTools, Tax2Win, the IT Dept official portal, BankBazaar, HDFC Life. Pick by use case, not brand recall.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,

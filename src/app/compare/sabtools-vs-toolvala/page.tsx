@@ -19,7 +19,7 @@ const PAGE_URL = `${SITE_URL}/compare/sabtools-vs-toolvala`;
 // suffix exactly once. Final rendered <title> stays ≤ 60 chars (51 here).
 const PAGE_TITLE = "SabTools vs Toolvala — 2026 Comparison";
 const PAGE_DESC =
-  "SabTools.in vs Toolvala.in: tool catalog size, India-specific finance focus, TET prep, mobile speed, privacy posture, and the cases where each platform genuinely wins.";
+  "SabTools.in vs Toolvala.in: catalog size, finance focus, TET prep, mobile speed, privacy, and where each platform genuinely wins for Indian users.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
