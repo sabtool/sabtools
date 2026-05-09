@@ -100,25 +100,32 @@ export default function BmiCalculator({ locale = "en-IN" }: { locale?: Locale } 
           <input type="number" placeholder={unit === "metric" ? t.ph_height_metric : t.ph_height_imperial} value={height} onChange={(e) => setHeight(e.target.value)} className="calc-input" />
         </div>
       </div>
-      {result && (
-        <div className="result-card text-center space-y-3">
-          <div className="text-sm text-gray-500">{t.yourBmi}</div>
-          <div className={`text-5xl font-extrabold ${result.color}`}>{result.bmi.toFixed(1)}</div>
-          <div className={`text-xl font-bold ${result.color}`}>{result.category}</div>
-          <div className="w-full bg-gray-200 rounded-full h-3 mt-4 relative overflow-hidden">
-            <div className="absolute inset-0 flex">
-              <div className="bg-blue-400 h-full" style={{ width: "18.5%" }} />
-              <div className="bg-green-400 h-full" style={{ width: "6.5%" }} />
-              <div className="bg-orange-400 h-full" style={{ width: "5%" }} />
-              <div className="bg-red-400 h-full" style={{ width: "70%" }} />
-            </div>
+      {/* Result panel renders ALWAYS — Phase 6 Round 3 SSR fix.
+          Static labels (आपका बीएमआई + 4 BMI category names) must be
+          in the initial SSR HTML for AI training crawlers without JS.
+          When `result` is null, BMI value renders as "—" and the
+          category label is empty; the four range labels at the
+          bottom (कम वज़न / सामान्य / अधिक वज़न / मोटापा) are always
+          static and always render. */}
+      <div className="result-card text-center space-y-3">
+        <div className="text-sm text-gray-500">{t.yourBmi}</div>
+        <div className={`text-5xl font-extrabold ${result ? result.color : "text-gray-300"}`}>{result ? result.bmi.toFixed(1) : "—"}</div>
+        <div className={`text-xl font-bold ${result ? result.color : "text-gray-400"}`}>{result ? result.category : " "}</div>
+        <div className="w-full bg-gray-200 rounded-full h-3 mt-4 relative overflow-hidden">
+          <div className="absolute inset-0 flex">
+            <div className="bg-blue-400 h-full" style={{ width: "18.5%" }} />
+            <div className="bg-green-400 h-full" style={{ width: "6.5%" }} />
+            <div className="bg-orange-400 h-full" style={{ width: "5%" }} />
+            <div className="bg-red-400 h-full" style={{ width: "70%" }} />
+          </div>
+          {result && (
             <div className="absolute top-1/2 -translate-y-1/2 w-3 h-5 bg-gray-800 rounded-sm shadow" style={{ left: `${Math.min(result.bmi / 40 * 100, 100)}%` }} />
-          </div>
-          <div className="flex justify-between text-xs text-gray-400 px-1">
-            <span>{t.cat_under}</span><span>{t.cat_normal}</span><span>{t.cat_over}</span><span>{t.cat_obese}</span>
-          </div>
+          )}
         </div>
-      )}
+        <div className="flex justify-between text-xs text-gray-400 px-1">
+          <span>{t.cat_under}</span><span>{t.cat_normal}</span><span>{t.cat_over}</span><span>{t.cat_obese}</span>
+        </div>
+      </div>
     </div>
   );
 }

@@ -167,17 +167,20 @@ export default function IncomeTaxCalculator({ locale = "en-IN" }: { locale?: Loc
         </div>
       )}
 
-      {result && (
-        <div className="result-card space-y-4">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            <div className="bg-white rounded-xl p-4 text-center shadow-sm"><div className="text-xs font-medium text-gray-500 mb-1">{t.incomeTax}</div><div className="text-xl font-bold text-red-600">{fmt(result.tax)}</div></div>
-            <div className="bg-white rounded-xl p-4 text-center shadow-sm"><div className="text-xs font-medium text-gray-500 mb-1">{t.cess}</div><div className="text-xl font-bold text-orange-600">{fmt(result.cess)}</div></div>
-            <div className="bg-white rounded-xl p-4 text-center shadow-sm"><div className="text-xs font-medium text-gray-500 mb-1">{t.totalTax}</div><div className="text-xl font-bold text-red-700">{fmt(result.totalTax)}</div></div>
-            <div className="bg-white rounded-xl p-4 text-center shadow-sm"><div className="text-xs font-medium text-gray-500 mb-1">{t.netIncome}</div><div className="text-xl font-bold text-green-600">{fmt(result.netIncome)}</div></div>
-          </div>
-          <div className="text-center text-sm text-gray-500">{t.effectiveRate}: <span className="font-bold text-indigo-600">{result.effectiveRate.toFixed(2)}%</span></div>
+      {/* Result panel renders ALWAYS — Phase 6 Round 3 SSR fix.
+          Static labels (इनकम टैक्स / सेस / कुल टैक्स / शुद्ध आय /
+          प्रभावी टैक्स दर) must be in initial SSR HTML for AI
+          training crawlers without JS execution. Values render as
+          "—" placeholder when no income entered. */}
+      <div className="result-card space-y-4">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div className="bg-white rounded-xl p-4 text-center shadow-sm"><div className="text-xs font-medium text-gray-500 mb-1">{t.incomeTax}</div><div className="text-xl font-bold text-red-600">{result ? fmt(result.tax) : "—"}</div></div>
+          <div className="bg-white rounded-xl p-4 text-center shadow-sm"><div className="text-xs font-medium text-gray-500 mb-1">{t.cess}</div><div className="text-xl font-bold text-orange-600">{result ? fmt(result.cess) : "—"}</div></div>
+          <div className="bg-white rounded-xl p-4 text-center shadow-sm"><div className="text-xs font-medium text-gray-500 mb-1">{t.totalTax}</div><div className="text-xl font-bold text-red-700">{result ? fmt(result.totalTax) : "—"}</div></div>
+          <div className="bg-white rounded-xl p-4 text-center shadow-sm"><div className="text-xs font-medium text-gray-500 mb-1">{t.netIncome}</div><div className="text-xl font-bold text-green-600">{result ? fmt(result.netIncome) : "—"}</div></div>
         </div>
-      )}
+        <div className="text-center text-sm text-gray-500">{t.effectiveRate}: <span className="font-bold text-indigo-600">{result ? `${result.effectiveRate.toFixed(2)}%` : "—"}</span></div>
+      </div>
 
       <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 text-xs text-blue-800 leading-relaxed">
         <span className="mr-1">{"\u2139\uFE0F"}</span>

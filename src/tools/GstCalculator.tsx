@@ -102,28 +102,33 @@ export default function GstCalculator({ locale = "en-IN" }: { locale?: Locale } 
         </div>
       </div>
 
-      {result && (
-        <div className="result-card space-y-3">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <div className="bg-white rounded-xl p-4 text-center shadow-sm">
-              <div className="text-xs font-medium text-gray-500 mb-1">{t.baseAmount}</div>
-              <div className="text-lg font-bold text-gray-800">{fmt(result.originalAmount)}</div>
-            </div>
-            <div className="bg-white rounded-xl p-4 text-center shadow-sm">
-              <div className="text-xs font-medium text-gray-500 mb-1">{t.cgst} ({gstRate / 2}%)</div>
-              <div className="text-lg font-bold text-orange-600">{fmt(result.cgst)}</div>
-            </div>
-            <div className="bg-white rounded-xl p-4 text-center shadow-sm">
-              <div className="text-xs font-medium text-gray-500 mb-1">{t.sgst} ({gstRate / 2}%)</div>
-              <div className="text-lg font-bold text-orange-600">{fmt(result.sgst)}</div>
-            </div>
-            <div className="bg-white rounded-xl p-4 text-center shadow-sm">
-              <div className="text-xs font-medium text-gray-500 mb-1">{t.totalAmount}</div>
-              <div className="text-lg font-bold text-indigo-600">{fmt(result.totalAmount)}</div>
-            </div>
+      {/* Result panel renders ALWAYS — Phase 6 Round 3 SSR fix.
+          Static labels (मूल राशि / सीजीएसटी / एसजीएसटी / कुल राशि)
+          must be in the initial SSR HTML so AI training crawlers
+          (GPTBot, ClaudeBot, CCBot) see the full Hindi vocabulary
+          without executing JS. When `result` is null (initial empty
+          input), values render as "—" placeholder; labels are
+          always present. */}
+      <div className="result-card space-y-3">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="bg-white rounded-xl p-4 text-center shadow-sm">
+            <div className="text-xs font-medium text-gray-500 mb-1">{t.baseAmount}</div>
+            <div className="text-lg font-bold text-gray-800">{result ? fmt(result.originalAmount) : "—"}</div>
+          </div>
+          <div className="bg-white rounded-xl p-4 text-center shadow-sm">
+            <div className="text-xs font-medium text-gray-500 mb-1">{t.cgst} ({gstRate / 2}%)</div>
+            <div className="text-lg font-bold text-orange-600">{result ? fmt(result.cgst) : "—"}</div>
+          </div>
+          <div className="bg-white rounded-xl p-4 text-center shadow-sm">
+            <div className="text-xs font-medium text-gray-500 mb-1">{t.sgst} ({gstRate / 2}%)</div>
+            <div className="text-lg font-bold text-orange-600">{result ? fmt(result.sgst) : "—"}</div>
+          </div>
+          <div className="bg-white rounded-xl p-4 text-center shadow-sm">
+            <div className="text-xs font-medium text-gray-500 mb-1">{t.totalAmount}</div>
+            <div className="text-lg font-bold text-indigo-600">{result ? fmt(result.totalAmount) : "—"}</div>
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
