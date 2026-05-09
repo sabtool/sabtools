@@ -140,7 +140,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en-IN">
       <head>
         {/*
           Pre-paint inline script. Does two things synchronously before any
@@ -149,16 +149,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                selected dark mode, so the page paints the correct theme
                from the very first frame (no flash-of-light).
             2. Hindi `lang` attribute — App Router with output:"export"
-               renders `<html lang="en">` at build time for every route.
-               For /hi and /hi/* we override to `lang="hi"` here. Googlebot
-               executes JS, so it sees the corrected lang on Hindi pages,
-               which strengthens the hi-IN hreflang signal.
+               renders `<html lang="en-IN">` at build time for every route.
+               For /hi and /hi/* we override to `lang="hi-IN"` here.
+               Googlebot executes JS, so it sees the corrected lang on
+               Hindi pages, which strengthens the hi-IN hreflang signal.
+               Phase 6 Round 1 upgraded the values from bare "en"/"hi"
+               to the locale-tagged "en-IN"/"hi-IN" forms — both are
+               valid BCP 47 tags but the fully-qualified versions match
+               the hreflang declarations and Open Graph locale fields,
+               keeping every language signal in lock-step.
           Keep the body of this script ASCII-only and synchronous.
           (Both behaviours from the technical-SEO audit fix report.)
         */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="dark"){document.documentElement.classList.add("dark")}}catch(e){}try{var p=location.pathname;if(p==="/hi"||p.indexOf("/hi/")===0){document.documentElement.lang="hi"}}catch(e){}})();`,
+            __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="dark"){document.documentElement.classList.add("dark")}}catch(e){}try{var p=location.pathname;if(p==="/hi"||p.indexOf("/hi/")===0){document.documentElement.lang="hi-IN"}}catch(e){}})();`,
           }}
         />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
