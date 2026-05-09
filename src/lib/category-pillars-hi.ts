@@ -32,10 +32,22 @@ export interface CategoryPillarHi {
   indianContext: string;
   /** 3-4 question/answer pairs in Hindi, ~30-60 Hindi words per answer. */
   pillarFaqs: { q: string; a: string }[];
+  /**
+   * Devanagari category name shown to Hindi users — overrides the English
+   * `cat.name` from `tools.ts` everywhere on `/hi/category/{slug}` (H1,
+   * meta description, JSON-LD CollectionPage / ItemList / WebPage `name`,
+   * breadcrumb labels). Hand-written per category. Where the term is a
+   * loanword Indian users search for in Latin form ("PDF", "EMI", "GST",
+   * "रियल एस्टेट"), Devanagari transliteration is preferred over a
+   * forced Sanskritised translation that no one searches for.
+   * Phase 6 Round 2 — Task A.
+   */
+  name: string;
 }
 
 export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   finance: {
+    name: "वित्त",
     whatIs:
       "Finance Calculators श्रेणी में EMI, SIP, FD, RD, PPF, चक्रवृद्धि ब्याज और इनकम टैक्स कैलकुलेटर जैसे टूल्स शामिल हैं जो भारतीय बैंकों की मानक गणना विधियों का उपयोग करते हैं। चाहे आप होम लोन की मासिक किस्त निकाल रहे हों, म्यूचुअल फंड के रिटर्न का अनुमान लगा रहे हों, या रिटायरमेंट के लिए पूंजी जमा कर रहे हों — ये टूल्स कागज पर फॉर्मूला हल किए बिना सटीक नतीजे देते हैं। सभी गणनाएँ आपके ब्राउज़र में होती हैं, इसलिए आपकी निजी वित्तीय जानकारी कहीं भी सेव नहीं होती।",
     useCases: [
@@ -63,6 +75,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   tax: {
+    name: "टैक्स",
     whatIs:
       "Tax & Salary श्रेणी में HRA, TDS, EPF, NPS, Stamp Duty, Income Tax और Gratuity जैसे कैलकुलेटर हैं जो आयकर अधिनियम 1961 और हालिया वित्त विधेयक के अनुसार चलते हैं। वेतनभोगी, स्वरोज़गार और छोटे व्यवसायी सभी ITR भरने से पहले इन टूल्स से अपनी देयता अनुमानित कर सकते हैं। हर कैलकुलेटर पुराने और नए दोनों टैक्स रिजीम के साथ काम करता है।",
     useCases: [
@@ -90,6 +103,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   business: {
+    name: "बिज़नेस",
     whatIs:
       "Business कैलकुलेटर श्रेणी में GST इन्वॉइस, प्रॉफिट/लॉस, ROI, ब्रेक-इवन, मार्क-अप और कैश-फ्लो टूल्स हैं जो भारतीय MSME और छोटे कारोबारियों के लिए बने हैं। चाहे आप किराना दुकान चलाएँ, फ्रीलांस कंसल्टिंग करें, या Amazon/Flipkart पर सेलर हों — ये टूल्स बिना Tally या Zoho खरीदे बेसिक हिसाब-किताब करवाते हैं।",
     useCases: [
@@ -117,6 +131,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   indiaguide: {
+    name: "भारत गाइड",
     whatIs:
       "India Guide श्रेणी भारत-विशिष्ट टूल्स का संग्रह है — Aadhaar मास्किंग, PIN कोड लुकअप, IFSC खोज, ट्रेन सीट उपलब्धता, त्योहार कैलेंडर, सरकारी योजनाएँ और राशन कार्ड स्टेटस जैसे कार्य यहाँ एक जगह मिलते हैं। ये वे काम हैं जिनके लिए लोग अक्सर मुख्य सरकारी पोर्टल पर जाने के बजाय एक तेज़, हिंदी-समर्थित टूल चाहते हैं।",
     useCases: [
@@ -144,6 +159,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   realestate: {
+    name: "रियल एस्टेट",
     whatIs:
       "Real Estate श्रेणी में प्लॉट क्षेत्रफल, टाइल्स, ब्रिक्स, सीमेंट, पेंट, इंटीरियर लागत और होम लोन जैसे कैलकुलेटर हैं जो घर खरीदने, बनाने या रेनोवेट करने वालों के लिए बने हैं। RERA-पंजीकृत प्रोजेक्ट से लेकर खुद के प्लॉट पर निर्माण तक — ये टूल्स ठेकेदार के अनुमान को क्रॉस-चेक करने में काम आते हैं।",
     useCases: [
@@ -171,6 +187,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   vehicle: {
+    name: "वाहन",
     whatIs:
       "Vehicle & Transport श्रेणी में माइलेज, रोड ट्रिप प्लानर, कार/बाइक लोन EMI, इंश्योरेंस प्रीमियम, टायर साइज़ और टोल कैलकुलेटर हैं। चाहे आप पुरानी कार बेच रहे हों, EV लेने का सोच रहे हों, या परिवार के साथ रोड ट्रिप प्लान कर रहे हों — ये टूल्स वाहन से जुड़े सभी हिसाब एक जगह संभाल देते हैं।",
     useCases: [
@@ -198,6 +215,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   health: {
+    name: "स्वास्थ्य",
     whatIs:
       "Health & Fitness श्रेणी में BMI, BMR, कैलोरी, प्रेग्नेंसी, मासिक धर्म, ब्लड प्रेशर और पानी की दैनिक आवश्यकता जैसे कैलकुलेटर हैं। ये न डॉक्टर की जगह लेते हैं न जाँच रिपोर्ट का विकल्प हैं — ये आपको अपने स्वास्थ्य संकेतकों को घर बैठे मॉनिटर करने में मदद करते हैं।",
     useCases: [
@@ -225,6 +243,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   education: {
+    name: "शिक्षा",
     whatIs:
       "Education श्रेणी में GPA, CGPA, ग्रेड, बोर्ड पर्सेंटेज, स्कॉलरशिप पात्रता और स्टडी प्लानर जैसे टूल्स हैं। CBSE, ICSE और राज्य बोर्ड के छात्रों से लेकर इंजीनियरिंग और मेडिकल कॉलेज के स्टूडेंट्स तक — ये टूल्स सेमेस्टर मार्कशीट और एप्टीट्यूड टेस्ट के दौरान बहुत काम आते हैं।",
     useCases: [
@@ -252,6 +271,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   exam: {
+    name: "परीक्षा",
     whatIs:
       "Exam & Competitive श्रेणी में NEET, JEE, GATE, CAT, CLAT जैसे प्रवेश परीक्षाओं के लिए स्कोर प्रिडिक्टर, रैंक एस्टीमेटर, पर्सेंटाइल कैलकुलेटर और कट-ऑफ चेकर हैं। पिछले वर्षों के डेटा और प्रत्येक परीक्षा की मार्किंग स्कीम के आधार पर ये टूल्स आपको रिज़ल्ट से पहले अनुमान देते हैं।",
     useCases: [
@@ -279,6 +299,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   career: {
+    name: "करियर",
     whatIs:
       "Career श्रेणी में रिज़्यूमे बिल्डर, सैलरी कम्पैरिज़न, नोटिस पीरियड, अनुभव कैलकुलेटर और जॉब-स्विच ROI जैसे टूल्स हैं। फ्रेशर से लेकर सीनियर मैनेजर तक — ये टूल्स करियर निर्णय (इस्तीफ़ा, स्विच, ब्रेक) को संख्याओं के आधार पर देखने में मदद करते हैं।",
     useCases: [
@@ -306,6 +327,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   legal: {
+    name: "कानूनी",
     whatIs:
       "Legal & Government श्रेणी में कोर्ट फ़ीस, RTI एप्लिकेशन, ऐफ़िडेविट, क़ानूनी नोटिस, वोटर ID स्टेटस और प्रॉपर्टी रजिस्ट्री जैसे टूल्स हैं। ये साधारण नागरिकों को वकील के बिना बेसिक क़ानूनी काम करने में मदद करते हैं।",
     useCases: [
@@ -333,6 +355,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   construction: {
+    name: "निर्माण",
     whatIs:
       "Construction श्रेणी में कंक्रीट, स्टील, ईंट, फ़्लोरिंग, पानी की टंकी, सीढ़ी और छत जैसे कैलकुलेटर हैं जो IS कोड्स के अनुसार सटीक मात्रा निकालते हैं। साइट इंजीनियर, ठेकेदार और घर बनाने वाले मालिक तीनों के लिए उपयोगी।",
     useCases: [
@@ -360,6 +383,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   agriculture: {
+    name: "कृषि",
     whatIs:
       "Agriculture श्रेणी में फ़सल पैदावार, उर्वरक, सिंचाई, ज़मीन माप, फ़ार्म लाभ और बीज जैसे कैलकुलेटर हैं। छोटे और मझोले किसानों के लिए ICAR की सिफ़ारिशों और भारतीय कृषि-जलवायु क्षेत्रों को ध्यान में रखकर बनाए गए हैं।",
     useCases: [
@@ -387,6 +411,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   electrical: {
+    name: "इलेक्ट्रिकल",
     whatIs:
       "Electrical & Engineering श्रेणी में wire size, voltage drop, power consumption, Ohm's Law, transformer और solar कैलकुलेटर हैं जो IS 732:2019 (इलेक्ट्रिकल वायरिंग कोड) और BIS मानकों के अनुसार चलते हैं। घर के मालिक से लेकर इलेक्ट्रीशियन तक काम के टूल्स।",
     useCases: [
@@ -414,6 +439,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   developer: {
+    name: "डेवलपर",
     whatIs:
       "Developer Tools श्रेणी में JSON formatter, Base64 encoder, hash generator, regex tester, color picker, UUID, JWT decoder और बहुत कुछ शामिल है। React/Next.js, Node, Python, Java सभी डेवलपर्स के लिए दैनिक टूल्स — कोई एक्सटेंशन इंस्टॉल किए बिना।",
     useCases: [
@@ -441,6 +467,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   ai: {
+    name: "एआई",
     whatIs:
       "AI Writing Tools श्रेणी में paragraph rewriter, email writer, story generator, blog title generator, bio generator और grammar checker जैसे टूल्स हैं। ये AI मॉडल्स पर आधारित हैं और तेज़ी से content drafts तैयार करने में मदद करते हैं।",
     useCases: [
@@ -468,6 +495,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   seo: {
+    name: "एसईओ",
     whatIs:
       "SEO Tools श्रेणी में meta tag generator, sitemap, robots.txt, keyword density, schema generator और SERP preview जैसे टूल्स हैं। साइट मालिक, content writer और डिजिटल मार्केटर्स के लिए — Google पर रैंक सुधारने के दैनिक कार्यों में।",
     useCases: [
@@ -495,6 +523,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   image: {
+    name: "इमेज",
     whatIs:
       "Image Tools श्रेणी में image compressor, resizer, format converter (JPG/PNG/WebP/AVIF), background remover, watermark और crop जैसे टूल्स हैं। पूरी processing browser में होती है — कोई upload, कोई watermark, कोई account।",
     useCases: [
@@ -522,6 +551,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   pdf: {
+    name: "पीडीएफ",
     whatIs:
       "PDF Tools श्रेणी में PDF merger, splitter, compressor, format converter (Word/Excel/JPG से PDF और वापस), watermark, password protection और sign जैसे टूल्स हैं। सब कुछ ब्राउज़र-only — दस्तावेज़ कभी server पर नहीं जाते।",
     useCases: [
@@ -549,6 +579,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   text: {
+    name: "टेक्स्ट",
     whatIs:
       "Text Tools श्रेणी में word counter, character counter, case converter, lorem ipsum, text reverse, line sorter और duplicate finder जैसे टूल्स हैं। writers, editors, students और social-media managers के लिए दैनिक तेज़ काम।",
     useCases: [
@@ -576,6 +607,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   math: {
+    name: "गणित",
     whatIs:
       "Math & Numbers श्रेणी में पर्सेंटेज, उम्र, BMI, यूनिट कन्वर्टर, फ्रैक्शन, square root, और factorial जैसे टूल्स हैं। स्कूल छात्रों से लेकर रोज़ की गणनाओं वाले हर व्यक्ति के लिए।",
     useCases: [
@@ -603,6 +635,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   science: {
+    name: "विज्ञान",
     whatIs:
       "Science & Math श्रेणी में graphing calculator, matrix, fractions, quadratic solver, statistics, probability और unit conversion जैसे टूल्स हैं। 11वीं-12वीं और इंजीनियरिंग के छात्रों के लिए — और शिक्षकों के लिए भी।",
     useCases: [
@@ -630,6 +663,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   converters: {
+    name: "कन्वर्टर",
     whatIs:
       "Converter Tools श्रेणी में unit, currency, temperature, length, weight, volume, time और data converters हैं। दैनिक गणनाओं और international viewers/customers के साथ काम करते समय जल्दी रूपांतरण के लिए।",
     useCases: [
@@ -657,6 +691,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   datetime: {
+    name: "तारीख और समय",
     whatIs:
       "Date & Time श्रेणी में date difference, age, working days, countdown, timezone converter और meeting planner जैसे टूल्स हैं। प्रोजेक्ट डेडलाइन, वीज़ा validity और international meetings के लिए तेज़ हिसाब।",
     useCases: [
@@ -684,6 +719,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   charts: {
+    name: "चार्ट",
     whatIs:
       "Data & Charts श्रेणी में chart maker (bar, line, pie, scatter), table generator, flowchart, mind map, CSV editor और SQL query tester हैं। student presentations, business reports और social media graphics के लिए।",
     useCases: [
@@ -711,6 +747,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   data: {
+    name: "डेटा",
     whatIs:
       "Data Tools श्रेणी में JSON to CSV, CSV to JSON, XML converter, text diff, merge और duplicate finder जैसे टूल्स हैं। data engineers, analysts और spreadsheet users के लिए — दो formats के बीच fast switching।",
     useCases: [
@@ -738,6 +775,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   css: {
+    name: "सीएसएस",
     whatIs:
       "CSS & Design श्रेणी में gradient generator, box shadow, border radius, color palette, font preview और CSS animation builder जैसे टूल्स हैं। front-end developers और designers के लिए — Photoshop/Figma खोलने की ज़रूरत नहीं।",
     useCases: [
@@ -765,6 +803,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   security: {
+    name: "सुरक्षा",
     whatIs:
       "Security & Privacy श्रेणी में password generator, password strength checker, SSL checker, DNS lookup, IP lookup, email leak checker और 2FA QR generator जैसे टूल्स हैं। individual users और small business owners के लिए basic cyber-hygiene।",
     useCases: [
@@ -792,6 +831,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   utility: {
+    name: "यूटिलिटी",
     whatIs:
       "Everyday Utility श्रेणी में IFSC, PIN code, PAN validator, Aadhaar masking, GST validator, vehicle info और fastag जैसे India-specific टूल्स हैं। रोज़ की पारदर्शी जानकारी जो लोगों को जल्दी चाहिए — सरकारी पोर्टल खोले बिना।",
     useCases: [
@@ -819,6 +859,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   fun: {
+    name: "मनोरंजन",
     whatIs:
       "Fun & Utility श्रेणी में love calculator, flip coin, roll dice, typing test, name generator और random picker जैसे entertaining tools हैं। बच्चों, टीनएजर और कैज़ुअल users के लिए — विशेष कर party games और social media trends में।",
     useCases: [
@@ -846,6 +887,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   cooking: {
+    name: "खाना पकाना",
     whatIs:
       "Cooking & Kitchen श्रेणी में recipe converter, cooking time, calorie counter, gas cylinder duration, water TDS और spice grinder जैसे टूल्स हैं। घरेलू और कुकिंग पेशेवर — रोज़ की रसोई में जल्दी हिसाब के लिए।",
     useCases: [
@@ -873,6 +915,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   wedding: {
+    name: "शादी",
     whatIs:
       "Wedding & Events श्रेणी में wedding budget, guest list manager, auspicious date finder, gift registry और event checklist जैसे टूल्स हैं। शादी, सगाई, जन्मदिन और सरकारी समारोह की तैयारी में मदद।",
     useCases: [
@@ -900,6 +943,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   shopping: {
+    name: "शॉपिंग",
     whatIs:
       "Shopping श्रेणी में discount, GST inclusive/exclusive, EMI affordability, price comparator और cashback कैलकुलेटर हैं। smart shoppers के लिए — sale के दौरान सही deal पहचानने और अच्छा बजट बनाने में मदद।",
     useCases: [
@@ -927,6 +971,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   whatsapp: {
+    name: "व्हाट्सऐप",
     whatIs:
       "WhatsApp & UPI श्रेणी में WhatsApp link generator, formatter, UPI QR code, mobile tracker, और IFSC lookup जैसे टूल्स हैं। यूज़र्स के लिए जो messaging और payments जल्दी सेट करना चाहते हैं — bot, business या personal use।",
     useCases: [
@@ -954,6 +999,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   social: {
+    name: "सोशल मीडिया",
     whatIs:
       "Social Media श्रेणी में Instagram bio, hashtag generator, image resizer, caption ideas और username generator जैसे टूल्स हैं। creators, influencers और small businesses के लिए — Instagram, YouTube, LinkedIn पर तेज़ी से professional content तैयार करने में।",
     useCases: [
@@ -981,6 +1027,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   student: {
+    name: "छात्र टूल्स",
     whatIs:
       "Student Tools श्रेणी में graph paper, flashcards, timetable, handwriting practice pages और assignment tools हैं — स्कूल और कॉलेज के छात्रों के लिए। Maths assignments, history flashcards, और exam study schedules सब कुछ।",
     useCases: [
@@ -1008,6 +1055,7 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
   },
 
   astrology: {
+    name: "ज्योतिष",
     whatIs:
       "Astrology & Spiritual श्रेणी में Kundli, Rashi, Nakshatra, Panchang, Numerology और Gemstone जैसे टूल्स हैं। Vedic astrology में रुचि रखने वाले — daily panchang, monthly horoscope, और matchmaking के लिए।",
     useCases: [

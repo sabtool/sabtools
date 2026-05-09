@@ -51,9 +51,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     ? `@${reviewer.socialLinks.twitter}`
     : "@sabtools";
 
+  // Phase 6 Round 2 Task A — use the Devanagari `pillar.name` everywhere
+  // a Hindi user sees the category name. The English `cat.name` from
+  // tools.ts stays in OG image alt-text only (where it's a fallback for
+  // share-card crawlers that ignore lang).
+  const hindiName = pillar.name;
+
   return {
-    title: `${cat.name} — हिंदी में ${toolCount} मुफ्त ऑनलाइन टूल्स`,
-    description: `${cat.name} — ${toolCount} मुफ्त ऑनलाइन टूल्स हिंदी में। बिना साइनअप, तुरंत परिणाम। SabTools.in पर।`,
+    title: `${hindiName} — हिंदी में ${toolCount} मुफ्त ऑनलाइन टूल्स`,
+    description: `${hindiName} — ${toolCount} मुफ्त ऑनलाइन टूल्स हिंदी में। बिना साइनअप, तुरंत परिणाम। SabTools.in पर।`,
     alternates: {
       canonical: `https://sabtools.in/hi/category/${slug}`,
       languages: {
@@ -63,8 +69,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       },
     },
     openGraph: {
-      title: `${cat.name} — हिंदी में मुफ्त टूल्स | SabTools.in`,
-      description: `${toolCount} मुफ्त ${cat.name} हिंदी में। बिना साइनअप।`,
+      title: `${hindiName} — हिंदी में मुफ्त टूल्स | SabTools.in`,
+      description: `${toolCount} मुफ्त ${hindiName} टूल्स हिंदी में। बिना साइनअप।`,
       url: `https://sabtools.in/hi/category/${slug}`,
       type: "website",
       locale: "hi_IN",
@@ -74,8 +80,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     twitter: {
       card: "summary_large_image",
-      title: `${cat.name} — हिंदी में मुफ्त टूल्स`,
-      description: `${toolCount} मुफ्त ${cat.name} हिंदी में। बिना साइनअप।`,
+      title: `${hindiName} — हिंदी में मुफ्त टूल्स`,
+      description: `${toolCount} मुफ्त ${hindiName} टूल्स हिंदी में। बिना साइनअप।`,
       images: [
         {
           url: "https://sabtools.in/og-image.png",
@@ -115,7 +121,7 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
       "@type": "WebPage",
       "@id": webPageId,
       url: pageUrl,
-      name: `${cat.name} — हिंदी में`,
+      name: `${pillar.name} — हिंदी में`,
       description: pillar.whatIs,
       inLanguage: "hi-IN",
       isPartOf: { "@id": WEBSITE_ID },
@@ -147,7 +153,7 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
     {
       "@type": "CollectionPage",
       "@id": collectionPageId,
-      name: `${cat.name} — हिंदी`,
+      name: `${pillar.name} — हिंदी`,
       url: pageUrl,
       inLanguage: "hi-IN",
       isPartOf: { "@id": WEBSITE_ID },
@@ -164,7 +170,7 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
     {
       "@type": "ItemList",
       "@id": itemListId,
-      name: `${cat.name} — मुफ्त ऑनलाइन टूल्स`,
+      name: `${pillar.name} — मुफ्त ऑनलाइन टूल्स`,
       numberOfItems: catTools.length,
       itemListOrder: "https://schema.org/ItemListOrderAscending",
       itemListElement: catTools.map((t, i) => ({
@@ -179,7 +185,7 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
     breadcrumbNode(
       [
         { name: "होम", url: `${SITE_URL}/hi` },
-        { name: cat.name },
+        { name: pillar.name },
       ],
       hiBreadcrumbId,
     ),
@@ -189,7 +195,7 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }} />
-      <Breadcrumb items={[{ label: "होम", href: "/hi" }, { label: cat.name }]} />
+      <Breadcrumb items={[{ label: "होम", href: "/hi" }, { label: pillar.name }]} />
 
       {/* id is a stable hook for the SpeakableSpecification declared
           in the page schema — Google Assistant reads aloud the H1 +
@@ -199,7 +205,7 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
           {cat.icon}
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">
-          {cat.name} — हिंदी में
+          {pillar.name} — हिंदी में
         </h1>
         <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">{pillar.whatIs}</p>
         <p className="text-sm text-gray-500 mt-3">
@@ -211,7 +217,7 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
 
       {/* Tools grid */}
       <h2 className="text-xl font-bold text-gray-900 mb-4">
-        सभी {cat.name} ({catTools.length} टूल्स)
+        सभी {pillar.name} ({catTools.length} टूल्स)
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {catTools.map((t) => {
@@ -302,7 +308,7 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
       <div className="mt-12 bg-gradient-to-br from-indigo-50 to-purple-50 border border-indigo-100 rounded-2xl p-6">
         <h2 className="text-lg font-bold text-gray-900 mb-2">अंग्रेज़ी में और भी जानकारी</h2>
         <p className="text-sm text-gray-600 mb-4">
-          {cat.name} पर हमारी पूरी अंग्रेज़ी गाइड में 800+ शब्दों का विवरण, मुख्य फ़ीचर्स, और चयन-गाइड शामिल हैं।
+          {pillar.name} पर हमारी पूरी अंग्रेज़ी गाइड में 800+ शब्दों का विवरण, मुख्य फ़ीचर्स, और चयन-गाइड शामिल हैं।
         </p>
         <Link
           href={`/category/${slug}`}
@@ -321,7 +327,8 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
             .slice(0, 12)
             .map((s) => {
               const c = categories.find((x) => x.slug === s);
-              if (!c) return null;
+              const otherPillar = categoryPillarsHi[s];
+              if (!c || !otherPillar) return null;
               return (
                 <Link
                   key={s}
@@ -329,7 +336,7 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gray-50 hover:bg-orange-50 border border-gray-200 hover:border-orange-200 rounded-full text-xs font-medium text-gray-700 hover:text-orange-700 transition"
                 >
                   <span>{c.icon}</span>
-                  <span>{c.name}</span>
+                  <span>{otherPillar.name}</span>
                 </Link>
               );
             })}

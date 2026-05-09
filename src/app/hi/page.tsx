@@ -11,7 +11,9 @@ import {
   breadcrumbIdFor,
   buildGraph,
   BUILD_DATE,
+  faqPageNode,
 } from "@/lib/schema";
+import { BRAND } from "@/lib/brand";
 
 export const metadata: Metadata = {
   title: `${hindiTools.length}+ मुफ्त ऑनलाइन टूल्स हिंदी में`,
@@ -65,6 +67,39 @@ export default function HindiHomePage() {
   // Top N Hindi tools as the ItemList — capped to keep the schema lean.
   const featuredHiTools = hindiTools.slice(0, 12);
 
+  // Hindi homepage FAQ — mirrors the English homepage FAQ block.
+  // 6 hand-written Q&As covering pricing, privacy, catalog size, mobile
+  // support, signup, and Hindi availability. Numbers derive from BRAND
+  // constants (totalTools, hindiTools, totalCategories) so visible text
+  // and JSON-LD stay in sync if BRAND values ever change.
+  // Phase 6 Round 2 — Task C.
+  const hiFaqs: { q: string; a: string }[] = [
+    {
+      q: "क्या SabTools.in पूरी तरह मुफ्त है?",
+      a: `हाँ। SabTools.in पर सभी ${BRAND.totalTools}+ टूल्स पूरी तरह मुफ्त हैं — कोई सब्सक्रिप्शन नहीं, कोई प्रीमियम टियर नहीं, कोई इस्तेमाल की सीमा नहीं। साइट को सिर्फ डिस्प्ले विज्ञापनों से चलाया जाता है, इसलिए कुछ भी अनलॉक करने या भुगतान करने की ज़रूरत नहीं। आप EMI, SIP, GST, इनकम टैक्स — कोई भी टूल बिना भुगतान के असीमित बार इस्तेमाल कर सकते हैं।`,
+    },
+    {
+      q: "क्या मेरा डेटा सुरक्षित है?",
+      a: "पूरी तरह। हर टूल आपके ब्राउज़र में ही चलता है — सैलरी, लोन की रकम, Aadhaar PDF, कोई भी इनपुट हमारे सर्वर तक नहीं पहुँचता। आप DevTools के Network टैब में देख सकते हैं कि कोई आउटगोइंग रिक्वेस्ट नहीं जाती। टैब बंद करते ही सब साफ़ हो जाता है। यही वजह है कि निजी वित्तीय जानकारी और सरकारी दस्तावेज़ों के लिए SabTools सुरक्षित है।",
+    },
+    {
+      q: "SabTools.in पर कितने टूल्स हैं?",
+      a: `SabTools.in पर ${BRAND.totalTools}+ मुफ्त ऑनलाइन टूल्स ${BRAND.totalCategories} श्रेणियों में उपलब्ध हैं — फाइनेंस, टैक्स, PDF, इमेज, AI लेखन, हेल्थ, शिक्षा और बहुत कुछ। इनमें से ${BRAND.hindiTools}+ टूल्स हिंदी में भी उपलब्ध हैं — EMI, SIP, GST, इनकम टैक्स, BMI, उम्र कैलकुलेटर सहित। हर टूल भारतीय यूज़र्स के लिए विशेष रूप से बनाया गया है।`,
+    },
+    {
+      q: "क्या यह मोबाइल फ़ोन पर काम करता है?",
+      a: "हाँ। SabTools.in पूरी तरह मोबाइल-रिस्पॉन्सिव है — Android, iPhone, टैबलेट — सब पर बिना समस्या चलता है। बजट Android फ़ोन (2 GB RAM) पर भी पेज एक सेकंड में लोड होते हैं। आप साइट को PWA (Progressive Web App) के रूप में होम स्क्रीन पर इंस्टॉल भी कर सकते हैं — ऐप जैसा अनुभव बिना Play Store से डाउनलोड किए।",
+    },
+    {
+      q: "क्या मुझे साइनअप या अकाउंट बनाना होगा?",
+      a: "नहीं, बिल्कुल नहीं। SabTools.in पर कोई यूज़र-अकाउंट सिस्टम ही नहीं है। हम नाम, ईमेल, फ़ोन नंबर — कुछ भी नहीं माँगते। बस कोई भी टूल खोलिए और तुरंत इस्तेमाल कीजिए। न रजिस्ट्रेशन की झंझट, न पासवर्ड याद रखने का बोझ, न डेटा-लीक का जोखिम।",
+    },
+    {
+      q: "क्या सभी टूल्स हिंदी में उपलब्ध हैं?",
+      a: `हाँ, ${BRAND.hindiTools}+ टूल्स हिंदी में पूरी तरह उपलब्ध हैं — UI, हेल्पर टेक्स्ट, FAQs सब देवनागरी में। इसमें EMI कैलकुलेटर, GST कैलकुलेटर, इनकम टैक्स कैलकुलेटर, SIP कैलकुलेटर, BMI कैलकुलेटर शामिल हैं। हर पेज पर "View in English" लिंक है ताकि अंग्रेज़ी संस्करण देख सकें। आप किसी भी क्षण भाषा बदल सकते हैं।`,
+    },
+  ];
+
   const hiHomeGraph = buildGraph([
     {
       "@type": "WebPage",
@@ -116,6 +151,11 @@ export default function HindiHomePage() {
       ],
       breadcrumbId
     ),
+    // Hindi FAQPage — same @graph (no parallel <script>), inLanguage hi-IN
+    // (Round 1 already plumbed inLanguage support into faqPageNode).
+    // Phase 6 Round 2 Task C — closes the gap noted in Round 1 where the
+    // English homepage had a 6-question FAQ but the Hindi homepage didn't.
+    faqPageNode(hiFaqs, "hi-IN"),
   ]);
 
   return (
@@ -202,6 +242,42 @@ export default function HindiHomePage() {
           );
         })}
       </div>
+
+      {/* Hindi homepage FAQ block — Phase 6 Round 2 Task C.
+          Mirrors the English homepage FAQ structure but with Devanagari
+          questions and answers. Same @graph FAQPage entity emitted above
+          (no parallel <script>) so visible HTML and JSON-LD stay in sync. */}
+      <section className="mt-16 max-w-3xl mx-auto">
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-2 text-center">
+          अक्सर पूछे जाने वाले प्रश्न
+        </h2>
+        <p className="text-sm text-gray-500 text-center mb-8">
+          आपके सबसे सामान्य सवालों के जवाब
+        </p>
+        <div className="space-y-3">
+          {hiFaqs.map((faq) => (
+            <details
+              key={faq.q}
+              className="group bg-white rounded-xl border border-gray-200 hover:border-orange-300 transition"
+            >
+              <summary className="cursor-pointer list-none p-5 flex items-start justify-between gap-4">
+                <h3 className="font-semibold text-gray-900 text-base sm:text-lg">{faq.q}</h3>
+                <svg
+                  className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform shrink-0 mt-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-5 pb-5 text-gray-700 text-sm sm:text-base leading-relaxed">
+                {faq.a}
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
 
       {/* Reciprocal link to the Hindi-tools review hub. Phase 3 Round 2 —
           closes the loop initiated by /best/hindi-calculator-tools (which

@@ -201,8 +201,11 @@ export default async function HindiToolPage({ params }: { params: Promise<{ slug
         <AdBanner format="horizontal" className="mb-8" />
 
         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8">
-          {/* Same tool component — works in any language since UI inputs are universal */}
-          <ToolRenderer slug={slug} />
+          {/* Same tool dispatcher — but pass locale="hi-IN" so the calculator
+              widget renders Hindi labels where it has them (Phase 6 Round 2
+              Task B). Calculators without Hindi label sets fall back to
+              English; incremental adoption. */}
+          <ToolRenderer slug={slug} locale="hi-IN" />
         </div>
 
         <AdBanner format="horizontal" className="mt-8" />

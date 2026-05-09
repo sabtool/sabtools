@@ -1,7 +1,74 @@
 "use client";
 import { useState, useMemo } from "react";
 
-export default function IncomeTaxCalculator() {
+/**
+ * Income Tax Calculator — locale-aware labels (Phase 6 Round 2 Task B).
+ * Slab tables are universal (FY 2025-26 / AY 2026-27 from the IT Dept);
+ * only the visible labels and category names switch language.
+ */
+type Locale = "en-IN" | "hi-IN";
+
+const LABELS: Record<Locale, {
+  taxSlabsBadge: string;
+  annualIncome: string;
+  taxRegime: string;
+  newRegime: string;
+  oldRegime: string;
+  ageGroup: string;
+  ageBelow60: string;
+  age60to80: string;
+  ageAbove80: string;
+  incomeTax: string;
+  cess: string;
+  totalTax: string;
+  netIncome: string;
+  effectiveRate: string;
+  disclaimer: string;
+  disclaimerBody: string;
+  enterIncome: string;
+}> = {
+  "en-IN": {
+    taxSlabsBadge: "Tax Slabs: FY 2025-26 (AY 2026-27)",
+    annualIncome: "Annual Income (₹)",
+    taxRegime: "Tax Regime",
+    newRegime: "New Regime",
+    oldRegime: "Old Regime",
+    ageGroup: "Age Group",
+    ageBelow60: "Below 60",
+    age60to80: "60-80",
+    ageAbove80: "Above 80",
+    incomeTax: "Income Tax",
+    cess: "Cess (4%)",
+    totalTax: "Total Tax",
+    netIncome: "Net Income",
+    effectiveRate: "Effective Tax Rate",
+    disclaimer: "Disclaimer:",
+    disclaimerBody: "Tax calculations are based on FY 2025-26 rates as announced in Union Budget 2025. Surcharge and cess (4% health & education cess) are included. For exact tax liability, consult a Chartered Accountant or use the official Income Tax portal at",
+    enterIncome: "e.g. 1200000",
+  },
+  "hi-IN": {
+    taxSlabsBadge: "टैक्स स्लैब: FY 2025-26 (AY 2026-27)",
+    annualIncome: "वार्षिक आय (₹)",
+    taxRegime: "टैक्स रिजीम",
+    newRegime: "नया रिजीम",
+    oldRegime: "पुराना रिजीम",
+    ageGroup: "आयु वर्ग",
+    ageBelow60: "60 से कम",
+    age60to80: "60-80",
+    ageAbove80: "80 से ऊपर",
+    incomeTax: "इनकम टैक्स",
+    cess: "सेस (4%)",
+    totalTax: "कुल टैक्स",
+    netIncome: "शुद्ध आय",
+    effectiveRate: "प्रभावी टैक्स दर",
+    disclaimer: "अस्वीकरण:",
+    disclaimerBody: "ये गणनाएँ केंद्रीय बजट 2025 में घोषित FY 2025-26 की दरों पर आधारित हैं। सरचार्ज और सेस (4% हेल्थ एंड एजुकेशन सेस) शामिल हैं। सटीक टैक्स देयता के लिए चार्टर्ड अकाउंटेंट से सलाह लें या आधिकारिक इनकम टैक्स पोर्टल पर जाएँ —",
+    enterIncome: "उदा. 1200000",
+  },
+};
+
+export default function IncomeTaxCalculator({ locale = "en-IN" }: { locale?: Locale } = {}) {
+  const t = LABELS[locale] ?? LABELS["en-IN"];
   const [income, setIncome] = useState("");
   const [regime, setRegime] = useState<"old" | "new">("new");
   const [age, setAge] = useState<"below60" | "60to80" | "above80">("below60");
@@ -72,18 +139,18 @@ export default function IncomeTaxCalculator() {
   return (
     <div className="space-y-6">
       <div className="inline-block bg-indigo-100 text-indigo-800 text-sm font-semibold px-4 py-1.5 rounded-full">
-        {"\uD83D\uDCC5"} Tax Slabs: FY 2025-26 (AY 2026-27)
+        {"\uD83D\uDCC5"} {t.taxSlabsBadge}
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="annual-income" className="text-sm font-semibold text-gray-700 block mb-2">Annual Income (₹)</label>
-          <input id="annual-income" type="number" placeholder="e.g. 1200000" value={income} onChange={(e) => setIncome(e.target.value)} className="calc-input" />
+          <label htmlFor="annual-income" className="text-sm font-semibold text-gray-700 block mb-2">{t.annualIncome}</label>
+          <input id="annual-income" type="number" placeholder={t.enterIncome} value={income} onChange={(e) => setIncome(e.target.value)} className="calc-input" />
         </div>
         <div>
-          <label className="text-sm font-semibold text-gray-700 block mb-2">Tax Regime</label>
+          <label className="text-sm font-semibold text-gray-700 block mb-2">{t.taxRegime}</label>
           <div className="flex gap-2">
             {(["new", "old"] as const).map((r) => (
-              <button key={r} onClick={() => setRegime(r)} className={`px-5 py-2.5 rounded-xl text-sm font-semibold capitalize transition ${regime === r ? "bg-indigo-600 text-white" : "bg-gray-100 text-gray-600"}`}>{r} Regime</button>
+              <button key={r} onClick={() => setRegime(r)} className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition ${regime === r ? "bg-indigo-600 text-white" : "bg-gray-100 text-gray-600"}`}>{r === "new" ? t.newRegime : t.oldRegime}</button>
             ))}
           </div>
         </div>
@@ -91,9 +158,9 @@ export default function IncomeTaxCalculator() {
 
       {regime === "old" && (
         <div>
-          <label className="text-sm font-semibold text-gray-700 block mb-2">Age Group</label>
+          <label className="text-sm font-semibold text-gray-700 block mb-2">{t.ageGroup}</label>
           <div className="flex gap-2 flex-wrap">
-            {([{l:"Below 60",v:"below60"},{l:"60-80",v:"60to80"},{l:"Above 80",v:"above80"}] as const).map((a) => (
+            {([{l: t.ageBelow60, v: "below60"}, {l: t.age60to80, v: "60to80"}, {l: t.ageAbove80, v: "above80"}] as const).map((a) => (
               <button key={a.v} onClick={() => setAge(a.v)} className={`px-4 py-2 rounded-xl text-sm font-semibold transition ${age === a.v ? "bg-indigo-600 text-white" : "bg-gray-100 text-gray-600"}`}>{a.l}</button>
             ))}
           </div>
@@ -103,18 +170,18 @@ export default function IncomeTaxCalculator() {
       {result && (
         <div className="result-card space-y-4">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            <div className="bg-white rounded-xl p-4 text-center shadow-sm"><div className="text-xs font-medium text-gray-500 mb-1">Income Tax</div><div className="text-xl font-bold text-red-600">{fmt(result.tax)}</div></div>
-            <div className="bg-white rounded-xl p-4 text-center shadow-sm"><div className="text-xs font-medium text-gray-500 mb-1">Cess (4%)</div><div className="text-xl font-bold text-orange-600">{fmt(result.cess)}</div></div>
-            <div className="bg-white rounded-xl p-4 text-center shadow-sm"><div className="text-xs font-medium text-gray-500 mb-1">Total Tax</div><div className="text-xl font-bold text-red-700">{fmt(result.totalTax)}</div></div>
-            <div className="bg-white rounded-xl p-4 text-center shadow-sm"><div className="text-xs font-medium text-gray-500 mb-1">Net Income</div><div className="text-xl font-bold text-green-600">{fmt(result.netIncome)}</div></div>
+            <div className="bg-white rounded-xl p-4 text-center shadow-sm"><div className="text-xs font-medium text-gray-500 mb-1">{t.incomeTax}</div><div className="text-xl font-bold text-red-600">{fmt(result.tax)}</div></div>
+            <div className="bg-white rounded-xl p-4 text-center shadow-sm"><div className="text-xs font-medium text-gray-500 mb-1">{t.cess}</div><div className="text-xl font-bold text-orange-600">{fmt(result.cess)}</div></div>
+            <div className="bg-white rounded-xl p-4 text-center shadow-sm"><div className="text-xs font-medium text-gray-500 mb-1">{t.totalTax}</div><div className="text-xl font-bold text-red-700">{fmt(result.totalTax)}</div></div>
+            <div className="bg-white rounded-xl p-4 text-center shadow-sm"><div className="text-xs font-medium text-gray-500 mb-1">{t.netIncome}</div><div className="text-xl font-bold text-green-600">{fmt(result.netIncome)}</div></div>
           </div>
-          <div className="text-center text-sm text-gray-500">Effective Tax Rate: <span className="font-bold text-indigo-600">{result.effectiveRate.toFixed(2)}%</span></div>
+          <div className="text-center text-sm text-gray-500">{t.effectiveRate}: <span className="font-bold text-indigo-600">{result.effectiveRate.toFixed(2)}%</span></div>
         </div>
       )}
 
       <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 text-xs text-blue-800 leading-relaxed">
         <span className="mr-1">{"\u2139\uFE0F"}</span>
-        <strong>Disclaimer:</strong> Tax calculations are based on FY 2025-26 rates as announced in Union Budget 2025. Surcharge and cess (4% health &amp; education cess) are included. For exact tax liability, consult a Chartered Accountant or use the official Income Tax portal at{" "}
+        <strong>{t.disclaimer}</strong> {t.disclaimerBody}{" "}
         <a href="https://www.incometax.gov.in" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-blue-700 hover:text-blue-900">incometax.gov.in</a>.
       </div>
     </div>
