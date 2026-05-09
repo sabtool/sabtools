@@ -25083,6 +25083,150 @@ The growth kept up, with monthly peaks like November 2025 at over ₹19 billion 
 </ul>
 
 <p>FD rates in 2026 reward depositors who shop carefully, watch tenure specials, and pay attention to bank category — not those who default to whatever rate their savings-account bank happens to display. The headline rate gap between an SBI 5-year FD and a top SFB 3-year FD is now close to 200 basis points. On a ₹10 lakh deposit, that's an extra ₹20,000 a year — worth the half-hour it takes to compare and decide.</p>`,
+  },
+  {
+    slug: "ideal-weight-calculator-guide-2026",
+    title: "Free Ideal Weight Calculator Online — No Signup Required | SabTools",
+    description: "Calculate ideal body weight using Devine, Robinson, Miller & Hamwi formulas. Use our free ideal weight calculator with no signup. Instant results on any devi...",
+    date: "2026-05-09",
+    category: "Health",
+    readTime: "10 min read",
+    keywords: ["ideal weight", "body weight", "devine", "robinson", "miller", "hamwi", "ideal weight calculator", "ideal weight calculator female"],
+    toolSlug: "ideal-weight-calculator",
+    image: {
+      src: "/blog/ideal-weight-calculator.webp",
+      alt: "Ideal Weight Calculator — Free Online Calculate ideal body weight using Devine, Robinson, Miller & Hamwi formulas Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>Walk into any corporate health camp in Bangalore's Manyata Tech Park or Hyderabad's HITEC City and you'll see the same scene play out: a 32-year-old software engineer steps on the scale, the nurse jots down 78 kg against his 5'8" height, and the report flashes "overweight." He's confused — his college friends weigh more, his appetite is normal, and his last full-body checkup at Manipal Hospital came back clean. The number that's missing from his report is the one he actually needs: what should a 5'8" Indian male <em>ideally</em> weigh? That's the gap an ideal weight calculator fills, and it's a question the four classical clinical formulas — Devine, Robinson, Miller, and Hamwi — were built to answer.</p>
+
+<p>Ideal body weight isn't a vanity metric. Indian physicians use it every day to dose medication (especially anaesthetics, chemotherapy, and antibiotics), to set nutrition targets for ICU patients, and to advise diabetics and hypertensives — two conditions that affect roughly <strong>11.4% and 30%</strong> of urban Indian adults respectively. For the rest of us, it's a sanity-check number: a target weight band that corrects for height and sex, so you know whether the kilos on your scale are a genuine concern or just normal variation.</p>
+
+<h2>Why "ideal weight" is a different question from BMI</h2>
+
+<p>Most Indians have heard of BMI. Fewer realise that the BMI thresholds printed on gym treadmills and home weighing machines are the <strong>WHO global cut-offs</strong> (overweight ≥25, obese ≥30) — not the ones that apply to South Asians. The Indian Council of Medical Research and WHO Asia-Pacific guidelines use lower thresholds because Indians, Bangladeshis, and Sri Lankans carry more visceral fat and develop diabetes at lower BMIs than Europeans. The Asia-Pacific cut-offs are:</p>
+
+<ul>
+  <li><strong>Underweight:</strong> BMI below 18.5</li>
+  <li><strong>Normal:</strong> 18.5 – 22.9</li>
+  <li><strong>Overweight:</strong> 23.0 – 24.9</li>
+  <li><strong>Obese Class I:</strong> 25.0 – 29.9</li>
+  <li><strong>Obese Class II:</strong> 30 and above</li>
+</ul>
+
+<p>BMI gives you a category. An ideal-weight formula gives you a target number in kilograms. The two answer different questions. BMI says "your current weight relative to your height falls in zone X." Ideal-weight formulas say "for someone of your height and sex, the medically referenced healthy weight is roughly Y kg." Both matter, and both are blunt instruments — but used together they produce a usable picture. Pair the ideal weight result with our <a href="/tools/body-fat-calculator">body fat percentage estimator using the US Navy method</a> and you'll get a much sharper read than either number alone.</p>
+
+<h2>The four formulas, and why each one exists</h2>
+
+<p>The calculator on SabTools applies four well-established clinical formulas in parallel. Each was developed for a slightly different purpose, and each will give you a slightly different number — usually within a 3-5 kg band. Seeing all four at once is the point: it tells you the realistic <em>range</em> for your height, not a single false-precision figure.</p>
+
+<h3>1. Devine formula (1974)</h3>
+
+<p>Originally devised by Dr. B.J. Devine to calculate drug dosages, this is the most widely cited formula in medical literature and the default in many hospital protocols across India.</p>
+<ul>
+  <li><strong>Men:</strong> 50 kg + 2.3 kg per inch above 5 feet</li>
+  <li><strong>Women:</strong> 45.5 kg + 2.3 kg per inch above 5 feet</li>
+</ul>
+
+<h3>2. Robinson formula (1983)</h3>
+
+<p>A modification that produces slightly higher values for women and slightly lower for taller men. Many clinicians prefer Robinson for nutritional planning rather than drug dosing.</p>
+<ul>
+  <li><strong>Men:</strong> 52 kg + 1.9 kg per inch above 5 feet</li>
+  <li><strong>Women:</strong> 49 kg + 1.7 kg per inch above 5 feet</li>
+</ul>
+
+<h3>3. Miller formula (1983)</h3>
+
+<p>Miller produces the highest values for shorter individuals — useful as an upper bound, particularly for women under 5'3" who otherwise get unrealistically low targets from older formulas.</p>
+<ul>
+  <li><strong>Men:</strong> 56.2 kg + 1.41 kg per inch above 5 feet</li>
+  <li><strong>Women:</strong> 53.1 kg + 1.36 kg per inch above 5 feet</li>
+</ul>
+
+<h3>4. Hamwi formula (1964)</h3>
+
+<p>The oldest of the four, developed by Dr. G.J. Hamwi for diabetic diet planning. Still widely used by dietitians at hospitals like AIIMS and Apollo for setting initial calorie targets.</p>
+<ul>
+  <li><strong>Men:</strong> 48 kg + 2.7 kg per inch above 5 feet</li>
+  <li><strong>Women:</strong> 45.5 kg + 2.2 kg per inch above 5 feet</li>
+</ul>
+
+<h2>A worked example: Arjun in Pune, 5'8" male</h2>
+
+<p>Arjun is a 29-year-old account manager in Pune's Hinjewadi IT park, 5'8" tall (8 inches above 5 feet), currently 78 kg. Plug his height into all four formulas:</p>
+
+<ul>
+  <li><strong>Devine:</strong> 50 + (2.3 × 8) = <strong>68.4 kg</strong></li>
+  <li><strong>Robinson:</strong> 52 + (1.9 × 8) = <strong>67.2 kg</strong></li>
+  <li><strong>Miller:</strong> 56.2 + (1.41 × 8) = <strong>67.5 kg</strong></li>
+  <li><strong>Hamwi:</strong> 48 + (2.7 × 8) = <strong>69.6 kg</strong></li>
+</ul>
+
+<p>The four formulas converge on a healthy range of roughly <strong>67-70 kg</strong>. Arjun is about 8-11 kg above his ideal, which lines up with what an Asia-Pacific BMI calculation would also show (his BMI is 26.0 — Obese Class I by Indian thresholds). The number to target isn't a single magic value; it's the band, and the formulas agree closely enough that he has a clear direction.</p>
+
+<h2>Ideal weight calculator for female users: Priya in Jaipur, 5'4"</h2>
+
+<p>Priya is a 34-year-old school teacher in Jaipur, 5'4" (4 inches above 5 feet), currently 62 kg. Her four results:</p>
+
+<ul>
+  <li><strong>Devine:</strong> 45.5 + (2.3 × 4) = <strong>54.7 kg</strong></li>
+  <li><strong>Robinson:</strong> 49 + (1.7 × 4) = <strong>55.8 kg</strong></li>
+  <li><strong>Miller:</strong> 53.1 + (1.36 × 4) = <strong>58.5 kg</strong></li>
+  <li><strong>Hamwi:</strong> 45.5 + (2.2 × 4) = <strong>54.3 kg</strong></li>
+</ul>
+
+<p>Priya's healthy range comes to <strong>54-58 kg</strong>. She's 4-8 kg above the upper end. Notice how Miller's number (58.5) sits noticeably above the others — that's the formula doing its job of avoiding overly aggressive targets for shorter women, which matters because under-eating is a real problem among Indian women conscious of weight after pregnancy or in their 30s. If Priya is currently nursing or recently delivered, she should also cross-reference our <a href="/tools/pregnancy-calculator">pregnancy week and due-date calculator</a> timeline before setting any weight-loss goal — postpartum weight changes need at least 6-9 months to stabilise.</p>
+
+<h2>Turning the target into a daily plan</h2>
+
+<p>Knowing you should weigh 68 kg when you're 78 kg is only half the equation. The other half is calorie arithmetic, and this is where Indian users often get it wrong by following American or European meal plans that ignore the carbohydrate-heavy reality of dal-roti-rice-sabzi.</p>
+
+<p>The ICMR's reference daily intakes for sedentary Indians are <strong>2,110 kcal for men and 1,660 kcal for women</strong>. To lose roughly 0.5 kg per week — the rate dietitians at Fortis and Max consider sustainable — you need a daily deficit of about 500 kcal. So Arjun targeting 68 kg should aim for around 1,600 kcal/day, with protein at <strong>0.8-1 g per kg of body weight</strong> (so 60-70 g protein for him).</p>
+
+<p>For a precise number tailored to your age, weight, and activity level, run your numbers through our <a href="/tools/bmr-calculator">Basal Metabolic Rate calculator</a> first — it tells you the calories you'd burn lying in bed all day — and then use the <a href="/tools/calorie-calculator">daily calorie intake calculator</a> to factor in your activity level (desk job, gym sessions, weekend cricket, etc.). The ideal-weight number from this tool feeds directly into both calculators as the "goal weight" input.</p>
+
+<h2>Where these formulas break down</h2>
+
+<p>Honest disclosure: the Devine, Robinson, Miller, and Hamwi formulas were all developed in the United States in the 1960s-80s, on largely Caucasian populations, and primarily for clinical drug-dosing rather than fitness. They have known limitations:</p>
+
+<ul>
+  <li><strong>They ignore body composition.</strong> A 5'10" gym-going software engineer in Gurgaon with 18% body fat and one with 30% body fat get the same "ideal weight" — but the muscular one is already healthy at 80 kg while the other is at risk at the same weight. Use the <a href="/tools/body-fat-calculator">body fat calculator</a> alongside this tool to correct for that.</li>
+  <li><strong>They don't adjust for frame size.</strong> Indian frames vary enormously between, say, a Punjabi farmer and a Tamil software professional of identical height. Older clinical practice multiplied results by 0.9 for small frames and 1.1 for large frames; modern calculators rarely do this automatically.</li>
+  <li><strong>They underestimate ideal weight for very tall people.</strong> If you're above 6'2", the formulas extrapolate linearly and the numbers get unrealistically high. Treat them as guidance, not gospel, beyond that height.</li>
+  <li><strong>They don't account for age.</strong> A healthy 25-year-old and a healthy 65-year-old at 5'7" don't have the same ideal weight in practice — bone density, sarcopenia, and metabolism all change.</li>
+  <li><strong>They are not designed for children, pregnant women, or athletes.</strong> Children should use age-and-sex BMI percentiles; pregnant women should follow obstetrician guidance on weight gain (typically 10-13 kg over a healthy singleton pregnancy).</li>
+</ul>
+
+<h2>How to actually use the calculator</h2>
+
+<ol>
+  <li>Enter your <strong>height</strong> in either centimetres or feet/inches. The calculator handles both because Indian medical reports usually print cm while gym scales display feet/inches.</li>
+  <li>Select your <strong>sex</strong>. (The formulas were built with binary inputs only; if you're trans or non-binary, your physician can advise which baseline is more clinically appropriate for you.)</li>
+  <li>Read all four outputs side by side. The realistic ideal-weight range is the band from the lowest to the highest of the four numbers, usually 3-5 kg wide.</li>
+  <li>Compare against your current weight. If you're within ±5% of the band, you're broadly on target. If you're 10%+ above, treat it as a multi-month goal, not a 30-day crash project.</li>
+</ol>
+
+<p>The calculation runs entirely in your browser; nothing leaves your device. That matters because your weight, like your salary or your <a href="/tools/emi-calculator">home loan EMI</a>, is personal data — and there's no reason a body-metric tool should be uploading it anywhere.</p>
+
+<h2>Three questions Indian users actually ask</h2>
+
+<h3>Which of the four formulas should I trust most?</h3>
+<p>For everyday self-tracking, take the <strong>average of all four</strong> — it smooths out the quirks of each. If a hospital dietitian or physician quotes a specific formula in your treatment plan, use that one. AIIMS and government hospital protocols most often reference Devine; private hospital nutrition departments often use Hamwi for diabetic diet planning.</p>
+
+<h3>Why does my ideal weight feel low compared to people I know?</h3>
+<p>Because the formulas are referenced to <em>healthy</em> populations, not <em>average</em> ones. Average Indian weights have risen sharply over the last two decades — urban India's overweight prevalence is now above 30% — so "what people you know weigh" is no longer a useful benchmark. The formulas haven't moved; the population has.</p>
+
+<h3>Is the ideal weight calculator female-specific result reliable for Indian women?</h3>
+<p>The four formulas use sex-specific constants (women start ~4-5 kg lower than men at the same height), which captures the broad sex difference in lean mass. They were validated mainly on Caucasian women, so for Indian women the result is best treated as an <em>upper bound for clinical drug dosing</em> and a <em>reasonable mid-point target</em> for weight management. If your Miller result feels uncomfortably high or your Hamwi result uncomfortably low, the truth is almost always in between — and your body fat percentage is a more useful guide than the kilo number alone.</p>
+
+<h3>How often should I recheck?</h3>
+<p>Your ideal weight only changes when your height changes, which after age 21 is essentially never (and slightly downward in your 60s). What changes is your <em>current</em> weight, which you should track weekly at the same time of day, ideally Sunday morning post-bathroom, pre-breakfast — the standard protocol Indian dietitians recommend.</p>
+
+<p>An ideal weight number is a starting point, not a finish line. Pair it with body composition, activity level, and how you actually feel — energy, sleep, blood pressure, fasting sugar — and it becomes one useful data point among several, the way an <a href="/tools/sip-calculator">SIP target corpus</a> is one input into a broader financial plan rather than the whole plan itself.</p>
+
+<p><a href="/tools/ideal-weight-calculator"><strong>Open the Ideal Weight Calculator and run your own height through all four formulas →</strong></a></p>`,
   }
 ];
 

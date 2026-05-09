@@ -150,9 +150,10 @@
     "electrical-load-calculator",
     "emergency-fund-calculator",
     "gst-inclusive-exclusive",
-    "password-strength-checker"
+    "password-strength-checker",
+    "ideal-weight-calculator"
   ],
-  "lastCategory": "security",
-  "totalPosts": 151,
-  "lastRun": "2026-05-08T11:40:20.353Z"
+  "lastCategory": "health",
+  "totalPosts": 152,
+  "lastRun": "2026-05-09T06:15:46.767Z"
 }
