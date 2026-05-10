@@ -153,9 +153,10 @@
     "password-strength-checker",
     "ideal-weight-calculator",
     "indian-calendar",
-    "ai-product-description"
+    "ai-product-description",
+    "sleep-calculator"
   ],
-  "lastCategory": "ai",
-  "totalPosts": 154,
-  "lastRun": "2026-05-10T06:57:57.819Z"
+  "lastCategory": "health",
+  "totalPosts": 155,
+  "lastRun": "2026-05-10T11:54:34.782Z"
 }
