@@ -173,10 +173,15 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
       name: `${pillar.name} — मुफ्त ऑनलाइन टूल्स`,
       numberOfItems: catTools.length,
       itemListOrder: "https://schema.org/ItemListOrderAscending",
+      // Phase 6 Round 3b Task C — surface the hand-localised Devanagari
+      // name (`tool.hindiName`) where present so the JSON-LD ItemList is
+      // genuinely Hindi for tools that have a full Hindi widget. Tools
+      // without `hindiName` keep the English name — no forced/auto
+      // translation. Mirrors the visible tool grid below.
       itemListElement: catTools.map((t, i) => ({
         "@type": "ListItem",
         position: i + 1,
-        name: t.name,
+        name: t.hindiName ?? t.name,
         url: hindiSlugSet.has(t.slug)
           ? `${SITE_URL}/hi/tools/${t.slug}`
           : `${SITE_URL}/tools/${t.slug}`,
@@ -222,11 +227,19 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {catTools.map((t) => {
           const hasHindi = hindiSlugSet.has(t.slug);
+          // Phase 6 Round 3b Task C — display the hand-localised
+          // Devanagari name when the tool has a fully-Hindi widget.
+          // For all other tools (the majority of the category list)
+          // fall through to the English `t.name` so we don't ship
+          // half-translated marketing copy. The tool-link label
+          // surfaces the same display name to assistive tech.
+          const displayName = t.hindiName ?? t.name;
           return (
             <Link
               key={t.slug}
               href={hasHindi ? `/hi/tools/${t.slug}` : `/tools/${t.slug}`}
               className="tool-card group block"
+              aria-label={displayName}
             >
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center text-2xl group-hover:bg-orange-100 transition shrink-0">
@@ -234,7 +247,7 @@ export default async function HindiCategoryPage({ params }: { params: Promise<{ 
                 </div>
                 <div className="min-w-0 flex-1">
                   <h3 className="font-semibold text-gray-800 group-hover:text-indigo-600 transition text-base">
-                    {t.name}
+                    {displayName}
                   </h3>
                   <p className="text-sm text-gray-500 mt-1 leading-relaxed line-clamp-2">
                     {t.description}

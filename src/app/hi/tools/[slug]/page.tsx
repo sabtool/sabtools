@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { tools, categories } from "@/lib/tools";
 import { hindiTools, getHindiTool } from "@/lib/hindi";
+import { slugFormulasHi } from "@/lib/tool-content";
 import Breadcrumb from "@/components/Breadcrumb";
 import AdBanner from "@/components/AdBanner";
 import ShareButtons from "@/components/ShareButtons";
@@ -214,6 +215,46 @@ export default async function HindiToolPage({ params }: { params: Promise<{ slug
         <div className="mt-12 prose prose-gray max-w-none">
           <h2 className="text-xl font-bold text-gray-800">{ht.aboutTitle}</h2>
           <p className="text-gray-600">{ht.aboutText}</p>
+
+          {/* Hindi formula section — Phase 6 Round 3b Task D. Mirrors the
+              English `ToolPageLayout`'s "How {tool} Works — The Math"
+              block (Phase 4 Task D) but with hand-localised Devanagari
+              variable descriptions and explanation paragraphs. Renders
+              ONLY for the top-5 most-trafficked calculators where the
+              underlying mathematics is the primary AI-extraction signal
+              (EMI, SIP, BMI, GST, Income Tax). Other slugs skip the
+              section entirely — `slugFormulasHi[slug]` returns undefined.
+              Plain-text monospace render so AI training crawlers (GPTBot,
+              ClaudeBot, CCBot) can parse the formula reliably from the
+              SSR HTML payload — image-rendered formulas are opaque to
+              extraction. */}
+          {slugFormulasHi[slug] && (
+            <>
+              <h2 id="formula-hi" className="text-xl font-bold text-gray-800 mt-8">
+                {ht.name} कैसे काम करता है — गणित
+              </h2>
+              <div className="not-prose mt-3 mb-4 bg-gray-50 border border-gray-200 rounded-2xl p-5">
+                <pre className="overflow-x-auto whitespace-pre font-mono text-sm text-gray-900 leading-relaxed">
+                  {slugFormulasHi[slug].formula}
+                </pre>
+              </div>
+              <div className="not-prose mb-4">
+                <p className="text-sm font-semibold text-gray-700 mb-2">जहाँ:</p>
+                <ul className="space-y-1.5 text-sm text-gray-700">
+                  {slugFormulasHi[slug].variables.map((v) => (
+                    <li key={v.symbol} className="flex items-start gap-2">
+                      <code className="font-mono text-indigo-700 shrink-0 min-w-[3rem]">
+                        {v.symbol}
+                      </code>
+                      <span className="text-gray-600">{v.description}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <p className="text-gray-600 leading-relaxed">{slugFormulasHi[slug].explanation}</p>
+            </>
+          )}
+
           <h3 className="text-lg font-semibold text-gray-800 mt-6">{ht.howToTitle}</h3>
           <ol className="text-gray-600 list-decimal list-inside space-y-1">
             {ht.howToSteps.map((step, i) => (

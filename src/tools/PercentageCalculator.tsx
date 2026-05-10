@@ -1,7 +1,48 @@
 "use client";
 import { useState } from "react";
 
-export default function PercentageCalculator() {
+/**
+ * Percentage Calculator — locale-aware labels (Phase 6 Round 3b Task B).
+ * The three card titles ("X% of Y" etc.) are localised to the actual
+ * Hindi phrasing Indian users type into Google — "X प्रतिशत का Y" style
+ * — not the verbose Sanskritised math-textbook forms.
+ */
+type Locale = "en-IN" | "hi-IN";
+
+const LABELS: Record<Locale, {
+  card1Title: string;
+  card2Title: string;
+  card3Title: string;
+  whatIs: string;
+  ofText: string;
+  isWhatPercentOf: string;
+  fromText: string;
+  toText: string;
+}> = {
+  "en-IN": {
+    card1Title: "What is X% of Y?",
+    card2Title: "X is what % of Y?",
+    card3Title: "Percentage Change from X to Y",
+    whatIs: "What is",
+    ofText: "% of",
+    isWhatPercentOf: "is what % of",
+    fromText: "From",
+    toText: "to",
+  },
+  "hi-IN": {
+    card1Title: "X% का Y कितना है?",
+    card2Title: "X, Y का कितना % है?",
+    card3Title: "X से Y तक प्रतिशत परिवर्तन",
+    whatIs: "कितना है",
+    ofText: "% का",
+    isWhatPercentOf: "का कितना %",
+    fromText: "से",
+    toText: "तक",
+  },
+};
+
+export default function PercentageCalculator({ locale = "en-IN" }: { locale?: Locale } = {}) {
+  const t = LABELS[locale] ?? LABELS["en-IN"];
   const [a1, setA1] = useState(""); const [b1, setB1] = useState("");
   const [a2, setA2] = useState(""); const [b2, setB2] = useState("");
   const [a3, setA3] = useState(""); const [b3, setB3] = useState("");
@@ -19,11 +60,11 @@ export default function PercentageCalculator() {
 
   return (
     <div className="space-y-5">
-      <Card title="What is X% of Y?">
+      <Card title={t.card1Title}>
         <div className="flex items-center gap-3 flex-wrap">
-          <span className="text-sm text-gray-500">What is</span>
+          <span className="text-sm text-gray-500">{t.whatIs}</span>
           <input type="number" placeholder="X" value={a1} onChange={(e) => setA1(e.target.value)} className="calc-input w-28" />
-          <span className="text-sm text-gray-500">% of</span>
+          <span className="text-sm text-gray-500">{t.ofText}</span>
           <input type="number" placeholder="Y" value={b1} onChange={(e) => setB1(e.target.value)} className="calc-input w-28" />
           {r1 !== null && (
             <span className="text-lg font-bold text-indigo-600">= {r1.toFixed(2)}</span>
@@ -31,10 +72,10 @@ export default function PercentageCalculator() {
         </div>
       </Card>
 
-      <Card title="X is what % of Y?">
+      <Card title={t.card2Title}>
         <div className="flex items-center gap-3 flex-wrap">
           <input type="number" placeholder="X" value={a2} onChange={(e) => setA2(e.target.value)} className="calc-input w-28" />
-          <span className="text-sm text-gray-500">is what % of</span>
+          <span className="text-sm text-gray-500">{t.isWhatPercentOf}</span>
           <input type="number" placeholder="Y" value={b2} onChange={(e) => setB2(e.target.value)} className="calc-input w-28" />
           {r2 !== null && (
             <span className="text-lg font-bold text-indigo-600">= {r2.toFixed(2)}%</span>
@@ -42,11 +83,11 @@ export default function PercentageCalculator() {
         </div>
       </Card>
 
-      <Card title="Percentage Change from X to Y">
+      <Card title={t.card3Title}>
         <div className="flex items-center gap-3 flex-wrap">
-          <span className="text-sm text-gray-500">From</span>
+          <span className="text-sm text-gray-500">{t.fromText}</span>
           <input type="number" placeholder="X" value={a3} onChange={(e) => setA3(e.target.value)} className="calc-input w-28" />
-          <span className="text-sm text-gray-500">to</span>
+          <span className="text-sm text-gray-500">{t.toText}</span>
           <input type="number" placeholder="Y" value={b3} onChange={(e) => setB3(e.target.value)} className="calc-input w-28" />
           {r3 !== null && (
             <span className={`text-lg font-bold ${r3 >= 0 ? "text-green-600" : "text-red-600"}`}>

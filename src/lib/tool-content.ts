@@ -2335,6 +2335,88 @@ export const slugFormulas: Record<string, ToolFormula> = {
   },
 };
 
+/**
+ * Hand-written Hindi formula sections for the top-5 most-trafficked tools.
+ * Phase 6 Round 3b Task D.
+ *
+ * Mirrors `slugFormulas` (English) one-for-one in shape but with Devanagari
+ * variable descriptions and explanation paragraphs. The formula expressions
+ * themselves stay in Latin/numeric notation — that's the universal math
+ * representation Indian users see in NCERT, CBSE textbooks and every Hindi
+ * banking handout. Translating "EMI" or "P × r" into Devanagari would
+ * produce something Indians don't recognise and don't search for.
+ *
+ * Loanword discipline matches the rest of the Phase 6 Hindi vocabulary —
+ * ईएमआई, एसआईपी, जीएसटी, बीएमआई, इनकम टैक्स — because that's the spelling
+ * shape Indian users type into Google Hindi and read in bank brochures.
+ *
+ * The Hindi tool page (`/hi/tools/{slug}/page.tsx`) reads from this map
+ * directly and renders a "[टूल] कैसे काम करता है — गणित" block parallel
+ * to the English ToolPageLayout's "How {tool} Works — The Math" section.
+ *
+ * Numbers in the explanation paragraphs (e.g., ₹50 लाख, 20 साल) keep
+ * Indian-comma grouping (lakhs/crores) — that's the only number format
+ * Indian readers parse fluently, regardless of UI language.
+ */
+export const slugFormulasHi: Record<string, ToolFormula> = {
+  "emi-calculator": {
+    formula: "EMI = P × r × (1 + r)^n / ((1 + r)^n − 1)",
+    variables: [
+      { symbol: "P", description: "मूलधन — लोन की राशि (रुपये में)" },
+      { symbol: "r", description: "मासिक ब्याज दर = वार्षिक दर ÷ 12 ÷ 100" },
+      { symbol: "n", description: "अवधि महीनों में (जैसे 20 साल = 240 महीने)" },
+    ],
+    explanation:
+      "यह भारत के हर बैंक — SBI, HDFC, ICICI, Axis, Kotak — के होम लोन, कार लोन और पर्सनल लोन में इस्तेमाल होने वाला रिड्यूसिंग-बैलेंस ईएमआई फॉर्मूला है। ब्याज दर पहले वार्षिक से मासिक में बदली जाती है (12 से और फिर 100 से भाग), उसके बाद पूरी अवधि में मासिक रूप से चक्रवृद्धि होती है। ₹50 लाख का होम लोन 8.75% पर 20 साल के लिए लेने पर ईएमआई = ₹44,186 बनती है।",
+  },
+  "sip-calculator": {
+    formula: "FV = P × ((1 + r)^n − 1) / r × (1 + r)",
+    variables: [
+      { symbol: "P", description: "मासिक एसआईपी राशि (रुपये में)" },
+      { symbol: "r", description: "मासिक रिटर्न दर = वार्षिक रिटर्न ÷ 12 ÷ 100" },
+      { symbol: "n", description: "कुल मासिक किस्तों की संख्या (साल × 12)" },
+      { symbol: "FV", description: "अंतिम मूल्य (मैच्योरिटी कॉर्पस) अवधि के अंत में" },
+    ],
+    explanation:
+      "नियमित एन्युइटी (म्यूचुअल फंड एसआईपी, जहाँ हर महीने एक ही तारीख को एक ही राशि निवेश की जाती है) के लिए फ्यूचर-वैल्यू फॉर्मूला। आख़िरी × (1 + r) इसलिए है क्योंकि हर महीने का निवेश एक अतिरिक्त अवधि का रिटर्न कमाता है। ₹10,000 की मासिक एसआईपी पर 12% वार्षिक रिटर्न से 20 साल में लगभग ₹99.9 लाख बनते हैं — कुल निवेश सिर्फ़ ₹24 लाख होता है, बाकी सब चक्रवृद्धि का जादू है।",
+  },
+  "bmi-calculator": {
+    formula:
+      "BMI = वज़न (kg) / ऊँचाई (m)²\n\nभारतीय कटऑफ (ICMR-अनुशंसित):\n  कम वज़न          <18.5\n  सामान्य            18.5–22.9   (WHO ग्लोबल: 18.5–24.9)\n  अधिक वज़न          23.0–24.9   (WHO ग्लोबल: 25.0–29.9)\n  मोटापा वर्ग I       25.0–29.9\n  मोटापा वर्ग II    ≥30.0",
+    variables: [
+      { symbol: "वज़न", description: "शरीर का वज़न किलोग्राम में" },
+      { symbol: "ऊँचाई", description: "खड़े होने पर ऊँचाई मीटर में (170 सेमी = 1.70 मीटर)" },
+    ],
+    explanation:
+      "बीएमआई शरीर के वज़न को ऊँचाई के वर्ग से भाग देकर निकाला जाता है — जनसंख्या स्तर पर अंडरवेट/ओवरवेट का तेज़ और भरोसेमंद स्क्रीन। भारतीय-विशिष्ट कटऑफ (Indian Council of Medical Research द्वारा प्रस्तावित और भारत भर के क्लीनिकल अभ्यास में इस्तेमाल) WHO के ग्लोबल मानदंडों से सख़्त हैं, क्योंकि दक्षिण एशियाई लोगों में मेटाबॉलिक समस्याएँ कम बीएमआई पर ही शुरू हो जाती हैं। बीएमआई एक स्क्रीनिंग टूल है, डायग्नोसिस नहीं — यह वसा और मांसपेशी में फ़र्क़ नहीं करता, और एथलीट बिना किसी स्वास्थ्य जोखिम के \"अधिक वज़न\" वर्ग में आ सकते हैं।",
+  },
+  "gst-calculator": {
+    formula:
+      "जीएसटी जोड़ें (Exclusive): GST = (मूल राशि × दर) / 100\nजीएसटी हटाएँ (Inclusive): मूल राशि = कुल × 100 / (100 + दर)",
+    variables: [
+      { symbol: "दर", description: "जीएसटी स्लैब — 5%, 12%, 18% या 28%" },
+      { symbol: "मूल राशि", description: "टैक्स से पहले की बेस अमाउंट" },
+      { symbol: "कुल", description: "जीएसटी सहित अंतिम क़ीमत" },
+      { symbol: "CGST + SGST", description: "अंतर-राज्य के अंदर — जीएसटी का बराबर आधा-आधा (जैसे 18% = 9% सीजीएसटी + 9% एसजीएसटी)" },
+      { symbol: "IGST", description: "अंतर-राज्यीय बिक्री — पूरा जीएसटी केंद्र को जाता है, फिर उपभोक्ता राज्य को बाँटा जाता है" },
+    ],
+    explanation:
+      "दो सूरतें होती हैं। एक्सक्लूसिव जीएसटी सूचीबद्ध क़ीमत के ऊपर टैक्स जोड़ता है (₹1,000 + 18% = ₹1,180)। इन्क्लूसिव जीएसटी अंतिम क़ीमत में पहले से शामिल टैक्स को निकालता है (₹1,180 इन्क्लूसिव 18% पर = ₹1,000 बेस + ₹180 टैक्स)। अंतर-राज्य के अंदर बिक्री में जीएसटी सीजीएसटी और एसजीएसटी में बराबर बँटता है; अंतर-राज्यीय बिक्री में पूरी राशि आईजीएसटी होती है। यह जीएसटी काउंसिल की अधिसूचना के अनुसार है।",
+  },
+  "income-tax-calculator": {
+    formula:
+      "FY 2025-26 नया रिजीम (डिफ़ॉल्ट):\n  ₹4,00,000 तक              → शून्य\n  ₹4,00,001 – ₹8,00,000      → 5%\n  ₹8,00,001 – ₹12,00,000     → 10%\n  ₹12,00,001 – ₹16,00,000    → 15%\n  ₹16,00,001 – ₹20,00,000    → 20%\n  ₹20,00,001 – ₹24,00,000    → 25%\n  ₹24,00,000 से ऊपर          → 30%\nस्टैंडर्ड डिडक्शन: ₹75,000\nकुल टैक्स = स्लैब-वार टैक्स + 4% हेल्थ एंड एजुकेशन सेस",
+    variables: [
+      { symbol: "टैक्सेबल इनकम", description: "कुल आय − स्टैंडर्ड डिडक्शन − अनुमत छूट" },
+      { symbol: "पुराना रिजीम", description: "स्लैब सीमाएँ कम हैं लेकिन 80C, 80D, एचआरए, 24B और बाकी Chapter VI-A कटौतियाँ मिलती हैं" },
+      { symbol: "सेस", description: "गणना किए गए टैक्स पर 4% हेल्थ एंड एजुकेशन सेस (आय पर नहीं, टैक्स पर)" },
+      { symbol: "सरचार्ज", description: "₹50 लाख से ऊपर 10%, ₹1 करोड़ से ऊपर 15%, ₹2 करोड़ से ऊपर 25% (नया रिजीम 25% पर कैप)" },
+    ],
+    explanation:
+      "भारतीय इनकम टैक्स स्लैब आधारित है — आय का हर रुपया उसी स्लैब की दर पर टैक्स लगता है जिसमें वह आता है, एक फ्लैट दर पर नहीं। FY 2023-24 से नया रिजीम डिफ़ॉल्ट है, जिसमें स्लैब सीमाएँ ज़्यादा हैं और स्टैंडर्ड डिडक्शन भी बड़ा (₹75,000), लेकिन ज़्यादातर कटौतियाँ नहीं मिलतीं। पुराना रिजीम पूरा 80C, 80D, एचआरए, 24B आदि देता है — आम तौर पर तब बेहतर पड़ता है जब कुल कटौतियाँ ~₹4–4.5 लाख से ऊपर हों।",
+  },
+};
+
 export function getToolContent(toolName: string, toolDescription: string, category: string, keywords: string[], slug?: string): ToolContentData {
   const template = categoryContent[category] || defaultContent;
 

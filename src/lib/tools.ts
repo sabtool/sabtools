@@ -5,6 +5,21 @@ export interface Tool {
   category: string;
   icon: string;
   keywords: string[];
+  /**
+   * Optional hand-localised Devanagari display name. Phase 6 Round 3b Task C.
+   *
+   * Set ONLY for tools whose calculator widget has a fully-Hindi LABELS table
+   * AND whose `/hi/tools/{slug}` route exists in `hindiToolSlugs`. The Hindi
+   * category page (/hi/category/{slug}) and any future Hindi listings should
+   * fall back to the English `name` when this is absent — incremental adoption
+   * is the goal, not a forced full translation.
+   *
+   * The forms below are deliberately the loanword Devanagari transliterations
+   * Indians actually search for (ईएमआई / जीएसटी / पीपीएफ / एचआरए / टीडीएस /
+   * एनपीएस / बीएमआई), not the more Sanskritised "purified" alternatives that
+   * appear in textbooks but lose 90%+ of the search volume on Google IN Hindi.
+   */
+  hindiName?: string;
 }
 
 export interface Category {
@@ -58,16 +73,16 @@ export const categories: Category[] = [
 
 export const tools: Tool[] = [
   // Finance Calculators
-  { name: "EMI Calculator", slug: "emi-calculator", description: "Calculate Equated Monthly Installment for Home, Car & Personal loans", category: "finance", icon: "🏦", keywords: ["emi", "loan", "home loan", "car loan", "personal loan", "monthly installment"] },
-  { name: "SIP Calculator", slug: "sip-calculator", description: "Calculate Systematic Investment Plan returns for Mutual Funds", category: "finance", icon: "📈", keywords: ["sip", "mutual fund", "investment", "returns", "wealth"] },
-  { name: "GST Calculator", slug: "gst-calculator", description: "Calculate GST amount and total price with 5%, 12%, 18%, 28% rates", category: "finance", icon: "🧾", keywords: ["gst", "goods and services tax", "tax", "india tax"] },
-  { name: "FD Calculator", slug: "fd-calculator", description: "Calculate Fixed Deposit maturity amount and interest earned", category: "finance", icon: "🏛️", keywords: ["fd", "fixed deposit", "bank", "interest", "maturity"] },
-  { name: "RD Calculator", slug: "rd-calculator", description: "Calculate Recurring Deposit maturity amount and interest", category: "finance", icon: "💵", keywords: ["rd", "recurring deposit", "monthly saving", "interest"] },
-  { name: "PPF Calculator", slug: "ppf-calculator", description: "Calculate Public Provident Fund maturity with yearly compounding", category: "finance", icon: "🏦", keywords: ["ppf", "public provident fund", "tax saving", "15 year"] },
-  { name: "Compound Interest Calculator", slug: "compound-interest-calculator", description: "Calculate compound interest with different compounding frequencies", category: "finance", icon: "📊", keywords: ["compound interest", "ci", "interest", "investment"] },
-  { name: "Simple Interest Calculator", slug: "simple-interest-calculator", description: "Calculate simple interest on principal amount", category: "finance", icon: "🧮", keywords: ["simple interest", "si", "principal", "rate"] },
+  { name: "EMI Calculator", slug: "emi-calculator", description: "Calculate Equated Monthly Installment for Home, Car & Personal loans", category: "finance", icon: "🏦", keywords: ["emi", "loan", "home loan", "car loan", "personal loan", "monthly installment"], hindiName: "ईएमआई कैलकुलेटर" },
+  { name: "SIP Calculator", slug: "sip-calculator", description: "Calculate Systematic Investment Plan returns for Mutual Funds", category: "finance", icon: "📈", keywords: ["sip", "mutual fund", "investment", "returns", "wealth"], hindiName: "एसआईपी कैलकुलेटर" },
+  { name: "GST Calculator", slug: "gst-calculator", description: "Calculate GST amount and total price with 5%, 12%, 18%, 28% rates", category: "finance", icon: "🧾", keywords: ["gst", "goods and services tax", "tax", "india tax"], hindiName: "जीएसटी कैलकुलेटर" },
+  { name: "FD Calculator", slug: "fd-calculator", description: "Calculate Fixed Deposit maturity amount and interest earned", category: "finance", icon: "🏛️", keywords: ["fd", "fixed deposit", "bank", "interest", "maturity"], hindiName: "एफडी कैलकुलेटर" },
+  { name: "RD Calculator", slug: "rd-calculator", description: "Calculate Recurring Deposit maturity amount and interest", category: "finance", icon: "💵", keywords: ["rd", "recurring deposit", "monthly saving", "interest"], hindiName: "आरडी कैलकुलेटर" },
+  { name: "PPF Calculator", slug: "ppf-calculator", description: "Calculate Public Provident Fund maturity with yearly compounding", category: "finance", icon: "🏦", keywords: ["ppf", "public provident fund", "tax saving", "15 year"], hindiName: "पीपीएफ कैलकुलेटर" },
+  { name: "Compound Interest Calculator", slug: "compound-interest-calculator", description: "Calculate compound interest with different compounding frequencies", category: "finance", icon: "📊", keywords: ["compound interest", "ci", "interest", "investment"], hindiName: "चक्रवृद्धि ब्याज कैलकुलेटर" },
+  { name: "Simple Interest Calculator", slug: "simple-interest-calculator", description: "Calculate simple interest on principal amount", category: "finance", icon: "🧮", keywords: ["simple interest", "si", "principal", "rate"], hindiName: "साधारण ब्याज कैलकुलेटर" },
   { name: "Daily Interest Calculator", slug: "daily-interest-calculator", description: "Calculate loan interest on daily basis with exact day count between dates", category: "finance", icon: "💸", keywords: ["daily interest", "loan interest", "interest calculator", "byaj calculator", "daily loan interest", "date wise interest"] },
-  { name: "Income Tax Calculator", slug: "income-tax-calculator", description: "Calculate income tax under Old & New regime for India FY 2024-25", category: "finance", icon: "📋", keywords: ["income tax", "tax", "old regime", "new regime", "india"] },
+  { name: "Income Tax Calculator", slug: "income-tax-calculator", description: "Calculate income tax under Old & New regime for India FY 2024-25", category: "finance", icon: "📋", keywords: ["income tax", "tax", "old regime", "new regime", "india"], hindiName: "इनकम टैक्स कैलकुलेटर" },
   { name: "Gratuity Calculator", slug: "gratuity-calculator", description: "Calculate gratuity amount based on salary and years of service", category: "finance", icon: "🎁", keywords: ["gratuity", "retirement", "salary", "service"] },
   { name: "Lumpsum Calculator", slug: "lumpsum-calculator", description: "Calculate returns on one-time mutual fund investment", category: "finance", icon: "💎", keywords: ["lumpsum", "one time investment", "mutual fund", "returns"] },
   { name: "Salary Calculator", slug: "salary-calculator", description: "Calculate in-hand salary from CTC with PF, Tax & deductions", category: "finance", icon: "💼", keywords: ["salary", "ctc", "in hand", "take home", "pf", "deductions"] },
@@ -105,10 +120,10 @@ export const tools: Tool[] = [
   { name: "IPL Auction Salary Cap Calculator", slug: "ipl-auction-salary-cap-calculator", description: "Track IPL franchise salary cap usage with player-by-player budget management: ₹120cr cap, 18-25 squad size, 8-overseas limit, 75% min-spend rule, average per remaining slot strategy and overspend alerts", category: "sports", icon: "💰", keywords: ["ipl auction calculator", "ipl salary cap calculator", "ipl 2026 auction budget", "ipl team purse", "ipl auction strategy", "ipl 120 crore cap", "ipl franchise budget", "auction simulator ipl", "rtm calculator ipl", "ipl mega auction"] },
 
   // Math & Numbers
-  { name: "Percentage Calculator", slug: "percentage-calculator", description: "Calculate percentages, percentage change, increase & decrease", category: "math", icon: "%", keywords: ["percentage", "percent", "increase", "decrease", "change"] },
-  { name: "Age Calculator", slug: "age-calculator", description: "Calculate exact age in years, months, days from date of birth", category: "math", icon: "🎂", keywords: ["age", "birthday", "date of birth", "years old"] },
-  { name: "BMI Calculator", slug: "bmi-calculator", description: "Calculate Body Mass Index and check health category", category: "math", icon: "⚖️", keywords: ["bmi", "body mass index", "weight", "height", "health"] },
-  { name: "Discount Calculator", slug: "discount-calculator", description: "Calculate discount amount and final price after discount", category: "math", icon: "🏷️", keywords: ["discount", "sale", "offer", "price", "savings"] },
+  { name: "Percentage Calculator", slug: "percentage-calculator", description: "Calculate percentages, percentage change, increase & decrease", category: "math", icon: "%", keywords: ["percentage", "percent", "increase", "decrease", "change"], hindiName: "प्रतिशत कैलकुलेटर" },
+  { name: "Age Calculator", slug: "age-calculator", description: "Calculate exact age in years, months, days from date of birth", category: "math", icon: "🎂", keywords: ["age", "birthday", "date of birth", "years old"], hindiName: "उम्र कैलकुलेटर" },
+  { name: "BMI Calculator", slug: "bmi-calculator", description: "Calculate Body Mass Index and check health category", category: "math", icon: "⚖️", keywords: ["bmi", "body mass index", "weight", "height", "health"], hindiName: "बीएमआई कैलकुलेटर" },
+  { name: "Discount Calculator", slug: "discount-calculator", description: "Calculate discount amount and final price after discount", category: "math", icon: "🏷️", keywords: ["discount", "sale", "offer", "price", "savings"], hindiName: "डिस्काउंट कैलकुलेटर" },
   { name: "Margin Calculator", slug: "margin-calculator", description: "Calculate profit margin, markup and selling price", category: "math", icon: "📐", keywords: ["margin", "profit", "markup", "cost", "selling price"] },
   { name: "Average Calculator", slug: "average-calculator", description: "Calculate mean, median, mode and range of numbers", category: "math", icon: "📊", keywords: ["average", "mean", "median", "mode", "statistics"] },
   { name: "Number to Words", slug: "number-to-words", description: "Convert numbers to words in Indian numbering system (Lakhs, Crores)", category: "math", icon: "🔤", keywords: ["number to words", "indian", "lakhs", "crores", "cheque"] },
@@ -251,25 +266,25 @@ export const tools: Tool[] = [
   { name: "IFSC Bank Details", slug: "ifsc-bank-details", description: "Parse IFSC code to find bank name, branch code and verify format", category: "whatsapp", icon: "🏦", keywords: ["ifsc", "bank", "branch", "neft", "rtgs", "imps", "sbi", "hdfc"] },
 
   // Health & Fitness
-  { name: "BMR Calculator", slug: "bmr-calculator", description: "Calculate Basal Metabolic Rate and daily calorie needs", category: "health", icon: "🔥", keywords: ["bmr", "basal metabolic rate", "calories", "metabolism", "tdee"] },
+  { name: "BMR Calculator", slug: "bmr-calculator", description: "Calculate Basal Metabolic Rate and daily calorie needs", category: "health", icon: "🔥", keywords: ["bmr", "basal metabolic rate", "calories", "metabolism", "tdee"], hindiName: "बीएमआर कैलकुलेटर" },
   { name: "Calorie Calculator", slug: "calorie-calculator", description: "Calculate daily calorie intake for weight loss, gain or maintenance", category: "health", icon: "🍎", keywords: ["calorie", "diet", "weight loss", "nutrition", "calories per day"] },
   { name: "Pregnancy Calculator", slug: "pregnancy-calculator", description: "Calculate due date, conception date and pregnancy week from LMP", category: "health", icon: "🤰", keywords: ["pregnancy", "due date", "conception", "trimester", "lmp", "weeks pregnant"] },
   { name: "Water Intake Calculator", slug: "water-intake-calculator", description: "Calculate how much water you should drink daily based on weight and activity", category: "health", icon: "💧", keywords: ["water intake", "hydration", "daily water", "drink water"] },
   { name: "Body Fat Calculator", slug: "body-fat-calculator", description: "Estimate body fat percentage using US Navy method", category: "health", icon: "📏", keywords: ["body fat", "percentage", "navy method", "fitness"] },
 
   // Tax & Salary (India specific)
-  { name: "HRA Exemption Calculator", slug: "hra-calculator", description: "Calculate HRA exemption for income tax under Section 10(13A)", category: "tax", icon: "🏠", keywords: ["hra", "house rent allowance", "exemption", "tax saving", "section 10"] },
+  { name: "HRA Exemption Calculator", slug: "hra-calculator", description: "Calculate HRA exemption for income tax under Section 10(13A)", category: "tax", icon: "🏠", keywords: ["hra", "house rent allowance", "exemption", "tax saving", "section 10"], hindiName: "एचआरए कैलकुलेटर" },
   { name: "EPF Calculator", slug: "epf-calculator", description: "Calculate Employee Provident Fund maturity amount and interest", category: "tax", icon: "🏦", keywords: ["epf", "provident fund", "pf", "retirement", "employee"] },
-  { name: "NPS Calculator", slug: "nps-calculator", description: "Calculate National Pension System returns and pension amount", category: "tax", icon: "👴", keywords: ["nps", "national pension", "retirement", "pension", "annuity"] },
-  { name: "TDS Calculator", slug: "tds-calculator", description: "Calculate Tax Deducted at Source for salary, rent, interest & more", category: "tax", icon: "💳", keywords: ["tds", "tax deducted", "source", "salary tds", "rent tds"] },
-  { name: "Stamp Duty Calculator", slug: "stamp-duty-calculator", description: "Calculate stamp duty and registration charges state-wise in India", category: "tax", icon: "🏡", keywords: ["stamp duty", "registration", "property", "state wise", "india"] },
+  { name: "NPS Calculator", slug: "nps-calculator", description: "Calculate National Pension System returns and pension amount", category: "tax", icon: "👴", keywords: ["nps", "national pension", "retirement", "pension", "annuity"], hindiName: "एनपीएस कैलकुलेटर" },
+  { name: "TDS Calculator", slug: "tds-calculator", description: "Calculate Tax Deducted at Source for salary, rent, interest & more", category: "tax", icon: "💳", keywords: ["tds", "tax deducted", "source", "salary tds", "rent tds"], hindiName: "टीडीएस कैलकुलेटर" },
+  { name: "Stamp Duty Calculator", slug: "stamp-duty-calculator", description: "Calculate stamp duty and registration charges state-wise in India", category: "tax", icon: "🏡", keywords: ["stamp duty", "registration", "property", "state wise", "india"], hindiName: "स्टाम्प ड्यूटी कैलकुलेटर" },
   { name: "Rent Receipt Generator", slug: "rent-receipt-generator", description: "Generate rent receipts for HRA tax exemption claims", category: "tax", icon: "🧾", keywords: ["rent receipt", "hra claim", "landlord", "tax exemption"] },
   { name: "Salary Hike Calculator", slug: "salary-hike-calculator", description: "Calculate new salary after percentage hike during appraisal", category: "tax", icon: "📈", keywords: ["salary hike", "appraisal", "increment", "percentage increase"] },
   { name: "Electricity Bill Calculator", slug: "electricity-bill-calculator", description: "Calculate monthly electricity bill based on units consumed and state tariff", category: "tax", icon: "⚡", keywords: ["electricity bill", "bijli bill", "units", "tariff", "state wise"] },
   { name: "Gold Price Calculator", slug: "gold-price-calculator", description: "Calculate gold value based on weight, purity (karat) and current price", category: "tax", icon: "🥇", keywords: ["gold", "price", "karat", "24k", "22k", "value", "calculator"] },
   { name: "8th Pay Commission Calculator", slug: "eighth-pay-commission-calculator", description: "Calculate expected salary under 8th Pay Commission with fitment factor, HRA and allowances comparison", category: "tax", icon: "🏛️", keywords: ["8th pay commission", "pay commission calculator", "fitment factor", "government salary", "7th cpc", "8th cpc", "central government"] },
   { name: "Crypto Tax Calculator", slug: "crypto-tax-calculator", description: "Calculate 30% crypto tax under Section 115BBH plus 1% TDS, surcharge and cess for FY 2025-26", category: "tax", icon: "🪙", keywords: ["crypto tax calculator india", "cryptocurrency tax", "vda tax", "section 115bbh", "1% tds crypto", "section 194s", "bitcoin tax india", "ethereum tax", "30% crypto tax"] },
-  { name: "Capital Gains Tax Calculator", slug: "capital-gains-tax-calculator", description: "Calculate STCG and LTCG tax for stocks, mutual funds, property and gold with post-Budget 2024 rates (FY 2025-26)", category: "tax", icon: "📊", keywords: ["capital gains tax calculator", "ltcg calculator india", "stcg calculator", "section 111a", "section 112a", "section 112", "ltcg 12.5%", "stcg 20%", "property capital gains", "equity ltcg exemption"] },
+  { name: "Capital Gains Tax Calculator", slug: "capital-gains-tax-calculator", description: "Calculate STCG and LTCG tax for stocks, mutual funds, property and gold with post-Budget 2024 rates (FY 2025-26)", category: "tax", icon: "📊", keywords: ["capital gains tax calculator", "ltcg calculator india", "stcg calculator", "section 111a", "section 112a", "section 112", "ltcg 12.5%", "stcg 20%", "property capital gains", "equity ltcg exemption"], hindiName: "कैपिटल गेन्स टैक्स कैलकुलेटर" },
   { name: "Old vs New Tax Regime Comparator", slug: "tax-regime-comparator", description: "Side-by-side comparison of Old vs New tax regime for FY 2025-26 with all deductions, surcharge and cess to find the rupee-level winner", category: "tax", icon: "⚖️", keywords: ["old vs new regime", "tax regime comparison", "new tax regime fy 2025-26", "section 87a rebate", "tax slab comparison", "which regime is better", "75000 standard deduction", "1200000 rebate", "income tax comparator"] },
   { name: "TDS on Rent Calculator (194IB)", slug: "tds-on-rent-calculator", description: "Calculate TDS on rent under Section 194IB at 2% rate for tenants paying above ₹50,000/month with annual deduction, threshold and PAN-less rate handling", category: "tax", icon: "🏠", keywords: ["tds on rent", "section 194ib", "tds rent 50000", "form 26qc", "form 16c", "2% tds rent", "rent above 50000", "tenant tds", "194ib calculator"] },
   { name: "State Road Tax / Vehicle Registration Calculator", slug: "state-road-tax-calculator", description: "Calculate state-wise road tax for new car registration with verified rates for 21 Indian states and UTs including Maharashtra, Karnataka, Delhi, Tamil Nadu, Gujarat, UP and EV exemptions", category: "tax", icon: "🚗", keywords: ["road tax calculator", "vehicle registration tax", "rto charges", "state wise road tax", "car registration cost", "maharashtra road tax", "karnataka road tax", "delhi road tax", "ev road tax exemption"] },
