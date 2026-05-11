@@ -26297,6 +26297,218 @@ the December 2025 monetary policy aimed at supporting growth, easing borrowing c
 <p>RapidTables is fine for a one-shot quick check. Calculator.net is a strong educational resource if you want the formula nerdery. For the actual job most Indian fitness users need done — Karvonen-method zones, clean mobile output, no signup, no health data sent off-device, and a health-tools ecosystem that fits Indian routines — SabTools is the calculator built for that workflow.</p>
 
 <p>Set your zones before your next run: <a href="/tools/heart-rate-zone-calculator"><strong>Try SabTools' Heart Rate Zone Calculator →</strong></a></p>`,
+  },
+  {
+    slug: "news-2026-05-11-latest-mutual-fund-regulations-and-sebi-updates-affecting-in",
+    title: "Latest mutual fund regulations and SEBI updates affecting Indian in... (2026 Update)",
+    description: "Latest mutual fund regulations and SEBI updates affecting Indian investors — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-05-11",
+    category: "Finance",
+    readTime: "12 min read",
+    keywords: ["Latest mutual fund regulations", "finance news india 2026", "india 2026 update"],
+    toolSlug: "emi-calculator",
+    image: {
+      src: "/blog/emi-calculator.webp",
+      alt: "Latest mutual fund regulations and SEBI updates affecting Indian in... (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>SEBI rewrites India's mutual fund rulebook for the first time in nearly 30 years</h2>
+
+<p>The Securities and Exchange Board of India has triggered the biggest overhaul of mutual fund regulations since 1996. <a href="https://www.businesstoday.in/mutual-funds/story/sebi-overhauls-mutual-fund-rules-changes-made-to-ter-framework-check-details-507113-2025-12-17" rel="noopener" target="_blank">
+
+On December 17, 2025, the SEBI board greenlit a sweeping overhaul of mutual fund regulations, ushering in the SEBI (Mutual Funds) Regulations, 2026, replacing the outdated 1996 framework following an extensive review
+
+</a>. For the roughly 5 crore Indians who hold mutual fund folios — and the millions more who run monthly SIPs from their salary accounts in Bangalore, Pune, Hyderabad and beyond — these changes restructure how costs are disclosed, how schemes are categorised, and how easily families inherit investments.</p>
+
+<p>This is not a routine circular. <a href="https://www.valueresearchonline.com/stories/228470/sebi-mutual-fund-rule-changes-3-things-matter-investors/" rel="noopener" target="_blank">
+
+On April 1, 2026, India's mutual fund rulebook was rewritten for the first time in nearly 30 years. The headline is the death of the total expense ratio and the birth of the base expense ratio. The promise is lower costs and better transparency.
+
+</a> But there is more in the fine print — a new asset class called Specialized Investment Funds that opened in April 2025, fresh rules on sectoral fund overlap, a target-date "Life Cycle Fund" category, and a multi-phase rollout of revamped nomination norms that every existing investor needs to act on. Here is a guide for Indian readers on what changed, when, and what to do next.</p>
+
+<h2>The TER is dead. Long live the BER.</h2>
+
+<p>The single biggest change touches every Indian who owns a mutual fund. Until now, the cost you paid annually to your fund house was bundled into one number: the Total Expense Ratio. Under the 2026 framework, that line item has been broken apart. <a href="https://www.angelone.in/news/market-updates/sebi-revises-mutual-fund-expense-ratio-norms-to-lower-investor-costs" rel="noopener" target="_blank">
+
+Under the revised framework, the Total Expense Ratio (TER) has been redefined as the Base Expense Ratio (BER). Importantly, the BER will exclude statutory and regulatory levies such as GST, stamp duty, SEBI fees, and exchange charges.
+
+</a></p>
+
+<p>In practical terms, your fund's cost will now be reported on three separate lines instead of one. <a href="https://www.upstox.com/news/personal-finance/mutual-funds/sebi-mutual-funds-regulations-2026-highlights-lower-expense-ratios-revised-brokerage-limits/article-186377/" rel="noopener" target="_blank">
+
+The Total Expense Ratio of a scheme will be the sum of BER, brokerage, regulatory levies, and statutory levies.
+
+</a> The intent is to separate what an asset management company actually charges for running the fund from taxes the government collects, so two schemes with identical management fees no longer look "more expensive" simply because one trades more often and pays more STT.</p>
+
+<h3>Where the cuts actually land</h3>
+
+<p>SEBI has also tightened the caps themselves. <a href="https://www.businesstoday.in/mutual-funds/story/sebi-overhauls-mutual-fund-rules-changes-made-to-ter-framework-check-details-507113-2025-12-17" rel="noopener" target="_blank">
+
+SEBI has reduced the base expense ratio cap for index funds and ETFs to 0.9% from 1.0%, cut the limit for liquid-scheme-based fund of funds to 0.9%, and lowered the cap for close-ended equity schemes to 1% from 1.25%.
+
+</a> Equity-oriented Fund of Funds see a cut from 2.25% to 2.10%, and most AUM-based slabs for open-ended equity schemes have been trimmed by around 10 basis points.</p>
+
+<p>The other quiet but meaningful change: <a href="https://www.businesstoday.in/mutual-funds/story/sebi-overhauls-mutual-fund-rules-changes-made-to-ter-framework-check-details-507113-2025-12-17" rel="noopener" target="_blank">
+
+SEBI also scrapped the additional 5 basis points (bps) expense allowance tied to exit loads, streamlining fees further.
+
+</a> Many actively managed equity schemes were previously layering this 5 bps on top of their headline TER — that loophole is now closed.</p>
+
+<p>How much does this matter to a typical SIP investor? Less than the headlines suggest. <a href="https://www.valueresearchonline.com/stories/228470/sebi-mutual-fund-rule-changes-3-things-matter-investors/" rel="noopener" target="_blank">
+
+Your active equity fund will save you 5 to 7 basis points a year, not the 15 that the headlines suggested.
+
+</a> Over a 20-year horizon, though, even a small reduction compounds — <a href="https://www.indmoney.com/blog/mutual-funds/sebi-mutual-fund-regulations-2026" rel="noopener" target="_blank">
+
+a 0.10% reduction in fees results in approximately ₹1.7 Lakhs in extra returns over 20 years
+
+</a> on a ₹10 lakh lump sum at 12% gross returns. For a salaried professional in Mumbai running a ₹25,000 monthly SIP for retirement, the savings are real but modest.</p>
+
+<h2>Brokerage caps halved — the bigger story for active funds</h2>
+
+<p>If your portfolio leans on actively managed funds with high churn, the brokerage cap reduction is more material than the TER trim. <a href="https://www.indmoney.com/blog/mutual-funds/sebi-mutual-fund-regulations-2026" rel="noopener" target="_blank">
+
+When a mutual fund buys or sells shares, it pays a brokerage fee. SEBI has significantly lowered the cap on these costs: Cash Market Transactions: Limit reduced from 12 bps to 6 bps (0.12% to 0.06%). Derivative Transactions: Limit reduced from 5 bps to 2 bps (0.05% to 0.02%).
+
+</a></p>
+
+<p>It is worth noting that SEBI's original consultation paper was more aggressive. <a href="https://www.business-standard.com/markets/news/sebi-s-cost-cut-proposal-seen-squeezing-mutual-fund-broker-margins-125102901393_1.html" rel="noopener" target="_blank">
+
+SEBI, in a consultation paper released on Tuesday, proposed a steep reduction in the permissible brokerage and transaction costs that can be charged to MF schemes — from 12 basis points (bps) to 2 bps for cash market trades, and from 5 bps to 1 bps for derivatives transactions.
+
+</a> The final notification softened the cash-market cut to 6 bps. <a href="https://www.valueresearchonline.com/stories/227233/sebis-ter-overhaul-what-mutual-fund-investors-must-know/" rel="noopener" target="_blank">
+
+The real savings are buried in trading costs. Brokerage caps have been halved (from 12 to 6 bps in cash markets, 5 to 2 bps in derivatives). If your fund trades frequently, this matters more than the headline TER change.
+
+</a></p>
+
+<p>One more rule investors should appreciate: <a href="https://cafemutual.com/news/industry/37012-sebis-new-expense-ratio-framework-here-is-what-changes-after-april-1-2026" rel="noopener" target="_blank">
+
+SEBI has also reiterated that all NFO-related expenses until allotment must be borne by the AMC, trustees, or the sponsors and the AMCs cannot pass such costs on to the investors under any circumstance.
+
+</a> Translation: when an asset manager flogs a new fund offer with TV ads, those marketing costs no longer eat into your eventual returns.</p>
+
+<h2>A new asset class: Specialized Investment Funds</h2>
+
+<p>Quietly, in early 2025, SEBI created a new investment category that sits between mutual funds and Portfolio Management Services. <a href="https://ckredencewealth.com/our-resources/specialized-investment-funds" rel="noopener" target="_blank">
+
+The Securities and Exchange Board of India addressed these concerns by launching Specialized Investment Funds on April 1, 2025. These SEBI-regulated investment vehicles offer strategy-driven approaches, including long-short positions, sector rotation, and tactical asset allocation. With a ₹10 lakh minimum investment threshold, SIFs cater to investors seeking advanced portfolio management within a structured regulatory framework.
+
+</a></p>
+
+<p>Why does this matter for an Indian investor? Until SIFs arrived, anyone wanting more sophisticated strategies — say long-short equity or sector-rotation — had to commit ₹50 lakh to PMS or ₹1 crore to AIF structures. <a href="https://anandrathi.com/specialized-investment-funds" rel="noopener" target="_blank">
+
+SIFs have a minimum investment requirement of ₹10 lakhs, which is lower than the minimum thresholds of ₹50 lakhs for PMS and ₹1 crore for AIF.
+
+</a> Tax treatment, importantly, mirrors regular mutual funds.</p>
+
+<h3>What SIFs can do that mutual funds cannot</h3>
+
+<p><a href="https://www.kotakmf.com/Information/blogs/what-are-specialised-investment-funds" rel="noopener" target="_blank">
+
+SIFs are permitted to use complex investment strategies, including long short equity, sector based positioning, and active asset allocation, and can take unhedged short positions up to 25% of their portfolio using derivatives.
+
+</a> That short-selling power is not available in any vanilla mutual fund scheme.</p>
+
+<p>SEBI has also clarified a critical operational point that confused early entrants. <a href="https://www.businesstoday.in/personal-finance/investment/story/sebi-clarifies-rules-for-specialized-investment-funds-what-investors-need-to-know-471596-2025-04-10" rel="noopener" target="_blank">
+
+SEBI has now explicitly stated that the Rs 10 lakh minimum investment requirement applies at the PAN level across all SIF strategies of an asset management company (AMC)—not per scheme.
+
+</a> So a Bangalore-based HNI putting ₹4 lakh into one SIF strategy and ₹6 lakh into another with the same AMC clears the threshold.</p>
+
+<p>SIPs are permitted into SIFs too. <a href="https://www.indmoney.com/blog/mutual-funds/sebi-specialized-investment-fund-sif" rel="noopener" target="_blank">
+
+AMCs can offer systematic investment options like Systematic Investment Plan (SIP), Systematic Withdrawal Plan (SWP), and Systematic Transfer Plan (STP), ensuring compliance with the minimum investment threshold of INR 10 lakh per investor at the Permanent Account Number (PAN) level.
+
+</a> If you want to project how a longer-running SIP into an SIF or regular equity fund might grow at different return assumptions, the <a href="/tools/sip-calculator">SIP Calculator</a> can help you model the ₹10 lakh ramp.</p>
+
+<h2>Sectoral fund overlap, scheme categories, and Life Cycle Funds</h2>
+
+<p>One of the more under-covered changes addresses a real Indian investor grievance: portfolio duplication. You buy a "large-cap" fund and a "flexi-cap" fund and a "focused" fund — and discover that 70% of their top-10 holdings are the same Reliance, HDFC Bank and Infosys names. <a href="https://www.paytmmoney.com/blog/sebi-new-mutual-fund-rules-life-cycle-funds/" rel="noopener" target="_blank">
+
+SEBI has cracked down on this. Now, sectoral and thematic funds cannot have more than a 50% portfolio overlap with other equity schemes. Fund managers must actually prove their themes are unique!
+
+</a></p>
+
+<p>SEBI has also rolled out a target-date category. <a href="https://www.valueresearchonline.com/stories/228470/sebi-mutual-fund-rule-changes-3-things-matter-investors/" rel="noopener" target="_blank">
+
+A separate SEBI circular dated February 26, 2026, introduced 'Life Cycle Funds'. These are target-date funds. You pick a maturity year, say 2050, and the fund automatically shifts from equity to debt as that year approaches. Exit loads of 3, 2 and 1 per cent apply for the first three years.
+
+</a> The category fits a recurring Indian investor need — a single fund for retirement at 60 or for a child's higher education in 2042 — but Value Research has cautioned that <a href="https://www.valueresearchonline.com/stories/228470/sebi-mutual-fund-rule-changes-3-things-matter-investors/" rel="noopener" target="_blank">
+
+a 70:30 hybrid index combination may win after costs
+
+</a>.</p>
+
+<p>One side effect to anticipate: more new fund offers. <a href="https://www.paytmmoney.com/blog/sebi-new-mutual-fund-rules-life-cycle-funds/" rel="noopener" target="_blank">
+
+SEBI allows each AMC to launch up to six Life Cycle Funds. With roughly 40 AMCs in India, we could easily see upwards of 240 new Life Cycle Funds flooding the market soon!
+
+</a> Treat new launches with the same skepticism you would apply to any product push — buying every NFO is not diversification.</p>
+
+<h2>Nomination overhaul — the most overlooked change</h2>
+
+<p>While headlines focused on TER, the rules quietly changed for asset transmission. <a href="https://www.outlookmoney.com/invest/equity/sebi-extends-timeline-for-implementation-of-nomination-norms-for-demat-accounts-mutual-fund-folios-know-why" rel="noopener" target="_blank">
+
+In February, SEBI released a circular seeking to revise and revamp nomination facilities for the nomination of demat accounts and mutual fund (MF) folios in order to curb the problem of unclaimed assets in the securities market. Some of the key norms introduced in the circular included giving investors the ability to nominate up to 10 people as nominees. As a part of the revamped norms, Power of Attorney (POA) Holder(s) of the investors will not have the ability to appoint nominees.
+
+</a></p>
+
+<p>Earlier, you could appoint at most 3 nominees. Now you can appoint up to 10, with the percentage split set by you. SEBI also reduced documentation friction for nominees. <a href="https://www.outlookmoney.com/invest/equity/sebi-extends-timeline-for-implementation-of-nomination-norms-for-demat-accounts-mutual-fund-folios-know-why" rel="noopener" target="_blank">
+
+The regulated entities will now need the following documents for transmission of assets to registered nominees: Self-attested copy of the Death Certificate (by the nominee/s) of the deceased investor, due completion, updating or reaffirming of the KYC of nominees, due for discharge from the creditors if there are subsisting credit facilities secured by a duly created pledge.
+
+</a></p>
+
+<p>The rollout has been phased. <a href="https://www.outlookmoney.com/invest/equity/sebi-extends-timeline-for-implementation-of-nomination-norms-for-demat-accounts-mutual-fund-folios-know-why" rel="noopener" target="_blank">
+
+The market watchdog has delayed the timeline for implementing the Phase 2 to August 08, 2025 and the Phase 3 to December 15, 2025.
+
+</a> If you opened your mutual fund folio or demat account years ago and never circled back to update nominees, this is the moment. <a href="https://www.basunivesh.com/new-nomination-rules-demat-mutual-funds-2025/" rel="noopener" target="_blank">
+
+Starting June 1, 2025, a new format of the nomination form must be used. If you're submitting your nomination on or after June 1, make sure to use the updated form.
+
+</a></p>
+
+<h2>What Indian investors should actually do</h2>
+
+<p>Most of these changes will reach you automatically through your AMC. Your SIPs continue, your folios continue, your KYC remains valid. <a href="https://www.valueresearchonline.com/stories/228470/sebi-mutual-fund-rule-changes-3-things-matter-investors/" rel="noopener" target="_blank">
+
+Your existing folios continue. SIPs continue. Cut-off times are unchanged. The tax treatment of equity versus debt remains the same. Direct plans remain cheaper than regular plans by the same margin. KYC is unchanged. If you read in the next few weeks that you must do something urgent, it is almost certainly noise.
+
+</a> Still, four practical steps are worth taking:</p>
+
+<ol>
+  <li><strong>Update your nominations.</strong> Log into your CAMS or KFintech consolidated account statement portal — or your broker app — and verify each folio has up-to-date nominees. The 10-nominee facility means you can split your assets the way you actually want them split, not the way three slots forced you to.</li>
+  <li><strong>Check your fund's BER versus its old TER.</strong> Pull the latest scheme factsheet after April 2026 and compare the new three-line cost disclosure with what you paid earlier. <a href="https://www.valueresearchonline.com/stories/228470/sebi-mutual-fund-rule-changes-3-things-matter-investors/" rel="noopener" target="_blank">
+
+If costs are not falling much for the AMCs, they are not falling much for you.
+
+</a></li>
+  <li><strong>Watch the August 2026 overlap reports.</strong> <a href="https://www.valueresearchonline.com/stories/228470/sebi-mutual-fund-rule-changes-3-things-matter-investors/" rel="noopener" target="_blank">
+
+Mark August 2026 in your calendar. When the overlap reports arrive, sit with them. Most fund pairs in the same category will have 25 to 55 per cent overlap. Anything above 60 per cent indicates the second fund is not adding diversification.
+
+</a> Consolidate where you find duplication.</li>
+  <li><strong>Resist NFO fatigue.</strong> With Life Cycle Funds, sectoral debt funds and new SIF strategies arriving, fund houses have fresh reasons to launch. The category proliferation is real — be selective.</li>
+</ol>
+
+<p>For first-time home loan applicants in Pune or NCR who are juggling EMIs with new SIP commitments, this is also a good moment to revisit household cash flow. Lower fund costs free up a few hundred rupees a year per ₹10 lakh invested — not life-changing, but useful when you are balancing a 20-year home loan repayment against a parallel retirement portfolio. If you are weighing whether to prepay part of your home loan or to step up your SIP, model both sides: project the EMI reduction with the <a href="/tools/emi-calculator">EMI Calculator</a> using your current outstanding principal, rate and tenure, and compare it against the long-term gain from a higher monthly SIP. The right answer usually depends on your post-tax loan rate versus expected post-cost equity returns — and those equity costs just got marginally lower.</p>
+
+<h2>The bottom line</h2>
+
+<p>India's mutual fund industry is now larger than ever — <a href="https://ckredencewealth.com/our-resources/specialized-investment-funds" rel="noopener" target="_blank">
+
+India's mutual fund industry managed assets worth ₹81.32 trillion as of November 2025, reflecting growing investor confidence in professionally managed investment products (Source: AMFI)
+
+</a> — and SEBI is reshaping the rules for that scale. The 2026 regulations cut headline costs only slightly, but they restructure how those costs are disclosed, restrict scheme overlap, open a new ₹10 lakh asset class for sophisticated investors, and tighten rules around nominations and unclaimed assets.</p>
+
+<p><a href="https://www.upstox.com/news/personal-finance/mutual-funds/sebi-mutual-funds-regulations-2026-highlights-lower-expense-ratios-revised-brokerage-limits/article-186377/" rel="noopener" target="_blank">
+
+As a result of the review of the mutual fund regulations, there has been a 44% reduction in the size of the regulations from 162 pages to 88 pages. The word count has been reduced by approximately 54%, from 67,000 words (including footnotes) in the current regulations to 31,000 words in the new draft.
+
+</a> A leaner rulebook is good for compliance teams. For ordinary investors in Maharashtra, Karnataka, Tamil Nadu and elsewhere, the practical impact lies in three places: a slightly lighter cost drag, a meaningfully clearer cost breakdown, and a much more sensible nomination system. None of it changes the basic discipline of staying invested through SIPs, choosing direct plans over regular plans, and reviewing your portfolio annually — but it does make that discipline a little cheaper to maintain.</p>`,
   }
 ];
 
