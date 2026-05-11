@@ -25989,6 +25989,146 @@ the December 2025 monetary policy aimed at supporting growth, easing borrowing c
 , another rate action in February or April 2026 is plausible — and would push personal loan rates lower still.</p>
 
 <p>For now, the simple rule for Indian borrowers stands: do not chase the headline rate. Get a written sanction letter from at least two of the three lenders, plug your specific numbers into an EMI calculator, and compare total cost of borrowing — not just monthly EMI — across the offers. The 2026 personal loan market is the most competitive it has been in years, and the spreads between SBI, HDFC, and Bajaj are wide enough that picking the right one can save you tens of thousands of rupees over the life of your loan.</p>`,
+  },
+  {
+    slug: "carpet-area-calculator-guide-2026",
+    title: "Carpet Area Calculator — Free Online Tool | Features, Tips & FAQ",
+    description: "Calculate carpet area from super built-up area using loading factor for Indian real estate. Use our free carpet area calculator with no signup. Instant resul...",
+    date: "2026-05-11",
+    category: "Business",
+    readTime: "10 min read",
+    keywords: ["carpet area", "built up", "super built up", "loading factor", "rera", "real estate", "carpet area calculator", "carpet area calculator in sq ft"],
+    toolSlug: "carpet-area-calculator",
+    image: {
+      src: "/blog/carpet-area-calculator.webp",
+      alt: "Carpet Area Calculator — Free Online Calculate carpet area from super built-up area using loading factor for Indian real estate Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>A friend in Bangalore booked a 2BHK in Whitefield last year — the brochure said 1,250 sq ft, the price quote was ₹1.06 crore at ₹8,500 per sq ft, and the showflat looked spacious. When she got possession and measured the floor, the actual usable space inside her walls was 870 sq ft. She'd been paying for 380 sq ft she would never set foot in. That gap — between the number on the brochure and the number under your sofa — is what the Carpet Area Calculator on SabTools.in exists to expose.</p>
+
+<p>Under the <strong>Real Estate (Regulation and Development) Act, 2016</strong>, every RERA-registered project must disclose carpet area in the agreement. But "super built-up area" still dominates marketing collateral, price lists and broker pitches because it makes the per-sq-ft rate look smaller. If you don't reverse-engineer the loading factor before signing the booking form, you are pricing the deal wrong.</p>
+
+<h2>The three area terms every Indian home buyer must decode</h2>
+
+<p>Builders, brokers and bank valuers use three different numbers, and confusing them costs lakhs.</p>
+
+<ul>
+<li><strong>Carpet Area</strong> — the net usable floor area inside your apartment, measured wall-to-wall, excluding the thickness of external walls but including internal walls, kitchen and bathrooms. RERA Section 2(k) is explicit: balconies, terraces, lobbies and shafts are <em>not</em> carpet area. This is the area you can actually furnish, walk on, and live in.</li>
+<li><strong>Built-up Area</strong> — carpet area plus the thickness of external walls plus your private balcony and utility area. Typically <strong>10–15% larger</strong> than carpet.</li>
+<li><strong>Super Built-up Area (SBA)</strong> — built-up area plus your apartment's proportionate share of common spaces: lift lobbies, staircases, society office, gym, swimming pool, club house, security cabin, even the entrance landscaping in premium projects. This is what gets quoted on hoardings.</li>
+</ul>
+
+<p>The percentage by which super built-up exceeds carpet area is the <strong>loading factor</strong>. A 1,200 sq ft super built-up with 30% loading delivers only <strong>923 sq ft of carpet</strong> (1,200 ÷ 1.30). Same builder, same brochure, same price — but the buyer who didn't run that arithmetic just overpaid for nothing.</p>
+
+<h2>Loading factor benchmarks across Indian cities</h2>
+
+<p>Loading isn't standardised. It varies by city, builder reputation, project amenities and even tower-within-project. Rough thumb-rules from the last five years:</p>
+
+<ul>
+<li><strong>Mumbai / Navi Mumbai redevelopment projects:</strong> 35–45%. Land is scarce, common areas (fire refuge floors, podium parking decks, multi-level clubhouses) eat heavily into the carpet ratio.</li>
+<li><strong>Pune (Hinjewadi, Wakad, Kharadi):</strong> 25–32% for mid-segment, up to 40% for luxury towers with infinity pools and skylounges.</li>
+<li><strong>Bangalore (Whitefield, Sarjapur, Electronic City):</strong> 25–30% standard; gated communities like Prestige Lakeside or Sobha Dream Acres often quote 28–33%.</li>
+<li><strong>Delhi NCR (Gurugram, Noida):</strong> 30–40%, with some Sector 150 Noida and Golf Course Extension projects pushing past 42%.</li>
+<li><strong>Hyderabad (Gachibowli, Kondapur):</strong> 20–28% — historically the most carpet-friendly metro in India.</li>
+<li><strong>Tier-2 towns (Jaipur, Indore, Coimbatore, Surat):</strong> 18–25%, since amenity loads are lighter.</li>
+</ul>
+
+<p>Anything above 35% deserves a hard look at what you're paying for. Anything below 20% is either a very old building (pre-amenity-boom) or a builder being unusually transparent.</p>
+
+<h2>Working the math: three real scenarios</h2>
+
+<h3>Scenario 1 — Bangalore 2BHK, Sarjapur Road</h3>
+
+<p>Riya, a software engineer at an MNC in Bellandur, is comparing two projects. <strong>Project A</strong> quotes 1,180 sq ft super built-up at <strong>₹7,800/sq ft</strong>, total <strong>₹92.04 lakh</strong>. <strong>Project B</strong> quotes 1,050 sq ft super built-up at <strong>₹8,400/sq ft</strong>, total <strong>₹88.20 lakh</strong>. Project A looks bigger and cheaper per sq ft. But Project A's loading is 35% (high amenities, large clubhouse), while Project B's loading is 22%.</p>
+
+<ul>
+<li>Project A carpet = 1,180 ÷ 1.35 = <strong>874 sq ft</strong>. Effective rate on carpet = ₹92.04L ÷ 874 = <strong>₹10,531/sq ft</strong>.</li>
+<li>Project B carpet = 1,050 ÷ 1.22 = <strong>861 sq ft</strong>. Effective rate on carpet = ₹88.20L ÷ 861 = <strong>₹10,244/sq ft</strong>.</li>
+</ul>
+
+<p>Project B is the better deal by both usable space cost and absolute price. The "₹600 cheaper per sq ft" tag on Project A was an illusion created by the loading factor. Riya only catches this if she runs the carpet area calculator before her site visit.</p>
+
+<h3>Scenario 2 — Mumbai 1BHK redevelopment, Borivali</h3>
+
+<p>A 720 sq ft super built-up flat being sold at ₹22,000/sq ft, listed price <strong>₹1.58 crore</strong>. Loading factor on the agreement: 42%. Carpet area = 720 ÷ 1.42 = <strong>507 sq ft</strong>. Effective rate per sq ft of carpet = <strong>₹31,242</strong>. Compare this to a 5-year-old resale flat down the road with 480 sq ft carpet at ₹1.45 crore — effective rate ₹30,208/sq ft. The "new launch premium" disappears once carpet enters the equation.</p>
+
+<h3>Scenario 3 — Pune 3BHK, Hinjewadi Phase 2</h3>
+
+<p>1,650 sq ft super built-up, ₹7,500/sq ft, total <strong>₹1.24 crore</strong>. Loading 30%. Carpet = 1,650 ÷ 1.30 = <strong>1,269 sq ft</strong>. If the builder is also charging separately for two car parks (₹4 lakh each) and a clubhouse membership (₹1.5 lakh), the buyer is effectively paying for that clubhouse <em>twice</em> — once in the loading factor and once as a separate charge. Worth raising before signing.</p>
+
+<p>Once you have the carpet figure, plug the property price into the <a href="/tools/emi-calculator">EMI calculator</a> for SBI MaxGain or HDFC home loan rates, and confirm the monthly outflow fits within 40% of your take-home using the <a href="/tools/home-loan-affordability">home loan affordability calculator</a>. The carpet number is what determines whether you're actually getting value; the EMI number is what determines whether you can sustain it.</p>
+
+<h2>How the SabTools carpet area calculator works</h2>
+
+<p>The <a href="/tools/carpet-area-calculator">carpet area calculator</a> takes two inputs and gives you the third:</p>
+
+<ol>
+<li><strong>Super built-up area</strong> in sq ft (from the builder's brochure or the price list).</li>
+<li><strong>Loading factor</strong> as a percentage (from the agreement, the broker, or your estimate based on city benchmarks).</li>
+</ol>
+
+<p>Output: carpet area in sq ft, the per-sq-ft rate on carpet (if you also enter the total price), and the built-up area (assumed at ~10% over carpet, which is the conventional Indian rule).</p>
+
+<p>The math is simple enough to do on a phone, but the calculator removes two common errors. First, people confuse "30% loading" with "subtract 30% from super built-up" — that gives you 840 sq ft on a 1,200 sq ft flat instead of the correct 923 sq ft. Second, people forget that loading factor is multiplicative, not additive, when comparing two projects. Tools that get the formula right matter when you're about to commit ₹1 crore.</p>
+
+<h2>What the law actually requires builders to disclose</h2>
+
+<p>Section 4(2)(h) of the RERA Act mandates that every project registered with the state RERA authority (MahaRERA, K-RERA, TG-RERA, etc.) must declare carpet area on the sale agreement and on the official project page. Section 13 makes it illegal for a builder to accept more than 10% as advance booking without a written agreement that states carpet area, not super built-up. Section 14 prohibits the developer from changing carpet area by more than 3% after the agreement, without consent and refund.</p>
+
+<p>In practice:</p>
+
+<ul>
+<li>Always cross-check the carpet area on your booking form against the figure on the MahaRERA / state RERA portal. The number on the regulator's website is the legally binding one.</li>
+<li>If the builder's brochure quotes ₹X per sq ft on super built-up, ask in writing for the equivalent rate on <strong>carpet area in sq ft</strong>. A reputable builder will give it; a hesitant one tells you something about the project.</li>
+<li>Compare the carpet area declared in the agreement against the carpet area mentioned in your loan sanction letter from SBI / HDFC / ICICI — banks rely on their own valuers and discrepancies surface here.</li>
+</ul>
+
+<h2>The carpet-area trap in resale and rentals</h2>
+
+<p>Resale listings on 99acres, MagicBricks and NoBroker still mix area terms freely. A "1,400 sq ft 3BHK" in Andheri East could mean carpet, built-up or super built-up depending on the seller. Always ask: <em>"Is this carpet area or super built-up?"</em> before negotiating.</p>
+
+<p>For rentals, landlords in Gurugram and Bangalore frequently quote rent per sq ft of super built-up — a 1,500 sq ft 3BHK at ₹30/sq ft = ₹45,000/month sounds reasonable until you realise carpet is only 1,050 sq ft, making your effective rent ₹42.85/sq ft of usable space. When comparing two flats, always normalise rent to carpet area first.</p>
+
+<h2>Tax, registration and the carpet area connection</h2>
+
+<p>Stamp duty in Maharashtra, Karnataka and Telangana is calculated on the agreement value, which is anchored to carpet area in RERA-compliant projects. A larger carpet area means higher stamp duty (typically 5–7%) and registration fees (~1%). For a ₹1 crore Pune flat, stamp duty at 6% is <strong>₹6 lakh</strong> and registration is <strong>₹30,000</strong> — neither is reclaimable, so factor it into your total acquisition cost before you finalise.</p>
+
+<p>If you're a property investor running this as part of a business, the rental income and capital gains math depends on carpet area as the unit of measurement for repairs and depreciation. Run your numbers through the <a href="/tools/profit-loss-calculator">profit & loss calculator</a> to see net yield after maintenance (typically ₹3–5/sq ft of carpet per month in society charges) and property tax. For under-construction property GST is 5% (1% for affordable housing under ₹45 lakh) on the agreement value — use the <a href="/tools/gst-calculator">GST calculator</a> to separate the GST component from the base price before signing.</p>
+
+<h2>A pre-booking checklist that the calculator slots into</h2>
+
+<ol>
+<li>Get the super built-up area, carpet area and loading factor in writing from the builder.</li>
+<li>Verify carpet area against the state RERA portal listing.</li>
+<li>Run the SabTools carpet area calculator to confirm the builder's numbers add up internally (super ÷ (1 + loading%) should equal stated carpet ± 1%).</li>
+<li>Compute the <strong>effective rate per sq ft of carpet</strong> and compare across at least 3 projects in the same micro-market.</li>
+<li>Cross-check what's included in the loading: clubhouse, gym, swimming pool, landscape gardens — and what you're paying extra for on top.</li>
+<li>Run the all-in price (base + GST + stamp duty + registration + parking + clubhouse + corpus fund) through the <a href="/tools/emi-calculator">EMI calculator</a> to see the true monthly outflow.</li>
+<li>If you're parking surplus savings while construction completes, model that corpus in the <a href="/tools/sip-calculator">SIP calculator</a> — even an 18-month delay in possession changes your wealth math.</li>
+</ol>
+
+<h2>Common questions Indian buyers ask</h2>
+
+<h3>Is loading factor capped under RERA?</h3>
+
+<p>No — RERA does not cap the loading factor. It only mandates disclosure of carpet area. A builder can technically have 50% loading as long as carpet is honestly stated in the agreement. The protection is transparency, not a ceiling.</p>
+
+<h3>Why is my bank's valuation report different from the builder's super built-up area?</h3>
+
+<p>Banks like HDFC, ICICI and Axis use empanelled valuers who measure carpet area independently and apply their own loading assumption (usually 20–25%). If your bank valuation comes in lower, the builder's loading factor is on the higher side — useful information for renegotiation.</p>
+
+<h3>Can carpet area change between agreement and possession?</h3>
+
+<p>RERA allows up to a 3% variation. Beyond that, the builder must refund the proportionate amount with interest (currently SBI MCLR + 2%, around 10.5% per annum). Measure your flat at possession against the agreement carpet area before paying the final instalment.</p>
+
+<h3>Is the "carpet area" in old projects (pre-2017) the same as RERA carpet?</h3>
+
+<p>Not always. Pre-RERA, builders defined carpet area inconsistently — some included balconies, some didn't. For resale flats in buildings completed before May 2017, always physically verify or ask for a measurement by a qualified surveyor.</p>
+
+<p>The carpet area number is the single most important variable in any Indian property transaction, and yet it's the one most often glossed over in glossy brochures. Run your numbers before the booking cheque, not after possession.</p>
+
+<p><strong>Try the <a href="/tools/carpet-area-calculator">Carpet Area Calculator</a> with your builder's quoted figures and see the real per-sq-ft rate you're paying →</strong></p>`,
   }
 ];
 
