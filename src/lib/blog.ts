@@ -26816,6 +26816,127 @@ As a result of the review of the mutual fund regulations, there has been a 44% r
 <p><strong>Does the SabTools calculator account for wastage?</strong> It outputs theoretical quantity using the 1.54 dry-volume factor. Add 3–5% on cement and 5–8% on sand/aggregate manually before placing the order — that's standard practice and no calculator can predict your specific site's wastage rate.</p>
 
 <p>Try SabTools' <a href="/tools/concrete-calculator">Concrete Calculator</a> → enter your slab dimensions, pick M15/M20/M25, and get the cement bags, sand, aggregate and ₹ cost in one screen.</p>`,
+  },
+  {
+    slug: "news-2026-05-12-latest-mutual-fund-regulations-and-sebi-updates-affecting-in",
+    title: "Latest mutual fund regulations and SEBI updates affecting Indian in... (2026 Update)",
+    description: "Latest mutual fund regulations and SEBI updates affecting Indian investors — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-05-12",
+    category: "Finance",
+    readTime: "11 min read",
+    keywords: ["Latest mutual fund regulations", "finance news india 2026", "india 2026 update"],
+    toolSlug: "emi-calculator",
+    image: {
+      src: "/blog/emi-calculator.webp",
+      alt: "Latest mutual fund regulations and SEBI updates affecting Indian in... (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>SEBI rewrites the mutual fund rulebook: What the 2026 overhaul means for Indian investors</h2>
+
+<p>For the first time since 1996, India's mutual fund industry is operating under an entirely new regulatory framework. <a href="https://www.businesstoday.in/mutual-funds/story/sebi-overhauls-mutual-fund-rules-changes-made-to-ter-framework-check-details-507113-2025-12-17" rel="noopener" target="_blank"><cite index="6-2,6-3">The Securities and Exchange Board of India (SEBI) board greenlit a sweeping overhaul of mutual fund regulations on December 17, 2025, ushering in the SEBI (Mutual Funds) Regulations, 2026, which replaces the outdated 1996 framework</cite></a>. The changes touch nearly every part of how Indian investors will buy, hold, and pay for mutual fund schemes — from the labels on a fund's name to the cost ratio printed on its factsheet to the way fund houses must disclose what's actually inside each scheme.</p>
+
+<p>If you run a SIP, hold a single equity scheme through Zerodha or Groww, or manage a long-term retirement portfolio, this is the biggest regulatory reset in three decades. Here's a plain-language guide to what changed, when it kicks in, and how a salaried investor in Bangalore, Mumbai, or Pune should think about adjusting their plan.</p>
+
+<h2>The headline change: TER becomes BER</h2>
+
+<p>The most visible reform is in how the cost of a mutual fund is calculated and disclosed. <a href="https://www.indmoney.com/blog/mutual-funds/sebi-mutual-fund-regulations-2026" rel="noopener" target="_blank"><cite index="3-7,3-8">Previously, the Total Expense Ratio (TER) was a single percentage cap that included management fees, operating costs, and various taxes.</cite></a> Under the new rules, that bundled figure has been broken apart.</p>
+
+<p><a href="https://www.angelone.in/news/market-updates/sebi-revises-mutual-fund-expense-ratio-norms-to-lower-investor-costs" rel="noopener" target="_blank"><cite index="1-1,1-2">Under the revised framework, the Total Expense Ratio has been redefined as the Base Expense Ratio (BER), and the BER will exclude statutory and regulatory levies such as GST, stamp duty, SEBI fees, and exchange charges.</cite></a> The total cost an investor pays now becomes the sum of the BER plus brokerage plus statutory and regulatory levies, all disclosed separately.</p>
+
+<p>Why does this matter? Until now, a fund quoting a 1.8% TER hid GST on management fees, stamp duty, SEBI levies, and trading-related taxes inside that one number. <a href="https://upstox.com/news/personal-finance/mutual-funds/sebi-mutual-funds-regulations-2026-highlights-lower-expense-ratios-revised-brokerage-limits/article-186377/" rel="noopener" target="_blank"><cite index="5-3">The Total Expense Ratio of a scheme will be the sum of BER, brokerage, regulatory levies, and statutory levies.</cite></a> Investors will now be able to see the manager's fee separately from taxes, which makes comparison between two schemes more honest.</p>
+
+<h3>Brokerage caps cut sharply</h3>
+
+<p>One of the less talked-about but more impactful shifts sits inside trading costs. <a href="https://www.valueresearchonline.com/stories/227233/sebis-ter-overhaul-what-mutual-fund-investors-must-know/" rel="noopener" target="_blank"><cite index="6-1,6-2">The real savings are buried in trading costs — brokerage caps have been halved, from 12 to 6 basis points in cash markets and from 5 to 2 basis points in derivatives.</cite></a> For funds that churn their portfolios frequently, this cap will directly reduce the leakage that previously came out of investor returns.</p>
+
+<p><a href="https://www.indmoney.com/blog/mutual-funds/sebi-mutual-fund-regulations-2026" rel="noopener" target="_blank"><cite index="3-4">SEBI has also reduced the maximum limits for expenses and transaction costs in several categories, with the index fund and ETF limit reduced from 1.00% to 0.90%.</cite></a> Passive investors — those who hold Nifty 50 or Nifty Next 50 ETFs through a discount broker — are the clearest beneficiaries of this slab change.</p>
+
+<h2>When does it come into effect?</h2>
+
+<p>The framework was approved by the SEBI board on 17 December 2025, but rollouts are phased through 2026. <a href="https://upstox.com/news/personal-finance/mutual-funds/mutual-funds-revamp-expense-ratios-as-sebi-s-2026-rules-kick-in/article-191482/" rel="noopener" target="_blank"><cite index="7-0">In line with the new SEBI (Mutual Funds) Regulations, 2026, effective April 1, leading fund houses including Quant, JM Financial, ICICI Prudential, Aditya Birla Sun Life, Baroda BNP Paribas, PGIM India, Invesco, and Edelweiss have rolled out notice-cum-addendums revising expense structures across their schemes.</cite></a> This means investors who held units before April 2026 have already seen revised cost disclosures in their statements.</p>
+
+<p>For context on how much smaller and cleaner the regulation is, <a href="https://upstox.com/learning-center/personal-finance/sebi-mutual-fund-rules-2026/article-1563/" rel="noopener" target="_blank"><cite index="1-0">SEBI Chairman Tuhin Kanta Pandey noted that the regulations have been significantly streamlined, reduced from 162 pages to 88 pages, and from around 67,000 words to approximately 31,000 words.</cite></a> That compression matters because retail readability of the rulebook directly affects how confidently a first-time investor in Lucknow or Coimbatore can verify what their fund house is doing.</p>
+
+<h2>Portfolio overlap disclosures: the most useful new rule</h2>
+
+<p>Many Indian investors hold three to five equity schemes thinking they're diversified — only to discover later that all of them hold the same top 10 stocks. SEBI has now mandated that fund houses tell investors exactly how much overlap exists.</p>
+
+<p><a href="https://www.valueresearchonline.com/stories/228470/sebi-mutual-fund-rule-changes-3-things-matter-investors/" rel="noopener" target="_blank"><cite index="0-0,0-1,0-2">SEBI has introduced mandatory portfolio overlap reports from August 2026 — every AMC will publish monthly how much each scheme overlaps with every other scheme in its stable.</cite></a> This is arguably the single most consequential transparency rule in years for retail investors. If your Bangalore-based portfolio holds, say, a flexicap, a large-cap, and a focused fund from the same AMC and the overlap is 70%, you're essentially holding one fund three times while paying three sets of fees.</p>
+
+<p>The regulator has also drawn hard lines on overlap inside specific categories. <a href="https://upstox.com/news/personal-finance/mutual-funds/sebi-new-classification-rules-for-equity-mutual-fund-schemes-2026-all-you-need-to-know/article-189995/" rel="noopener" target="_blank"><cite index="5-1,5-2">SEBI issued a new circular on Categorization and Rationalization of Mutual Fund Schemes on February 26, 2026, which states that no more than 50% of a scheme's portfolio would overlap with other equity schemes in the sectoral/thematic category and other equity scheme categories except for the large cap scheme.</cite></a> This stops AMCs from selling near-identical funds under different labels.</p>
+
+<h2>Equity exposure tightened, new category introduced</h2>
+
+<p>The classification system, last revised in 2017, has been tightened so that fund labels reflect what's actually inside the box.</p>
+
+<p><a href="https://www.indmoney.com/blog/mutual-funds/sebi-new-mutual-fund-rules-2026-explained" rel="noopener" target="_blank"><cite index="4-3,4-4">SEBI has increased the mandatory minimum equity exposure from 65% to 80% for several categories, ensuring that these schemes remain truly equity-oriented.</cite></a> For investors, this means a fund marketed as "equity" must behave like equity — without managers parking a quarter of the corpus in debt and still claiming the equity taxation benefit.</p>
+
+<p>There is also a fresh category being introduced. <a href="https://www.indmoney.com/blog/mutual-funds/sebi-new-mutual-fund-rules-2026-explained" rel="noopener" target="_blank"><cite index="4-2">SEBI has introduced a brand new category called Life Cycle Funds, which are open-ended schemes with a "target maturity" date.</cite></a> The idea is similar to target-date retirement funds available in the US: an investor planning to retire in 2045, for instance, can pick a Life Cycle 2045 scheme and the fund manager will automatically shift the equity-debt mix as the target year nears.</p>
+
+<h3>Solution-Oriented funds are being phased out</h3>
+
+<p>If you hold a "Retirement Fund" or "Children's Fund" through ICICI Prudential, HDFC, or any other AMC, this section concerns you. <a href="https://www.indmoney.com/blog/mutual-funds/sebi-new-mutual-fund-rules-2026-explained" rel="noopener" target="_blank"><cite index="4-0,4-1">The regulator has decided to remove the Solution-Oriented category, which previously included Retirement Funds and Children's Funds — existing schemes must stop accepting fresh subscriptions immediately, and will be merged with other schemes that have a similar asset allocation and risk profile, subject to SEBI approval.</cite></a> Existing units remain yours, but the category itself is being absorbed into mainstream allocations.</p>
+
+<h2>Naming discipline returns</h2>
+
+<p>For years, schemes have carried emotionally loaded names — "Bluechip Wealth Builder", "Future Leaders", "Tax Saver Pro" — that didn't always map to their underlying portfolios. The new framework cleans this up.</p>
+
+<p><a href="https://www.indmoney.com/blog/mutual-funds/sebi-new-mutual-fund-rules-2026-explained" rel="noopener" target="_blank"><cite index="4-1">Schemes must have uniform names that align strictly with their category, and SEBI has barred the use of names that could mislead investors.</cite></a> <a href="https://upstox.com/learning-center/personal-finance/sebi-mutual-fund-rules-2026/article-1563/" rel="noopener" target="_blank"><cite index="1-2">Within six months — by around August 2026 — funds must align their names with what they actually invest in.</cite></a> Expect to see your statements show renamed schemes through the second half of 2026.</p>
+
+<h2>The ₹250 SIP and SEBI's financial inclusion push</h2>
+
+<p>Alongside the structural reforms, SEBI has pushed AMCs to lower the entry barrier for first-time and small-ticket investors. <a href="https://www.businesstoday.in/personal-finance/investment/story/jannivesh-sip-debuts-at-rs-250-sbi-mf-paytm-teams-up-to-bring-small-savers-into-the-investment-fold-464943-2025-02-17" rel="noopener" target="_blank"><cite index="1-0,1-1">The JanNivesh SIP was unveiled in the presence of the SEBI Chairperson, aimed at deepening financial inclusion and attracting first-time investors, small savers, and workers in the unorganized sector, with SIP starting at just Rs 250.</cite></a></p>
+
+<p>This means a college student in Indore, a salaried entry-level employee in Hyderabad, or a homemaker in Surat can begin a disciplined SIP for less than the cost of a movie ticket. <a href="https://bestinvestindia.com/jan-nivesh-sip/" rel="noopener" target="_blank"><cite index="2-0">SBI Jan Nivesh SIP allows a minimum SIP of Rs 250 on a daily, weekly, or monthly basis.</cite></a> If you've been waiting for "more money to start", that excuse no longer holds.</p>
+
+<p>Curious how that ₹250 a month compounds over 10, 20, or 30 years across different return assumptions? You can model it on the <a href="/tools/sip-calculator">SIP Calculator</a> before you commit to a scheme.</p>
+
+<h2>The numbers behind the reform's urgency</h2>
+
+<p>Why did SEBI move now? Because the industry is no longer the boutique sector it was when the 1996 rules were written. <a href="https://upstox.com/learning-center/personal-finance/sebi-mutual-fund-rules-2026/article-1563/" rel="noopener" target="_blank"><cite index="1-1">SIP contributions touched a record ₹32,087 crore in March 2026, and an industry of this scale, serving crores of retail investors with monthly SIP mandates, needed a regulatory framework equal to its size.</cite></a> When monthly SIP inflows alone cross ₹32,000 crore, even a 5 basis-point cost reduction adds up to hundreds of crores of retained investor value each year.</p>
+
+<p><a href="https://www.multibagg.ai/market-pulse/articles/sebi-mutual-fund-rules-2026-cmo8s2rixd6auph0jk2xr3y6l" rel="noopener" target="_blank"><cite index="3-1">The changes follow a consultation paper dated October 28, 2025 that aimed to simplify language, remove redundancies, and align rules with the evolving market.</cite></a> In other words, the regulator first published a draft, took industry and investor feedback, and then approved a tightened version in mid-December 2025.</p>
+
+<h2>What should an Indian investor actually do now?</h2>
+
+<h3>1. Re-read your fund factsheets after April 2026</h3>
+
+<p>The TER number you remember from last year is no longer apples-to-apples comparable. Look at the new BER plus the separately disclosed taxes and brokerage. Two schemes that both show "1.5%" may have very different total drag depending on their churn ratios.</p>
+
+<h3>2. Check overlap reports starting August 2026</h3>
+
+<p>From August 2026, every AMC must publish portfolio overlap data monthly on its website. If you hold a large-cap, a flexicap, and a focused fund and the overlap exceeds 60-70%, you don't have diversification — you have duplication. Consolidate.</p>
+
+<h3>3. Audit your Solution-Oriented holdings</h3>
+
+<p>If you have a Retirement Fund or Children's Fund, request your AMC's communication on which scheme it will be merged into and whether the new asset allocation still fits your goal. Don't redeem in panic — equity taxation and exit loads still apply — but do verify the destination scheme.</p>
+
+<h3>4. Don't be lured by smaller AMCs with higher fee allowances</h3>
+
+<p><a href="https://www.valueresearchonline.com/stories/227233/sebis-ter-overhaul-what-mutual-fund-investors-must-know/" rel="noopener" target="_blank"><cite index="6-3,6-4">Be wary of advice to switch from large, established funds to smaller or newer schemes — the reformed fee slabs give smaller funds higher expense allowances, creating fresh incentives.</cite></a> In simple terms, a brand-new AMC may try harder to win you over precisely because it is allowed to charge a higher BER under the new slab structure. That's not necessarily bad, but the cost-versus-track-record trade-off needs honest evaluation.</p>
+
+<h3>5. Coordinate SIPs with your loan EMIs</h3>
+
+<p>Many of the readers most affected by these changes are also juggling home loans. A first-time homebuyer in NCR or Pune typically allocates a fixed share of monthly income to EMI and a separate share to SIPs. When your fund's expense ratio drops by 20-30 basis points after April 2026, your net SIP return improves — but only if the EMI side of the equation is also under control. Run the full picture: model the EMI on your home loan tenure and rate using the <a href="/tools/emi-calculator">EMI Calculator</a>, and then decide how much of any savings or appraisal hike you want to redirect into your equity SIPs. That balance — debt servicing on one side, equity compounding on the other — is what determines real net worth growth, not the headline expense ratio alone.</p>
+
+<h2>Cost transparency is now a household conversation</h2>
+
+<p>The shift from TER to BER may feel like a technical accounting tweak, but its downstream effects are concrete. Every quarterly statement an investor in Maharashtra, Tamil Nadu, or West Bengal receives from April 2026 onwards will show four separately labelled cost lines instead of one composite number. Naming rules will force the "ULIP-style" creative scheme branding to stop. Overlap disclosures will reveal which AMCs really run distinct strategies and which ones are slicing the same portfolio into different wrappers.</p>
+
+<p>The combined effect, according to SEBI's own stated objective for the regulation, is a market where the cost of investing is lower, more visible, and more comparable across schemes. <a href="https://www.indmoney.com/blog/mutual-funds/sebi-mutual-fund-regulations-2026" rel="noopener" target="_blank"><cite index="3-3">The objective of these changes is to simplify the rules, improve transparency regarding costs, and rationalise the fees charged to investors.</cite></a></p>
+
+<h2>What to track over the next 6-12 months</h2>
+
+<ul>
+<li><strong>April 2026 statements:</strong> Check whether your AMC has issued an addendum revising the expense structure of your scheme.</li>
+<li><strong>By August 2026:</strong> Visit your fund house's website for the first monthly portfolio overlap report and revised scheme names.</li>
+<li><strong>Solution-Oriented schemes:</strong> Look out for merger notifications from AMCs offering Retirement and Children's Funds.</li>
+<li><strong>Life Cycle Funds:</strong> Expect new product launches throughout 2026 — particularly aimed at retirement and goal-based investors.</li>
+<li><strong>Brokerage line in factsheets:</strong> Funds with high churn will now visibly show higher brokerage costs. Use this as a signal when comparing two otherwise similar schemes.</li>
+</ul>
+
+<p>SEBI's 2026 reset is not a single dramatic event — it is a multi-quarter rollout that will continue reshaping mutual fund statements, websites, and factsheets through the end of FY 2026-27. For an Indian investor, the right response is not to overhaul a portfolio overnight, but to use the new disclosures as they arrive: lower costs, clearer labels, and visible overlap data are exactly the inputs a long-term SIP investor has been missing for the last three decades.</p>`,
   }
 ];
 
