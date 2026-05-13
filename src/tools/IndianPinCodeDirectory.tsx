@@ -69,11 +69,22 @@ export default function IndianPinCodeDirectory() {
     setSearched(true);
 
     try {
-      const res = await fetch(`https://api.postalpincode.in/pincode/${clean}`);
-      const data: ApiResponse[] = await res.json();
+      // Same-origin proxy → bypasses CSP connect-src restriction.
+      // Server-side handler hits api.postalpincode.in and caches for 24h.
+      const res = await fetch(`/api/pincode/${clean}`);
+      const data: ApiResponse[] | { error: string } = await res.json();
 
-      if (data[0]?.Status === "Success" && data[0]?.PostOffice) {
-        setResults(data[0].PostOffice);
+      if (!res.ok) {
+        const msg =
+          (data as { error?: string })?.error ||
+          "Unable to fetch data. Please try again in a moment.";
+        setError(msg);
+        return;
+      }
+
+      const arr = data as ApiResponse[];
+      if (arr[0]?.Status === "Success" && arr[0]?.PostOffice) {
+        setResults(arr[0].PostOffice);
       } else {
         setError("No results found for this PIN code. Please check and try again.");
       }
@@ -95,11 +106,23 @@ export default function IndianPinCodeDirectory() {
     setSearched(true);
 
     try {
-      const res = await fetch(`https://api.postalpincode.in/postoffice/${encodeURIComponent(areaName.trim())}`);
-      const data: ApiResponse[] = await res.json();
+      // Same-origin proxy → bypasses CSP connect-src restriction.
+      const res = await fetch(
+        `/api/postoffice/${encodeURIComponent(areaName.trim())}`
+      );
+      const data: ApiResponse[] | { error: string } = await res.json();
 
-      if (data[0]?.Status === "Success" && data[0]?.PostOffice) {
-        setResults(data[0].PostOffice);
+      if (!res.ok) {
+        const msg =
+          (data as { error?: string })?.error ||
+          "Unable to fetch data. Please try again in a moment.";
+        setError(msg);
+        return;
+      }
+
+      const arr = data as ApiResponse[];
+      if (arr[0]?.Status === "Success" && arr[0]?.PostOffice) {
+        setResults(arr[0].PostOffice);
       } else {
         setError("No post offices found for this area name. Try a different spelling or nearby area.");
       }
