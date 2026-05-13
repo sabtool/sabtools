@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
 
 export default function HeicToJpg() {
   const [originalFile, setOriginalFile] = useState<File | null>(null);
@@ -8,7 +8,10 @@ export default function HeicToJpg() {
   const [originalSize, setOriginalSize] = useState(0);
   const [convertedSize, setConvertedSize] = useState(0);
   const [previewUrl, setPreviewUrl] = useState("");
+  const [isDragging, setIsDragging] = useState(false);
+  const [uploadError, setUploadError] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+  const dragCounter = useRef(0);
 
   const formatSize = (bytes: number) => {
     if (bytes < 1024) return bytes + " B";
@@ -44,14 +47,64 @@ export default function HeicToJpg() {
     reader.readAsDataURL(file);
   };
 
-  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
+  const isAcceptedFile = (file: File): boolean => {
+    if (file.type.startsWith("image/")) return true;
+    const ext = file.name.split(".").pop()?.toLowerCase() || "";
+    return ["heic", "heif", "jpg", "jpeg", "png", "webp", "bmp", "gif", "tiff", "tif", "avif"].includes(ext);
+  };
+
+  const processFile = useCallback((file: File) => {
+    if (!isAcceptedFile(file)) {
+      setUploadError(`"${file.name}" is not a supported image. Accepted: HEIC, PNG, JPG, WebP, BMP, GIF, TIFF, AVIF.`);
+      return;
+    }
+    setUploadError("");
     setOriginalFile(file);
     setOriginalSize(file.size);
     setPreviewUrl(URL.createObjectURL(file));
     convert(file, quality);
+  }, [quality]);
+
+  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) processFile(file);
   };
+
+  const handleDragEnter = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current += 1;
+    if (e.dataTransfer?.items && e.dataTransfer.items.length > 0) {
+      setIsDragging(true);
+    }
+  }, []);
+
+  const handleDragOver = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current -= 1;
+    if (dragCounter.current <= 0) {
+      dragCounter.current = 0;
+      setIsDragging(false);
+    }
+  }, []);
+
+  const handleDrop = useCallback(
+    (e: React.DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dragCounter.current = 0;
+      setIsDragging(false);
+      const file = e.dataTransfer?.files?.[0];
+      if (file) processFile(file);
+    },
+    [processFile]
+  );
 
   const handleQualityChange = (q: number) => {
     setQuality(q);
@@ -64,13 +117,38 @@ export default function HeicToJpg() {
     <div className="space-y-6">
       <div
         onClick={() => inputRef.current?.click()}
-        className="border-2 border-dashed border-gray-300 rounded-2xl p-10 text-center cursor-pointer hover:border-indigo-400 hover:bg-indigo-50/50 transition"
+        onDragEnter={handleDragEnter}
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+        onDrop={handleDrop}
+        role="button"
+        tabIndex={0}
+        aria-label="Drop an image here or click to upload"
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            inputRef.current?.click();
+          }
+        }}
+        className={`border-2 border-dashed rounded-2xl p-10 text-center cursor-pointer transition ${
+          isDragging
+            ? "border-purple-500 bg-purple-50 scale-[1.01] shadow-md"
+            : "border-gray-300 hover:border-indigo-400 hover:bg-indigo-50/50"
+        }`}
       >
-        <div className="text-4xl mb-3">🔄</div>
-        <div className="text-sm font-semibold text-gray-700">Click to upload image</div>
+        <div className="text-4xl mb-3">{isDragging ? "⬇️" : "🔄"}</div>
+        <div className="text-sm font-semibold text-gray-700">
+          {isDragging ? "Drop your image here" : "Drag & drop your image, or click to upload"}
+        </div>
         <div className="text-xs text-gray-400 mt-1">Supports HEIC, PNG, WebP, BMP and any browser-supported format</div>
         <input ref={inputRef} type="file" accept="image/*" onChange={handleFile} className="hidden" />
       </div>
+
+      {uploadError && (
+        <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-red-600 text-sm">
+          ❌ {uploadError}
+        </div>
+      )}
 
       {originalFile && (
         <>

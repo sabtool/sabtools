@@ -1,15 +1,28 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef, useCallback } from "react";
 
 export default function PdfToWord() {
   const [file, setFile] = useState<File | null>(null);
   const [text, setText] = useState("");
   const [loading, setLoading] = useState(false);
   const [pageEstimate, setPageEstimate] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [uploadError, setUploadError] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
+  const dragCounter = useRef(0);
 
-  const handleFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const f = e.target.files?.[0];
-    if (!f || f.type !== "application/pdf") return;
+  const isAcceptedFile = (f: File): boolean => {
+    if (f.type === "application/pdf") return true;
+    const ext = f.name.split(".").pop()?.toLowerCase() || "";
+    return ext === "pdf";
+  };
+
+  const processFile = useCallback(async (f: File) => {
+    if (!isAcceptedFile(f)) {
+      setUploadError(`"${f.name}" is not a supported file. Accepted: PDF.`);
+      return;
+    }
+    setUploadError("");
     setFile(f);
     setLoading(true);
     setText("");
@@ -18,14 +31,11 @@ export default function PdfToWord() {
       const bytes = new Uint8Array(buffer);
       const raw = new TextDecoder("utf-8", { fatal: false }).decode(bytes);
 
-      // Count pages from PDF structure
       const pageMatches = raw.match(/\/Type\s*\/Page[^s]/g);
       const pages = pageMatches ? pageMatches.length : Math.max(1, Math.ceil(f.size / 3000));
       setPageEstimate(pages);
 
-      // Extract readable text between BT/ET blocks and parentheses
       const extracted: string[] = [];
-      // Method 1: text in parentheses within BT..ET
       const btBlocks = raw.match(/BT[\s\S]*?ET/g) || [];
       for (const block of btBlocks) {
         const parts = block.match(/\(([^)]*)\)/g) || [];
@@ -37,7 +47,6 @@ export default function PdfToWord() {
         }
       }
 
-      // Method 2: standalone text in stream blocks
       if (extracted.length === 0) {
         const streams = raw.match(/stream[\s\S]*?endstream/g) || [];
         for (const s of streams) {
@@ -59,7 +68,48 @@ export default function PdfToWord() {
       setText("Error reading PDF file. Please try another file.");
     }
     setLoading(false);
+  }, []);
+
+  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const f = e.target.files?.[0];
+    if (f) processFile(f);
   };
+
+  const handleDragEnter = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current += 1;
+    if (e.dataTransfer?.items && e.dataTransfer.items.length > 0) {
+      setIsDragging(true);
+    }
+  }, []);
+
+  const handleDragOver = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current -= 1;
+    if (dragCounter.current <= 0) {
+      dragCounter.current = 0;
+      setIsDragging(false);
+    }
+  }, []);
+
+  const handleDrop = useCallback(
+    (e: React.DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dragCounter.current = 0;
+      setIsDragging(false);
+      const f = e.dataTransfer?.files?.[0];
+      if (f) processFile(f);
+    },
+    [processFile]
+  );
 
   const downloadTxt = () => {
     const blob = new Blob([text], { type: "text/plain" });
@@ -81,12 +131,44 @@ export default function PdfToWord() {
     <div className="space-y-6">
       <div>
         <label className="text-sm font-semibold text-gray-700 block mb-2">Upload PDF File</label>
-        <input
-          type="file"
-          accept=".pdf,application/pdf"
-          onChange={handleFile}
-          className="calc-input"
-        />
+        <div
+          onClick={() => inputRef.current?.click()}
+          onDragEnter={handleDragEnter}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+          role="button"
+          tabIndex={0}
+          aria-label="Drop a PDF here or click to upload"
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              inputRef.current?.click();
+            }
+          }}
+          className={`border-2 border-dashed rounded-2xl p-8 text-center cursor-pointer transition ${
+            isDragging
+              ? "border-purple-500 bg-purple-50 scale-[1.01] shadow-md"
+              : "border-gray-300 hover:border-indigo-400 hover:bg-indigo-50/30"
+          }`}
+        >
+          <div className="text-4xl mb-2">{isDragging ? "⬇️" : "📄"}</div>
+          <div className="text-sm font-semibold text-gray-700">
+            {isDragging ? "Drop your PDF here" : "Drag & drop your PDF, or click to upload"}
+          </div>
+          <input
+            ref={inputRef}
+            type="file"
+            accept=".pdf,application/pdf"
+            onChange={handleFile}
+            className="hidden"
+          />
+        </div>
+        {uploadError && (
+          <div className="mt-3 bg-red-50 border border-red-200 rounded-xl p-4 text-red-600 text-sm">
+            ❌ {uploadError}
+          </div>
+        )}
       </div>
 
       {file && (

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef, useCallback } from "react";
 
 interface PdfFile {
   file: File;
@@ -9,19 +9,77 @@ interface PdfFile {
 export default function MergePdf() {
   const [files, setFiles] = useState<PdfFile[]>([]);
   const [merging, setMerging] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [uploadError, setUploadError] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
+  const dragCounter = useRef(0);
+
+  const isAcceptedFile = (f: File): boolean => {
+    if (f.type === "application/pdf") return true;
+    const ext = f.name.split(".").pop()?.toLowerCase() || "";
+    return ext === "pdf";
+  };
+
+  const processFiles = useCallback((selected: FileList | File[]) => {
+    const arr = Array.from(selected);
+    const accepted: PdfFile[] = [];
+    const rejected: string[] = [];
+    arr.forEach((f, i) => {
+      if (isAcceptedFile(f)) {
+        accepted.push({ file: f, id: Date.now() + "-" + i + "-" + Math.random().toString(36).slice(2) });
+      } else {
+        rejected.push(f.name);
+      }
+    });
+    if (rejected.length > 0) {
+      setUploadError(`Skipped ${rejected.length} non-PDF file(s): ${rejected.join(", ")}.`);
+    } else {
+      setUploadError("");
+    }
+    if (accepted.length > 0) {
+      setFiles((prev) => [...prev, ...accepted]);
+    }
+  }, []);
 
   const handleFiles = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const selected = e.target.files;
-    if (!selected) return;
-    const newFiles: PdfFile[] = [];
-    for (let i = 0; i < selected.length; i++) {
-      if (selected[i].type === "application/pdf") {
-        newFiles.push({ file: selected[i], id: Date.now() + "-" + i });
-      }
-    }
-    setFiles((prev) => [...prev, ...newFiles]);
+    if (e.target.files) processFiles(e.target.files);
     e.target.value = "";
   };
+
+  const handleDragEnter = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current += 1;
+    if (e.dataTransfer?.items && e.dataTransfer.items.length > 0) {
+      setIsDragging(true);
+    }
+  }, []);
+
+  const handleDragOver = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current -= 1;
+    if (dragCounter.current <= 0) {
+      dragCounter.current = 0;
+      setIsDragging(false);
+    }
+  }, []);
+
+  const handleDrop = useCallback(
+    (e: React.DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dragCounter.current = 0;
+      setIsDragging(false);
+      if (e.dataTransfer?.files) processFiles(e.dataTransfer.files);
+    },
+    [processFiles]
+  );
 
   const removeFile = (id: string) => {
     setFiles((prev) => prev.filter((f) => f.id !== id));
@@ -90,13 +148,46 @@ export default function MergePdf() {
     <div className="space-y-6">
       <div>
         <label className="text-sm font-semibold text-gray-700 block mb-2">Upload PDF Files</label>
-        <input
-          type="file"
-          accept=".pdf,application/pdf"
-          multiple
-          onChange={handleFiles}
-          className="calc-input"
-        />
+        <div
+          onClick={() => inputRef.current?.click()}
+          onDragEnter={handleDragEnter}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+          role="button"
+          tabIndex={0}
+          aria-label="Drop PDF files here or click to upload"
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              inputRef.current?.click();
+            }
+          }}
+          className={`border-2 border-dashed rounded-2xl p-8 text-center cursor-pointer transition ${
+            isDragging
+              ? "border-purple-500 bg-purple-50 scale-[1.01] shadow-md"
+              : "border-gray-300 hover:border-indigo-400 hover:bg-indigo-50/30"
+          }`}
+        >
+          <div className="text-4xl mb-2">{isDragging ? "⬇️" : "📑"}</div>
+          <div className="text-sm font-semibold text-gray-700">
+            {isDragging ? "Drop your PDFs here" : "Drag & drop your PDFs, or click to upload"}
+          </div>
+          <div className="text-xs text-gray-400 mt-1">Multiple PDFs supported</div>
+          <input
+            ref={inputRef}
+            type="file"
+            accept=".pdf,application/pdf"
+            multiple
+            onChange={handleFiles}
+            className="hidden"
+          />
+        </div>
+        {uploadError && (
+          <div className="mt-3 bg-red-50 border border-red-200 rounded-xl p-4 text-red-600 text-sm">
+            ❌ {uploadError}
+          </div>
+        )}
       </div>
 
       {files.length > 0 && (
