@@ -154,9 +154,14 @@
     "ideal-weight-calculator",
     "indian-calendar",
     "ai-product-description",
-    "sleep-calculator"
+    "sleep-calculator",
+    "carpet-area-calculator",
+    "heart-rate-zone-calculator",
+    "indian-pin-code-directory",
+    "concrete-calculator",
+    "voter-id-info"
   ],
-  "lastCategory": "health",
-  "totalPosts": 155,
-  "lastRun": "2026-05-10T11:54:34.782Z"
+  "lastCategory": "legal",
+  "totalPosts": 160,
+  "lastRun": "2026-05-13T07:09:50.029Z"
 }
