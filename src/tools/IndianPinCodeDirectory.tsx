@@ -69,22 +69,20 @@ export default function IndianPinCodeDirectory() {
     setSearched(true);
 
     try {
-      // Same-origin proxy → bypasses CSP connect-src restriction.
-      // Server-side handler hits api.postalpincode.in and caches for 24h.
-      const res = await fetch(`/api/pincode/${clean}`);
-      const data: ApiResponse[] | { error: string } = await res.json();
+      // Direct call to India Post API. Allowed by CSP connect-src
+      // (https://api.postalpincode.in is whitelisted in vercel.json).
+      // We can't proxy server-side because the site builds with
+      // output: "export" (static), which disables route handlers.
+      const res = await fetch(`https://api.postalpincode.in/pincode/${clean}`);
 
       if (!res.ok) {
-        const msg =
-          (data as { error?: string })?.error ||
-          "Unable to fetch data. Please try again in a moment.";
-        setError(msg);
+        setError("PIN-code service is temporarily unavailable. Please try again in a few minutes.");
         return;
       }
 
-      const arr = data as ApiResponse[];
-      if (arr[0]?.Status === "Success" && arr[0]?.PostOffice) {
-        setResults(arr[0].PostOffice);
+      const data: ApiResponse[] = await res.json();
+      if (data[0]?.Status === "Success" && data[0]?.PostOffice) {
+        setResults(data[0].PostOffice);
       } else {
         setError("No results found for this PIN code. Please check and try again.");
       }
@@ -106,23 +104,19 @@ export default function IndianPinCodeDirectory() {
     setSearched(true);
 
     try {
-      // Same-origin proxy → bypasses CSP connect-src restriction.
+      // Direct call to India Post API. Allowed by CSP connect-src.
       const res = await fetch(
-        `/api/postoffice/${encodeURIComponent(areaName.trim())}`
+        `https://api.postalpincode.in/postoffice/${encodeURIComponent(areaName.trim())}`
       );
-      const data: ApiResponse[] | { error: string } = await res.json();
 
       if (!res.ok) {
-        const msg =
-          (data as { error?: string })?.error ||
-          "Unable to fetch data. Please try again in a moment.";
-        setError(msg);
+        setError("PIN-code service is temporarily unavailable. Please try again in a few minutes.");
         return;
       }
 
-      const arr = data as ApiResponse[];
-      if (arr[0]?.Status === "Success" && arr[0]?.PostOffice) {
-        setResults(arr[0].PostOffice);
+      const data: ApiResponse[] = await res.json();
+      if (data[0]?.Status === "Success" && data[0]?.PostOffice) {
+        setResults(data[0].PostOffice);
       } else {
         setError("No post offices found for this area name. Try a different spelling or nearby area.");
       }
