@@ -12,8 +12,13 @@ export default function ImageFormatConverter() {
   const [convertedSize, setConvertedSize] = useState(0);
   const [dimensions, setDimensions] = useState({ w: 0, h: 0 });
   const [converting, setConverting] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [uploadError, setUploadError] = useState("");
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  // Counter survives child-element drag-enter/leave bubbling — we only
+  // hide the highlight when the counter returns to 0.
+  const dragCounter = useRef(0);
 
   const formats = [
     { value: "png", label: "PNG", desc: "Lossless, transparent background", mime: "image/png" },
@@ -43,9 +48,28 @@ export default function ImageFormatConverter() {
     return (bytes / 1048576).toFixed(2) + " MB";
   };
 
-  const handleUpload = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
+  // List of extensions we explicitly support beyond what the browser
+  // recognises via the `image/*` MIME wildcard. Used to validate drops
+  // (browsers don't always set a MIME type for HEIC/HEIF/TIFF/AVIF).
+  const ACCEPTED_EXTS = [
+    "jpg", "jpeg", "png", "webp", "bmp", "gif", "svg",
+    "ico", "tiff", "tif", "avif", "heic", "heif", "jfif",
+  ];
+
+  const isAcceptedFile = (file: File): boolean => {
+    if (file.type.startsWith("image/")) return true;
+    const ext = file.name.split(".").pop()?.toLowerCase() || "";
+    return ACCEPTED_EXTS.includes(ext);
+  };
+
+  const processFile = useCallback((file: File) => {
+    if (!isAcceptedFile(file)) {
+      setUploadError(
+        `"${file.name}" is not a supported image. Accepted: JPG, PNG, WebP, BMP, GIF, SVG, HEIC, TIFF, AVIF, ICO.`
+      );
+      return;
+    }
+    setUploadError("");
     setFileName(file.name);
     setOriginalFormat(getExtFromName(file.name));
     setOriginalSize(file.size);
@@ -62,6 +86,52 @@ export default function ImageFormatConverter() {
     };
     reader.readAsDataURL(file);
   }, []);
+
+  const handleUpload = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const file = e.target.files?.[0];
+      if (file) processFile(file);
+    },
+    [processFile]
+  );
+
+  const handleDragEnter = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current += 1;
+    if (e.dataTransfer?.items && e.dataTransfer.items.length > 0) {
+      setIsDragging(true);
+    }
+  }, []);
+
+  const handleDragOver = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    // preventDefault on dragover is REQUIRED, otherwise the drop event
+    // never fires (browser falls back to its default "open file in tab").
+    e.preventDefault();
+    e.stopPropagation();
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current -= 1;
+    if (dragCounter.current <= 0) {
+      dragCounter.current = 0;
+      setIsDragging(false);
+    }
+  }, []);
+
+  const handleDrop = useCallback(
+    (e: React.DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dragCounter.current = 0;
+      setIsDragging(false);
+      const file = e.dataTransfer?.files?.[0];
+      if (file) processFile(file);
+    },
+    [processFile]
+  );
 
   const convert = useCallback(() => {
     if (!image) return;
@@ -129,10 +199,27 @@ export default function ImageFormatConverter() {
 
   return (
     <div className="space-y-6">
-      {/* Upload */}
+      {/* Upload — supports click AND drag-and-drop */}
       <div
-        className="border-2 border-dashed border-gray-300 rounded-2xl p-8 text-center cursor-pointer hover:border-purple-400 hover:bg-purple-50/30 transition"
+        className={`border-2 border-dashed rounded-2xl p-8 text-center cursor-pointer transition ${
+          isDragging
+            ? "border-purple-500 bg-purple-50 scale-[1.01] shadow-md"
+            : "border-gray-300 hover:border-purple-400 hover:bg-purple-50/30"
+        }`}
         onClick={() => inputRef.current?.click()}
+        onDragEnter={handleDragEnter}
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+        onDrop={handleDrop}
+        role="button"
+        tabIndex={0}
+        aria-label="Drop an image here or click to upload"
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            inputRef.current?.click();
+          }
+        }}
       >
         <input
           ref={inputRef}
@@ -147,18 +234,29 @@ export default function ImageFormatConverter() {
             <p className="text-sm text-gray-600">
               <span className="font-semibold">{fileName}</span> • {originalFormat} • {formatBytes(originalSize)} • {dimensions.w}×{dimensions.h}px
             </p>
-            <p className="text-xs text-purple-500">Click to upload a different image</p>
+            <p className="text-xs text-purple-500">
+              {isDragging ? "Drop to replace this image" : "Drag a new image here, or click to upload"}
+            </p>
           </div>
         ) : (
           <div>
-            <div className="text-5xl mb-3">🖼️</div>
-            <p className="text-lg font-semibold text-gray-700">Upload Any Image</p>
+            <div className="text-5xl mb-3">{isDragging ? "⬇️" : "🖼️"}</div>
+            <p className="text-lg font-semibold text-gray-700">
+              {isDragging ? "Drop your image here" : "Drag & drop your image, or click to upload"}
+            </p>
             <p className="text-sm text-gray-500 mt-1">
-              Supports JPG, PNG, WebP, BMP, GIF, SVG, HEIC, TIFF, AVIF, ICO & more
+              Supports JPG, PNG, WebP, BMP, GIF, SVG, HEIC, TIFF, AVIF, ICO &amp; more
             </p>
           </div>
         )}
       </div>
+
+      {/* Upload error (e.g. user dropped a PDF) */}
+      {uploadError && (
+        <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-red-600 text-sm">
+          ❌ {uploadError}
+        </div>
+      )}
 
       {image && (
         <>
