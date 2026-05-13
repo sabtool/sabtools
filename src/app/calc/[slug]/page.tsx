@@ -60,8 +60,8 @@ export async function generateMetadata({
           alt: `${page.title} — SabTools.in`,
         },
       ],
-      creator: "@sabtools",
-      site: "@sabtools",
+      creator: "@Sabtoolsin",
+      site: "@Sabtoolsin",
     },
     other: {
       rating: "general",

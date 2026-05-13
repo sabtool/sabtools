@@ -41,7 +41,7 @@ export async function generateMetadata({
   // chain matches the Article.author @id emitted in the page component
   // below — keeping the social-card byline and structured-data byline
   // aligned.
-  let twitterCreator = "@sabtools";
+  let twitterCreator = "@Sabtoolsin";
   let articleAuthorUrl: string | undefined;
   if (post.toolSlug) {
     const t = tools.find((tt) => tt.slug === post.toolSlug);
@@ -134,7 +134,7 @@ export async function generateMetadata({
             },
           ],
       creator: twitterCreator,
-      site: "@sabtools",
+      site: "@Sabtoolsin",
     },
   };
 }

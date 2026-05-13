@@ -74,8 +74,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       // the author themselves on Twitter feeds, not the brand.
       creator: author.socialLinks?.twitter
         ? `@${author.socialLinks.twitter}`
-        : "@sabtools",
-      site: "@sabtools",
+        : "@Sabtoolsin",
+      site: "@Sabtoolsin",
     },
   };
 }
@@ -123,7 +123,7 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
   /* Collect social profile URLs once so both Person.sameAs and the rendered
      buttons stay in sync. */
   const socialLinks: string[] = [];
-  if (author.socialLinks?.twitter) socialLinks.push(`https://twitter.com/${author.socialLinks.twitter}`);
+  if (author.socialLinks?.twitter) socialLinks.push(`https://x.com/${author.socialLinks.twitter}`);
   if (author.socialLinks?.linkedin) socialLinks.push(`https://www.linkedin.com/in/${author.socialLinks.linkedin}`);
 
   const personId = personIdFor(author.slug);
@@ -234,7 +234,7 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
               <div className="flex items-center justify-center sm:justify-start gap-3 mt-4">
                 {author.socialLinks.twitter && (
                   <a
-                    href={`https://twitter.com/${author.socialLinks.twitter}`}
+                    href={`https://x.com/${author.socialLinks.twitter}`}
                     target="_blank"
                     rel="nofollow noopener noreferrer"
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-gray-200 rounded-full text-sm text-gray-600 hover:text-indigo-600 hover:border-indigo-200 transition"

@@ -274,7 +274,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const reviewer = getAuthorByCategory(slug);
   const twitterCreator = reviewer?.socialLinks?.twitter
     ? `@${reviewer.socialLinks.twitter}`
-    : "@sabtools";
+    : "@Sabtoolsin";
 
   return {
     title: `${cat.name} — ${toolCount} Free Online Tools for India`,
@@ -318,7 +318,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         },
       ],
       creator: twitterCreator,
-      site: "@sabtools",
+      site: "@Sabtoolsin",
     },
   };
 }

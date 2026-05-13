@@ -99,7 +99,7 @@ export const BRAND = {
    * dead/wrong link in schema.org/Organization.sameAs.
    */
   social: {
-    twitter: "https://twitter.com/sabtools",
+    twitter: "https://x.com/Sabtoolsin",
     // facebook: HUMAN-TODO — verify official handle, then add
     // instagram: HUMAN-TODO — verify official handle, then add
     // linkedin: HUMAN-TODO — verify official handle, then add

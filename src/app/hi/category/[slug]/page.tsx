@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const reviewer = getAuthorByCategory(slug);
   const twitterCreator = reviewer?.socialLinks?.twitter
     ? `@${reviewer.socialLinks.twitter}`
-    : "@sabtools";
+    : "@Sabtoolsin";
 
   // Phase 6 Round 2 Task A — use the Devanagari `pillar.name` everywhere
   // a Hindi user sees the category name. The English `cat.name` from
@@ -89,7 +89,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         },
       ],
       creator: twitterCreator,
-      site: "@sabtools",
+      site: "@Sabtoolsin",
     },
   };
 }

@@ -103,8 +103,8 @@ export const metadata: Metadata = {
         alt: `${BRAND.name} — ${BRAND.tagline}`,
       },
     ],
-    creator: "@sabtools",
-    site: "@sabtools",
+    creator: "@Sabtoolsin",
+    site: "@Sabtoolsin",
   },
   robots: {
     index: true,

@@ -47,8 +47,8 @@ export const metadata: Metadata = {
         alt: "SabTools.in Blog — Financial Tips, Tax Guides & Tool Tutorials",
       },
     ],
-    creator: "@sabtools",
-    site: "@sabtools",
+    creator: "@Sabtoolsin",
+    site: "@Sabtoolsin",
   },
 };
 

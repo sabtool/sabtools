@@ -38,8 +38,8 @@ export const metadata: Metadata = {
     title: PAGE_TITLE,
     description: PAGE_DESC,
     images: [`${SITE_URL}/og-image.png`],
-    creator: "@sabtools",
-    site: "@sabtools",
+    creator: "@Sabtoolsin",
+    site: "@Sabtoolsin",
   },
 };
 

@@ -40,8 +40,8 @@ export const metadata: Metadata = {
         alt: "Disclaimer — SabTools.in",
       },
     ],
-    creator: "@sabtools",
-    site: "@sabtools",
+    creator: "@Sabtoolsin",
+    site: "@Sabtoolsin",
   },
 };
 

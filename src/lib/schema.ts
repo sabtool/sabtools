@@ -111,7 +111,7 @@ export function organizationNode() {
       availableLanguage: ["English", "Hindi"],
     },
     sameAs: [
-      "https://twitter.com/sabtools",
+      "https://x.com/Sabtoolsin",
       "https://www.youtube.com/@sabtools",
       "https://www.linkedin.com/company/sabtools",
       "https://github.com/sabtool",

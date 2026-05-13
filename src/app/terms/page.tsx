@@ -43,8 +43,8 @@ export const metadata: Metadata = {
         alt: "Terms of Service — SabTools.in",
       },
     ],
-    creator: "@sabtools",
-    site: "@sabtools",
+    creator: "@Sabtoolsin",
+    site: "@Sabtoolsin",
   },
 };
 

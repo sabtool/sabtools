@@ -18,8 +18,8 @@ export const metadata: Metadata = {
     title: "Contact Us — SabTools.in",
     description: "Get in touch with the SabTools.in team. Report bugs, request tools, or share feedback.",
     images: ["https://sabtools.in/og-image.png"],
-    creator: "@sabtools",
-    site: "@sabtools",
+    creator: "@Sabtoolsin",
+    site: "@Sabtoolsin",
   },
 };
 

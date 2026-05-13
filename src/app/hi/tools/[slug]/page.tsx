@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const expert = getAuthorByCategory(tool.category);
   const twitterCreator = expert?.socialLinks?.twitter
     ? `@${expert.socialLinks.twitter}`
-    : "@sabtools";
+    : "@Sabtoolsin";
 
   return {
     title: `${ht.name} — मुफ्त ऑनलाइन ${ht.name}`,
@@ -69,7 +69,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         },
       ],
       creator: twitterCreator,
-      site: "@sabtools",
+      site: "@Sabtoolsin",
     },
   };
 }

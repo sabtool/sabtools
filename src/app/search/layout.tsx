@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     title: "Search Tools — SabTools.in",
     description: `Search ${BRAND.totalTools}+ free online tools on SabTools.in.`,
     images: ["https://sabtools.in/og-image.png"],
-    creator: "@sabtools",
-    site: "@sabtools",
+    creator: "@Sabtoolsin",
+    site: "@Sabtoolsin",
   },
 };
 

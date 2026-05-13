@@ -42,8 +42,8 @@ export const metadata: Metadata = {
         alt: "SabTools.in - मुफ्त ऑनलाइन टूल्स हिंदी में",
       },
     ],
-    creator: "@sabtools",
-    site: "@sabtools",
+    creator: "@Sabtoolsin",
+    site: "@Sabtoolsin",
   },
 };
 
