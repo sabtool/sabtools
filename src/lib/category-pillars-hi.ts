@@ -1081,4 +1081,44 @@ export const categoryPillarsHi: Record<string, CategoryPillarHi> = {
       },
     ],
   },
+
+  // Sports & Cricket — added in Phase 6 Round 4 (Push A) on 2026-05-14 to
+  // close the 38th category. /hi/category/sports was 404ing until this
+  // entry existed because the Hindi category page returns notFound() when
+  // categoryPillarsHi[slug] is undefined. English-side hreflang on
+  // /category/sports pointed at /hi/category/sports → broken cluster.
+  // Devanagari tone matches how Indian cricket fans actually write — most
+  // technical terms (RRR, NRR, DLS, Dream11, fantasy, run-rate, IPL, BCCI,
+  // ICC) stay in Latin script because that's how they're searched.
+  sports: {
+    name: "स्पोर्ट्स और क्रिकेट",
+    whatIs:
+      "Sports & Cricket श्रेणी में IPL और international cricket के लिए scoring, run-rate, fantasy points और auction-cap calculators हैं — जो हर Indian cricket fan को IPL season और ICC tournaments में constantly चाहिए। Required Run Rate (RRR), Net Run Rate (NRR), Dream11 / MyTeam11 fantasy points, Duckworth-Lewis-Stern (DLS) revised target, और IPL Auction Cap जैसे tools। सभी rules BCCI और ICC की official guidelines के अनुसार — T20, IPL, ODI, Test हर format के लिए calibrated।",
+    useCases: [
+      "Live chase में Required Run Rate (RRR) और chase-difficulty verdict — Easy / Comfortable / Tough / Impossible",
+      "Dream11 / MyTeam11 / FanCode के लिए fantasy team optimization — Captain ×2, Vice-Captain ×1.5 multiplier के साथ",
+      "League standings में NRR scenarios — 'कितने margin से जीतना है qualify करने के लिए' का जवाब",
+      "Rain-affected match में DLS calculator — broadcast par score 1 run के अंदर match होता है",
+    ],
+    indianContext:
+      "Indian cricket BCCI (domestic + IPL) और ICC (international) के तहत संचालित होता है। Fantasy cricket Dream11, MyTeam11, FanCode पर खेलते हैं ~15 करोड़ Indians हर IPL season — All India Gaming Federation framework के तहत यह game of skill मानी जाती है (2017 Public Gaming Act amendments)। हमारे scoring rules Dream11 की published structure से exact match करते हैं। T10 leagues और women's IPL (WPL) के लिए भी वही calculators काम करते हैं।",
+    pillarFaqs: [
+      {
+        q: "क्या Fantasy Points Calculator Dream11 के actual scoring से match करता है?",
+        a: "हाँ — Dream11 की published rules के अनुसार: 1 point per run, +4 per boundary, +6 per six, +4/+8/+16 milestone bonuses (30/50/100), 25 per wicket, 8 per catch, 12 per stumping/run-out। Captain ×2 और Vice-Captain ×1.5 multiplier total points पर लगते हैं। MyTeam11 और FanCode थोड़े अलग constants use करते हैं — calculator के top पर platform toggle उपलब्ध है।",
+      },
+      {
+        q: "NRR का formula all-out case में सही है क्या?",
+        a: "हाँ। जब team all-out हो जाती है, NRR full quota of overs (T20 में 20, ODI में 50) के हिसाब से calculate होता है — चाहे last wicket जल्दी भी गिरा हो। इससे जल्दी ढह जाने वाली teams penalize होती हैं। हमारा tool यह rule automatically apply करता है और output BCCI-published IPL points table से match होता है।",
+      },
+      {
+        q: "क्या DLS calculator का result broadcast par score से match करता है?",
+        a: "हाँ — broadcast figure के 1 run के अंदर। हम official ICC DLS resource table (2024 updated) use करते हैं जो match referees use करते हैं। तभी छोटे rounding differences आ सकते हैं — broadcast nearest integer पर round करता है। Live match miss कर दिया तो revised target verify करने के लिए perfect।",
+      },
+      {
+        q: "Slow connection पर live match के दौरान काम करेगा?",
+        a: "हाँ। हर cricket calculator पूरी तरह client-side चलता है — पहली बार page load होने के बाद कोई live server query नहीं। Stadium में weak mobile data पर भी काम करेगा, या broadcast देखते हुए second screen पर math खुद कर सकते हैं। Runs, overs, wickets input करते ही output instant।",
+      },
+    ],
+  },
 };
