@@ -1,6 +1,17 @@
 "use client";
 import { useState, useRef, useMemo, useCallback } from "react";
 
+const ACCEPTED_EXTS = [
+  "jpg", "jpeg", "png", "webp", "bmp", "gif", "svg",
+  "ico", "tiff", "tif", "avif", "heic", "heif", "jfif",
+];
+
+const isAcceptedFile = (file: File): boolean => {
+  if (file.type.startsWith("image/")) return true;
+  const ext = file.name.split(".").pop()?.toLowerCase() || "";
+  return ACCEPTED_EXTS.includes(ext);
+};
+
 export default function ImageToAsciiArt() {
   const [image, setImage] = useState<HTMLImageElement | null>(null);
   const [width, setWidth] = useState(80);
@@ -8,7 +19,10 @@ export default function ImageToAsciiArt() {
   const [fontSize, setFontSize] = useState(10);
   const [ascii, setAscii] = useState("");
   const [copied, setCopied] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [uploadError, setUploadError] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+  const dragCounter = useRef(0);
 
   // Characters from darkest to lightest
   const chars = useMemo(() => "@#S%?*+;:,. ", []);
@@ -44,20 +58,70 @@ export default function ImageToAsciiArt() {
     [chars]
   );
 
+  const processFile = useCallback(
+    (file: File) => {
+      if (!isAcceptedFile(file)) {
+        setUploadError(
+          `"${file.name}" is not a supported image. Accepted: JPG, PNG, WebP, BMP, GIF, SVG, HEIC, TIFF, AVIF, ICO.`
+        );
+        return;
+      }
+      setUploadError("");
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        const img = new Image();
+        img.onload = () => {
+          setImage(img);
+          generateAscii(img, width, darkMode);
+        };
+        img.src = ev.target?.result as string;
+      };
+      reader.readAsDataURL(file);
+    },
+    [width, darkMode, generateAscii]
+  );
+
   const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (ev) => {
-      const img = new Image();
-      img.onload = () => {
-        setImage(img);
-        generateAscii(img, width, darkMode);
-      };
-      img.src = ev.target?.result as string;
-    };
-    reader.readAsDataURL(file);
+    processFile(file);
   };
+
+  const handleDragEnter = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current += 1;
+    if (e.dataTransfer?.items && e.dataTransfer.items.length > 0) {
+      setIsDragging(true);
+    }
+  }, []);
+
+  const handleDragOver = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current -= 1;
+    if (dragCounter.current <= 0) {
+      dragCounter.current = 0;
+      setIsDragging(false);
+    }
+  }, []);
+
+  const handleDrop = useCallback(
+    (e: React.DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dragCounter.current = 0;
+      setIsDragging(false);
+      const file = e.dataTransfer?.files?.[0];
+      if (file) processFile(file);
+    },
+    [processFile]
+  );
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(ascii);
@@ -78,13 +142,40 @@ export default function ImageToAsciiArt() {
     <div className="space-y-6">
       <div
         onClick={() => inputRef.current?.click()}
-        className="border-2 border-dashed border-gray-300 rounded-2xl p-10 text-center cursor-pointer hover:border-indigo-400 hover:bg-indigo-50/50 transition"
+        onDragEnter={handleDragEnter}
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+        onDrop={handleDrop}
+        role="button"
+        tabIndex={0}
+        aria-label="Drop an image here or click to upload"
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            inputRef.current?.click();
+          }
+        }}
+        className={`border-2 border-dashed rounded-2xl p-10 text-center cursor-pointer transition ${
+          isDragging
+            ? "border-purple-500 bg-purple-50 scale-[1.01] shadow-md"
+            : "border-gray-300 hover:border-indigo-400 hover:bg-indigo-50/30"
+        }`}
       >
-        <div className="text-4xl mb-3">🔤</div>
-        <div className="text-sm font-semibold text-gray-700">{image ? "Change image" : "Upload image to convert"}</div>
+        <div className="text-4xl mb-3">{isDragging ? "⬇️" : "🔤"}</div>
+        <div className="text-sm font-semibold text-gray-700">
+          {isDragging
+            ? "Drop your image here"
+            : (image ? "Change image" : "Drag & drop your image, or click to upload")}
+        </div>
         <div className="text-xs text-gray-400 mt-1">JPG, PNG, WebP</div>
         <input ref={inputRef} type="file" accept="image/*" onChange={handleFile} className="hidden" />
       </div>
+
+      {uploadError && (
+        <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-red-600 text-sm">
+          ❌ {uploadError}
+        </div>
+      )}
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div>

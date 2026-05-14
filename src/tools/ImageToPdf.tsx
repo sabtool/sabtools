@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
 
 interface ImageItem {
   file: File;
@@ -17,28 +17,23 @@ const pageSizes: Record<PageSize, { w: number; h: number; label: string }> = {
   Legal: { w: 612, h: 1008, label: "Legal (8.5 x 14 in)" },
 };
 
+const isAcceptedFile = (f: File): boolean => {
+  if (f.type.startsWith("image/")) return true;
+  const ext = f.name.split(".").pop()?.toLowerCase() || "";
+  return ["jpg", "jpeg", "png", "webp", "bmp", "gif", "tiff", "tif", "avif", "heic", "heif"].includes(ext);
+};
+
 export default function ImageToPdf() {
   const [images, setImages] = useState<ImageItem[]>([]);
   const [pageSize, setPageSize] = useState<PageSize>("A4");
   const [generating, setGenerating] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [uploadError, setUploadError] = useState("");
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const dragCounter = useRef(0);
 
-  const handleFiles = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files;
-    if (!files) return;
-    const newImages: ImageItem[] = [];
-    for (let i = 0; i < files.length; i++) {
-      const f = files[i];
-      if (!f.type.startsWith("image/")) continue;
-      const url = URL.createObjectURL(f);
-      const dims = await getImageDimensions(url);
-      newImages.push({ file: f, url, id: Date.now() + "-" + i, ...dims });
-    }
-    setImages((prev) => [...prev, ...newImages]);
-    e.target.value = "";
-  };
-
-  const getImageDimensions = (url: string): Promise<{ width: number; height: number }> => {
+  const getImageDimensionsFromUrl = (url: string): Promise<{ width: number; height: number }> => {
     return new Promise((resolve) => {
       const img = new Image();
       img.onload = () => resolve({ width: img.width, height: img.height });
@@ -46,6 +41,71 @@ export default function ImageToPdf() {
       img.src = url;
     });
   };
+
+  const processFiles = useCallback(async (files: FileList | File[]) => {
+    const arr = Array.from(files);
+    const accepted: File[] = [];
+    const rejected: string[] = [];
+    for (const f of arr) {
+      if (isAcceptedFile(f)) accepted.push(f);
+      else rejected.push(f.name);
+    }
+    if (rejected.length > 0) {
+      setUploadError(`Skipped ${rejected.length} non-image file(s): ${rejected.join(", ")}.`);
+    } else {
+      setUploadError("");
+    }
+    const newImages: ImageItem[] = [];
+    for (let i = 0; i < accepted.length; i++) {
+      const f = accepted[i];
+      const url = URL.createObjectURL(f);
+      const dims = await getImageDimensionsFromUrl(url);
+      newImages.push({ file: f, url, id: Date.now() + "-" + i + "-" + Math.random().toString(36).slice(2), ...dims });
+    }
+    if (newImages.length > 0) {
+      setImages((prev) => [...prev, ...newImages]);
+    }
+  }, []);
+
+  const handleFiles = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) await processFiles(e.target.files);
+    e.target.value = "";
+  };
+
+  const handleDragEnter = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current += 1;
+    if (e.dataTransfer?.items && e.dataTransfer.items.length > 0) {
+      setIsDragging(true);
+    }
+  }, []);
+
+  const handleDragOver = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current -= 1;
+    if (dragCounter.current <= 0) {
+      dragCounter.current = 0;
+      setIsDragging(false);
+    }
+  }, []);
+
+  const handleDrop = useCallback(
+    (e: React.DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dragCounter.current = 0;
+      setIsDragging(false);
+      if (e.dataTransfer?.files) processFiles(e.dataTransfer.files);
+    },
+    [processFiles]
+  );
 
   const removeImage = (id: string) => {
     setImages((prev) => {
@@ -200,13 +260,46 @@ export default function ImageToPdf() {
 
       <div>
         <label className="text-sm font-semibold text-gray-700 block mb-2">Upload Images</label>
-        <input
-          type="file"
-          accept="image/*"
-          multiple
-          onChange={handleFiles}
-          className="calc-input"
-        />
+        <div
+          onClick={() => inputRef.current?.click()}
+          onDragEnter={handleDragEnter}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+          role="button"
+          tabIndex={0}
+          aria-label="Drop images here or click to upload"
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              inputRef.current?.click();
+            }
+          }}
+          className={`border-2 border-dashed rounded-2xl p-8 text-center cursor-pointer transition ${
+            isDragging
+              ? "border-purple-500 bg-purple-50 scale-[1.01] shadow-md"
+              : "border-gray-300 hover:border-indigo-400 hover:bg-indigo-50/30"
+          }`}
+        >
+          <div className="text-4xl mb-2">{isDragging ? "⬇️" : "🖼️"}</div>
+          <div className="text-sm font-semibold text-gray-700">
+            {isDragging ? "Drop your images here" : "Drag & drop your images, or click to upload"}
+          </div>
+          <div className="text-xs text-gray-400 mt-1">Multiple images supported</div>
+          <input
+            ref={inputRef}
+            type="file"
+            accept="image/*"
+            multiple
+            onChange={handleFiles}
+            className="hidden"
+          />
+        </div>
+        {uploadError && (
+          <div className="mt-3 bg-red-50 border border-red-200 rounded-xl p-4 text-red-600 text-sm">
+            ❌ {uploadError}
+          </div>
+        )}
       </div>
 
       {images.length > 0 && (
