@@ -20,20 +20,74 @@ const templates: Template[] = [
 
 export default function MemeGenerator() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const dragCounter = useRef(0);
   const [image, setImage] = useState<HTMLImageElement | null>(null);
   const [selectedTemplate, setSelectedTemplate] = useState<number | null>(null);
   const [topText, setTopText] = useState("");
   const [bottomText, setBottomText] = useState("");
   const [fontSize, setFontSize] = useState(36);
   const [textColor, setTextColor] = useState("#FFFFFF");
+  const [isDragging, setIsDragging] = useState(false);
+  const [uploadError, setUploadError] = useState("");
 
-  const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
+  const isAcceptedFile = (f: File): boolean => {
+    if (f.type.startsWith("image/")) return true;
+    const ext = f.name.split(".").pop()?.toLowerCase() || "";
+    return ["jpg", "jpeg", "png", "webp", "bmp", "gif", "tiff", "tif", "avif"].includes(ext);
+  };
+
+  const processFile = useCallback((file: File) => {
+    if (!isAcceptedFile(file)) {
+      setUploadError(`"${file.name}" is not a supported image.`);
+      return;
+    }
+    setUploadError("");
     const img = new Image();
     img.onload = () => { setImage(img); setSelectedTemplate(null); };
     img.src = URL.createObjectURL(file);
+  }, []);
+
+  const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) processFile(file);
   };
+
+  const handleDragEnter = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current += 1;
+    if (e.dataTransfer?.items && e.dataTransfer.items.length > 0) {
+      setIsDragging(true);
+    }
+  }, []);
+
+  const handleDragOver = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current -= 1;
+    if (dragCounter.current <= 0) {
+      dragCounter.current = 0;
+      setIsDragging(false);
+    }
+  }, []);
+
+  const handleDrop = useCallback(
+    (e: React.DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dragCounter.current = 0;
+      setIsDragging(false);
+      const file = e.dataTransfer?.files?.[0];
+      if (file) processFile(file);
+    },
+    [processFile]
+  );
 
   const drawMeme = useCallback(() => {
     const canvas = canvasRef.current;
@@ -120,7 +174,38 @@ export default function MemeGenerator() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-2">Upload Image</label>
-          <input type="file" accept="image/*" onChange={handleUpload} className="calc-input text-sm" />
+          <div
+            onClick={() => inputRef.current?.click()}
+            onDragEnter={handleDragEnter}
+            onDragOver={handleDragOver}
+            onDragLeave={handleDragLeave}
+            onDrop={handleDrop}
+            role="button"
+            tabIndex={0}
+            aria-label="Drop an image here or click to upload"
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                inputRef.current?.click();
+              }
+            }}
+            className={`border-2 border-dashed rounded-2xl p-6 text-center cursor-pointer transition ${
+              isDragging
+                ? "border-purple-500 bg-purple-50 scale-[1.01] shadow-md"
+                : "border-gray-300 hover:border-indigo-400 hover:bg-indigo-50/30"
+            }`}
+          >
+            <div className="text-3xl mb-1">{isDragging ? "⬇️" : "😂"}</div>
+            <div className="text-xs font-semibold text-gray-700">
+              {isDragging ? "Drop your image here" : "Drag & drop or click"}
+            </div>
+            <input ref={inputRef} type="file" accept="image/*" onChange={handleUpload} className="hidden" />
+          </div>
+          {uploadError && (
+            <div className="mt-2 bg-red-50 border border-red-200 rounded-xl p-3 text-red-600 text-xs">
+              ❌ {uploadError}
+            </div>
+          )}
         </div>
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-2">Or Select Template</label>

@@ -22,20 +22,73 @@ export default function BusinessCardMaker() {
   const [logo, setLogo] = useState<HTMLImageElement | null>(null);
   const [style, setStyle] = useState<CardStyle>("minimal");
   const [side, setSide] = useState<CardSide>("front");
+  const [isDragging, setIsDragging] = useState(false);
+  const [uploadError, setUploadError] = useState("");
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const dragCounter = useRef(0);
+
+  const isAcceptedFile = (f: File): boolean => {
+    if (f.type.startsWith("image/")) return true;
+    const ext = f.name.split(".").pop()?.toLowerCase() || "";
+    return ["jpg", "jpeg", "png", "webp", "bmp", "gif", "tiff", "tif", "avif"].includes(ext);
+  };
 
   // 3.5 x 2 inches at 300 DPI
   const CARD_W = 1050;
   const CARD_H = 600;
 
-  const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
+  const processFile = useCallback((file: File) => {
+    if (!isAcceptedFile(file)) {
+      setUploadError(`"${file.name}" is not a supported image.`);
+      return;
+    }
+    setUploadError("");
     const img = new Image();
     img.onload = () => setLogo(img);
     img.src = URL.createObjectURL(file);
+  }, []);
+
+  const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) processFile(file);
   };
+
+  const handleDragEnter = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current += 1;
+    if (e.dataTransfer?.items && e.dataTransfer.items.length > 0) {
+      setIsDragging(true);
+    }
+  }, []);
+
+  const handleDragOver = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current -= 1;
+    if (dragCounter.current <= 0) {
+      dragCounter.current = 0;
+      setIsDragging(false);
+    }
+  }, []);
+
+  const handleDrop = useCallback(
+    (e: React.DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dragCounter.current = 0;
+      setIsDragging(false);
+      const file = e.dataTransfer?.files?.[0];
+      if (file) processFile(file);
+    },
+    [processFile]
+  );
 
   const drawCard = useCallback(() => {
     const canvas = canvasRef.current;
@@ -262,12 +315,36 @@ export default function BusinessCardMaker() {
       {/* Logo Upload */}
       <div
         onClick={() => inputRef.current?.click()}
-        className="border-2 border-dashed border-gray-300 rounded-2xl p-6 text-center cursor-pointer hover:border-indigo-400 hover:bg-indigo-50/50 transition"
+        onDragEnter={handleDragEnter}
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+        onDrop={handleDrop}
+        role="button"
+        tabIndex={0}
+        aria-label="Drop a logo here or click to upload"
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            inputRef.current?.click();
+          }
+        }}
+        className={`border-2 border-dashed rounded-2xl p-6 text-center cursor-pointer transition ${
+          isDragging
+            ? "border-purple-500 bg-purple-50 scale-[1.01] shadow-md"
+            : "border-gray-300 hover:border-indigo-400 hover:bg-indigo-50/50"
+        }`}
       >
-        <div className="text-3xl mb-2">🏢</div>
-        <div className="text-sm font-semibold text-gray-700">{logo ? "Logo loaded! Click to change" : "Upload Company Logo"}</div>
+        <div className="text-3xl mb-2">{isDragging ? "⬇️" : "🏢"}</div>
+        <div className="text-sm font-semibold text-gray-700">
+          {isDragging ? "Drop your logo here" : logo ? "Drag or click to change logo" : "Drag & drop your company logo, or click to upload"}
+        </div>
         <input ref={inputRef} type="file" accept="image/*" onChange={handleUpload} className="hidden" />
       </div>
+      {uploadError && (
+        <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-red-600 text-sm">
+          ❌ {uploadError}
+        </div>
+      )}
 
       {/* Style & Side */}
       <div className="result-card">

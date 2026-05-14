@@ -21,20 +21,73 @@ export default function IdCardGenerator() {
   const [photo, setPhoto] = useState<HTMLImageElement | null>(null);
   const [template, setTemplate] = useState<Template>("corporate");
   const [side, setSide] = useState<Side>("front");
+  const [isDragging, setIsDragging] = useState(false);
+  const [uploadError, setUploadError] = useState("");
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const dragCounter = useRef(0);
+
+  const isAcceptedFile = (f: File): boolean => {
+    if (f.type.startsWith("image/")) return true;
+    const ext = f.name.split(".").pop()?.toLowerCase() || "";
+    return ["jpg", "jpeg", "png", "webp", "bmp", "gif", "tiff", "tif", "avif"].includes(ext);
+  };
 
   // 3.375 x 2.125 inches at 300 DPI
   const CARD_W = 1013; // 3.375 * 300
   const CARD_H = 638;  // 2.125 * 300
 
-  const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
+  const processFile = useCallback((file: File) => {
+    if (!isAcceptedFile(file)) {
+      setUploadError(`"${file.name}" is not a supported image.`);
+      return;
+    }
+    setUploadError("");
     const img = new Image();
     img.onload = () => setPhoto(img);
     img.src = URL.createObjectURL(file);
+  }, []);
+
+  const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) processFile(file);
   };
+
+  const handleDragEnter = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current += 1;
+    if (e.dataTransfer?.items && e.dataTransfer.items.length > 0) {
+      setIsDragging(true);
+    }
+  }, []);
+
+  const handleDragOver = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current -= 1;
+    if (dragCounter.current <= 0) {
+      dragCounter.current = 0;
+      setIsDragging(false);
+    }
+  }, []);
+
+  const handleDrop = useCallback(
+    (e: React.DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dragCounter.current = 0;
+      setIsDragging(false);
+      const file = e.dataTransfer?.files?.[0];
+      if (file) processFile(file);
+    },
+    [processFile]
+  );
 
   const roundRect = (ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, r: number) => {
     ctx.beginPath();
@@ -280,12 +333,36 @@ export default function IdCardGenerator() {
       {/* Photo Upload */}
       <div
         onClick={() => inputRef.current?.click()}
-        className="border-2 border-dashed border-gray-300 rounded-2xl p-6 text-center cursor-pointer hover:border-indigo-400 hover:bg-indigo-50/50 transition"
+        onDragEnter={handleDragEnter}
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+        onDrop={handleDrop}
+        role="button"
+        tabIndex={0}
+        aria-label="Drop a photo here or click to upload"
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            inputRef.current?.click();
+          }
+        }}
+        className={`border-2 border-dashed rounded-2xl p-6 text-center cursor-pointer transition ${
+          isDragging
+            ? "border-purple-500 bg-purple-50 scale-[1.01] shadow-md"
+            : "border-gray-300 hover:border-indigo-400 hover:bg-indigo-50/50"
+        }`}
       >
-        <div className="text-3xl mb-2">📷</div>
-        <div className="text-sm font-semibold text-gray-700">{photo ? "Photo loaded! Click to change" : "Upload Photo"}</div>
+        <div className="text-3xl mb-2">{isDragging ? "⬇️" : "📷"}</div>
+        <div className="text-sm font-semibold text-gray-700">
+          {isDragging ? "Drop your photo here" : photo ? "Drag or click to change photo" : "Drag & drop your photo, or click to upload"}
+        </div>
         <input ref={inputRef} type="file" accept="image/*" onChange={handleUpload} className="hidden" />
       </div>
+      {uploadError && (
+        <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-red-600 text-sm">
+          ❌ {uploadError}
+        </div>
+      )}
 
       {/* Template & Side */}
       <div className="result-card">
