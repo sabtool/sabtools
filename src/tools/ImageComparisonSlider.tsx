@@ -13,16 +13,73 @@ export default function ImageComparisonSlider() {
   const [overlayOpacity, setOverlayOpacity] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isDragOverBefore, setIsDragOverBefore] = useState(false);
+  const [isDragOverAfter, setIsDragOverAfter] = useState(false);
+  const [uploadError, setUploadError] = useState("");
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const input1Ref = useRef<HTMLInputElement>(null);
   const input2Ref = useRef<HTMLInputElement>(null);
+  const dragCounterBefore = useRef(0);
+  const dragCounterAfter = useRef(0);
+
+  const isAcceptedFile = (f: File): boolean => {
+    if (f.type.startsWith("image/")) return true;
+    const ext = f.name.split(".").pop()?.toLowerCase() || "";
+    return ["jpg", "jpeg", "png", "webp", "bmp", "gif", "tiff", "tif", "avif"].includes(ext);
+  };
 
   const loadImage = (file: File, setter: (img: HTMLImageElement) => void) => {
     const img = new Image();
     img.onload = () => setter(img);
     img.src = URL.createObjectURL(file);
   };
+
+  const processFile = useCallback((file: File, setter: (img: HTMLImageElement) => void) => {
+    if (!isAcceptedFile(file)) {
+      setUploadError(`"${file.name}" is not a supported image.`);
+      return;
+    }
+    setUploadError("");
+    loadImage(file, setter);
+  }, []);
+
+  const makeDragHandlers = (
+    setOver: (v: boolean) => void,
+    counter: React.MutableRefObject<number>,
+    setter: (img: HTMLImageElement) => void,
+  ) => ({
+    onDragEnter: (e: React.DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+      counter.current += 1;
+      if (e.dataTransfer?.items && e.dataTransfer.items.length > 0) setOver(true);
+    },
+    onDragOver: (e: React.DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+    },
+    onDragLeave: (e: React.DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+      counter.current -= 1;
+      if (counter.current <= 0) {
+        counter.current = 0;
+        setOver(false);
+      }
+    },
+    onDrop: (e: React.DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+      counter.current = 0;
+      setOver(false);
+      const file = e.dataTransfer?.files?.[0];
+      if (file) processFile(file, setter);
+    },
+  });
+
+  const beforeHandlers = makeDragHandlers(setIsDragOverBefore, dragCounterBefore, setImage1);
+  const afterHandlers = makeDragHandlers(setIsDragOverAfter, dragCounterAfter, setImage2);
 
   const canvasSize = useMemo(() => {
     if (!image1 && !image2) return { w: 600, h: 400 };
@@ -204,24 +261,69 @@ export default function ImageComparisonSlider() {
     <div className={isFullscreen ? "fixed inset-0 z-50 bg-black flex flex-col items-center justify-center p-4" : "space-y-6"}>
       {/* Upload area */}
       {!isFullscreen && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div
-            onClick={() => input1Ref.current?.click()}
-            className="border-2 border-dashed border-gray-300 rounded-2xl p-6 text-center cursor-pointer hover:border-indigo-400 hover:bg-indigo-50/50 transition"
-          >
-            <div className="text-3xl mb-2">🖼️</div>
-            <div className="text-sm font-semibold text-gray-700">{image1 ? "Before image loaded" : "Upload Before Image"}</div>
-            <input ref={input1Ref} type="file" accept="image/*" onChange={(e) => e.target.files?.[0] && loadImage(e.target.files[0], setImage1)} className="hidden" />
+        <>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div
+              onClick={() => input1Ref.current?.click()}
+              onDragEnter={beforeHandlers.onDragEnter}
+              onDragOver={beforeHandlers.onDragOver}
+              onDragLeave={beforeHandlers.onDragLeave}
+              onDrop={beforeHandlers.onDrop}
+              role="button"
+              tabIndex={0}
+              aria-label="Drop the before image here or click to upload"
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  input1Ref.current?.click();
+                }
+              }}
+              className={`border-2 border-dashed rounded-2xl p-6 text-center cursor-pointer transition ${
+                isDragOverBefore
+                  ? "border-purple-500 bg-purple-50 scale-[1.01] shadow-md"
+                  : "border-gray-300 hover:border-indigo-400 hover:bg-indigo-50/50"
+              }`}
+            >
+              <div className="text-3xl mb-2">{isDragOverBefore ? "⬇️" : "🖼️"}</div>
+              <div className="text-sm font-semibold text-gray-700">
+                {isDragOverBefore ? "Drop the Before image here" : image1 ? "Before image loaded" : "Drag & drop Before image, or click to upload"}
+              </div>
+              <input ref={input1Ref} type="file" accept="image/*" onChange={(e) => { const f = e.target.files?.[0]; if (f) processFile(f, setImage1); }} className="hidden" />
+            </div>
+            <div
+              onClick={() => input2Ref.current?.click()}
+              onDragEnter={afterHandlers.onDragEnter}
+              onDragOver={afterHandlers.onDragOver}
+              onDragLeave={afterHandlers.onDragLeave}
+              onDrop={afterHandlers.onDrop}
+              role="button"
+              tabIndex={0}
+              aria-label="Drop the after image here or click to upload"
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  input2Ref.current?.click();
+                }
+              }}
+              className={`border-2 border-dashed rounded-2xl p-6 text-center cursor-pointer transition ${
+                isDragOverAfter
+                  ? "border-purple-500 bg-purple-50 scale-[1.01] shadow-md"
+                  : "border-gray-300 hover:border-indigo-400 hover:bg-indigo-50/50"
+              }`}
+            >
+              <div className="text-3xl mb-2">{isDragOverAfter ? "⬇️" : "🖼️"}</div>
+              <div className="text-sm font-semibold text-gray-700">
+                {isDragOverAfter ? "Drop the After image here" : image2 ? "After image loaded" : "Drag & drop After image, or click to upload"}
+              </div>
+              <input ref={input2Ref} type="file" accept="image/*" onChange={(e) => { const f = e.target.files?.[0]; if (f) processFile(f, setImage2); }} className="hidden" />
+            </div>
           </div>
-          <div
-            onClick={() => input2Ref.current?.click()}
-            className="border-2 border-dashed border-gray-300 rounded-2xl p-6 text-center cursor-pointer hover:border-indigo-400 hover:bg-indigo-50/50 transition"
-          >
-            <div className="text-3xl mb-2">🖼️</div>
-            <div className="text-sm font-semibold text-gray-700">{image2 ? "After image loaded" : "Upload After Image"}</div>
-            <input ref={input2Ref} type="file" accept="image/*" onChange={(e) => e.target.files?.[0] && loadImage(e.target.files[0], setImage2)} className="hidden" />
-          </div>
-        </div>
+          {uploadError && (
+            <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-red-600 text-sm">
+              ❌ {uploadError}
+            </div>
+          )}
+        </>
       )}
 
       {/* Controls */}

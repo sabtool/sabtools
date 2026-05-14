@@ -20,11 +20,32 @@ export default function BulkImageResizer() {
   const [percentage, setPercentage] = useState(50);
   const [maintainAspect, setMaintainAspect] = useState(true);
   const [processing, setProcessing] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [uploadError, setUploadError] = useState("");
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const dragCounter = useRef(0);
 
-  const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(e.target.files || []).slice(0, 20);
-    files.forEach((file) => {
+  const isAcceptedFile = (f: File): boolean => {
+    if (f.type.startsWith("image/")) return true;
+    const ext = f.name.split(".").pop()?.toLowerCase() || "";
+    return ["jpg", "jpeg", "png", "webp", "bmp", "gif", "tiff", "tif", "avif"].includes(ext);
+  };
+
+  const processFiles = useCallback((fileList: FileList | File[]) => {
+    const arr = Array.from(fileList);
+    const accepted: File[] = [];
+    const rejected: string[] = [];
+    arr.forEach((f) => {
+      if (isAcceptedFile(f)) accepted.push(f);
+      else rejected.push(f.name);
+    });
+    if (rejected.length > 0) {
+      setUploadError(`Skipped ${rejected.length} non-image file(s): ${rejected.join(", ")}.`);
+    } else {
+      setUploadError("");
+    }
+    accepted.slice(0, 20).forEach((file) => {
       const img = new Image();
       img.onload = () => {
         const item: ImageItem = {
@@ -40,7 +61,46 @@ export default function BulkImageResizer() {
       };
       img.src = URL.createObjectURL(file);
     });
+  }, []);
+
+  const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) processFiles(e.target.files);
   };
+
+  const handleDragEnter = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current += 1;
+    if (e.dataTransfer?.items && e.dataTransfer.items.length > 0) {
+      setIsDragging(true);
+    }
+  }, []);
+
+  const handleDragOver = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current -= 1;
+    if (dragCounter.current <= 0) {
+      dragCounter.current = 0;
+      setIsDragging(false);
+    }
+  }, []);
+
+  const handleDrop = useCallback(
+    (e: React.DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dragCounter.current = 0;
+      setIsDragging(false);
+      if (e.dataTransfer?.files) processFiles(e.dataTransfer.files);
+    },
+    [processFiles]
+  );
 
   const calculatedImages = useMemo(() => {
     return images.map((item) => {
@@ -108,13 +168,46 @@ export default function BulkImageResizer() {
         <label className="block text-sm font-semibold text-gray-700 mb-2">
           Upload Images (up to 20)
         </label>
-        <input
-          type="file"
-          accept="image/*"
-          multiple
-          onChange={handleUpload}
-          className="calc-input text-sm"
-        />
+        <div
+          onClick={() => inputRef.current?.click()}
+          onDragEnter={handleDragEnter}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+          role="button"
+          tabIndex={0}
+          aria-label="Drop images here or click to upload"
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              inputRef.current?.click();
+            }
+          }}
+          className={`border-2 border-dashed rounded-2xl p-8 text-center cursor-pointer transition ${
+            isDragging
+              ? "border-purple-500 bg-purple-50 scale-[1.01] shadow-md"
+              : "border-gray-300 hover:border-indigo-400 hover:bg-indigo-50/30"
+          }`}
+        >
+          <div className="text-4xl mb-2">{isDragging ? "⬇️" : "🖼️"}</div>
+          <div className="text-sm font-semibold text-gray-700">
+            {isDragging ? "Drop your images here" : "Drag & drop your images, or click to upload"}
+          </div>
+          <div className="text-xs text-gray-400 mt-1">Up to 20 images at once</div>
+          <input
+            ref={inputRef}
+            type="file"
+            accept="image/*"
+            multiple
+            onChange={handleUpload}
+            className="hidden"
+          />
+        </div>
+        {uploadError && (
+          <div className="mt-3 bg-red-50 border border-red-200 rounded-xl p-4 text-red-600 text-sm">
+            ❌ {uploadError}
+          </div>
+        )}
       </div>
 
       {images.length > 0 && (

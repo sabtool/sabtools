@@ -1,5 +1,5 @@
 "use client";
-import { useState, useMemo, useRef } from "react";
+import { useState, useMemo, useRef, useCallback } from "react";
 
 export default function CsvViewerEditor() {
   const [rawCsv, setRawCsv] = useState("");
@@ -9,7 +9,17 @@ export default function CsvViewerEditor() {
   const [sortAsc, setSortAsc] = useState(true);
   const [filter, setFilter] = useState("");
   const [visibleCount, setVisibleCount] = useState(100);
+  const [isDragging, setIsDragging] = useState(false);
+  const [uploadError, setUploadError] = useState("");
   const fileRef = useRef<HTMLInputElement>(null);
+  const dragCounter = useRef(0);
+
+  const isAcceptedFile = (f: File): boolean => {
+    const ext = f.name.split(".").pop()?.toLowerCase() || "";
+    if (["csv", "tsv", "txt"].includes(ext)) return true;
+    if (f.type === "text/csv" || f.type === "text/tab-separated-values" || f.type === "text/plain") return true;
+    return false;
+  };
 
   const parseCsv = (text: string) => {
     const lines = text.split("\n").map(l => l.trim()).filter(Boolean);
@@ -39,9 +49,12 @@ export default function CsvViewerEditor() {
     parseCsv(text);
   };
 
-  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
+  const processFile = useCallback((file: File) => {
+    if (!isAcceptedFile(file)) {
+      setUploadError(`"${file.name}" is not a supported file. Accepted: CSV, TSV, TXT.`);
+      return;
+    }
+    setUploadError("");
     const reader = new FileReader();
     reader.onload = () => {
       const text = reader.result as string;
@@ -49,7 +62,48 @@ export default function CsvViewerEditor() {
       parseCsv(text);
     };
     reader.readAsText(file);
+  }, []);
+
+  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) processFile(file);
   };
+
+  const handleDragEnter = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current += 1;
+    if (e.dataTransfer?.items && e.dataTransfer.items.length > 0) {
+      setIsDragging(true);
+    }
+  }, []);
+
+  const handleDragOver = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current -= 1;
+    if (dragCounter.current <= 0) {
+      dragCounter.current = 0;
+      setIsDragging(false);
+    }
+  }, []);
+
+  const handleDrop = useCallback(
+    (e: React.DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dragCounter.current = 0;
+      setIsDragging(false);
+      const file = e.dataTransfer?.files?.[0];
+      if (file) processFile(file);
+    },
+    [processFile]
+  );
 
   const filteredRows = useMemo(() => {
     let r = rows;
@@ -116,10 +170,39 @@ export default function CsvViewerEditor() {
       {/* Input */}
       <div>
         <label className="text-sm font-semibold text-gray-700 block mb-2">Upload CSV or Paste Data</label>
-        <div className="flex gap-3 flex-wrap mb-3">
+        <div
+          onClick={() => fileRef.current?.click()}
+          onDragEnter={handleDragEnter}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+          role="button"
+          tabIndex={0}
+          aria-label="Drop a CSV file here or click to upload"
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              fileRef.current?.click();
+            }
+          }}
+          className={`border-2 border-dashed rounded-2xl p-6 text-center cursor-pointer transition mb-3 ${
+            isDragging
+              ? "border-purple-500 bg-purple-50 scale-[1.01] shadow-md"
+              : "border-gray-300 hover:border-indigo-400 hover:bg-indigo-50/30"
+          }`}
+        >
+          <div className="text-3xl mb-2">{isDragging ? "⬇️" : "📊"}</div>
+          <div className="text-sm font-semibold text-gray-700">
+            {isDragging ? "Drop your CSV file here" : "Drag & drop your CSV file, or click to upload"}
+          </div>
+          <div className="text-xs text-gray-400 mt-1">Accepts .csv, .tsv, .txt</div>
           <input ref={fileRef} type="file" accept=".csv,.tsv,.txt" onChange={handleFile} className="hidden" />
-          <button onClick={() => fileRef.current?.click()} className="btn-primary text-sm !py-2 !px-5">Upload CSV File</button>
         </div>
+        {uploadError && (
+          <div className="mb-3 bg-red-50 border border-red-200 rounded-xl p-4 text-red-600 text-sm">
+            ❌ {uploadError}
+          </div>
+        )}
         <textarea
           value={rawCsv}
           onChange={e => handlePaste(e.target.value)}
