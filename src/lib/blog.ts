@@ -27188,6 +27188,180 @@ As a result of the review of the mutual fund regulations, there has been a 44% r
 <p>The practical takeaway is simple: the 125 bps of cuts the RBI delivered between February and December 2025 have largely been passed through by the end of Q4 FY26. If your EMI has not yet fallen by approximately that amount on an EBLR-linked loan, the transmission gap is on your bank, not on the RBI — and it is a gap you can close by switching benchmarks, renegotiating spreads, or transferring the loan. Run the numbers carefully before you act, and don't let a single basis-point comparison override the bigger picture of processing fees, tenure, and your own cash flow needs.</p>
 
 <p>For Indian households where the home loan EMI is the single largest monthly outflow, a 125 bps move is not academic. It is the difference between paying off a Mumbai or Hyderabad apartment in 17 years versus 20. The RBI has done its part of the job; what remains is for the borrower to make sure the benefit actually shows up in the EMI line of next month's bank statement.</p>`,
+  },
+  {
+    slug: "box-shadow-generator-guide-2026",
+    title: "Box Shadow Generator Guide — How It Works, Tips & Benefits",
+    description: "Free Box Shadow Generator online — generate css box-shadow with visual editor and live preview. Step-by-step guide with tips. 100% free, works on mobile. 202...",
+    date: "2026-05-14",
+    category: "CSS & Design",
+    readTime: "11 min read",
+    keywords: ["box shadow", "css", "shadow", "generator", "visual", "box shadow generator", "box shadow generator css", "box shadow generator tailwind"],
+    toolSlug: "box-shadow-generator",
+    image: {
+      src: "/blog/box-shadow-generator.webp",
+      alt: "Box Shadow Generator — Free Online Generate CSS box-shadow with visual editor and live preview Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>A Bangalore freelancer recently rebuilt the dashboard for a Surat-based jewellery store and spent three hours fiddling with one CSS property: <code>box-shadow</code>. The client wanted the product cards to "float gently like the ones on Tanishq's website" — which is design-speak for a soft, layered drop shadow with about 12px of blur and 8% opacity. Without a visual editor, that's a guessing game of typing six numbers, refreshing, squinting, adjusting, refreshing again. With one, it's thirty seconds.</p>
+
+<p>That's the gap the <a href="/tools/box-shadow-generator">Box Shadow Generator</a> on SabTools fills. You drag sliders for horizontal offset, vertical offset, blur radius, spread, and color; the preview updates live; you copy the generated CSS and paste it into your stylesheet or your Tailwind config. No login, no Figma plugin, no waiting for a design system meeting. This guide walks through what makes a good shadow, how to use the tool for the patterns Indian developers actually ship, and where shadows commonly go wrong on Razorpay-style payment UIs, Zomato-style product cards, and admin panels built for retail GST billing.</p>
+
+<h2>What the <code>box-shadow</code> property actually controls</h2>
+
+<p>CSS <code>box-shadow</code> takes up to six values in a specific order:</p>
+
+<pre><code>box-shadow: [inset] &lt;x-offset&gt; &lt;y-offset&gt; &lt;blur&gt; &lt;spread&gt; &lt;color&gt;;</code></pre>
+
+<ul>
+  <li><strong>X-offset</strong> pushes the shadow horizontally. Positive moves it right, negative moves it left. For most UI elements, keep this at 0 — directional light from the side looks unnatural on flat screens.</li>
+  <li><strong>Y-offset</strong> pushes the shadow down (positive) or up (negative). This is where the "lift" comes from. Cards usually use 2–8px; modals use 20–40px.</li>
+  <li><strong>Blur radius</strong> controls softness. 0 is a hard edge (rare, usually a design mistake). 10–30px is the sweet spot for cards and buttons.</li>
+  <li><strong>Spread</strong> grows or shrinks the shadow before blur is applied. Negative spread is useful for inner-glow effects on inputs.</li>
+  <li><strong>Color</strong> — almost always an <code>rgba()</code> with low alpha (0.05 to 0.25). Pure black at full opacity is the classic beginner mistake that makes a page look like a 2009 PowerPoint slide.</li>
+  <li><strong>inset</strong> (optional keyword) flips the shadow inside the element — useful for pressed-button states or input field depth.</li>
+</ul>
+
+<p>The generator exposes each of these as a slider plus a color picker, and previews the result on a sample card. Once it looks right, the tool outputs both vanilla CSS and a Tailwind-compatible <code>shadow-[...]</code> arbitrary value class, which matters because most modern Indian product teams — Cred, Zerodha Kite, Groww — ship Tailwind in production.</p>
+
+<h2>The four shadow recipes you'll actually use</h2>
+
+<p>Across 90% of UIs built for Indian audiences, four shadow patterns cover almost every need. Generate these once in the tool, save them to a snippets file, and reuse forever.</p>
+
+<h3>1. The subtle card lift</h3>
+
+<p>Used on dashboard widgets, product tiles, KYC step cards. Almost invisible until you turn it off:</p>
+
+<pre><code>box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);</code></pre>
+
+<p>Notice it's two stacked shadows separated by a comma — a tight inner shadow for definition and a wider outer one for ambience. This layered approach is what makes shadows on stripe.com or razorpay.com feel premium versus the flat single-shadow look of older Indian banking sites.</p>
+
+<h3>2. The hover lift</h3>
+
+<p>When a user hovers a clickable card — say a mutual fund tile in a Groww-style listing — the shadow grows and deepens. Pair this with a 2px <code>translateY(-2px)</code> transform:</p>
+
+<pre><code>box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10), 0 4px 10px rgba(0, 0, 0, 0.05);
+transform: translateY(-2px);
+transition: all 200ms ease;</code></pre>
+
+<h3>3. The modal/dropdown</h3>
+
+<p>Heavy enough to separate from page content, soft enough not to feel cartoonish:</p>
+
+<pre><code>box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);</code></pre>
+
+<p>The negative spread (<code>-12px</code>) is what gives this its distinctive shape — the shadow is squeezed inward at the top, so it pools beneath the modal like a real object lit from above.</p>
+
+<h3>4. The inset input</h3>
+
+<p>For form fields on a GST invoice generator or loan application form, an inset shadow gives depth without a hard border:</p>
+
+<pre><code>box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.06);</code></pre>
+
+<p>The generator's inset toggle handles this — flip it on, dial the y-offset to 1px, and you've got the same field treatment used on the Income Tax e-filing portal's form inputs.</p>
+
+<h2>Walking through a real Indian use case</h2>
+
+<p>Suppose you're building a landing page for a Pune chartered accountant's practice. The hero section shows three service cards: GST Filing, ITR Filing, and Audit. The CA wants them to feel "trustworthy and modern" — translation: white cards on a light grey background with shadows that don't scream for attention.</p>
+
+<p>Here's the workflow in the generator:</p>
+
+<ol>
+  <li>Set <strong>x-offset</strong> to 0 and <strong>y-offset</strong> to 4. The light source is overhead.</li>
+  <li>Drag <strong>blur</strong> to 20. Soft, not crisp.</li>
+  <li>Leave <strong>spread</strong> at 0. You rarely need spread for cards.</li>
+  <li>Open the color picker, pick black, then drop the alpha to about <strong>0.08</strong>. This is the single most important step — most beginners leave alpha at 1.0 and wonder why their shadows look harsh.</li>
+  <li>Copy the generated CSS: <code>box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);</code></li>
+</ol>
+
+<p>If you want the cards to react on hover, generate a second, heavier shadow with y-offset 12, blur 32, alpha 0.12 — and apply it on <code>:hover</code>. The whole exercise takes under two minutes versus the 20 minutes you'd spend hand-tuning values in DevTools.</p>
+
+<h2>Common shadow mistakes on Indian websites</h2>
+
+<p>If you audit the top 50 Indian SME websites, the same five shadow mistakes show up over and over. The generator helps you avoid them, but only if you know what to look for.</p>
+
+<ul>
+  <li><strong>Pure black at full opacity.</strong> <code>box-shadow: 5px 5px 0 black</code> belongs on a 2010 retail flyer, not a 2026 fintech app. Always reduce alpha to between 0.05 and 0.25.</li>
+  <li><strong>Equal X and Y offsets.</strong> A shadow that sits diagonally below-right of an element implies light coming from the upper-left — which is physically correct but visually old-fashioned. Modern UIs use X=0 so shadows fall straight down.</li>
+  <li><strong>Forgetting border-radius.</strong> Sharp 90° corners on a card with a soft shadow look mismatched. If the shadow is soft (blur ≥ 12), pair it with at least <code>border-radius: 8px</code>.</li>
+  <li><strong>Shadow on a coloured background.</strong> A pure black shadow on a teal hero section turns muddy. Tint the shadow with the background hue — for a green hero, use <code>rgba(20, 80, 50, 0.2)</code>. The generator's color picker accepts any hex, so you can experiment in real time.</li>
+  <li><strong>Stacking too many layers.</strong> Three or four comma-separated shadows is the maximum for performance — beyond that, you'll see jank on lower-end Android devices common in tier-2 cities where 60% of Indian internet users live.</li>
+</ul>
+
+<h2>Tailwind output, and why it matters</h2>
+
+<p>If your project uses Tailwind CSS (which most modern Indian startups do), the generator outputs an arbitrary-value class you can paste directly into JSX or HTML:</p>
+
+<pre><code>&lt;div class="shadow-[0_4px_20px_rgba(0,0,0,0.08)]"&gt;
+  Card content
+&lt;/div&gt;</code></pre>
+
+<p>For shadows you'll reuse, copy the value into your <code>tailwind.config.js</code> under <code>theme.extend.boxShadow</code>:</p>
+
+<pre><code>boxShadow: {
+  'card': '0 4px 20px rgba(0, 0, 0, 0.08)',
+  'card-hover': '0 12px 32px rgba(0, 0, 0, 0.12)',
+  'modal': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+}</code></pre>
+
+<p>Now you can write <code>className="shadow-card hover:shadow-card-hover"</code> across the project. This is the pattern used by every Indian SaaS team I've worked with — Khatabook, Vyapar, Bijak — because it keeps shadow tokens centralised and consistent.</p>
+
+<h2>Pairing shadows with other CSS effects</h2>
+
+<p>Shadows rarely live alone. The visual identity of a modern card or hero section comes from combining a shadow with a gradient background, a tinted border, or a glassmorphism blur. SabTools has companion tools for each of these layers:</p>
+
+<ul>
+  <li>Use the <a href="/tools/css-gradient-generator">CSS gradient generator</a> to build the background for a hero section, then add a subtle shadow underneath for depth. A common pattern: a 135° gradient from <code>#667eea</code> to <code>#764ba2</code> on a card with <code>0 20px 40px rgba(102, 126, 234, 0.3)</code> — the shadow picks up the gradient's blue tint.</li>
+  <li>The <a href="/tools/glassmorphism-generator">glassmorphism generator</a> handles the frosted-glass effect made famous by macOS Big Sur and now common on Indian fintech apps like Jupiter and Fi Money. Glass cards still need shadows underneath to anchor them visually.</li>
+  <li>For text-level depth — say a hero heading on a CA firm's landing page — pair box shadows on the container with the <a href="/tools/text-shadow-generator">text shadow generator</a> on the headline itself. Keep text shadows subtle (1–2px blur) to maintain readability.</li>
+  <li>Get the shadow colour right by sampling from your brand palette using the <a href="/tools/color-palette-generator">color palette generator</a>. A tinted shadow that matches your primary colour at 15% alpha always looks more intentional than generic black.</li>
+</ul>
+
+<h2>Performance: when shadows hurt scrolling</h2>
+
+<p>Box shadows are GPU-accelerated on modern browsers, but they're not free. On a long scrollable list — say 200 transactions in a UPI history view, or 500 products on a Surat textile wholesaler's catalogue — heavy shadows on every row will cause visible frame drops on a ₹12,000 Android phone with 3GB RAM (which is what most tier-2 city users carry).</p>
+
+<p>Three practical rules:</p>
+
+<ol>
+  <li><strong>Use single-layer shadows on list items.</strong> Save the fancy two-layer stacks for cards in the viewport's hero zone.</li>
+  <li><strong>Avoid huge blur values on many elements.</strong> A <code>40px</code> blur applied to 100 list items will tank your scroll FPS. Keep list-item blurs under 12px.</li>
+  <li><strong>Test on a real low-end device.</strong> Chrome DevTools' CPU throttling at 4x slowdown approximates a budget Android. If shadows make scrolling stutter there, simplify them.</li>
+</ol>
+
+<h2>Accessibility: shadows are not borders</h2>
+
+<p>One subtle issue worth flagging: shadows alone don't satisfy WCAG contrast requirements. If you're using a faint shadow to separate a card from a white background, users with low vision or those on a glare-affected mobile screen (think: Delhi summer noon, outdoor delivery agent checking an order) may not see the card boundary at all.</p>
+
+<p>The fix is either a 1px hairline border (<code>border: 1px solid rgba(0,0,0,0.06)</code>) underneath the shadow, or a slightly darker background colour for the page so the white card has a real contrast edge. The generator outputs CSS for the shadow only — pair it with one of these techniques whenever the shadow alpha is below 0.10.</p>
+
+<h2>Quick reference: shadow values for common UI patterns</h2>
+
+<p>Bookmark these. They cover almost every case you'll hit while building product UIs for Indian audiences:</p>
+
+<ul>
+  <li><strong>Pill button:</strong> <code>0 2px 4px rgba(0,0,0,0.06)</code></li>
+  <li><strong>Primary CTA (lifted):</strong> <code>0 4px 14px rgba(59,130,246,0.35)</code> — tint to match button colour</li>
+  <li><strong>Default card:</strong> <code>0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04)</code></li>
+  <li><strong>Elevated card:</strong> <code>0 10px 25px rgba(0,0,0,0.10), 0 4px 10px rgba(0,0,0,0.05)</code></li>
+  <li><strong>Modal/dialog:</strong> <code>0 25px 50px -12px rgba(0,0,0,0.25)</code></li>
+  <li><strong>Dropdown menu:</strong> <code>0 8px 16px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.05)</code></li>
+  <li><strong>Floating action button:</strong> <code>0 6px 16px rgba(0,0,0,0.18)</code></li>
+  <li><strong>Tooltip:</strong> <code>0 4px 8px rgba(0,0,0,0.12)</code></li>
+  <li><strong>Input field (inset):</strong> <code>inset 0 1px 2px rgba(0,0,0,0.06)</code></li>
+  <li><strong>Pressed button (inset):</strong> <code>inset 0 2px 4px rgba(0,0,0,0.12)</code></li>
+</ul>
+
+<p>Each of these can be regenerated and tweaked in the tool — start from the closest pattern, adjust the colour or offset to match your design, and copy the result.</p>
+
+<h2>From design file to production</h2>
+
+<p>Most Indian design handoffs happen in Figma, where shadows are defined as "Drop Shadow" effects with X, Y, Blur, Spread, and Colour fields — the same five values CSS uses. The generator becomes a translation layer: read the values from Figma's effect panel, plug them into the sliders, copy the CSS, paste into your component. The reason it's faster than typing the CSS by hand is the live preview catches Figma-vs-browser rendering differences immediately (Figma's shadow algorithm is slightly softer than CSS's by default, so a Figma blur of 20 often needs to be ~24 in CSS to match).</p>
+
+<p>If you're building a design system from scratch — say for a Hyderabad-based logistics startup standardising its driver app, ops dashboard, and customer site — generate four to six shadow tokens once, add them to your Tailwind config or CSS variables, and never touch raw <code>box-shadow</code> values in component code again. That discipline is what separates UIs that age well from ones that need a rewrite every two years.</p>
+
+<p>Open the <a href="/tools/box-shadow-generator">Box Shadow Generator</a> and start with the subtle card lift — drag the alpha to 0.08, copy the CSS, and see how much cleaner your next card looks. →</p>`,
   }
 ];
 
