@@ -11,7 +11,16 @@ export default function PhotoEnhancer() {
   const [resultUrl, setResultUrl] = useState("");
   const [previewUrl, setPreviewUrl] = useState("");
   const [showBefore, setShowBefore] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [uploadError, setUploadError] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+  const dragCounter = useRef(0);
+
+  const isAcceptedFile = (f: File): boolean => {
+    if (f.type.startsWith("image/")) return true;
+    const ext = f.name.split(".").pop()?.toLowerCase() || "";
+    return ["jpg", "jpeg", "png", "webp", "bmp", "gif", "tiff", "tif", "avif"].includes(ext);
+  };
 
   const applyEnhance = useCallback((img: HTMLImageElement, b: number, c: number, s: number, sharp: number) => {
     const canvas = document.createElement("canvas");
@@ -49,9 +58,12 @@ export default function PhotoEnhancer() {
     setResultUrl(canvas.toDataURL("image/jpeg", 0.92));
   }, []);
 
-  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
+  const processFile = useCallback((file: File) => {
+    if (!isAcceptedFile(file)) {
+      setUploadError(`"${file.name}" is not a supported image.`);
+      return;
+    }
+    setUploadError("");
     setOriginalFile(file);
     setPreviewUrl(URL.createObjectURL(file));
     setBrightness(110);
@@ -68,7 +80,48 @@ export default function PhotoEnhancer() {
       img.src = ev.target?.result as string;
     };
     reader.readAsDataURL(file);
+  }, [applyEnhance]);
+
+  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) processFile(file);
   };
+
+  const handleDragEnter = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current += 1;
+    if (e.dataTransfer?.items && e.dataTransfer.items.length > 0) {
+      setIsDragging(true);
+    }
+  }, []);
+
+  const handleDragOver = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current -= 1;
+    if (dragCounter.current <= 0) {
+      dragCounter.current = 0;
+      setIsDragging(false);
+    }
+  }, []);
+
+  const handleDrop = useCallback(
+    (e: React.DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dragCounter.current = 0;
+      setIsDragging(false);
+      const file = e.dataTransfer?.files?.[0];
+      if (file) processFile(file);
+    },
+    [processFile]
+  );
 
   const update = (b: number, c: number, s: number, sh: number) => {
     if (image) applyEnhance(image, b, c, s, sh);
@@ -102,13 +155,37 @@ export default function PhotoEnhancer() {
     <div className="space-y-6">
       <div
         onClick={() => inputRef.current?.click()}
-        className="border-2 border-dashed border-gray-300 rounded-2xl p-10 text-center cursor-pointer hover:border-indigo-400 hover:bg-indigo-50/50 transition"
+        onDragEnter={handleDragEnter}
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+        onDrop={handleDrop}
+        role="button"
+        tabIndex={0}
+        aria-label="Drop a photo here or click to upload"
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            inputRef.current?.click();
+          }
+        }}
+        className={`border-2 border-dashed rounded-2xl p-10 text-center cursor-pointer transition ${
+          isDragging
+            ? "border-purple-500 bg-purple-50 scale-[1.01] shadow-md"
+            : "border-gray-300 hover:border-indigo-400 hover:bg-indigo-50/50"
+        }`}
       >
-        <div className="text-4xl mb-3">✨</div>
-        <div className="text-sm font-semibold text-gray-700">Click to upload photo</div>
+        <div className="text-4xl mb-3">{isDragging ? "⬇️" : "✨"}</div>
+        <div className="text-sm font-semibold text-gray-700">
+          {isDragging ? "Drop your photo here" : "Drag & drop your photo, or click to upload"}
+        </div>
         <div className="text-xs text-gray-400 mt-1">Auto-enhances brightness, contrast & saturation</div>
         <input ref={inputRef} type="file" accept="image/*" onChange={handleFile} className="hidden" />
       </div>
+      {uploadError && (
+        <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-red-600 text-sm">
+          ❌ {uploadError}
+        </div>
+      )}
 
       {originalFile && (
         <>

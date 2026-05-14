@@ -4,6 +4,8 @@ import { useState, useRef, useCallback, useMemo } from "react";
 export default function PhotoColorChanger() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const previewCanvasRef = useRef<HTMLCanvasElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const dragCounter = useRef(0);
   const [image, setImage] = useState<HTMLImageElement | null>(null);
   const [originalData, setOriginalData] = useState<ImageData | null>(null);
   const [sourceColor, setSourceColor] = useState<string>("#ff0000");
@@ -11,10 +13,21 @@ export default function PhotoColorChanger() {
   const [tolerance, setTolerance] = useState(30);
   const [picking, setPicking] = useState(false);
   const [applied, setApplied] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [uploadError, setUploadError] = useState("");
 
-  const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
+  const isAcceptedFile = (f: File): boolean => {
+    if (f.type.startsWith("image/")) return true;
+    const ext = f.name.split(".").pop()?.toLowerCase() || "";
+    return ["jpg", "jpeg", "png", "webp", "bmp", "gif", "tiff", "tif", "avif"].includes(ext);
+  };
+
+  const processFile = useCallback((file: File) => {
+    if (!isAcceptedFile(file)) {
+      setUploadError(`"${file.name}" is not a supported image.`);
+      return;
+    }
+    setUploadError("");
     const img = new Image();
     img.onload = () => {
       setImage(img);
@@ -29,7 +42,48 @@ export default function PhotoColorChanger() {
       setOriginalData(ctx.getImageData(0, 0, img.width, img.height));
     };
     img.src = URL.createObjectURL(file);
+  }, []);
+
+  const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) processFile(file);
   };
+
+  const handleDragEnter = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current += 1;
+    if (e.dataTransfer?.items && e.dataTransfer.items.length > 0) {
+      setIsDragging(true);
+    }
+  }, []);
+
+  const handleDragOver = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current -= 1;
+    if (dragCounter.current <= 0) {
+      dragCounter.current = 0;
+      setIsDragging(false);
+    }
+  }, []);
+
+  const handleDrop = useCallback(
+    (e: React.DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dragCounter.current = 0;
+      setIsDragging(false);
+      const file = e.dataTransfer?.files?.[0];
+      if (file) processFile(file);
+    },
+    [processFile]
+  );
 
   const hexToRgb = useCallback((hex: string) => {
     const r = parseInt(hex.slice(1, 3), 16);
@@ -125,7 +179,38 @@ export default function PhotoColorChanger() {
     <div className="space-y-6">
       <div>
         <label className="block text-sm font-semibold text-gray-700 mb-2">Upload Image</label>
-        <input type="file" accept="image/*" onChange={handleUpload} className="calc-input text-sm" />
+        <div
+          onClick={() => inputRef.current?.click()}
+          onDragEnter={handleDragEnter}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+          role="button"
+          tabIndex={0}
+          aria-label="Drop an image here or click to upload"
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              inputRef.current?.click();
+            }
+          }}
+          className={`border-2 border-dashed rounded-2xl p-8 text-center cursor-pointer transition ${
+            isDragging
+              ? "border-purple-500 bg-purple-50 scale-[1.01] shadow-md"
+              : "border-gray-300 hover:border-indigo-400 hover:bg-indigo-50/30"
+          }`}
+        >
+          <div className="text-4xl mb-2">{isDragging ? "⬇️" : "🎨"}</div>
+          <div className="text-sm font-semibold text-gray-700">
+            {isDragging ? "Drop your image here" : "Drag & drop your image, or click to upload"}
+          </div>
+          <input ref={inputRef} type="file" accept="image/*" onChange={handleUpload} className="hidden" />
+        </div>
+        {uploadError && (
+          <div className="mt-3 bg-red-50 border border-red-200 rounded-xl p-4 text-red-600 text-sm">
+            ❌ {uploadError}
+          </div>
+        )}
       </div>
 
       {image && (
