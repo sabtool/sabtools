@@ -160,9 +160,10 @@
     "indian-pin-code-directory",
     "concrete-calculator",
     "voter-id-info",
-    "box-shadow-generator"
+    "box-shadow-generator",
+    "text-diff-checker"
   ],
-  "lastCategory": "css",
-  "totalPosts": 161,
-  "lastRun": "2026-05-14T07:31:42.395Z"
+  "lastCategory": "data",
+  "totalPosts": 162,
+  "lastRun": "2026-05-14T11:48:35.345Z"
 }
