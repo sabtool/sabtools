@@ -161,9 +161,10 @@
     "concrete-calculator",
     "voter-id-info",
     "box-shadow-generator",
-    "text-diff-checker"
+    "text-diff-checker",
+    "court-fee-calculator"
   ],
-  "lastCategory": "data",
-  "totalPosts": 162,
-  "lastRun": "2026-05-14T11:48:35.345Z"
+  "lastCategory": "legal",
+  "totalPosts": 163,
+  "lastRun": "2026-05-15T07:02:12.721Z"
 }
