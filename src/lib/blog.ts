@@ -27924,6 +27924,216 @@ transition: all 200ms ease;</code></pre>
 <p>The honest answer is that these aren't really competitors — they solve adjacent problems. The mistake users make is trying to force a tax-filing tool to do a valuation job, then giving up and using a generic gold rate website with no karat math.</p>
 
 <p>Try SabTools' <a href="/tools/gold-price-calculator">Gold Price Calculator</a> → enter weight, pick karat, plug in today's rate, get the rupee value in seconds.</p>`,
+  },
+  {
+    slug: "news-2026-05-15-new-tax-saving-schemes-under-section-80c-80d-80ccd",
+    title: "New tax-saving schemes under Section 80C / 80D / 80CCD (2026 Update)",
+    description: "New tax-saving schemes under Section 80C / 80D / 80CCD — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-05-15",
+    category: "Tax & Salary",
+    readTime: "11 min read",
+    keywords: ["New tax-saving schemes under", "tax news india 2026", "india 2026 update"],
+    toolSlug: "income-tax-calculator",
+    image: {
+      src: "/blog/income-tax-calculator.webp",
+      alt: "New tax-saving schemes under Section 80C / 80D / 80CCD (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>The 2025 tax-saving landscape has shifted — here's what actually changed</h2>
+
+<p>If you've spent the last few months wondering whether Section 80C, 80D, and 80CCD still matter, you're not alone. Between Union Budget 2025's overhaul of the new tax regime, the introduction of fresh deduction routes like NPS Vatsalya, and the passing of the Income Tax Act 2025 that renumbers familiar sections, the tax-planning playbook for Indian taxpayers has been quietly rewritten.</p>
+
+<p>Most of the noise has been about the headline-grabbing ₹12 lakh rebate under the new regime. But the bigger story — the one that affects how a salaried professional in Bengaluru, a freelancer in Pune, or a small business owner in Ahmedabad should actually deploy their savings — sits inside the rules around 80C, 80D, 80CCD(1B), and 80CCD(2). Some routes have been expanded. Some have been quietly killed off for new-regime filers. And one entirely new product, NPS Vatsalya, has been folded into the deduction framework for the first time.</p>
+
+<p>Here is what the Ministry of Finance, CBDT, and reputable tax commentary have confirmed about tax-saving deductions for FY 2025-26 — and how to use them.</p>
+
+<h2>The big news: NPS Vatsalya gets the same 80CCD(1B) benefit as regular NPS</h2>
+
+<p>The most material change to the deduction architecture in Budget 2025 was on the pension side. <a href="https://www.business-standard.com/finance/personal-finance/budget-2025-extends-tax-benefits-to-nps-vatsalya-under-section-80ccd-1b-125020101041_1.html" rel="noopener" target="_blank">
+
+Subscribers of pension scheme NPS Vatsalya will receive the same tax benefits as regular NPS for their contributions under Section 80CCD(1B)
+
+</a>, the Finance Minister announced in the budget speech.</p>
+
+<p>For context, 
+
+NPS Vatsalya was unveiled in the Budget of 2024 as a scheme designed for minors
+
+, and <a href="https://taxguru.in/income-tax/budget-2025-deduction-section-80ccd-nps-vatsalya-scheme.html" rel="noopener" target="_blank">
+
+the NPS Vatsalya Scheme was launched on September 18, 2024, allowing parents or guardians to open National Pension System accounts on behalf of their minor children
+
+</a>. Until Budget 2025, however, contributions to Vatsalya did not carry an explicit 80CCD(1B) deduction.</p>
+
+<p>That has now changed. <a href="https://www.proteantech.in/articles/nps-vatsalya-tax-deduction-budget-emiac1722025/" rel="noopener" target="_blank">
+
+Contributions to the NPS Vatsalya Scheme will now be eligible for an additional deduction of up to ₹50,000 under Section 80CCD(1B). This is over and above the existing ₹1.5 lakh limit under Section 80C.
+
+</a></p>
+
+<p>The practical implication: if you have a child and were already maxing out 80C through PPF, ELSS, or insurance, opening a Vatsalya account for your minor child now gives you another ₹50,000 deduction slot per year — provided you stay on the old tax regime.</p>
+
+<h3>The fine print on 80CCD(1B) under the new regime</h3>
+
+<p>Crucially, this expanded deduction is not available to those who have opted into the new tax regime. <a href="https://www.taxbuddy.com/blog/80ccd-deduction-limit-under-the-new-tax-regime-fy-2025-26" rel="noopener" target="_blank">
+
+The ₹50,000 deduction under Section 80CCD(1B), meant for voluntary NPS contributions, is not permitted under the new tax regime applicable from April 1, 2025. Only employer-related contributions under Section 80CCD(2) are allowed in the new regime.
+
+</a></p>
+
+<p>That makes the Vatsalya benefit a meaningful — but specifically old-regime — sweetener. If you're a parent in Mumbai or Hyderabad whose tax planning still leans on HRA, home loan interest, and 80C-heavy investments, this is now a serious addition to your toolkit.</p>
+
+<h2>Section 80CCD(2) — the only NPS route that survives in the new regime</h2>
+
+<p>The new tax regime, despite its sweeping disallowance of most deductions, retains one important pension-linked benefit: the employer's contribution to NPS under Section 80CCD(2).</p>
+
+<p><a href="https://www.policybazaar.com/income-tax/some-of-the-important-deductions-available-in-the-new-tax-regime/" rel="noopener" target="_blank">
+
+You can claim a deduction for your employer's contribution to your National Pension Scheme (NPS) under Section 80CCD(2) even under the new tax regime for FY 2025-26 and FY 2026-27.
+
+</a></p>
+
+<p>And the headroom is substantial. <a href="https://cleartax.in/s/80c-80-deductions" rel="noopener" target="_blank">
+
+Section 80CCD(2) allows deductions for employers' contributions made to the pension scheme, maximum up to 14% of salary
+
+</a>. That 14% threshold applies to both government and private sector employees alike — a change from the earlier 10% cap that applied to private sector workers.</p>
+
+<p>For a salaried professional earning ₹20 lakh per annum with basic + DA of roughly ₹10 lakh, this means an employer NPS contribution of up to ₹1.4 lakh can sit completely outside taxable income. If your employer offers corporate NPS — and many in IT, BFSI, and pharma now do — restructuring your CTC to route 14% of basic into employer NPS is one of the few genuine tax-saving levers available under the new regime.</p>
+
+<h2>Section 80C — same ₹1.5 lakh ceiling, but the basket has been clarified</h2>
+
+<p>Despite years of speculation that Budget 2025 might raise the 80C ceiling, no increase came. The aggregate limit is unchanged.</p>
+
+<p><a href="https://indiantaxplanning.in/section-80c-deductions/" rel="noopener" target="_blank">
+
+The ₹1.5 lakh limit is combined across all 80C instruments — EPF, PPF, ELSS, LIC, NSC, SCSS, 5-year FD, home loan principal, and tuition fees. Even if your total investments exceed ₹1.5 lakh, only ₹1.5 lakh is deductible.
+
+</a></p>
+
+<p>The qualifying basket itself remains broad. <a href="https://legalsuvidha.com/blog/section-80c-investments-guide/" rel="noopener" target="_blank">
+
+Eligible investments include PPF, ELSS mutual funds, NPS Tier I, LIC premium, 5-year tax-saving FD, NSC, ULIP, Sukanya Samriddhi, home loan principal, children's tuition fees, and EPF contributions.
+
+</a></p>
+
+<h3>Practical 80C strategy for FY 2025-26</h3>
+
+<p>For most salaried Indians, the smartest 80C deployment looks like this:</p>
+
+<ul>
+<li><strong>EPF first.</strong> If you're salaried, your monthly EPF contribution likely covers a significant chunk of the ₹1.5 lakh ceiling already. Audit your payslip before adding more.</li>
+<li><strong>ELSS for the balance, if you have a 3-year horizon.</strong> Equity Linked Savings Schemes carry the shortest lock-in among 80C instruments and offer equity-linked returns.</li>
+<li><strong>PPF if you want guaranteed, sovereign-backed returns.</strong> The 15-year lock-in is long, but the corpus and interest both remain tax-free under EEE treatment.</li>
+<li><strong>Sukanya Samriddhi if you have a daughter under 10.</strong> Interest rates here have historically tracked above PPF.</li>
+</ul>
+
+<p>What's worth flagging: <a href="https://www.policybazaar.com/income-tax/some-of-the-important-deductions-available-in-the-new-tax-regime/" rel="noopener" target="_blank">
+
+if you have large deductions and exemptions — HRA, 80C, 80D, home loan interest — that significantly reduce your taxable income, the old regime is usually more beneficial
+
+</a>. Don't reflexively switch to the new regime just because of the ₹12 lakh rebate headline — run the actual numbers.</p>
+
+<p>To see exactly how your old-regime 80C/80D stack compares against the new-regime ₹12 lakh rebate for your specific income, run both scenarios through SabTools' <a href="/tools/income-tax-calculator">Income Tax Calculator</a> — it computes liability under both regimes for FY 2024-25 and helps you quantify whether your deductions justify staying on the old framework.</p>
+
+<h2>Section 80D — health insurance limits held steady, but the rules around senior citizens matter more than ever</h2>
+
+<p>Section 80D, which covers health insurance premiums and preventive health check-ups, saw no statutory change in Budget 2025. <a href="https://www.fincover.com/insurance/health/80d-deduction-for-senior-citizens/" rel="noopener" target="_blank">
+
+There is no hike in limits in AY 2025-26; the maximum limit is ₹50,000 for senior citizens
+
+</a>.</p>
+
+<p>That said, 80D remains one of the most underused deduction routes for middle-class Indian families. Here's the structure that applies for FY 2025-26:</p>
+
+<ul>
+<li><strong>Self, spouse, dependent children:</strong> Up to ₹25,000 per year for health insurance premiums.</li>
+<li><strong>Parents (below 60):</strong> Additional ₹25,000 deduction.</li>
+<li><strong>Parents (senior citizens, 60+):</strong> Additional deduction of up to ₹50,000.</li>
+<li><strong>If you and your parents are both senior citizens:</strong> Total deduction can go up to ₹1 lakh in a year.</li>
+</ul>
+
+<p>For senior citizens without an active health policy, there's a separate provision. <a href="https://www.finnovate.in/learn/blog/section-80d-for-parents-and-senior-citizens" rel="noopener" target="_blank">
+
+Only if no health policy is in force for that resident senior or very-senior citizen, medical expenditure up to ₹50,000 can be claimed, and it must be paid via non-cash mode with itemised proofs
+
+</a>. This is a critical clause for families whose elderly parents are uninsurable due to pre-existing conditions — you can still claim the deduction against actual medical bills.</p>
+
+<p>And on regime treatment: <a href="https://www.axismaxlife.com/blog/tax-savings/section-80d" rel="noopener" target="_blank">
+
+as of FY 2025-26, the 80D benefits are only available under the old tax regime and no changes have occurred since the Budget 2018 amendment
+
+</a>. If you're paying ₹40,000–₹60,000 a year in family health premiums and another ₹30,000 for senior citizen parents, that single line item alone makes a strong case for the old regime.</p>
+
+<h2>The new tax regime sweetener: a ₹12 lakh rebate that reshapes the calculus</h2>
+
+<p>The reason 80C, 80D, and 80CCD have become a regime-versus-regime question rather than a pure tax-planning question is the rewrite of Section 87A in Budget 2025.</p>
+
+<p><a href="https://www.taxbuddy.com/blog/section-87a-rebate-2025" rel="noopener" target="_blank">
+
+The rebate threshold under the new regime was increased from ₹7,00,000 to ₹12,00,000, while the maximum rebate amount was raised to ₹60,000.
+
+</a> Combined with the higher standard deduction, this rebate makes the new regime essentially tax-free for most middle-income earners.</p>
+
+<p><a href="https://cleartax.in/s/income-tax-slabs" rel="noopener" target="_blank">
+
+Since rebate is allowed up to Rs. 12 lakh income and a standard deduction of Rs. 75,000 under the new regime, income up to Rs. 12.75 lakhs can result in zero tax. Income up to Rs. 12 lakh is effectively tax-free due to tax rebate under Section 87A.
+
+</a></p>
+
+<p>For a salaried professional in Pune or Chennai earning ₹12.75 lakh or less, the new regime can deliver zero tax with no deductions claimed at all — which means 80C, 80D, and 80CCD(1B) become irrelevant for them. The math flips, though, the moment your income crosses that threshold and your deductions (HRA, 80C, 80D, home loan interest, 80CCD(1B)) cross roughly ₹4–5 lakh aggregate.</p>
+
+<h3>Marginal relief — a small but important detail</h3>
+
+<p>One feature of the new regime that's easy to miss: marginal relief just past the ₹12 lakh threshold. <a href="https://www.ujjivansfb.bank.in/banking-blogs/personal-finance/marginal-tax-relief-save-income-tax" rel="noopener" target="_blank">
+
+Marginal relief bridges the gap by reducing the tax bill drastically for incomes slightly above ₹12 lakh, so the additional tax does not exceed the additional income earned over ₹12 lakh.
+
+</a> If your gross taxable income lands at ₹12.10 lakh, you don't suddenly owe tax on the full slab.</p>
+
+<h2>What's coming: the Income Tax Act 2025 and renumbered sections</h2>
+
+<p>The other long-term shift Indian taxpayers should be aware of is the passage of the Income Tax Act 2025, which formally replaces the 1961 Act. The deductions don't disappear — but the section numbers do.</p>
+
+<p><a href="https://www.caalokkumar.com/income-tax-act-2025-section-finder/" rel="noopener" target="_blank">
+
+Section 80C has been renumbered as Section 123 under the Income-tax Act, 2025. The aggregate deduction cap of ₹1.5 lakh is retained and continues to be available only under the old tax regime. LIC, PF, ELSS, tuition fees, housing loan principal and other eligible investments continue.
+
+</a></p>
+
+<p>Section 80CCD(1B) has been similarly renumbered. <a href="https://cleartax.in/s/section-80-ccd-1b" rel="noopener" target="_blank">
+
+Section 80CCD(1B) of the Income Tax Act is now replaced with Section 124(3) of the Income Tax Act 2025.
+
+</a></p>
+
+<p>For the current filing season, this is mostly cosmetic. <a href="https://www.basunivesh.com/new-income-tax-act-2025-what-changed-for-you-from-april-2026/" rel="noopener" target="_blank">
+
+The new section numbers apply only from July 2027 onwards, when you file for Tax Year 2026-27.
+
+</a> Your ITR-1 or ITR-2 for FY 2025-26 will continue to reference 80C, 80D, and 80CCD as you know them.</p>
+
+<p>The structural intent, however, is meaningful. <a href="https://www.indiafilings.com/learn/section-80c-moves-to-section-123-in-income-tax-bill-2025" rel="noopener" target="_blank">
+
+The Income Tax Bill 2025 restructures Section 80C by consolidating various deductions into Schedule XV under Section 123 to simplify the tax-saving process and improve clarity for taxpayers.
+
+</a> Forms will eventually flag the new section labels, and tax software will need to update — but the deductions themselves continue under the old regime.</p>
+
+<h2>What an Indian taxpayer should actually do before March 31, 2026</h2>
+
+<p>Translating the legal updates into action items for FY 2025-26:</p>
+
+<ol>
+<li><strong>Run the regime comparison cold.</strong> Don't assume the new regime is better because of the ₹12 lakh rebate. If your aggregate deductions — HRA + 80C + 80D + home loan interest + 80CCD(1B) — exceed roughly ₹4.5 lakh, the old regime likely still wins. Calculate both.</li>
+<li><strong>If you have a minor child and are on the old regime, open an NPS Vatsalya account.</strong> The fresh ₹50,000 80CCD(1B) headroom for Vatsalya is the most underused new benefit Budget 2025 introduced.</li>
+<li><strong>Negotiate employer NPS into your CTC if it isn't there already.</strong> The 14% 80CCD(2) headroom is the single most efficient pension deduction available — and it works under both regimes.</li>
+<li><strong>Audit your 80C basket for double-counting.</strong> Many salaried Indians end up with ₹2 lakh of "80C eligible" investments but can only claim ₹1.5 lakh. Reallocate the excess to NPS or non-tax-deductible equity SIPs that compound better long-term.</li>
+<li><strong>Don't skip 80D.</strong> Even a basic ₹15,000-a-year family floater plus a ₹35,000 senior citizen policy for parents can yield a ₹50,000 deduction at no real "investment lock-in" cost — you're buying insurance you'd want anyway.</li>
+<li><strong>Get your documents in order early.</strong> Premium receipts, NPS contribution statements, tuition fee receipts, home loan principal certificates from your bank — collect these by January 2026, not March.</li>
+</ol>
+
+<p>The tax-saving framework for FY 2025-26 isn't fundamentally broken — it's bifurcated. The new regime offers simplicity and a generous ₹12 lakh rebate. The old regime keeps the full toolkit of 80C, 80D, 80CCD(1B), and now the expanded NPS Vatsalya route. The question for every Indian taxpayer this year is less about which schemes to invest in, and more about which regime makes those schemes worthwhile in the first place. That single decision — old versus new — is now the biggest tax-planning lever in the country, and it's worth spending an hour with a calculator and your Form 16 before you commit either way.</p>`,
   }
 ];
 
