@@ -163,9 +163,10 @@
     "box-shadow-generator",
     "text-diff-checker",
     "court-fee-calculator",
-    "gold-price-calculator"
+    "gold-price-calculator",
+    "fancy-text-generator"
   ],
-  "lastCategory": "tax",
-  "totalPosts": 164,
-  "lastRun": "2026-05-15T11:42:16.931Z"
+  "lastCategory": "text",
+  "totalPosts": 165,
+  "lastRun": "2026-05-16T06:14:00.340Z"
 }
