@@ -164,9 +164,10 @@
     "text-diff-checker",
     "court-fee-calculator",
     "gold-price-calculator",
-    "fancy-text-generator"
+    "fancy-text-generator",
+    "goal-based-sip-calculator"
   ],
-  "lastCategory": "text",
-  "totalPosts": 165,
-  "lastRun": "2026-05-16T06:14:00.340Z"
+  "lastCategory": "finance",
+  "totalPosts": 166,
+  "lastRun": "2026-05-16T11:07:59.617Z"
 }
