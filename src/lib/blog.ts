@@ -28418,6 +28418,129 @@ The Income Tax Bill 2025 restructures Section 80C by consolidating various deduc
 <p>SabTools' Goal-Based SIP Calculator focuses narrowly on that gap: enter what you want, when you want it, and get the monthly SIP needed with inflation handled honestly. No signup, no app download, no funnel.</p>
 
 <p>Try SabTools' <a href="/tools/goal-based-sip-calculator">Goal-Based SIP Calculator</a> → and pair it with the <a href="/tools/inflation-calculator">Inflation Calculator</a> if you want to double-check your future-value math.</p>`,
+  },
+  {
+    slug: "news-2026-05-16-credit-card-cashback-and-reward-changes-from-hdfc-sbi-icici-",
+    title: "Credit card cashback and reward changes from HDFC / SBI / ICICI / Axis (2026 Update)",
+    description: "Credit card cashback and reward changes from HDFC / SBI / ICICI / Axis — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-05-16",
+    category: "Banking",
+    readTime: "12 min read",
+    keywords: ["Credit card cashback and", "banking news india 2026", "india 2026 update"],
+    toolSlug: "emi-calculator",
+    image: {
+      src: "/blog/emi-calculator.webp",
+      alt: "Credit card cashback and reward changes from HDFC / SBI / ICICI / Axis (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>Indian banks are quietly rewriting the credit card rulebook</h2>
+
+<p>If you've opened your credit card app in the past six months and noticed your reward points growing slower than they used to, you're not imagining things. Between June 2025 and January 2026, all four of India's largest private and PSU credit card issuers — HDFC Bank, SBI Card, ICICI Bank and Axis Bank — have rolled out a coordinated wave of changes that cap reward earnings, exclude entire spending categories, and add new transaction fees on the kinds of payments middle-class Indians make every month: rent, utilities, education fees, fuel and digital wallet top-ups.</p>
+
+<p>The pattern is unmistakable. <a href="https://cardreview.in/credit-card-devaluation-india-2025/" rel="noopener" target="_blank">A July 2025 industry analysis</a> covering the year's devaluations noted that "issuers like HDFC Bank, Axis Bank, SBI Card, American Express, and Yes Bank" have been reducing benefits including lounge access, reward points and cashback. <a href="https://www.business-standard.com/finance/personal-finance/credit-cards-on-a-devaluation-spree-how-to-still-maximise-benefits-126040900489_1.html" rel="noopener" target="_blank">Business Standard described it as a "devaluation spree"</a>, pointing out that even American Express India has tightened rewards by excluding fuel transactions from Membership Rewards point accrual from June 12, 2025.</p>
+
+<p>For a salaried professional in Bangalore or Mumbai paying ₹35,000 in rent through their credit card every month, or a freelancer in Hyderabad routing client payments via wallet top-ups, these changes are not abstract. They translate into thousands of rupees of lost rewards every year — and in some cases, brand-new 1% fees on transactions that were free until July 2025.</p>
+
+<h2>HDFC Bank: the July 1, 2025 reset</h2>
+
+<p>HDFC Bank — India's largest private sector credit card issuer — set the tone for the year. <a href="https://www.business-standard.com/finance/personal-finance/hdfc-credit-card-users-alert-new-fees-reward-caps-introduced-from-july-1-125062400890_1.html" rel="noopener" target="_blank">According to a Business Standard report dated June 24, 2025</a>, the bank rolled out several major changes from July 1, 2025 across its credit card portfolio.</p>
+
+<h3>The new 1% fees</h3>
+
+<p><a href="https://www.mobikwik.com/blog/hdfc-bank-credit-card-changes-effective-1st-july-2025/" rel="noopener" target="_blank">As confirmed by HDFC's communication</a>, effective July 1, 2025, the bank levies a 1% fee on rent payments made via credit card, capped at ₹4,999 per transaction. The same 1% structure applies to:</p>
+
+<ul>
+<li><strong>Online skill-based gaming spends</strong> — including Dream11, Rummy Culture, Junglee Games and MPL — above ₹10,000 in a month, with no reward points earned at all on these transactions, <a href="https://upstox.com/news/personal-finance/latest-updates/hdfc-bank-credit-card-changes-from-july-1-2025-check-new-limits-for-various-transactions/article-173261/" rel="noopener" target="_blank">per Upstox's coverage of the changes</a>.</li>
+<li><strong>Wallet loading above ₹10,000 per month</strong> (excluding PayZapp, HDFC's own wallet) for apps like Paytm, Mobikwik, Freecharge and Ola Money — also capped at ₹4,999 monthly.</li>
+<li><strong>Utility payments above ₹50,000 per month</strong>, with the same 1% / ₹4,999 cap structure.</li>
+</ul>
+
+<h3>Reward point caps tightened</h3>
+
+<p>Beyond the new fees, HDFC has reworked monthly reward caps on its flagship cards. <a href="https://zeenews.india.com/photos/business/hdfc-bank-credit-card-rule-change-from-1-july-2025-airport-lounge-access-rent-payment-wallet-loading-reward-points-and-more-2910913" rel="noopener" target="_blank">According to Zee News' breakdown</a>, the monthly reward point cap has been set at <strong>10,000 points</strong> for Infinia and Infinia Metal Edition cards, and <strong>5,000 points</strong> for Diners Black, Diners Black Metal, H.O.G. Diners Club and Biz Black Metal cards. For most other HDFC cards, the daily cap of 2,000 reward points has been converted into a monthly cap of 2,000 points — a meaningful reduction for anyone who used to earn rewards consistently across the month on insurance premiums or large purchases.</p>
+
+<h2>SBI Card: two waves of changes in 2025</h2>
+
+<p>India's second-largest credit card issuer followed within two weeks. <a href="https://india-employmentnews.com/utility-news/sbi-credit-card-rule-changes-from-july-15-no-more-cashback/cid17017823.htm" rel="noopener" target="_blank">As reported on July 4, 2025</a>, SBI Card announced that from July 15, 2025, transactions made for rent payments or to educational institutions would no longer earn reward points. Cardholders who had been routing school fees, college tuition or rent through SBI cards to accumulate points must now treat those transactions as plain payments with zero rewards return.</p>
+
+<h3>The November 1, 2025 follow-up</h3>
+
+<p>SBI Card came back with a second wave four months later. <a href="https://cardinsider.com/blog/sbi-card-revises-charges-education-payments-wallet-loads-via-credit-cards/" rel="noopener" target="_blank">According to a CardInsider report dated September 30, 2025</a>, SBI Card introduced new charges effective November 1, 2025: a 1% charge on education payments made via third-party platforms, and a 1% fee on wallet load transactions exceeding ₹1,000.</p>
+
+<p>The ₹1,000 threshold is particularly aggressive — significantly lower than HDFC's ₹10,000 wallet-loading exemption. A parent in Pune paying their child's coaching class fees through a third-party platform like CRED or NoBroker, or a small business owner topping up Paytm for vendor payments, now sees both a fee and zero rewards on what used to be one of the most efficient uses of an SBI credit card.</p>
+
+<h2>ICICI Bank: the January 2026 overhaul</h2>
+
+<p>ICICI Bank's changes, announced in December 2025, are arguably the most extensive of the four banks. <a href="https://www.businesstoday.in/personal-finance/banking/story/credit-card-changes-icici-bank-to-levy-2-fee-on-gaming-platforms-tweak-rewards-and-benefits-from-jan-2026-507624-2025-12-22" rel="noopener" target="_blank">As Business Today reported on December 22, 2025</a>, ICICI Bank is implementing a 2% fee on gaming platform transactions — double what HDFC has imposed — along with tweaks to rewards and benefits, with most changes coming into force from January 15, 2026 and certain reward caps applying from February 1, 2026.</p>
+
+<h3>Spend-linked entertainment benefits</h3>
+
+<p>One of the more consumer-unfriendly shifts: the "Buy One Get One" movie offer that ICICI Bank cardholders have enjoyed for years is no longer unconditional. <a href="https://cardinsider.com/blog/massive-icici-credit-card-devaluation/" rel="noopener" target="_blank">According to CardInsider's analysis dated December 17, 2025</a>, cardholders will now need to spend at least ₹25,000 in the preceding quarter to continue enjoying BookMyShow offers on their credit card.</p>
+
+<p>The example structure: to enjoy the BOGO offer in April, May and June 2026, a cardholder needs to spend ₹25,000 between December 26, 2025 and March 25, 2026 — and the cycle repeats every quarter thereafter.</p>
+
+<h3>Emeralde and Emirates Skywards take the biggest hit</h3>
+
+<p><a href="https://www.goodreturns.in/news/icici-bank-announces-latest-credit-card-fees-rewards-here-s-what-changing-from-2026-011-1477482.html" rel="noopener" target="_blank">A Goodreturns summary published December 22, 2025</a> notes that super-premium Emeralde cardholders feel the biggest impact, with the bank capping transport rewards and revising entertainment benefits. The January 2026 changes removed rewards on the exact categories that made the Emeralde useful for high-spending non-travellers: rent, government services, tax payments and utilities. Spends beyond the ₹20,000 monthly limit on these categories no longer earn reward points.</p>
+
+<p>The co-branded Emirates Skywards ICICI Bank credit cards (Emeralde, Sapphiro and Rubyx variants) have all seen their reward rates reduced, effective January 15, 2026.</p>
+
+<h2>Axis Bank: rewriting the EDGE rewards engine</h2>
+
+<p>Axis Bank's approach has been the most architectural. Rather than just capping points, Axis has changed the underlying logic of how reward eligibility is determined. <a href="https://livefromalounge.com/axis-bank-credit-cards-tweaks/" rel="noopener" target="_blank">According to a Live From A Lounge report dated May 20, 2025</a>, from June 20, 2025, Axis Bank began determining reward eligibility using a new "transaction category" system instead of relying on standard Merchant Category Codes (MCCs), citing concerns about MCC ambiguity and misclassification.</p>
+
+<h3>The Magnus Burgundy restructure</h3>
+
+<p>The flagship Magnus for Burgundy card — long considered one of India's most rewarding credit cards for high spenders — has been substantially reworked. <a href="https://livefromalounge.com/axis-bank-magnus-for-burgundy-caps-accelerated-edge-rewards/" rel="noopener" target="_blank">Per Live From A Lounge's coverage</a>, effective June 20, 2025, Magnus for Burgundy cardholders earn 12 EDGE Reward Points per ₹200 on spends up to ₹1.5 lakh per calendar month. Spends above ₹1.5 lakh and up to the credit limit plus ₹1.5 lakh earn an accelerated 35 EDGE Reward Points per ₹200, after which the rate drops back to 12 points per ₹200. The structure introduces hard ceilings that didn't exist before.</p>
+
+<h3>Swiggy and lifestyle benefits trimmed</h3>
+
+<p>For the broader cardholder base, Axis has rationalised lifestyle benefits as well. <a href="https://www.paisabazaar.com/credit-card/axis-bank-credit-card-changes-2025/" rel="noopener" target="_blank">According to a Paisabazaar update from October 2025</a>, the Swiggy discount on certain Axis Bank credit cards has been moved from a 30% discount of up to ₹150 on a minimum order of ₹200 (applicable twice per month) to a flat ₹150 off on minimum order. The same source notes that on the Axis Rewards Credit Card, the Swiggy offer effective from July 1, 2025 became ₹150 off on a minimum order of ₹500, applicable twice a month.</p>
+
+<p>Movie ticket benefits also shifted, with Buy-One-Get-One offers migrating to the District App platform from May 2025 onward.</p>
+
+<h2>Why all four banks are moving together</h2>
+
+<p>The synchronised timing isn't coincidence. Indian credit card economics have been under pressure on two fronts.</p>
+
+<p>First, credit costs are rising. <a href="https://entri.app/blog/how-credit-card-rewards-are-being-cut-down-in-2026/" rel="noopener" target="_blank">An industry analysis on the 2026 reward cuts</a> highlighted that in 2025, unpaid credit card bills had risen sharply year-on-year, squeezing issuer margins and forcing banks to claw back on the most expensive part of their P&L — rewards programmes.</p>
+
+<p>Second, certain transaction categories have always been unprofitable for issuers. Rent payments, education fees, utility bills, fuel and wallet loadings either carry near-zero Merchant Discount Rate (MDR) for the issuing bank, or are routed through aggregator platforms that absorb most of the merchant fee. When cardholders earn 1–2% rewards on transactions where the bank earns 0.1–0.3%, the math doesn't work at scale. The 2025-26 changes are essentially banks closing those arbitrage gaps — first by adding 1% fees on the customer side, then by removing reward eligibility entirely.</p>
+
+<p><a href="https://honestmoney.in/credit-cards/best-rewards-credit-cards-india-after-devaluation/" rel="noopener" target="_blank">A post-devaluation analysis</a> illustrated the practical impact: if roughly 30% of monthly spending falls in excluded categories, the effective reward rate drops from the advertised 3.3% to roughly 2.3%, which on ₹10 lakh annual spend works out to about ₹10,000 fewer in rewards than expected.</p>
+
+<h2>What Indian cardholders should actually do</h2>
+
+<p>The temptation when reward programmes get worse is to switch cards. But with all four major issuers moving in the same direction within a six-month window, switching from HDFC to ICICI to escape rent fees, for instance, would only have bought you a few months before ICICI's January 2026 changes caught up. The smarter response is to restructure how you use credit cards rather than chase the next best card.</p>
+
+<h3>1. Stop using credit cards for excluded categories</h3>
+
+<p>Rent paid via credit card now incurs a 1% fee on HDFC, has lost reward eligibility on SBI, and is part of the ₹20,000 monthly capped pool on ICICI Emeralde. For most cardholders, paying rent directly via NEFT, UPI or auto-debit is now cheaper than routing it through a credit card — unless you're chasing a specific spend-based milestone benefit. The same applies to school and college fees through third-party platforms, government tax payments, and utility bills above the cap.</p>
+
+<h3>2. Concentrate spending to hit milestone thresholds</h3>
+
+<p>With ICICI now requiring ₹25,000 quarterly spend to unlock the BookMyShow BOGO, and many Axis cards using bracket-based earn rates, splitting spending across multiple cards now actively destroys value. Pick one primary card per category — travel, dining, online shopping — and consolidate.</p>
+
+<h3>3. Rethink the case for big-ticket EMI purchases on cards</h3>
+
+<p>One area where credit cards still genuinely pay off is large, planned purchases — appliances, electronics, school fees in lump sum, medical bills — that can be converted to EMI. The question is whether the rewards earned on the spend, plus any zero-cost-EMI offer, beat what you'd pay if you took a small personal loan or used your savings instead. With reward rates falling, that calculation has shifted. Before charging a ₹1.5 lakh appliance purchase to a credit card EMI at 14–16% interest, compare it against a personal loan at 10.5–12% by running both scenarios through the <a href="/tools/emi-calculator">EMI Calculator</a> — the difference between a 24-month credit card EMI and a personal loan of the same tenure can run into ₹8,000–12,000 in total interest on a ₹1.5 lakh ticket size, which often dwarfs the reward points earned on the original swipe.</p>
+
+<h3>4. Redeem reward balances sooner, not later</h3>
+
+<p>Banks have shown they're willing to change redemption ratios, cap monthly accruals and exclude entire merchant categories with 30–60 days' notice. Reward points sitting in your account are not money in the bank — they're a contingent claim that can be devalued unilaterally. If you've been hoarding points waiting for a "perfect" redemption, the past year is a reminder that the perfect redemption may never come at today's conversion rate.</p>
+
+<h3>5. Watch the MITC and customer notice pages</h3>
+
+<p>Each issuer publishes a Most Important Terms and Conditions (MITC) and customer notices page where these changes are formally communicated, typically 30–60 days before they take effect. Setting a quarterly calendar reminder to check the customer notices section of your primary card issuer's website — sbicard.com, hdfcbank.com, icicibank.com or axisbank.com — is a more reliable way to stay informed than waiting for news coverage.</p>
+
+<h2>The bigger picture for Indian household finance</h2>
+
+<p>Credit card rewards filled a specific gap in Indian household finance for the past decade: a way for middle-class salaried earners to claw back 1.5–3% on essential spending in an environment of single-digit savings rates and rising consumer prices. For families running monthly budgets of ₹80,000 to ₹2 lakh, ₹15,000–₹40,000 a year in cashback and rewards represented a real annual benefit — often more than what their savings account paid in interest.</p>
+
+<p>That equation is changing. With rent, education, utilities and wallet top-ups stripped of rewards across HDFC, SBI, ICICI and Axis, the practical reward yield for most households has dropped meaningfully. The categories that still earn full rewards — dining, online shopping at non-Grocery merchants, travel and entertainment — tend to be discretionary rather than essential.</p>
+
+<p>For Indian households, the response isn't to give up on credit cards — they remain the most efficient tool for managing cash flow on big-ticket purchases, building credit history, and accessing genuine value on travel and dining. It's to recalibrate expectations. Treat credit cards as transactional infrastructure with a modest 1–2% return, not as a meaningful component of household income. And for the lump-sum purchases where cards still make sense, run the EMI numbers before swiping — because in a world where rewards are shrinking, the cost of credit matters more than ever.</p>`,
   }
 ];
 
