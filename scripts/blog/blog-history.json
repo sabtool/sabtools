@@ -165,9 +165,10 @@
     "court-fee-calculator",
     "gold-price-calculator",
     "fancy-text-generator",
-    "goal-based-sip-calculator"
+    "goal-based-sip-calculator",
+    "ai-meta-description-generator"
   ],
-  "lastCategory": "finance",
-  "totalPosts": 166,
-  "lastRun": "2026-05-16T11:07:59.617Z"
+  "lastCategory": "ai",
+  "totalPosts": 167,
+  "lastRun": "2026-05-17T08:01:39.034Z"
 }
