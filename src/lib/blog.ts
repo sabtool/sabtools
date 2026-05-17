@@ -28853,6 +28853,144 @@ The Income Tax Bill 2025 restructures Section 80C by consolidating various deduc
 <p>For the vast majority of Indian users — the salaried Bangalorean wondering after a Friday team dinner, the Mumbai resident at a wedding sangeet, the Pune student at a 21st birthday — the calculator that requires zero unit conversion and is already set to 0.03% wins almost by default.</p>
 
 <p>Try <a href="/tools/blood-alcohol-calculator">SabTools' Blood Alcohol Calculator</a> before your next night out — and if it shows you anywhere near 0.03%, please just book the cab.</p>`,
+  },
+  {
+    slug: "news-2026-05-17-personal-loan-rates-comparison-across-sbi-hdfc-bajaj-finserv",
+    title: "Personal loan rates comparison across SBI, HDFC, Bajaj Finserv (2026 Update)",
+    description: "Personal loan rates comparison across SBI, HDFC, Bajaj Finserv — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-05-17",
+    category: "Banking",
+    readTime: "12 min read",
+    keywords: ["Personal loan rates comparison", "banking news india 2026", "india 2026 update"],
+    toolSlug: "emi-calculator",
+    image: {
+      src: "/blog/emi-calculator.webp",
+      alt: "Personal loan rates comparison across SBI, HDFC, Bajaj Finserv (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>The personal loan rate landscape just shifted — here's where SBI, HDFC Bank, and Bajaj Finserv stand</h2>
+
+<p>If you've been putting off that personal loan for a wedding, a medical bill, or to consolidate credit card dues, the math has quietly changed in your favour. After the Reserve Bank of India cut the repo rate to 5.25% on 5 December 2025 — the fourth cut of the calendar year, taking cumulative reductions to 125 basis points — banks and NBFCs are repricing their consumer credit. Personal loans, traditionally the most expensive form of unsecured retail credit, are not immune.</p>
+
+<p>For most Indian borrowers, the choice still narrows to three big players: <strong>State Bank of India</strong> (the country's largest lender by assets), <strong>HDFC Bank</strong> (the largest private-sector bank), and <strong>Bajaj Finance / Bajaj Finserv</strong> (the dominant retail NBFC). Each prices personal loans differently, charges different processing fees, and uses different eligibility filters. The headline interest rate is only the start of the comparison.</p>
+
+<p>This post breaks down what each lender is actually offering in late 2025, how the recent RBI moves are filtering through to borrowers, and what a salaried professional or self-employed applicant should look at before signing the loan agreement.</p>
+
+<h2>What just changed at the RBI — and why it matters</h2>
+
+<p>In its 5 December 2025 monetary policy meeting, the RBI's Monetary Policy Committee voted unanimously to cut the repo rate by 25 basis points, taking it from 5.50% to 5.25% while maintaining a neutral stance. According to <a href="https://www.scconline.com/blog/post/2025/12/06/rbi-announced-repo-rate-cut-mpc-december-2025/" rel="noopener" target="_blank">SCC Times' coverage of the December 2025 MPC outcome</a>, this revived the rate-cut cycle after October's pause, when the RBI had held rates steady at 5.50%.</p>
+
+<p>That October pause — confirmed by the <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2173560&reg=3&lang=2" rel="noopener" target="_blank">PIB release on RBI's October 2025 monetary policy</a> — was, in retrospect, only a breather. Across 2025, the RBI delivered cuts in February (-25 bps), April (-25 bps), June (-50 bps) and December (-25 bps), totalling 125 basis points.</p>
+
+<p>Why does this matter for personal loans, which are usually fixed-rate products? Two reasons. First, the cost at which banks raise funds drops, which eventually compresses the rates they offer new borrowers. Second, fresh competition forces lenders to advertise lower "starting rates" to attract applicants. As <a href="https://upstox.com/news/personal-finance/latest-updates/personal-loan-interest-rate-changes-in-2025-what-sbi-hdfc-icici-axis-kotak-and-other-banks-offer/article-186490/" rel="noopener" target="_blank">Upstox noted in its December 2025 round-up</a>, personal loan interest rates in India have decreased slightly through 2025, with cheaper funding and lower operating costs helping banks.</p>
+
+<p>The catch: if you already have a personal loan at a fixed rate from 2023 or early 2024, your EMI doesn't change automatically. The benefit shows up only when you take a new loan, refinance an existing one, or negotiate with your bank.</p>
+
+<h2>SBI personal loan rates — the public-sector benchmark</h2>
+
+<p>State Bank of India remains the rate benchmark that other lenders are measured against, particularly for salaried customers with stable government or PSU incomes. SBI's main personal loan product, <strong>Xpress Credit</strong>, is targeted at salaried customers whose employer has a relationship with the bank.</p>
+
+<p>According to <a href="https://www.rupyy.com/sbi-personal-loan-interest-rate" rel="noopener" target="_blank">Rupyy's compilation of SBI personal loan schemes</a>, the bank currently offers:</p>
+
+<ul>
+  <li><strong>SBI Xpress Credit Personal Loan:</strong> 11.15% to 12.65% p.a.</li>
+  <li><strong>SBI Real Time Xpress Credit (RTXC):</strong> 11.15% to 13.80% p.a.</li>
+  <li><strong>SBI Quick Personal Loan:</strong> 11.40% to 12.90% p.a.</li>
+  <li><strong>SBI Pre-approved Personal Loan (PAPL) on YONO:</strong> 13.80% to 14.30% p.a.</li>
+</ul>
+
+<p>SBI also runs a separate, lower-rate window for the armed forces. As listed on <a href="https://sbi.bank.in/web/interest-rates/interest-rates/loan-schemes-interest-rates/personal-loans-schemes" rel="noopener" target="_blank">SBI's official interest rates page</a>, the bank honoured Defence, Para-Military and Indian Coast Guard personnel with a special personal loan rate of 10.45% p.a. — a meaningful concession for borrowers in those segments.</p>
+
+<p>On processing charges, <a href="https://www.mymoneymantra.com/sbi-xpress-credit-personal-loan" rel="noopener" target="_blank">MyMoneyMantra's breakdown of SBI Xpress Credit fees</a> pegs the processing fee at 1.50% of the loan amount, with a minimum of ₹1,000 and a maximum of ₹15,000 plus GST. Penal interest, in case of overdue EMIs, is 2% per month on the overdue amount over and above the applicable interest rate.</p>
+
+<p>For a salaried professional in Bengaluru or Mumbai earning ₹15-25 lakh per annum with a clean CIBIL score and a salary account at SBI, an Xpress Credit loan around 11.15-11.65% is realistic. <a href="https://www.mymudra.com/blog/personal-loan-interest-rates" rel="noopener" target="_blank">MyMudra also notes</a> that government employees can enjoy 0.25% to 0.75% lower rates at Indian Bank, SBI and PNB due to stable income profiles, and that SBI and Bank of Maharashtra offer 0.05% lower rates for female applicants — small concessions that add up over a 60-month tenure.</p>
+
+<h2>HDFC Bank personal loan rates — the private-bank yardstick</h2>
+
+<p>HDFC Bank's pricing band is wider than SBI's, reflecting its more risk-segmented approach. The bank's own disclosure on its <a href="https://www.hdfc.bank.in/personal-loan/interest-rates-and-charges" rel="noopener" target="_blank">official personal loan interest rates and charges page</a> states that personal loan interest rates range from a minimum of 10.40% to a maximum of 24.16% IRR, with an average of 11.47%, applicable for loans sanctioned between January 1, 2025 and March 30, 2025, depending on profile and creditworthiness.</p>
+
+<p>That "average of 11.47%" figure is worth pausing on. It tells you what HDFC Bank actually charged its typical sanctioned borrower in a recent quarter — not just the marketing "starting at" rate. Several rate aggregators echo a similar band: <a href="https://www.livemintmoney.com/loans/hdfc-bank-personal-loan-interest-rates" rel="noopener" target="_blank">LiveMintMoney</a> reports HDFC's range at 10.75% to 24.00% per annum, with the rate dependent on credit profile, income and tenure.</p>
+
+<p>Processing fees at HDFC Bank vary by product and applicant profile. <a href="https://www.hdfc.bank.in/blogs/personal-loan/what-are-the-charges-you-incur-on-a-personal-loan" rel="noopener" target="_blank">HDFC Bank's own blog on personal loan charges</a> explains that the processing fee typically varies between 0.5% to 2.50% of the total loan amount and is subject to change. The bank's official rates page also documents the part-prepayment policy: prepayment is allowed once per financial year and twice during the loan tenure, up to 25% of the principal outstanding, after the first EMI is paid.</p>
+
+<p>For Indian readers comparing HDFC vs SBI: HDFC will usually be faster on disbursement (often same-day for pre-approved customers) and more flexible on tenure, but a borrower with a marginal credit profile may be quoted noticeably higher rates than at SBI. The "average 11.47%" figure is more useful than the headline 10.40% — it's what most approved applicants actually pay.</p>
+
+<h2>Bajaj Finserv personal loans — the NBFC option</h2>
+
+<p>Bajaj Finance — the NBFC arm of the Bajaj group, marketed under the Bajaj Finserv brand — plays a different game. As a non-bank lender, it competes on speed, eligibility flexibility and ticket size rather than the lowest possible rate.</p>
+
+<p>According to <a href="https://www.bajajfinserv.in/personal-loan-processing-fees-and-interest-rates" rel="noopener" target="_blank">Bajaj Finserv's own rates page</a>, the Bajaj Finserv Personal Loan interest rate starts from as low as 10% p.a., with loan amounts ranging from ₹40,000 to ₹55 lakh. <a href="https://www.bajajfinserv.in/personal-loan-for-salaried-individuals" rel="noopener" target="_blank">Bajaj's salaried-individuals page</a> confirms the upper limit of ₹55 lakh for collateral-free personal loans, which is significantly higher than what most banks will sanction without security.</p>
+
+<p>Aggregator data, however, gives a more realistic upper end. <a href="https://www.fincover.com/banking/loan/personal/interest-rates/bajaj-finserv/" rel="noopener" target="_blank">Fincover's compilation of Bajaj Finserv personal loan rates</a> reports that the NBFC's personal loans range from 10.75% to 31% per annum, with the actual rate depending on credit standing, financial status and repayment ability. That 31% upper bound is the trade-off for the NBFC's wider underwriting — borrowers with weaker profiles can get money, but they pay for it.</p>
+
+<p>Eligibility at Bajaj is also more permissive on credit score than the big banks. <a href="https://assetplus.freshdesk.com/support/solutions/articles/44002441525-faqs-bajaj-personal-loan" rel="noopener" target="_blank">An FAQ partner page</a> notes that the ideal credit score for instant paperless approval for a Bajaj Finserv Personal Loan is 685 and above — lower than the 750-760 threshold most private banks prefer for their best rates. The minimum age is 21 years and the maximum permissible age is 59 years, per <a href="https://fincrif.com/bajaj-finserv-personal-loan" rel="noopener" target="_blank">Fincrif's Bajaj eligibility page</a>.</p>
+
+<p>For a homemaker's spouse running a small retail business in Pune with annual turnover under ₹40 lakh, or a freelancer in Hyderabad managing quarterly GST payments, Bajaj's looser documentation and higher sanction limits often make it the practical choice — even at a 2-3 percentage point premium over an HDFC personal loan.</p>
+
+<h2>Side-by-side: SBI vs HDFC Bank vs Bajaj Finserv</h2>
+
+<p>An aggregator snapshot from early 2025 is useful to anchor the comparison. According to <a href="https://yenmo.in/blog/personal-loan-interest-rates-in-india-compare-find-the-best-deal-2025" rel="noopener" target="_blank">Yenmo's February 2025 rate compilation</a>, the personal loan interest rates in India were: SBI at 11.60%-13.85%, HDFC Bank at 10.50%-21.00% and Bajaj Finserv at 11.00%-25.00%.</p>
+
+<h3>Headline rate band (late 2025)</h3>
+<ul>
+  <li><strong>SBI:</strong> ~10.30% to ~15.30% p.a., concentrated around 11.15-12.65% for Xpress Credit borrowers</li>
+  <li><strong>HDFC Bank:</strong> ~10.40% to ~24.16% IRR; average around 11.47% for actually-sanctioned loans</li>
+  <li><strong>Bajaj Finserv:</strong> from ~10% (advertised) to ~31% p.a.; aggregator-reported band of 10.75-31%</li>
+</ul>
+
+<h3>Processing fees</h3>
+<ul>
+  <li><strong>SBI Xpress Credit:</strong> 1.50% of loan amount, min ₹1,000, max ₹15,000 + GST</li>
+  <li><strong>HDFC Bank:</strong> typically 0.5% to 2.50% of the loan amount, subject to product and profile</li>
+  <li><strong>Bajaj Finserv:</strong> varies by product; usually within the 1.5-3.93% range, depending on segment</li>
+</ul>
+
+<h3>Maximum loan amount</h3>
+<ul>
+  <li><strong>SBI:</strong> Up to ₹20-30 lakh under Xpress Credit variants, subject to salary multiple</li>
+  <li><strong>HDFC Bank:</strong> Up to ₹40 lakh, depending on income and tenure</li>
+  <li><strong>Bajaj Finserv:</strong> Up to ₹55 lakh (collateral-free)</li>
+</ul>
+
+<h2>Run the numbers before you sign — a worked example</h2>
+
+<p>Here's why the comparison is more than a one-line interest rate. Take a salaried professional in Mumbai borrowing ₹10,00,000 over a 5-year (60-month) tenure.</p>
+
+<ul>
+  <li>At SBI Xpress Credit, say 11.65% p.a.: EMI roughly ₹22,107 and total interest payable about ₹3,26,420 over the tenure.</li>
+  <li>At HDFC Bank at the average sanctioned rate of 11.47% p.a.: EMI roughly ₹22,011 and total interest about ₹3,20,660.</li>
+  <li>At Bajaj Finserv at, say, 13.50% p.a. for a self-employed applicant: EMI roughly ₹23,011 and total interest about ₹3,80,660.</li>
+</ul>
+
+<p>That's a difference of about ₹60,000 in total interest between the cheapest and the most expensive option on a single 5-year loan — and that's before processing fees, which add another ₹15,000-25,000 typically. <a href="https://www.paisabazaar.com/personal-loan/interest-rates/" rel="noopener" target="_blank">Paisabazaar's 2026 rate roundup</a> illustrates the same point with its example of a borrower saving over ₹53,000 in interest by choosing a lender at 9.99% over one at 13.5%.</p>
+
+<p>Before you commit to any of the three lenders, plug your actual loan amount, tenure and quoted interest rate into a real EMI breakdown. Run the comparison yourself with the <a href="/tools/emi-calculator">SabTools EMI Calculator</a> — try the same loan amount at SBI's 11.65%, HDFC's 11.47% and Bajaj's 13.5% and see the EMI and total-interest difference instantly. It also handles home and car loans, so if you're juggling multiple EMIs, you can stack them and see the combined monthly outflow.</p>
+
+<h2>Practical implications — what an Indian borrower should do now</h2>
+
+<h3>If you're shopping for a new personal loan</h3>
+<p>Start with your salary-account bank. As <a href="https://www.mymudra.com/blog/personal-loan-interest-rates" rel="noopener" target="_blank">MyMudra notes</a>, existing customers of large banks such as HDFC, ICICI or SBI can avail loyalty discounts of around 0.10-0.50% on the headline rate. If you're a government or PSU employee, SBI Xpress Credit is almost always the cheapest option. If you need quick disbursal and your CIBIL is in the 685-720 range, Bajaj Finserv's NBFC underwriting is more flexible — but expect to pay 200-400 basis points more than a salaried HDFC customer.</p>
+
+<h3>If you already have a personal loan from 2023 or early 2024</h3>
+<p>Compare your current rate to today's quotes. <a href="https://poonawallafincorp.com/blogs/financial-insights/rbi-repo-rate-impact-on-personal-loan" rel="noopener" target="_blank">Poonawalla Fincorp's December 2025 refinancing note</a> points out that the new 5.25% repo rate can translate into lower personal loan rates from banks and NBFCs, making this a reasonable window for refinancing existing loans before year-end. If you can shave 150-200 bps off your existing rate and your remaining tenure is over 24 months, a balance transfer often pays for itself even after factoring in the new processing fee.</p>
+
+<h3>If you're considering a personal loan for an investment or stock-market exposure</h3>
+<p>Don't. Personal loans at 11-14% are short-tenure, high-cost consumer debt — they make sense for medical emergencies, weddings, home repairs or genuine consolidation of higher-cost credit-card debt. Using them as leverage for equity or mutual fund investments is rarely sensible given the rate differential.</p>
+
+<h2>Watch the fine print, not just the rate</h2>
+
+<p>Three points often missed by first-time personal loan applicants:</p>
+
+<ol>
+  <li><strong>"Starting at" rates are marketing.</strong> HDFC Bank's own disclosure that its <em>average</em> sanctioned rate is 11.47% — not its starting 10.40% — is the more honest benchmark. Assume you'll get the average, not the floor, unless your CIBIL is above 800 and your income is well above ₹15 lakh per annum.</li>
+  <li><strong>Processing fees compound the effective rate.</strong> A 2% processing fee on a 3-year loan adds roughly 70-80 basis points to your effective interest cost. Always ask for the APR or the all-in rate, not just the nominal interest rate.</li>
+  <li><strong>Prepayment terms differ.</strong> HDFC Bank allows part-prepayment once per financial year and twice during the tenure, up to 25% of the outstanding principal, per its own published terms. Bajaj Finserv and SBI have their own caps and charges. If you anticipate a bonus or other lump sum during the tenure, factor in the prepayment cost.</li>
+</ol>
+
+<p>The personal loan market in India is more borrower-friendly today than it has been since 2022. The RBI's 125-basis-point easing through 2025 is steadily flowing through to retail rates, and competition between public-sector banks, private banks and NBFCs is keeping spreads honest. But the gap between the best-quoted rate for a top-tier salaried customer and the actual rate offered to an average applicant remains wide — sometimes 200-400 basis points.</p>
+
+<p>The single most useful step before signing any personal loan agreement, at SBI, HDFC Bank or Bajaj Finserv, is to model the EMI and total interest cost at the rate you've actually been quoted — not the rate in the advertisement. A 15-minute comparison can save you a Maharashtra-bound family ₹50,000-80,000 over a typical 5-year loan tenure. Given how much more accessible credit has become, that small bit of homework is the highest-return work you can do as a borrower this year.</p>`,
   }
 ];
 
