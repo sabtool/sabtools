@@ -166,9 +166,10 @@
     "gold-price-calculator",
     "fancy-text-generator",
     "goal-based-sip-calculator",
-    "ai-meta-description-generator"
+    "ai-meta-description-generator",
+    "blood-alcohol-calculator"
   ],
-  "lastCategory": "ai",
-  "totalPosts": 167,
-  "lastRun": "2026-05-17T08:01:39.034Z"
+  "lastCategory": "health",
+  "totalPosts": 168,
+  "lastRun": "2026-05-17T12:21:51.773Z"
 }
