@@ -29318,6 +29318,254 @@ No. The k-means clustering runs in your browser via JavaScript. The image stays 
 SabTools' name-seeded generation handles this directly — type the theme, get a deterministic palette. Coolors and Adobe Color require you to start from a base color or image. For mood-board work tied to Indian cultural moments, SabTools is faster.</p>
 
 <p>Try SabTools' <a href="/tools/color-palette-generator">Color Palette Generator</a> → enter a base color or a brand word, copy the hex codes, ship the design.</p>`,
+  },
+  {
+    slug: "news-2026-05-18-sovereign-gold-bond-sgb-tranches-and-how-they-compare-to-phy",
+    title: "Sovereign Gold Bond (SGB) tranches and how they compare to physical... (2026 Update)",
+    description: "Sovereign Gold Bond (SGB) tranches and how they compare to physical gold — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-05-18",
+    category: "Finance",
+    readTime: "12 min read",
+    keywords: ["Sovereign Gold Bond (SGB)", "finance news india 2026", "india 2026 update"],
+    toolSlug: "emi-calculator",
+    image: {
+      src: "/blog/emi-calculator.webp",
+      alt: "Sovereign Gold Bond (SGB) tranches and how they compare to physical... (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>The Sovereign Gold Bond era is winding down — here's what investors need to know</h2>
+
+<p>The Sovereign Gold Bond scheme, once pitched as the smartest way for Indian households to own gold, is in run-off mode. <a href="https://en.wikipedia.org/wiki/Sovereign_Gold_Bond" rel="noopener" target="_blank">
+
+The RBI has not issued any new series after February 2024, and after the 2025 Union budget, Minister of Finance Nirmala Sitharaman confirmed that the government had no plans of launching more tranches.
+
+</a> What's left for investors is a portfolio of older bonds quietly heading toward maturity — and a difficult question about whether physical gold, ETFs, or one of the surviving alternatives is now the better home for that part of a household's savings.</p>
+
+<p>This piece walks through what changed, the actual redemption numbers RBI has fixed in 2025, how SGB returns stack up against the cost of physical gold once GST and making charges are added, and what someone holding existing bonds — or thinking of buying gold afresh — should be doing now.</p>
+
+<h2>What changed: from monthly tranches to a closed scheme</h2>
+
+<p>The SGB scheme was launched in November 2015 under the broader Gold Monetisation programme. <a href="https://sbi.bank.in/web/personal-banking/investments-deposits/govt-schemes/gold-banking/sovereign-gold-bond-scheme-sgb" rel="noopener" target="_blank">
+
+Sovereign Gold Bond Scheme was launched by Govt in November 2015, under Gold Monetisation Scheme. Under the scheme, the issues are made open for subscription in tranches by RBI in consultation with GOI. RBI Notifies the terms and conditions for the scheme from time to time.
+
+</a> For nearly a decade, every couple of months RBI would open a five-day subscription window where investors could buy bonds denominated in grams of gold, priced off the IBJA reference rate.</p>
+
+<p>That cadence stopped in early 2024. <a href="https://stablemoney.in/bonds/sovereign-gold-bond-2025-next-issue-date" rel="noopener" target="_blank">
+
+Based on this agenda, the country's Finance Ministry aims to discontinue SGB issuance from the following financial year, 2025-26.
+
+</a> <a href="https://www.businesstoday.in/personal-finance/investment/story/rbi-issues-schedule-for-premature-redemption-of-sgbs-from-oct-2025-to-mar-2026-491128-2025-08-26" rel="noopener" target="_blank">
+
+Amid surging gold prices, the central government discontinued the Sovereign Gold Bond (SGB) scheme in the Union Budget 2025.
+
+</a></p>
+
+<p>The reasoning is straightforward: SGBs carry a 2.5% annual coupon plus a redemption value tied to the gold price, and when gold rallied as hard as it did in 2024-25, the government's eventual payout liability ballooned. <a href="https://cleartax.in/s/sovereign-gold-bonds" rel="noopener" target="_blank">
+
+As of the latest updates from the Reserve Bank of India (RBI), no Sovereign Gold Bond issuance calendar has been announced for FY 2026–27. Investors should monitor official RBI notifications and PIB press releases for any future SGB issuance.
+
+</a> In practical terms, that means there is no live SGB primary market today; the only ways to buy SGBs now are on the stock exchanges in the secondary market.</p>
+
+<h2>The August 2025 premature redemption calendar</h2>
+
+<p>While no new tranches are being issued, RBI is actively managing the exit ramp for older series. <a href="https://www.teamleaseregtech.com/updates/article/45881/rbi-notified-regarding-the-sovereign-gold-bond-sgb-scheme-calendar-for/" rel="noopener" target="_blank">
+
+The Reserve Bank of India (RBI) on August 22, 2025, issued the notification regarding the Sovereign Gold Bond (SGB) Scheme Calendar for premature redemption during October 2025 – March 2026.
+
+</a></p>
+
+<p>Two rules drive this calendar. First, <a href="https://www.teamleaseregtech.com/updates/article/45881/rbi-notified-regarding-the-sovereign-gold-bond-sgb-scheme-calendar-for/" rel="noopener" target="_blank">
+
+premature redemption of the gold bonds is permitted after five years from the date of issue of such bonds.
+
+</a> Second, <a href="https://www.angelone.in/news/personal-finance/sovereign-gold-bond-premature-redemption-schedule-released-for-oct-2025-mar-2026-key-dates-inside" rel="noopener" target="_blank">
+
+according to scheme rules, premature redemption is allowed post 5 years of issuance, with specific submission windows for investors to apply through authorised channels.
+
+</a> If you miss the window for your tranche, you wait for the next coupon date.</p>
+
+<p>The redemption price isn't an arbitrary number either. <a href="https://sbi.bank.in/web/personal-banking/investments-deposits/govt-schemes/gold-banking/sovereign-gold-bond-scheme-sgb" rel="noopener" target="_blank">
+
+The redemption price will be in Indian Rupees based on simple average of closing price of gold of 999 purity of previous 3 working days published by IBJA. All the branches of the State Bank of India are authorised to accept the subscription.
+
+</a></p>
+
+<h2>The returns: why SGB investors from 2017-18 are sitting on multibagger gains</h2>
+
+<p>The bonds being redeemed through 2025 and early 2026 belong mostly to the 2017-18 series, which means investors who held on are now realising the full eight-year cycle alongside extraordinary gold price appreciation.</p>
+
+<p>A few specific data points from RBI's 2025 announcements make the scale clear:</p>
+
+<ul>
+<li><a href="https://www.businesstoday.in/personal-finance/investment/story/rbi-fixes-sgb-redemption-investors-can-get-211-return-from-sgb-2017-18-series-iii-472273-2025-04-16" rel="noopener" target="_blank">
+
+The Reserve Bank of India (RBI) has announced a pre-mature redemption price of Rs 9,221 per unit for the Sovereign Gold Bond (SGB) 2017-18 Series III, due for early redemption on April 16, 2025.
+
+</a></li>
+<li><a href="https://www.outlookmoney.com/invest/gold/sgb-2017-18-series-investors-to-pocket-over-221-per-cent-returns-check-details" rel="noopener" target="_blank">
+
+The returns for offline investors would be 221.45 per cent, and online investors would gain nearly 227 per cent. Apart from the gains made on redemption, investments in SGB also accrue 2.5 per cent interest per annum.
+
+</a></li>
+<li><a href="https://www.business-standard.com/finance/personal-finance/325-returns-on-sgb-2017-18-series-iv-as-rbi-announces-redemption-date-125102400664_1.html" rel="noopener" target="_blank">
+
+The final redemption price has been fixed at Rs 12,704 per unit, calculated on the basis of the simple average of gold's closing price (999 purity) over three business days-- October 17, 20, and 22, 2025.
+
+</a> That tranche delivered roughly <strong>325%</strong> over its eight-year life.</li>
+<li><a href="https://www.outlookmoney.com/invest/gold/sgb-2017-18-series-ix-investors-to-get-over-320-returns-as-rbi-fixes-price-for-final-redemption" rel="noopener" target="_blank">
+
+SGB 2017-18 Series IX matures on November 27, 2025. The RBI has set the final redemption price for the Sovereign Gold Bond (SGB) 2017-18 Series IX at Rs 12,484 per gram or Rs 124,840 for 10 grams.
+
+</a></li>
+<li><a href="https://www.business-standard.com/finance/personal-finance/gold-investors-get-387-returns-as-rbi-redeems-2017-18-sgb-series-126010200299_1.html" rel="noopener" target="_blank">
+
+The RBI fixed the final redemption price of the bond at ~13,486 per unit (per gram). This price was calculated based on the simple average of the closing price of 999-purity gold published by the India Bullion and Jewellers Association Ltd (IBJA).
+
+</a> That bond, originally issued on January 1, 2018, delivered roughly <strong>387%</strong> on principal — plus the eight years of 2.5% coupons.</li>
+<li><a href="https://cleartax.in/s/sovereign-gold-bonds" rel="noopener" target="_blank">
+
+The redemption price for Sovereign Gold Bonds due for premature redemption on 20 April 2026 was fixed at ₹15,254 per unit.
+
+</a></li>
+</ul>
+
+<p>Put differently: <a href="https://www.finnovate.in/learn/blog/sgb-redemption-early-vs-hold-8-years" rel="noopener" target="_blank">
+
+On August 11, 2025, the government announced two SGB redemptions that delivered CAGR returns of 19.9% and 13.5% - an impressive windfall for investors who subscribed back in 2020.
+
+</a> Those CAGR numbers don't include the 2.5% coupon. Few asset classes available to ordinary Indian retail investors have delivered that, sovereign-guaranteed, in the same window.</p>
+
+<h2>How SGB stacks up against physical gold once you add up the costs</h2>
+
+<p>For an Indian buyer walking into a jewellery shop in Mumbai or Coimbatore, the cost of one gram of gold is not the IBJA reference price. There's a stack of taxes and charges on top.</p>
+
+<p>The current tax structure on physical gold:</p>
+
+<ul>
+<li><a href="https://razorpay.com/learn/gst-rates-on-gold/" rel="noopener" target="_blank">
+
+GST on gold in India is set at a 3% rate, which applies to the value of gold, gold jewellery, gold coins and gold bars.
+
+</a></li>
+<li><a href="https://www.mondaq.com/india/sales-taxes-vat-gst/1617718/gst-on-gold-18-22-24-carat-jewellery-rates-ornaments" rel="noopener" target="_blank">
+
+A 3% GST is uniformly levied on the value of 18K, 22K, and 24K gold, divided equally between Central GST (CGST) and State GST (SGST). Additionally, a 5% GST is applied specifically on making charges, which cover the labour and craftsmanship.
+
+</a></li>
+<li><a href="https://razorpay.com/learn/gst-rates-on-gold/" rel="noopener" target="_blank">
+
+As per the Union Budget 2024-2025, the Government of India has reduced customs duties on gold and silver to 6% from the previous 15%.
+
+</a></li>
+<li><a href="https://goldrate.app/learn/gst-and-import-duty-on-gold" rel="noopener" target="_blank">
+
+Gold coins / bars: 3% GST on the gold value, plus a small premium versus pure investment exposure.
+
+</a></li>
+</ul>
+
+<p>That 6% import duty cut in 2024 actually mattered. <a href="https://en.wikipedia.org/wiki/Sovereign_Gold_Bond" rel="noopener" target="_blank">
+
+In addition, the RBI has not issued any new series after February 2024. Physical gold purchases were made more attractive, by lowering their import duty from 15% to 6%.
+
+</a> It narrowed the cost gap that SGBs once enjoyed and is one reason the scheme became less attractive for fresh issuance.</p>
+
+<p>Still, the structural drag on physical gold is real. <a href="https://goldrate.app/learn/gst-and-import-duty-on-gold" rel="noopener" target="_blank">
+
+For physical ownership, coins/bars carry 3% GST but no making charges, making them about 8–12% cheaper than equivalent jewellery.
+
+</a> The moment that gold takes the form of a chain or a bangle, you're paying making charges plus GST on those charges — which means a Bengaluru family buying ₹5,00,000 worth of jewellery is paying significantly more than ₹5,00,000 of underlying gold.</p>
+
+<p>SGB holders avoided that stack entirely. They also picked up the 2.5% annual coupon and a final redemption tied to IBJA's gold price, without paying for a locker or worrying about purity. <a href="https://getbelong.com/blog/sovereign-gold-bonds-everything-nris-need-to-know/" rel="noopener" target="_blank">
+
+Tax benefits – Capital gains on redemption after 8 years were completely tax-exempt for individuals. If you held till maturity, you paid zero tax on the profit. No storage costs – Unlike physical gold, no locker rent, no making charges.
+
+</a></p>
+
+<h2>The tax rules have shifted — read carefully</h2>
+
+<p>This is the part where existing SGB holders need to slow down. The blanket "capital gains tax-free" tagline from old marketing decks no longer fits cleanly.</p>
+
+<p><a href="https://www.whalesbook.com/news/English/economy/SGBs-Hit-230percent-Return-But-New-Tax-Rules-Slash-Future-Appeal/69f06d2e35c37de4af35a16f" rel="noopener" target="_blank">
+
+Previously, capital gains from SGB redemptions were mostly tax-exempt. The new rules differentiate tax treatment based on how and when bonds were acquired. Original subscribers holding their bonds until the full eight-year maturity will still get tax-free capital gains.
+
+</a></p>
+
+<p>The picture for everyone else has tightened. <a href="https://www.incorpx.io/blog/sovereign-gold-bond-tax-exemption-2026-rules" rel="noopener" target="_blank">
+
+The 12.5% LTCG rate applies without indexation benefit under the Income Tax Act 2025. The earlier indexation benefit that reduced taxable gains for long-held assets has been removed for most asset classes in the new Act.
+
+</a> <a href="https://www.incorpx.io/blog/sovereign-gold-bond-tax-exemption-2026-rules" rel="noopener" target="_blank">
+
+The legislative intent is clear: the government wants to incentivize long-term holding of gold bonds by original subscribers who were part of the government's original objective.
+
+</a></p>
+
+<p>What this means in plain terms:</p>
+
+<ul>
+<li>If you bought an SGB at the original RBI issuance and you hold it to the eight-year maturity date, your capital gain is still tax-free.</li>
+<li>If you bought an SGB on the exchange (secondary market) and redeem it at maturity, or sell it on the exchange, expect LTCG at 12.5% without indexation.</li>
+<li>If you redeem early through RBI's premature redemption windows, you fall outside the original "hold to maturity" exemption — talk to a CA before deciding.</li>
+<li><a href="https://cleartax.in/s/capital-gain-tax-on-sovereign-gold-bond-sgb" rel="noopener" target="_blank">
+
+Gold ETFs and SGB post Budget 2026 are taxed similarly. However, SGBs bought during the original issue and held till redemption is a better investment option than ETFs.
+
+</a></li>
+</ul>
+
+<h2>What an Indian investor should actually do now</h2>
+
+<p>The decisions are different depending on which bucket you're in. Here's how to think about each.</p>
+
+<h3>If you already hold SGBs from 2017-18, 2018-19 or 2019-20</h3>
+
+<p>Check the original issue date on your bond certificate or demat statement. <a href="https://nsdl.co.in/downloadables/pdf/2025-0128-Policy-Premature_Redemption_Calendar_for_Sovereign_Gold_Bonds_for_the_period_October_2025_to_March_2026.pdf" rel="noopener" target="_blank">
+
+All Participants are hereby informed that RBI has intimated the following details of Sovereign Gold Bonds (SGB) issued by RBI which are falling due for premature redemption during H2 of 2025-26 (October 2025 to March 2026) along with the dates of submission of premature redemption requests.
+
+</a> Identify whether your tranche has a redemption window in this calendar and whether you actually want to exit.</p>
+
+<p>For an original subscriber, the textbook move is to let the bond run to its eight-year maturity. The interest keeps coming, the eventual capital gain remains tax-free, and you avoid the friction of the premature redemption process. The investors who held SGB 2017-18 Series IX to the November 2025 maturity walked away with a ₹1,24,840 redemption per 10 grams — money that won't be improved by a tactical early exit unless gold prices crash before the maturity date.</p>
+
+<h3>If you bought SGB on the exchange and the bond is now near maturity</h3>
+
+<p>Your tax position is different from an original subscriber. The pre-maturity redemption can still be a useful liquidity event, but plan for the capital gains tax. Coordinate the redemption with your other tax-loss harvesting in the same financial year if possible.</p>
+
+<h3>If you wanted to buy SGB but missed every tranche</h3>
+
+<p>Three realistic options remain:</p>
+
+<ol>
+<li><strong>Buy SGB on the secondary market</strong>: older tranches trade on NSE and BSE, though liquidity is patchy. You forfeit the original-issue tax exemption but still earn the 2.5% coupon on the face value.</li>
+<li><strong>Gold ETFs and gold mutual funds</strong>: <a href="https://cleartax.in/s/capital-gain-tax-on-sovereign-gold-bond-sgb" rel="noopener" target="_blank">
+
+Gold ETFs and SGB post Budget 2026 are taxed similarly.
+
+</a> They handle the storage problem and trade through the same broker you already use for equities.</li>
+<li><strong>Physical gold coins or bars</strong>: best reserved for buyers who specifically want the physical asset, accept the 3% GST on value, and don't need the 2.5% coupon SGB used to offer.</li>
+</ol>
+
+<h3>How this fits the rest of your money plan</h3>
+
+<p>For most salaried households in Bangalore, Pune or NCR, gold should be one slice of a much larger asset mix that also includes EPF, PPF, equity SIPs, and — for those carrying a home loan — the EMI obligation that probably dwarfs every other monthly outflow. If you're about to redeem a sizeable SGB position and you're weighing whether to part-prepay your home loan with the proceeds, it's worth running both numbers side by side: the prepayment cuts your interest outgo, while reinvesting in gold ETFs or equity gives a different return-and-risk profile. You can model the new monthly outgo and tenure after a lump-sum prepayment with the <a href="/tools/emi-calculator">EMI Calculator</a> before committing the redemption money in either direction.</p>
+
+<p>If, on the other hand, you're moving the redeemed amount into a Systematic Investment Plan to ride out the next few years rather than locking it back into gold, the <a href="/tools/sip-calculator">SIP Calculator</a> can give you a sense of what staggered deployment looks like over 5-10 years. And for the more conservative parts of the portfolio, the <a href="/tools/fd-calculator">FD Calculator</a> helps benchmark what a short-term FD ladder would have earned on the same lump sum.</p>
+
+<h2>Where the gold investment landscape goes from here</h2>
+
+<p>The SGB story isn't finished — the existing stock of bonds will keep maturing and triggering redemption announcements for years. <a href="https://www.outlookmoney.com/invest/gold/sgb-2017-18-series-ix-investors-to-get-over-320-returns-as-rbi-fixes-price-for-final-redemption" rel="noopener" target="_blank">
+
+SGB 2017-18 Series VIII: RBI Announces Final Redemption Price, Investors Set To Get 317% Returns - Check Details · Sovereign Gold Bond (SGB) 2018-19 Series-III Investors Set for 295% Returns - Check Details.
+
+</a> Each one is a useful data point on what gold has done for retail investors who locked in eight years ago at issue prices well under ₹3,000 per gram.</p>
+
+<p>What's gone is the easy decision. Between November 2015 and February 2024, the answer to "physical gold or SGB?" was almost always SGB for anyone with a PAN, a demat account, and the patience to hold for five years. With the scheme now closed for new issuance, with import duty cut to make physical gold cheaper, and with tax rules tightening around secondary-market SGB holders, the choice has become a real comparison rather than a no-brainer.</p>
+
+<p>For the typical SabTools reader — a salaried professional in their 30s or a small business owner managing a 10-15 year wealth plan — the practical takeaway is this: treat the SGB bonds you already own as the disciplined, low-cost gold exposure you'll be hard-pressed to replicate today, and approach fresh gold purchases with a much sharper eye on the tax-and-charges stack. Watch RBI's premature redemption notifications when they land, mark the eight-year maturity date of each tranche you hold, and let the bonds do what they were designed to do.</p>`,
   }
 ];
 
