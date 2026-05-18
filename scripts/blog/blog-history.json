@@ -167,9 +167,10 @@
     "fancy-text-generator",
     "goal-based-sip-calculator",
     "ai-meta-description-generator",
-    "blood-alcohol-calculator"
+    "blood-alcohol-calculator",
+    "numerology-calculator"
   ],
-  "lastCategory": "health",
-  "totalPosts": 168,
-  "lastRun": "2026-05-17T12:21:51.773Z"
+  "lastCategory": "fun",
+  "totalPosts": 169,
+  "lastRun": "2026-05-18T07:13:22.863Z"
 }
