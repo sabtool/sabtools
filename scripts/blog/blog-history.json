@@ -169,9 +169,10 @@
     "ai-meta-description-generator",
     "blood-alcohol-calculator",
     "numerology-calculator",
-    "color-palette-generator"
+    "color-palette-generator",
+    "compress-pdf"
   ],
-  "lastCategory": "css",
-  "totalPosts": 170,
-  "lastRun": "2026-05-18T13:55:12.852Z"
+  "lastCategory": "pdf",
+  "totalPosts": 171,
+  "lastRun": "2026-05-19T08:12:39.260Z"
 }
