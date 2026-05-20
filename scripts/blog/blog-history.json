@@ -172,9 +172,10 @@
     "color-palette-generator",
     "compress-pdf",
     "ifsc-code-lookup",
-    "split-pdf"
+    "split-pdf",
+    "gate-score-calculator"
   ],
-  "lastCategory": "pdf",
-  "totalPosts": 173,
-  "lastRun": "2026-05-20T07:08:24.710Z"
+  "lastCategory": "exam",
+  "totalPosts": 174,
+  "lastRun": "2026-05-20T13:08:17.185Z"
 }

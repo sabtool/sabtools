@@ -30128,6 +30128,197 @@ SGB 2017-18 Series VIII: RBI Announces Final Redemption Price, Investors Set To 
 <p>No. The page numbers printed inside the original PDF (in headers or footers) stay as they were. If you extract pages 9-26 of a 47-page statement, the new file's pages will still say "Page 9 of 47" through "Page 26 of 47". That's actually useful for embassies and CAs because it shows the extracted range is from a longer continuous document.</p>
 
 <p>Upload your file and try a range — <a href="/tools/split-pdf">open the Split PDF tool and extract the pages you need →</a></p>`,
+  },
+  {
+    slug: "gate-score-calculator-comparison-2026",
+    title: "GATE Score Calculator: SabTools vs BankBazaar vs ClearTax — Honest Comparison (2026)",
+    description: "Honest comparison of free GATE Score Calculator options in India for 2026 — features, accuracy, privacy, signup requirements. Picks the best for Indian users.",
+    date: "2026-05-20",
+    category: "Exam",
+    readTime: "10 min read",
+    keywords: ["gate", "score", "psu", "iocl", "ntpc", "qualifying", "mtech", "gate score calculator", "best gate score calculator india", "gate score calculator comparison"],
+    toolSlug: "gate-score-calculator",
+    image: {
+      src: "/blog/gate-score-calculator.webp",
+      alt: "GATE Score Calculator comparison — SabTools vs other free Indian tools (2026)",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>The actual decision: specialized GATE tool or build it yourself on a generic calculator?</h2>
+
+<p>If you've just finished a GATE attempt and you're trying to estimate your score before IIT releases the official answer key — or you're a final-year B.Tech student trying to figure out whether your projected raw marks will clear PSU cutoffs for IOCL, NTPC, BHEL or ONGC — you're choosing between two very different approaches. Either you use a <strong>purpose-built GATE score calculator</strong> that already has the official IIT formula, qualifying marks data, and PSU cutoff history baked in, or you open a generic calculator hub like <a href="https://www.rapidtables.com/" rel="noopener" target="_blank">RapidTables</a> or <a href="https://www.calculator.net/" rel="noopener" target="_blank">Calculator.net</a> and plug numbers into a general-purpose scientific calculator yourself.</p>
+
+<p><strong>Quick verdict:</strong> for the actual GATE score → PSU cutoff workflow Indian aspirants need, a specialized tool like <a href="/tools/gate-score-calculator">SabTools' GATE Score Calculator</a> wins outright — not because RapidTables or Calculator.net are bad tools, but because they were never built for this. They're global, generic, $-denominated calculator libraries. For percentage math or square roots they're solid. For converting your raw GATE marks into a normalised score out of 1000, comparing against last year's IOCL CSE cutoff of around 781 or NTPC mechanical cutoff in the 720-750 band, they have nothing for you. Below is the honest, side-by-side breakdown.</p>
+
+<h2>What a GATE score calculator actually needs to do</h2>
+
+<p>Before comparing tools, it's worth being precise about what "calculating your GATE score" really means, because most candidates conflate three different numbers:</p>
+
+<ul>
+  <li><strong>Raw marks</strong> — your out-of-100 marks after the negative-marking deductions (1/3 for 1-mark MCQs, 2/3 for 2-mark MCQs, no negative for MSQ/NAT).</li>
+  <li><strong>GATE score (out of 1000)</strong> — the normalised score IIT publishes using the official formula that involves the qualifying mark <em>Mq</em>, the average of top 0.1% / top 10 marks <em>Mt</em>, and your raw marks <em>M</em>.</li>
+  <li><strong>All India Rank (AIR)</strong> — your position among all candidates in that paper.</li>
+</ul>
+
+<p>The official formula (used by the IIT organising the exam each year) is:</p>
+
+<p><strong>GATE Score = 350 + 250 × (M − Mq) / (Mt − Mq)</strong></p>
+
+<p>For PSU recruitment, IOCL, NTPC, GAIL, BHEL, ONGC and others publish branch-wise cutoffs <em>on GATE score</em>, not raw marks. So an aspirant scoring 55 raw in EE has no idea whether they're in the IOCL EE shortlist zone until that 55 is converted into a normalised 0–1000 score, then matched against the previous year's cutoff for their category. That's the workflow a real GATE tool has to handle.</p>
+
+<h2>SabTools GATE Score Calculator — what's inside</h2>
+
+<p>The <a href="/tools/gate-score-calculator">SabTools GATE Score Calculator</a> is built around exactly that workflow:</p>
+
+<ul>
+  <li><strong>Official IIT formula</strong> implemented as-is — enter your raw marks, the qualifying mark (Mq) and Mt for your paper, and you get the normalised score out of 1000.</li>
+  <li><strong>Qualifying status check</strong> — instant flag for whether your raw marks clear the GATE qualifying cutoff for your category (General/EWS/OBC-NCL/SC/ST/PwD), based on the typical thresholds (25 or 0.4×Mt, whichever is higher; relaxed for reserved categories).</li>
+  <li><strong>PSU cutoff comparison</strong> — see your projected GATE score against indicative PSU cutoffs for IOCL, NTPC, GAIL, BHEL, ONGC, BPCL across major branches (Mechanical, Electrical, ECE, Civil, CSE, Chemical, Instrumentation), so you can immediately see whether you're in the interview-call zone.</li>
+  <li><strong>M.Tech admission context</strong> — rough indication of which IITs/NITs typically accept your score band for direct admission vs requiring COAP rounds.</li>
+  <li><strong>Runs entirely in your browser</strong> — no signup, no email, your marks never leave your device.</li>
+</ul>
+
+<p>That last point matters more than it sounds. A lot of candidates are paranoid (reasonably) about plugging their estimated marks into ad-funded portals that then retarget them with coaching ads for the next eight weeks. SabTools doesn't ask who you are.</p>
+
+<h2>RapidTables — honest assessment</h2>
+
+<p><a href="https://www.rapidtables.com/" rel="noopener" target="_blank">RapidTables</a> is a well-respected global calculator and reference site. If you need a quick scientific calculator, a fraction-to-decimal converter, an RGB-to-hex converter, or basic statistics tools, it's clean and reliable. The site has been around for years and the math tools are accurate.</p>
+
+<p><strong>Where it wins:</strong></p>
+<ul>
+  <li>Excellent general-purpose calculators (scientific, percentage, fractions, log/ln, trigonometry).</li>
+  <li>No signup, fast page loads, predictable UI.</li>
+  <li>Useful unit converters and engineering reference tables.</li>
+</ul>
+
+<p><strong>Where it falls short for GATE candidates:</strong></p>
+<ul>
+  <li>No GATE-specific calculator. To compute your score you'd have to manually punch in <em>350 + 250 × (M − Mq) / (Mt − Mq)</em> on the scientific calculator. Doable, but you'd still have no qualifying-cutoff reference and zero PSU context.</li>
+  <li>No India-focused content — the site is built for a global audience, with no awareness of Indian competitive exam structures.</li>
+  <li>No category-wise qualifying mark logic — you'd have to look up Mq separately for each year and category.</li>
+</ul>
+
+<p>Practical comparison: a Mechanical Engineering candidate with raw marks of 52, Mq of 25, and Mt of 86 would compute manually on RapidTables: 350 + 250 × (52 − 25) / (86 − 25) = 350 + 250 × 0.4426 = <strong>≈ 461</strong>. That math is correct, but RapidTables won't then tell you that 461 is well below typical IOCL Mechanical cutoffs (mid-700s) and likely won't make NTPC ET shortlists either. SabTools does that comparison in the same step.</p>
+
+<h2>Calculator.net — honest assessment</h2>
+
+<p><a href="https://www.calculator.net/" rel="noopener" target="_blank">Calculator.net</a> is one of the largest dedicated calculator libraries on the web. It has hundreds of niche calculators across finance, health, math, and other domains. The build quality is solid and the explanations are well-written.</p>
+
+<p><strong>Where it wins:</strong></p>
+<ul>
+  <li>Depth — calculators for mortgage, BMI, GPA, statistical tests, time-zone math, and dozens of other use cases.</li>
+  <li>Solid mathematical accuracy and clean explanations of formulas.</li>
+  <li>Free, no signup, well-maintained.</li>
+</ul>
+
+<p><strong>Where it falls short for GATE candidates:</strong></p>
+<ul>
+  <li><strong>US-centric throughout</strong> — finance calculators default to $, US tax brackets, US mortgage structures, US GPA scale.</li>
+  <li>No GATE calculator exists on the site. The closest tool is the GPA calculator, which doesn't map to the Indian GATE/PSU framework at all.</li>
+  <li>No reference to Indian engineering exams, IITs/NITs, M.Tech admission process, or COAP.</li>
+  <li>You'd still be doing manual formula entry, with no qualifying check and no cutoff context.</li>
+</ul>
+
+<p>Calculator.net is genuinely good at what it does. It just doesn't do this.</p>
+
+<h2>Side-by-side: GATE-specific workflow</h2>
+
+<p>To make the comparison concrete, here's how each tool handles the actual aspirant workflow:</p>
+
+<ol>
+  <li><strong>Enter raw marks (after negative deduction)</strong>
+    <ul>
+      <li>SabTools: direct input field, with optional helper to compute raw from MCQ/MSQ/NAT splits.</li>
+      <li>RapidTables: use the negative-marking math on a scientific calculator.</li>
+      <li>Calculator.net: same — generic calculator only.</li>
+    </ul>
+  </li>
+  <li><strong>Compute normalised GATE score (formula applied)</strong>
+    <ul>
+      <li>SabTools: one click, official IIT formula.</li>
+      <li>RapidTables: manual formula entry on scientific calc.</li>
+      <li>Calculator.net: manual formula entry on scientific calc.</li>
+    </ul>
+  </li>
+  <li><strong>Check qualifying status by category</strong>
+    <ul>
+      <li>SabTools: category selector handles General/OBC-NCL/SC/ST/EWS/PwD logic automatically.</li>
+      <li>RapidTables / Calculator.net: not supported.</li>
+    </ul>
+  </li>
+  <li><strong>Compare against PSU cutoffs (IOCL, NTPC, GAIL, BHEL, ONGC, BPCL)</strong>
+    <ul>
+      <li>SabTools: built-in cutoff reference by company and branch.</li>
+      <li>RapidTables / Calculator.net: not supported — you'd Google last year's cutoffs separately.</li>
+    </ul>
+  </li>
+  <li><strong>M.Tech admission band indication</strong>
+    <ul>
+      <li>SabTools: rough IIT/NIT band reference.</li>
+      <li>RapidTables / Calculator.net: not supported.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>The pattern is consistent. The generic hubs aren't <em>wrong</em>; they're just doing a different job.</p>
+
+<h2>A worked example — Riya, ECE 2025 aspirant</h2>
+
+<p>Riya appears in GATE ECE 2025. Her self-evaluated raw marks (after negative marking) come to <strong>48.67</strong>. The Mq for ECE that year is <strong>25</strong>; Mt for ECE comes out to around <strong>82</strong>. She's General category.</p>
+
+<p>On <a href="/tools/gate-score-calculator">SabTools' calculator</a>, she enters those three numbers and immediately sees:</p>
+<ul>
+  <li><strong>GATE Score:</strong> 350 + 250 × (48.67 − 25) / (82 − 25) = 350 + 250 × 0.4153 = <strong>≈ 454</strong></li>
+  <li><strong>Qualifying status:</strong> Qualified (above the 25 / 0.4×Mt threshold)</li>
+  <li><strong>PSU outlook:</strong> Below typical IOCL/NTPC ECE cutoffs (usually 700+); a borderline call for some state PSUs and certain M.Tech admissions at lower-rung NITs through CCMT.</li>
+</ul>
+
+<p>On RapidTables, she'd correctly compute 454 — and then sit there wondering what 454 means. That's the gap.</p>
+
+<h2>Privacy, signups, ads — where SabTools is structurally different</h2>
+
+<p>This is one area where the comparison isn't even close, but it's worth being precise. RapidTables and Calculator.net are both ad-supported sites; tools and content pages carry display ads. That's a legitimate revenue model and the calculators still work. They don't typically gate access behind signups either, which is genuinely a plus relative to many Indian education portals that demand a phone number before showing your "rank prediction".</p>
+
+<p>SabTools' approach is different in a few specific ways:</p>
+<ul>
+  <li><strong>No ads on tool pages</strong> — ads only appear on long-form guide articles. The calculator itself loads clean.</li>
+  <li><strong>No signup, no email capture, no phone number</strong> — important when you're entering exam marks you'd rather not have profiled.</li>
+  <li><strong>Browser-side computation</strong> — your raw marks, category, and Mq/Mt values stay on your device. Nothing is POSTed to a server.</li>
+  <li><strong>Indian-format defaults throughout</strong> — categories, PSU names, branch codes (CSE, ECE, EE, ME, CE, CH, IN), M.Tech context.</li>
+</ul>
+
+<h2>If you're also planning the bigger picture</h2>
+
+<p>A GATE attempt rarely sits alone in an aspirant's planning. Most candidates are juggling two or three parallel decisions: PSU prep, M.Tech admission, MBA backup, or scholarship applications. SabTools' other education calculators sit alongside the GATE tool for exactly this reason:</p>
+
+<ul>
+  <li><a href="/tools/jee-rank-predictor">JEE Rank Predictor</a> — for younger siblings or batchmates working out IIT/NIT entry.</li>
+  <li><a href="/tools/cat-percentile-calculator">CAT Percentile Calculator</a> — for candidates running CAT as an MBA backup to PSU/M.Tech routes.</li>
+  <li><a href="/tools/scholarship-eligibility-checker">Scholarship Eligibility Checker</a> — for NSP, INSPIRE, Post-Matric scholarships during M.Tech.</li>
+  <li><a href="/tools/board-percentage-calculator">Board Percentage Calculator</a> — useful when PSU forms ask for 10th/12th aggregate alongside GATE score.</li>
+</ul>
+
+<p>And once a PSU offer or M.Tech stipend kicks in, the financial-side tools — <a href="/tools/emi-calculator">EMI Calculator</a> for an education loan repayment plan, or <a href="/tools/sip-calculator">SIP Calculator</a> for that first salary's investments — sit in the same place. RapidTables and Calculator.net have finance tools too, but they're $-denominated and don't reflect Indian loan structures or mutual fund context.</p>
+
+<h2>When the generic hubs are actually the right choice</h2>
+
+<p>To be fair: there are real cases where <a href="https://www.rapidtables.com/" rel="noopener" target="_blank">RapidTables</a> or <a href="https://www.calculator.net/" rel="noopener" target="_blank">Calculator.net</a> are exactly what you want.</p>
+<ul>
+  <li>You need a clean scientific calculator for arbitrary math during prep.</li>
+  <li>You're doing unit conversions, log tables, or trigonometric values for a GATE practice problem.</li>
+  <li>You want to verify a formula computation step-by-step.</li>
+  <li>You're not Indian and you stumbled on this article — most of their finance/health tools will fit your context better than ours.</li>
+</ul>
+
+<p>For anything generic and global, they're solid bookmarks. For converting raw GATE marks into a normalised score, checking qualifying status by category, and stacking that against PSU cutoffs, they simply weren't built for the job.</p>
+
+<h2>Bottom line</h2>
+
+<p>If your goal is "I need to know whether my GATE marks will get me an IOCL interview call or an NIT Trichy M.Tech seat," the choice is straightforward: use a specialized Indian tool. If your goal is "I need a general calculator to do arbitrary math," the global hubs are fine and free. The two categories aren't really competing — they're solving different problems for different users.</p>
+
+<p>SabTools' calculator gives you the official IIT formula, category-aware qualifying logic, PSU cutoff context, and M.Tech band indication, all in one screen, with no signup and your marks never leaving your browser. That's the workflow GATE aspirants actually need post-exam.</p>
+
+<p>Try the <a href="/tools/gate-score-calculator">SabTools GATE Score Calculator →</a> and see where your projected score sits against this year's PSU and M.Tech landscape.</p>`,
   }
 ];
 
