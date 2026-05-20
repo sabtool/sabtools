@@ -171,9 +171,10 @@
     "numerology-calculator",
     "color-palette-generator",
     "compress-pdf",
-    "ifsc-code-lookup"
+    "ifsc-code-lookup",
+    "split-pdf"
   ],
-  "lastCategory": "utility",
-  "totalPosts": 172,
-  "lastRun": "2026-05-19T13:10:07.418Z"
+  "lastCategory": "pdf",
+  "totalPosts": 173,
+  "lastRun": "2026-05-20T07:08:24.710Z"
 }

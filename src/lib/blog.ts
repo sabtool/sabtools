@@ -29979,6 +29979,155 @@ SGB 2017-18 Series VIII: RBI Announces Final Redemption Price, Investors Set To 
 <p>For a 30-year-old in Pune building a retirement corpus over the next 30 years, the optimal portfolio probably uses all three. A PPF account anchors the tax-free debt allocation at 7.1%. An EPF account, topped up with VPF where the ₹2.5 lakh cap allows, provides 8.25% tax-free on the salary slab. And an NPS Tier-I account, now able to run high equity allocation under MSF, captures long-run equity returns at a 0.30% fund management charge.</p>
 
 <p>None of these instruments has changed dramatically in headline numbers this year. What has changed is the gap between them and the alternatives — bank FDs are paying less, equity markets remain volatile, and the regulatory architecture around NPS has become genuinely flexible. The saver who re-examines their FY 2025-26 allocation now, before March 31, is the one who will compound that flexibility into real money over the next decade.</p>`,
+  },
+  {
+    slug: "split-pdf-guide-2026",
+    title: "Best Free Split PDF Online for India (2026)",
+    description: "Use Split PDF online for free — split pdf by page ranges and extract specific pages. No signup, instant results. Made for India. Try now on SabTools.in!",
+    date: "2026-05-20",
+    category: "PDF",
+    readTime: "11 min read",
+    keywords: ["split", "pdf", "pages", "extract", "range", "separate", "split pdf", "split pdf online free"],
+    toolSlug: "split-pdf",
+    image: {
+      src: "/blog/split-pdf.webp",
+      alt: "Split PDF — Free Online Split PDF by page ranges and extract specific pages Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>Last month a friend in Bangalore was applying for a Schengen visa and the consulate asked for six months of HDFC bank statements — April to September. The problem? Her net-banking download came as a single <strong>47-page PDF</strong> covering the full financial year, and the visa portal had a 5 MB upload cap per document. She didn't need a fancy editor; she needed to pull pages 9 to 26 out of that file and submit them on their own. That's exactly the kind of job the <a href="/tools/split-pdf">Split PDF</a> tool was built for — extract a clean page range, save it as a new file, move on.</p>
+
+<p>Splitting PDFs sounds trivial until you actually need to do it. Most people end up screen-shotting pages, pasting them into Word, and re-exporting — losing image quality and signatures along the way. A proper split keeps the original text layer, the digital signatures from banks like SBI or ICICI, and the embedded fonts intact. Below is a working guide to using the tool, plus the real Indian scenarios where it saves an afternoon of frustration.</p>
+
+<h2>Why Indians end up splitting PDFs more than they expect</h2>
+
+<p>Almost every regulated document in India today arrives as a PDF — and almost every onward submission has a page or size restriction. A few patterns repeat across cities and professions:</p>
+
+<ul>
+  <li><strong>Bank statements for ITR or visa applications.</strong> Your full-year statement might be 40-60 pages, but the embassy or CA only wants a specific window. Pages 14-31, for example.</li>
+  <li><strong>Home loan paperwork.</strong> When SBI or Axis Bank sends your sanction letter, the bundle often runs 25+ pages including terms, schedule, and signature pages. You'll need to send only the EMI schedule to a relative who's helping you cross-check the math against an <a href="/tools/emi-calculator">EMI calculator</a>.</li>
+  <li><strong>GST returns and invoices.</strong> A small business owner in Surat or Coimbatore who downloads GSTR-2B from the portal sees one consolidated file. Sharing only the relevant supplier's pages with the accountant requires extraction.</li>
+  <li><strong>Property documents.</strong> Sale deed PDFs in Maharashtra and Karnataka frequently bundle 80-120 pages — index, encumbrance certificate, parent documents, mutation records. A buyer's lawyer typically asks for specific sections, not the whole pile.</li>
+  <li><strong>Marksheets and degree certificates.</strong> Universities like IGNOU and Delhi University now issue consolidated marksheets covering all six semesters in one PDF. Job applications usually want each semester separately.</li>
+  <li><strong>Annual reports and AGM notices.</strong> Listed companies push out 200-page annual reports. A retail investor on Zerodha or Groww often wants just the Director's Report (say pages 18-42) for reading offline.</li>
+</ul>
+
+<p>In every one of these cases, the source PDF is fine — you just need a slice of it.</p>
+
+<h2>How the Split PDF tool handles page ranges</h2>
+
+<p>The interface is straightforward. Upload your PDF, then specify how you want it split. The tool supports three modes that cover the way most Indian users actually think about pages:</p>
+
+<ol>
+  <li><strong>Single-range extract.</strong> Type something like <code>9-26</code> and the tool returns one new PDF containing just those 18 pages, in order. This is what the Schengen visa scenario above needs.</li>
+  <li><strong>Multiple ranges into one file.</strong> Enter <code>1-3, 14-18, 47</code> and you get a single PDF that stitches those three slices together. Useful when a CA asks for the front summary, the relevant transactions, and the closing balance page from a long bank statement.</li>
+  <li><strong>Multiple ranges into separate files.</strong> If you have a 60-page combined marksheet and need each semester as its own document — <code>1-10, 11-20, 21-30, 31-40, 41-50, 51-60</code> — the tool can output six separate PDFs in one go.</li>
+</ol>
+
+<p>Page numbers refer to the PDF's actual page order, not any printed page numbers inside the document. A 47-page bank statement has page 1 as the cover sheet even if the cover sheet doesn't show a number — so always count from the front. The tool shows a quick page count after upload so you can verify before splitting.</p>
+
+<h3>A note on big files</h3>
+
+<p>Indian bank statements and government-issued PDFs are usually under 10 MB, which the tool handles instantly. If you've received a heavy scanned document from a sub-registrar's office — say a 110 MB property bundle — it's worth running it through <a href="/tools/compress-pdf">Compress PDF</a> first at medium quality. That brings most scans down to 15-25 MB while keeping signatures readable, and the split then runs in seconds.</p>
+
+<h2>Walkthrough: extracting six months of a bank statement</h2>
+
+<p>Take a realistic case. Arjun, a salaried professional in HSR Layout earning <strong>₹18L per annum</strong>, needs to submit his April-September 2025 HDFC statement for a tourist visa to Japan. His full FY 2025-26 statement download from HDFC NetBanking gave him a 52-page PDF.</p>
+
+<ol>
+  <li>He opens the file in any viewer and confirms April starts on page 4 (the first three are cover, table of contents, and summary).</li>
+  <li>September's last transaction ends on page 27.</li>
+  <li>On the Split PDF tool, he uploads the file and enters the range <code>1-3, 4-27</code> as a single combined range — actually, simpler: <code>1-27</code>, keeping the cover and summary too, which is what the embassy usually prefers anyway.</li>
+  <li>He downloads the new PDF. It's 1.8 MB instead of the original 4.3 MB, and it fits under the visa portal's 5 MB cap with room to spare.</li>
+</ol>
+
+<p>The whole job takes under two minutes. The bank's digital signature on the original is preserved because the tool doesn't re-render the pages — it copies them as-is into a new PDF container. That signature is what the consulate actually verifies, so preserving it matters.</p>
+
+<h2>The ITR filing scenario: pulling out Form 16 sections</h2>
+
+<p>Filing returns on the Income Tax e-filing portal? If you're moonlighting as a freelancer alongside a salaried job, you'll probably have a Form 16 from your employer plus a consolidated PDF of consulting invoices. The CA usually wants:</p>
+
+<ul>
+  <li>Form 16 Part A (TDS summary) — typically pages 1-2</li>
+  <li>Form 16 Part B (salary breakdown) — typically pages 3-5</li>
+  <li>Selected freelance invoices that match your 26AS entries</li>
+</ul>
+
+<p>Rather than emailing the whole 30-page invoice book, split it down to the specific months your CA flagged. If you also need to convert any of those extracted invoices into editable form to adjust descriptions before sharing, <a href="/tools/pdf-to-word">PDF to Word</a> pulls the text out cleanly. And if a particular invoice page needs to be sent as an image attachment via WhatsApp, <a href="/tools/pdf-to-image">PDF to Image</a> converts page-by-page.</p>
+
+<p>For freelancers crossing the <strong>₹20L turnover</strong> threshold and dealing with GST, the same split workflow applies to GSTR returns. Pull out the relevant supplier-wise pages and reconcile them against your sales register. If you're recalculating GST amounts during this reconciliation, the <a href="/tools/gst-calculator">GST calculator</a> with 5%, 12%, 18%, and 28% slabs is handy alongside.</p>
+
+<h2>Home loan documents: splitting the sanction bundle</h2>
+
+<p>Anyone who has taken a home loan from SBI, ICICI, or Bank of Baroda knows the sanction PDF is a monster. A typical <strong>₹65L home loan</strong> sanction in Pune comes with 30-40 pages: sanction letter, terms and conditions, EMI schedule, list of property documents collected, vernacular declaration, MITC (Most Important Terms and Conditions), and signature pages.</p>
+
+<p>When the bank's relationship manager asks you to share only the property document checklist with your seller's lawyer, you don't want to forward the whole bundle exposing your interest rate and personal financials. Split out just the relevant 3-4 pages and send those.</p>
+
+<p>Similarly, when you're verifying the EMI schedule the bank computed, extract those pages alone and cross-check the math. For a ₹65L loan at <strong>8.6% over 20 years</strong>, the EMI should land around ₹56,907 and total interest payable comes to roughly ₹71.6L over the tenure — numbers worth confirming on a fresh <a href="/tools/emi-calculator">EMI calculation</a> before signing. If the bank's number is off by even ₹200, that's <strong>₹48,000</strong> across the loan's life.</p>
+
+<h2>Property documents in tier-1 and tier-2 cities</h2>
+
+<p>In cities like Hyderabad, Jaipur, and Ahmedabad, property due diligence PDFs from advocates regularly cross 100 pages. The structure is usually:</p>
+
+<ul>
+  <li>Pages 1-15: Title search report</li>
+  <li>Pages 16-45: Parent documents (older sale deeds, gift deeds)</li>
+  <li>Pages 46-70: Encumbrance certificate and revenue records</li>
+  <li>Pages 71-100+: Approvals (RERA, layout, building plan)</li>
+</ul>
+
+<p>If your bank's loan team wants only the RERA registration and approved building plan for verification, that's a specific 8-10 page slice. Splitting it out and uploading just that to the bank's portal — rather than the entire 100+ page bundle — speeds up the legal vetting by days. Banks process focused submissions faster because the loan officer doesn't have to scroll through 90 pages of unrelated material to find what they actually need.</p>
+
+<h2>Privacy and what happens to your file</h2>
+
+<p>Bank statements, salary slips, and property documents are sensitive. The Split PDF tool processes files temporarily and removes them after the split is complete — your statement isn't stored, indexed, or logged with your account number visible. Still, two sensible habits when handling financial PDFs online:</p>
+
+<ul>
+  <li><strong>Close the browser tab</strong> after downloading the split file. The download itself happens directly to your device.</li>
+  <li><strong>Don't share split files over unsecured channels.</strong> Even if a tool is private, an open WhatsApp group is not. Use email or password-protected sharing for anything that includes account numbers or PAN.</li>
+  <li><strong>Mask if possible.</strong> Some users mask account numbers in the original PDF before splitting if the document is going to a less-trusted recipient, like a coaching institute asking for income proof.</li>
+</ul>
+
+<p>The tool runs in your browser without account registration, so there's no profile tied to your uploads. That's specifically useful for college students in Kota or Coimbatore submitting fee receipts to scholarship portals where they're not keen on creating yet another account.</p>
+
+<h2>Common mistakes when specifying page ranges</h2>
+
+<p>A few things trip people up:</p>
+
+<ul>
+  <li><strong>Off-by-one errors.</strong> If you want pages 5 through 10 inclusive, write <code>5-10</code>, not <code>5-9</code>. Both endpoints are included.</li>
+  <li><strong>Reverse ranges.</strong> Writing <code>10-5</code> won't reverse the pages — it'll usually error out. If you actually need pages in reverse order, that's a separate operation, not what split is designed for.</li>
+  <li><strong>Spaces and separators.</strong> Use commas between multiple ranges: <code>1-3, 7, 12-15</code>. Spaces around the commas are fine; semicolons usually aren't.</li>
+  <li><strong>Page numbers vs printed numbers.</strong> A bank statement might say "Page 1 of 47" at the top of what is actually the 3rd PDF page (because pages 1 and 2 are the cover and disclosure). Always go by the PDF viewer's page count, not the printed header.</li>
+  <li><strong>Asking for pages that don't exist.</strong> If the PDF has 47 pages and you ask for <code>50-55</code>, the tool will flag it. Check the page count shown after upload.</li>
+</ul>
+
+<h2>When splitting isn't the right answer</h2>
+
+<p>Sometimes what you actually want isn't a split. A few cases where another tool fits better:</p>
+
+<ul>
+  <li>If you need to <strong>merge two separate PDFs</strong> into one — say, combining your Form 16 with your 26AS — that's a merge operation, not a split.</li>
+  <li>If you want to <strong>edit text inside the PDF</strong> (correct a typo in a draft invoice, change a date), convert via <a href="/tools/pdf-to-word">PDF to Word</a>, edit, then re-export using <a href="/tools/word-to-pdf">Word to PDF</a>.</li>
+  <li>If the file is just too large for an upload portal but you don't need to drop any pages, <a href="/tools/compress-pdf">Compress PDF</a> at medium quality usually halves the size without visible degradation.</li>
+  <li>If you need individual pages as JPGs for an Aadhaar/PAN form upload, <a href="/tools/pdf-to-image">PDF to Image</a> is the cleaner path than splitting and then converting.</li>
+</ul>
+
+<h2>FAQ — questions Indian users actually ask</h2>
+
+<h3>Will the split PDF still have the bank's digital signature?</h3>
+<p>Yes. The tool copies pages bitwise into a new container rather than re-rendering them, so embedded signatures from HDFC, SBI, and ICICI net-banking exports remain intact. Embassies and CAs verifying the document can validate the signature on the split file the same way they would on the original.</p>
+
+<h3>Can I split a password-protected PDF?</h3>
+<p>You'll need to remove the password first. Most banks send statements with a password (PAN + DOB combination, typically). Open the file in your PDF viewer, enter the password, then save an unlocked copy locally and upload that to the split tool.</p>
+
+<h3>Is there a page limit on the file I can split?</h3>
+<p>The tool handles PDFs up to a few hundred pages comfortably. Annual reports and large property bundles in the 200-400 page range work fine. Very heavy scanned documents above 100 MB should be compressed first.</p>
+
+<h3>Will the page numbering inside the document update automatically?</h3>
+<p>No. The page numbers printed inside the original PDF (in headers or footers) stay as they were. If you extract pages 9-26 of a 47-page statement, the new file's pages will still say "Page 9 of 47" through "Page 26 of 47". That's actually useful for embassies and CAs because it shows the extracted range is from a longer continuous document.</p>
+
+<p>Upload your file and try a range — <a href="/tools/split-pdf">open the Split PDF tool and extract the pages you need →</a></p>`,
   }
 ];
 
