@@ -19,6 +19,19 @@
     { "source": "/brand/:slug*", "destination": "/", "permanent": true },
     { "source": "/wp-login.php", "destination": "/", "permanent": true },
     { "source": "/wp-admin/:path*", "destination": "/", "permanent": true },
+
+    { "source": "/checkout-2", "destination": "/", "permanent": true },
+    { "source": "/checkout-2/:path*", "destination": "/", "permanent": true },
+    { "source": "/checkout-3", "destination": "/", "permanent": true },
+    { "source": "/checkout-3/:path*", "destination": "/", "permanent": true },
+    { "source": "/cart", "destination": "/", "permanent": true },
+    { "source": "/cart/:path*", "destination": "/", "permanent": true },
+    { "source": "/my-account", "destination": "/", "permanent": true },
+    { "source": "/my-account/:path*", "destination": "/", "permanent": true },
+    { "source": "/order-tracking", "destination": "/", "permanent": true },
+    { "source": "/wishlist", "destination": "/", "permanent": true },
+    { "source": "/sample-page", "destination": "/", "permanent": true },
+
     { "source": "/privacy-policy/", "destination": "/privacy", "permanent": true },
 
     { "source": "/blog/how-to-save-income-tax-india-2026", "destination": "/blog/how-to-save-income-tax-india-2026-27", "permanent": true },

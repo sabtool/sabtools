@@ -18,8 +18,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const cat = categories.find((c) => c.slug === tool.category);
   const catName = cat?.name || "Online Tools";
 
-  // Build unique, descriptive title (under 60 chars)
-  const title = `Free ${tool.name} Online — ${tool.description.split(".")[0].split(",")[0]}`;
+  // Title budget: Google truncates display titles near 60 chars, and the
+  // root layout template appends " | SabTools.in" (14 chars). So the value
+  // built here must stay ≤ ~46 chars. The previous template —
+  //   `Free ${tool.name} Online — ${descriptionFragment}`
+  // — produced 73-91 char strings (e.g. the EMI page was 87 chars) that
+  // ALWAYS truncated in search results, burying the brand and wasting the
+  // most valuable on-SERP real estate. tool.name already carries the
+  // primary keyword (most names end in "Calculator"/"Converter"/
+  // "Generator"), so a short value-prop suffix is all that's needed.
+  // The top-40 commercial tools get hand-written long-tail titles in
+  // Phase 2 via an optional per-tool override; this template is the
+  // safe default for the rest of the catalog.
+  const titleCore = `${tool.name} — Free Online Tool`;
+  const title = titleCore.length > 46 ? `${tool.name} — Free Tool` : titleCore;
 
   // Build rich description with India focus (under 160 chars)
   const desc = `${tool.description}. Free online ${tool.name.toLowerCase()} — no signup, instant results. Works on mobile & desktop.`;
