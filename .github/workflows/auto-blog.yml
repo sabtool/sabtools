@@ -100,8 +100,24 @@ jobs:
           git add -A
           BLOG_TYPE="${{ steps.blog-type.outputs.BLOG_TYPE }}"
           TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
-          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          # FAIL LOUDLY when a scheduled run produced no post. Previously
+          # this did `exit 0` ("No changes to commit"), which made a dead
+          # pipeline look green — the auto-blog silently stopped publishing
+          # for 1.5 days (2026-05-20) before anyone noticed. A scheduled
+          # run that generates nothing is a real failure: it almost always
+          # means the ANTHROPIC_API_KEY secret is missing/expired (the
+          # comparison + news composers skip with no fallback when the key
+          # is absent). Exit 1 turns the run red so GitHub emails the repo
+          # owner instead of the breakage rotting unseen.
+          if git diff --cached --quiet; then
+            echo "::error::Auto-blog produced NO post. generate-blog.js wrote no files — check the ANTHROPIC_API_KEY repo secret (Settings → Secrets and variables → Actions)."
+            exit 1
+          fi
           git commit -m "blog: auto-publish ${BLOG_TYPE} post ${TIMESTAMP}"
+          # Rebase onto any commits that landed on main while this long-
+          # running job (jitter sleep + LLM gen) was in flight, so the
+          # push can't fail on a non-fast-forward race.
+          git pull --rebase origin main
           git push
 
       - name: Submit to Google Indexing API
