@@ -173,9 +173,10 @@
     "compress-pdf",
     "ifsc-code-lookup",
     "split-pdf",
-    "gate-score-calculator"
+    "gate-score-calculator",
+    "resume-builder"
   ],
-  "lastCategory": "exam",
-  "totalPosts": 174,
-  "lastRun": "2026-05-20T13:08:17.185Z"
+  "lastCategory": "career",
+  "totalPosts": 175,
+  "lastRun": "2026-05-21T07:25:06.478Z"
 }

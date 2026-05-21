@@ -30517,6 +30517,163 @@ India leads globally in mobile data usage per subscriber, averaging 21.2 GB per 
 <p>The good news is that web performance optimisation is, more than almost any other technical discipline, a pure-engineering problem with public, well-documented solutions. Compression, image discipline, lazy loading, lean JSON payloads, edge CDNs, sensible HTTP caching, and disciplined dependency budgets — none of these require AI, none of them require a new framework, and none of them require approvals from a regulator. They simply require Indian product teams to take the country's network reality seriously, not as an edge case but as the default user.</p>
 
 <p>For the developer at a Bengaluru SaaS startup, the homemaker waiting for a Big Billion Days product page to render, and the kirana-store owner trying to file GSTR-1 from a small-town café — the work of making the Indian web faster is now everyone's work.</p>`,
+  },
+  {
+    slug: "resume-builder-guide-2026",
+    title: "Free Resume Builder Online — No Signup Required | SabTools",
+    description: "Build a professional resume with multiple templates (Classic, Modern, Creative) and print/download. Use our free resume builder with no signup. Instant resul...",
+    date: "2026-05-21",
+    category: "Career",
+    readTime: "11 min read",
+    keywords: ["resume", "resume builder", "curriculum vitae", "job application", "career", "resume builder free", "resume builder ai", "resume builder ai free"],
+    toolSlug: "resume-builder",
+    image: {
+      src: "/blog/resume-builder.webp",
+      alt: "Resume Builder — Free Online Build a professional resume with multiple templates (Classic, Modern, Creative) and print/download Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>A typical opening at TCS, Infosys, or Accenture in 2026 attracts 800-1,200 applications within 48 hours of being posted on Naukri or LinkedIn. The recruiter spends roughly six to seven seconds on each resume in the first pass before an applicant tracking system (ATS) decides whether your file even reaches a human. If your resume is a Word document you cobbled together in college, exported as a PDF, and have been tweaking ever since — there's a good chance it's getting filtered out before the recruiter ever sees your name.</p>
+
+<p>The Resume Builder on SabTools.in is built for that exact problem: producing a clean, ATS-readable resume in the format Indian recruiters expect, with three template styles depending on whether you're applying to a public-sector bank, a Bangalore SaaS startup, or a design studio in Mumbai. You fill in your details once, pick a template, and download a print-ready PDF — no Canva subscription, no LinkedIn Premium pitch, no watermarks.</p>
+
+<h2>What Indian recruiters actually scan for</h2>
+
+<p>Resume advice on the internet is dominated by US-centric content — "objective vs. summary", "no photo, no DOB, no address." A lot of that doesn't apply cleanly to India. Hiring managers at HDFC Bank, Wipro, Reliance, or a Pune-based GCC are looking for specific fields that western templates don't even include:</p>
+
+<ul>
+  <li><strong>Current and expected CTC</strong> — often asked explicitly, sometimes expected in the cover note.</li>
+  <li><strong>Notice period</strong> — three months at most product MNCs, 30-60 days at startups. If you can negotiate a buyout, mention it.</li>
+  <li><strong>Total experience in years and months</strong> — recruiters bucket candidates by experience bands (0-2, 2-5, 5-8, 8+).</li>
+  <li><strong>Location preference</strong> — Bangalore, Hyderabad, Pune, NCR, Mumbai. Willingness to relocate matters.</li>
+  <li><strong>Notice period buyout willingness</strong> — increasingly common for senior roles.</li>
+</ul>
+
+<p>If you're unsure how to express your work history accurately — especially when you've had overlapping contracts or a freelance phase — run the dates through the <a href="/tools/experience-calculator">Experience Calculator</a> first. It detects overlaps and gives you a clean "5 years 4 months" figure that you can drop straight into the summary line of your resume. Recruiters round-up suspiciously generous experience claims, so getting this right matters.</p>
+
+<p>Similarly, if you're currently serving notice and need to mention your last working day, the <a href="/tools/notice-period-calculator">Notice Period Calculator</a> works out exact dates including the buyout amount (your basic + DA component for the unserved days). Mentioning "LWD: 12 February 2026" is far stronger than "available in 2 months."</p>
+
+<h2>Which of the three templates fits your role</h2>
+
+<p>The builder offers Classic, Modern, and Creative templates. They aren't just aesthetic choices — each one signals something different to the hiring side.</p>
+
+<h3>Classic template</h3>
+
+<p>Single column, serif fonts, conservative spacing. This is what you want for any role that hires through structured processes: PSU banks (SBI, PNB, Bank of Baroda), government undertakings, audit firms (the Big Four India offices still prefer this), legal roles, academia, and most CA/CS/CMA jobs. The Classic template parses cleanly through Workday, SuccessFactors, and SAP SuccessConnect — the three ATS platforms used by 70%+ of large Indian employers.</p>
+
+<p>A 2-year-experienced auditor at Deloitte Hyderabad applying to KPMG should use Classic. Anything fancier reads as unprofessional in that sector.</p>
+
+<h3>Modern template</h3>
+
+<p>Two columns, sans-serif fonts, subtle colour accent. This is the default for IT services and product roles — TCS, Infosys, Wipro, Cognizant, Capgemini, plus startups like Razorpay, Zerodha, Swiggy, Zomato, Cred. The two-column layout makes good use of space for tech stacks, certifications, and project lists. Most ATS systems handle it fine as long as the column structure is encoded properly (which the builder does).</p>
+
+<p>If you're a backend developer in Bangalore with 4 years of experience listing AWS, Kafka, Postgres, and microservices work, Modern is the right pick.</p>
+
+<h3>Creative template</h3>
+
+<p>Bolder colour blocks, icons, and visual hierarchy. Use this only when you're applying to roles where presentation itself is a skill — UI/UX design, brand marketing, content strategy, advertising creative, architecture, fashion. A Creative resume to a public-sector bank will get you flagged as a culture mismatch before anyone reads it.</p>
+
+<p>One quick caveat: even the Creative template here keeps text as actual text (not images), so ATS keyword scanning still works. Many Canva creative templates fail this basic test.</p>
+
+<h2>The anatomy of a strong Indian resume</h2>
+
+<p>The builder structures your input around the sections that actually matter on this side of the world. Here's how to fill each one without writing fluff.</p>
+
+<h3>Header</h3>
+
+<p>Full name, phone (with +91), professional email (not <em>coolguy_rahul2002@</em>), LinkedIn URL, city + state. Skip photo for most roles — required only for hospitality, aviation, and some PSU forms. Skip DOB, marital status, father's name, and religion. These were standard in 2005-era Indian resumes and have quietly become red flags at modern employers.</p>
+
+<h3>Professional summary</h3>
+
+<p>Three lines max. State your role, years of experience, top 2-3 skills, and one quantified achievement. Bad: "Hardworking team player with passion for excellence." Good: "Backend engineer with 4 years building Python/Django services at fintech scale; reduced API latency by 38% on a 2M-DAU payments product at a Bangalore startup."</p>
+
+<h3>Skills</h3>
+
+<p>Group skills by category — Languages, Frameworks, Cloud, Databases, Tools — rather than dumping a comma-separated wall. ATS systems weight keywords more accurately when they appear within readable groupings rather than tag clouds.</p>
+
+<h3>Work experience</h3>
+
+<p>Reverse chronological. For each role: company, designation, location, start-end dates (MMM YYYY format), then 3-5 bullet points. Each bullet should follow the format <strong>verb + what you did + measurable outcome</strong>. "Migrated legacy on-prem deployment to AWS, cutting infrastructure cost by ₹18 lakh/year and improving deploy frequency from weekly to daily."</p>
+
+<p>Numbers, percentages, and rupee figures matter more than adjectives. If you led a team, mention the size. If you handled a budget, mention the amount. If you handled GST compliance for a small business, mention turnover handled — and if you're not sure how to phrase the tax workflow, the <a href="/tools/gst-calculator">GST Calculator</a> page itself has worked examples you can adapt.</p>
+
+<h3>Education</h3>
+
+<p>Degree, institute, year of passing, CGPA/percentage. Include 12th and 10th boards only if you're a fresher or within 2 years of graduation. After that, employers don't care that you got 92% in CBSE class 12.</p>
+
+<h3>Certifications</h3>
+
+<p>List only certifications relevant to the role: AWS Solutions Architect, Google Data Analytics, CFA Level 1, Six Sigma Green Belt, PMP, CISA. A 4-hour LinkedIn Learning "course" with a participation certificate is not a certification — it's filler.</p>
+
+<h3>Projects (for freshers)</h3>
+
+<p>If you have under 2 years of experience, projects matter more than your CGPA. Include 2-3 projects with the tech stack used, your specific contribution, and the outcome. A live deployment link or GitHub repo strengthens this significantly.</p>
+
+<h2>Free AI resume builders vs. doing the writing yourself</h2>
+
+<p>A common search lately is "resume builder AI free" — and the appeal is obvious. You paste your LinkedIn URL or a rough draft, and an AI generates polished bullets. Used carelessly, this produces generic prose that recruiters can now spot in seconds: "leveraged cross-functional synergies to deliver impactful outcomes." Every senior recruiter at Flipkart, Walmart Global Tech, or Goldman Sachs Bangalore has read 50 versions of that sentence this week.</p>
+
+<p>The builder on SabTools.in deliberately doesn't auto-generate your bullet points. It structures your input, formats it correctly, and produces a clean PDF — but the substance is yours. That's a feature, not a limitation. If you do want to use ChatGPT or Gemini to polish a bullet, the right workflow is:</p>
+
+<ol>
+  <li>Write the bullet yourself with the actual numbers and outcomes.</li>
+  <li>Ask the AI to <em>tighten</em> it to 18-22 words without adding claims.</li>
+  <li>Re-add specifics if the AI removed them.</li>
+</ol>
+
+<p>Once your draft is in the builder and downloaded, run it through the <a href="/tools/resume-score-checker">Resume Score Checker</a>. It scores your resume out of 100 against ATS criteria — keyword density, section completeness, formatting issues, file size — and tells you specifically which keywords from the job description are missing. A score below 70 usually means rewrites; 80+ is competitive for most roles.</p>
+
+<h2>A worked example: Priya, 3-year QA engineer in Pune</h2>
+
+<p>Priya is currently at a mid-size IT services firm earning ₹6.8 LPA and wants to move to a product company. She's targeting roles at PhonePe, Cred, and Razorpay with a target band of ₹14-17 LPA. Here's how she'd build her resume using the tool:</p>
+
+<ul>
+  <li><strong>Header</strong>: Priya Sharma | +91 98XX XXX XXX | priya.s.qa@gmail.com | linkedin.com/in/priyasharmaqa | Pune, Maharashtra</li>
+  <li><strong>Summary</strong>: "QA engineer with 3 years of experience automating regression suites for fintech and e-commerce products. Built Selenium + Pytest framework that cut release cycle from 5 days to 36 hours at a Pune-based SaaS firm. Looking to move into a product QA role at scale."</li>
+  <li><strong>Skills</strong>: Selenium, Pytest, Cypress, Postman, JMeter, SQL, Jenkins, Git, Jira, basic AWS</li>
+  <li><strong>Experience bullets</strong> (one of several): "Reduced critical bug escapes to production by 64% over two quarters by introducing pre-merge automated smoke tests across 12 microservices."</li>
+  <li><strong>Notice period</strong>: 60 days (negotiable to 30 with buyout of ~₹38,000)</li>
+</ul>
+
+<p>Before applying, she'd check her target compensation against market data using the <a href="/tools/salary-comparison-tool">Salary Comparison Tool</a> — it compares 24+ roles across Bangalore, Pune, Mumbai, Hyderabad, Chennai, Delhi NCR, and Kolkata with cost-of-living adjustments. Pune QA-3 years sits roughly at ₹9-14 LPA median, so her ₹14-17 LPA ask is on the upper edge — fine if she has product company offers competing, ambitious if she doesn't.</p>
+
+<h2>Common mistakes that kill Indian resumes</h2>
+
+<ol>
+  <li><strong>Resume length over 2 pages for &lt;8 years experience.</strong> Freshers need 1 page. Mid-career needs 1-2. Past 12 years, 3 pages is acceptable for tech leadership.</li>
+  <li><strong>Listing every project from college.</strong> If you're 5 years into your career, your B.Tech mini-project on "library management system in Java" should not be on the resume.</li>
+  <li><strong>Generic objective lines.</strong> "Seeking a challenging position in a growth-oriented organisation" tells the recruiter nothing. Replace with a specific summary.</li>
+  <li><strong>Inconsistent date formats.</strong> Pick one: either "Jan 2022 – Mar 2024" or "01/2022 – 03/2024", and stay with it everywhere.</li>
+  <li><strong>Using tables, text boxes, and images for layout.</strong> ATS systems mangle these. The builder avoids them by default.</li>
+  <li><strong>Saving as .doc or .docx for submission.</strong> Most ATS prefer PDF. Microsoft Word formatting can shift between versions; PDF is stable.</li>
+  <li><strong>Forgetting to update the file name.</strong> "Resume_final_v3_REAL.pdf" looks unprofessional. Use "PriyaSharma_QA_3yrs.pdf".</li>
+</ol>
+
+<h2>Frequently asked questions</h2>
+
+<h3>Should I include my photo on a resume in India?</h3>
+
+<p>For most corporate IT, finance, product, and consulting roles — no. For hospitality (Taj, Oberoi, ITC), aviation (IndiGo, Air India cabin crew), retail front-line, and some PSU applications — yes, a passport-style photo is expected. When in doubt, check the JD; if it explicitly asks for "recent photograph", include one. The Resume Builder lets you toggle the photo field on or off depending on template.</p>
+
+<h3>How do I show salary expectations without underselling?</h3>
+
+<p>Don't write the number on the resume itself. Keep CTC discussions for the screening call or the application form's separate fields. If a portal forces it, list your current fixed CTC accurately (variable separate) and expected as a range — e.g., ₹14-17 LPA — not a single figure.</p>
+
+<h3>Is a one-page resume better than two pages?</h3>
+
+<p>One page is the right call only if you have under 4 years of experience or are applying to consulting/IB roles where one-page is the cultural norm. Beyond that, a tight two-page resume with relevant detail beats a one-page resume that omits achievements. Recruiters don't penalise a strong second page; they penalise filler.</p>
+
+<h3>Does this builder work with Indian ATS systems used by TCS, Infosys, and Cognizant?</h3>
+
+<p>Yes. The output PDF uses standard text encoding without tables or text boxes for content, which is what Workday, SuccessFactors, Taleo, and the in-house parsers at major IT services firms expect. Run the downloaded resume through the score checker afterwards to confirm parse quality before submitting.</p>
+
+<h2>Putting it together</h2>
+
+<p>The job market in India tightened through 2025 with layoff cycles at Byju's, Paytm, Ola, and several edtech and fintech firms, and 2026 hiring is selective. Recruiters now have 30-40% more applications per role than two years ago, which means resume quality has gone from "important" to "non-negotiable." A messy resume doesn't just lose you the role — it loses you the chance to even be considered.</p>
+
+<p>What works in your favour: a structured, ATS-friendly document with specific numbers, the right Indian-context fields (notice period, CTC band, location), and a template that matches the kind of company you're applying to. That's what this builder produces in 15-20 minutes of focused work, versus an evening lost to Word formatting battles.</p>
+
+<p><a href="/tools/resume-builder">Open the Resume Builder and start your draft →</a></p>`,
   }
 ];
 
