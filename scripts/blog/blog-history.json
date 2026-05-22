@@ -175,9 +175,10 @@
     "split-pdf",
     "gate-score-calculator",
     "resume-builder",
-    "water-intake-calculator"
+    "water-intake-calculator",
+    "ipl-fantasy-points-calculator"
   ],
-  "lastCategory": "health",
-  "totalPosts": 176,
-  "lastRun": "2026-05-21T13:10:32.983Z"
+  "lastCategory": "sports",
+  "totalPosts": 177,
+  "lastRun": "2026-05-22T07:48:34.903Z"
 }

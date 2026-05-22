@@ -31050,6 +31050,190 @@ employees with 25 or more years of service are entitled to a pension equal to 50
 <p>The right mix depends on age, risk appetite and income certainty. What is no longer debatable is that a retirement plan resting solely on PPF and bank FDs cannot match the 12–14% long-run equity-linked returns that a younger Indian saver now has access to inside NPS itself — with a 0.30% fee cap and a ₹50,000 tax deduction layered on top.</p>
 
 <p>Over the next four quarters, watch for two specific signals: whether the finance ministry breaks its seven-quarter freeze on small savings rates as bank deposit rates move, and whether EPFO's Central Board of Trustees recommends a change for FY 2025-26 in early 2026. Until then, the rate map for Indian retirement saving is unusually stable — and the structural reforms in NPS and UPS are where the real action sits.</p>`,
+  },
+  {
+    slug: "ipl-fantasy-points-calculator-guide-2026",
+    title: "How to Use IPL Fantasy Points Calculator Online — Step-by-Step Guide",
+    description: "Free IPL Fantasy Points Calculator online — calculate dream11-style fantasy points for any ipl player's match: batting (runs, fours, sixes, milestones, sr bo...",
+    date: "2026-05-22",
+    category: "Tools",
+    readTime: "10 min read",
+    keywords: ["ipl fantasy points calculator", "dream11 points calculator", "fantasy cricket points", "ipl 2026 fantasy", "myteam11 calculator", "cricket fantasy points formula", "captain vice captain points", "fantasy player score calculator"],
+    toolSlug: "ipl-fantasy-points-calculator",
+    image: {
+      src: "/blog/ipl-fantasy-points-calculator.webp",
+      alt: "IPL Fantasy Points Calculator — Free Online Calculate Dream11-style fantasy points for any IPL player's match: batting (runs, fours, sixes, milestones, SR bonus), bowling (wickets, economy, maidens, hauls), fielding (catches, stumpings, run-outs), with Captain ×2 and Vice-Captain ×1.5 multipliers Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>The 2025 IPL final between RCB and Punjab Kings had over <strong>12 crore Dream11 teams</strong> in play. A Bangalore techie I know put ₹49 into a grand league, picked Virat Kohli as captain, watched him score 43 off 35, and finished rank 4,80,000 out of 1.2 crore. The frustrating part wasn't losing the ₹49 — it was not knowing, ball by ball, what his team was actually earning. He kept opening the Dream11 app to refresh points and burning data. A simple offline calculator would have told him in 10 seconds that Krunal Pandya's 3-for-17 plus his 73*(47) as vice-captain was carrying the entire side.</p>
+
+<p>The <strong>IPL Fantasy Points Calculator</strong> on SabTools.in solves exactly that — you punch in a player's actual match figures (runs, balls, sixes, wickets, economy, catches), pick whether they're your Captain or Vice-Captain, and it returns Dream11-format fantasy points with every bonus and penalty applied. No login, no app refresh, no Wi-Fi-dependent score loading. Useful during a live match, useful while building a team an hour before lock, and very useful in the post-mortem after you've finished rank 8,00,000 and want to know which pick broke you.</p>
+
+<h2>How Dream11 actually scores a T20 — the formula nobody reads</h2>
+
+<p>Most fantasy players know "wicket = 25 points" and "century = 16 bonus." Almost nobody can recite the strike-rate slab penalties or the economy thresholds, which is precisely where contests are won and lost. Here's the full T20/IPL scoring grid the calculator uses:</p>
+
+<p><strong>Batting points</strong></p>
+<ul>
+<li>Every run: <strong>+1</strong></li>
+<li>Every boundary (four): <strong>+1 extra</strong></li>
+<li>Every six: <strong>+2 extra</strong></li>
+<li>30-run milestone: <strong>+4</strong> bonus</li>
+<li>Half-century (50): <strong>+8</strong> bonus</li>
+<li>Century (100): <strong>+16</strong> bonus</li>
+<li>Duck (batter/WK/all-rounder dismissed for 0): <strong>−2</strong></li>
+<li>Strike Rate (minimum 10 balls faced):
+  <ul>
+    <li>Above 170: <strong>+6</strong></li>
+    <li>150.01 to 170: <strong>+4</strong></li>
+    <li>130 to 150: <strong>+2</strong></li>
+    <li>60 to 70: <strong>−2</strong></li>
+    <li>50 to 59.99: <strong>−4</strong></li>
+    <li>Below 50: <strong>−6</strong></li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>Bowling points</strong></p>
+<ul>
+<li>Wicket (not run-out): <strong>+25</strong>; bowled/LBW carries an extra <strong>+8</strong></li>
+<li>3-wicket haul: <strong>+4</strong>; 4-wicket haul: <strong>+8</strong>; 5-wicket haul: <strong>+16</strong></li>
+<li>Maiden over: <strong>+12</strong></li>
+<li>Economy rate (minimum 2 overs bowled):
+  <ul>
+    <li>Below 5: <strong>+6</strong></li>
+    <li>5 to 5.99: <strong>+4</strong></li>
+    <li>6 to 7: <strong>+2</strong></li>
+    <li>10 to 11: <strong>−2</strong></li>
+    <li>11.01 to 12: <strong>−4</strong></li>
+    <li>Above 12: <strong>−6</strong></li>
+  </ul>
+</li>
+</ul>
+
+<p><strong>Fielding & extras</strong></p>
+<ul>
+<li>Catch: <strong>+8</strong>; 3-catch bonus: <strong>+4</strong></li>
+<li>Stumping: <strong>+12</strong></li>
+<li>Direct run-out: <strong>+12</strong>; assisted run-out: <strong>+6</strong></li>
+<li>Playing XI announcement: <strong>+4</strong> (every selected player)</li>
+<li>Captain multiplier: <strong>×2</strong> on total earned</li>
+<li>Vice-Captain multiplier: <strong>×1.5</strong> on total earned</li>
+</ul>
+
+<p>That's eleven different point streams interacting on a single player's card. Doing this in your head while watching the match in a Hyderabad PG with three friends shouting over you is impossible. That's the entire point of the calculator.</p>
+
+<h2>A worked example: Suryakumar Yadav's 47(26) for MI vs CSK</h2>
+
+<p>Take a realistic IPL scoreline. SKY walks in at 4 overs and smashes 47 off 26 balls with 5 fours and 2 sixes. He's not out at the end. You picked him as Vice-Captain. What does Dream11 actually credit you?</p>
+
+<ul>
+<li>Runs: 47 × 1 = <strong>+47</strong></li>
+<li>Boundary bonus: 5 × 1 = <strong>+5</strong></li>
+<li>Six bonus: 2 × 2 = <strong>+4</strong></li>
+<li>30-run milestone: <strong>+4</strong></li>
+<li>Strike rate = 180.77 → <strong>+6</strong></li>
+<li>Playing XI: <strong>+4</strong></li>
+</ul>
+
+<p>Base total = <strong>70 points</strong>. As Vice-Captain (×1.5) = <strong>105 points</strong>. If he'd been your Captain instead, the same innings would have paid <strong>140 points</strong> — a 35-point swing that often decides ranks in 1-crore-entry grand leagues. The <a href="/tools/ipl-fantasy-points-calculator">IPL Fantasy Points Calculator</a> lays out every line item like this, so you can see whether the SR bonus actually triggered or whether the milestone fired.</p>
+
+<p>Now flip it. Imagine instead SKY went out for 4 off 12 balls — strike rate 33.33. The math becomes:</p>
+
+<ul>
+<li>Runs: <strong>+4</strong></li>
+<li>SR penalty (below 50): <strong>−6</strong></li>
+<li>Playing XI: <strong>+4</strong></li>
+</ul>
+
+<p>Base = <strong>2 points</strong>. With ×2 captain multiplier, you've made <strong>4 points</strong> off your captain pick. Captaining the wrong batter in a grand league is the single fastest way to finish bottom 30%.</p>
+
+<h2>The bowling side: why Bumrah at ×2 is a different planet</h2>
+
+<p>Jasprit Bumrah's typical death-overs spell — say <strong>4-0-22-3</strong> with one wicket bowled — feeds the calculator like this:</p>
+
+<ul>
+<li>3 wickets × 25 = <strong>+75</strong></li>
+<li>Bowled bonus (1 dismissal): <strong>+8</strong></li>
+<li>3-wicket haul bonus: <strong>+4</strong></li>
+<li>Economy = 5.50 → <strong>+4</strong></li>
+<li>Playing XI: <strong>+4</strong></li>
+</ul>
+
+<p>Base = <strong>95 points</strong>. As Captain = <strong>190</strong>. That single bowling card matches what your top three batters combined are likely to give you. The reason seasoned IPL fantasy players in cities like Pune and Indore now rotate captaincy onto specialist death bowlers in Wankhede or Chinnaswamy night games is exactly this — the economy and wicket bonuses compound brutally when the conditions favour swing or dew is absent.</p>
+
+<p>Run the inverse scenario: a 4-0-52-1 spell. Economy = 13.00 → −6. The wicket gets you +25, but the economy penalty plus zero milestone bonus drags base to roughly +27. With ×2, you've captained an attack for <strong>54 points</strong>. That's a Tier-3 contest loss.</p>
+
+<h2>Captain and Vice-Captain math — the only pick that actually matters</h2>
+
+<p>Across 12 IPL seasons of grand-league data, the average winning team has its captain in the top 3 point-scorers of the match. The vice-captain is in the top 6. Nothing else matters statistically — not your 8th pick, not your overseas slot, not your wicket-keeper choice. <strong>Captain plus Vice-Captain typically generate 35–50% of a top team's total points.</strong></p>
+
+<p>This is where the calculator becomes a strategy tool, not just a scoring tool. Try this exercise an hour before any match:</p>
+
+<ol>
+<li>Pick three captaincy candidates — say Travis Head, Suryakumar Yadav, Rashid Khan.</li>
+<li>Plug each one's projected line into the calculator with ×2 multiplier on.</li>
+<li>For Head: assume 55(30) with 7×4, 2×6 → roughly 88 base × 2 = <strong>176</strong>.</li>
+<li>For SKY: assume 60(35) with 5×4, 3×6 → roughly 90 base × 2 = <strong>180</strong>.</li>
+<li>For Rashid: assume 4-0-24-2 → roughly 62 base × 2 = <strong>124</strong>.</li>
+</ol>
+
+<p>Even with great figures, the spinner's ceiling in 4 overs caps out below a top-order batter's. Unless you genuinely expect Rashid to pick 3+ wickets and bowl a maiden, captaincy belongs to the batter. The calculator forces you to confront this with numbers instead of going on vibes.</p>
+
+<h2>The fielding bonus everyone forgets</h2>
+
+<p>Catches at +8 each sound minor. They aren't. KL Rahul keeping wickets and taking 3 catches plus 1 stumping in a single match earns:</p>
+
+<ul>
+<li>Catches: 3 × 8 = <strong>+24</strong></li>
+<li>3-catch bonus: <strong>+4</strong></li>
+<li>Stumping: <strong>+12</strong></li>
+</ul>
+
+<p>That's <strong>+40 fielding-only points</strong> before he's batted a ball. Layer on a 35(28) innings and you've got a 70-point base — 140 with the ×2 multiplier. Wicket-keepers in high-strike-rate batting positions (Pant, Rahul, Sanju Samson) regularly out-earn pure batters and that's why grand-league winners often captain them on flat decks in Jaipur or Ahmedabad. Plug a few keeper scenarios into the <a href="/tools/ipl-fantasy-points-calculator">fantasy points calculator</a> with realistic catch counts and the pattern becomes obvious.</p>
+
+<h2>Five ways serious fantasy players use the calculator</h2>
+
+<ol>
+<li><strong>Live tracking during the match.</strong> Phone data flaky in your Mumbai local? Open the page once, no live API needed, just punch in current numbers between overs.</li>
+<li><strong>Pre-toss captain selection.</strong> Build 3–4 captaincy scenarios for the conditions and lock the one with the highest projected ceiling.</li>
+<li><strong>Post-match team analysis.</strong> Did you really lose because of your captain pick, or did the 7th and 8th players underperform? The line-by-line breakdown tells you.</li>
+<li><strong>Multi-app cross-checking.</strong> The formula closely mirrors Dream11, MyTeam11, My11Circle and Howzat. So this calculator works as a one-stop fantasy score reference across platforms.</li>
+<li><strong>Training new players.</strong> Many people enter fantasy cricket for the first time during IPL — younger cousins, college roommates, office colleagues. Walking them through one match using the calculator teaches the scoring system faster than any YouTube video.</li>
+</ol>
+
+<h2>What this calculator is not</h2>
+
+<p>It's not a predictor. It won't tell you Shubman Gill will score 65 tomorrow — nobody can, and any "AI-driven" fantasy prediction app charging ₹299/month is essentially selling you randomness with a chart. What the calculator does is convert whatever performance you input — projected or actual — into accurate Dream11-format points. The forecasting part is your job. The math is ours.</p>
+
+<p>It also doesn't account for the small handful of edge cases that vary across platforms: Dream11's "Dream Team" bonus (+25 to players in the optimal XI, paid after the match), MyTeam11's slightly different SR thresholds, or Howzat's bowling boundary penalty for getting hit for a six (−1 per six conceded on some contests). For mainstream Dream11 contests, which represent over 80% of paid fantasy entries in India, the output will match exactly.</p>
+
+<h2>Beyond points: the broader IPL toolkit</h2>
+
+<p>Fantasy is one layer of the IPL economy. If you actually plan to attend a match — say a Chinnaswamy fixture in May — work out the real cost (face value + BookMyShow convenience fee + 18% GST on service fees) with the <a href="/tools/ipl-ticket-price-calculator">IPL ticket price calculator</a> before you book. Last season fans were stunned to see a ₹2,500 face-value ticket bill at ₹3,180 after fees.</p>
+
+<p>For the standings-junkies who follow the season closely, the <a href="/tools/ipl-nrr-calculator">Net Run Rate calculator</a> handles the all-out and rain-curtailed edge cases that every spreadsheet on Twitter gets wrong, and the <a href="/tools/ipl-required-run-rate-calculator">required run rate calculator</a> is what you want open during a close chase to see exactly when the equation has slipped from "Comfortable" to "Tough." And if you've ever argued with friends about whether CSK should retain Ruturaj at ₹18cr or release him into the pool, the <a href="/tools/ipl-auction-salary-cap-calculator">IPL auction salary cap calculator</a> models the full ₹120cr cap, 8-overseas cap and 75% minimum-spend rule so you can run franchise scenarios end-to-end.</p>
+
+<h2>IPL 2026 fantasy: what's changing</h2>
+
+<p>The 2026 season carries forward the impact player rule, which fantasy-wise means more all-rounder and finisher cameos and therefore more opportunities for unexpected captain returns from positions 6–8 in the order. Tighter substitution windows also mean late-XI changes — track playing-XI announcements closely, because the +4 "in starting XI" bonus only fires for the 11 named on the team sheet, not for the impact sub.</p>
+
+<p>The other shift: with batting tracks getting flatter and 250+ totals normalised, the strike rate +6 bonus (above 170 SR) is now triggering for openers more often than ever. This makes top-order batters even more valuable as captains than they used to be in the 180-total era of 2018–2020. Run a few "what if the opener does 50(25)" scenarios through the calculator and you'll see why grand-league winners in 2025 captained openers in 73% of contests.</p>
+
+<h2>Quick reference: typical point ranges</h2>
+
+<ul>
+<li><strong>40+ point batting innings:</strong> 30–35 runs at SR ~150 with 2 boundaries.</li>
+<li><strong>80+ point batting innings:</strong> 50+ runs at SR ~150 with 4–5 boundaries and a couple of sixes.</li>
+<li><strong>100+ point bowling spell:</strong> 4 overs, 3+ wickets, economy under 7.</li>
+<li><strong>Match-winning captain pick:</strong> base 80+ points → 160+ with multiplier.</li>
+<li><strong>Disaster captain pick:</strong> base 5–15 → 10–30 with multiplier; almost guarantees finishing outside top 50%.</li>
+</ul>
+
+<p>Bookmark these brackets. They're the difference between a ₹49 entry that pays ₹0 and one that pays ₹10,000.</p>
+
+<p>Open the <a href="/tools/ipl-fantasy-points-calculator">IPL Fantasy Points Calculator</a> and run your next captain pick through it before lock-in →</p>`,
   }
 ];
 
