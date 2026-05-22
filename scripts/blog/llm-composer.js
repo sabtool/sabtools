@@ -219,9 +219,10 @@ async function composeBlogPostWithLLM(tool, keywords, relatedTools) {
   // higher max_tokens) risk SDK HTTP timeouts when not streaming.
   const stream = client.messages.stream({
     model,
-    max_tokens: 12000, // 2000 words ≈ 2700 tokens; 12K gives ample headroom for adaptive thinking + final output
-    thinking: { type: "adaptive" },
-    output_config: { effort: "high" },
+    max_tokens: 12000, // 2000 words ≈ 2700 tokens; 12K headroom for thinking + output
+    // Adaptive thinking + effort are added only for Opus/Sonnet 4.6+ models
+    // (they 400 on Haiku 4.5). See thinkingParamsFor() near module.exports.
+    ...thinkingParamsFor(model),
     system: [
       {
         type: "text",
@@ -277,8 +278,35 @@ async function composeBlogPostWithLLM(tool, keywords, relatedTools) {
   return html;
 }
 
+/**
+ * Build the model-tier-specific Messages API params for a blog generation
+ * call.
+ *
+ * Adaptive thinking (`thinking: {type: "adaptive"}`) and the effort control
+ * (`output_config: {effort}`) are Claude 4.6+ features — both return a 400
+ * on Haiku 4.5. When ANTHROPIC_MODEL is a Haiku model, omit both: Haiku
+ * writes solid 1,000-2,000-word blog prose without extended thinking.
+ * Opus / Sonnet 4.6+ keep the original adaptive-thinking + high-effort
+ * configuration.
+ *
+ * Spread the result into the messages.stream() params:
+ *   client.messages.stream({ model, max_tokens, ...thinkingParamsFor(model), ... })
+ *
+ * Added Phase 6 R4 — to let ANTHROPIC_MODEL be set to claude-haiku-4-5
+ * (~95% cheaper than the claude-opus-4-7 default) without every blog
+ * generation call 400-ing on the effort/thinking params.
+ */
+function thinkingParamsFor(model) {
+  if (/haiku/i.test(model)) return {};
+  return {
+    thinking: { type: "adaptive" },
+    output_config: { effort: "high" },
+  };
+}
+
 module.exports = {
   composeBlogPostWithLLM,
   lintForbiddenPhrases,
   countWords,
+  thinkingParamsFor,
 };

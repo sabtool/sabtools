@@ -24,7 +24,11 @@ const Anthropic = require("@anthropic-ai/sdk");
 const INDIA_CONTEXT_PATH = path.join(__dirname, "india-context.json");
 const indiaContext = JSON.parse(fs.readFileSync(INDIA_CONTEXT_PATH, "utf-8"));
 
-const { lintForbiddenPhrases, countWords } = require("./llm-composer");
+const {
+  lintForbiddenPhrases,
+  countWords,
+  thinkingParamsFor,
+} = require("./llm-composer");
 
 /**
  * Topic pools for news posts. Each cron run picks one topic at random
@@ -259,22 +263,27 @@ async function composeNewsPostWithLLM(allTools) {
   );
   console.log(`   [LLM-News] Calling ${model} with web_search tool...`);
 
-  // The web_search_20260209 tool runs server-side. Claude searches the web,
-  // optionally filters results dynamically (built into this tool version),
-  // and writes the post grounded in real sources. No client-side execution
-  // needed — Anthropic handles the search loop.
+  // The web search tool runs server-side. Claude searches the web, writes
+  // the post grounded in real sources, and Anthropic handles the search
+  // loop — no client-side execution needed.
+  //
+  // Tool version is model-tier-gated: web_search_20260209's dynamic
+  // filtering (Claude writes code to filter results before they hit the
+  // context) is a Claude 4.6+ feature. Haiku 4.5 uses the older
+  // web_search_20250305 — plain web search, no dynamic filtering.
+  const webSearchTool = /haiku/i.test(model)
+    ? { type: "web_search_20250305", name: "web_search" }
+    : { type: "web_search_20260209", name: "web_search" };
+
   const stream = client.messages.stream({
     model,
     // News posts need substantially more output budget than tool guides.
-    // Web search interleaves text + tool_use blocks across the response,
-    // and adaptive thinking can also burn through significant token budget.
+    // Web search interleaves text + tool_use blocks across the response.
     // 24K is generous but well within Opus 4.7's 128K output cap.
     max_tokens: 24000,
-    thinking: { type: "adaptive" },
-    output_config: { effort: "high" },
-    tools: [
-      { type: "web_search_20260209", name: "web_search" },
-    ],
+    // Adaptive thinking + effort omitted on Haiku 4.5 (they 400 there).
+    ...thinkingParamsFor(model),
+    tools: [webSearchTool],
     system: [
       {
         type: "text",

@@ -25,7 +25,11 @@ const competitorsData = JSON.parse(
 );
 const indiaContext = JSON.parse(fs.readFileSync(INDIA_CONTEXT_PATH, "utf-8"));
 
-const { lintForbiddenPhrases, countWords } = require("./llm-composer");
+const {
+  lintForbiddenPhrases,
+  countWords,
+  thinkingParamsFor,
+} = require("./llm-composer");
 
 /**
  * Get the competitor list for a tool's category. Falls back to the default
@@ -195,8 +199,8 @@ async function composeComparisonPostWithLLM(tool, keywords, relatedTools) {
   const stream = client.messages.stream({
     model,
     max_tokens: 12000,
-    thinking: { type: "adaptive" },
-    output_config: { effort: "high" },
+    // Adaptive thinking + effort omitted on Haiku 4.5 (they 400 there).
+    ...thinkingParamsFor(model),
     system: [
       {
         type: "text",
