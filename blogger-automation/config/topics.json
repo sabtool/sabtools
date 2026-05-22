@@ -1,29 +1,173 @@
 {
   "_comment": "Editorial calendar. The pipeline picks the first topic with status 'pending', generates a draft, then sets its status to 'drafted'. Pattern: every 4th topic is a sabtools/comparison post (the 1-in-4 rule). Add your own topics freely; keep the 3-general-then-1-sabtools rhythm.",
   "topics": [
-    { "id": 1,  "title": "How to read your home loan amortisation schedule", "type": "general", "pillar": "finance", "status": "pending" },
-    { "id": 2,  "title": "Why your daily step count matters less than you think", "type": "general", "pillar": "health", "status": "pending" },
-    { "id": 3,  "title": "How to digitally sign a PDF for Indian government forms", "type": "general", "pillar": "utility", "status": "pending" },
-    { "id": 4,  "title": "Best free EMI calculators for Indian home-loan borrowers (2026)", "type": "comparison", "pillar": "finance", "status": "pending" },
-    { "id": 5,  "title": "SIP vs lump sum investing: what the math actually says", "type": "general", "pillar": "finance", "status": "pending" },
-    { "id": 6,  "title": "The new income tax regime for FY 2026-27, explained simply", "type": "general", "pillar": "news-explainer", "status": "pending" },
-    { "id": 7,  "title": "How compound interest quietly builds (or drains) your wealth", "type": "general", "pillar": "world", "status": "pending" },
-    { "id": 8,  "title": "5 free SabTools calculators every salaried Indian should bookmark", "type": "sabtools", "pillar": "finance", "status": "pending" },
-    { "id": 9,  "title": "BMI vs body fat percentage: which number should you trust?", "type": "general", "pillar": "health", "status": "pending" },
-    { "id": 10, "title": "Understanding GST: how the tax on your bill is calculated", "type": "general", "pillar": "finance", "status": "pending" },
-    { "id": 11, "title": "How to compress a photo to under 50KB for online forms", "type": "general", "pillar": "utility", "status": "pending" },
-    { "id": 12, "title": "SabTools vs ClearTax vs EasyCalculation: an honest look at free tax calculators", "type": "comparison", "pillar": "finance", "status": "pending" },
-    { "id": 13, "title": "PPF, NPS or ELSS: where should your 80C money go?", "type": "general", "pillar": "finance", "status": "pending" },
-    { "id": 14, "title": "How many calories does Indian home food really have?", "type": "general", "pillar": "health", "status": "pending" },
-    { "id": 15, "title": "The psychology of money: why we make bad financial decisions", "type": "general", "pillar": "world", "status": "pending" },
-    { "id": 16, "title": "How SabTools' AI Insight turns a raw number into a decision", "type": "sabtools", "pillar": "developer-ai", "status": "pending" },
-    { "id": 17, "title": "What an RBI repo rate change means for your home loan EMI", "type": "general", "pillar": "news-explainer", "status": "pending" },
-    { "id": 18, "title": "How to check your EPF balance and what the numbers mean", "type": "general", "pillar": "finance", "status": "pending" },
-    { "id": 19, "title": "Fixed deposit vs debt mutual fund: a real comparison", "type": "general", "pillar": "finance", "status": "pending" },
-    { "id": 20, "title": "Free online image resizers compared: which is best for Indian users", "type": "comparison", "pillar": "utility", "status": "pending" },
-    { "id": 21, "title": "How to read a nutrition label: a practical Indian guide", "type": "general", "pillar": "health", "status": "pending" },
-    { "id": 22, "title": "Simple vs compound interest: the difference that costs lakhs", "type": "general", "pillar": "world", "status": "pending" },
-    { "id": 23, "title": "Inside SabTools: 497 free tools, no signup, no data collection", "type": "sabtools", "pillar": "utility", "status": "pending" },
-    { "id": 24, "title": "Best free PDF tools for Indians: an honest 2026 roundup", "type": "comparison", "pillar": "utility", "status": "pending" }
+    {
+      "id": 1,
+      "title": "How to read your home loan amortisation schedule",
+      "type": "general",
+      "pillar": "finance",
+      "status": "drafted"
+    },
+    {
+      "id": 2,
+      "title": "Why your daily step count matters less than you think",
+      "type": "general",
+      "pillar": "health",
+      "status": "pending"
+    },
+    {
+      "id": 3,
+      "title": "How to digitally sign a PDF for Indian government forms",
+      "type": "general",
+      "pillar": "utility",
+      "status": "pending"
+    },
+    {
+      "id": 4,
+      "title": "Best free EMI calculators for Indian home-loan borrowers (2026)",
+      "type": "comparison",
+      "pillar": "finance",
+      "status": "pending"
+    },
+    {
+      "id": 5,
+      "title": "SIP vs lump sum investing: what the math actually says",
+      "type": "general",
+      "pillar": "finance",
+      "status": "pending"
+    },
+    {
+      "id": 6,
+      "title": "The new income tax regime for FY 2026-27, explained simply",
+      "type": "general",
+      "pillar": "news-explainer",
+      "status": "pending"
+    },
+    {
+      "id": 7,
+      "title": "How compound interest quietly builds (or drains) your wealth",
+      "type": "general",
+      "pillar": "world",
+      "status": "pending"
+    },
+    {
+      "id": 8,
+      "title": "5 free SabTools calculators every salaried Indian should bookmark",
+      "type": "sabtools",
+      "pillar": "finance",
+      "status": "pending"
+    },
+    {
+      "id": 9,
+      "title": "BMI vs body fat percentage: which number should you trust?",
+      "type": "general",
+      "pillar": "health",
+      "status": "pending"
+    },
+    {
+      "id": 10,
+      "title": "Understanding GST: how the tax on your bill is calculated",
+      "type": "general",
+      "pillar": "finance",
+      "status": "pending"
+    },
+    {
+      "id": 11,
+      "title": "How to compress a photo to under 50KB for online forms",
+      "type": "general",
+      "pillar": "utility",
+      "status": "pending"
+    },
+    {
+      "id": 12,
+      "title": "SabTools vs ClearTax vs EasyCalculation: an honest look at free tax calculators",
+      "type": "comparison",
+      "pillar": "finance",
+      "status": "pending"
+    },
+    {
+      "id": 13,
+      "title": "PPF, NPS or ELSS: where should your 80C money go?",
+      "type": "general",
+      "pillar": "finance",
+      "status": "pending"
+    },
+    {
+      "id": 14,
+      "title": "How many calories does Indian home food really have?",
+      "type": "general",
+      "pillar": "health",
+      "status": "pending"
+    },
+    {
+      "id": 15,
+      "title": "The psychology of money: why we make bad financial decisions",
+      "type": "general",
+      "pillar": "world",
+      "status": "pending"
+    },
+    {
+      "id": 16,
+      "title": "How SabTools' AI Insight turns a raw number into a decision",
+      "type": "sabtools",
+      "pillar": "developer-ai",
+      "status": "pending"
+    },
+    {
+      "id": 17,
+      "title": "What an RBI repo rate change means for your home loan EMI",
+      "type": "general",
+      "pillar": "news-explainer",
+      "status": "pending"
+    },
+    {
+      "id": 18,
+      "title": "How to check your EPF balance and what the numbers mean",
+      "type": "general",
+      "pillar": "finance",
+      "status": "pending"
+    },
+    {
+      "id": 19,
+      "title": "Fixed deposit vs debt mutual fund: a real comparison",
+      "type": "general",
+      "pillar": "finance",
+      "status": "pending"
+    },
+    {
+      "id": 20,
+      "title": "Free online image resizers compared: which is best for Indian users",
+      "type": "comparison",
+      "pillar": "utility",
+      "status": "pending"
+    },
+    {
+      "id": 21,
+      "title": "How to read a nutrition label: a practical Indian guide",
+      "type": "general",
+      "pillar": "health",
+      "status": "pending"
+    },
+    {
+      "id": 22,
+      "title": "Simple vs compound interest: the difference that costs lakhs",
+      "type": "general",
+      "pillar": "world",
+      "status": "pending"
+    },
+    {
+      "id": 23,
+      "title": "Inside SabTools: 497 free tools, no signup, no data collection",
+      "type": "sabtools",
+      "pillar": "utility",
+      "status": "pending"
+    },
+    {
+      "id": 24,
+      "title": "Best free PDF tools for Indians: an honest 2026 roundup",
+      "type": "comparison",
+      "pillar": "utility",
+      "status": "pending"
+    }
   ]
 }
