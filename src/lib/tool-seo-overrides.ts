@@ -136,6 +136,13 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
       "Calculate your EPF maturity corpus at retirement with employee and employer contributions at the current interest rate. Free India EPF tool.",
   },
 
+  // ── SEO ──────────────────────────────────────────────────────────────
+  "seo-checker": {
+    title: "Free SEO Checker — Website Audit & Report Tool",
+    description:
+      "Free SEO checker & website audit tool. Get real Google PageSpeed scores, Core Web Vitals and a full on-page SEO report for any URL. No signup.",
+  },
+
   // ── Core Utility (high search volume) ────────────────────────────────
   "percentage-calculator": {
     title: "Percentage Calculator — % Of, Increase & Difference",

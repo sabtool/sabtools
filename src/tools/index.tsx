@@ -136,6 +136,7 @@ const toolComponents: Record<string, AnyComponent> = {
   "image-format-converter": dynamic(() => import("./ImageFormatConverter")),
 
   // SEO Tools (8)
+  "seo-checker": dynamic(() => import("./SeoChecker")),
   "meta-tag-generator": dynamic(() => import("./MetaTagGenerator")),
   "open-graph-generator": dynamic(() => import("./OpenGraphGenerator")),
   "robots-txt-generator": dynamic(() => import("./RobotsTxtGenerator")),
