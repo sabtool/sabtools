@@ -1,0 +1,16 @@
+# Secrets — never commit
+.env
+client_secret.json
+token.json
+*.pem
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS / logs — macOS AppleDouble files appear on the exFAT KUSH drive
+.DS_Store
+._*
+*.log

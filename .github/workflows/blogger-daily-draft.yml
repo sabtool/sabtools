@@ -1,0 +1,54 @@
+name: Blogger Daily Draft
+
+# Generates one blog DRAFT per day and saves it to Blogger for human review.
+# Lives in the sabtools repo; all steps run inside the "Blogger automation" folder.
+
+on:
+  schedule:
+    - cron: "30 1 * * *"   # 01:30 UTC = 07:00 IST daily
+  workflow_dispatch: {}    # also runnable manually from the Actions tab
+
+permissions:
+  contents: write          # needed to commit the updated topics.json back
+
+jobs:
+  blogger-draft:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: blogger-automation
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate and publish draft
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ secrets.CLAUDE_MODEL }}
+          BLOG_ID: ${{ secrets.BLOG_ID }}
+          BLOGGER_CLIENT_ID: ${{ secrets.BLOGGER_CLIENT_ID }}
+          BLOGGER_CLIENT_SECRET: ${{ secrets.BLOGGER_CLIENT_SECRET }}
+          BLOGGER_REFRESH_TOKEN: ${{ secrets.BLOGGER_REFRESH_TOKEN }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          NOTIFY_TO: ${{ secrets.NOTIFY_TO }}
+          MAX_PENDING_DRAFTS: ${{ secrets.MAX_PENDING_DRAFTS }}
+        run: python -m src.pipeline
+
+      - name: Commit topic-queue update
+        run: |
+          git config user.name "blog-draft-bot"
+          git config user.email "blog-draft-bot@users.noreply.github.com"
+          git add config/topics.json
+          git diff --staged --quiet || git commit -m "chore: mark blog topic as drafted [skip ci]"
+          git push
