@@ -31509,6 +31509,140 @@ employees with 25 or more years of service are entitled to a pension equal to 50
 <p>The practical implications for an Indian household are clear. First, if you hold SGBs, mark the RBI's half-yearly premature redemption calendar in your diary — missing a submission window pushes redemption out by six months. Second, treat any SGB maturity as a planned cash event, not a surprise: decide in advance whether the proceeds will go into loan prepayment, equity SIPs, FDs, or replacement gold exposure via ETFs. Third, for fresh gold allocation going forward, the realistic menu has narrowed to physical gold, digital gold, gold ETFs, and gold mutual funds — each with its own tax and liquidity profile, but none replicating the tax-free maturity that made SGBs unique.</p>
 
 <p>The SGB era was a good run for retail Indian investors who participated. With the scheme officially wound down per the Union Budget 2025-26 confirmation, the right question now is not "when is the next tranche" — it's "how do I optimise the SGBs I already own, and where does new gold money go from here." Both deserve a calculator and an afternoon of attention, not a one-line WhatsApp tip from a friend.</p>`,
+  },
+  {
+    slug: "bbmp-property-tax-calculator-guide-2026",
+    title: "BBMP Property Tax Calculator (Bangalore) — Free Online Tool | Features, Tips & FAQ",
+    description: "Calculate BBMP property tax for Bengaluru properties using the official UAV (Unit Area Value) system with all 6 zones, full depreciation table and 24% cess. ...",
+    date: "2026-05-23",
+    category: "Real Estate",
+    readTime: "10 min read",
+    keywords: ["bbmp property tax", "bangalore property tax", "bbmp uav calculator", "bbmp self assessment", "bengaluru property tax", "bbmp zone a b c d e f", "bbmp depreciation", "bbmp tax 2026"],
+    toolSlug: "bbmp-property-tax-calculator",
+    image: {
+      src: "/blog/bbmp-property-tax-calculator.webp",
+      alt: "BBMP Property Tax Calculator (Bangalore) — Free Online Calculate BBMP property tax for Bengaluru properties using the official UAV (Unit Area Value) system with all 6 zones, full depreciation table and 24% cess Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>If you own a flat in Koramangala or a 30×40 site in Whitefield, the BBMP property tax demand note that lands in your inbox every April rarely matches what the watchman, your neighbour, or even the previous owner told you to expect. The Bruhat Bengaluru Mahanagara Palike runs a Self-Assessment Scheme (SAS) under the Unit Area Value system, which means <strong>you</strong> are legally responsible for computing the right tax — and overpaying by ₹4,000 or underpaying by ₹2,000 (and then paying 2% monthly interest plus penalty) are both equally common. The BBMP Property Tax Calculator on SabTools.in mirrors the official UAV formula, zone slabs, age-based depreciation table, and the 24% cess so you can verify the figure before clicking "Pay" on the BBMP portal.</p>
+
+<h2>Why BBMP's UAV system trips up most Bengaluru homeowners</h2>
+
+<p>Property tax in Bengaluru is not a percentage of guidance value or stamp duty. Since 2008-09, BBMP has used the <strong>Unit Area Value (UAV)</strong> method — a notional per-square-foot per-month rental value assigned to your zone, multiplied by your built-up area, multiplied by 10 months in a year, minus depreciation based on the age of the structure, plus a 24% cess (library + health cess). The formula looks simple on paper:</p>
+
+<p><strong>Property Tax = (UAV × Built-up Area × 10) − Depreciation + 24% Cess</strong></p>
+
+<p>The trip-ups come from four places. First, BBMP classifies the city into six zones (A through F) and each zone has a <em>different</em> UAV — and the zone of a street can change after a re-classification round. Second, the UAV for a tenanted property is roughly double the self-occupied UAV, so if you rent out half your duplex you legally owe two different tax computations on two sets of floors. Third, the depreciation slab depends on the year of construction, not the year you bought the house — a 2009 flat in Indiranagar that changed hands in 2024 still uses the 2009 age. Fourth, vacant land, car parking, basements and balconies are each computed differently. Get any one of these wrong and the SAS form becomes ammunition for a future scrutiny notice.</p>
+
+<h2>The six BBMP zones and what they actually cost</h2>
+
+<p>BBMP's zonal classification roughly tracks land value, but with quirks — a road on one side of the metro line can be Zone B while the parallel road sits in Zone C. The classifier list is published on the BBMP property tax portal and runs to hundreds of pages. For a quick mental map of the FY 2025-26 / FY 2026-27 cycle, here is how the zones break down in plain English:</p>
+
+<ul>
+  <li><strong>Zone A</strong> — Premium central business and prime residential pockets: MG Road, Brigade Road, Vittal Mallya Road, parts of Indiranagar 100ft Road, Koramangala 4th and 5th Block, Sadashivanagar. UAV for self-occupied residential typically sits at <strong>₹2.50/sq ft/month</strong>.</li>
+  <li><strong>Zone B</strong> — Strong residential demand belts: HSR Layout, JP Nagar phases 1-4, Jayanagar 4th Block, parts of Banashankari II Stage, RT Nagar. UAV around <strong>₹2.00/sq ft/month</strong>.</li>
+  <li><strong>Zone C</strong> — Established but mid-tier neighbourhoods: BTM Layout, Bannerghatta Road inner stretches, parts of Hebbal, Vijayanagar. UAV around <strong>₹1.80/sq ft/month</strong>.</li>
+  <li><strong>Zone D</strong> — IT corridor and growing suburbs: Whitefield, Marathahalli, Electronic City Phase 1, Bellandur, Sarjapur Road inner stretches. UAV around <strong>₹1.60/sq ft/month</strong>.</li>
+  <li><strong>Zone E</strong> — Outer Bengaluru: parts of Yelahanka, KR Puram outskirts, Kengeri, Begur. UAV around <strong>₹1.20/sq ft/month</strong>.</li>
+  <li><strong>Zone F</strong> — Peripheral and recently added BBMP villages. UAV around <strong>₹1.00/sq ft/month</strong>.</li>
+</ul>
+
+<p>The calculator on SabTools pulls the published UAV table for both self-occupied and tenanted use, so you select the zone and tenure status and the per-sq-ft figure is filled in automatically. If you are not sure which zone your address falls under, the BBMP portal's "Search by PID" lookup is the authoritative source — the calculator is for the math, not for zone classification.</p>
+
+<h2>A worked example: 2 BHK flat in HSR Layout</h2>
+
+<p>Take Pranav, a salaried product manager living in his own 2 BHK at HSR Layout — Zone B, built-up area <strong>1,180 sq ft</strong>, construction completed in March 2018, self-occupied. The math:</p>
+
+<ol>
+  <li>UAV for Zone B, self-occupied residential: ₹2.00 per sq ft per month.</li>
+  <li>Annual notional value = ₹2.00 × 1,180 × 10 months = <strong>₹23,600</strong>.</li>
+  <li>Age of building as of FY 2026-27: 8 years → depreciation slab of <strong>9%</strong> → depreciation = ₹2,124.</li>
+  <li>Net annual value = ₹23,600 − ₹2,124 = <strong>₹21,476</strong>.</li>
+  <li>Property tax at 20% of net annual value (residential) = ₹4,295.</li>
+  <li>Add 24% cess = ₹1,031.</li>
+  <li><strong>Total payable = ₹5,326</strong> for the year. With the 5% early-payment rebate (typically available till end of April), the cheque drops to roughly ₹5,060.</li>
+</ol>
+
+<p>Now consider the same flat, but tenanted to a working couple at ₹38,000/month rent. The tenanted UAV for Zone B jumps to roughly ₹4.00/sq ft/month, doubling the annual notional to ₹47,200. After the same 9% depreciation and 24% cess, Pranav's tax demand becomes roughly <strong>₹10,650</strong> — almost exactly twice. This is the single biggest reason BBMP issues scrutiny notices: owners who quietly let out a property continue filing the SAS form as "self-occupied" and BBMP cross-checks against electricity meter names and rental agreement registrations.</p>
+
+<h2>The depreciation table BBMP actually uses</h2>
+
+<p>Depreciation is the one area where homeowners consistently leave money on the table — newer buildings get just 3% off, but a 1990s house in Malleshwaram can claim 50-60%. The slab BBMP applies (and which the calculator pre-loads) runs roughly as follows:</p>
+
+<ul>
+  <li>Up to 3 years old → <strong>3%</strong></li>
+  <li>4 to 6 years → <strong>6%</strong></li>
+  <li>7 to 9 years → <strong>9%</strong></li>
+  <li>10 to 12 years → <strong>12%</strong></li>
+  <li>13 to 15 years → <strong>15%</strong></li>
+  <li>16 to 20 years → <strong>20%</strong></li>
+  <li>21 to 25 years → <strong>25%</strong></li>
+  <li>26 to 30 years → <strong>30%</strong></li>
+  <li>31 to 40 years → <strong>40%</strong></li>
+  <li>41 to 50 years → <strong>50%</strong></li>
+  <li>51 to 60 years → <strong>60%</strong></li>
+  <li>Above 60 years → <strong>70%</strong></li>
+</ul>
+
+<p>If you inherited a 1972-built independent house in Basavanagudi (Zone B, 2,400 sq ft built-up), the 60%+ depreciation can crush the tax bill from a notional ₹48,000 base to under ₹13,000 once you net out depreciation and add cess. People filing SAS Form IV (no change) year after year without updating the age miss the slab jumps — at year 10, year 13, year 16 and year 21 the depreciation steps up materially.</p>
+
+<h2>What the SabTools calculator handles end-to-end</h2>
+
+<p>The calculator is structured around the actual SAS form fields so you can transcribe the answer straight into the BBMP portal. You enter:</p>
+
+<ul>
+  <li>Zone (A through F)</li>
+  <li>Property usage — residential self-occupied, residential tenanted, commercial, industrial</li>
+  <li>Built-up area in sq ft (use the <a href="/tools/plot-area-calculator">plot area calculator</a> to convert from sq m, guntha or cents if your sale deed uses those units)</li>
+  <li>Year of construction</li>
+  <li>Parking area separately (car parking is taxed at a softer rate)</li>
+  <li>Vacant land portion, if any</li>
+</ul>
+
+<p>The output gives you the gross annual value, depreciation, net annual value, property tax at the applicable slab, the 24% cess broken out into library cess and health cess, the 5% early-bird rebate amount, and the total payable. If you split payment into two instalments (BBMP allows this without interest if both halves are paid before the cutoffs), the calculator shows both instalment figures.</p>
+
+<h2>Mixed-use, parking and the corner cases</h2>
+
+<p>Real Bengaluru properties are rarely textbook. Three common situations:</p>
+
+<p><strong>Ground floor shop, upper floors residential.</strong> A 30×40 site in Jayanagar with a 600 sq ft tailoring shop downstairs and a 1,800 sq ft residence above is computed as two parcels — the shop at commercial UAV (₹6-10/sq ft/month for Zone B) and the residence at self-occupied or tenanted UAV. Run the calculator twice and add the results; do not average the UAV.</p>
+
+<p><strong>Stilt parking.</strong> Covered parking on the ground floor is taxed at half the residential UAV in most zones. A 4-car stilt of 800 sq ft in Zone A adds roughly ₹10,000 to the annual demand — non-trivial. If your apartment complex bills you for proportionate parking tax via the RWA, ask for the working.</p>
+
+<p><strong>Under-construction floors.</strong> A house with one floor habitable and one floor still under construction is taxed only on the completed portion until an Occupancy Certificate is issued for the new floor. The day the OC comes through, your depreciation clock for that floor resets to year zero — even if the rest of the house is 15 years old.</p>
+
+<h2>Deadlines, rebates and the cost of delay</h2>
+
+<p>The BBMP property tax cycle runs with the financial year — April to March. Key dates to remember for the FY 2026-27 cycle:</p>
+
+<ul>
+  <li><strong>5% rebate</strong> for full payment by 30 April 2026 (BBMP usually confirms this date each March).</li>
+  <li>Two instalments allowed: first by 30 May, second by 29 November — no rebate but no interest either.</li>
+  <li><strong>2% interest per month</strong> on unpaid tax after the due date, plus a penalty in some cases.</li>
+  <li>SAS Form IV — if nothing has changed since last year (no extension, no change of tenure, no new construction).</li>
+  <li>SAS Form V — if anything has changed (added a floor, converted residential to commercial, rented it out).</li>
+</ul>
+
+<p>Concretely: if your annual demand is ₹18,000 and you pay six months late, you owe roughly ₹2,160 in interest — money that disappears into thin air. Most banks supporting BBMP payment (HDFC, ICICI, Axis, Canara) accept netbanking and UPI on the BBMP portal, with confirmation arriving in 24-48 hours. Save the receipt — it is asked for during home loan top-ups, property sale registrations, and Khata transfers.</p>
+
+<h2>Property tax in your bigger financial picture</h2>
+
+<p>For a salaried professional in Bengaluru earning ₹22L per annum and servicing a ₹65L home loan at 8.6% for 22 years, the monthly EMI (which you can verify with the <a href="/tools/emi-calculator">home loan EMI calculator</a>) sits around ₹55,500 — roughly ₹6.66L a year. Property tax of ₹12,000-18,000 a year looks small next to that, but it is one of the few outflows you actually control through clean self-assessment. Many homeowners also under-estimate the running cost of the property itself — paint refresh every 5-6 years (use the <a href="/tools/paint-calculator">paint requirement calculator</a> to plan ₹35,000-60,000 per cycle), tile replacements in kitchens and bathrooms (the <a href="/tools/tile-calculator">tile calculator</a> helps cost a 60 sq ft bathroom redo), and minor masonry work where the <a href="/tools/brick-calculator">brick and cement calculator</a> avoids the contractor over-ordering by 15-20%.</p>
+
+<p>Property tax is also tax-deductible. If your house is let out, the BBMP tax you pay is fully deductible from the rental income before computing "income from house property" for ITR — alongside the 30% standard deduction and home loan interest under <strong>Section 24(b)</strong>. A landlord paying ₹14,000 in BBMP tax at the 30% slab effectively gets ₹4,200 back at ITR filing time. The same logic does not apply to self-occupied properties (you cannot deduct property tax there), so the tenanted-vs-self-occupied decision has a tax-side angle beyond just the higher UAV.</p>
+
+<h2>Three quick sanity checks before you hit Pay</h2>
+
+<ol>
+  <li><strong>Compare against last year's demand.</strong> If your tax has jumped more than 8-10% without a zone reclassification, a built-up area change, or a usage change, something is off. The calculator helps you reverse-engineer where the delta came from.</li>
+  <li><strong>Cross-check the built-up area.</strong> BBMP records often carry the super built-up area from the builder agreement, which can be 18-25% higher than the actual built-up. If you have a Khata Certificate or Sanctioned Plan with the carpet/built-up split, use that figure.</li>
+  <li><strong>Verify the 24% cess is on the property tax, not on the gross annual value.</strong> A surprisingly common error in handwritten ward office calculations is applying cess on the wrong base, inflating the final number by ₹1,500-3,000.</li>
+</ol>
+
+<p>The few minutes spent verifying these three points usually pay for themselves several times over the life of a property.</p>
+
+<p>Open the <a href="/tools/bbmp-property-tax-calculator">BBMP Property Tax Calculator</a> and run your zone, built-up area and year of construction through it before you fill the SAS form on the BBMP portal →</p>`,
   }
 ];
 
