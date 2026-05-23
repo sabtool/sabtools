@@ -580,6 +580,13 @@ export default function SeoChecker() {
       setError("Please enter a valid website URL, e.g. example.com");
       return;
     }
+    // Console hint so the repo owner can verify which PSI mode the tool is
+    // actually running in (keyed vs anonymous). Open DevTools console while
+    // running an audit — should read "keyed" once NEXT_PUBLIC_PAGESPEED_API_KEY
+    // is configured in Vercel.
+    console.info(
+      `[SEO Checker] PageSpeed API: ${PSI_KEY ? "keyed (25k/day quota)" : "keyless (per-visitor anonymous quota)"}`
+    );
     setLoading(true);
     setError("");
     setReport(null);
