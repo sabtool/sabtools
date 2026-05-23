@@ -41,6 +41,7 @@ interface PsiAudit {
   displayValue?: string;
   numericValue?: number;
   scoreDisplayMode?: string;
+  details?: unknown;
 }
 interface PsiCategory {
   score?: number | null;
@@ -60,6 +61,7 @@ interface PsiResponse {
   };
   loadingExperience?: {
     metrics?: Record<string, { percentile?: number; category?: string }>;
+    overall_category?: string;
   };
   error?: { message?: string };
 }
@@ -81,6 +83,20 @@ interface CwvMetric {
   rating: "good" | "average" | "poor" | "n/a";
 }
 
+interface FieldCwv {
+  lcp?: { value: string; rating: "good" | "average" | "poor" };
+  cls?: { value: string; rating: "good" | "average" | "poor" };
+  inp?: { value: string; rating: "good" | "average" | "poor" };
+  fcp?: { value: string; rating: "good" | "average" | "poor" };
+  overallCategory?: "FAST" | "AVERAGE" | "SLOW";
+}
+
+interface PageWeight {
+  totalKB: number;
+  requestCount: number;
+  byType: { label: string; sizeKB: number; requests: number }[];
+}
+
 interface SeoReport {
   url: string;
   finalUrl: string;
@@ -92,10 +108,29 @@ interface SeoReport {
   };
   cwv: CwvMetric[];
   fieldDataAvailable: boolean;
+  fieldCwv: FieldCwv | null;
+  pageWeight: PageWeight | null;
+  ttfbMs: number | null;
   onPageAvailable: boolean;
+  schemaTypes: string[];
+  ampUrl: string | null;
+  manifestUrl: string | null;
+  mixedContentCount: number;
+  robotsTxtFound: boolean;
+  sitemapFound: boolean;
   checks: Check[];
   composite: number;
   grade: string;
+  topPriorities: string[];
+  verdict: string;
+}
+
+interface OnPageResult {
+  checks: Check[];
+  schemaTypes: string[];
+  ampUrl: string | null;
+  manifestUrl: string | null;
+  mixedContentCount: number;
 }
 
 // ─── Helpers ─────────────────────────────────────────────────────────────
@@ -167,8 +202,117 @@ const CWV_RATING_CLASS: Record<string, string> = {
   "n/a": "text-gray-400",
 };
 
+// ─── robots.txt / sitemap parsers ────────────────────────────────────────
+function analyzeRobotsTxt(text: string): Check[] {
+  const checks: Check[] = [];
+  const trimmed = text.trim();
+  if (!trimmed) {
+    checks.push({
+      category: "Crawler Access",
+      label: "robots.txt",
+      status: "warn",
+      detail: "No robots.txt found at /robots.txt — crawlers can still crawl the site, but a robots.txt lets you control which paths they index.",
+      fix: "Add a /robots.txt file. Even a permissive one (`User-agent: *  Allow: /`) plus a `Sitemap:` line helps.",
+    });
+    return checks;
+  }
+  const lower = trimmed.toLowerCase();
+  const hasSitemap = /sitemap:/i.test(trimmed);
+  const blocksAll = /disallow:\s*\/\s*$/im.test(trimmed) && !/allow:\s*\/[a-z]/i.test(trimmed);
+  if (blocksAll) {
+    checks.push({
+      category: "Crawler Access",
+      label: "robots.txt — site-wide block",
+      status: "fail",
+      detail: "robots.txt has `Disallow: /` — this blocks every crawler from every page.",
+      fix: "Remove the `Disallow: /` line unless you genuinely want the site invisible to search engines.",
+    });
+  } else {
+    checks.push({
+      category: "Crawler Access",
+      label: "robots.txt present",
+      status: "pass",
+      detail: `robots.txt found (${trimmed.length} chars) and it doesn't block the root path.`,
+    });
+  }
+  checks.push({
+    category: "Crawler Access",
+    label: "Sitemap declared in robots.txt",
+    status: hasSitemap ? "pass" : "warn",
+    detail: hasSitemap
+      ? "robots.txt includes a `Sitemap:` directive — crawlers can discover it automatically."
+      : "robots.txt does not include a `Sitemap:` directive.",
+    fix: hasSitemap
+      ? undefined
+      : "Add a line like `Sitemap: https://yoursite.com/sitemap.xml` to robots.txt.",
+  });
+  // Bonus: warn if it disallows /sitemap.xml (rare but breaks discovery)
+  if (/disallow:\s*\/sitemap/i.test(lower)) {
+    checks.push({
+      category: "Crawler Access",
+      label: "Sitemap accessibility",
+      status: "fail",
+      detail: "robots.txt disallows the sitemap path — crawlers can't read your sitemap.",
+      fix: "Remove the line blocking /sitemap from robots.txt.",
+    });
+  }
+  return checks;
+}
+
+function analyzeSitemap(xml: string): Check[] {
+  const checks: Check[] = [];
+  const trimmed = xml.trim();
+  if (!trimmed || !/<urlset|<sitemapindex/i.test(trimmed)) {
+    checks.push({
+      category: "Crawler Access",
+      label: "sitemap.xml",
+      status: "warn",
+      detail: "No valid sitemap.xml found at /sitemap.xml.",
+      fix: "Generate a sitemap (most CMSes do this automatically) and serve it at /sitemap.xml. It helps Google discover and index your pages.",
+    });
+    return checks;
+  }
+  const urlCount = (trimmed.match(/<url>/gi) || []).length;
+  const sitemapCount = (trimmed.match(/<sitemap>/gi) || []).length;
+  const lastmods = trimmed.match(/<lastmod>([^<]+)<\/lastmod>/gi) || [];
+  const freshestLastmod = lastmods
+    .map((m) => m.replace(/<\/?lastmod>/gi, ""))
+    .sort()
+    .pop();
+  const totalEntries = urlCount + sitemapCount;
+  checks.push({
+    category: "Crawler Access",
+    label: "sitemap.xml",
+    status: totalEntries > 0 ? "pass" : "warn",
+    detail:
+      sitemapCount > 0
+        ? `Sitemap-index found with ${sitemapCount} child sitemap${sitemapCount > 1 ? "s" : ""}.`
+        : urlCount > 0
+          ? `Sitemap found with ${urlCount.toLocaleString()} URL${urlCount > 1 ? "s" : ""}.`
+          : "Sitemap exists but contains no entries.",
+  });
+  if (freshestLastmod) {
+    const ageDays = Math.round(
+      (Date.now() - new Date(freshestLastmod).getTime()) / 86400000
+    );
+    if (!isNaN(ageDays)) {
+      checks.push({
+        category: "Crawler Access",
+        label: "Sitemap freshness",
+        status: ageDays < 30 ? "pass" : ageDays < 90 ? "warn" : "fail",
+        detail: `Most recent <lastmod>: ${freshestLastmod.slice(0, 10)} (${ageDays} days ago).`,
+        fix:
+          ageDays < 30
+            ? undefined
+            : "Stale sitemap signals an inactive site. Most CMSes regenerate sitemaps on every publish — verify yours is doing so.",
+      });
+    }
+  }
+  return checks;
+}
+
 // ─── On-page crawl ───────────────────────────────────────────────────────
-function analyzeOnPage(html: string, pageUrl: string): Check[] {
+function analyzeOnPage(html: string, pageUrl: string): OnPageResult {
   const checks: Check[] = [];
   const doc = new DOMParser().parseFromString(html, "text/html");
   const attr = (sel: string, name: string) =>
@@ -485,7 +629,96 @@ function analyzeOnPage(html: string, pageUrl: string): Check[] {
       : 'Add <meta name="twitter:card" content="summary_large_image"> for a rich preview when shared on X.',
   });
 
-  return checks;
+  // Schema.org types — parse @type from every JSON-LD block (handles
+  // single object, array, and @graph patterns).
+  const schemaTypes: string[] = [];
+  doc.querySelectorAll('script[type="application/ld+json"]').forEach((s) => {
+    try {
+      const data = JSON.parse(s.textContent || "");
+      const collect = (n: unknown): void => {
+        if (!n || typeof n !== "object") return;
+        const obj = n as Record<string, unknown>;
+        const t = obj["@type"];
+        if (typeof t === "string") schemaTypes.push(t);
+        else if (Array.isArray(t))
+          t.forEach((x) => typeof x === "string" && schemaTypes.push(x));
+        if (Array.isArray(obj["@graph"]))
+          (obj["@graph"] as unknown[]).forEach(collect);
+      };
+      if (Array.isArray(data)) data.forEach(collect);
+      else collect(data);
+    } catch {
+      /* ignore malformed JSON-LD */
+    }
+  });
+  const uniqSchemaTypes = Array.from(new Set(schemaTypes)).sort();
+  if (uniqSchemaTypes.length > 0) {
+    checks.push({
+      category: "Schema Markup",
+      label: "Schema.org types detected",
+      status: "pass",
+      detail: `${uniqSchemaTypes.length} unique type${uniqSchemaTypes.length === 1 ? "" : "s"}: ${uniqSchemaTypes.slice(0, 8).join(", ")}${uniqSchemaTypes.length > 8 ? "…" : ""}.`,
+    });
+  }
+
+  // AMP detection
+  const ampLink = attr('link[rel="amphtml"]', "href") || null;
+  if (ampLink) {
+    checks.push({
+      category: "Technical SEO",
+      label: "AMP version",
+      status: "info",
+      detail: `AMP version declared: ${ampLink.slice(0, 80)}.`,
+    });
+  }
+
+  // PWA / web manifest
+  const manifestLink = attr('link[rel="manifest"]', "href") || null;
+  if (manifestLink) {
+    checks.push({
+      category: "Technical SEO",
+      label: "Web app manifest (PWA-ready)",
+      status: "pass",
+      detail: "Web app manifest declared — site can install as a PWA.",
+    });
+  }
+
+  // Mixed content — HTTP resources loaded on an HTTPS page
+  let mixedContent = 0;
+  if (pageUrl.startsWith("https://")) {
+    doc.querySelectorAll("[src], [href]").forEach((el) => {
+      const u = (
+        el.getAttribute("src") ||
+        el.getAttribute("href") ||
+        ""
+      ).trim();
+      if (u.toLowerCase().startsWith("http://")) mixedContent++;
+    });
+    if (mixedContent > 0) {
+      checks.push({
+        category: "Technical SEO",
+        label: "Mixed content",
+        status: "fail",
+        detail: `${mixedContent} HTTP resource${mixedContent === 1 ? "" : "s"} loaded on an HTTPS page — browsers will block or downgrade these.`,
+        fix: "Update every http:// reference (src/href) to https:// or use a protocol-relative URL.",
+      });
+    } else {
+      checks.push({
+        category: "Technical SEO",
+        label: "Mixed content",
+        status: "pass",
+        detail: "No mixed (HTTP) resources detected on the HTTPS page.",
+      });
+    }
+  }
+
+  return {
+    checks,
+    schemaTypes: uniqSchemaTypes,
+    ampUrl: ampLink,
+    manifestUrl: manifestLink,
+    mixedContentCount: mixedContent,
+  };
 }
 
 // ─── PageSpeed parsing ───────────────────────────────────────────────────
@@ -493,11 +726,18 @@ function parsePsi(data: PsiResponse): {
   scores: SeoReport["scores"];
   cwv: CwvMetric[];
   fieldDataAvailable: boolean;
+  fieldCwv: FieldCwv | null;
+  pageWeight: PageWeight | null;
+  ttfbMs: number | null;
   checks: Check[];
 } {
   const lh = data.lighthouseResult;
   const cats = lh?.categories;
   const audits = lh?.audits || {};
+
+  // Declare checks bucket upfront — every later block (TTFB, failing-audit
+  // fold) pushes into the same array.
+  const checks: Check[] = [];
 
   const scores: SeoReport["scores"] = {
     performance: pct(cats?.performance?.score),
@@ -531,12 +771,84 @@ function parsePsi(data: PsiResponse): {
     labMetric("si", "speed-index", "Speed Index"),
   ];
 
-  // Field data (real Chrome users) — only present for sites with traffic.
-  const fieldDataAvailable = !!data.loadingExperience?.metrics;
+  // Field data (real Chrome users from CrUX) — only present for sites with
+  // enough traffic. Far more credible than lab data since it's measured on
+  // actual visitors, not a synthetic test environment.
+  const lx = data.loadingExperience?.metrics;
+  const fieldDataAvailable = !!lx;
+  let fieldCwv: FieldCwv | null = null;
+  if (lx) {
+    const cruxMetric = (
+      raw: { percentile?: number; category?: string } | undefined,
+      formatter: (n: number) => string
+    ) => {
+      if (!raw || raw.percentile === undefined) return undefined;
+      const cat = (raw.category || "").toUpperCase();
+      const rating: "good" | "average" | "poor" =
+        cat === "FAST" ? "good" : cat === "AVERAGE" ? "average" : "poor";
+      return { value: formatter(raw.percentile), rating };
+    };
+    fieldCwv = {
+      lcp: cruxMetric(lx.LARGEST_CONTENTFUL_PAINT_MS, (n) => `${(n / 1000).toFixed(2)} s`),
+      cls: cruxMetric(lx.CUMULATIVE_LAYOUT_SHIFT_SCORE, (n) => (n / 100).toFixed(2)),
+      inp: cruxMetric(lx.INTERACTION_TO_NEXT_PAINT, (n) => `${n} ms`),
+      fcp: cruxMetric(lx.FIRST_CONTENTFUL_PAINT_MS, (n) => `${(n / 1000).toFixed(2)} s`),
+      overallCategory: data.loadingExperience?.overall_category as
+        | "FAST"
+        | "AVERAGE"
+        | "SLOW"
+        | undefined,
+    };
+  }
 
-  // Fold the FAILING audits from the SEO, Accessibility and Best-Practices
-  // categories into the checklist — these are Google's own findings.
-  const checks: Check[] = [];
+  // Page weight breakdown (from Lighthouse's resource-summary audit).
+  let pageWeight: PageWeight | null = null;
+  const rs = audits["resource-summary"];
+  const rsItems = (rs?.details as { items?: Array<{ resourceType?: string; label?: string; transferSize?: number; requestCount?: number }> } | undefined)?.items;
+  if (rsItems && Array.isArray(rsItems)) {
+    const totalEntry = rsItems.find(
+      (i) => i.resourceType === "total" || i.label === "Total"
+    );
+    const byType = rsItems
+      .filter(
+        (i) =>
+          i.resourceType !== "total" &&
+          i.label !== "Total" &&
+          (i.transferSize || 0) > 0
+      )
+      .map((i) => ({
+        label: i.label || i.resourceType || "Other",
+        sizeKB: Math.round((i.transferSize || 0) / 1024),
+        requests: i.requestCount || 0,
+      }))
+      .sort((a, b) => b.sizeKB - a.sizeKB);
+    if (totalEntry) {
+      pageWeight = {
+        totalKB: Math.round((totalEntry.transferSize || 0) / 1024),
+        requestCount: totalEntry.requestCount || 0,
+        byType,
+      };
+    }
+  }
+
+  // Time to First Byte
+  const srt = audits["server-response-time"];
+  const ttfbMs =
+    srt?.numericValue !== undefined ? Math.round(srt.numericValue) : null;
+  if (ttfbMs !== null) {
+    checks.push({
+      category: "Performance Details",
+      label: "Time to First Byte (TTFB)",
+      status: ttfbMs <= 600 ? "pass" : ttfbMs <= 1500 ? "warn" : "fail",
+      detail: `Server responded in ${ttfbMs} ms.`,
+      fix:
+        ttfbMs <= 600
+          ? undefined
+          : "TTFB > 600 ms — slow server response. Use a faster host, enable caching, or move static assets to a CDN.",
+    });
+  }
+
+  // Fold failing audits from SEO, Accessibility, Best-Practices into checks.
   const folded = new Set<string>();
   const catLabel: Record<string, string> = {
     seo: "Technical SEO",
@@ -558,12 +870,12 @@ function parsePsi(data: PsiResponse): {
         detail:
           (a.displayValue ? a.displayValue + " — " : "") +
           (a.description || "").replace(/\[.*?\]\(.*?\)/g, "").slice(0, 220),
-        fix: "Flagged by Google Lighthouse. Open PageSpeed Insights for the step-by-step fix.",
+        fix: "Flagged by the audit engine — the detail above describes the issue; the standard fix is widely documented online.",
       });
     });
   });
 
-  return { scores, cwv, fieldDataAvailable, checks };
+  return { scores, cwv, fieldDataAvailable, fieldCwv, pageWeight, ttfbMs, checks };
 }
 
 // ─── Component ───────────────────────────────────────────────────────────
@@ -591,34 +903,54 @@ export default function SeoChecker() {
     setError("");
     setReport(null);
 
-    // 1. Google PageSpeed Insights (real Lighthouse run — the backbone).
-    setProgress("Running Google PageSpeed analysis… this takes 15-30 seconds.");
+    // 1. PageSpeed Insights run (Lighthouse via Google's API — branded as
+    //    "SabTools audit engine" in the user-facing copy).
+    setProgress("Running deep SEO audit — 80+ checks… this takes 15-30 seconds.");
     const psiUrl =
       `${PSI_ENDPOINT}?url=${encodeURIComponent(target)}` +
       `&category=PERFORMANCE&category=SEO&category=ACCESSIBILITY&category=BEST_PRACTICES` +
       `&strategy=mobile${PSI_KEY ? `&key=${PSI_KEY}` : ""}`;
 
-    // 2. On-page HTML via CORS proxy (best-effort enrichment).
+    // 2. On-page HTML + robots.txt + sitemap.xml via CORS proxy (best-effort).
     const proxyUrl = CORS_PROXY + encodeURIComponent(target);
+    let originBase = target;
+    try {
+      originBase = new URL(target).origin;
+    } catch {
+      /* normalizeUrl already validated this; fall through */
+    }
+    const robotsProxyUrl =
+      CORS_PROXY + encodeURIComponent(originBase + "/robots.txt");
+    const sitemapProxyUrl =
+      CORS_PROXY + encodeURIComponent(originBase + "/sitemap.xml");
 
-    const [psiSettled, htmlSettled] = await Promise.allSettled([
-      fetch(psiUrl).then(async (r) => {
-        const json: PsiResponse = await r.json();
-        if (!r.ok || json.error) {
-          throw new Error(
-            json.error?.message ||
-              (r.status === 429
-                ? "Google's free analysis quota is busy. Wait a minute and try again."
-                : "PageSpeed could not analyse this URL.")
-          );
-        }
-        return json;
-      }),
-      fetch(proxyUrl).then((r) => {
-        if (!r.ok) throw new Error("proxy");
-        return r.text();
-      }),
-    ]);
+    const [psiSettled, htmlSettled, robotsSettled, sitemapSettled] =
+      await Promise.allSettled([
+        fetch(psiUrl).then(async (r) => {
+          const json: PsiResponse = await r.json();
+          if (!r.ok || json.error) {
+            throw new Error(
+              json.error?.message ||
+                (r.status === 429
+                  ? "Free audit quota is busy. Wait a minute and try again."
+                  : "We couldn't analyse this URL — make sure it's public, reachable, and spelled correctly.")
+            );
+          }
+          return json;
+        }),
+        fetch(proxyUrl).then((r) => {
+          if (!r.ok) throw new Error("proxy");
+          return r.text();
+        }),
+        fetch(robotsProxyUrl).then((r) => {
+          if (!r.ok) throw new Error("robots-proxy");
+          return r.text();
+        }),
+        fetch(sitemapProxyUrl).then((r) => {
+          if (!r.ok) throw new Error("sitemap-proxy");
+          return r.text();
+        }),
+      ]);
 
     if (psiSettled.status === "rejected" && htmlSettled.status === "rejected") {
       setError(
@@ -641,6 +973,9 @@ export default function SeoChecker() {
     };
     let cwv: CwvMetric[] = [];
     let fieldDataAvailable = false;
+    let fieldCwv: FieldCwv | null = null;
+    let pageWeight: PageWeight | null = null;
+    let ttfbMs: number | null = null;
     let finalUrl = target;
 
     if (psiSettled.status === "fulfilled") {
@@ -648,9 +983,11 @@ export default function SeoChecker() {
       scores = parsed.scores;
       cwv = parsed.cwv;
       fieldDataAvailable = parsed.fieldDataAvailable;
+      fieldCwv = parsed.fieldCwv;
+      pageWeight = parsed.pageWeight;
+      ttfbMs = parsed.ttfbMs;
       checks.push(...parsed.checks);
-      finalUrl =
-        psiSettled.value.lighthouseResult?.finalUrl || target;
+      finalUrl = psiSettled.value.lighthouseResult?.finalUrl || target;
     }
 
     // HTTPS check (from the normalised/final URL).
@@ -672,16 +1009,55 @@ export default function SeoChecker() {
     );
 
     let onPageAvailable = false;
+    let schemaTypes: string[] = [];
+    let ampUrl: string | null = null;
+    let manifestUrl: string | null = null;
+    let mixedContentCount = 0;
     if (htmlSettled.status === "fulfilled") {
       try {
         const onPage = analyzeOnPage(htmlSettled.value, finalUrl);
-        if (onPage.length > 0) {
-          checks.push(...onPage);
+        if (onPage.checks.length > 0) {
+          checks.push(...onPage.checks);
           onPageAvailable = true;
+          schemaTypes = onPage.schemaTypes;
+          ampUrl = onPage.ampUrl;
+          manifestUrl = onPage.manifestUrl;
+          mixedContentCount = onPage.mixedContentCount;
         }
       } catch {
-        /* parsing failed — fall back to PageSpeed-only report */
+        /* parsing failed — fall back to audit-only report */
       }
+    }
+
+    // robots.txt
+    let robotsTxtFound = false;
+    if (robotsSettled.status === "fulfilled") {
+      checks.push(...analyzeRobotsTxt(robotsSettled.value));
+      robotsTxtFound = !!robotsSettled.value.trim();
+    } else {
+      checks.push({
+        category: "Crawler Access",
+        label: "robots.txt",
+        status: "warn",
+        detail:
+          "Couldn't fetch /robots.txt (network/proxy issue) — crawler access rules weren't verified.",
+      });
+    }
+
+    // sitemap.xml
+    let sitemapFound = false;
+    if (sitemapSettled.status === "fulfilled") {
+      checks.push(...analyzeSitemap(sitemapSettled.value));
+      sitemapFound = /<urlset|<sitemapindex/i.test(sitemapSettled.value);
+    } else {
+      checks.push({
+        category: "Crawler Access",
+        label: "sitemap.xml",
+        status: "warn",
+        detail:
+          "Couldn't fetch /sitemap.xml — the site may not have one, or the request was blocked.",
+        fix: "Generate a sitemap (most CMSes do this automatically) and serve it at /sitemap.xml.",
+      });
     }
 
     const validScores = [
@@ -691,10 +1067,20 @@ export default function SeoChecker() {
       scores.bestPractices,
     ].filter((s): s is number => s !== null);
     const composite = validScores.length
-      ? Math.round(
-          validScores.reduce((a, b) => a + b, 0) / validScores.length
-        )
+      ? Math.round(validScores.reduce((a, b) => a + b, 0) / validScores.length)
       : 0;
+
+    // Executive summary — top 3 failing items + a one-word verdict.
+    const failingChecks = checks.filter((c) => c.status === "fail");
+    const topPriorities = failingChecks.slice(0, 3).map((c) => c.label);
+    const verdict =
+      composite >= 85
+        ? "Strong"
+        : composite >= 70
+          ? "Good"
+          : composite >= 50
+            ? "Needs Work"
+            : "Critical Issues";
 
     setReport({
       url: target,
@@ -702,10 +1088,21 @@ export default function SeoChecker() {
       scores,
       cwv,
       fieldDataAvailable,
+      fieldCwv,
+      pageWeight,
+      ttfbMs,
       onPageAvailable,
+      schemaTypes,
+      ampUrl,
+      manifestUrl,
+      mixedContentCount,
+      robotsTxtFound,
+      sitemapFound,
       checks,
       composite,
       grade: gradeFor(composite),
+      topPriorities,
+      verdict,
     });
     setLoading(false);
     setProgress("");
@@ -769,8 +1166,7 @@ export default function SeoChecker() {
           </button>
         </div>
         <p className="text-xs text-gray-400 mt-1">
-          Real analysis powered by Google PageSpeed Insights + a live on-page
-          crawl. No signup, 100% free.
+          Real analysis · 80+ checks · No signup, 100% free.
         </p>
       </div>
 
@@ -791,7 +1187,7 @@ export default function SeoChecker() {
       {/* Report */}
       {report && (
         <div className="space-y-6">
-          {/* Overall grade */}
+          {/* Executive summary — grade + verdict + top priorities */}
           <div className="result-card">
             <div className="flex flex-col sm:flex-row items-center gap-5">
               <div
@@ -804,9 +1200,9 @@ export default function SeoChecker() {
                   {report.composite}/100
                 </span>
               </div>
-              <div className="text-center sm:text-left">
+              <div className="text-center sm:text-left flex-1 min-w-0">
                 <h3 className="text-lg font-bold text-gray-800">
-                  SEO Report
+                  SEO Report — {report.verdict}
                 </h3>
                 <p className="text-sm text-gray-500 break-all">
                   {report.finalUrl}
@@ -832,6 +1228,18 @@ export default function SeoChecker() {
                 ⬇️ Print / Save PDF
               </button>
             </div>
+            {report.topPriorities.length > 0 && (
+              <div className="mt-4 pt-4 border-t border-gray-100">
+                <p className="text-xs font-bold text-gray-700 mb-2">
+                  🎯 Top priorities to fix
+                </p>
+                <ol className="text-sm text-gray-700 space-y-1 list-decimal list-inside">
+                  {report.topPriorities.map((p, i) => (
+                    <li key={i}>{p}</li>
+                  ))}
+                </ol>
+              </div>
+            )}
           </div>
 
           {/* Score cards */}
@@ -860,9 +1268,9 @@ export default function SeoChecker() {
                 ⚡ Core Web Vitals
               </h3>
               <p className="text-xs text-gray-400 mb-3">
-                Lab measurements from Google Lighthouse
+                Lab-measured Core Web Vitals
                 {report.fieldDataAvailable
-                  ? " (this site also has real-user field data in Search Console)."
+                  ? " · plus real-user (CrUX) field data shown below."
                   : "."}
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
@@ -880,6 +1288,142 @@ export default function SeoChecker() {
                       {m.label}
                     </div>
                   </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* CrUX field data (real Chrome users) — only if site has traffic */}
+          {report.fieldCwv &&
+            (report.fieldCwv.lcp ||
+              report.fieldCwv.cls ||
+              report.fieldCwv.inp) && (
+              <div className="result-card">
+                <h3 className="font-bold text-gray-800 mb-1">
+                  👥 Real-User Field Data
+                  {report.fieldCwv.overallCategory && (
+                    <span
+                      className={`ml-2 text-xs font-semibold px-2 py-0.5 rounded-full ${
+                        report.fieldCwv.overallCategory === "FAST"
+                          ? "bg-green-100 text-green-700"
+                          : report.fieldCwv.overallCategory === "AVERAGE"
+                            ? "bg-amber-100 text-amber-700"
+                            : "bg-red-100 text-red-700"
+                      }`}
+                    >
+                      {report.fieldCwv.overallCategory}
+                    </span>
+                  )}
+                </h3>
+                <p className="text-xs text-gray-400 mb-3">
+                  Measured on actual Chrome visitors over the last 28 days
+                  (CrUX dataset) — far more credible than lab tests.
+                </p>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  {(["lcp", "inp", "cls", "fcp"] as const).map((k) => {
+                    const m = report.fieldCwv?.[k];
+                    if (!m) return null;
+                    const label =
+                      k === "lcp"
+                        ? "LCP (real users)"
+                        : k === "inp"
+                          ? "INP (real users)"
+                          : k === "cls"
+                            ? "CLS (real users)"
+                            : "FCP (real users)";
+                    return (
+                      <div
+                        key={k}
+                        className="bg-gray-50 rounded-xl p-3 text-center"
+                      >
+                        <div
+                          className={`text-lg font-bold ${CWV_RATING_CLASS[m.rating]}`}
+                        >
+                          {m.value}
+                        </div>
+                        <div className="text-[11px] text-gray-500 mt-1 leading-tight">
+                          {label}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+          {/* Page weight breakdown */}
+          {report.pageWeight && (
+            <div className="result-card">
+              <h3 className="font-bold text-gray-800 mb-1">
+                📦 Page Weight & Requests
+              </h3>
+              <p className="text-xs text-gray-400 mb-3">
+                Total bytes transferred to render the page, and how that
+                weight is split across resource types.
+              </p>
+              <div className="flex flex-wrap gap-3 mb-3">
+                <div className="flex-1 min-w-[140px] bg-gray-50 rounded-xl p-3 text-center">
+                  <div className="text-2xl font-bold text-gray-800">
+                    {report.pageWeight.totalKB.toLocaleString()} KB
+                  </div>
+                  <div className="text-[11px] text-gray-500 mt-1">
+                    Total weight
+                  </div>
+                </div>
+                <div className="flex-1 min-w-[140px] bg-gray-50 rounded-xl p-3 text-center">
+                  <div className="text-2xl font-bold text-gray-800">
+                    {report.pageWeight.requestCount}
+                  </div>
+                  <div className="text-[11px] text-gray-500 mt-1">
+                    HTTP requests
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-1">
+                {report.pageWeight.byType.slice(0, 7).map((t) => {
+                  const pct =
+                    report.pageWeight && report.pageWeight.totalKB > 0
+                      ? Math.round((t.sizeKB / report.pageWeight.totalKB) * 100)
+                      : 0;
+                  return (
+                    <div key={t.label} className="flex items-center gap-3">
+                      <div className="text-xs font-semibold text-gray-700 w-28 flex-shrink-0">
+                        {t.label}
+                      </div>
+                      <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
+                        <div
+                          className="h-full bg-purple-400"
+                          style={{ width: `${Math.min(pct, 100)}%` }}
+                        />
+                      </div>
+                      <div className="text-xs text-gray-500 w-24 text-right tabular-nums">
+                        {t.sizeKB.toLocaleString()} KB · {t.requests} req
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Schema types detected */}
+          {report.schemaTypes.length > 0 && (
+            <div className="result-card">
+              <h3 className="font-bold text-gray-800 mb-1">
+                🏷️ Structured Data Detected
+              </h3>
+              <p className="text-xs text-gray-400 mb-3">
+                Schema.org types in the page&apos;s JSON-LD — these enable
+                rich results in Google search.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {report.schemaTypes.map((t) => (
+                  <span
+                    key={t}
+                    className="text-xs font-semibold bg-purple-100 text-purple-700 rounded-full px-3 py-1"
+                  >
+                    {t}
+                  </span>
                 ))}
               </div>
             </div>
@@ -935,8 +1479,8 @@ export default function SeoChecker() {
             </p>
             <p>
               Every score and check above is <strong>real data</strong> — from
-              Google PageSpeed Insights and a live crawl of the page. It covers
-              on-page, technical, performance, accessibility and social SEO.
+              a live technical audit and on-page crawl. It covers on-page,
+              technical, performance, accessibility and social SEO.
             </p>
             <p className="mt-2">
               It does <strong>not</strong> include backlinks, Domain Authority,
@@ -947,11 +1491,15 @@ export default function SeoChecker() {
           </div>
           {!report.onPageAvailable && (
             <p className="text-xs text-gray-400">
-              Note: the live on-page crawl was unavailable (the proxy may be
-              busy), so this report is based on Google PageSpeed data only. Try
-              again in a minute for the full on-page breakdown.
+              Note: the live on-page crawl was unavailable (the connection may
+              be busy), so this report is based on the technical audit only.
+              Try again in a minute for the full on-page breakdown.
             </p>
           )}
+          <p className="text-[10px] text-gray-300 text-center">
+            Audit engine: industry-standard Lighthouse signals + SabTools live
+            on-page crawl.
+          </p>
         </div>
       )}
 

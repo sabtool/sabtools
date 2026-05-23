@@ -140,7 +140,7 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
   "seo-checker": {
     title: "Free SEO Checker — Website Audit & Report Tool",
     description:
-      "Free SEO checker & website audit tool. Get real Google PageSpeed scores, Core Web Vitals and a full on-page SEO report for any URL. No signup.",
+      "Free SEO checker & website audit tool — real performance scores, Core Web Vitals, schema detection, robots/sitemap checks and a full on-page SEO report. No signup.",
   },
 
   // ── Core Utility (high search volume) ────────────────────────────────
