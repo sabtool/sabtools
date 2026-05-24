@@ -179,9 +179,10 @@
     "ipl-fantasy-points-calculator",
     "macro-calculator",
     "bbmp-property-tax-calculator",
-    "roof-area-calculator"
+    "roof-area-calculator",
+    "tweet-character-counter"
   ],
-  "lastCategory": "construction",
-  "totalPosts": 180,
-  "lastRun": "2026-05-23T11:45:37.603Z"
+  "lastCategory": "social",
+  "totalPosts": 181,
+  "lastRun": "2026-05-24T08:05:06.611Z"
 }
