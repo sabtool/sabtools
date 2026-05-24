@@ -180,9 +180,10 @@
     "macro-calculator",
     "bbmp-property-tax-calculator",
     "roof-area-calculator",
-    "tweet-character-counter"
+    "tweet-character-counter",
+    "ipl-ticket-price-calculator"
   ],
-  "lastCategory": "social",
-  "totalPosts": 181,
-  "lastRun": "2026-05-24T08:05:06.611Z"
+  "lastCategory": "sports",
+  "totalPosts": 182,
+  "lastRun": "2026-05-24T11:31:24.094Z"
 }
