@@ -181,9 +181,10 @@
     "bbmp-property-tax-calculator",
     "roof-area-calculator",
     "tweet-character-counter",
-    "ipl-ticket-price-calculator"
+    "ipl-ticket-price-calculator",
+    "html-to-markdown"
   ],
-  "lastCategory": "sports",
-  "totalPosts": 182,
-  "lastRun": "2026-05-24T11:31:24.094Z"
+  "lastCategory": "developer",
+  "totalPosts": 183,
+  "lastRun": "2026-05-25T08:47:35.863Z"
 }

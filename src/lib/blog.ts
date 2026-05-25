@@ -32361,6 +32361,192 @@ a borrower with ₹68 lakh outstanding at 8.40% transferred to SBI at 7.10% in N
 <p>At the same time, the RBI's stance signals discipline. The "neutral" framing means future cuts are not pre-committed; they will depend on incoming data on inflation, the monsoon outlook, global commodity prices, and the trajectory of US Fed policy. Borrowers should plan around the rates available today rather than assume another 50-75 bps of easing is automatic.</p>
 
 <p>For Indian readers, the practical message is simple. The repo rate has moved, your lender has moved (or will move at the next reset), and the EMI on your largest single liability — your home loan — is about to look different. Spend an hour this weekend pulling up your statement, checking your reset date, and running the new numbers. The compounding effect of even a small interest saving, redirected into a SIP or used to prepay principal, is the kind of decision that quietly changes a household balance sheet over a decade.</p>`,
+  },
+  {
+    slug: "html-to-markdown-guide-2026",
+    title: "How to Use HTML to Markdown Online — Step-by-Step Guide",
+    description: "Free HTML to Markdown online — convert html to markdown handling headings, lists, tables, links & code. Step-by-step guide with tips. 100% free, works on mob...",
+    date: "2026-05-25",
+    category: "Developer",
+    readTime: "11 min read",
+    keywords: ["html", "markdown", "convert", "markup", "html to markdown", "html to markdown converter", "html to markdown python", "html to markdown online"],
+    toolSlug: "html-to-markdown",
+    image: {
+      src: "/blog/html-to-markdown.webp",
+      alt: "HTML to Markdown — Free Online Convert HTML to Markdown handling headings, lists, tables, links & code Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>A backend engineer at a Bangalore fintech recently spent a full Saturday copying 140 API documentation pages from an old Confluence space into a new GitHub-hosted MkDocs site. The HTML pasted into VS Code looked terrible — <code>&lt;p&gt;</code> tags wrapping every line, inline <code>&lt;span style="..."&gt;</code> styling, broken table layouts, and <code>&lt;a href&gt;</code> URLs with tracking parameters that shouldn't be in a clean README. Three hours in, he gave up the manual approach and ran each page through an HTML to Markdown converter. The remaining 110 pages took 40 minutes.</p>
+
+<p>That's the actual job this tool does. It takes messy HTML — from a CMS export, a scraped page, a Confluence dump, a Word doc saved as web, a ChatGPT response with rendered formatting — and produces clean Markdown that drops cleanly into a README, a Hugo blog post, a Jekyll page, a Notion import, or a GitHub issue. The <a href="/tools/html-to-markdown">HTML to Markdown converter</a> on SabTools handles the conversion entirely in your browser; you paste markup on the left, Markdown comes out on the right.</p>
+
+<h2>Why Indian dev teams keep needing this conversion</h2>
+
+<p>Markdown won the developer documentation war somewhere around 2018. GitHub READMEs, GitLab wikis, Stack Overflow answers, Discord, Slack code blocks, Hugo and Jekyll static sites, MkDocs, Docusaurus, Obsidian notes, Notion exports — all of them speak Markdown. Meanwhile, the legacy content most Indian companies sit on lives in HTML: WordPress posts, Drupal pages, Confluence spaces, custom CMSes built in PHP a decade ago.</p>
+
+<p>Some concrete scenarios where Indian developers run this conversion every week:</p>
+
+<ul>
+<li><strong>WordPress to Hugo/Jekyll migration.</strong> A Chennai-based SaaS company with 800 blog posts moves off WordPress to cut hosting costs from ₹18,000/month to ₹400/month on Cloudflare Pages. Each post's <code>post_content</code> field is HTML and needs Markdown.</li>
+<li><strong>Razorpay/PayU integration docs.</strong> A developer copies the rendered HTML from a payment gateway's documentation page into the internal team wiki, which uses Markdown.</li>
+<li><strong>Confluence to GitHub Wiki.</strong> Engineering teams at TCS, Infosys, and Wipro client projects routinely move client documentation between systems during handover.</li>
+<li><strong>Email templates to docs.</strong> Marketing teams in Mumbai send HTML promotional emails; the dev team needs the copy in Markdown for the help center.</li>
+<li><strong>AI assistant outputs.</strong> ChatGPT, Claude, and Gemini frequently return HTML-formatted text that looks fine in chat but breaks when pasted into a <code>.md</code> file.</li>
+</ul>
+
+<p>For every one of these, the manual approach — find-and-replace in VS Code, hand-deleting <code>&lt;div&gt;</code> wrappers, fixing list indentation — is slow and error-prone. A converter that understands HTML semantics does the job in seconds.</p>
+
+<h2>What the converter actually handles</h2>
+
+<p>A naive HTML-to-Markdown approach (just strip the angle brackets) breaks immediately on anything beyond a paragraph. Real HTML has nested structures, attributes, semantic elements, and edge cases that need rule-based handling. Here's what gets translated:</p>
+
+<ul>
+<li><strong>Headings:</strong> <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> become <code>#</code> through <code>######</code>.</li>
+<li><strong>Inline formatting:</strong> <code>&lt;strong&gt;</code> and <code>&lt;b&gt;</code> become <code>**bold**</code>; <code>&lt;em&gt;</code> and <code>&lt;i&gt;</code> become <code>*italic*</code>; <code>&lt;code&gt;</code> becomes backticks.</li>
+<li><strong>Links:</strong> <code>&lt;a href="https://razorpay.com/docs"&gt;Razorpay Docs&lt;/a&gt;</code> becomes <code>[Razorpay Docs](https://razorpay.com/docs)</code>.</li>
+<li><strong>Images:</strong> <code>&lt;img src="upi-flow.png" alt="UPI flow"&gt;</code> becomes <code>![UPI flow](upi-flow.png)</code>.</li>
+<li><strong>Lists:</strong> Ordered (<code>&lt;ol&gt;</code>) and unordered (<code>&lt;ul&gt;</code>) lists, including nested lists, become <code>1.</code> and <code>-</code> with correct indentation.</li>
+<li><strong>Code blocks:</strong> <code>&lt;pre&gt;&lt;code&gt;</code> wrapped content becomes fenced code blocks with triple backticks.</li>
+<li><strong>Tables:</strong> <code>&lt;table&gt;</code> with <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> rows becomes GitHub-flavored Markdown tables with pipes and dashes.</li>
+<li><strong>Blockquotes:</strong> <code>&lt;blockquote&gt;</code> becomes <code>&gt;</code> prefixed lines.</li>
+<li><strong>Horizontal rules:</strong> <code>&lt;hr&gt;</code> becomes <code>---</code>.</li>
+</ul>
+
+<p>Things that get stripped or simplified: inline <code>style</code> attributes, presentational <code>&lt;span&gt;</code> wrappers, <code>&lt;div&gt;</code> containers (since Markdown has no concept of generic blocks), and most class names. That's intentional — the whole point of Markdown is to be portable and unstyled. If you need to preserve CSS-driven styling, you don't actually want Markdown.</p>
+
+<h2>A practical walk-through</h2>
+
+<p>Suppose you pulled this HTML snippet from a fintech blog post about UPI transaction limits:</p>
+
+<pre><code>&lt;h2&gt;UPI Limits in 2026&lt;/h2&gt;
+&lt;p&gt;NPCI raised the &lt;strong&gt;per-transaction UPI limit&lt;/strong&gt; for specific categories to &lt;strong&gt;₹5,00,000&lt;/strong&gt;. Standard P2P transfers remain at &lt;strong&gt;₹1,00,000&lt;/strong&gt; per day.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Tax payments: ₹5,00,000&lt;/li&gt;
+  &lt;li&gt;Hospital &amp; education: ₹5,00,000&lt;/li&gt;
+  &lt;li&gt;IPO/RBI Retail Direct: ₹5,00,000&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Read the &lt;a href="https://npci.org.in/PDF/npci/upi/circular/2024/UPI-OC-203.pdf"&gt;official NPCI circular&lt;/a&gt;.&lt;/p&gt;</code></pre>
+
+<p>After pasting that into the converter and clicking Convert, you get:</p>
+
+<pre><code>## UPI Limits in 2026
+
+NPCI raised the **per-transaction UPI limit** for specific categories to **₹5,00,000**. Standard P2P transfers remain at **₹1,00,000** per day.
+
+- Tax payments: ₹5,00,000
+- Hospital &amp; education: ₹5,00,000
+- IPO/RBI Retail Direct: ₹5,00,000
+
+Read the [official NPCI circular](https://npci.org.in/PDF/npci/upi/circular/2024/UPI-OC-203.pdf).</code></pre>
+
+<p>That output drops straight into a Hugo content file, a GitHub README, or a Notion page. The rupee symbol, the Indian comma grouping, and the link all survive intact. If your source HTML had the rupee as an entity (<code>&amp;#8377;</code>), you'd want to run it through the <a href="/tools/html-encoder-decoder">HTML encoder/decoder</a> first to decode entities to actual characters before converting.</p>
+
+<h2>Tables: the part most converters get wrong</h2>
+
+<p>Tables are where most free HTML-to-Markdown converters fall apart. A typical Indian use case: you're documenting GST rates and your source HTML has a four-column table with merged cells, inline styling, and <code>&lt;br&gt;</code> tags inside cells. Markdown tables don't support merged cells or line breaks inside cells natively — so the converter has to make sensible decisions.</p>
+
+<p>SabTools' converter handles standard tables cleanly. A table like:</p>
+
+<pre><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Slab&lt;/th&gt;&lt;th&gt;Rate&lt;/th&gt;&lt;th&gt;Example&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;5%&lt;/td&gt;&lt;td&gt;Essentials&lt;/td&gt;&lt;td&gt;Packaged food&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;18%&lt;/td&gt;&lt;td&gt;Standard&lt;/td&gt;&lt;td&gt;Most services&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+<p>becomes:</p>
+
+<pre><code>| Slab | Rate     | Example         |
+| ---- | -------- | --------------- |
+| 5%   | Essentials | Packaged food |
+| 18%  | Standard | Most services   |</code></pre>
+
+<p>If you're actually trying to do GST math on those slabs rather than just document them, the <a href="/tools/gst-calculator">GST calculator</a> handles 5%, 12%, 18%, and 28% computations directly. For tables with merged cells, the converter will flatten them — you'll need to clean those rows up by hand, but that's a Markdown limitation, not a tool flaw.</p>
+
+<h2>Code blocks and developer-specific quirks</h2>
+
+<p>If you're converting technical documentation, code blocks matter the most. The converter looks for <code>&lt;pre&gt;&lt;code&gt;</code> pairs and emits triple-backtick fenced blocks. If the source HTML uses syntax-highlighter classes like <code>language-python</code> or <code>language-js</code>, those get preserved as language hints in the output:</p>
+
+<pre><code>\`\`\`python
+import razorpay
+client = razorpay.Client(auth=("rzp_test_XXXX", "secret"))
+order = client.order.create({"amount": 50000, "currency": "INR"})
+\`\`\`</code></pre>
+
+<p>One gotcha worth knowing: HTML that wraps code in just a <code>&lt;code&gt;</code> tag (without <code>&lt;pre&gt;</code>) gets treated as inline code, with single backticks. If you have multi-line code that's only wrapped in <code>&lt;code&gt;</code>, the line breaks will be lost. Most modern CMSes and editors use <code>&lt;pre&gt;&lt;code&gt;</code> correctly, but some older WordPress themes do not — worth eyeballing the output if your source is from a pre-2018 site.</p>
+
+<p>Developers handling API responses where HTML is embedded in JSON strings will often pipe the JSON through the <a href="/tools/json-formatter">JSON formatter</a> first to extract the HTML payload cleanly, then run it through this converter. That two-step flow comes up frequently when migrating CMS data via REST API exports.</p>
+
+<h2>Common Indian developer workflows where this fits</h2>
+
+<h3>Static site migrations</h3>
+
+<p>A Pune-based EdTech startup with 1,200 lesson pages on a custom PHP CMS moved to Astro for performance reasons. Their Lighthouse scores went from 42 to 96, and hosting moved from a ₹6,500/month VPS to free Cloudflare Pages. The migration script pulled each lesson's HTML body from MySQL, ran it through an HTML-to-Markdown pipeline, and wrote <code>.md</code> files into the Astro content collection. A team of two engineers completed the migration in eight days.</p>
+
+<h3>Internal documentation cleanup</h3>
+
+<p>Indian services companies — Infosys, TCS, HCL, Wipro — frequently inherit client documentation in whatever format the client used. When a project hands over from one team to the next, normalizing everything to Markdown in a Git repo makes future updates traceable. Running 200 Confluence exports through a converter takes an afternoon; rewriting them by hand takes a month.</p>
+
+<h3>Blog content reuse</h3>
+
+<p>A freelance technical writer in Jaipur publishes the same article on Medium, dev.to, and Hashnode. Medium exports as HTML; dev.to and Hashnode expect Markdown. Rather than maintain three versions, the writer publishes to Medium first, exports the HTML, converts to Markdown, and uses that as the source of truth for the other two platforms. Total time saved per article: about 20 minutes.</p>
+
+<h3>AI output normalization</h3>
+
+<p>When you ask Claude or ChatGPT to generate documentation and copy-paste the response into a <code>.md</code> file, the rendered formatting (bold, lists, headings) sometimes pastes as HTML rather than Markdown depending on your clipboard handler. Running the paste through the converter normalizes it before you commit to Git.</p>
+
+<h2>Python and command-line alternatives — and when to use them</h2>
+
+<p>Many developers search for "html to markdown python" because they want to script the conversion as part of a build pipeline. The standard library options worth knowing:</p>
+
+<ul>
+<li><strong>html2text</strong> — the most popular Python library, available via <code>pip install html2text</code>. Good defaults, configurable for line wrapping and link reference style.</li>
+<li><strong>markdownify</strong> — <code>pip install markdownify</code>. Cleaner output for nested lists and tables in my experience.</li>
+<li><strong>turndown</strong> — JavaScript equivalent, runs in Node.js and the browser. SabTools' converter is built on a turndown-style rule engine, which is why the output matches what you'd get from a Node build script.</li>
+<li><strong>pandoc</strong> — the heavyweight universal document converter. Overkill for HTML-to-MD but handy if you also need DOCX or LaTeX in the same pipeline.</li>
+</ul>
+
+<p>Use the online converter when you're doing a one-off job or testing what the output will look like before committing to a build script. Use a Python or Node library when you're processing more than 50 files or running the conversion on every CI build. The output should be effectively identical for well-formed HTML.</p>
+
+<h2>What doesn't convert cleanly — and how to handle it</h2>
+
+<p>A few HTML patterns will always be lossy in Markdown:</p>
+
+<ul>
+<li><strong>Inline styles and colored text.</strong> Markdown has no equivalent for <code>&lt;span style="color: #FF6B00"&gt;</code>. If you absolutely need the color, you'd embed inline HTML in your Markdown (most renderers allow it) or use a separate color reference. If you're picking accent colors for a doc theme, the <a href="/tools/color-picker">color picker</a> helps convert between HEX, RGB, and HSL values.</li>
+<li><strong>Iframes and embeds.</strong> YouTube embeds, CodePen iframes, Tweet embeds — all get stripped or converted to plain links. Some Markdown flavors (like MDX or Hugo shortcodes) support them via custom syntax; you'll need to add those back manually.</li>
+<li><strong>SVG markup.</strong> Inline <code>&lt;svg&gt;</code> tags get dropped. If you need to keep diagrams, export them as separate <code>.svg</code> files and reference them as images. The <a href="/tools/svg-editor">SVG editor</a> lets you clean up exported SVG before linking it.</li>
+<li><strong>Forms and interactive elements.</strong> <code>&lt;form&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;select&gt;</code> — none of these have Markdown equivalents. They'll be stripped silently.</li>
+<li><strong>Footnotes and definition lists.</strong> Standard Markdown doesn't support these; GFM and Pandoc-flavored MD do. Check what your target renderer expects.</li>
+</ul>
+
+<p>For the lossy cases, the practical approach is: convert with the tool, then do a quick pass through the output to add back any custom shortcodes or inline HTML your target system needs. That hybrid workflow is faster than doing everything by hand.</p>
+
+<h2>Privacy and why browser-side conversion matters</h2>
+
+<p>The HTML you're converting often contains internal project information — unreleased product specs, customer data references, API keys mistakenly left in code samples, internal Confluence URLs. Sending that to a server-side converter means trusting the operator with your data.</p>
+
+<p>SabTools' converter runs entirely in your browser. The HTML you paste never leaves your machine; the conversion happens in JavaScript locally, and the Markdown output is generated client-side. For developers at Indian banks (which have strict data localization requirements), fintech startups, or anyone handling client NDAs, that matters. You can verify by opening DevTools' Network tab — you won't see a request go out when you click Convert.</p>
+
+<h2>A short FAQ for things people actually ask</h2>
+
+<h3>Does it preserve relative URLs in links?</h3>
+<p>Yes. If your HTML has <code>&lt;a href="/docs/api"&gt;</code>, the Markdown output keeps <code>/docs/api</code> as-is. You'll typically want absolute URLs in standalone Markdown files, so do a find-and-replace pass after conversion if your target is a different domain.</p>
+
+<h3>What about HTML entities like &amp;rupee; or &amp;nbsp;?</h3>
+<p>Standard entities (<code>&amp;amp;</code>, <code>&amp;lt;</code>, <code>&amp;gt;</code>, <code>&amp;quot;</code>, <code>&amp;nbsp;</code>) get decoded to their character equivalents. Numeric entities like <code>&amp;#8377;</code> (₹) also decode correctly. If you see leftover entities in your output, run the source through the HTML decoder first.</p>
+
+<h3>Can I convert just a fragment of a page?</h3>
+<p>Yes — paste only the fragment. The converter doesn't require a complete document with <code>&lt;html&gt;</code> and <code>&lt;body&gt;</code> tags. You can paste a single <code>&lt;div&gt;</code> or even a fragment without any wrapping element.</p>
+
+<h3>Will it work on a slow 4G connection?</h3>
+<p>The tool loads once (about 80KB of JavaScript) and runs offline after that. Conversion of a 50KB HTML document takes under 200ms on a mid-range Android phone. You don't need fast internet — you don't need internet at all once the page is open.</p>
+
+<p>Paste your HTML into the <a href="/tools/html-to-markdown">HTML to Markdown converter</a> and copy the cleaned-up Markdown straight into your README, Hugo post, or Notion page →</p>`,
   }
 ];
 
