@@ -184,9 +184,10 @@
     "ipl-ticket-price-calculator",
     "html-to-markdown",
     "jee-rank-predictor",
-    "interior-cost-estimator"
+    "interior-cost-estimator",
+    "decimal-to-binary"
   ],
-  "lastCategory": "realestate",
-  "totalPosts": 185,
-  "lastRun": "2026-05-26T07:49:44.305Z"
+  "lastCategory": "converters",
+  "totalPosts": 186,
+  "lastRun": "2026-05-27T09:17:55.693Z"
 }

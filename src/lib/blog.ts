@@ -33171,6 +33171,178 @@ Section 80TTB lets resident senior citizens aged 60 and above claim up to ₹50,
 </ul>
 
 <p>For now, the playbook is clear: maximise SCSS at 8.2%, hold POMIS at 7.4%, ladder bank FDs with a tilt toward the small finance banks while respecting DICGC limits, and use Section 80TTB to protect the post-tax yield. The headline FD rates from the big private and PSU banks have come down — but for a senior citizen who builds the portfolio thoughtfully across these instruments, the blended yield in FY 2025-26 can still comfortably clear 7.8% to 8% pre-tax, which is a respectable outcome in a 5.25% repo rate world.</p>`,
+  },
+  {
+    slug: "decimal-to-binary-guide-2026",
+    title: "How to Use Decimal to Binary Online — Step-by-Step Guide",
+    description: "Free Decimal to Binary online — convert between decimal, binary, octal and hexadecimal number systems. Step-by-step guide with tips. 100% free, works on mobi...",
+    date: "2026-05-27",
+    category: "Converters",
+    readTime: "11 min read",
+    keywords: ["decimal", "binary", "octal", "hex", "number system", "base", "decimal to binary", "decimal to binary converter"],
+    toolSlug: "decimal-to-binary",
+    image: {
+      src: "/blog/decimal-to-binary.webp",
+      alt: "Decimal to Binary — Free Online Convert between Decimal, Binary, Octal and Hexadecimal number systems Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>A Class 11 CBSE computer science student in Kota recently asked me why her textbook spends 40 pages on number system conversions when "computers do it automatically." The answer is the same reason GATE 2026 aspirants still get tripped up by a single question worth 2 marks: every layer of computing — from the IP address <strong>192.168.1.1</strong> on your Jio Fiber router to the hex color <strong>#FF6B35</strong> on a Flipkart sale banner — is just numbers in different bases. The decimal system you learned in primary school is one of four representations a programmer constantly switches between, and getting fluent at the conversion saves real time during practicals, viva voce, and on-the-job debugging.</p>
+
+<p>The <a href="/tools/decimal-to-binary">Decimal to Binary converter</a> on SabTools handles all four directions — decimal, binary, octal, and hexadecimal — in a single interface. This guide walks through how the conversions actually work, where they show up in Indian engineering coursework and IT jobs, and the shortcuts that turn a 40-second pen-and-paper problem into a 5-second mental calculation.</p>
+
+<h2>Why four number systems exist at all</h2>
+
+<p>Humans count in base 10 because we have ten fingers. Computers count in base 2 because transistors have two states — on (1) and off (0). That mismatch is the entire reason conversion tools exist. But binary numbers are painfully long: the decimal number <strong>255</strong> becomes <strong>11111111</strong> in binary — eight digits to express what takes three in decimal. Reading and writing long binary strings is error-prone, so engineers grouped binary digits into chunks:</p>
+
+<ul>
+<li><strong>Octal (base 8):</strong> Groups 3 binary digits at a time. Digits used: 0–7. Decimal 255 = octal 377.</li>
+<li><strong>Hexadecimal (base 16):</strong> Groups 4 binary digits at a time. Digits used: 0–9 and A–F (where A=10, B=11, C=12, D=13, E=14, F=15). Decimal 255 = hex FF.</li>
+</ul>
+
+<p>Hex won the popularity contest because modern computers work in 8-bit bytes, and two hex digits perfectly represent one byte (0x00 to 0xFF, or 0 to 255). That's why MAC addresses, memory dumps, and HTML colors are all written in hex — it's compact and lines up cleanly with byte boundaries. Octal survives mainly in Unix file permissions (chmod 755) and some legacy systems.</p>
+
+<h2>Decimal to binary — the division method</h2>
+
+<p>The standard textbook method (the one your AKTU or VTU exam expects) is repeated division by 2. Take the decimal number, divide by 2, write down the remainder, and keep dividing the quotient until you reach 0. The binary number is the remainders read bottom-to-top.</p>
+
+<p>Example: convert decimal <strong>156</strong> to binary.</p>
+
+<ol>
+<li>156 ÷ 2 = 78, remainder <strong>0</strong></li>
+<li>78 ÷ 2 = 39, remainder <strong>0</strong></li>
+<li>39 ÷ 2 = 19, remainder <strong>1</strong></li>
+<li>19 ÷ 2 = 9, remainder <strong>1</strong></li>
+<li>9 ÷ 2 = 4, remainder <strong>1</strong></li>
+<li>4 ÷ 2 = 2, remainder <strong>0</strong></li>
+<li>2 ÷ 2 = 1, remainder <strong>0</strong></li>
+<li>1 ÷ 2 = 0, remainder <strong>1</strong></li>
+</ol>
+
+<p>Reading remainders bottom-up: <strong>10011100</strong>. That's decimal 156 in 8-bit binary.</p>
+
+<p>The faster method, once you've memorised powers of 2, is the place-value method. Write down the powers of 2 from highest to lowest, then subtract greedily:</p>
+
+<ul>
+<li>Powers of 2: 128, 64, 32, 16, 8, 4, 2, 1</li>
+<li>156 ≥ 128? Yes. 156 − 128 = 28. Write <strong>1</strong>.</li>
+<li>28 ≥ 64? No. Write <strong>0</strong>.</li>
+<li>28 ≥ 32? No. Write <strong>0</strong>.</li>
+<li>28 ≥ 16? Yes. 28 − 16 = 12. Write <strong>1</strong>.</li>
+<li>12 ≥ 8? Yes. 12 − 8 = 4. Write <strong>1</strong>.</li>
+<li>4 ≥ 4? Yes. 4 − 4 = 0. Write <strong>1</strong>.</li>
+<li>0 ≥ 2? No. Write <strong>0</strong>.</li>
+<li>0 ≥ 1? No. Write <strong>0</strong>.</li>
+</ul>
+
+<p>Result: <strong>10011100</strong>. Same answer in roughly half the time. GATE candidates who can recite <em>1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024</em> in their sleep will finish a 5-number conversion problem in under 2 minutes.</p>
+
+<h2>Binary back to decimal — positional weights</h2>
+
+<p>Going the other way is more intuitive. Each binary digit has a positional weight: the rightmost bit is 2⁰ = 1, the next is 2¹ = 2, then 2², 2³ and so on. Multiply each bit by its weight and add.</p>
+
+<p>For <strong>10011100</strong>:</p>
+
+<p>(1×128) + (0×64) + (0×32) + (1×16) + (1×8) + (1×4) + (0×2) + (0×1) = 128 + 16 + 8 + 4 = <strong>156</strong>.</p>
+
+<p>This positional weight idea is identical to how decimal works — in 2,547 the digit 2 means 2×1000, the 5 means 5×100, and so on. Only the base changes.</p>
+
+<h2>The octal and hex shortcut</h2>
+
+<p>Here's the trick that NIELIT and university exams love to test: you don't need to convert through decimal to go between binary and hex (or binary and octal). Just group the bits.</p>
+
+<p><strong>Binary to hex:</strong> group binary digits into chunks of 4 from the right, then translate each chunk.</p>
+
+<ul>
+<li>Binary <strong>10011100</strong> → split as <strong>1001 1100</strong></li>
+<li>1001 = 9, 1100 = C (since 12 in decimal = C in hex)</li>
+<li>Answer: <strong>9C</strong></li>
+</ul>
+
+<p>Verify: 9×16 + 12 = 144 + 12 = 156. ✓</p>
+
+<p><strong>Binary to octal:</strong> group binary digits into chunks of 3 from the right.</p>
+
+<ul>
+<li>Binary <strong>10011100</strong> → split as <strong>010 011 100</strong> (pad with leading zero)</li>
+<li>010 = 2, 011 = 3, 100 = 4</li>
+<li>Answer: <strong>234</strong> in octal</li>
+</ul>
+
+<p>Verify: 2×64 + 3×8 + 4 = 128 + 24 + 4 = 156. ✓</p>
+
+<p>The 16-row table every CS student should memorise (binary 0000 to 1111 → hex 0 to F) makes hex conversions almost instant. Once you can read 4-bit groups at a glance, even a 32-bit MAC address like <strong>00:1A:2B:3C:4D:5E</strong> stops looking like noise.</p>
+
+<h2>Where this actually shows up in Indian tech jobs</h2>
+
+<p>If you're studying CS at IIIT Hyderabad or working at a Bangalore startup, here's where these conversions appear in real workflows:</p>
+
+<p><strong>IP addressing and subnetting.</strong> An office in Whitefield using the subnet <strong>192.168.10.0/24</strong> has 256 addresses (2⁸). When the network admin needs to split this into four subnets, the /24 becomes /26 — those subnet masks are binary operations dressed up in decimal. CCNA candidates in Indian training institutes spend weeks on this.</p>
+
+<p><strong>File permissions on Linux servers.</strong> Every AWS or DigitalOcean droplet running a Flask app or WordPress site uses chmod commands like <code>chmod 755 script.sh</code>. That 755 is octal: 7 = 111 = read+write+execute for owner, 5 = 101 = read+execute for group and others. A misconfigured 777 has caused more security incidents at Indian SaaS startups than anyone admits.</p>
+
+<p><strong>HTML and CSS colours.</strong> The orange in Swiggy's logo is approximately <strong>#FC8019</strong>. The R, G, B components are FC (252), 80 (128), 19 (25) — each a byte from 0 to 255. Front-end developers at Zomato or Razorpay flip between RGB sliders and hex codes constantly.</p>
+
+<p><strong>Memory addresses in embedded systems.</strong> Students working on Arduino or STM32 projects for their final-year submission at COEP Pune or VJTI Mumbai will see register addresses like <strong>0x40021000</strong>. That 0x prefix means hex — the actual memory location is 1,073,876,992 in decimal, which is why nobody writes it in decimal.</p>
+
+<p><strong>Bitwise operations in interviews.</strong> Product-based companies — Flipkart, Walmart Labs, Sprinklr — regularly ask candidates to flip bits, count set bits, or use XOR tricks. Without quick mental conversion between bases, these problems become much harder under interview pressure.</p>
+
+<h2>A reference table worth keeping</h2>
+
+<p>For quick lookup during exams, lab work, or coding interviews, this table covers the most common values:</p>
+
+<ul>
+<li><strong>Decimal 0</strong> = Binary 0 = Octal 0 = Hex 0</li>
+<li><strong>Decimal 8</strong> = Binary 1000 = Octal 10 = Hex 8</li>
+<li><strong>Decimal 10</strong> = Binary 1010 = Octal 12 = Hex A</li>
+<li><strong>Decimal 15</strong> = Binary 1111 = Octal 17 = Hex F</li>
+<li><strong>Decimal 16</strong> = Binary 10000 = Octal 20 = Hex 10</li>
+<li><strong>Decimal 32</strong> = Binary 100000 = Octal 40 = Hex 20</li>
+<li><strong>Decimal 64</strong> = Binary 1000000 = Octal 100 = Hex 40</li>
+<li><strong>Decimal 100</strong> = Binary 1100100 = Octal 144 = Hex 64</li>
+<li><strong>Decimal 128</strong> = Binary 10000000 = Octal 200 = Hex 80</li>
+<li><strong>Decimal 255</strong> = Binary 11111111 = Octal 377 = Hex FF</li>
+<li><strong>Decimal 512</strong> = Binary 1000000000 = Octal 1000 = Hex 200</li>
+<li><strong>Decimal 1024</strong> = Binary 10000000000 = Octal 2000 = Hex 400</li>
+</ul>
+
+<p>Notice how every power of 2 looks clean in binary (a 1 followed by zeros) and how the hex equivalents follow a predictable pattern. The numbers 1024, 65536 (2¹⁶), and 4,294,967,296 (2³²) are everywhere in computing — they're the boundaries of common data types and address spaces.</p>
+
+<h2>Common mistakes that cost marks</h2>
+
+<p>Three errors I see repeatedly when reviewing engineering students' work:</p>
+
+<ol>
+<li><strong>Reading the remainders top-down instead of bottom-up.</strong> The division method requires reverse order. Forgetting this turns 10011100 into 00111001 — a different number entirely.</li>
+<li><strong>Forgetting to pad with leading zeros when grouping.</strong> Binary 11001 grouped into 4-bit chunks for hex needs to be 0001 1001, not 1 1001. Without padding, you'll write 19 hex when you should get the same answer correctly.</li>
+<li><strong>Confusing hex letters with variables.</strong> The hex digit B is the number 11, not a variable. Students sometimes try to compute "B + 5" by setting B as unknown — it's just 11 + 5 = 16, which is hex 10.</li>
+</ol>
+
+<p>For fractional decimal numbers — say converting 0.625 to binary — multiply by 2 repeatedly and read the integer parts top-down. 0.625 × 2 = 1.25 (write 1), 0.25 × 2 = 0.5 (write 0), 0.5 × 2 = 1.0 (write 1). Result: 0.101 in binary. This becomes important once you start dealing with IEEE 754 floating-point representation in your operating systems or computer architecture papers.</p>
+
+<h2>How the SabTools converter handles all this</h2>
+
+<p>The <a href="/tools/decimal-to-binary">Decimal to Binary tool</a> accepts input in any of the four bases and outputs all three other representations simultaneously. Type <strong>156</strong> in the decimal field and you instantly see 10011100, 234, and 9C. Type <strong>FF</strong> in hex and you get 255, 11111111, and 377. There's no toggling between modes, no separate "decimal to binary" versus "binary to decimal" pages — it's one unified <a href="/tools/number-system-converter">number system converter</a> for all four bases.</p>
+
+<p>This matters in practice because real conversion problems rarely come one direction at a time. When a NIT Trichy student is solving a digital electronics problem about a 7-segment display, they might need to verify that hex 7 (the segment pattern for displaying "3") corresponds to binary 0111 and decimal 7 in one go.</p>
+
+<p>For tasks beyond pure number-base work, SabTools has companion converters that students and engineers reach for in the same workflows: the <a href="/tools/bytes-converter">bytes converter</a> handles KB/MB/GB/TB conversions for storage calculations (remember that 1 KB = 1024 bytes in binary terms, not 1000), and the <a href="/tools/temperature-converter">temperature converter</a> and <a href="/tools/weight-converter">weight converter</a> cover physical unit work for physics or chemistry assignments. If you're tracking percentage marks across your semester subjects at Anna University or Delhi University, the <a href="/tools/percentage-calculator">percentage calculator</a> does CGPA-style weighted averages too.</p>
+
+<h2>Quick FAQs</h2>
+
+<h3>Why does the binary of 10 have 4 digits but decimal has only 2?</h3>
+<p>Because binary can only count up to 1 per position before "carrying over," it needs more positions for the same magnitude. Decimal 10 = binary 1010 (1×8 + 0×4 + 1×2 + 0×1). The trade-off is simplicity at the hardware level — a transistor only needs to detect on vs off, not ten distinct voltage levels.</p>
+
+<h3>What's the difference between 1 KB = 1000 bytes and 1 KB = 1024 bytes?</h3>
+<p>This is a famous source of confusion. In strict SI units, 1 KB = 1000 bytes (used by hard drive manufacturers like Seagate to make capacities look bigger). In binary terms, 1 KiB (kibibyte) = 1024 bytes. Operating systems like Windows use 1024 internally, which is why your 1 TB hard drive shows as roughly 931 GB after formatting — the difference compounds across each unit.</p>
+
+<h3>Do I need to learn this if I'm going into web development, not embedded systems?</h3>
+<p>Yes, but at a lighter level. Web developers see hex constantly in CSS colours and occasionally need to debug character encoding issues (UTF-8 byte sequences are written in hex). You won't do manual binary conversions daily, but understanding how a Unicode codepoint like U+20B9 (the ₹ symbol) maps to its UTF-8 bytes E2 82 B9 is genuinely useful when fonts break on a Hindi-language website.</p>
+
+<h3>What's the largest number this converter handles?</h3>
+<p>Standard JavaScript number precision handles integers up to 2⁵³ − 1 (about 9 quadrillion) accurately. For typical coursework, exam problems, and software work, you'll never exceed this. If you're dealing with cryptographic-scale numbers (256-bit keys), you'll need specialised big-integer libraries, not a browser-based converter.</p>
+
+<p>Try the <a href="/tools/decimal-to-binary">Decimal to Binary converter</a> with the next problem from your textbook — or with the IP address of the Wi-Fi router you're sitting next to right now.</p>`,
   }
 ];
 
