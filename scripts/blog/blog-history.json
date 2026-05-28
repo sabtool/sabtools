@@ -187,9 +187,10 @@
     "interior-cost-estimator",
     "decimal-to-binary",
     "number-to-words",
-    "salary-comparison-tool"
+    "salary-comparison-tool",
+    "table-generator"
   ],
-  "lastCategory": "career",
-  "totalPosts": 188,
-  "lastRun": "2026-05-28T08:16:54.549Z"
+  "lastCategory": "charts",
+  "totalPosts": 189,
+  "lastRun": "2026-05-28T14:07:42.497Z"
 }
