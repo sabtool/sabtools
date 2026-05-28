@@ -33632,6 +33632,157 @@ Not wrong — just built for international format. It's accurate for million/bil
 <p>For home loan borrowers, the practical takeaway is to plan for the rate environment we have, not the one we hope to get. A 125 bps reduction in your loan rate is already a substantial windfall — capturing it fully, through the right combination of benchmark switch, tenure decision, and balance transfer if needed, matters more than waiting for an additional 25 bps that may or may not arrive in 2026.</p>
 
 <p>The RBI has done its part by handing borrowers the deepest rate-cut cycle since the pandemic. The next move is yours: open your loan statement, check the rate your bank is actually charging, run the EMI maths, and have the conversation with your lender before your next reset date arrives. For a typical ₹50 lakh, 20-year home loan, the difference between actively managing this transition and passively accepting whatever the bank applies can easily be ₹15-20 lakh in lifetime interest. That is not a marginal optimisation — that is a down payment on your next financial goal.</p>`,
+  },
+  {
+    slug: "salary-comparison-tool-guide-2026",
+    title: "Best Free Salary Comparison Tool Online for India (2026)",
+    description: "Use Salary Comparison Tool online for free — compare salaries for 24+ roles across 7 indian cities with cost of living adjustment. No signup, instant results...",
+    date: "2026-05-28",
+    category: "Career",
+    readTime: "10 min read",
+    keywords: ["salary comparison", "salary", "compensation", "city comparison", "cost of living", "india salary", "salary comparison tool", "salary comparison tool by city"],
+    toolSlug: "salary-comparison-tool",
+    image: {
+      src: "/blog/salary-comparison-tool.webp",
+      alt: "Salary Comparison Tool — Free Online Compare salaries for 24+ roles across 7 Indian cities with cost of living adjustment Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>A product manager in Bangalore gets an offer from a Mumbai fintech: <strong>₹38L CTC</strong>, up from her current <strong>₹28L</strong>. On paper that's a 36% jump and looks like an easy yes. Then she checks rents in Powai — a 2BHK her family will actually live in starts at <strong>₹75,000/month</strong>. Her current Koramangala 2BHK costs ₹42,000. School fees for her son in a decent Mumbai ICSE school run ₹2.4L a year versus ₹1.5L in Bangalore. Suddenly the ₹10L "raise" is more like ₹2L of real disposable income — and she hasn't factored in the train commute, parking, or the cost of weekend grocery runs in a city where everything sits 20–30% above South Indian prices.</p>
+
+<p>This is the trap the Salary Comparison Tool on SabTools.in is built to expose. Comparing salaries across Indian cities by absolute number is like comparing temperatures in Celsius and Fahrenheit — same digits, completely different reality. The tool covers <strong>24+ common roles</strong> (Software Engineer, Data Analyst, Product Manager, Mechanical Engineer, Chartered Accountant, Marketing Manager, HR Executive, Sales Manager, UX Designer, DevOps Engineer, and more) across <strong>7 major Indian cities</strong> — Bangalore, Mumbai, Delhi NCR, Hyderabad, Pune, Chennai, and Kolkata — and applies a cost-of-living adjustment so you can see what your offer is actually worth.</p>
+
+<h2>Why nominal salary lies in India</h2>
+
+<p>India's tier-1 metros are not interchangeable. A ₹20L base salary buys very different lives depending on which pin code you land in:</p>
+
+<ul>
+<li><strong>Mumbai (Andheri/Powai/Thane):</strong> The most expensive housing market in India. A family-friendly 2BHK eats ₹55,000–₹90,000/month in rent alone. Add ₹4,000 society maintenance and you're at nearly ₹1L a month just to have a roof.</li>
+<li><strong>Bangalore (Koramangala/Indiranagar/HSR):</strong> 2BHK rents sit between ₹35,000 and ₹60,000. Groceries are cheaper than Mumbai but eating out and cab fares have caught up.</li>
+<li><strong>Delhi NCR (Gurgaon Sectors 47–57, Noida Sector 78):</strong> 2BHK rents ₹35,000–₹60,000, but you pay extra for AC running 7 months a year and power backup.</li>
+<li><strong>Hyderabad (Gachibowli/Kondapur):</strong> ₹22,000–₹38,000 for the same 2BHK. Probably the best salary-to-lifestyle ratio in Indian IT today.</li>
+<li><strong>Pune (Hinjewadi/Baner/Kharadi):</strong> ₹25,000–₹40,000. Comparable to Hyderabad but with worse traffic.</li>
+<li><strong>Chennai (OMR/Velachery):</strong> ₹22,000–₹35,000. Underrated for cost-conscious professionals.</li>
+<li><strong>Kolkata (Salt Lake/New Town):</strong> ₹18,000–₹30,000 — the cheapest of the seven by a clear margin.</li>
+</ul>
+
+<p>Rent is the loudest variable but not the only one. Domestic help costs ₹6,000/month in Hyderabad and ₹12,000 in South Mumbai for the same hours. A litre of petrol differs by ₹4–₹7 across states because of varying VAT. Even Swiggy/Zomato basket prices show a 15–25% spread between Bangalore and Kolkata. The Salary Comparison Tool by city bakes these averages into a single multiplier so you don't have to spreadsheet it yourself.</p>
+
+<h2>What the tool actually computes</h2>
+
+<p>You select a role — say <em>Software Engineer (3–5 years)</em> — and pick two cities. The tool returns three things:</p>
+
+<ol>
+<li><strong>Median nominal salary</strong> in each city for that role and experience band, pulled from current market benchmarks.</li>
+<li><strong>Cost-of-living index</strong> for each city, with Mumbai usually anchored as the most expensive and Kolkata at the lower end.</li>
+<li><strong>Real (adjusted) salary</strong>, i.e., what the nominal number buys you in lifestyle terms after the COL adjustment.</li>
+</ol>
+
+<p>Take a concrete example. A Software Engineer with 4 years' experience might see median packages of around <strong>₹18L in Bangalore</strong> and <strong>₹15L in Hyderabad</strong>. Looks like Bangalore wins. But if Bangalore's COL index is 100 and Hyderabad's is 78, the Hyderabad ₹15L behaves like ₹15L × (100/78) = <strong>₹19.2L of Bangalore-equivalent purchasing power</strong>. The lower-paying offer is actually the richer one.</p>
+
+<p>This inversion happens more often than people realise — especially for mid-career professionals comparing a "loyalty" raise at their current Mumbai job versus a relocation offer to Pune or Hyderabad.</p>
+
+<h2>A worked example: Priya's two offers</h2>
+
+<p>Priya, a Data Analyst with 5 years' experience, is sitting with two offers:</p>
+
+<ul>
+<li><strong>Offer A:</strong> Mumbai-based BFSI firm — ₹24L fixed + ₹3L variable = <strong>₹27L CTC</strong>.</li>
+<li><strong>Offer B:</strong> Hyderabad product company — ₹20L fixed + ₹2L variable + ₹1L joining bonus = <strong>₹23L CTC</strong>.</li>
+</ul>
+
+<p>Mumbai looks ₹4L better. Let's actually do the math.</p>
+
+<p><strong>Housing:</strong> Priya needs a 1BHK in a safe locality. Goregaon East gets her ₹38,000/month plus ₹3,500 maintenance = ₹4.98L/year. Gachibowli equivalent: ₹22,000/month plus ₹2,000 maintenance = ₹2.88L/year. <strong>Difference: ₹2.10L/year</strong>, already wiping out half the gap.</p>
+
+<p><strong>Commute:</strong> Mumbai local + occasional Uber ≈ ₹3,500/month. Hyderabad cab/own bike ≈ ₹4,500/month. Hyderabad costs ₹12,000/year more here — call this a partial Mumbai win.</p>
+
+<p><strong>Food and lifestyle:</strong> Mumbai eating out and groceries run roughly 18% above Hyderabad. On a ₹15,000/month food budget, that's ₹32,000/year more in Mumbai.</p>
+
+<p><strong>HRA tax saving:</strong> This one matters. Mumbai is a metro under Section 10(13A), so HRA exemption uses the 50% of basic formula. If Priya's basic in Offer A is ₹12L, her HRA exemption can be up to ₹6L. Hyderabad falls under the 40% non-metro bucket — Section 10(13A) doesn't classify it as metro for HRA. On a ₹10L basic, her exemption caps lower. Roughly, Priya saves ₹40,000–₹60,000 more in tax in Mumbai purely because of metro HRA rules.</p>
+
+<p>Run the numbers and the "₹4L extra" in Mumbai shrinks to about <strong>₹1.1L of real disposable difference</strong> — and that's before you count the 90-minute one-way Mumbai commute against a 25-minute Hyderabad one. Priya might still take Mumbai for career reasons (deeper BFSI ecosystem, faster promotions), but she now knows what she's really paying for it. The Salary Comparison Tool surfaces this trade-off in 30 seconds instead of an afternoon of spreadsheets.</p>
+
+<h2>The HRA and tax layer most calculators ignore</h2>
+
+<p>Indian tax rules treat <strong>Mumbai, Delhi, Kolkata, and Chennai</strong> as the four "metro" cities for HRA exemption under Section 10(13A). Bangalore, Hyderabad, Pune, and Ahmedabad are <em>not</em> metros for HRA purposes — a quirk that confuses even seasoned HR managers. The exemption formula picks the lowest of:</p>
+
+<ul>
+<li>Actual HRA received</li>
+<li>50% of basic salary (metro) or 40% (non-metro)</li>
+<li>Rent paid minus 10% of basic salary</li>
+</ul>
+
+<p>On a ₹15L basic with ₹6L HRA and ₹40,000/month rent, a Mumbai employee can exempt up to ₹4.8L. A Bangalore employee on identical numbers exempts up to ₹3.4L — a ₹1.4L exemption gap that translates to roughly <strong>₹42,000 in tax saved at the 30% slab</strong>. The Salary Comparison Tool by city flags this so you don't quietly leave money on the table when negotiating.</p>
+
+<p>If you're switching jobs and want to plan the financial transition cleanly, run your dates through the <a href="/tools/notice-period-calculator">notice period calculator</a> first — it shows last working day, buyout costs, and whether your variable pay will vest before exit.</p>
+
+<h2>Comparing the same role across all 7 cities at once</h2>
+
+<p>Sometimes the question isn't "should I take this offer?" but "where should I even look?" A DevOps Engineer with 6 years' experience can pull radically different packages depending on geography:</p>
+
+<ul>
+<li>Mumbai: ₹26–32L (BFSI premium)</li>
+<li>Bangalore: ₹28–36L (deepest market)</li>
+<li>Delhi NCR: ₹24–30L</li>
+<li>Hyderabad: ₹24–30L</li>
+<li>Pune: ₹22–28L</li>
+<li>Chennai: ₹20–26L</li>
+<li>Kolkata: ₹16–22L</li>
+</ul>
+
+<p>Apply COL adjustment and the ranking flips. Hyderabad and Pune often emerge as the highest real-income options for cloud/DevOps/data roles — which is exactly why those cities have absorbed so much IT migration since 2021. The tool lets you eyeball this in one screen instead of running seven separate Glassdoor searches.</p>
+
+<h2>Beyond the numbers: factors the tool can't fully price</h2>
+
+<p>Cost-of-living indices capture the average. They don't capture:</p>
+
+<ul>
+<li><strong>School choice intensity.</strong> A Bangalore international school can cost ₹4L/year; a comparable one in Hyderabad costs ₹2.5L. Families with two kids feel this in a way single professionals don't.</li>
+<li><strong>Spouse career mobility.</strong> Mumbai BFSI, Bangalore tech, Delhi consulting/policy — each city has a different secondary job market. A trailing spouse's earning potential can swing household income by ₹15–25L/year.</li>
+<li><strong>Commute load.</strong> A 90-minute Mumbai commute and a 25-minute Hyderabad one are not the same life, even at identical pay.</li>
+<li><strong>Climate and pollution.</strong> Delhi's November–January AQI alone is a hidden tax on Delhi salaries — air purifiers, doctor visits, lost productivity.</li>
+<li><strong>Network density.</strong> The next job is often easier to find in Bangalore than in Kolkata. Optionality has a value the COL index doesn't show.</li>
+</ul>
+
+<p>Treat the tool's adjusted number as the starting point of the conversation, not the verdict.</p>
+
+<h2>A practical workflow for a job switch</h2>
+
+<p>If you're actively interviewing, here's a sequence that works:</p>
+
+<ol>
+<li><strong>Tally your real experience.</strong> Use the <a href="/tools/experience-calculator">experience calculator</a> to total months across jobs — recruiters in India routinely under-count by ignoring overlap and partial months.</li>
+<li><strong>Audit your CV.</strong> Run it through the <a href="/tools/resume-score-checker">resume score checker</a> to catch ATS-killing formatting before HR ever sees it. A 78/100 score versus a 52/100 score is the difference between an interview and an auto-reject.</li>
+<li><strong>Rebuild if needed.</strong> The <a href="/tools/resume-builder">resume builder</a> ships Classic, Modern, and Creative templates that read cleanly on both ATS parsers and human eyes.</li>
+<li><strong>Benchmark the offer.</strong> Drop your role and target city into the salary comparison tool. Check whether the package sits at the 25th, 50th, or 75th percentile for your experience band.</li>
+<li><strong>Stress-test the math.</strong> Project your new take-home into EMIs and SIPs. If you're planning to buy a flat in your new city, run the numbers through the <a href="/tools/emi-calculator">EMI calculator</a> — a ₹60L home loan at 8.6% for 20 years works out to <strong>₹52,415/month</strong>, which should not exceed 40% of your take-home.</li>
+<li><strong>Lock in goals.</strong> Map a chunk of the raise into long-term wealth. The <a href="/tools/sip-calculator">SIP calculator</a> shows that ₹20,000/month at 12% for 15 years compounds to roughly ₹1.01 crore.</li>
+</ol>
+
+<p>Skipping any of these steps usually means under-negotiating by 8–15% — money you'll never recover, because future raises compound off the new base.</p>
+
+<h2>Negotiation leverage from comparison data</h2>
+
+<p>Recruiters quote ranges. Candidates with data quote facts. When a recruiter says "₹22L is the band for this role," a candidate who has run a salary comparison by city for the same role at three competitors can reply with "the 75th percentile for Senior Analysts in Bangalore for this role sits at ₹26–28L; I'd be open at ₹25L fixed with the variable structure we discussed." That conversation goes very differently than the version without numbers.</p>
+
+<p>The same logic applies inside your current job. If you're a Marketing Manager in Pune earning ₹14L and the city's median for your role and experience is ₹17L, you have a concrete, defensible ask for your appraisal cycle — not a vibe.</p>
+
+<h2>Common questions Indian users ask</h2>
+
+<h3>Does the tool factor in PF, gratuity, and ESOPs?</h3>
+<p>It compares fixed cash compensation by default, since that's what's directly affected by city cost of living. PF (12% of basic, matched) and gratuity accrue similarly across cities. ESOPs and RSUs you should evaluate separately — they're a function of company stage, not geography.</p>
+
+<h3>Why is Bangalore shown as more expensive than Delhi in some comparisons?</h3>
+<p>For tech and tech-adjacent professionals, Bangalore's effective COL has caught up to and in some pockets exceeded Delhi NCR — driven by rent inflation in Koramangala, Indiranagar, and HSR Layout since 2022. Delhi NCR is geographically larger and has more affordable submarkets (parts of Noida, Faridabad), which pulls its average down.</p>
+
+<h3>How often is the salary data refreshed?</h3>
+<p>Benchmarks are updated against current market data so the medians reflect post-FY 2024-25 hiring trends, including the slower IT salary growth and continued GCC expansion in Hyderabad and Bangalore.</p>
+
+<h3>Is the tool useful for freshers?</h3>
+<p>Less so. Fresher salaries are largely standardised by campus tier and company policy, not city. The tool shines from 2 years of experience onwards, where bands widen and city arbitrage becomes real.</p>
+
+<p>If you're sitting on an offer letter right now, or weighing a relocation that feels obvious on paper but uncertain in your gut — <a href="/tools/salary-comparison-tool">open the Salary Comparison Tool and run your role across the cities you're considering →</a></p>`,
   }
 ];
 

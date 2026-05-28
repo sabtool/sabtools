@@ -186,9 +186,10 @@
     "jee-rank-predictor",
     "interior-cost-estimator",
     "decimal-to-binary",
-    "number-to-words"
+    "number-to-words",
+    "salary-comparison-tool"
   ],
-  "lastCategory": "math",
-  "totalPosts": 187,
-  "lastRun": "2026-05-27T13:19:28.067Z"
+  "lastCategory": "career",
+  "totalPosts": 188,
+  "lastRun": "2026-05-28T08:16:54.549Z"
 }
