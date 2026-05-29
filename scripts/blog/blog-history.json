@@ -188,9 +188,10 @@
     "decimal-to-binary",
     "number-to-words",
     "salary-comparison-tool",
-    "table-generator"
+    "table-generator",
+    "unit-price-calculator"
   ],
-  "lastCategory": "charts",
-  "totalPosts": 189,
-  "lastRun": "2026-05-28T14:07:42.497Z"
+  "lastCategory": "math",
+  "totalPosts": 190,
+  "lastRun": "2026-05-29T07:55:22.166Z"
 }
