@@ -193,9 +193,10 @@
     "rti-application-generator",
     "pipe-size-calculator",
     "json-to-table-viewer",
-    "twitter-card-generator"
+    "twitter-card-generator",
+    "chart-maker"
   ],
-  "lastCategory": "seo",
-  "totalPosts": 194,
-  "lastRun": "2026-05-31T08:17:59.975Z"
+  "lastCategory": "charts",
+  "totalPosts": 195,
+  "lastRun": "2026-05-31T12:42:36.589Z"
 }
