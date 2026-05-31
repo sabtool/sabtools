@@ -192,9 +192,10 @@
     "unit-price-calculator",
     "rti-application-generator",
     "pipe-size-calculator",
-    "json-to-table-viewer"
+    "json-to-table-viewer",
+    "twitter-card-generator"
   ],
-  "lastCategory": "charts",
-  "totalPosts": 193,
-  "lastRun": "2026-05-30T12:10:33.541Z"
+  "lastCategory": "seo",
+  "totalPosts": 194,
+  "lastRun": "2026-05-31T08:17:59.975Z"
 }
