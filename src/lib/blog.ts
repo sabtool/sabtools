@@ -36055,6 +36055,128 @@ small finance banks remain the clear leaders in terms of returns
 <h3>Which is safest for merging bank statements?</h3>
 
 <p>SabTools, unambiguously. The file never leaves your device. ILovePDF and Smallpdf both upload to their servers — their policies are reasonable, but the file does transit. For an HDFC or SBI statement with your full account number and balance, browser-only processing is the correct choice.</p>`,
+  },
+  {
+    slug: "news-2026-06-01-latest-home-loan-interest-rate-updates-from-major-indian-ban",
+    title: "Latest home loan interest rate updates from major Indian banks (2026 Update)",
+    description: "Latest home loan interest rate updates from major Indian banks — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-06-01",
+    category: "Banking",
+    readTime: "11 min read",
+    keywords: ["Latest home loan interest", "banking news india 2026", "india 2026 update"],
+    toolSlug: "emi-calculator",
+    image: {
+      src: "/blog/emi-calculator.webp",
+      alt: "Latest home loan interest rate updates from major Indian banks (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>RBI's December 2025 rate cut closes a 125 bps easing cycle — and home loan rates are now at multi-year lows</h2>
+
+<p>India's home loan market has just been through one of its most borrower-friendly years in recent memory. On 5 December 2025, the Reserve Bank of India's Monetary Policy Committee (MPC) <a href="https://www.business-standard.com/finance/news/rbi-mpc-december-2025-rate-cut-announcement-sanjay-malhotra-cpi-inflation-125120500161_1.html" rel="noopener" target="_blank">unanimously voted to reduce the policy repo rate by 25 basis points to 5.25% from 5.50%, with immediate effect</a>. That decision — the fourth rate cut of the calendar year — has triggered a fresh round of home loan rate revisions at India's largest lenders, with State Bank of India, Bank of Baroda, PNB, Indian Bank and HDFC Bank all announcing reductions within two weeks of the policy announcement.</p>
+
+<p>For a salaried professional in Pune servicing a ₹60 lakh home loan, or a first-time borrower in NCR signing up for a 20-year tenure, the cumulative effect of 2025's rate cuts is no longer theoretical. EMIs that started the year around 8.50%–9.00% are now being offered between 7.10% and 8.10% at most major lenders. This article breaks down what each bank is charging right now, how the transmission has played out, and what existing borrowers should actually do about it.</p>
+
+<h2>The big picture: a 125 bps easing cycle in one calendar year</h2>
+
+<p>To understand why home loan rates have moved so sharply, start with the policy backdrop. According to Bajaj Finserv's tracker of the rate cycle, <a href="https://www.bajajfinserv.in/insights/rbi-repo-rate-cut-what-to-expect-from-this-announcement" rel="noopener" target="_blank">in February the repo rate was cut from 6.50% to 6.25%, in April it fell to 6.00%, and on 6 June 2025 a larger 50-basis-point reduction brought the rate to 5.50% — cumulative easing of 125 basis points from January 2025 to December 2025</a>.</p>
+
+<p>The December cut was the capstone. As reported in coverage of the MPC outcome, <a href="https://www.scconline.com/blog/post/2025/12/06/rbi-announced-repo-rate-cut-mpc-december-2025/" rel="noopener" target="_blank">the 58th MPC meeting held from 3–5 December 2025, chaired by Governor Sanjay Malhotra, voted unanimously to reduce the policy repo rate by 25 basis points to 5.25% under the Liquidity Adjustment Facility</a>. The MPC kept its monetary policy stance unchanged at "neutral", signalling that further cuts are not being telegraphed but inflation conditions allowed this one.</p>
+
+<p>The justification came from the inflation print. <a href="https://www.business-standard.com/finance/news/rbi-mpc-december-2025-rate-cut-announcement-sanjay-malhotra-cpi-inflation-125120500161_1.html" rel="noopener" target="_blank">Headline CPI inflation declined to an all-time low in October 2025</a>, giving the central bank space to support growth without compromising its inflation target.</p>
+
+<p>The Business Today analysis of EMI savings frames the cumulative impact clearly: <a href="https://www.businesstoday.in/personal-finance/investment/story/rbi-repo-rate-cut-of-125-bps-since-feb-2025-how-much-home-loan-emi-you-are-saving-now-523927-2026-04-03" rel="noopener" target="_blank">between February and December 2025, the RBI cut the repo rate by a cumulative 125 basis points, bringing it down from 6.50% to 5.25% to support economic growth</a>.</p>
+
+<h2>What major banks are charging right now</h2>
+
+<p>The headline number to watch is the spread between the cheapest public sector offers and what the older floating-rate borrower is still paying. Public sector banks have moved most aggressively on transmission.</p>
+
+<h3>State Bank of India</h3>
+
+<p>SBI's response to the December MPC was swift. <a href="https://upstox.com/news/personal-finance/latest-updates/sbi-cuts-lending-rates-by-25-bps-after-rbi-repo-rate-cut-em-is-to-fall/article-186154/" rel="noopener" target="_blank">SBI reduced its lending rate by 25 basis points following the RBI's repo rate cut, taking the External Benchmark Linked Rate (EBLR) to 7.90 per cent, with revised rates effective from 15 December 2025</a>. Practically, that means an SBI home loan customer whose loan is benchmarked to EBLR will see the new rate flow into their EMI at the next reset date specified in their loan agreement (typically every three months).</p>
+
+<p>Industry coverage confirmed the move: <a href="https://ansarisahab.com/finance/banking/sbi-eblr-reduced-to-7-90-effective-december-15-2025-how-much-will-your-home-loan-emi-drop-after-latest-rate-cut/" rel="noopener" target="_blank">SBI cut its EBLR to 7.90%, down from 8.15%, effective 15 December 2025 — a 25 basis point reduction passing the full benefit of the RBI's December repo cut to customers</a>.</p>
+
+<h3>Bank of Baroda, PNB and Indian Bank</h3>
+
+<p>Public sector peers moved in lockstep. According to Policy Circle's transmission tracker, <a href="https://www.policycircle.org/economy/rbis-repo-rate-cuts-transmission/" rel="noopener" target="_blank">PNB reduced its RLLR from 8.35% to 8.10%, Bank of Baroda cut its BRLLR from 8.15% to 7.90%, Indian Bank lowered its RLLR from 8.20% to 7.95%, and HDFC Bank reduced its MCLR by up to 5 basis points</a>.</p>
+
+<p>Bank of Baroda's revision specifically took effect quickly — <a href="https://www.loansjagat.com/interest-rates/bank-of-baroda-home-loan-interest-rate" rel="noopener" target="_blank">BoB cut its BRLLR from 8.15% to 7.90% from 6 December 2025</a>, just one day after the MPC decision.</p>
+
+<h3>HDFC Bank, ICICI Bank, Kotak and Axis</h3>
+
+<p>Private sector banks have published competitive starting rates, although their effective rates depend heavily on credit score and loan size. Business Standard's December 2025 rate roundup noted that <a href="https://www.business-standard.com/finance/personal-finance/december-home-loan-rates-start-at-7-35-check-latest-lender-offers-here-125120400439_1.html" rel="noopener" target="_blank">HDFC Bank and ICICI Bank start at 7.90 per cent and 7.65 per cent respectively, while Kotak Mahindra Bank, HSBC and South Indian Bank begin at 7.70–7.80 per cent, with Axis Bank, Federal Bank and Karur Vysya Bank displaying broader ranges</a>.</p>
+
+<p>Ambak's industry roundup put the spread even wider for the most credit-worthy borrowers: <a href="https://ambak.com/blog/rbi-repo-rate-cut-to-5-25-home-loan-emis-to-drop-sharply-full-impact-explained/" rel="noopener" target="_blank">public sector giants like State Bank of India, Union Bank of India and Bank of Baroda are offering home loans starting at 7.10–7.35%, down from 8.50–9.00% at the beginning of 2025</a>. Those floor rates are reserved for borrowers with CIBIL scores above 800, loan amounts within preferred slabs, and salary accounts with the lender — but they show how far the market has moved.</p>
+
+<h3>Nine banks cut within two weeks</h3>
+
+<p>The breadth of the response is unusual. <a href="https://upstox.com/news/personal-finance/latest-updates/sbi-to-hdfc-bank-8-banks-cut-home-loan-rates-after-rbi-s-repo-rate-decision-in-december/article-186223/" rel="noopener" target="_blank">On 13 December, SBI cut its lending rates by up to 25 bps effective 15 December, passing the benefit of the RBI rate cut to customers, and was followed by eight other lenders that announced revisions within the same fortnight</a>. In previous cycles, transmission has lagged the MPC decision by a quarter or more; this round has been markedly faster.</p>
+
+<h2>Why this matters for the Indian borrower</h2>
+
+<p>For households with floating-rate home loans linked to the repo rate (the dominant benchmark for retail loans sanctioned after October 2019), the December cut is not a marketing event — it is a contractual one. Ujjivan Small Finance Bank's explainer puts it plainly: <a href="https://www.ujjivansfb.bank.in/banking-blogs/home-loan/how-does-rbi-repo-rate-change-impact-your-home-loan" rel="noopener" target="_blank">if you have a floating-rate loan linked to the repo rate, your EMI may decrease in the coming months depending on your lender's policy, while fixed-rate loans remain unaffected by repo rate changes</a>.</p>
+
+<p>The savings are material. Ambak's modelling found that <a href="https://ambak.com/blog/rbi-repo-rate-cut-to-5-25-home-loan-emis-to-drop-sharply-full-impact-explained/" rel="noopener" target="_blank">on a ₹50 lakh loan, EMI has fallen by ₹3,615 per month compared to January 2025, with total interest saving of nearly ₹9 lakh over the remaining tenure, and even a 1% drop (from 8.5% to 7.5%) saving ₹5–17 lakh depending on loan size</a>.</p>
+
+<p>For a Bangalore-based IT professional carrying a ₹75 lakh loan at the older 9% rate, simply ensuring the December reset is applied could mean an EMI drop of roughly ₹3,500–₹4,500 per month — money that compounds materially over a 20-year tenure.</p>
+
+<h3>The two reset mechanics every borrower should understand</h3>
+
+<p>Most floating-rate loans reset on a three-month cycle. After a repo rate cut, your bank will reflect the new rate at the next quarterly reset date, not immediately. The benefit can be passed on in two ways:</p>
+
+<ol>
+  <li><strong>Lower EMI, same tenure:</strong> Your monthly payment drops while the loan still ends at the original maturity date.</li>
+  <li><strong>Same EMI, shorter tenure:</strong> Your EMI stays unchanged, but the loan closes several months earlier — usually the better choice if your monthly budget can absorb the original payment.</li>
+</ol>
+
+<p>Many lenders default to option 1 unless the borrower explicitly requests option 2. PNB Housing Finance's explainer on the mechanics is straightforward: <a href="https://www.pnbhousing.com/blog/understanding-the-repo-rate-and-its-impact-on-home-loans" rel="noopener" target="_blank">on a ₹60 lakh, 20-year loan at 8.5%, the EMI is around ₹52,000, and a 50 bps move in either direction shifts that figure by roughly ₹2,000 per month</a>. Run the numbers for your own loan amount, tenure, and rate using the <a href="/tools/emi-calculator">SabTools EMI Calculator</a> — comparing your current EMI to the EMI at the new benchmark rate is the cleanest way to confirm whether your reset has actually been applied and to decide between the lower-EMI or shorter-tenure option.</p>
+
+<h2>What older-vintage borrowers need to check immediately</h2>
+
+<p>Not every home loan reprices automatically. If your loan was sanctioned before October 2019, it may still be linked to MCLR (Marginal Cost of Funds-based Lending Rate) or even the older Base Rate regime — both of which transmit RBI cuts more slowly and incompletely.</p>
+
+<p>Upstox's coverage of the post-MPC adjustments flagged this clearly: <a href="https://upstox.com/news/personal-finance/latest-updates/rbi-cuts-repo-rate-will-your-home-loan-emi-reduce-or-stay-the-same/article-185742/" rel="noopener" target="_blank">borrowers with loans under older regimes such as the base rate or MCLR may want to evaluate whether switching to a repo-linked loan could offer better transparency and faster rate transmission going forward</a>.</p>
+
+<p>Two concrete actions for older-vintage borrowers:</p>
+
+<h3>1. Check your benchmark, then ask for a conversion</h3>
+
+<p>Look at your loan account statement or sanction letter. If the benchmark says "MCLR" or "Base Rate", your bank is required by RBI rules to offer you a conversion to an external benchmark linked rate (EBLR/RLLR) on payment of a small administrative fee — typically 0.25%–0.50% of the outstanding principal, often capped at ₹10,000–₹15,000.</p>
+
+<p>The Ambak FAQ illustrates the calculation: <a href="https://ambak.com/blog/rbi-repo-rate-cut-to-5-25-home-loan-emis-to-drop-sharply-full-impact-explained/" rel="noopener" target="_blank">for an old 2018 loan still at 8.65%, the recommended action is to convert to repo-linked (small fee) or transfer to a new lender</a>.</p>
+
+<h3>2. Compare a balance transfer</h3>
+
+<p>If your existing lender refuses to reset competitively, a balance transfer to a public sector bank offering 7.50%–7.90% can be financially compelling — but only after factoring in processing fees (typically 0.25%–1.00% of the loan amount), legal/valuation charges, and any prepayment penalties on the existing loan (zero for floating-rate retail loans under RBI rules, but applicable on fixed-rate components).</p>
+
+<p>A rough rule of thumb: if the rate differential is 50 bps or more and your remaining tenure is at least seven years, a transfer usually pays off within 18–24 months. Below that, the switching costs may eat the gains.</p>
+
+<h2>The catch: transmission is uneven, and 2026 is uncertain</h2>
+
+<p>Headline rates and effective rates are not the same thing. Banks routinely advertise floor rates that only the strongest credit profiles can access; the typical first-time borrower in a tier-2 city with a CIBIL score of 720 and a ₹45 lakh loan may be offered 8.40%–8.70%, even at a bank whose website advertises a 7.50% starting rate.</p>
+
+<p>And the easing cycle may be approaching its end. As Angel One's policy note observed, <a href="https://www.angelone.in/news/personal-finance/how-will-the-rbi-repo-rate-cut-of-25-bps-affect-your-home-loan-emis" rel="noopener" target="_blank">with the repo rate cut to 5.25%, many home-loan EMIs may drop but the benefit depends on the loan's interest-rate benchmark and reset cycle</a>. The MPC's decision to retain a "neutral" stance in December — rather than shifting to "accommodative" — is the signal that further cuts in early 2026 are not guaranteed.</p>
+
+<p>Bajaj Finserv's note carried a similar caution: <a href="https://www.bajajfinserv.in/insights/rbi-repo-rate-cut-what-to-expect-from-this-announcement" rel="noopener" target="_blank">even after the RBI reduces the repo rate, banks do not always lower their loan interest rates immediately or fully, sometimes delaying the benefit or only reducing rates slightly</a>. Borrowers who assume the reset will happen automatically often find, six months later, that it didn't.</p>
+
+<h2>A practical checklist for the next 30 days</h2>
+
+<p>If you're an existing home loan borrower, three things are worth doing before your next EMI debit:</p>
+
+<ul>
+  <li><strong>Pull your latest loan statement and confirm the benchmark.</strong> Look for "EBLR", "RLLR", "MCLR" or "Base Rate". Anything other than EBLR/RLLR is a candidate for conversion.</li>
+  <li><strong>Note your reset date.</strong> For repo-linked loans, the bank is contractually bound to revise the rate at the reset date — typically every three months from disbursement. After the December cut, your January–March 2026 reset should reflect the lower rate.</li>
+  <li><strong>Compute the EMI you should now be paying.</strong> Take your outstanding principal, your remaining tenure, and the new effective rate (your existing spread plus the new repo rate). If the EMI debit on your bank statement doesn't match, raise a service request immediately.</li>
+</ul>
+
+<p>If you're a first-time buyer in NCR, Pune, Bangalore or Hyderabad evaluating a fresh loan, the current rate environment is the most favourable it has been since 2022. Negotiating hard on the spread over the repo rate (the only number you can actually negotiate) matters more than the headline starting rate — a 25 bps difference in spread over a 20-year, ₹80 lakh loan amounts to roughly ₹3.5 lakh in interest paid.</p>
+
+<h2>The bottom line</h2>
+
+<p>The December 2025 MPC has set the repo rate at 5.25% — its lowest level in over three years — capping a year in which the RBI delivered four cuts and 125 basis points of cumulative easing. Major Indian banks have transmitted the December cut faster than in prior cycles, with SBI's EBLR at 7.90%, Bank of Baroda's BRLLR at 7.90%, PNB's RLLR at 8.10%, and starting home loan rates from leading private banks ranging from 7.65% (ICICI) to 7.90% (HDFC Bank).</p>
+
+<p>For Indian borrowers, the action items are unglamorous but valuable: confirm your loan benchmark, check your reset, recompute your EMI against the new rate, and consider conversion or transfer if your existing lender isn't passing on the benefit. The rate cycle has done its part; capturing the savings is now a matter of paperwork and follow-up.</p>`,
   }
 ];
 
