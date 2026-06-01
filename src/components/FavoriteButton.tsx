@@ -55,13 +55,21 @@ export default function FavoriteButton({ slug }: { slug: string }) {
       onClick={toggle}
       aria-label={isFav ? "Remove from favorites" : "Add to favorites"}
       title={isFav ? "Remove from favorites" : "Add to favorites"}
-      className="p-2 rounded-lg hover:bg-indigo-50 dark:hover:bg-gray-700 transition-colors"
+      // Matches the 36×36 rounded-xl shape of the share-row buttons so the
+      // whole action bar sits in one consistent line. Amber when active,
+      // neutral when inactive — mirrors the brand-tint approach used by
+      // each share icon.
+      className={`w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-150 hover:-translate-y-0.5 hover:shadow-sm ${
+        isFav
+          ? "bg-amber-100 text-amber-600"
+          : "bg-gray-100 hover:bg-amber-50 text-gray-500 hover:text-amber-500"
+      }`}
     >
       <svg
-        className={`w-5 h-5 transition-transform ${animating ? "scale-125" : "scale-100"}`}
+        className={`w-[18px] h-[18px] transition-transform ${animating ? "scale-125" : "scale-100"}`}
         style={{ transitionDuration: "300ms" }}
-        fill={isFav ? "#f59e0b" : "none"}
-        stroke={isFav ? "#f59e0b" : "currentColor"}
+        fill={isFav ? "currentColor" : "none"}
+        stroke="currentColor"
         strokeWidth={2}
         viewBox="0 0 24 24"
       >

@@ -269,7 +269,11 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-2">
+            {/* Single tidy action row: Favorite · Download PDF · Share icons.
+                flex-wrap so it gracefully drops onto two lines on very
+                narrow screens instead of clipping; gap-y handles the
+                vertical breathing room when it does. */}
+            <div className="flex items-center gap-2 gap-y-3 flex-wrap">
               <FavoriteButton slug={tool.slug} />
               <DownloadPDF toolName={tool.name} />
               <ShareButtons title={`${tool.name} - Free Online Tool | SabTools.in`} />
