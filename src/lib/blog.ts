@@ -35696,6 +35696,160 @@ small finance banks remain the clear leaders in terms of returns
 <p>If the MPC holds at 5.25% through 2026, card rates at large banks are likely to grind 10-25 bps lower as the system absorbs the cumulative 2025 easing. If growth disappoints and the RBI cuts again, expect a more visible downshift in PSB and large private bank FD rates within weeks. Small finance banks will likely remain the outlier on the upside as long as their loan growth runs ahead of their deposit growth — but that premium isn't guaranteed forever.</p>
 
 <p>For the Indian saver, the practical message is unfussy: the best FD in 2026 isn't the one with the highest rate on a comparison table. It's the one where the tenor matches your goal, the bank is within your DICGC tolerance, and the after-tax return beats the alternative use of that capital — whether that's prepaying a home loan, topping up a PPF account, or starting an SIP. Run the comparison honestly, lock in the slab that fits, and move on.</p>`,
+  },
+  {
+    slug: "user-agent-parser-guide-2026",
+    title: "How to Use User Agent Parser Online — Step-by-Step Guide",
+    description: "Free User Agent Parser online — parse user agent strings to detect browser, os, device and engine. Step-by-step guide with tips. 100% free, works on mobile. ...",
+    date: "2026-06-01",
+    category: "Security",
+    readTime: "10 min read",
+    keywords: ["user agent", "browser", "device", "parser", "navigator", "user agent parser", "user agent parser online", "user agent parser java"],
+    toolSlug: "user-agent-parser",
+    image: {
+      src: "/blog/user-agent-parser.webp",
+      alt: "User Agent Parser — Free Online Parse user agent strings to detect browser, OS, device and engine Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>A Bangalore-based fintech engineer pulls up the previous night's server logs at 9 AM and sees 47,000 failed login attempts on the staging API. Half of them claim to be from <strong>"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"</strong> — but the requests are firing 200 per second from a single IP in Vietnam. That's a bot pretending to be Chrome on Windows. The other half show genuine Android UAs from MIUI, OxygenOS, Realme UI — actual users on mid-range phones in Hyderabad and Pune trying to log in during the morning rush. Telling the two apart starts with one thing: parsing the user agent string properly.</p>
+
+<p>The User Agent Parser on SabTools.in takes that long, cryptic string your browser sends with every HTTP request and breaks it into clean fields — browser name and version, operating system, device type, rendering engine, and CPU architecture. For developers running Indian e-commerce sites, fintech APIs, ed-tech platforms, or even a personal blog hosted on a ₹400/month VPS, this kind of decoding sits at the centre of analytics, debugging, security, and even fraud prevention.</p>
+
+<h2>What's actually inside a user agent string</h2>
+
+<p>A user agent (UA) is the identification card your browser or app presents to a server. It looks intimidating but follows a predictable grammar. Here's a real string a Jio user on a Redmi Note 12 might send:</p>
+
+<p><strong>Mozilla/5.0 (Linux; Android 13; 23021RAAEG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Mobile Safari/537.36</strong></p>
+
+<p>Parsing that, you get:</p>
+
+<ul>
+<li><strong>Browser:</strong> Chrome 118</li>
+<li><strong>Engine:</strong> Blink (via WebKit fork)</li>
+<li><strong>OS:</strong> Android 13</li>
+<li><strong>Device model:</strong> 23021RAAEG (Redmi Note 12)</li>
+<li><strong>Form factor:</strong> Mobile</li>
+</ul>
+
+<p>The historic "Mozilla/5.0" prefix is a holdover from the 1990s browser wars — every modern browser lies and claims to be Mozilla-compatible. The real identity is buried further in. The parser handles those quirks automatically so you don't have to remember which token means what.</p>
+
+<p>Try pasting your own current browser's UA into the <a href="/tools/user-agent-parser">User Agent Parser</a> — it shows up at the top of the result as a sanity check before you start parsing strings from logs or analytics dumps.</p>
+
+<h2>Why Indian developers and businesses parse user agents</h2>
+
+<p>The Indian web is unique. Roughly 75% of traffic to consumer sites comes from Android — and not the latest flagships, but devices in the ₹8,000-₹18,000 range running Android 11, 12, or 13. Chrome dominates browser share at around 85%, but the long tail includes UC Browser (still popular in tier-2/tier-3 cities), Opera Mini, JioBrowser, and Samsung Internet. iOS hovers near 5% nationally but spikes to 25%+ for premium fintech and SaaS audiences in South Mumbai and Koramangala.</p>
+
+<p>Here's where UA parsing earns its keep:</p>
+
+<h3>1. Frontend bug triage</h3>
+
+<p>A Surat-based D2C jewellery store gets complaints that the Buy Now button doesn't work on some phones. The support team pastes the UA string from the customer's email signature into the parser and discovers all complaints come from <strong>Android 9 + Chrome 89</strong>. That's a 5-year-old WebView version that doesn't support modern CSS grid. Fix: ship a polyfill, problem solved in an afternoon instead of three days of trial-and-error.</p>
+
+<h3>2. Analytics segmentation</h3>
+
+<p>Google Analytics shows you broad device categories, but if you need to know what percent of your traffic uses MIUI vs. OneUI vs. Realme UI — because each ships with a different default browser — you need raw UA parsing. An Indore-based affiliate marketer earning ₹4-6L/month from blog ads used UA segmentation to discover that 31% of his readers were on Xiaomi devices with the in-app Mi Browser, which was blocking his AdSense unit. Switching ad networks recovered roughly ₹85,000 in monthly revenue.</p>
+
+<h3>3. Fraud detection in fintech</h3>
+
+<p>Indian banks and NBFCs flag mismatches between claimed UA and behavioural signals. If a UA says "iPhone 15 Pro / iOS 17" but the screen resolution reported is 360×640 (a budget Android pattern), something is off. Most UPI fraud prevention pipelines run UA parsing as a first-pass filter before deeper checks. Pair this with our <a href="/tools/password-generator">strong password generator</a> for admin accounts and an audit on your <a href="/tools/website-ssl-checker">SSL certificate configuration</a>, and you've covered the obvious attack surface.</p>
+
+<h3>4. Server-side rendering decisions</h3>
+
+<p>If you run a Next.js or Django site on Hostinger or DigitalOcean targeting Indian users, you might serve lighter assets to Opera Mini and KaiOS users (who pay per MB on some Jio plans) and full bundles to Chrome desktop users in metros. UA parsing on the edge enables that branching.</p>
+
+<h2>How to use the parser — three workflows</h2>
+
+<p>The tool accepts any UA string and returns structured output. Three common workflows for Indian users:</p>
+
+<ol>
+<li><strong>Paste from logs:</strong> Open your Nginx, Apache, or Cloudflare log, copy a user agent field, paste into the parser. The output shows browser, OS, engine, and device. Useful when investigating a single suspicious request.</li>
+<li><strong>Paste from email/screenshot:</strong> When a customer reports an issue and you ask them to share their browser details, they might send a string from <code>navigator.userAgent</code> in DevTools. Drop it in and you'll know exactly what you're debugging.</li>
+<li><strong>Test your own browser:</strong> Useful when you're writing UA-sniffing code and want to verify it works against your current setup. The result tells you what fields will be available.</li>
+</ol>
+
+<p>Output fields you'll get:</p>
+
+<ul>
+<li><strong>Browser name + version</strong> (Chrome 121, Safari 17.2, Firefox 122, etc.)</li>
+<li><strong>OS name + version</strong> (Android 14, iOS 17.3, Windows 11, macOS Sonoma)</li>
+<li><strong>Device type</strong> (mobile, tablet, desktop, smart TV, bot)</li>
+<li><strong>Device brand/model</strong> when detectable (Samsung Galaxy S23, OnePlus 11R)</li>
+<li><strong>Rendering engine</strong> (Blink, WebKit, Gecko)</li>
+<li><strong>CPU architecture</strong> when present (arm64, x86_64)</li>
+</ul>
+
+<h2>Reading common Indian user agent patterns</h2>
+
+<p>Once you've parsed a few hundred strings, patterns emerge. A small reference for what you'll see most on Indian traffic:</p>
+
+<ul>
+<li><strong>Android WebView strings</strong> with package names like <code>com.phonepe.app</code> or <code>net.one97.paytm</code> — these are in-app browsers inside PhonePe, Paytm, Cred, etc. Users opening your link from within these apps get a stripped-down browser environment.</li>
+<li><strong>JioPages</strong> on JioPhone Next and KaiOS devices — UA includes "KAIOS" or "JioPages". Rare but real, especially in semi-urban Bihar, UP, and West Bengal.</li>
+<li><strong>UC Browser Mini</strong> still shows up in 3-5% of traffic outside metros. Its UA contains "UCBrowser" — useful to detect because UC's data-saving mode aggressively rewrites images.</li>
+<li><strong>Samsung Internet</strong> on Galaxy M-series and A-series phones, very common in middle-income households across Pune, Ahmedabad, and Lucknow.</li>
+<li><strong>Bot UAs</strong> claiming to be Googlebot, Bingbot, AhrefsBot, SemrushBot — verify with reverse DNS before trusting them. A real Googlebot's IP resolves back to <code>googlebot.com</code>; you can confirm using our <a href="/tools/dns-lookup-tool">DNS lookup tool</a>.</li>
+</ul>
+
+<h2>User agent parsing on the server side (Java, Node, Python)</h2>
+
+<p>The web tool here is great for ad-hoc checks, but if you're shipping a production app you'll want UA parsing in code. For Indian developers building Spring Boot APIs or Java-based analytics pipelines, popular libraries include <strong>uap-java</strong> (the Java port of Browserscope's ua-parser, used widely) and <strong>Yauaa</strong> (Yet Another UserAgent Analyzer, more modern and handles Indian UA quirks well). For Node, <strong>ua-parser-js</strong> is the standard. For Python, the <strong>user-agents</strong> package wraps the same regex database.</p>
+
+<p>These libraries all read from a shared YAML/JSON database of regex patterns originally curated by ua-parser maintainers. The web parser on SabTools uses the same family of patterns, so what you test here will match what your backend produces — useful when prototyping. If you're running a Spring Boot service on AWS Mumbai (ap-south-1) and need to log device breakdowns for compliance reporting, the Java integration takes about 15 minutes including dependency setup.</p>
+
+<p>One gotcha: don't rely on UA alone for critical decisions. Modern best practice is <strong>User-Agent Client Hints</strong> (Sec-CH-UA headers), which Chrome is rolling out to replace verbose UA strings with structured, opt-in fields. Until adoption is universal — and it's not, especially on older Android devices common in India — UA parsing remains the workhorse.</p>
+
+<h2>Security: spotting fakes and bots</h2>
+
+<p>The string in the opening scenario — <code>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36</code> — is missing the Chrome version token and the trailing Safari token. A real Chrome UA always includes both. That truncation is a fingerprint of cheap scraping libraries. Real UA parsers will flag the browser as "unknown" or assign a low confidence — that's your hint the request isn't human.</p>
+
+<p>Other red flags worth checking:</p>
+
+<ul>
+<li>UA claims iPhone but no <code>Mobile/15E148</code> build token — likely a scraper.</li>
+<li>UA claims a Chrome version that doesn't exist yet (Chrome 200+ as of early 2026).</li>
+<li>Identical UA across 10,000 requests in 60 seconds from different IPs — a botnet using a single hardcoded string.</li>
+<li>UA includes "Headless" — that's literal Puppeteer or Playwright forgetting to mask itself.</li>
+</ul>
+
+<p>For a small business running a Shopify store or a WordPress site on a ₹2,500/month managed host, pairing UA filtering with rate limiting at the Cloudflare edge handles 90% of unwanted bot traffic. Add a <a href="/tools/whois-lookup">WHOIS check on suspicious IPs</a> when something looks coordinated, and you've built a basic but effective abuse-response workflow without paying for a ₹15,000/month bot management product.</p>
+
+<h2>A worked example: investigating a traffic spike</h2>
+
+<p>Suppose your Razorpay dashboard shows a sudden jump from ₹62,000 daily revenue to ₹1,40,000 over two days, but conversion rate dropped from 3.2% to 1.1%. Something inflated traffic without converting. You export 24 hours of Nginx logs (about 4.8 lakh rows), pull the user-agent column, and bucket them.</p>
+
+<p>Top 5 UAs by request count:</p>
+
+<ol>
+<li><strong>1.6L requests</strong> — Chrome 118 / Android 13 / generic Mobile — looks legit, distributed IPs.</li>
+<li><strong>1.1L requests</strong> — Chrome 121 / Windows 10 — also normal.</li>
+<li><strong>92,000 requests</strong> — <em>identical</em> UA "Mozilla/5.0 (compatible; Bytespider; +https://...)" — that's ByteDance's TikTok crawler, hammering your product pages. Block in robots.txt and at the firewall.</li>
+<li><strong>34,000 requests</strong> — Safari 14 / iOS 14.0 — old, but plausible.</li>
+<li><strong>28,000 requests</strong> — UA missing Chrome token, AppleWebKit only — almost certainly a scraper. Block.</li>
+</ol>
+
+<p>Blocking categories 3 and 5 brought load back to normal and conversion recovered to 3.4% within 48 hours. Worth roughly ₹35,000-40,000 a week in saved infrastructure costs and recovered checkout speed for a mid-sized D2C brand. The investigation took two hours, most of which was log export — the parsing itself is the fast part.</p>
+
+<h2>Privacy and what UAs reveal</h2>
+
+<p>A user agent string by itself isn't personally identifiable, but combined with screen resolution, timezone, language, and IP geolocation, it becomes a strong browser fingerprint. RBI's digital lending guidelines and SEBI's recent intermediary norms both touch on data minimisation — you shouldn't store full UA strings indefinitely if you don't need them. Most Indian fintechs hash or truncate UA after 90 days, retaining only the parsed fields (browser family, OS family) for analytics.</p>
+
+<p>For users on the other side: if you've ever wondered what your phone is silently broadcasting to every website you visit, paste your own UA into the parser and you'll see. It's surprisingly specific — many parsers will identify your exact phone model from the build code, even though you never typed it anywhere.</p>
+
+<h2>Quick reference: who needs this tool</h2>
+
+<ul>
+<li><strong>Frontend developers</strong> in Bangalore, Pune, Hyderabad debugging device-specific bugs reported by users.</li>
+<li><strong>Performance marketers</strong> segmenting Indian audience traffic by device class to optimise creative and bid strategy.</li>
+<li><strong>Security analysts</strong> at banks and fintechs separating bots from genuine UPI/net-banking traffic.</li>
+<li><strong>SaaS founders</strong> figuring out which browser versions to officially support before writing the compatibility matrix on their pricing page.</li>
+<li><strong>SEO specialists</strong> verifying that bots crawling their site are actually Googlebot and not impersonators stealing content.</li>
+<li><strong>QA engineers</strong> writing test matrices for cross-browser testing across the realistic mix of Indian devices.</li>
+</ul>
+
+<p>If your work doesn't involve any of the above, you'll probably use this once a year — but on that day, the difference between guessing and parsing is the difference between an afternoon and a week. Bookmark it alongside the other utility tools you reach for occasionally, like the <a href="/tools/percentage-calculator">percentage calculator</a> for quick markdowns or the <a href="/tools/gst-calculator">GST calculator</a> for invoice corrections, and you'll have it when you need it.</p>
+
+<p>Paste your first UA string into the <a href="/tools/user-agent-parser">User Agent Parser</a> →</p>`,
   }
 ];
 
