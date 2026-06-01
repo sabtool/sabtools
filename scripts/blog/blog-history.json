@@ -195,9 +195,10 @@
     "json-to-table-viewer",
     "twitter-card-generator",
     "chart-maker",
-    "user-agent-parser"
+    "user-agent-parser",
+    "merge-pdf"
   ],
-  "lastCategory": "security",
-  "totalPosts": 196,
-  "lastRun": "2026-06-01T09:14:53.970Z"
+  "lastCategory": "pdf",
+  "totalPosts": 197,
+  "lastRun": "2026-06-01T16:48:49.368Z"
 }
