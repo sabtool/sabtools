@@ -125,3 +125,18 @@ jobs:
         env:
           GOOGLE_SERVICE_ACCOUNT_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_KEY }}
         continue-on-error: true
+
+      # Auto-post the new blog to X (@Sabtoolsin) via X API v2 + OAuth 1.0a.
+      # Best-effort: the script always exits 0 and only emits ::warning::
+      # annotations on failure, so a missing-credentials or X-outage day
+      # never breaks the blog pipeline. Set the 4 X_* secrets in Settings →
+      # Secrets and variables → Actions; see scripts/blog/post-to-x.js for
+      # the developer.twitter.com setup walkthrough.
+      - name: Post to X (Twitter)
+        run: node scripts/blog/post-to-x.js
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+        continue-on-error: true
