@@ -159,4 +159,11 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
     description:
       "Calculate your Body Mass Index (BMI) and see your category — underweight, normal or overweight. Calibrated for Indian adults. Free, no signup.",
   },
+
+  // ── Math / Number system (page-1, 0-CTR cluster — see brief 2026-06-02) ──
+  "lakh-crore-converter": {
+    title: "Lakh & Crore to Million & Billion Converter",
+    description:
+      "Convert lakh & crore to million, billion & arab. 1 lakh crore = 1 trillion = 1,000 billion. 1 crore = 10 million. Free converter, no signup.",
+  },
 };
