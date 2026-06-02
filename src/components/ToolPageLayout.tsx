@@ -16,7 +16,6 @@ import ToolUsageCounter from "@/components/ToolUsageCounter";
 import ReviewedBy from "@/components/ReviewedBy";
 import Testimonials from "@/components/Testimonials";
 import NewsletterSignup from "@/components/NewsletterSignup";
-import TrustBadges from "@/components/TrustBadges";
 import type { Tool } from "@/lib/tools";
 import { categories } from "@/lib/tools";
 import { getToolContent } from "@/lib/tool-content";
@@ -281,8 +280,13 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
           </div>
         </div>
 
-        <TrustBadges />
-
+        {/* TrustBadges removed from tool pages 2026-06 — they pushed the
+            actual calculator below the fold on both desktop and mobile.
+            Users come here to USE the tool, not read marketing badges.
+            The 100%-Secure / No-Signup / Made-for-India copy is reinforced
+            once on the homepage hero (and in the footer if reintroduced
+            later) — that's enough. Tool pages should let the tool itself
+            be the first thing visible under the title. */}
         <AdBanner format="horizontal" className="mb-8" />
 
         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8">
