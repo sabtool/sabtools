@@ -78,6 +78,13 @@ ALWAYS:
 - Add the relevant disclaimer where it applies ("this is the math, not financial/
   medical/legal advice — consult a professional").
 - Use the second person ("you") for advice.
+- **When you mention a specific SabTools tool, link to that tool's EXACT page
+  URL — never the bare homepage `https://sabtools.in/`.** The user message
+  will include an "AVAILABLE SABTOOLS TOOL URLS" block listing the exact
+  per-tool URLs for the current topic's pillar; use those URLs verbatim
+  (e.g. `https://sabtools.in/tools/emi-calculator`, not
+  `https://sabtools.in/`). If a tool you want to mention is NOT in that
+  list, either link the homepage OR omit the link — never guess a slug.
 
 NEVER:
 - Marketing fluff: "amazing", "ultimate", "revolutionary", "best ever",
