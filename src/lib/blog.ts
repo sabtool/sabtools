@@ -36467,6 +36467,148 @@ small finance banks remain the clear leaders in terms of returns
 <p>If you need a world clock for one-off lookups and you don't mind a generic global grid, <a href="https://www.rapidtables.com/" rel="noopener" target="_blank">RapidTables</a> does the job. If you live inside Calculator.net for finance and BMI calculations and want one site for everything, <a href="https://www.calculator.net/" rel="noopener" target="_blank">Calculator.net</a>'s world clock is good enough. But if you're an Indian user — NRI, freelancer, student, trader, or anyone coordinating across IST and the rest of the world daily — a world clock that defaults to IST, shows seconds live, lets you pin Gulf/SEA/US cities without a signup, and loads without ad reflow is the one you'll actually keep open in a tab.</p>
 
 <p>Try <a href="/tools/world-clock">SabTools' World Clock →</a></p>`,
+  },
+  {
+    slug: "news-2026-06-02-cryptocurrency-tax-rules-in-india-and-recent-cbdt-clarificat",
+    title: "Cryptocurrency tax rules in India and recent CBDT clarifications (2026 Update)",
+    description: "Cryptocurrency tax rules in India and recent CBDT clarifications — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-06-02",
+    category: "Finance",
+    readTime: "11 min read",
+    keywords: ["Cryptocurrency tax rules in", "finance news india 2026", "india 2026 update"],
+    toolSlug: "emi-calculator",
+    image: {
+      src: "/blog/emi-calculator.webp",
+      alt: "Cryptocurrency tax rules in India and recent CBDT clarifications (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>India's crypto tax regime just got tighter — here's what changed</h2>
+
+<p>If you bought, sold, swapped, or even received cryptocurrency in the last financial year, the tax rules you operated under are no longer the same. Between the Union Budget 2025 announced on 1 February 2025 and the CBDT's follow-up notifications stretching into 2026, the framework around Virtual Digital Assets (VDAs) has been overhauled with three big moves: VDAs are now formally treated as "undisclosed income" for block assessments, a new reporting obligation has been placed on Indian exchanges and offshore platforms serving Indian users, and the legal definition of a "crypto-asset" has been broadened.</p>
+
+<p>For the salaried professional in Bangalore who picked up some ETH on a long weekend, the freelancer in Pune who took a USDT payment from an overseas client, or the small trader in Surat moving funds across wallets, this matters. The compliance bar has been raised, the penalty for getting it wrong has gone up, and the timelines for new reporting standards have been published.</p>
+
+<p>Here is a grounded walk-through of what's new, what is unchanged, and what an Indian taxpayer should actually do for FY 2025-26 returns.</p>
+
+<h2>The base rules still in force: 30% tax and 1% TDS</h2>
+
+<p>Start with what hasn't changed. The flat tax rate that the Finance Act 2022 introduced is still the headline number. <a href="https://www.cryptact.com/en/blog/vda-income-tax-india-2025-complete-guide-to-crypto-tax-rules-sections-and-filing-process" rel="noopener" target="_blank">Profits from the transfer of any VDA — crypto or NFT — are subject to a flat 30% rate, under Section 115BBH of the Income Tax Act, introduced in the Union Budget 2022</a>. Add the 4% health and education cess and any applicable surcharge, and the minimum effective rate sits at <a href="https://www.patronaccounting.com/blog/crypto-vda-taxation-income-tax-act-2025-rules" rel="noopener" target="_blank">31.2%</a>.</p>
+
+<p>Two features of this regime continue to sting:</p>
+
+<ul>
+<li><strong>No deduction beyond cost of acquisition.</strong> <a href="https://coinswitch.co/switch/crypto/section-115bbh-and-vda-tax/" rel="noopener" target="_blank">Other expenses — exchange fees, internet costs, infrastructure — are not deductible from VDA gains</a>.</li>
+<li><strong>No loss set-off.</strong> Losses from one crypto trade cannot be offset against gains from another, nor against salary, rent, capital gains from equity, or any other head of income. They also cannot be carried forward.</li>
+</ul>
+
+<p>Layered on top is Section 194S. <a href="https://coindcx.com/blog/cryptocurrency/crypto-tax-guide-india/" rel="noopener" target="_blank">A 1% Tax Deducted at Source (TDS) is levied on all transfers of Virtual Digital Assets, applying to both individual and institutional transactions</a>. The threshold is modest — <a href="https://coinswitch.co/switch/crypto/section-115bbh-and-vda-tax/" rel="noopener" target="_blank">TDS kicks in once aggregate transactions exceed ₹50,000 in a financial year, or ₹10,000 in certain cases</a> — so most active traders trip it within their first few orders of the year.</p>
+
+<p>The TDS is creditable. When you file your return, you can offset the 1% that exchanges have already deducted against your final 30% liability. The point of the TDS, from the government's perspective, was never revenue — it was a paper trail.</p>
+
+<h2>What the Union Budget 2025 changed</h2>
+
+<p>The 1 February 2025 Budget made three structural amendments that move India's crypto framework from "high tax" to "high tax with teeth."</p>
+
+<h3>1. Crypto now counts as "undisclosed income" under block assessments</h3>
+
+<p>This is the move that didn't get enough mainstream attention. <a href="https://www.koinx.com/tax-guides/crypto-as-undisclosed-income-what-it-means-for-indian-investors" rel="noopener" target="_blank">The 2025 Union Budget introduced a critical change to how crypto assets are treated under Indian tax laws, amending Section 158B of the Income Tax Act so that Virtual Digital Assets are now officially recognised as part of the definition of undisclosed income</a>.</p>
+
+<p>Why does this matter? Because Section 158B governs block assessments — the regime that kicks in after a tax search. <a href="https://vakilsearch.com/article/block-assessment-section-158bc/" rel="noopener" target="_blank">Under Section 158BC, undisclosed income for the block period is taxed at a flat sixty per cent</a>. Add cess and surcharges, and <a href="https://cointelegraph.com/explained/india-wants-30-of-your-crypto-gains-but-thats-not-the-worst-part" rel="noopener" target="_blank">from 1 February 2025, unreported crypto income discovered during tax raids can be taxed at 60%, along with additional surcharges and cess</a>.</p>
+
+<p>In practical terms: if the tax department finds VDAs in a search action that you never disclosed, those holdings are now treated the same way as unaccounted cash, jewellery, or bullion. The 30% rate that applies to disclosed crypto gains becomes a 60%-plus rate for the undisclosed pile.</p>
+
+<h3>2. The definition of "crypto-asset" expanded</h3>
+
+<p>The Finance Act 2025 widened the legal net. <a href="https://www.patronaccounting.com/blog/crypto-vda-taxation-income-tax-act-2025-rules" rel="noopener" target="_blank">The Finance Act 2025 expanded the VDA definition by adding sub-clause (d) to explicitly include "crypto-asset"</a>. This is more than tidying-up. It pulls in instruments and tokens that earlier sat in a grey zone — wrapped tokens, certain stable coins, and emerging on-chain assets that didn't squarely fit the older definitions.</p>
+
+<h3>3. A new reporting obligation: Section 285BAA</h3>
+
+<p>Until now, the obligation to report crypto activity sat almost entirely with the taxpayer. Budget 2025 changed that. <a href="https://coinswitch.co/building-blocks/21343-2/" rel="noopener" target="_blank">A reporting entity, as prescribed under Section 285BAA of the Act, will be required to furnish information of crypto-assets</a>.</p>
+
+<p>The legal text is direct. <a href="https://www.cryptotimes.io/2025/02/01/india-defines-crypto-tax-reporting-mandatory-from-2026/" rel="noopener" target="_blank">Under the new clause 285BAA, if a person wrongly reports crypto-asset transactions, an initial 30-day notice period is given to respond, after which penal provisions of income tax will be applied</a>. <a href="https://candourlegal.com/section-509-crypto-reporting-india-carf-2027/" rel="noopener" target="_blank">The obligation takes effect from 1 April 2026, with reporting entities broadly including Indian crypto exchanges, custodians, wallet providers, broker-dealer platforms, and offshore VDASPs servicing Indian users, as notified by the CBDT</a>.</p>
+
+<p>This is the structural shift. From FY 2026-27 onwards, the department will receive transaction-level data directly from platforms, similar to how it already receives AIS/SFT feeds from banks and brokers.</p>
+
+<h2>The CBDT's March 2026 notification: the operational layer</h2>
+
+<p>If Budget 2025 set the principle, the operational mechanics arrived in early 2026. <a href="https://taxguru.in/income-tax/cbdt-amends-income-tax-rules-forms-include-crypto-assets-digital-currency-reporting.html" rel="noopener" target="_blank">Through Notification No. 19/2026 dated 5 March 2026, the Central Government amended the Income-tax Rules, 1962, modifying Rules 114F, 114G and 114H under the powers granted by Sections 295 and 285BA of the Income-tax Act, 1961</a>.</p>
+
+<p>These rule changes update the reporting formats — the same ones banks already use for FATCA and CRS — to accommodate crypto-asset and digital currency disclosures. India is now openly preparing for international data-sharing on crypto. <a href="https://candourlegal.com/section-509-crypto-reporting-india-carf-2027/" rel="noopener" target="_blank">The reforms are part of India's path to the OECD Crypto-Asset Reporting Framework (CARF) in 2027</a>.</p>
+
+<p>For users, the practical upshot is that an Indian exchange and the Income Tax Department will be on the same page about your trade history. If your ITR shows ₹2 lakh in crypto gains and the exchange has reported ₹6 lakh of activity, the mismatch will be flagged automatically.</p>
+
+<h2>Schedule VDA: where it all gets reported</h2>
+
+<p>The reporting field itself isn't new for FY 2025-26 — Schedule VDA has been in ITR forms since AY 2023-24 — but the level of granularity it demands has hardened.</p>
+
+<p><a href="https://www.patronaccounting.com/blog/crypto-vda-taxation-income-tax-act-2025-rules" rel="noopener" target="_blank">Schedule VDA, the dedicated schedule in ITR-2 and ITR-3, requires transaction-wise reporting of VDA income, including date of acquisition, date of transfer, cost of acquisition, sale consideration, and resulting income</a>.</p>
+
+<p>Which form to file depends on how you treat your crypto activity. <a href="https://cleartax.in/s/cryptocurrency-taxation-guide" rel="noopener" target="_blank">For FY 2025-26 and AY 2026-27, taxpayers declare cryptocurrency taxes using either ITR-2 (if reporting as capital gains) or ITR-3 (if reporting as business income), under Schedule VDA</a>. Frequent intraday or arbitrage traders are typically pushed into ITR-3 as business income; investors holding for the long term tend to use ITR-2.</p>
+
+<p>Two reporting traps to watch for:</p>
+
+<ul>
+<li><strong>Offshore holdings.</strong> <a href="https://indiapolicyhub.in/2026/04/23/crypto-tax-rules-india/" rel="noopener" target="_blank">If you hold crypto in offshore wallets or foreign exchanges, it must also be declared in Schedule FA (Foreign Assets) to avoid severe penalties</a>. The Black Money Act carries far stiffer consequences than ordinary income tax non-disclosure.</li>
+<li><strong>Staking, airdrops, and rewards.</strong> <a href="https://indiapolicyhub.in/2026/04/23/crypto-tax-rules-india/" rel="noopener" target="_blank">As of early 2026, there is no specific CBDT circular that directly spells out how staking rewards should be taxed; the prevailing practitioner view is that they are treated as "income from other sources" at fair market value on the date of receipt</a>. A subsequent disposal then attracts the 30% rate on the difference between sale price and that recorded value.</li>
+</ul>
+
+<h2>What this means in rupee terms — a worked example</h2>
+
+<p>Take Ravi, a 32-year-old product manager in Hyderabad earning ₹22 lakh per annum. During FY 2025-26 he:</p>
+
+<ul>
+<li>Bought BTC worth ₹4,00,000 in May 2025</li>
+<li>Sold the same BTC for ₹6,50,000 in January 2026</li>
+<li>Earned ₹15,000 in staking rewards on a different token</li>
+<li>Lost ₹80,000 on an altcoin punt</li>
+</ul>
+
+<p>Under the current rules:</p>
+
+<ul>
+<li>Gain on BTC = ₹6,50,000 − ₹4,00,000 = <strong>₹2,50,000</strong>. Tax at 30% = ₹75,000. Cess at 4% on that tax = ₹3,000. Total: <strong>₹78,000</strong>.</li>
+<li>The ₹80,000 altcoin loss <strong>cannot</strong> be set off against the ₹2,50,000 BTC gain. It is dead weight.</li>
+<li>The ₹15,000 staking reward is reported as income from other sources at slab rate, then any later disposal is governed by Section 115BBH.</li>
+<li>If the exchange already deducted 1% TDS on the ₹6,50,000 sale (₹6,500), Ravi credits that against his ₹78,000 liability and pays the balance of ₹71,500.</li>
+</ul>
+
+<p>Ravi's salary income continues to be taxed under his normal slab. The crypto liability is computed separately and stacked on top.</p>
+
+<h2>Why this hits home loan EMIs and household budgets</h2>
+
+<p>Many Indian crypto holders are also juggling traditional financial commitments — a home loan in NCR, a car loan, an under-construction flat in Bengaluru with EMI starting next quarter. The crypto tax framework affects this in two ways.</p>
+
+<p>First, you cannot net crypto losses against salary or rental income, so a bad year on tokens doesn't reduce the take-home that services your EMI. Second, if you were planning to liquidate crypto to fund a down payment, the 30% flat rate plus 4% cess means your usable proceeds are smaller than the screen value of your holdings.</p>
+
+<p>If you're sizing a home loan against a part-crypto, part-salary income picture, work the numbers carefully: take your post-tax crypto proceeds (assume only 68.8% of the gain reaches you), not the gross figure. You can model the resulting EMI on different loan amounts, tenures, and interest rates using the SabTools <a href="/tools/emi-calculator">EMI Calculator</a> to see whether the home loan you're considering is still comfortable after the crypto tax bite, or whether you need a longer tenure to keep the monthly outgo serviceable.</p>
+
+<h2>A practical compliance checklist for FY 2025-26</h2>
+
+<p>Whether you trade actively or hold a small bag, the following steps are now essentially non-negotiable:</p>
+
+<ol>
+<li><strong>Export complete CSVs from every exchange and wallet.</strong> <a href="https://www.cryptact.com/en/blog/itr-crypto-reporting-india-ay-2026-27-where-and-how-to-report-crypto-in-your-income-tax-return" rel="noopener" target="_blank">For ITR filing for AY 2026-27, you need full-year CSVs with dates, quantities, trading pairs, and INR values, and any TDS under Section 194S handy to match with Form 26AS</a>.</li>
+<li><strong>Reconcile TDS with Form 26AS and AIS.</strong> Exchanges file TDS returns under Section 194S; the credit must show up in your 26AS. If it doesn't, raise it with the exchange before filing.</li>
+<li><strong>Pick the right ITR form.</strong> Capital gains treatment → ITR-2. Business / trading treatment → ITR-3. Inconsistency between years invites scrutiny.</li>
+<li><strong>Disclose foreign holdings in Schedule FA.</strong> Coinbase, Binance, Kraken accounts, hardware wallets where the underlying entity is offshore — all must be reported.</li>
+<li><strong>Don't try to "wash" through P2P or stable coins.</strong> The expanded VDA definition under Finance Act 2025 has caught most of these workarounds, and the Section 285BAA reporting net from April 2026 will catch the rest.</li>
+<li><strong>Maintain a personal trade ledger.</strong> Exchanges shut down. Some delist. The taxpayer who can show a clean ledger of acquisitions and disposals is the one who survives a scrutiny notice four years later.</li>
+</ol>
+
+<h2>The direction of travel</h2>
+
+<p>India's crypto tax stance from 2022 was a deterrent posture: high flat rate, no loss set-off, mandatory TDS. The 2025-26 changes shift the posture from deterrence to enforcement. Three signals back this up:</p>
+
+<ul>
+<li>VDAs being added to the "undisclosed income" definition under Section 158B opens the door for 60%+ assessment on amounts found in a search — a serious change from a flat 30% on disclosed gains.</li>
+<li>Section 285BAA shifts the burden of reporting onto exchanges and wallet providers from 1 April 2026, with notice and penalty provisions for incorrect reporting.</li>
+<li>India's alignment with the OECD CARF framework means cross-border information exchange on crypto holdings will be operational by 2027, mirroring what already exists for bank accounts under CRS.</li>
+</ul>
+
+<p>For Indian readers who hold any meaningful position in crypto, the implication is straightforward: assume the department will eventually see your full activity through reporting from exchanges and cross-border data sharing, and file accordingly now. The cost of clean compliance — 30% on disclosed gains — is high, but it is bounded. The cost of being caught with undisclosed VDAs after February 2025 is materially worse.</p>
+
+<p>The CBDT has not yet issued the granular FAQs that taxpayers and practitioners are still waiting on — particularly on staking, lending, liquidity-pool participation, and DeFi mechanics. Those are likely to come as the Section 285BAA framework becomes operational over the next fiscal cycle. Until then, the prudent default is to treat every receipt of a VDA as a potentially taxable event and document accordingly.</p>`,
   }
 ];
 
