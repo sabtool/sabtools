@@ -196,9 +196,10 @@
     "twitter-card-generator",
     "chart-maker",
     "user-agent-parser",
-    "merge-pdf"
+    "merge-pdf",
+    "instagram-bio-generator"
   ],
-  "lastCategory": "pdf",
-  "totalPosts": 197,
-  "lastRun": "2026-06-01T16:48:49.368Z"
+  "lastCategory": "social",
+  "totalPosts": 198,
+  "lastRun": "2026-06-02T09:27:19.045Z"
 }
