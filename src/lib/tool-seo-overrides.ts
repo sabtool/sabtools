@@ -84,9 +84,9 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
       "Calculate simple interest on any principal, rate and time period. Instant result with the P×R×T formula shown step by step. Free, no signup.",
   },
   "income-tax-calculator": {
-    title: "Income Tax Calculator FY 2026-27 — New & Old Regime",
+    title: "Income Tax Calculator FY 2025-26 — New & Old Regime",
     description:
-      "Calculate income tax for FY 2026-27 under the new and old regime. Compare both, see slab-wise tax, cess and take-home pay. Free, built for India.",
+      "Calculate income tax for FY 2025-26 under the new and old regime. Compare both, see slab-wise tax, cess and take-home pay. Free, built for India.",
   },
   "nps-calculator": {
     title: "NPS Calculator — Pension & Maturity Corpus Estimator",
