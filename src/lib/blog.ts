@@ -36609,6 +36609,124 @@ small finance banks remain the clear leaders in terms of returns
 <p>For Indian readers who hold any meaningful position in crypto, the implication is straightforward: assume the department will eventually see your full activity through reporting from exchanges and cross-border data sharing, and file accordingly now. The cost of clean compliance — 30% on disclosed gains — is high, but it is bounded. The cost of being caught with undisclosed VDAs after February 2025 is materially worse.</p>
 
 <p>The CBDT has not yet issued the granular FAQs that taxpayers and practitioners are still waiting on — particularly on staking, lending, liquidity-pool participation, and DeFi mechanics. Those are likely to come as the Section 285BAA framework becomes operational over the next fiscal cycle. Until then, the prudent default is to treat every receipt of a VDA as a potentially taxable event and document accordingly.</p>`,
+  },
+  {
+    slug: "indian-food-calorie-counter-guide-2026",
+    title: "How to Use Indian Food Calorie Counter Online — Step-by-Step Guide",
+    description: "Free Indian Food Calorie Counter online — track calories, protein, carbs and fat for 100+ indian foods with meal tracker. Step-by-step guide with tips. 100% ...",
+    date: "2026-06-03",
+    category: "Cooking",
+    readTime: "11 min read",
+    keywords: ["calorie", "indian food", "nutrition", "protein", "carbs", "fat", "diet", "meal"],
+    toolSlug: "indian-food-calorie-counter",
+    image: {
+      src: "/blog/indian-food-calorie-counter.webp",
+      alt: "Indian Food Calorie Counter — Free Online Track calories, protein, carbs and fat for 100+ Indian foods with meal tracker Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>A standard North Indian thali — two rotis, one katori dal, half a cup of rice, a small sabzi, dahi, salad, and a piece of pickle — looks innocent until you add it up: roughly <strong>650-720 kcal</strong>. Eat that twice a day with a poha breakfast and an evening chai-biscuit, and a 70 kg software engineer in Whitefield is already nudging <strong>2,000 kcal</strong> before dinner. Most Indians have no clue. We grew up on portion cues like "ek aur roti le lo" rather than gram-level tracking, and almost every calorie app on the Play Store is built around grilled chicken breast and oats — not bhindi sabzi, pongal, or pav bhaji.</p>
+
+<p>That is the gap the Indian Food Calorie Counter is built for. It carries calorie, protein, carb and fat data for <strong>100+ Indian dishes</strong> in the units we actually serve them: one chapati, one katori, one idli, one dosa — not a sterile "100 g serving" that nobody measures at home.</p>
+
+<h2>Why generic calorie apps fail for Indian diets</h2>
+
+<p>Open MyFitnessPal and search "dal." You will get fifteen user-submitted entries ranging from 90 to 280 kcal per serving, with "serving" undefined. Search "roti" and half the results are tortillas. The problem is structural: Western nutrition databases were built around packaged foods and single-ingredient proteins. Indian home cooking is the opposite — a chole that varies by 40% in calories depending on how much oil your mum's tadka uses, a biryani that is 600 kcal in Hyderabad style and 850 kcal when a Lucknow halwai makes it.</p>
+
+<p>A working calorie counter for Indians has to do three things differently. First, it has to use <strong>household units</strong> — one paratha, one wati, one piece — because nobody weighs their food on a kitchen scale at 8 PM after a Bangalore traffic commute. Second, it has to handle <strong>regional variation</strong> sensibly, defaulting to a reasonable home-cooked version rather than restaurant excess. Third, it has to surface the <strong>macro split</strong>, because the real problem in Indian diets isn't calories — it's that we eat 65% of them as carbs and barely 10-12% as protein.</p>
+
+<h2>What's in the database (and how the numbers were chosen)</h2>
+
+<p>The tool covers the dishes that actually show up on Indian plates Monday through Sunday. A representative slice:</p>
+
+<ul>
+<li><strong>Rotis and breads:</strong> chapati (~71 kcal), phulka (~60 kcal), aloo paratha (~290 kcal), butter naan (~310 kcal), bhatura (~340 kcal), puri (~100 kcal each).</li>
+<li><strong>Rice dishes:</strong> plain steamed rice per katori (~135 kcal), jeera rice (~170 kcal), veg biryani (~290 kcal per plate), chicken biryani (~480 kcal per plate), pulao (~210 kcal), curd rice (~180 kcal).</li>
+<li><strong>Dals and curries:</strong> moong dal (~104 kcal/katori), arhar/toor dal (~120 kcal), rajma (~165 kcal), chole (~180 kcal), kadhi (~110 kcal), sambar (~95 kcal).</li>
+<li><strong>South Indian:</strong> idli (~40 kcal each), plain dosa (~135 kcal), masala dosa (~390 kcal), medu vada (~135 kcal), upma (~210 kcal/bowl), pongal (~280 kcal).</li>
+<li><strong>Snacks and street food:</strong> samosa (~260 kcal), kachori (~290 kcal), pav bhaji (~400 kcal), vada pav (~290 kcal), pani puri 6 pieces (~330 kcal), bhel puri (~280 kcal).</li>
+<li><strong>Sweets:</strong> gulab jamun (~150 kcal each), rasgulla (~125 kcal), jalebi (~150 kcal/piece), laddu (~190 kcal), kheer (~250 kcal/katori).</li>
+<li><strong>Drinks and dairy:</strong> masala chai with sugar (~70 kcal), filter coffee (~60 kcal), buttermilk (~40 kcal), lassi sweet (~260 kcal), paneer 100 g (~265 kcal), dahi 1 katori (~75 kcal).</li>
+</ul>
+
+<p>The values lean toward <em>home-cooked, moderate-oil</em> versions — typical of a Pune or Hyderabad household kitchen, not a Punjabi dhaba. If you eat out at a Saravana Bhavan or Karim's, mentally add 15-25%.</p>
+
+<h2>Building a day: a real example</h2>
+
+<p>Take Rahul, a 28-year-old product manager in Gurgaon, 75 kg, mostly desk-bound, gym thrice a week. His maintenance calories sit around <strong>2,300 kcal</strong>. He wants to lose 5 kg before his sister's wedding in March, so he's targeting a 500 kcal deficit — about <strong>1,800 kcal/day</strong>. Here's a typical day plugged into the meal tracker:</p>
+
+<ul>
+<li><strong>Breakfast (7:30 AM):</strong> 2 idlis with sambar + 1 cup filter coffee = 80 + 95 + 60 = <strong>235 kcal</strong></li>
+<li><strong>Mid-morning (11 AM):</strong> 1 banana + 10 almonds = 90 + 70 = <strong>160 kcal</strong></li>
+<li><strong>Lunch (1:30 PM):</strong> 2 chapatis + 1 katori dal + 1 katori bhindi sabzi + 1 katori dahi + salad = 142 + 120 + 110 + 75 + 30 = <strong>477 kcal</strong></li>
+<li><strong>Evening (5 PM):</strong> Masala chai + 2 marie biscuits = 70 + 50 = <strong>120 kcal</strong></li>
+<li><strong>Dinner (8:30 PM):</strong> 1 katori brown rice + 1 katori rajma + 100 g grilled paneer + cucumber = 135 + 165 + 265 + 20 = <strong>585 kcal</strong></li>
+<li><strong>Post-workout (9:30 PM):</strong> 1 scoop whey in milk = <strong>220 kcal</strong></li>
+</ul>
+
+<p>Total: <strong>1,797 kcal</strong>, protein roughly <strong>92 g</strong>, carbs <strong>205 g</strong>, fat <strong>55 g</strong>. That's a real deficit day that's also high enough on protein (1.2 g/kg) to preserve muscle. Compare this to Rahul's <em>old</em> default — aloo paratha breakfast, butter chicken lunch, samosa snack, biryani dinner — which used to clock <strong>3,100 kcal</strong> and only <strong>65 g</strong> of protein.</p>
+
+<p>The math itself isn't hard once you can see it; if you want to crunch the percentage of calories coming from each macro, the <a href="/tools/percentage-calculator">percentage calculator</a> handles that in seconds. The hard part is having reliable per-dish numbers for Indian food, which is what the meal tracker is for.</p>
+
+<h2>The protein problem nobody talks about</h2>
+
+<p>The Indian Council of Medical Research recommends <strong>0.83 g of protein per kg of body weight</strong> for sedentary adults — so a 60 kg woman needs ~50 g, a 75 kg man needs ~62 g. National Nutrition Monitoring Bureau surveys show the average urban Indian eats closer to <strong>0.6 g/kg</strong>, and vegetarians in the 18-35 age group are often below that. Two rotis, dal, sabzi, and a katori curd add up to maybe 18-22 g of protein per meal. Three meals a day, you're at 55-65 g — barely sedentary maintenance, nowhere near enough if you lift weights or are trying to lose fat without losing muscle.</p>
+
+<p>Tracking protein per meal — which the counter does column-by-column — exposes this fast. Within a week most users realise their daily total is 40-50 g lower than they assumed. The fix is rarely "eat more chicken." It's adding 100 g paneer (18 g protein), a katori of rajma or chole (12-14 g), Greek-style hung curd (10 g), sprouted moong (15 g per cup), or a scoop of whey. For vegetarians especially, the calorie counter doubles as a protein audit.</p>
+
+<h2>Weight loss vs weight gain: setting the right target</h2>
+
+<p>The tool isn't opinionated about your goal — it just gives you numbers. But here's how to set the target sensibly:</p>
+
+<ol>
+<li><strong>Estimate BMR.</strong> Mifflin-St Jeor formula: for a 30-year-old, 65 kg, 165 cm woman, BMR ≈ <strong>1,355 kcal</strong>. For a 32-year-old, 78 kg, 175 cm man, BMR ≈ <strong>1,720 kcal</strong>.</li>
+<li><strong>Multiply by activity factor.</strong> Desk job + 3 gym sessions/week = 1.4. So the woman above needs ~1,900 kcal to maintain; the man, ~2,400 kcal.</li>
+<li><strong>Apply your goal delta.</strong> Fat loss: subtract 400-500 kcal. Lean bulk: add 250-300 kcal. Anything more aggressive than that and you'll lose muscle or gain only fat.</li>
+</ol>
+
+<p>A Mumbai homemaker tracking her 9-year-old's tiffin and her own meals to lose post-pregnancy weight, a Kota student trying to put on 6 kg before college, a 50-year-old shopkeeper in Surat managing pre-diabetes — they all need the same three pieces of data per dish: calories, protein, and carbs. The meal tracker stores meals across breakfast, lunch, dinner and snacks so the daily total is one glance, not mental arithmetic.</p>
+
+<h2>Smart logging habits that actually stick</h2>
+
+<p>Most people quit calorie tracking in week two. The dropouts share three habits, and you can pre-empt all of them:</p>
+
+<ul>
+<li><strong>Don't log perfectly — log directionally.</strong> If your dal had two teaspoons of ghee instead of one, the calorie count is off by ~40 kcal. That's noise. The signal is whether your day is at 1,800 or 2,500.</li>
+<li><strong>Pre-log the day at breakfast.</strong> If you know dinner is biryani at a cousin's place, log it at 8 AM and adjust lunch downward. Reactive logging at 11 PM is how people give up.</li>
+<li><strong>Use household units honestly.</strong> One "katori" in your kitchen might be 150 ml; in your in-laws' kitchen it might be 220 ml. Measure your bowls once with water and a measuring cup — the <a href="/tools/recipe-unit-converter">recipe unit converter</a> handles katori-to-ml and tablespoon-to-gram conversions for common ingredients.</li>
+</ul>
+
+<p>Tracking for 14 consecutive days is more valuable than tracking perfectly for 4 days and quitting. Pick the floor that you can hold.</p>
+
+<h2>Eating out, weddings, and the 80/20 rule</h2>
+
+<p>India runs on social food. Diwali, Ganesh Chaturthi, weddings every winter, somebody's mundan, a birthday at the office — there is a "cheat meal" landmine roughly every 9 days. Pretending otherwise is why diets fail here when they work fine for someone in Sweden.</p>
+
+<p>A more realistic frame: <strong>aim for your target on 5-6 days a week, eat freely on 1-2.</strong> A typical Indian wedding dinner — paneer tikka starter, 2 puris, dal makhani, paneer butter masala, jeera rice, gulab jamun, ice cream — runs <strong>1,400-1,800 kcal</strong> in one sitting. If your week's deficit is 3,500 kcal across six tracked days, one wedding doesn't undo it; it just trims the fat-loss rate. Two weddings in one week, plus the office Diwali lunch, will.</p>
+
+<p>The street food count surprises people: pav bhaji at Juhu is ~400 kcal but with the extra butter pat it's closer to 500; a plate of pani puri (6 pieces) is 330 kcal; chai-samosa at 5 PM is 330 kcal — a "small" snack that's a quarter of a fat-loss day's budget.</p>
+
+<h2>Connecting nutrition with the rest of your household math</h2>
+
+<p>For homemakers, the calorie tracker tends to sit in the same workflow as broader kitchen planning. If you're budgeting how long your <a href="/tools/gas-cylinder-calculator">14.2 kg LPG cylinder</a> will last against your weekly menu, or checking <a href="/tools/water-tds-calculator">water TDS</a> to decide whether your morning chai needs an RO purifier, or timing pressure-cooker whistles for <a href="/tools/cooking-time-calculator">rajma vs chole</a>, the calorie counter slots in alongside them. The kitchen is one system; treating diet, cost, and time as separate spreadsheets is what makes it feel overwhelming.</p>
+
+<p>Freelancers and small business owners juggling <a href="/tools/gst-calculator">GST returns</a> and quarterly advance tax often skip lunch, snack at 4 PM on biscuits and chai, then eat a heavy 10 PM dinner. That pattern, more than the absolute calorie count, is what drives the belly fat in the 30-45 age bracket. Logging two weeks honestly makes the timing problem visible without anyone needing to lecture you about it.</p>
+
+<h2>Quick answers</h2>
+
+<h3>How accurate are the calorie values for home-cooked dishes?</h3>
+<p>Within roughly ±10-15%, which is the realistic ceiling for any food database — your mum's chole and a Delhi dhaba's chole genuinely differ by that much. For tracking trends and hitting weekly deficits, that accuracy is plenty. For competitive bodybuilding contest prep, you'd weigh raw ingredients and log them individually.</p>
+
+<h3>How do I count a thali or a mixed plate?</h3>
+<p>Log each component separately — 2 rotis, 1 katori dal, 1 katori sabzi, 1 katori dahi, salad. The tracker adds them. Don't search for "North Indian thali" as one entry; the variance is too high.</p>
+
+<h3>Does the tool handle Jain, vegan, and diabetic diets?</h3>
+<p>The database includes plenty of options for all three. Jain users can skip onion-garlic dishes and use the dal/paneer/sabzi entries. Vegans swap dahi for plant curd and paneer for tofu (similar calorie band, slightly lower protein). Diabetics should pay attention to the carb column more than the calorie column — a 135 kcal katori of rice has 28 g of carbs, while a 165 kcal katori of rajma has only 22 g carbs plus 12 g protein and 7 g fibre. Same calories, very different blood sugar impact.</p>
+
+<h3>Should I track every single day forever?</h3>
+<p>No. Track tightly for 4-6 weeks until you can eyeball portions and macros reasonably well, then re-track for a week every 2-3 months as a calibration check. The skill, once built, doesn't fully disappear.</p>
+
+<p>Open the <a href="/tools/indian-food-calorie-counter">Indian Food Calorie Counter</a> and log tomorrow's breakfast, lunch and dinner before you eat them →</p>`,
   }
 ];
 
