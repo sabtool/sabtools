@@ -199,9 +199,10 @@
     "merge-pdf",
     "instagram-bio-generator",
     "world-clock",
-    "indian-food-calorie-counter"
+    "indian-food-calorie-counter",
+    "gst-number-validator"
   ],
-  "lastCategory": "cooking",
-  "totalPosts": 200,
-  "lastRun": "2026-06-03T10:02:43.672Z"
+  "lastCategory": "utility",
+  "totalPosts": 201,
+  "lastRun": "2026-06-03T15:08:30.304Z"
 }
