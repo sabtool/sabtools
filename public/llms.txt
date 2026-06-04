@@ -1,0 +1,61 @@
+# SabTools.in
+
+> SabTools.in is a free online tools platform for India offering 450+ calculators, converters, PDF tools, image editors, and AI writing utilities across 38 categories. Every tool runs client-side in the browser with zero data collection, requires no signup, and supports Indian formats (₹, lakhs/crores, GST slabs, FY 2025-26 tax rules). 424+ tools are also available in Hindi.
+
+SabTools.in was founded in 2025 by Rakesh Seervi. It is a free, privacy-first alternative to ad-heavy, signup-gated calculator websites. Tools follow Indian standards from the RBI, Income Tax Department, GST Council, and ICMR. No data ever leaves the user's device.
+
+## About
+- [About SabTools.in](https://sabtools.in/about): What SabTools is, who built it, and why — 450+ free tools, privacy-first, built for India.
+
+## Popular Finance & Tax Calculators
+- [GST Calculator](https://sabtools.in/tools/gst-calculator): Calculate GST at 5%, 12%, 18%, 28% — inclusive and exclusive, with CGST/SGST/IGST split.
+- [EMI Calculator](https://sabtools.in/tools/emi-calculator): Home, car, and personal loan EMI using the standard reducing-balance formula matching Indian banks.
+- [Income Tax Calculator](https://sabtools.in/tools/income-tax-calculator): Income tax for FY 2025-26 under old and new regime, with slab-wise breakdown, cess, and 87A rebate.
+- [SIP Calculator](https://sabtools.in/tools/sip-calculator): Mutual fund SIP returns with optional step-up and goal planning.
+- [FD Calculator](https://sabtools.in/tools/fd-calculator): Fixed deposit maturity and interest with quarterly compounding.
+- [PPF Calculator](https://sabtools.in/tools/ppf-calculator): Public Provident Fund maturity over a 15-year horizon.
+- [HRA Exemption Calculator](https://sabtools.in/tools/hra-calculator): HRA exemption under Section 10(13A) — minimum of actual HRA, rent minus 10% basic, and 50%/40% basic.
+- [Compound Interest Calculator](https://sabtools.in/tools/compound-interest-calculator): Compound interest with monthly, quarterly, or yearly compounding.
+- [Lakh & Crore Converter](https://sabtools.in/tools/lakh-crore-converter): Convert lakh & crore to million, billion & arab. 1 lakh crore = 1 trillion = 1,000 billion; 1 crore = 10 million.
+
+## Popular Utility & Health Tools
+- [BMI Calculator](https://sabtools.in/tools/bmi-calculator): Body Mass Index with both WHO and ICMR (South Asian) categories.
+- [Compress PDF](https://sabtools.in/tools/compress-pdf): Compress PDF files to a target size (e.g. 100KB) for Indian government and exam uploads — runs entirely in the browser.
+- [Age Calculator](https://sabtools.in/tools/age-calculator): Exact age in years, months, and days.
+- [Percentage Calculator](https://sabtools.in/tools/percentage-calculator): Percentage increase, decrease, and of-value calculations.
+
+## Tool Categories
+- [Finance Calculators](https://sabtools.in/category/finance): EMI, SIP, FD, RD, PPF, loan and investment calculators.
+- [Tax & Salary](https://sabtools.in/category/tax): Income tax, HRA, TDS, EPF, NPS, and salary calculators for India.
+- [PDF Tools](https://sabtools.in/category/pdf): Compress, merge, split, and convert PDF files.
+- [Image Tools](https://sabtools.in/category/image): Compress, resize, crop, and convert JPG, PNG, WebP images.
+- [Health & Fitness](https://sabtools.in/category/health): BMI, BMR, calorie, and pregnancy calculators using ICMR/WHO standards.
+- [Developer Tools](https://sabtools.in/category/developer): JSON formatter, Base64, hash generator, regex tester.
+- [AI Writing Tools](https://sabtools.in/category/ai): Paragraph rewriter, email writer, story and bio generators.
+- [Education](https://sabtools.in/category/education): GPA, CGPA, grade calculators and study tools.
+- [Exam & Competitive](https://sabtools.in/category/exam): NEET, JEE, GATE, CAT score predictors and board percentage tools.
+- [Real Estate](https://sabtools.in/category/realestate): Stamp duty, plot area, paint, tile, and cement calculators.
+- [Business](https://sabtools.in/category/business): GST invoice, profit/loss, ROI, and break-even calculators.
+- [Sports & Cricket](https://sabtools.in/category/sports): IPL fantasy points, run rate, NRR, and cricket calculators.
+
+## Honest "Best of" Guides
+- [Best Free GST Calculator in India](https://sabtools.in/best/free-gst-calculator-india): Honest comparison of free GST calculators, including non-SabTools options.
+- [Best Free EMI Calculator in India](https://sabtools.in/best/free-emi-calculator-india): Ranked comparison of free EMI calculators.
+- [Best Free Income Tax Calculator in India](https://sabtools.in/best/free-income-tax-calculator-india): Comparison for FY 2025-26 filing.
+- [Best Free PDF Tools for India](https://sabtools.in/best/free-pdf-tools-india): Free PDF tools for Indian use cases.
+- [Best Hindi Calculator Tools](https://sabtools.in/best/hindi-calculator-tools): Calculators available in Hindi.
+
+## Comparisons & Alternatives
+- [SabTools vs ClearTax](https://sabtools.in/compare/sabtools-vs-cleartax): Honest comparison of calculator features (SabTools for free calculators, ClearTax for ITR filing).
+- [Alternatives to ClearTax Calculators](https://sabtools.in/alternatives/to-cleartax-calculators): Free alternatives for tax calculations.
+
+## Hindi (हिंदी)
+- [SabTools in Hindi](https://sabtools.in/hi): 424+ free tools localized in Hindi, including EMI, SIP, GST, and income tax calculators.
+
+## Key Facts
+- Founded: 2025, by Rakesh Seervi
+- Tools: 450+ across 38 categories
+- Hindi tools: 424+
+- Cost: 100% free, no signup, no ads on tools
+- Privacy: all calculations run client-side; no user data is collected or uploaded
+- Built for: Indian users (₹ currency, lakhs/crores, GST slabs, FY 2025-26 tax rules, RBI/ICMR standards)
