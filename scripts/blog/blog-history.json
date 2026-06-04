@@ -200,9 +200,10 @@
     "instagram-bio-generator",
     "world-clock",
     "indian-food-calorie-counter",
-    "gst-number-validator"
+    "gst-number-validator",
+    "social-media-image-resizer"
   ],
-  "lastCategory": "utility",
-  "totalPosts": 201,
-  "lastRun": "2026-06-03T15:08:30.304Z"
+  "lastCategory": "social",
+  "totalPosts": 202,
+  "lastRun": "2026-06-04T08:15:23.981Z"
 }
