@@ -201,9 +201,10 @@
     "world-clock",
     "indian-food-calorie-counter",
     "gst-number-validator",
-    "social-media-image-resizer"
+    "social-media-image-resizer",
+    "roi-calculator"
   ],
-  "lastCategory": "social",
-  "totalPosts": 202,
-  "lastRun": "2026-06-04T08:15:23.981Z"
+  "lastCategory": "business",
+  "totalPosts": 203,
+  "lastRun": "2026-06-04T13:04:31.852Z"
 }
