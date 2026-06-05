@@ -166,4 +166,11 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
     description:
       "Convert lakh & crore to million, billion & arab. 1 lakh crore = 1 trillion = 1,000 billion. 1 crore = 10 million. Free converter, no signup.",
   },
+
+  // ── Sports (page-1, 0.49%-CTR — see brief 2026-06-05) ──
+  "ipl-required-run-rate-calculator": {
+    title: "RRR Calculator — Required Run Rate for T20 & ODI Chase",
+    description:
+      "Calculate required run rate (RRR) live for a T20, IPL or ODI chase. Enter target, score & overs left to get runs needed per over and chase verdict.",
+  },
 };
