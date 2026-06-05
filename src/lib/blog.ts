@@ -37490,6 +37490,138 @@ small finance banks remain the clear leaders in terms of returns
 </ol>
 
 <p>For now, the picture is this: India just printed 8.2% GDP growth, the RBI is in cutting mode at a 5.25% repo, retail flows are at record highs, and the Nifty broke a 14-month consolidation to a new all-time high. The caveats — narrow breadth, heavy foreign selling, stretched valuations on the leaders — are real but not yet decisive. The right response for most Indian households is not to trade the headline but to use the rate cut to optimise debt, the deposit-rate fall to ladder fixed income, and the equity bull market to keep SIPs running. The arithmetic of compounding does the rest.</p>`,
+  },
+  {
+    slug: "section-54-exemption-calculator-guide-2026",
+    title: "Section 54 / 54F Capital Gains Exemption Calculator Online Free — Complete Guide (2026)",
+    description: "Use Section 54 / 54F Capital Gains Exemption Calculator online for free — calculate ltcg tax exemption under section 54 (residential property) and 54f (other...",
+    date: "2026-06-05",
+    category: "Tax & Salary",
+    readTime: "11 min read",
+    keywords: ["section 54 exemption", "section 54f exemption", "ltcg exemption residential property", "10 crore cap section 54", "capital gains reinvestment exemption", "section 54 vs 54f", "house purchase ltcg exemption", "income tax calculator 2026"],
+    toolSlug: "section-54-exemption-calculator",
+    image: {
+      src: "/blog/section-54-exemption-calculator.webp",
+      alt: "Section 54 / 54F Capital Gains Exemption Calculator — Free Online Calculate LTCG tax exemption under Section 54 (residential property) and 54F (other assets) with ₹10 crore cap and post-Budget 2024 rates Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>Suppose Mahesh, a 58-year-old retired bank manager in Pune, sells his Kothrud flat in November 2025 for <strong>₹2.4 crore</strong>. He bought it in 2008 for ₹35 lakh. After indexation (for property purchased before 23 July 2024, the option is still available), his long-term capital gain works out to roughly <strong>₹1.55 crore</strong>. At 20% with indexation, that's a tax bill of <strong>₹31 lakh</strong>. But if he reinvests the gain into a new flat in Baner within two years, his tax liability under Section 54 collapses to zero. Miss the deadline or park the money in the wrong account, and the entire ₹31 lakh becomes payable with interest under Section 234B.</p>
+
+<p>That's the kind of decision the <strong>Section 54 / 54F Capital Gains Exemption Calculator</strong> on SabTools.in is built for. It models the reinvestment math after the Budget 2023 <strong>₹10 crore cap</strong> and the Budget 2024 rate changes, so you know exactly how much of your LTCG actually qualifies for exemption before you sign a sale deed.</p>
+
+<h2>Section 54 vs Section 54F: the core difference most people miss</h2>
+
+<p>Both sections give you LTCG exemption when you reinvest into a residential house in India, but they apply to completely different source assets — and the reinvestment math is not the same.</p>
+
+<p><strong>Section 54</strong> applies when the asset you sold is itself a <em>long-term residential house property</em> (held over 24 months). You only need to reinvest the <strong>capital gain amount</strong>, not the full sale value. Sell a flat for ₹1.5 crore where the indexed gain is ₹60 lakh? Reinvest ₹60 lakh in a new house and the gain is fully exempt. The remaining ₹90 lakh of sale proceeds is yours to keep, invest in mutual funds, or use for anything else.</p>
+
+<p><strong>Section 54F</strong> applies when the asset you sold is any <em>other long-term capital asset</em> — listed shares held over 12 months, equity mutual funds, gold, unlisted shares, vacant plot of land, ESOPs, jewellery, debentures. Here the catch is significant: you must reinvest the <strong>entire net sale consideration</strong>, not just the gain. If you invest only a part, the exemption is proportionate.</p>
+
+<p>The 54F formula is: <em>Exempt LTCG = (Amount invested in new house ÷ Net sale consideration) × Capital gain</em>. So if Priya from HSR Layout sells Infosys ESOPs for ₹80 lakh with an LTCG of ₹50 lakh, and she buys a Sarjapur Road apartment for ₹64 lakh, her exempt gain is (64/80) × 50 = <strong>₹40 lakh</strong>, and the balance <strong>₹10 lakh</strong> is taxable at 12.5% — that's ₹1.25 lakh of tax even after reinvesting most of the money. The calculator handles this proportionality automatically.</p>
+
+<h2>The ₹10 crore cap that changed everything after April 2023</h2>
+
+<p>Until FY 2022-23, there was no upper limit on Section 54/54F exemption. Promoters cashing out of IPOs and family offices selling old Bandra bungalows could roll over ₹50 crore, ₹100 crore — any number — into ultra-luxury residential property and pay zero LTCG tax. Budget 2023 plugged that gap.</p>
+
+<p>From <strong>1 April 2023</strong>, the maximum LTCG exemption available under Section 54 and Section 54F is capped at <strong>₹10 crore</strong> per assessee. Any gain beyond this is fully taxable at the applicable LTCG rate — which, after Budget 2024, is <strong>12.5% without indexation</strong> for transfers on or after 23 July 2024 (with a grandfathering option of 20% with indexation for land and building purchased before that date).</p>
+
+<p>Concretely: a Mumbai-based founder sells unlisted ESOPs in 2025 with a ₹14 crore LTCG. He buys a ₹14 crore Worli sea-facing apartment. Before April 2023, his entire gain was exempt. Today, only ₹10 crore is exempt under Section 54F; the remaining <strong>₹4 crore</strong> attracts 12.5% LTCG, i.e. <strong>₹50 lakh</strong> of tax, plus surcharge and cess. The calculator flags the cap and shows the taxable residual upfront so you don't get blindsided after filing.</p>
+
+<h2>The timelines that decide whether you qualify at all</h2>
+
+<p>The most common reason exemption claims get rejected at assessment is missing a date. The Income Tax Act is strict:</p>
+
+<ul>
+<li><strong>Purchase of new house:</strong> within <strong>1 year before</strong> or <strong>2 years after</strong> the date of transfer.</li>
+<li><strong>Construction of new house:</strong> within <strong>3 years</strong> from the date of transfer.</li>
+<li><strong>Parking funds:</strong> any unutilised amount must be deposited in a <strong>Capital Gains Account Scheme (CGAS)</strong> with a notified bank — SBI, PNB, Canara Bank, Bank of Baroda are the common ones — <em>before the due date of filing ITR</em>, which is <strong>31 July 2026</strong> for FY 2025-26 (non-audit cases).</li>
+</ul>
+
+<p>If you sell on 12 October 2025 and intend to buy the new flat in March 2027 (within 2 years — fine), but you don't deposit the unutilised sale proceeds in a CGAS account by 31 July 2026, the entire exemption is forfeited. This is where the calculator's deadline tracker becomes useful — it computes the exact CGAS deposit deadline and the outer purchase/construction window based on your transfer date. Pair this with the <a href="/tools/bank-holidays-2026-calendar">RBI bank holidays 2026 calendar</a> when planning your CGAS deposit, since the deadline often falls close to weekends and you don't want a same-day transfer bouncing.</p>
+
+<h2>A worked example: residential property sale under Section 54</h2>
+
+<p>Anita and her husband, both salaried in Bangalore, jointly own a flat in Whitefield bought in 2012 for <strong>₹52 lakh</strong>. They sell it in August 2025 for <strong>₹1.85 crore</strong>. Stamp duty and brokerage came to ₹4 lakh. For land and building purchased before 23 July 2024, the indexation option is still available.</p>
+
+<ul>
+<li>Net sale consideration: ₹1,85,00,000 − ₹4,00,000 = <strong>₹1,81,00,000</strong></li>
+<li>Indexed cost of acquisition (CII for FY 2025-26 ≈ 376, FY 2012-13 = 200): ₹52,00,000 × (376/200) = <strong>₹97,76,000</strong></li>
+<li>Long-term capital gain: ₹1,81,00,000 − ₹97,76,000 = <strong>₹83,24,000</strong></li>
+</ul>
+
+<p>They book a new flat in Sarjapur Road for <strong>₹1.1 crore</strong> in February 2026 — well within the 2-year window. Since the new investment (₹1.1 crore) exceeds the LTCG (₹83.24 lakh), the entire gain is exempt under Section 54. Tax payable: <strong>zero</strong>. They keep the remaining ₹71 lakh of sale proceeds liquid, perhaps starting a <a href="/tools/sip-calculator">SIP in equity mutual funds</a> to rebuild their portfolio.</p>
+
+<p>If, instead, they had bought a smaller flat for ₹60 lakh, only ₹60 lakh of the ₹83.24 lakh gain would be exempt. The balance <strong>₹23.24 lakh</strong> would be taxable at 20% with indexation = <strong>₹4.65 lakh</strong>, plus 4% cess. The calculator runs both scenarios side by side so you can size the new property correctly.</p>
+
+<h2>A worked example: shares/mutual fund sale under Section 54F</h2>
+
+<p>Vikram, a 41-year-old product manager in Gurgaon, sells listed equity shares in October 2025 for <strong>₹1.2 crore</strong>. His cost of acquisition was ₹30 lakh in 2018. Listed equity LTCG after Budget 2024 is taxed at 12.5% without indexation (above the ₹1.25 lakh annual exemption).</p>
+
+<ul>
+<li>LTCG = ₹1,20,00,000 − ₹30,00,000 = <strong>₹90,00,000</strong></li>
+<li>Tax payable without exemption: (₹90,00,000 − ₹1,25,000) × 12.5% ≈ <strong>₹11.09 lakh</strong></li>
+</ul>
+
+<p>Vikram doesn't own any other residential house (a precondition for 54F — you can't own more than one other residential property on the date of transfer). He buys a flat in Sector 65, Gurgaon for <strong>₹95 lakh</strong> in May 2026.</p>
+
+<p>Under Section 54F (proportionate): Exempt LTCG = (95/120) × 90 = <strong>₹71.25 lakh</strong>. Taxable LTCG = ₹90 lakh − ₹71.25 lakh = <strong>₹18.75 lakh</strong>. Tax payable = ₹18.75 lakh × 12.5% ≈ <strong>₹2.34 lakh</strong>.</p>
+
+<p>Had Vikram invested the full ₹1.2 crore (the entire net consideration, not just the gain), the entire ₹90 lakh would be exempt. This proportionality trap catches a lot of first-time sellers — they assume that since 54F talks about residential reinvestment, reinvesting the gain is enough. It isn't. The calculator makes this distinction unmissable.</p>
+
+<h2>Preconditions and disqualifiers under Section 54F you must check</h2>
+
+<ul>
+<li>You must not own <strong>more than one residential house</strong> (other than the new one) on the date of transfer.</li>
+<li>You must not <strong>purchase another residential house</strong> within 2 years, or <strong>construct another</strong> within 3 years, of the transfer date — beyond the one you're claiming exemption for.</li>
+<li>The new house must be located <strong>in India</strong>. NRIs buying property in Dubai or London cannot claim 54/54F. This was clarified by an amendment from FY 2014-15.</li>
+<li>If you sell the new house within <strong>3 years</strong> of purchase/construction, the exemption is reversed and the originally exempt gain becomes taxable in the year of the new sale.</li>
+</ul>
+
+<h2>What happens if you can't find a property before the ITR deadline</h2>
+
+<p>This is where the <strong>Capital Gains Account Scheme</strong> becomes critical. Property hunts take time — site visits in Hinjewadi, RERA verification, builder negotiation. The Act allows you to park the unutilised amount in a CGAS account with a notified bank before the ITR filing deadline (31 July 2026 for FY 2025-26). Two account types exist:</p>
+
+<ul>
+<li><strong>Type A (savings):</strong> earns ~3-4% interest, fully liquid for property payment.</li>
+<li><strong>Type B (fixed deposit):</strong> earns ~6-7%, locked but withdrawable on producing proof of property utilisation.</li>
+</ul>
+
+<p>Funds withdrawn from CGAS must be used only for the new house. Any amount left in the account at the end of the 2-year (purchase) or 3-year (construction) window is treated as LTCG of the year in which the window closes and taxed accordingly. The calculator shows you the exact CGAS amount required based on what you've already deployed.</p>
+
+<h2>Common mistakes that cost lakhs in tax</h2>
+
+<ol>
+<li><strong>Treating brokerage and stamp duty as expenses but forgetting them in cost.</strong> Stamp duty and registration on the new house count towards the reinvestment amount under both 54 and 54F. Brokerage paid on the old sale is deductible from sale consideration.</li>
+<li><strong>Confusing "net consideration" with "sale price" under 54F.</strong> Net consideration = sale price minus expenses incurred wholly in connection with the transfer (brokerage, legal fees). Use the wrong base and your proportionate exemption is miscalculated.</li>
+<li><strong>Buying jointly with a parent/spouse and assuming full exemption.</strong> Exemption is only available to the person whose capital gain it is. Spouse contribution doesn't increase your exemption ceiling.</li>
+<li><strong>Selling the new house within 3 years.</strong> The clawback is brutal — the original exempt gain becomes taxable plus the new house sale itself triggers fresh capital gains computation.</li>
+<li><strong>Ignoring the ₹10 crore cap on high-value sales.</strong> Founders and senior executives selling ESOPs post-IPO often get caught here.</li>
+</ol>
+
+<p>For the broader tax picture across asset classes, run your full portfolio through the <a href="/tools/capital-gains-tax-calculator">capital gains tax calculator</a> first to see your aggregate STCG and LTCG liability, then use the Section 54/54F calculator to figure out how much of the LTCG you can shield via residential reinvestment.</p>
+
+<h2>How the SabTools calculator handles all of this</h2>
+
+<p>The calculator takes five inputs: type of asset sold (residential property vs other LTCA), sale consideration, indexed cost of acquisition (or actual cost, depending on the regime you choose), planned reinvestment amount, and transfer date. It outputs:</p>
+
+<ul>
+<li>Long-term capital gain computed under the applicable regime (20% with indexation or 12.5% without, post-Budget 2024)</li>
+<li>Exempt amount under Section 54 or 54F, with the ₹10 crore cap applied</li>
+<li>Taxable residual gain and tax payable (including 4% cess)</li>
+<li>CGAS deposit required before 31 July 2026 if reinvestment isn't completed</li>
+<li>Outer deadline for purchase (2 years) and construction (3 years)</li>
+</ul>
+
+<p>For salaried readers, pair this with the <a href="/tools/rent-receipt-generator">rent receipt generator</a> if you're moving into rented accommodation between selling the old flat and possession of the new one — HRA claims and Section 54 exemption can coexist. If the new property is being part-financed via home loan, model the EMI alongside using the <a href="/tools/emi-calculator">EMI calculator</a>; the loan interest is separately deductible under Section 24(b) up to ₹2 lakh per year on a self-occupied property under the old regime. For the percentage allocation between own funds and loan, the <a href="/tools/percentage-calculator">percentage calculator</a> helps with quick back-of-envelope splits.</p>
+
+<h2>When is it better to just pay the tax?</h2>
+
+<p>Counter-intuitively, claiming Section 54F isn't always the smart move. If your LTCG is ₹40 lakh on a ₹1 crore share sale, claiming 54F locks ₹1 crore into illiquid real estate for at least 3 years to save ₹5 lakh of tax (12.5% of ₹40 lakh). If you believe equity markets will compound at 12-14% over the next 3 years, the opportunity cost of locking ₹1 crore in a flat that may appreciate 5-7% annually outweighs the tax saving.</p>
+
+<p>The calculator shows the absolute tax saved, but the real-world decision needs you to compare that against the return you'd otherwise earn on the deployed capital. Run both scenarios — invest in property and claim 54F, vs pay 12.5% LTCG and stay invested in equity — and pick the one with the better 3-year post-tax outcome.</p>
+
+<p>Open the <a href="/tools/section-54-exemption-calculator">Section 54 / 54F Capital Gains Exemption Calculator</a> and plug in your sale numbers before you commit to the new property →</p>`,
   }
 ];
 
