@@ -37772,6 +37772,114 @@ small finance banks remain the clear leaders in terms of returns
 <p>Pick the tool that matches the question you're actually asking. If you need to know your current bureau score for a loan application this month, run a free check on BankBazaar and accept the marketing follow-up that comes with it. If you're planning months ahead, running scenarios, or simply want to understand the levers that move a CIBIL score without surrendering PAN and OTP each time, SabTools' estimator is built for exactly that work — and it pairs naturally with our other planning tools like the <a href="/tools/atal-pension-yojana-calculator">APY Calculator</a> and the <a href="/tools/post-office-savings-calculator">Post Office Savings Calculator</a> for full financial planning.</p>
 
 <p>Try SabTools' <a href="/tools/credit-score-estimator">Credit Score Estimator</a> → model your next 90 days of credit decisions before you make them.</p>`,
+  },
+  {
+    slug: "news-2026-06-05-latest-ppf-epf-nps-rate-changes-and-what-they-mean-for-india",
+    title: "Latest PPF / EPF / NPS rate changes and what they mean for Indian s... (2026 Update)",
+    description: "Latest PPF / EPF / NPS rate changes and what they mean for Indian savers — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-06-05",
+    category: "Finance",
+    readTime: "12 min read",
+    keywords: ["Latest PPF / EPF", "finance news india 2026", "india 2026 update"],
+    toolSlug: "emi-calculator",
+    image: {
+      src: "/blog/emi-calculator.webp",
+      alt: "Latest PPF / EPF / NPS rate changes and what they mean for Indian s... (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>The short version: small savings frozen, EPF holds, NPS gets a major equity overhaul</h2>
+
+<p>Indian savers entered the second half of FY 2025-26 with three big signals from the country's retirement and savings ecosystem — and they're pointing in very different directions. <a href="https://www.businesstoday.in/personal-finance/news/story/ppf-scss-nsc-rates-unchanged-for-oct-dec-2025-as-govt-holds-small-savings-rates-496346-2025-09-30" rel="noopener" target="_blank">The Finance Ministry, in a notification issued on September 30, 2025</a>, kept Public Provident Fund (PPF), Sukanya Samriddhi Yojana (SSY), Senior Citizens' Savings Scheme (SCSS) and other post office schemes untouched for the October–December 2025 quarter. <a href="https://www.businesstoday.in/personal-finance/news/story/epf-interest-rate-8-25-percent-2024-25-central-government-confirmation-478095-2025-05-28" rel="noopener" target="_blank">The Employees' Provident Fund Organisation (EPFO) confirmed 8.25% on PF deposits for FY 2024-25</a>, with credits already flowing into member accounts. And on October 1, 2025, the pension regulator PFRDA quietly turned the National Pension System on its head by allowing 100% equity allocation through its new Multiple Scheme Framework.</p>
+
+<p>For a salaried professional in Bangalore parking ₹1.5 lakh a year in PPF, an IT employee in Pune watching her EPF balance grow, or a freelance consultant in Delhi parking his retirement money in NPS, each of these decisions has a direct, measurable impact. Here's what changed, what stayed the same, and what an Indian saver should actually do about it.</p>
+
+<h2>PPF stays at 7.1% — for the 22nd consecutive quarter</h2>
+
+<p><a href="https://www.goodreturns.in/personal-finance/ppf-nsc-ssa-scss-other-post-office-saving-scheme-interest-rates-remained-unchanged-after-rbi-re-1460789.html" rel="noopener" target="_blank">The government announced on September 30, 2025, that the interest rates on Post Office small savings schemes will remain unchanged for the October to December quarter of the financial year 2025-26.</a> That means the headline numbers Indian savers have been staring at for years remain frozen:</p>
+
+<ul>
+<li><strong>Public Provident Fund (PPF): 7.1%</strong> per annum, compounded annually</li>
+<li><strong>Sukanya Samriddhi Yojana (SSY): 8.2%</strong> per annum</li>
+<li><strong>Senior Citizens' Savings Scheme (SCSS): 8.2%</strong> per annum</li>
+<li><strong>National Savings Certificate (NSC): 7.7%</strong></li>
+<li><strong>Kisan Vikas Patra (KVP): 7.5%</strong> (matures in 115 months)</li>
+<li><strong>3-year Post Office Time Deposit: 7.1%</strong></li>
+</ul>
+
+<p>The PPF number deserves a closer look because it has become almost a fixed feature of the Indian savings landscape. <a href="https://upstox.com/news/personal-finance/investing/public-provident-fund-ppf-interest-rate-april-june-2026-tax-free-7-1-compounding-continues/article-191464/" rel="noopener" target="_blank">There has been no change in the PPF interest rate since April 1, 2020. Before this date, the popular small savings scheme offered 7.9% interest between July 1, 2019, and March 31, 2020.</a> That's more than five-and-a-half years of stasis through a period that saw repo rate cuts, hikes, an inflation spike, and a full rate cycle.</p>
+
+<p>Why does the government keep it frozen? Officially, small savings rates are linked to government bond yields under the Shyamala Gopinath Committee formula. <a href="https://upstox.com/news/personal-finance/investing/public-provident-fund-ppf-interest-rate-cut-from-7-1-to-6-5-is-possible-here-s-why/article-176579/" rel="noopener" target="_blank">Ahead of recent reviews, market analysts had flagged that strictly applying the formula could justify a cut from 7.1% to around 6.5%</a> — yet the political optics of cutting a flagship middle-class instrument have kept the number pinned. The continuity confirmed for January–March 2026 extends this pattern. <a href="https://www.angelone.in/news/personal-finance/government-keeps-ppf-interest-rate-unchanged-at-7-for-january-march-quarter" rel="noopener" target="_blank">The decision to maintain the PPF interest rate at 7.1% for the January–March quarter of FY 2025–26 provides continuity for investors relying on this tax-free savings instrument.</a></p>
+
+<h3>What 7.1% actually means in rupees</h3>
+
+<p>A 7.1% tax-free return looks modest, but the EEE (Exempt-Exempt-Exempt) status is what makes PPF still relevant for a 30% tax-bracket salaried earner. On a ₹1.5 lakh annual contribution maintained for the full 15-year term, the maturity corpus at 7.1% works out to roughly ₹40.68 lakh, of which around ₹18 lakh is interest — all of it tax-free. For someone in the highest tax slab, matching this post-tax return through a bank FD would require a pre-tax yield of around 10.1%, which simply doesn't exist in any AAA-rated debt instrument today.</p>
+
+<p>The flip side: with consumer inflation running between 4-6%, the real (inflation-adjusted) return on PPF has compressed to about 1.5-3% — historically low. Younger savers with a 20+ year horizon increasingly treat PPF as the debt anchor of a portfolio rather than its growth engine.</p>
+
+<h2>EPF holds at 8.25% — and the money has actually been credited</h2>
+
+<p>If PPF feels stuck, EPF has become the better behaved of the two big retirement instruments. <a href="https://www.businesstoday.in/personal-finance/news/story/epf-interest-rate-8-25-percent-2024-25-central-government-confirmation-478095-2025-05-28" rel="noopener" target="_blank">The central government has sanctioned an 8.25% interest rate on Employees' Provident Fund deposits for the fiscal year 2024-25, consistent with the prior year.</a> The CBT (Central Board of Trustees) recommended this rate in February 2025, and the Finance Ministry's formal ratification came soon after.</p>
+
+<p>Crucially, this isn't just a paper rate — the cash has actually moved. <a href="https://www.caalley.com/news-updates/indian-news/epfo-interest-credit-8-25-announced-for-2024-25-process-to-finish-this-week-says-mandaviya" rel="noopener" target="_blank">Government approval for the rate came on 22 May 2025, and annual account updates began on 6 June. Interest has been credited to 96.51% of member accounts, with the remainder to be updated soon.</a> If you're an EPFO member and you check your passbook on the EPFO portal or UMANG app, the FY 2024-25 interest should already be reflected against your balance.</p>
+
+<p>Looking forward, <a href="https://www.angelone.in/news/personal-finance/epf-interest-rate-2025-26-stays-at-8-25-here-is-when-the-money-will-be-credited-to-your-epfo-account" rel="noopener" target="_blank">EPF interest rate for FY2025-26 remains at 8.25%</a> as recommended by the CBT, pending formal Government of India approval before crediting begins. So for the second consecutive year, salaried Indians can plan with a clear 8.25% number for their largest retirement bucket.</p>
+
+<h3>What 8.25% means on a typical Bangalore IT salary</h3>
+
+<p><a href="https://cleartax.in/s/epf-interest-rate" rel="noopener" target="_blank">Normally, the employee's EPF contribution is 12% of basic salary + dearness allowance, while the employer's EPF contribution of 12% is divided into two parts - 8.33% towards the EPS account, and the balance 3.67% is transferred to the EPF.</a> Take a Bangalore-based software engineer with a basic of ₹50,000 a month — the combined EPF inflow is roughly ₹9,000 per month, or ₹1,08,000 a year. At 8.25%, that single year's contribution alone snowballs into around ₹6.4 lakh after 15 years of compounding within the account.</p>
+
+<p>One catch most members miss: <a href="https://www.courtkutchehry.com/pages/blog/epfo-interest-credit-pf-savings-rules-2026/" rel="noopener" target="_blank">EPF interest is currently 8.25%, tax-free up to contributions of ₹2.5 lakh per year (₹5 lakh for government employees).</a> Anything above that contribution threshold attracts tax on the incremental interest, courtesy the rule introduced in Budget 2021. For high-earners in Mumbai or Gurgaon doing voluntary VPF contributions on top of statutory EPF, this is a real planning constraint.</p>
+
+<h2>NPS rewrites the rulebook: 100% equity from October 1, 2025</h2>
+
+<p>The most consequential change of the year sits in the NPS column. <a href="https://www.business-standard.com/finance/personal-finance/pfrda-multiple-scheme-framework-nps-october-2025-125091700683_1.html" rel="noopener" target="_blank">From October 2025, NPS subscribers in the non-government sector can hold multiple schemes under one PRAN, with equity options up to 100 per cent and PAN-based consolidated reporting.</a> This is the Multiple Scheme Framework (MSF) — introduced through PFRDA Circular PFRDA/2025/09/REG-PF/01 dated 16th September 2025.</p>
+
+<p>For context, the old NPS architecture forced you into a single scheme per asset class with a hard cap of 75% equity (which itself tapered down with age under the "auto choice" lifecycle funds). The MSF dismantles that structure. <a href="https://1finance.co.in/blog/new-nps-msf-schemes-with-100-equity-how-to-decide-if-you-should-invest-or-stay-away/" rel="noopener" target="_blank">Each scheme under the MSF will have two variants: one with moderate risk and another with high risk, offering an equity allocation of up to 100%. Previously, each fund house could offer only one 'common scheme' per asset class.</a></p>
+
+<h3>How MSF actually works</h3>
+
+<p><a href="https://www.hdfcpension.com/blog/multiple-scheme-framework/" rel="noopener" target="_blank">MSF will operate in both Tier I and Tier II accounts, broadening choice.</a> The framework also brings standardisation — <a href="https://npstrust.org.in/about-msf" rel="noopener" target="_blank">each scheme must have at least moderate and high-risk variants, with up to 100% equity in the high-risk option. Low-risk variants may also be offered at the PF's discretion. The framework introduces a consolidated CRA reporting system, allowing subscribers to track holdings by scheme</a> through a single statement.</p>
+
+<p>Costs matter when you're compounding for 30 years. <a href="https://blog.vrid.in/2025/10/28/new-nps-2025-rules-explained-100-equity-multiple-schemes/" rel="noopener" target="_blank">The total annual Fund Management Charge (FMC) for the new MSF schemes is capped at 0.30% of the Assets Under Management (AUM).</a> Compare that with a typical actively-managed equity mutual fund's expense ratio of 1.5–2.0%, and you start to see why NPS is suddenly competitive even for aggressive long-horizon investors who used to dismiss it for the 75% equity cap.</p>
+
+<p>The MSF rollout will be gradual. <a href="https://pfrda.org.in/web/pfrda/schemes/national-pension-system/nps-for-all-citizen-models" rel="noopener" target="_blank">From 1 October 2025, non-government NPS subscribers can invest in multiple schemes using a single or multiple PRAN linked to their PAN. All your investments can be viewed together through a single consolidated statement.</a> Existing subscribers don't lose anything — the old "common scheme" structure continues — but a new generation of fund options is being approved by PFRDA over the coming months.</p>
+
+<h3>Why this matters for a 30-year-old in Hyderabad</h3>
+
+<p>Take a 30-year-old product manager in Hyderabad contributing ₹50,000 a year to NPS Tier-I for the additional ₹50,000 deduction under Section 80CCD(1B). Under the old 75% equity cap, the long-term blended return assumption sat around 10-11%. With a 100% equity option under MSF and a 30-year horizon, the long-term return can realistically be modelled closer to 12-13% — the historical Nifty 50 total-return trajectory. On ₹50,000 a year for 30 years, that's a corpus difference of roughly ₹20-25 lakh between the two scenarios. The trade-off is volatility — and the fact that NPS still requires you to use 40% of the corpus to buy an annuity at retirement.</p>
+
+<h2>Putting it together: what the rates mean for three real decisions</h2>
+
+<h3>Decision 1: Should you still max out your PPF?</h3>
+
+<p>If you fall in the 30% tax slab, yes — the post-tax return of 7.1% remains hard to match in any other debt instrument with sovereign safety. If you're in the new tax regime with no Section 80C deduction benefit, the case becomes weaker. A young earner in the new regime might be better served by direct-equity mutual funds via SIP, where the long-run pre-tax CAGR has historically exceeded 12%. You can compare projected outcomes side by side using the <a href="/tools/sip-calculator">SIP Calculator</a> for equity funds and the <a href="/tools/ppf-calculator">PPF Calculator</a> for the safer route.</p>
+
+<h3>Decision 2: Should you do VPF on top of EPF?</h3>
+
+<p>8.25% sovereign-backed, EEE-status (within the ₹2.5 lakh annual contribution limit) is one of the best risk-adjusted deals available in India. For salaried readers with stable jobs and a 10-year-plus horizon, VPF beats most fixed deposits comfortably. A leading private bank's 1-year fixed deposit currently offers around 7%; for a 30% slab earner that's an after-tax 4.9%. EPF/VPF delivers 8.25% tax-free. If you want to compare the FD route against EPF/VPF in numbers specific to your tenure and amount, the <a href="/tools/fd-calculator">FD Calculator</a> gives you a quick maturity number.</p>
+
+<h3>Decision 3: Should you switch your NPS allocation to 100% equity?</h3>
+
+<p>Here the answer depends on how long until you'd start drawing the pension. Under the new MSF framework, a 25-35 year old with a 25+ year runway has a strong case for the high-risk 100% equity variant — the volatility smooths out over decades and the 0.30% FMC cap keeps costs trivial. For someone within 10 years of NPS exit, the older balanced allocation makes more sense. The MSF lets you split across multiple schemes under one PRAN, so a barbell — say 70% in a 100%-equity scheme and 30% in a moderate scheme — is now operationally possible.</p>
+
+<h2>The bigger picture: where your home loan and EMI fit in</h2>
+
+<p>Frozen small-savings rates and stable EPF are only half the household balance-sheet story. The RBI has, over 2025, cut the repo rate, which has flowed through to lower home loan EMIs for borrowers on floating-rate loans linked to the repo (EBLR) benchmark. If you're a first-time home loan applicant in NCR or Pune weighing a ₹60 lakh, 20-year loan, even a 50-basis-point change in rate alters your EMI by roughly ₹2,000 a month and your total interest outgo by several lakhs over the tenure. Before you decide how much surplus to route into PPF, EPF top-ups or NPS for FY 2025-26, it's worth running the numbers on what your existing home or car loan actually costs you each month — and what a rate revision means in rupees — using the <a href="/tools/emi-calculator">EMI Calculator</a>. A household optimising retirement contributions while overpaying on a high-rate loan is leaving real money on the table.</p>
+
+<p>The same goes for recurring deposit ladders that many readers in Tamil Nadu and Karnataka use as a parallel forced-savings habit alongside EPF. With small-savings rates frozen and bank RDs offering competitive 7.0-7.5% rates on 3-5 year tenures, a quick projection via the <a href="/tools/rd-calculator">RD Calculator</a> can tell you whether a 60-month RD beats a 5-year SCSS slot for a senior parent's idle funds.</p>
+
+<h2>What to actually do this quarter</h2>
+
+<ol>
+<li><strong>Check that your EPF interest has been credited.</strong> Log in to the EPFO member portal or UMANG app and verify the FY 2024-25 8.25% interest line item. With 96.51% of accounts already updated, most readers should see it; if not, raise a grievance through the EPFiGMS portal.</li>
+<li><strong>Don't rush to exit PPF just because the rate is stuck.</strong> Mid-tenure PPF accounts (years 8-15) are still your tax-free debt anchor. New subscribers in the new tax regime can pause fresh contributions and redirect to equity SIPs if they have the risk appetite.</li>
+<li><strong>If you're an NPS subscriber, read the MSF circular before switching.</strong> The 100% equity option is genuinely new and powerful, but it's not auto-applied. You'll need to log in to your CRA portal (Protean/KFin/CAMS) and actively opt into the new schemes as fund houses launch them through late 2025 and 2026.</li>
+<li><strong>Recalibrate your Section 80C math.</strong> Between EPF/VPF (8.25%), PPF (7.1%), ELSS mutual funds (market-linked) and NPS (potentially 100% equity from October 2025), the optimal mix for FY 2025-26 looks different from what worked in FY 2023-24.</li>
+<li><strong>Watch the January 2026 small-savings notification.</strong> If the government finally bites the bullet and aligns PPF closer to the formula-implied 6.5%, locking in additional voluntary contributions to existing PPF accounts before that announcement will preserve the 7.1% rate on those deposits for the remainder of the quarter.</li>
+</ol>
+
+<p>The headline takeaway for FY 2025-26 is straightforward: the safe instruments are holding, the rates aren't moving much, and the real story is what PFRDA has done to NPS. For Indian savers who've spent a decade calling NPS "too restrictive," that excuse no longer holds — and the choice of where to park your next ₹1 lakh of long-term money has genuinely shifted.</p>`,
   }
 ];
 
