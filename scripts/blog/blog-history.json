@@ -203,9 +203,10 @@
     "gst-number-validator",
     "social-media-image-resizer",
     "roi-calculator",
-    "section-54-exemption-calculator"
+    "section-54-exemption-calculator",
+    "credit-score-estimator"
   ],
-  "lastCategory": "tax",
-  "totalPosts": 204,
-  "lastRun": "2026-06-05T08:03:27.616Z"
+  "lastCategory": "finance",
+  "totalPosts": 205,
+  "lastRun": "2026-06-05T12:47:21.789Z"
 }
