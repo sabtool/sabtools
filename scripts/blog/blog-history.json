@@ -204,9 +204,10 @@
     "social-media-image-resizer",
     "roi-calculator",
     "section-54-exemption-calculator",
-    "credit-score-estimator"
+    "credit-score-estimator",
+    "sql-table-generator"
   ],
-  "lastCategory": "finance",
-  "totalPosts": 205,
-  "lastRun": "2026-06-05T12:47:21.789Z"
+  "lastCategory": "charts",
+  "totalPosts": 206,
+  "lastRun": "2026-06-06T07:03:23.537Z"
 }

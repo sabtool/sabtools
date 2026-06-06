@@ -37880,6 +37880,145 @@ small finance banks remain the clear leaders in terms of returns
 </ol>
 
 <p>The headline takeaway for FY 2025-26 is straightforward: the safe instruments are holding, the rates aren't moving much, and the real story is what PFRDA has done to NPS. For Indian savers who've spent a decade calling NPS "too restrictive," that excuse no longer holds — and the choice of where to park your next ₹1 lakh of long-term money has genuinely shifted.</p>`,
+  },
+  {
+    slug: "sql-table-generator-guide-2026",
+    title: "Free SQL Table Generator Online — No Signup Required | SabTools",
+    description: "Design database tables and generate CREATE TABLE SQL for MySQL, PostgreSQL and SQLite. Use our free sql table generator with no signup. Instant results on an...",
+    date: "2026-06-06",
+    category: "Data & Charts",
+    readTime: "11 min read",
+    keywords: ["sql", "create table", "database", "mysql", "postgresql", "sqlite", "schema", "sql table generator"],
+    toolSlug: "sql-table-generator",
+    image: {
+      src: "/blog/sql-table-generator.webp",
+      alt: "SQL Table Generator — Free Online Design database tables and generate CREATE TABLE SQL for MySQL, PostgreSQL and SQLite Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>A freelance developer in Indiranagar takes on a ₹80,000 contract to build a billing system for a CA firm. Day one, before a single line of Python or PHP gets written, she has to design the database schema — invoices, clients, line items, GST splits, payment status. She opens her editor, types <code>CREATE TABLE</code>, and pauses. Is it <code>AUTO_INCREMENT</code> or <code>SERIAL</code>? Does SQLite even support <code>DECIMAL(10,2)</code> the way Postgres does? Do foreign keys need <code>ENGINE=InnoDB</code>? Twenty minutes later she's three Stack Overflow tabs deep, copy-pasting syntax that may or may not match her target database.</p>
+
+<p>This is the boring tax that every database project pays. The SQL Table Generator on SabTools collapses that twenty minutes into roughly ninety seconds — you define columns, pick data types, set primary and foreign keys, choose your database flavour (MySQL, PostgreSQL, or SQLite), and download a clean, runnable <strong>CREATE TABLE</strong> statement. No syntax hunting, no dialect mistakes.</p>
+
+<h2>Why the same CREATE TABLE syntax doesn't run on three databases</h2>
+
+<p>SQL is one of those technologies that pretends to be standardised but isn't. ANSI SQL exists on paper; in production, MySQL, PostgreSQL, and SQLite each speak their own slightly different dialect. A schema that runs cleanly on a developer's local SQLite can throw three errors on the staging Postgres box at AWS Mumbai. A few of the friction points:</p>
+
+<ul>
+<li><strong>Auto-incrementing IDs.</strong> MySQL uses <code>INT AUTO_INCREMENT</code>. PostgreSQL prefers <code>SERIAL</code> or <code>BIGSERIAL</code> (or <code>GENERATED ALWAYS AS IDENTITY</code> on newer versions). SQLite uses <code>INTEGER PRIMARY KEY AUTOINCREMENT</code> — and quietly does the wrong thing if you write <code>INT</code> instead of <code>INTEGER</code>.</li>
+<li><strong>Boolean columns.</strong> PostgreSQL has a real <code>BOOLEAN</code> type. MySQL aliases it to <code>TINYINT(1)</code>. SQLite has no boolean at all — you store 0 or 1 in an integer column.</li>
+<li><strong>String types.</strong> <code>VARCHAR(255)</code> works everywhere, but PostgreSQL devs typically use <code>TEXT</code> with no length limit, while MySQL still rewards you for picking precise lengths because of how rows are stored.</li>
+<li><strong>Timestamps and defaults.</strong> <code>CURRENT_TIMESTAMP</code> is standard. But <code>ON UPDATE CURRENT_TIMESTAMP</code> is a MySQL-only convenience; in Postgres you write a trigger.</li>
+<li><strong>Foreign keys in SQLite.</strong> They're declared but not enforced unless you turn on <code>PRAGMA foreign_keys = ON</code> per connection — a footgun that bites every junior developer at least once.</li>
+</ul>
+
+<p>The generator handles each of these quietly. Pick MySQL and it emits <code>AUTO_INCREMENT</code> with <code>ENGINE=InnoDB DEFAULT CHARSET=utf8mb4</code>. Switch to PostgreSQL and the same column becomes <code>SERIAL PRIMARY KEY</code>. Switch to SQLite and you get the <code>INTEGER PRIMARY KEY AUTOINCREMENT</code> form. The schema you design is portable; the SQL you copy is dialect-correct.</p>
+
+<h2>Designing a real schema: a GST-compliant invoice table</h2>
+
+<p>The fastest way to understand the tool is to build something most Indian developers eventually build — an invoice table for a small business under the GST regime. Imagine you're consulting for a Surat textile trader doing roughly ₹35L turnover annually. The invoices table needs to capture: invoice number, customer GSTIN, invoice date, taxable value, CGST, SGST, IGST, total, and payment status.</p>
+
+<p>Here's how you'd structure it column by column:</p>
+
+<ul>
+<li><strong>id</strong> — INTEGER, primary key, auto-increment. Every table needs a synthetic key, even when you have a "natural" invoice number.</li>
+<li><strong>invoice_number</strong> — VARCHAR(20), NOT NULL, UNIQUE. Something like <code>INV-2025-00142</code>. The UNIQUE constraint prevents accidental duplicates if the application logic ever misfires.</li>
+<li><strong>customer_gstin</strong> — VARCHAR(15). GSTIN is always 15 characters — two digits for state code, ten for PAN, one entity code, one Z, one check digit. Fix the length and you get free validation.</li>
+<li><strong>invoice_date</strong> — DATE, NOT NULL, default CURRENT_DATE.</li>
+<li><strong>taxable_amount</strong> — DECIMAL(12,2). Twelve digits with two after the decimal handles invoices up to <strong>₹99,99,99,999.99</strong>, which is more than enough for a small trader. Never use FLOAT for money — floating point will quietly turn ₹118.00 into ₹117.99999999 and your reconciliation will be off by paise for years.</li>
+<li><strong>cgst</strong>, <strong>sgst</strong>, <strong>igst</strong> — DECIMAL(10,2), default 0. For intra-state sales CGST and SGST are populated; for inter-state IGST takes the full tax amount.</li>
+<li><strong>total_amount</strong> — DECIMAL(12,2). The sum of taxable + taxes.</li>
+<li><strong>payment_status</strong> — VARCHAR(10), default 'PENDING'. Better still, on Postgres or MySQL 8+, use an ENUM-style CHECK constraint limiting it to PENDING/PAID/CANCELLED.</li>
+<li><strong>created_at</strong> — TIMESTAMP, default CURRENT_TIMESTAMP. Always log when a row was inserted; you will thank yourself during an audit.</li>
+</ul>
+
+<p>Feed these into the generator, pick MySQL, and you'll get back a fully-formed statement you can paste straight into your migration file. For an 18% GST sale of <strong>₹10,000</strong> taxable value within Gujarat, CGST and SGST would be <strong>₹900 each</strong>, totalling <strong>₹11,800</strong> — exactly the kind of figure you'd cross-check using the <a href="/tools/gst-calculator">GST calculator</a> before storing it.</p>
+
+<h2>Picking the right database for your project</h2>
+
+<p>The three options aren't interchangeable. A quick decision matrix that holds up for most Indian developer use-cases:</p>
+
+<p><strong>SQLite</strong> is the default for anything that doesn't need a network database — mobile apps, desktop tools, single-user billing software for a Kirana shop, prototyping. The entire database is one file. You can email it. A small business owner in Jaipur running an Electron-based inventory app for a single PC is best served by SQLite. It comfortably handles tables with a few lakh rows on commodity hardware.</p>
+
+<p><strong>MySQL</strong> (or its open-source twin MariaDB) is the safe choice for typical web applications — WordPress sites, Laravel/Django apps, the e-commerce store a Pune freelancer ships for a local boutique. Shared hosting almost always offers MySQL. Most Indian managed hosts — Hostinger India, BigRock, GoDaddy India — give you a phpMyAdmin-fronted MySQL by default.</p>
+
+<p><strong>PostgreSQL</strong> is where you go when correctness, JSON handling, full-text search, or analytical queries matter. Most Indian fintech startups — and anything dealing with money at scale — sit on Postgres. If your schema involves JSON columns (storing UPI transaction payloads, webhook responses from Razorpay/Paytm, or address blobs), Postgres's native <code>JSONB</code> type is unmatched. AWS RDS Mumbai, Supabase, and Neon all make managed Postgres trivial to provision.</p>
+
+<p>The generator lets you flip between all three with one click, so you can prototype on SQLite locally, then regenerate the same schema as MySQL for a client's shared hosting or Postgres for a more serious deployment.</p>
+
+<h2>Data types that bite Indian developers</h2>
+
+<p>A handful of column choices cause more bugs in Indian projects than any others:</p>
+
+<ol>
+<li><strong>Storing phone numbers as integers.</strong> Don't. Indian mobile numbers start with 6, 7, 8, or 9 — that's fine — but the moment someone enters a country code (+91), a space, or a leading zero, your INT column truncates or rejects. Use VARCHAR(15) and validate at the application layer.</li>
+
+<li><strong>Storing amounts as FLOAT or DOUBLE.</strong> Already mentioned, worth repeating. EMI values, SIP corpus projections, GST splits — all of them must live in DECIMAL columns. If you're persisting EMI calculations done via the <a href="/tools/emi-calculator">EMI calculator</a> — say a ₹50L home loan at 8.75% for 20 years producing an EMI of ₹44,186 — you want that 44186.00 stored exactly, not as 44185.99999998.</li>
+
+<li><strong>Storing PIN codes as integers.</strong> A Delhi PIN code like 110001 loses its leading zero if you store it as INT and the front-end ever serialises it. Always VARCHAR(6) for PIN codes.</li>
+
+<li><strong>Storing PAN/GSTIN/Aadhaar as TEXT with no length cap.</strong> These have fixed lengths — PAN is 10 characters, GSTIN is 15, Aadhaar is 12 digits. Use VARCHAR with the exact length and a CHECK constraint where supported.</li>
+
+<li><strong>Storing dates as VARCHAR.</strong> Tempting because Indian date formats vary (DD/MM/YYYY versus DD-MM-YYYY versus the ISO YYYY-MM-DD). Resist. Use DATE or TIMESTAMP and format at the presentation layer.</li>
+</ol>
+
+<h2>Primary keys, foreign keys, and indexes</h2>
+
+<p>The generator supports declaring primary keys, foreign keys, NOT NULL, UNIQUE, and DEFAULT — the constraints that do 90% of the real work in a schema.</p>
+
+<p>A few rules of thumb that translate directly into how you configure each column:</p>
+
+<ul>
+<li><strong>Every table needs a primary key.</strong> Even a junction table linking, say, students to courses for a Kota coaching centre's database — give it an auto-increment ID. It makes deletes, updates, and ORM mappings vastly cleaner.</li>
+<li><strong>Foreign keys are a contract, not a suggestion.</strong> If your <code>order_items</code> table references <code>orders(id)</code>, declare the foreign key. Yes, it's a small performance cost on insert; it's a vast saving on debugging when your data goes orphaned.</li>
+<li><strong>Index every column you'll filter or join on.</strong> If you'll query invoices by customer_gstin, index that column. If you'll order them by invoice_date, index that. Indexes are cheap on read-heavy tables and expensive on write-heavy ones — most billing tables read 10x more than they write, so err on the side of more indexes.</li>
+<li><strong>Use NOT NULL aggressively.</strong> A nullable column is a column that will eventually contain NULL, and your application has to handle that everywhere. Decide early: is this field required or genuinely optional?</li>
+</ul>
+
+<h2>Working backwards from data you already have</h2>
+
+<p>A common Indian developer scenario: a client hands you an Excel sheet — say a customer list, a product catalogue, or a year's worth of expense entries from a homemaker tracking household budgets across grocery, electricity, school fees, and Swiggy. You need to turn that into a database table.</p>
+
+<p>The workflow that actually works:</p>
+
+<ol>
+<li>Convert the Excel sheet to JSON (most spreadsheets export to CSV; small scripts or online converters take CSV to JSON).</li>
+<li>Paste the JSON into the <a href="/tools/json-to-table-viewer">JSON to table viewer</a> to inspect the columns, spot inconsistent types, and identify which fields are actually populated.</li>
+<li>For each column you see in the viewer, decide its SQL type — text becomes VARCHAR, numbers with decimals become DECIMAL, dates become DATE.</li>
+<li>Open the SQL Table Generator and recreate the schema with proper constraints.</li>
+</ol>
+
+<p>This sequence — explore in JSON, design in SQL — saves you from the classic mistake of mirroring an Excel sheet column-for-column without thinking about what's actually a primary key, what should be normalised into a separate table, and what's just noise.</p>
+
+<h2>Sketching the schema before you generate it</h2>
+
+<p>For anything more complex than three or four tables, draw it before you build it. An e-commerce schema with users, products, categories, orders, order_items, payments, and addresses has at least six foreign-key relationships you need to keep straight. A <a href="/tools/flowchart-maker">flowchart for the entity relationships</a> or a <a href="/tools/mind-map-generator">mind map of the schema</a> with one branch per table makes the dependency order obvious — you create the <code>users</code> table before <code>orders</code> because <code>orders.user_id</code> references it.</p>
+
+<p>Designers who skip this step end up running their migrations in the wrong order, hitting foreign-key errors, and patching the schema with ALTER TABLE statements that should have been part of the original CREATE.</p>
+
+<h2>From CREATE TABLE to documentation</h2>
+
+<p>Schema design isn't done when the SQL runs. A schema that nobody but you understands is technical debt. Two cheap habits make a big difference:</p>
+
+<p>First, write a one-line comment under each column explaining what it stores in business terms — not "varchar 15" but "Customer GSTIN; 15 chars; first 2 digits are state code". Both MySQL and PostgreSQL support column comments inline.</p>
+
+<p>Second, keep a human-readable table of the schema in your project README. A markdown table works well — generate one using the <a href="/tools/table-generator">HTML/Markdown table generator</a>, paste it into the repo, and update it whenever you alter the schema. New developers onboarding to the project will read this before they touch the database.</p>
+
+<h2>A quick checklist before you ship a schema to production</h2>
+
+<ul>
+<li>Every table has a primary key — usually an auto-increment ID.</li>
+<li>Every foreign key column has an index. Most databases don't index them automatically.</li>
+<li>Money columns are DECIMAL, never FLOAT. Phone numbers, PIN codes, GSTIN, PAN are VARCHAR with fixed lengths.</li>
+<li>created_at and updated_at TIMESTAMP columns are present on every business table for audit trails.</li>
+<li>Sensitive columns — Aadhaar, PAN, bank account — are either encrypted at the application layer or masked at the column level. RBI and SEBI guidelines treat these as personal data; storing them in plaintext is a real compliance risk.</li>
+<li>Character set is utf8mb4 on MySQL so emojis and Devanagari/Tamil text actually store correctly. The default utf8 in older MySQL versions silently truncates 4-byte characters.</li>
+<li>You've tested the schema against representative data — not three rows, but a few thousand — to spot performance issues before they hit production.</li>
+</ul>
+
+<p>For Indian developers building anything from a SIP-tracking dashboard that mirrors the kind of returns the <a href="/tools/sip-calculator">SIP calculator</a> projects, to a full GST-compliant ERP for a Gujarat manufacturer, the schema is the foundation. Get it wrong and every layer above leaks. Get it right and the rest of the application practically writes itself.</p>
+
+<p>Design your tables visually, pick your database flavour, and grab clean dialect-correct SQL — <a href="/tools/sql-table-generator">open the SQL Table Generator →</a></p>`,
   }
 ];
 
