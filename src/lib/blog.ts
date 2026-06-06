@@ -38197,6 +38197,209 @@ small finance banks remain the clear leaders in terms of returns
 <p><strong>Do Super Over runs count toward NRR?</strong> No. The match is recorded as a tie for NRR purposes, using the runs and overs from the regulation 20 overs only. The Super Over decides the result but doesn't affect NRR.</p>
 
 <p>Ready to check your team's playoff math? Try SabTools' <a href="/tools/ipl-nrr-calculator">IPL Net Run Rate Calculator</a> →</p>`,
+  },
+  {
+    slug: "news-2026-06-06-latest-income-tax-changes-for-fy-2025-26-ay-2026-27",
+    title: "Latest income tax changes for FY 2025-26 / AY 2026-27 (2026 Update)",
+    description: "Latest income tax changes for FY 2025-26 / AY 2026-27 — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-06-06",
+    category: "Tax & Salary",
+    readTime: "12 min read",
+    keywords: ["Latest income tax changes", "tax news india 2026", "india 2026 update"],
+    toolSlug: "income-tax-calculator",
+    image: {
+      src: "/blog/income-tax-calculator.webp",
+      alt: "Latest income tax changes for FY 2025-26 / AY 2026-27 (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>Budget 2025 rewired India's income tax — here's what's actually changed for FY 2025-26</h2>
+
+<p>On 1 February 2025, Finance Minister Nirmala Sitharaman delivered the most consequential income tax overhaul middle-class India has seen in years. The headline number — <strong>zero tax on income up to ₹12 lakh under the new regime</strong> — went viral within minutes, but the fine print is what actually determines whether you pay less tax this financial year. New slabs, a re-engineered Section 87A rebate, higher TDS thresholds, an extended ITR deadline for AY 2025-26, and even a brand-new Income Tax Act that replaces the 1961 statute from April 2026 are all in motion at once.</p>
+
+<p>If you're a salaried professional in Bengaluru, a freelance designer in Pune, or a small business owner in Surat, the changes touch your paycheque, your fixed deposit interest, your rent receipts, and your return-filing routine. This piece walks through what's documented, what's effective when, and what you should actually do about it before March 2026.</p>
+
+<h2>The new tax regime slabs for FY 2025-26</h2>
+
+<p>The biggest restructuring happened inside the new tax regime (Section 115BAC), which is now the default regime for individuals unless you actively opt out. 
+
+The new income tax slabs and rates under the new regime for FY 2025-26 (AY 2026-27) are as follows: Rs. 0 to Rs. 4 lakh – Nil, Rs. 4 lakh to Rs. 8 lakh – 5%, Rs. 8 lakh to Rs.
+
+ 12 lakh – 10%, and the slabs continue upward.</p>
+
+<p>The full revised structure, as confirmed by multiple references to Budget 2025, looks like this:</p>
+
+<ul>
+  <li><strong>Up to ₹4,00,000:</strong> Nil</li>
+  <li><strong>₹4,00,001 to ₹8,00,000:</strong> 5%</li>
+  <li><strong>₹8,00,001 to ₹12,00,000:</strong> 10%</li>
+  <li><strong>₹12,00,001 to ₹16,00,000:</strong> 15%</li>
+  <li><strong>₹16,00,001 to ₹20,00,000:</strong> 20%</li>
+  <li><strong>₹20,00,001 to ₹24,00,000:</strong> 25%</li>
+  <li><strong>Above ₹24,00,000:</strong> 30%</li>
+</ul>
+
+<p>That's a meaningful rearrangement. The earlier nil slab ended at ₹3 lakh; it now ends at ₹4 lakh. The 30% bracket, which earlier kicked in at ₹15 lakh, has been pushed all the way out to ₹24 lakh — so high earners save tax across every layer of their income.</p>
+
+<h3>The ₹12 lakh "zero tax" claim, decoded</h3>
+
+<p>The bigger story is what happens through the rebate. 
+
+Giving the good news to tax payers, the Finance Minister stated, "There will be no income tax payable upto income of Rs. 12 lakh (i.e. average income of Rs.1 lakh per month other than special rate income such as capital gains) under the new regime."
+
+</p>
+
+<p>For salaried individuals and pensioners, the picture is even better. 
+
+This limit will be Rs.12.75 lakh for salaried tax payers, due to standard deduction of Rs. 75,000.
+
+ In other words, if your CTC works out to a taxable salary of ₹12.75 lakh, the standard deduction takes you to ₹12 lakh, and the enhanced Section 87A rebate wipes out the rest.</p>
+
+<p>How does that rebate work mechanically? 
+
+Resident individuals with net taxable income up to Rs 12 lakh will no longer have to pay income tax. Salaried individuals availing the standard deduction benefit of Rs 75,000 under the new tax regime will enjoy a tax-free threshold of Rs 12.75 lakh.
+
+ 
+
+The rebate threshold under the new regime was increased from ₹7,00,000 to ₹12,00,000, while the maximum rebate amount was raised to ₹60,000.
+
+ So a taxpayer with ₹12 lakh of taxable income would compute a tax of ₹60,000 under the new slabs, and then the rebate cancels it out — net liability, zero.</p>
+
+<h3>What about income just above ₹12 lakh?</h3>
+
+<p>This is where marginal relief becomes important, and where most online calculators get it wrong. 
+
+For salaried individuals, the ₹75,000 standard deduction further boosts the effective tax-free limit – if your salary is ₹12.75 lakh, after the standard deduction your taxable income is ₹12 lakh, meaning you also pay zero tax.
+
+ But what if your taxable income is ₹12.1 lakh — does the rebate vanish and you suddenly owe ₹61,500? No. 
+
+Marginal relief bridges that gap by reducing the tax bill dramatically – in this case, the person would pay only about ₹10,000 in tax on ₹12.1 lakh
+
+, ensuring nobody is worse off for earning slightly more than the threshold.</p>
+
+<h2>The old tax regime: untouched, but still useful</h2>
+
+<p>Budget 2025 left the old regime exactly where it was. 
+
+All the noteworthy changes to income tax slabs and rates for FY 2025–26 have been introduced in the new tax regime. Hence, the dilemma revolves around whether the new
+
+ regime now beats the old one for most filers.</p>
+
+<p>For reference, the old regime slabs for FY 2025-26 remain: nil up to ₹2.5 lakh, 5% from ₹2.5 to ₹5 lakh, 20% from ₹5 to ₹10 lakh, and 30% above ₹10 lakh. 
+
+The old tax regime continues as an optional system that allows deductions such as Section 80C, HRA and home loan benefits but has different slabs and rates.
+
+</p>
+
+<p>When should you still pick the old regime? 
+
+Old Regime: If you have substantial deductions (HRA, 80C, 80D, home loan), you may drive your taxable income down into a lower tax bracket. Under the new regime, there is effectively no tax up to ₹12 lakh (₹12.75 lakh for salaried).
+
+ In practice, the old regime tends to win only if you have a sizable home loan with deductible interest under Section 24(b), substantial HRA in a metro, and maxed-out 80C and 80D claims — and even then, the math is closer than it used to be.</p>
+
+<p>Don't guess between the two. Run your actual numbers through the <a href="/tools/income-tax-calculator">SabTools Income Tax Calculator</a> with the FY 2025-26 slabs — it lets you compare your tax liability under both regimes side by side, factoring in the ₹75,000 standard deduction, the enhanced 87A rebate, and any 80C/80D/HRA deductions you would claim under the old regime. For most salaried readers under ₹15 lakh CTC, the calculator will surface a clear winner in under a minute.</p>
+
+<h2>TDS thresholds raised — your FD and rent receipts just got easier</h2>
+
+<p>The Budget also rationalised TDS thresholds, several of which took effect from <strong>1 April 2025</strong> and directly affect savers, landlords, and small professionals.</p>
+
+<h3>Interest income (Section 194A)</h3>
+
+<p>
+
+From April 1, 2025, the government raised the TDS threshold for interest income from Rs 40,000 to Rs 50,000 for non-senior citizens.
+
+ For senior citizens, the threshold was doubled. 
+
+Why this matters: If you are earning interest income from fixed deposits, like those offered by Bajaj Finance, TDS is deducted at 10% if the interest exceeds Rs. 1,00,000 for senior citizens or Rs. 50,000 for others.
+
+</p>
+
+<p>Practically: a retired couple in Coimbatore with FDs across SBI, Canara Bank and Bank of Baroda can now hold a meaningfully larger deposit base before the bank starts deducting TDS at the source. Anyone close to the threshold should keep using <strong>Form 15H</strong> (senior citizens) or <strong>15G</strong> (others below the taxable limit) to avoid TDS being deducted at all where applicable.</p>
+
+<h3>Rent (Section 194I)</h3>
+
+<p>This change is significant for tenants paying rent to commercial landlords and for individual landlords. 
+
+The annual limit for TDS on rent payments has been raised from ₹2.40 lakh to ₹6 lakh in the financial year. "This will reduce the number of transactions liable to TDS, thus benefitting small tax payers receiving small payments," Sitharaman said.
+
+</p>
+
+<p>For Section 194-IB (rent paid by individuals/HUFs), the monthly cut-off is also higher. 
+
+Now, TDS on house rent paid has to be deducted from the rent payment if the rent payment is Rs 50,000 per month or part of a month or more.
+
+</p>
+
+<h2>Income Tax Act 2025: the bigger structural shift</h2>
+
+<p>Running parallel to the rate changes is something much larger — a complete rewrite of India's direct tax statute. 
+
+The new Income Tax Act 2025 was introduced to modernise the tax laws that had become complex after decades of amendments. The new act reorganises provisions into 536 sections across 23 chapters, making it easier for taxpaye
+
+rs to navigate.</p>
+
+<p>The transition isn't instant. 
+
+The Income Tax Act, 2025 replaced the Income Tax Act, 1961 with effect from 1 April 2026, reducing the statute from 819 sections to 536 sections while retaining the same tax rates, slabs, and deduction limits.
+
+</p>
+
+<p>So for FY 2025-26 (returns filed in 2026), your computation still happens under the 1961 Act framework with the Budget 2025 amendments. The new Act becomes operative from <strong>1 April 2026</strong> — i.e., it will govern FY 2026-27 onwards.</p>
+
+<p>What if you're worried about pending assessments under the old law? The Income Tax Department has clarified this. 
+
+The repeal of the Income Tax Act, 1961 does not disturb anything relating to tax years before April 1, 2026. For example, if Taxpayer's assessment for the assessment year 2023-24 was completed under the old Act, that assessment will continue to be valid even after the new Act comes into force.
+
+ Translation: old assessments stay legally good; only future computations move to the new framework.</p>
+
+<h2>ITR deadlines: the AY 2025-26 extension and what's ahead</h2>
+
+<p>For returns relating to FY 2024-25 (AY 2025-26) — the ones most readers were filing this year — the deadline shifted multiple times because of utility readiness. 
+
+The Central Board of Direct Taxes has decided to further extend the due date for filing these ITRs for AY 2025-26 from 15th September, 2025 to 16th September, 2025. To enable changes in the utilities, the e-filing portal will remain in maintenance
+
+. The original 31 July 2025 deadline had already been pushed to 15 September, and was then nudged by one more day.</p>
+
+<p>If you missed that window, a belated return is still possible with late fees and interest, but cannot carry forward most losses. Plan to file FY 2025-26 returns on time when the relevant assessment year opens. For salaried filers, the 
+
+due date to file ITR for FY 2025-26 (AY 2026-27) is 31 July 2026 for Salaried & 31 August 2026 for Profession/Business for non-audit taxpayers & 31 October 2026 for audit cases.
+
+</p>
+
+<h2>What this actually means for different Indian taxpayers</h2>
+
+<h3>Salaried professional earning ₹15-18 lakh in Bengaluru or Mumbai</h3>
+
+<p>You're squarely in the bracket where the new regime now usually wins. Standard deduction of ₹75,000 reduces taxable income, and the restructured slabs mean the marginal tax on income between ₹12-16 lakh is only 15% (versus a flat 30% over ₹15 lakh under the older structure). Unless you have a large home loan with substantial interest deduction under Section 24(b), the new regime is likely the better default.</p>
+
+<h3>Senior citizen in Pune or Chennai relying on FD interest</h3>
+
+<p>The doubled TDS threshold of ₹1 lakh on FD interest means much less paperwork at the bank counter, and fewer instances of having to claim TDS refunds at year-end. If your total income is genuinely below the taxable threshold, continue submitting Form 15H proactively at the start of FY 2025-26 across each bank.</p>
+
+<h3>Freelancer or consultant invoicing ₹20-25 lakh annually</h3>
+
+<p>Section 44ADA presumptive taxation, advance tax in four instalments, and GST returns remain unchanged in structure. Under the new regime, your effective tax on professional income within these brackets has come down meaningfully — but only if you don't have major old-regime deductions to claim. If you pay ₹50,000+ per month in rent, also watch the Section 194-IB monthly TDS threshold.</p>
+
+<h3>First-time home loan applicant in NCR or Hyderabad</h3>
+
+<p>This is the one case where the math can still favour the old regime. The home loan interest deduction under Section 24(b) (up to ₹2 lakh on a self-occupied property) plus principal repayment under 80C (up to ₹1.5 lakh) plus HRA-equivalent benefits during construction can add up. Run the comparison carefully before opting out of the new default.</p>
+
+<h2>What you should do before March 2026</h2>
+
+<ol>
+  <li><strong>Re-verify your tax declaration with your employer.</strong> Many employers used the older slabs in early-FY salary processing. If your TDS for April-June 2025 was computed on the old assumptions, you may see a refund cushion building up — or, conversely, an underdeduction that hits you in March.</li>
+  <li><strong>Decide your regime, in writing.</strong> Salaried individuals can switch regimes year to year by intimating their employer. Business/professional income earners face a stricter rule and can only switch once.</li>
+  <li><strong>Review your FD ladder and interest income.</strong> With the higher TDS threshold, restructuring deposits across maturity dates and joint holders can reduce mid-year TDS friction.</li>
+  <li><strong>Update rent agreements and TDS workflows if you're a landlord or commercial tenant.</strong> The new ₹6 lakh/year Section 194I threshold and the ₹50,000/month Section 194-IB threshold both kicked in from April 2025.</li>
+  <li><strong>Track the Income Tax Act 2025 transition.</strong> Filings for FY 2025-26 still happen under the 1961 framework. For FY 2026-27 planning, the new Act's reorganised section numbers and simplified language will matter — especially for businesses with complex deductions, depreciation, or international transactions.</li>
+</ol>
+
+<h2>The bottom line</h2>
+
+<p>Budget 2025 did three things at once: it widened the nil-tax slab and rebate threshold under the new regime so that most salaried Indians under roughly ₹12.75 lakh now pay zero income tax; it raised TDS thresholds on interest, rent and several other heads to reduce compliance friction; and it set the stage for a full statutory rewrite via the Income Tax Act 2025, which takes effect from 1 April 2026 without disturbing any prior-year assessments.</p>
+
+<p>For most readers, the practical question is no longer "which regime should I default to" — it's the new regime, unless you have specific high-value deductions. The smarter question is: by how much is your tax falling, and what should you do with the savings? An honest comparison run for your own numbers — using the new ₹4-8-12-16-20-24 lakh slab grid, the ₹60,000 enhanced 87A rebate, and the ₹75,000 standard deduction — will give you a concrete rupee figure you can plan around. That number, more than any headline, is what FY 2025-26 has handed you.</p>`,
   }
 ];
 
