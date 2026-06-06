@@ -173,4 +173,11 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
     description:
       "Calculate required run rate (RRR) live for a T20, IPL or ODI chase. Enter target, score & overs left to get runs needed per over and chase verdict.",
   },
+
+  // ── Converters (striking-distance pos 4-11, 0-CTR INR cluster — see brief 2026-06-06) ──
+  "currency-converter": {
+    title: "INR to USD Converter — Live Rupee to Dollar Rate",
+    description:
+      "Convert INR to USD, EUR, GBP, AED & more at live rates. Type any rupee amount for instant dollar value — e.g. 14400 INR to USD. Free, no signup.",
+  },
 };
