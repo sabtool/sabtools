@@ -6,6 +6,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import PostHogAnalytics from "@/components/PostHogAnalytics";
 import InstallPrompt from "@/components/InstallPrompt";
 import SuggestTool from "@/components/SuggestTool";
 import AskSabTools from "@/components/AskSabTools";
@@ -223,6 +224,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
         </noscript>
         <GoogleAnalytics />
+        <PostHogAnalytics />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

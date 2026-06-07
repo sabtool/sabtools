@@ -46,6 +46,11 @@
     { "source": "/:path*", "has": [{ "type": "host", "value": "sabtools.vercel.app" }], "destination": "https://sabtools.in/:path*", "permanent": true },
     { "source": "/:path*", "has": [{ "type": "host", "value": "sabtools-two.vercel.app" }], "destination": "https://sabtools.in/:path*", "permanent": true }
   ],
+  "rewrites": [
+    { "source": "/sx/static/:path*", "destination": "https://eu-assets.i.posthog.com/static/:path*" },
+    { "source": "/sx/array/:path*", "destination": "https://eu-assets.i.posthog.com/array/:path*" },
+    { "source": "/sx/:path*", "destination": "https://eu.i.posthog.com/:path*" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -112,7 +117,7 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://adservice.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://pagead2.googlesyndication.com https://api.postalpincode.in https://www.googleapis.com https://api.allorigins.win; frame-src https://pagead2.googlesyndication.com https://www.google.com; object-src 'none'; base-uri 'self'" }
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://adservice.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://pagead2.googlesyndication.com https://api.postalpincode.in https://www.googleapis.com https://api.allorigins.win; frame-src https://pagead2.googlesyndication.com https://www.google.com; object-src 'none'; worker-src 'self' blob:; base-uri 'self'" }
       ]
     }
   ]

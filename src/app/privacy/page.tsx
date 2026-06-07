@@ -197,6 +197,17 @@ export default function PrivacyPage() {
             distinguish unique users and sessions.
           </li>
           <li>
+            <strong>PostHog (Product Analytics):</strong> With your consent, we
+            use PostHog to understand how our tools are actually used — page
+            views, clicks, navigation paths, and anonymised session replays — so
+            we can fix confusing steps and improve each tool. PostHog data is
+            hosted in the European Union and routed first-party through
+            sabtools.in. All form and calculator input fields are masked, so the
+            actual values you type (amounts, salaries, text) are never recorded.
+            We honour your browser&apos;s Do-Not-Track signal and do not create a
+            profile for anonymous visitors.
+          </li>
+          <li>
             <strong>Google AdSense Data:</strong> Google AdSense uses cookies and
             web beacons to serve personalised advertisements based on your
             browsing history across websites. This may include data such as your
@@ -390,6 +401,26 @@ export default function PrivacyPage() {
                     className="text-indigo-600 hover:underline"
                   >
                     Google Privacy Policy
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td className="border border-gray-200 px-4 py-2">PostHog</td>
+                <td className="border border-gray-200 px-4 py-2">
+                  Product analytics &amp; session replay
+                </td>
+                <td className="border border-gray-200 px-4 py-2">
+                  Page views, clicks, navigation paths, masked session replays
+                  (EU-hosted)
+                </td>
+                <td className="border border-gray-200 px-4 py-2">
+                  <a
+                    href="https://posthog.com/privacy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-indigo-600 hover:underline"
+                  >
+                    PostHog Privacy Policy
                   </a>
                 </td>
               </tr>
