@@ -180,4 +180,16 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
     description:
       "Convert INR to USD, EUR, GBP, AED & more at live rates. Type any rupee amount for instant dollar value — e.g. 14400 INR to USD. Free, no signup.",
   },
+
+  // ── Reverse-SIP long-tail (head SIP term unwinnable @pos 83.7 — see brief 2026-06-07) ──
+  "goal-based-sip-calculator": {
+    title: "SIP for 1 Crore Calculator — Monthly SIP You Need",
+    description:
+      "How much SIP per month to reach 1 crore? Enter your goal & years to get the exact monthly SIP needed — with inflation option. Free, no signup.",
+  },
+  "step-up-sip-calculator": {
+    title: "Step-Up SIP Calculator — Top-Up SIP with 10% Increase",
+    description:
+      "Calculate Step-Up (Top-Up) SIP returns with yearly increases — see how a 10% annual step-up grows your corpus vs a flat SIP. Free, no signup.",
+  },
 };
