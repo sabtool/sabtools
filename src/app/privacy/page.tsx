@@ -197,15 +197,18 @@ export default function PrivacyPage() {
             distinguish unique users and sessions.
           </li>
           <li>
-            <strong>PostHog (Product Analytics):</strong> With your consent, we
-            use PostHog to understand how our tools are actually used — page
-            views, clicks, navigation paths, and anonymised session replays — so
-            we can fix confusing steps and improve each tool. PostHog data is
-            hosted in the European Union and routed first-party through
-            sabtools.in. All form and calculator input fields are masked, so the
-            actual values you type (amounts, salaries, text) are never recorded.
-            We honour your browser&apos;s Do-Not-Track signal and do not create a
-            profile for anonymous visitors.
+            <strong>PostHog (Product Analytics):</strong> We use PostHog to
+            understand how our tools are used — page views, clicks, navigation
+            paths, and anonymised session replays — so we can fix confusing
+            steps and improve each tool. PostHog runs in a{" "}
+            <strong>cookieless, anonymous mode</strong>: it sets no cookies and
+            stores nothing on your device, so it collects only aggregate,
+            non-identifying usage data and does not require a consent prompt.
+            PostHog data is hosted in the European Union and routed first-party
+            through sabtools.in. All form and calculator input fields are masked,
+            so the actual values you type (amounts, salaries, text) are never
+            recorded. We honour your browser&apos;s Do-Not-Track signal and do
+            not create a profile for anonymous visitors.
           </li>
           <li>
             <strong>Google AdSense Data:</strong> Google AdSense uses cookies and

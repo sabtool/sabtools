@@ -45,8 +45,8 @@ export default function CookieConsent() {
     <div className="fixed bottom-0 inset-x-0 z-[9999] p-4 sm:p-6">
       <div className="mx-auto max-w-4xl rounded-xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
         <div className="flex-1 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-          We use cookies for analytics (Google Analytics &amp; PostHog) and
-          advertising (Google AdSense) to improve your experience.{" "}
+          We use cookies for analytics (Google Analytics) and advertising
+          (Google AdSense) to improve your experience.{" "}
           <Link
             href="/privacy"
             className="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-800 dark:hover:text-indigo-300"

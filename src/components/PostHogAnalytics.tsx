@@ -3,30 +3,30 @@
 import { useEffect } from "react";
 
 /**
- * PostHog product analytics — consent-gated + privacy-first.
+ * PostHog product analytics — cookieless, anonymous, NO consent banner.
  *
- * Mirrors GoogleAnalytics.tsx so the two behave identically:
- *   - Loads NOTHING until the user clicks "Accept All" on the existing
- *     CookieConsent banner (DPDP Act compliant — no new banner added).
- *   - Listens for the "sabtools:consent" CustomEvent so it can start the
- *     moment the user accepts, without a page reload.
- *   - posthog-js is loaded via dynamic import() so it is code-split and
- *     never touches the critical path (equivalent to GA's lazyOnload).
+ * Runs for EVERY visitor because it stores NOTHING on the device
+ * (persistence: "memory" — no cookies, no localStorage). With nothing
+ * persisted there is no cookie/identifier to consent to, so this is the
+ * privacy-first "no banner" model that Plausible/Fathom use, and it is
+ * defensible under India's DPDP Act and GDPR.
  *
- * Privacy posture (matches the "privacy-first" brand promise):
- *   - api_host "/sx" routes all traffic first-party through sabtools.in
- *     (reverse-proxied to PostHog EU in vercel.json). This keeps data in
- *     the EU, dodges ad-blockers, and needs NO CSP change (same-origin).
- *   - session_recording.maskAllInputs: every input field (loan amounts,
- *     salaries, any number a user types into a calculator) is masked in
- *     replays — we see HOW the tool is used, never the user's private data.
- *   - respect_dnt: honours the browser's Do-Not-Track signal.
+ * Privacy posture:
+ *   - persistence "memory": nothing is stored on the visitor's device; each
+ *     visit is a fresh anonymous session (we trade returning-user accuracy
+ *     for ~100% visitor coverage — the whole point of going cookieless).
+ *   - api_host "/sx": first-party reverse proxy to PostHog EU (vercel.json)
+ *     — keeps data in the EU, dodges ad-blockers, needs no CSP change.
+ *   - session_recording.maskAllInputs: everything a user types into a
+ *     calculator/form (amounts, salaries, text) is masked in replays, so the
+ *     core promise ("your numbers never leave your device") still holds.
+ *   - respect_dnt: honours the browser Do-Not-Track signal (the one privacy
+ *     signal a user can send) — this is what keeps "no banner" defensible.
  *   - person_profiles "identified_only": anonymous visitors never get a
- *     stored person profile — lighter and more private.
+ *     stored person profile.
  *
- * Activation: set NEXT_PUBLIC_POSTHOG_KEY (the public phc_… project key) in
- * Vercel, or paste it into POSTHOG_KEY below. With no key the component is
- * inert, so builds/previews are always safe.
+ * NOTE: Google Analytics + AdSense remain cookie-based and stay gated behind
+ * the CookieConsent banner. Only PostHog is cookieless/ungated.
  */
 
 // Public PostHog project API key — safe to ship in client JS by design.
@@ -37,7 +37,6 @@ const POSTHOG_KEY =
 // First-party reverse-proxy path (see "rewrites" in vercel.json).
 const POSTHOG_PROXY_HOST = "/sx";
 const POSTHOG_UI_HOST = "https://eu.posthog.com";
-const STORAGE_KEY = "sabtools_cookie_consent";
 
 let started = false;
 
@@ -50,11 +49,12 @@ async function startPostHog() {
   posthog.init(POSTHOG_KEY, {
     api_host: POSTHOG_PROXY_HOST,
     ui_host: POSTHOG_UI_HOST,
+    // Cookieless: store nothing on the device → no consent banner required.
+    persistence: "memory",
     // Capture the first view + every App Router client-side navigation.
     capture_pageview: "history_change",
     capture_pageleave: true,
     autocapture: true,
-    persistence: "localStorage+cookie",
     person_profiles: "identified_only",
     respect_dnt: true,
     session_recording: {
@@ -66,29 +66,9 @@ async function startPostHog() {
 
 export default function PostHogAnalytics() {
   useEffect(() => {
-    if (!POSTHOG_KEY) return;
-
-    const hasConsent = () => {
-      try {
-        const raw = localStorage.getItem(STORAGE_KEY);
-        if (!raw) return false;
-        return JSON.parse(raw)?.consent === "all";
-      } catch {
-        return false;
-      }
-    };
-
-    if (hasConsent()) {
-      void startPostHog();
-    }
-
-    const onConsent = (e: Event) => {
-      const detail = (e as CustomEvent<{ consent: "all" | "essential" }>).detail;
-      if (detail?.consent === "all") void startPostHog();
-    };
-
-    window.addEventListener("sabtools:consent", onConsent);
-    return () => window.removeEventListener("sabtools:consent", onConsent);
+    // No consent gate — cookieless analytics loads for everyone, off the
+    // critical path via dynamic import().
+    void startPostHog();
   }, []);
 
   return null;
