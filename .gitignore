@@ -11,6 +11,13 @@ youtube-oauth.json
 youtube-token.json
 shorts-output/
 
+# SEO closed-loop LOCAL automation data + SECRETS — analytics caches and
+# API keys (PostHog personal key, PageSpeed key, GSC/GA4 outputs). The
+# fetch scripts read keys from here; it must NEVER be committed/published.
+.seo-data/
+.seo-reports/
+Daily SEO Reports/
+
 # Personal content-strategy assets — system prompts, draft posts,
 # editorial calendars. Lives next to the codebase for convenience but
 # must NOT be published to the public GitHub repo (codifies positioning
