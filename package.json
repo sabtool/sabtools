@@ -2,6 +2,16 @@
   "name": "sabtools",
   "version": "1.0.0",
   "description": "SabTools.in - All Free Online Tools for India",
+  "license": "MIT",
+  "author": "Rakesh Seervi <rakesh@sabtools.in>",
+  "homepage": "https://sabtools.in",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sabtool/sabtools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sabtool/sabtools/issues"
+  },
   "scripts": {
     "dev": "next dev",
     "prebuild": "node scripts/optimize-images.mjs",
