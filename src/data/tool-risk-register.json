@@ -1,0 +1,6268 @@
+{
+  "generatedAt": "2026-06-08",
+  "totalTools": 460,
+  "tierCounts": {
+    "L0": 320,
+    "L4": 26,
+    "L2": 56,
+    "L1": 45,
+    "L3": 8,
+    "L5": 5
+  },
+  "notes": "Project Trust Phase 1 — risk register for every sabtools.in tool. Each entry is tagged with a tier (L0-L5) that drives its audit treatment in Phase 2. rateDeps lists the keys this tool consumes from src/data/rates.ts. competitors lists the URLs Phase 2 audit will compare our result against. Re-run scripts/build-risk-register.mjs to rebuild this file after editing tier overrides.",
+  "tools": [
+    {
+      "slug": "ai-about-us-generator",
+      "name": "AI About Us Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-ad-copy-generator",
+      "name": "AI Ad Copy Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-apology-letter",
+      "name": "AI Apology Letter",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-article-outline-generator",
+      "name": "AI Article Outline Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-assignment-helper",
+      "name": "AI Assignment Helper",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-bio-generator",
+      "name": "AI Bio Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-birthday-wish-generator",
+      "name": "AI Birthday Wish Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-blog-title-generator",
+      "name": "AI Blog Title Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-breakup-text-generator",
+      "name": "AI Breakup Text Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-bullets-to-paragraph",
+      "name": "AI Bullets to Paragraph",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-cold-email-generator",
+      "name": "AI Cold Email Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-complaint-letter-generator",
+      "name": "AI Complaint Letter Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-cover-letter-generator",
+      "name": "AI Cover Letter Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-email-writer",
+      "name": "AI Email Writer",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-essay-writer",
+      "name": "AI Essay Writer",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-explain-simply",
+      "name": "AI Explain Simply",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-flashcard-generator",
+      "name": "AI Flashcard Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-formal-letter-writer",
+      "name": "AI Formal Letter Writer",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-hashtag-generator-pro",
+      "name": "AI Hashtag Generator Pro",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-interview-questions",
+      "name": "AI Interview Questions",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-job-description-generator",
+      "name": "AI Job Description Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-linkedin-post-generator",
+      "name": "AI LinkedIn Post Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-love-letter-generator",
+      "name": "AI Love Letter Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-math-solver",
+      "name": "AI Math Solver",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-meeting-notes-summarizer",
+      "name": "AI Meeting Notes Summarizer",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-meta-description-generator",
+      "name": "AI Meta Description Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-motivational-quote-generator",
+      "name": "AI Motivational Quote Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-paragraph-completer",
+      "name": "AI Paragraph Completer",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-paragraph-rewriter",
+      "name": "AI Paragraph Rewriter",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-paragraph-to-bullets",
+      "name": "AI Paragraph to Bullets",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-pickup-line-generator",
+      "name": "AI Pickup Line Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-poem-generator",
+      "name": "AI Poem Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-press-release-generator",
+      "name": "AI Press Release Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-product-description",
+      "name": "AI Product Description",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-quiz-generator",
+      "name": "AI Quiz Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-rap-lyrics-generator",
+      "name": "AI Rap Lyrics Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-resume-bullet-points",
+      "name": "AI Resume Bullet Points",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-slogan-generator",
+      "name": "AI Slogan Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-social-caption-generator",
+      "name": "AI Social Caption Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-speech-writer",
+      "name": "AI Speech Writer",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-story-generator",
+      "name": "AI Story Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-study-notes-generator",
+      "name": "AI Study Notes Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-testimonial-generator",
+      "name": "AI Testimonial Generator",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-text-expander",
+      "name": "AI Text Expander",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-text-summarizer",
+      "name": "AI Text Summarizer",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-thank-you-note",
+      "name": "AI Thank You Note",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-tone-changer",
+      "name": "AI Tone Changer",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-wedding-invitation",
+      "name": "AI Wedding Invitation",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-whatsapp-message-writer",
+      "name": "AI WhatsApp Message Writer",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ai-youtube-script-outline",
+      "name": "AI YouTube Script Outline",
+      "category": "ai",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "break-even-calculator",
+      "name": "Break-Even Calculator",
+      "category": "business",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/business-calculator.html",
+        "https://www.omnicalculator.com/finance"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "business-name-generator",
+      "name": "Business Name Generator",
+      "category": "business",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/business-calculator.html",
+        "https://www.omnicalculator.com/finance"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "carpet-area-calculator",
+      "name": "Carpet Area Calculator",
+      "category": "business",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/business-calculator.html",
+        "https://www.omnicalculator.com/finance"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "gst-invoice-generator",
+      "name": "GST Invoice Generator",
+      "category": "business",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/business-calculator.html",
+        "https://www.omnicalculator.com/finance"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "home-loan-affordability",
+      "name": "Home Loan Affordability",
+      "category": "business",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/business-calculator.html",
+        "https://www.omnicalculator.com/finance"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "profit-loss-calculator",
+      "name": "Profit & Loss Calculator",
+      "category": "business",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/business-calculator.html",
+        "https://www.omnicalculator.com/finance"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "rent-vs-buy-calculator",
+      "name": "Rent vs Buy Calculator",
+      "category": "business",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/business-calculator.html",
+        "https://www.omnicalculator.com/finance"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "roi-calculator",
+      "name": "ROI Calculator",
+      "category": "business",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/business-calculator.html",
+        "https://www.omnicalculator.com/finance"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "chart-maker",
+      "name": "Chart Maker",
+      "category": "charts",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "csv-viewer-editor",
+      "name": "CSV Viewer & Editor",
+      "category": "charts",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "flowchart-maker",
+      "name": "Flowchart Maker",
+      "category": "charts",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "json-to-table-viewer",
+      "name": "JSON to Table Viewer",
+      "category": "charts",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "mind-map-generator",
+      "name": "Mind Map Generator",
+      "category": "charts",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "sql-table-generator",
+      "name": "SQL Table Generator",
+      "category": "charts",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "table-generator",
+      "name": "Table Generator",
+      "category": "charts",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "acres-to-sqfeet",
+      "name": "Acres to Square Feet",
+      "category": "converters",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/conversion-calculator.html",
+        "https://www.rapidtables.com/convert/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "area-converter",
+      "name": "Area Converter",
+      "category": "converters",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/conversion-calculator.html",
+        "https://www.rapidtables.com/convert/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "bytes-converter",
+      "name": "Bytes Converter",
+      "category": "converters",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/conversion-calculator.html",
+        "https://www.rapidtables.com/convert/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "currency-converter",
+      "name": "Currency Converter",
+      "category": "converters",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/conversion-calculator.html",
+        "https://www.rapidtables.com/convert/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "data-storage-converter",
+      "name": "Data Storage Converter",
+      "category": "converters",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/conversion-calculator.html",
+        "https://www.rapidtables.com/convert/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "decimal-to-binary",
+      "name": "Decimal to Binary",
+      "category": "converters",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/conversion-calculator.html",
+        "https://www.rapidtables.com/convert/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "feet-to-meters",
+      "name": "Feet to Meters",
+      "category": "converters",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/conversion-calculator.html",
+        "https://www.rapidtables.com/convert/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "hex-to-rgb",
+      "name": "HEX to RGB Converter",
+      "category": "converters",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/conversion-calculator.html",
+        "https://www.rapidtables.com/convert/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "length-converter",
+      "name": "Length Converter",
+      "category": "converters",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/conversion-calculator.html",
+        "https://www.rapidtables.com/convert/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "liters-to-gallons",
+      "name": "Liters to Gallons",
+      "category": "converters",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/conversion-calculator.html",
+        "https://www.rapidtables.com/convert/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "number-system-converter",
+      "name": "Number System Converter",
+      "category": "converters",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/conversion-calculator.html",
+        "https://www.rapidtables.com/convert/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "pixels-to-rem",
+      "name": "Pixels to REM",
+      "category": "converters",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/conversion-calculator.html",
+        "https://www.rapidtables.com/convert/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "speed-converter",
+      "name": "Speed Converter",
+      "category": "converters",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/conversion-calculator.html",
+        "https://www.rapidtables.com/convert/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "temperature-converter",
+      "name": "Temperature Converter",
+      "category": "converters",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/conversion-calculator.html",
+        "https://www.rapidtables.com/convert/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "volume-converter",
+      "name": "Volume Converter",
+      "category": "converters",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/conversion-calculator.html",
+        "https://www.rapidtables.com/convert/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "weight-converter",
+      "name": "Weight Converter",
+      "category": "converters",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/conversion-calculator.html",
+        "https://www.rapidtables.com/convert/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "border-radius-generator",
+      "name": "Border Radius Generator",
+      "category": "css",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "box-shadow-generator",
+      "name": "Box Shadow Generator",
+      "category": "css",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "color-palette-generator",
+      "name": "Color Palette Generator",
+      "category": "css",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "css-gradient-generator",
+      "name": "CSS Gradient Generator",
+      "category": "css",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "glassmorphism-generator",
+      "name": "Glassmorphism Generator",
+      "category": "css",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "text-shadow-generator",
+      "name": "Text Shadow Generator",
+      "category": "css",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "aspect-ratio-calculator",
+      "name": "Aspect Ratio Calculator",
+      "category": "data",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "csv-to-json",
+      "name": "CSV to JSON Converter",
+      "category": "data",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "image-to-base64",
+      "name": "Image to Base64",
+      "category": "data",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "json-to-csv",
+      "name": "JSON to CSV Converter",
+      "category": "data",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "markdown-preview",
+      "name": "Markdown Preview",
+      "category": "data",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "text-diff-checker",
+      "name": "Text Diff Checker",
+      "category": "data",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "countdown-timer",
+      "name": "Countdown Timer",
+      "category": "datetime",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/date-calculator.html",
+        "https://www.timeanddate.com/date/calculator.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "date-add-subtract",
+      "name": "Date Add/Subtract",
+      "category": "datetime",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/date-calculator.html",
+        "https://www.timeanddate.com/date/calculator.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "date-difference-calculator",
+      "name": "Date Difference Calculator",
+      "category": "datetime",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/date-calculator.html",
+        "https://www.timeanddate.com/date/calculator.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "indian-calendar",
+      "name": "Indian Calendar",
+      "category": "datetime",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/date-calculator.html",
+        "https://www.timeanddate.com/date/calculator.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "stopwatch",
+      "name": "Stopwatch",
+      "category": "datetime",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/date-calculator.html",
+        "https://www.timeanddate.com/date/calculator.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "timezone-converter",
+      "name": "Timezone Converter",
+      "category": "datetime",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/date-calculator.html",
+        "https://www.timeanddate.com/date/calculator.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "unix-timestamp-converter",
+      "name": "Unix Timestamp Converter",
+      "category": "datetime",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/date-calculator.html",
+        "https://www.timeanddate.com/date/calculator.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "working-days-calculator",
+      "name": "Working Days Calculator",
+      "category": "datetime",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/date-calculator.html",
+        "https://www.timeanddate.com/date/calculator.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "world-clock",
+      "name": "World Clock",
+      "category": "datetime",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/date-calculator.html",
+        "https://www.timeanddate.com/date/calculator.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "base64-encoder-decoder",
+      "name": "Base64 Encoder/Decoder",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "code-beautifier",
+      "name": "Code Beautifier",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "color-picker",
+      "name": "Color Picker & Converter",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "cron-expression-generator",
+      "name": "Cron Expression Generator",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "css-grid-generator",
+      "name": "CSS Grid Generator",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "css-minifier",
+      "name": "CSS Minifier",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "flexbox-playground",
+      "name": "Flexbox Playground",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "hash-generator",
+      "name": "Hash Generator",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "html-encoder-decoder",
+      "name": "HTML Encoder/Decoder",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "html-to-markdown",
+      "name": "HTML to Markdown",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "javascript-minifier",
+      "name": "JavaScript Minifier",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "json-formatter",
+      "name": "JSON Formatter",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "json-validator",
+      "name": "JSON Validator",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "jwt-decoder",
+      "name": "JWT Decoder",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "markdown-to-html",
+      "name": "Markdown to HTML",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "regex-tester",
+      "name": "Regex Tester",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "sql-formatter",
+      "name": "SQL Formatter",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "svg-editor",
+      "name": "SVG Editor",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "tailwind-generator",
+      "name": "Tailwind CSS Generator",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "url-encoder-decoder",
+      "name": "URL Encoder/Decoder",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "xml-to-json",
+      "name": "XML to JSON Converter",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "yaml-to-json",
+      "name": "YAML to JSON Converter",
+      "category": "developer",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "cgpa-to-percentage",
+      "name": "CGPA to Percentage",
+      "category": "education",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "gpa-calculator",
+      "name": "GPA Calculator",
+      "category": "education",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "grade-calculator",
+      "name": "Grade Calculator",
+      "category": "education",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "percentage-to-cgpa",
+      "name": "Percentage to CGPA",
+      "category": "education",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "study-time-planner",
+      "name": "Study Time Planner",
+      "category": "education",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "board-percentage-calculator",
+      "name": "Board Percentage Calculator",
+      "category": "exam",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "cat-percentile-calculator",
+      "name": "CAT Percentile Calculator",
+      "category": "exam",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "college-fee-calculator",
+      "name": "College Fee Calculator",
+      "category": "exam",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "gate-score-calculator",
+      "name": "GATE Score Calculator",
+      "category": "exam",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "jee-rank-predictor",
+      "name": "JEE Rank Predictor",
+      "category": "exam",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "marks-percentage-calculator",
+      "name": "Marks Percentage Calculator",
+      "category": "exam",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "neet-score-predictor",
+      "name": "NEET Score Predictor",
+      "category": "exam",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "scholarship-eligibility-checker",
+      "name": "Scholarship Eligibility Checker",
+      "category": "exam",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "compound-interest-calculator",
+      "name": "Compound Interest Calculator",
+      "category": "finance",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "daily-interest-calculator",
+      "name": "Daily Interest Calculator",
+      "category": "finance",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "emi-calculator",
+      "name": "EMI Calculator",
+      "category": "finance",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "inflation-calculator",
+      "name": "Inflation Calculator",
+      "category": "finance",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "lumpsum-calculator",
+      "name": "Lumpsum Calculator",
+      "category": "finance",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "simple-interest-calculator",
+      "name": "Simple Interest Calculator",
+      "category": "finance",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "sip-calculator",
+      "name": "SIP Calculator",
+      "category": "finance",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "step-up-sip-calculator",
+      "name": "Step-Up SIP Calculator",
+      "category": "finance",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "swp-calculator",
+      "name": "SWP Calculator",
+      "category": "finance",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "age-on-planet-calculator",
+      "name": "Age on Planet Calculator",
+      "category": "fun",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "baby-name-generator",
+      "name": "Baby Name Generator",
+      "category": "fun",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "flip-a-coin",
+      "name": "Flip a Coin",
+      "category": "fun",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "fuel-cost-calculator",
+      "name": "Fuel Cost Calculator",
+      "category": "fun",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ip-address-lookup",
+      "name": "IP Address Lookup",
+      "category": "fun",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "love-calculator",
+      "name": "Love Calculator",
+      "category": "fun",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "lucky-number-generator",
+      "name": "Lucky Number Generator",
+      "category": "fun",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "nickname-generator",
+      "name": "Nickname Generator",
+      "category": "fun",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "numerology-calculator",
+      "name": "Numerology Calculator",
+      "category": "fun",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "pomodoro-timer",
+      "name": "Pomodoro Timer",
+      "category": "fun",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "quote-generator",
+      "name": "Quote Generator",
+      "category": "fun",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "random-name-generator",
+      "name": "Random Name Generator",
+      "category": "fun",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "roll-a-dice",
+      "name": "Roll a Dice",
+      "category": "fun",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "scientific-calculator",
+      "name": "Scientific Calculator",
+      "category": "fun",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "screen-resolution-checker",
+      "name": "Screen Resolution Checker",
+      "category": "fun",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "split-bill-calculator",
+      "name": "Split Bill Calculator",
+      "category": "fun",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "tip-calculator",
+      "name": "Tip Calculator",
+      "category": "fun",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "truth-or-dare",
+      "name": "Truth or Dare",
+      "category": "fun",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "typing-speed-test",
+      "name": "Typing Speed Test",
+      "category": "fun",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "would-you-rather",
+      "name": "Would You Rather",
+      "category": "fun",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "avatar-profile-pic-maker",
+      "name": "Avatar Profile Pic Maker",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "background-remover",
+      "name": "Background Remover",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "blur-background",
+      "name": "Blur Background",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "bulk-image-resizer",
+      "name": "Bulk Image Resizer",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "business-card-maker",
+      "name": "Business Card Maker",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "certificate-generator",
+      "name": "Certificate Generator",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "collage-maker",
+      "name": "Collage Maker",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "color-palette-extractor",
+      "name": "Color Palette Extractor",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "favicon-generator",
+      "name": "Favicon Generator",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "heic-to-jpg",
+      "name": "HEIC to JPG Converter",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "id-card-generator",
+      "name": "ID Card Generator",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "image-border-adder",
+      "name": "Image Border Adder",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "image-comparison-slider",
+      "name": "Image Comparison Slider",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "image-compressor",
+      "name": "Image Compressor",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "image-cropper",
+      "name": "Image Cropper",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "image-dpi-changer",
+      "name": "Image DPI Changer",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "image-filters",
+      "name": "Image Filters",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "image-format-converter",
+      "name": "Image Format Converter",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "image-resizer",
+      "name": "Image Resizer",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "image-rotate-flip",
+      "name": "Image Rotate & Flip",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "image-text-extractor-ocr",
+      "name": "Image Text Extractor (OCR)",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "image-to-ascii-art",
+      "name": "Image to ASCII Art",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "image-to-jpg",
+      "name": "Image to JPG Converter",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "image-to-png",
+      "name": "Image to PNG Converter",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "image-to-webp",
+      "name": "Image to WebP Converter",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "image-watermark",
+      "name": "Image Watermark",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "instagram-grid-maker",
+      "name": "Instagram Grid Maker",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "meme-generator",
+      "name": "Meme Generator",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "noise-reducer",
+      "name": "Noise Reducer",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "old-photo-restorer",
+      "name": "Old Photo Restorer",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "passport-photo-maker",
+      "name": "Passport Photo Maker",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "photo-calendar-maker",
+      "name": "Photo Calendar Maker",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "photo-color-changer",
+      "name": "Photo Color Changer",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "photo-enhancer",
+      "name": "Photo Enhancer",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "photo-frame-maker",
+      "name": "Photo Frame Maker",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "photo-to-sketch",
+      "name": "Photo to Sketch",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "pixel-art-maker",
+      "name": "Pixel Art Maker",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "qr-code-generator",
+      "name": "QR Code Generator",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "red-eye-remover",
+      "name": "Red Eye Remover",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "screenshot-beautifier",
+      "name": "Screenshot Beautifier",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "screenshot-to-code",
+      "name": "Screenshot to Code",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "svg-to-png",
+      "name": "SVG to PNG Converter",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "thumbnail-maker",
+      "name": "Thumbnail Maker",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "webp-to-jpg",
+      "name": "WebP to JPG Converter",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "webp-to-png",
+      "name": "WebP to PNG Converter",
+      "category": "image",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "aadhaar-masked-generator",
+      "name": "Aadhaar Masked Generator",
+      "category": "indiaguide",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.indiapost.gov.in/",
+        "https://www.rbi.org.in/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "age-calculator",
+      "name": "Age Calculator",
+      "category": "math",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/math.html",
+        "https://www.rapidtables.com/calc/math/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "average-calculator",
+      "name": "Average Calculator",
+      "category": "math",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/math.html",
+        "https://www.rapidtables.com/calc/math/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "bmi-calculator",
+      "name": "BMI Calculator",
+      "category": "math",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/math.html",
+        "https://www.rapidtables.com/calc/math/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "discount-calculator",
+      "name": "Discount Calculator",
+      "category": "math",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/math.html",
+        "https://www.rapidtables.com/calc/math/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "lakh-crore-converter",
+      "name": "Lakh/Crore to Million/Billion Converter",
+      "category": "math",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/math.html",
+        "https://www.rapidtables.com/calc/math/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "margin-calculator",
+      "name": "Margin Calculator",
+      "category": "math",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/math.html",
+        "https://www.rapidtables.com/calc/math/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "number-to-words",
+      "name": "Number to Words",
+      "category": "math",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/math.html",
+        "https://www.rapidtables.com/calc/math/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "percentage-calculator",
+      "name": "Percentage Calculator",
+      "category": "math",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/math.html",
+        "https://www.rapidtables.com/calc/math/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "random-number-generator",
+      "name": "Random Number Generator",
+      "category": "math",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/math.html",
+        "https://www.rapidtables.com/calc/math/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "unit-price-calculator",
+      "name": "Unit Price Calculator",
+      "category": "math",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/math.html",
+        "https://www.rapidtables.com/calc/math/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "compress-pdf",
+      "name": "Compress PDF",
+      "category": "pdf",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "image-to-pdf",
+      "name": "Image to PDF",
+      "category": "pdf",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "merge-pdf",
+      "name": "Merge PDF",
+      "category": "pdf",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "pdf-page-remover",
+      "name": "PDF Page Remover",
+      "category": "pdf",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "pdf-to-image",
+      "name": "PDF to Image",
+      "category": "pdf",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "pdf-to-word",
+      "name": "PDF to Word",
+      "category": "pdf",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "split-pdf",
+      "name": "Split PDF",
+      "category": "pdf",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "word-to-pdf",
+      "name": "Word to PDF",
+      "category": "pdf",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "algebra-solver",
+      "name": "Algebra Solver",
+      "category": "science",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/science.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "binary-calculator",
+      "name": "Binary Calculator",
+      "category": "science",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/science.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "fraction-calculator",
+      "name": "Fraction Calculator",
+      "category": "science",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/science.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "graphing-calculator",
+      "name": "Graphing Calculator",
+      "category": "science",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/science.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "matrix-calculator",
+      "name": "Matrix Calculator",
+      "category": "science",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/science.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "prime-number-checker",
+      "name": "Prime Number Checker",
+      "category": "science",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/science.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "probability-calculator",
+      "name": "Probability Calculator",
+      "category": "science",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/science.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "quadratic-solver",
+      "name": "Quadratic Solver",
+      "category": "science",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/science.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "statistics-calculator",
+      "name": "Statistics Calculator",
+      "category": "science",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/science.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "trig-calculator",
+      "name": "Trigonometry Calculator",
+      "category": "science",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/science.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "dns-lookup-tool",
+      "name": "DNS Lookup Tool",
+      "category": "security",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "email-leak-checker",
+      "name": "Email Leak Checker",
+      "category": "security",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "http-header-checker",
+      "name": "HTTP Header Checker",
+      "category": "security",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ip-geolocation",
+      "name": "IP Geolocation",
+      "category": "security",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "password-generator",
+      "name": "Password Generator",
+      "category": "security",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "password-strength-checker",
+      "name": "Password Strength Checker",
+      "category": "security",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "privacy-policy-generator",
+      "name": "Privacy Policy Generator",
+      "category": "security",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "terms-conditions-generator",
+      "name": "Terms & Conditions Generator",
+      "category": "security",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "user-agent-parser",
+      "name": "User Agent Parser",
+      "category": "security",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "website-ssl-checker",
+      "name": "Website SSL Checker",
+      "category": "security",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "whois-lookup",
+      "name": "WHOIS Lookup",
+      "category": "security",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "backlink-checker",
+      "name": "Backlink Checker",
+      "category": "seo",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://pagespeed.web.dev/",
+        "https://search.google.com/test/rich-results"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "domain-age-checker",
+      "name": "Domain Age Checker",
+      "category": "seo",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://pagespeed.web.dev/",
+        "https://search.google.com/test/rich-results"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "headline-analyzer",
+      "name": "Headline Analyzer",
+      "category": "seo",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://pagespeed.web.dev/",
+        "https://search.google.com/test/rich-results"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "htaccess-generator",
+      "name": ".htaccess Generator",
+      "category": "seo",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://pagespeed.web.dev/",
+        "https://search.google.com/test/rich-results"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "keyword-density-checker",
+      "name": "Keyword Density Checker",
+      "category": "seo",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://pagespeed.web.dev/",
+        "https://search.google.com/test/rich-results"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "meta-tag-generator",
+      "name": "Meta Tag Generator",
+      "category": "seo",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://pagespeed.web.dev/",
+        "https://search.google.com/test/rich-results"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "open-graph-generator",
+      "name": "Open Graph Generator",
+      "category": "seo",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://pagespeed.web.dev/",
+        "https://search.google.com/test/rich-results"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "page-speed-estimator",
+      "name": "Page Speed Estimator",
+      "category": "seo",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://pagespeed.web.dev/",
+        "https://search.google.com/test/rich-results"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "redirect-checker",
+      "name": "Redirect Checker",
+      "category": "seo",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://pagespeed.web.dev/",
+        "https://search.google.com/test/rich-results"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "robots-txt-generator",
+      "name": "Robots.txt Generator",
+      "category": "seo",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://pagespeed.web.dev/",
+        "https://search.google.com/test/rich-results"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "schema-markup-generator",
+      "name": "Schema Markup Generator",
+      "category": "seo",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://pagespeed.web.dev/",
+        "https://search.google.com/test/rich-results"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "seo-checker",
+      "name": "SEO Checker",
+      "category": "seo",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://pagespeed.web.dev/",
+        "https://search.google.com/test/rich-results"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "serp-preview",
+      "name": "SERP Preview",
+      "category": "seo",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://pagespeed.web.dev/",
+        "https://search.google.com/test/rich-results"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "sitemap-generator",
+      "name": "XML Sitemap Generator",
+      "category": "seo",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://pagespeed.web.dev/",
+        "https://search.google.com/test/rich-results"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "sitemap-validator",
+      "name": "Sitemap Validator",
+      "category": "seo",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://pagespeed.web.dev/",
+        "https://search.google.com/test/rich-results"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "structured-data-generator",
+      "name": "Structured Data Generator",
+      "category": "seo",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://pagespeed.web.dev/",
+        "https://search.google.com/test/rich-results"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "twitter-card-generator",
+      "name": "Twitter Card Generator",
+      "category": "seo",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://pagespeed.web.dev/",
+        "https://search.google.com/test/rich-results"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "utm-link-builder",
+      "name": "UTM Link Builder",
+      "category": "seo",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://pagespeed.web.dev/",
+        "https://search.google.com/test/rich-results"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "website-speed-estimator",
+      "name": "Website Speed Estimator",
+      "category": "seo",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://pagespeed.web.dev/",
+        "https://search.google.com/test/rich-results"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "advanced-discount-calculator",
+      "name": "Advanced Discount Calculator",
+      "category": "shopping",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "cashback-calculator",
+      "name": "Cashback Calculator",
+      "category": "shopping",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "emi-affordability-calculator",
+      "name": "EMI Affordability Calculator",
+      "category": "shopping",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "gst-inclusive-exclusive",
+      "name": "GST Inclusive Exclusive",
+      "category": "shopping",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "price-per-unit-comparator",
+      "name": "Price Per Unit Comparator",
+      "category": "shopping",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "hashtag-generator",
+      "name": "Hashtag Generator",
+      "category": "social",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "instagram-bio-generator",
+      "name": "Instagram Bio Generator",
+      "category": "social",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "social-media-image-resizer",
+      "name": "Social Media Image Resizer",
+      "category": "social",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "tweet-character-counter",
+      "name": "Tweet Character Counter",
+      "category": "social",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "youtube-thumbnail-downloader",
+      "name": "YouTube Thumbnail Downloader",
+      "category": "social",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "youtube-timestamp-generator",
+      "name": "YouTube Timestamp Generator",
+      "category": "social",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ipl-auction-salary-cap-calculator",
+      "name": "IPL Auction Salary Cap Calculator",
+      "category": "sports",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.cricbuzz.com/",
+        "https://www.espncricinfo.com/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ipl-fantasy-points-calculator",
+      "name": "IPL Fantasy Points Calculator",
+      "category": "sports",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.cricbuzz.com/",
+        "https://www.espncricinfo.com/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ipl-nrr-calculator",
+      "name": "IPL Net Run Rate (NRR) Calculator",
+      "category": "sports",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.cricbuzz.com/",
+        "https://www.espncricinfo.com/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ipl-required-run-rate-calculator",
+      "name": "IPL Required Run Rate Calculator",
+      "category": "sports",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.cricbuzz.com/",
+        "https://www.espncricinfo.com/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ipl-ticket-price-calculator",
+      "name": "IPL Ticket Price Calculator",
+      "category": "sports",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.cricbuzz.com/",
+        "https://www.espncricinfo.com/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ipl-win-probability-calculator",
+      "name": "IPL Win Probability Calculator",
+      "category": "sports",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.cricbuzz.com/",
+        "https://www.espncricinfo.com/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "assignment-word-counter",
+      "name": "Assignment Word Counter",
+      "category": "student",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "flashcard-maker",
+      "name": "Flashcard Maker",
+      "category": "student",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "graph-paper-generator",
+      "name": "Graph Paper Generator",
+      "category": "student",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "handwriting-page-generator",
+      "name": "Handwriting Page Generator",
+      "category": "student",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "timetable-generator",
+      "name": "Timetable Generator",
+      "category": "student",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "case-converter",
+      "name": "Case Converter",
+      "category": "text",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "fancy-text-generator",
+      "name": "Fancy Text Generator",
+      "category": "text",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "grammar-checker",
+      "name": "Grammar Checker",
+      "category": "text",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "lorem-ipsum-generator",
+      "name": "Lorem Ipsum Generator",
+      "category": "text",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "paragraph-rewriter",
+      "name": "Paragraph Rewriter",
+      "category": "text",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "plagiarism-checker",
+      "name": "Plagiarism Checker",
+      "category": "text",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "readability-checker",
+      "name": "Readability Checker",
+      "category": "text",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "remove-duplicate-lines",
+      "name": "Remove Duplicate Lines",
+      "category": "text",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "sentence-counter",
+      "name": "Sentence Counter",
+      "category": "text",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "speech-to-text",
+      "name": "Speech to Text",
+      "category": "text",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "text-encryption",
+      "name": "Text Encryption",
+      "category": "text",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "text-repeater",
+      "name": "Text Repeater",
+      "category": "text",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "text-reverser",
+      "name": "Text Reverser",
+      "category": "text",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "text-to-slug",
+      "name": "Text to Slug",
+      "category": "text",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "text-to-speech",
+      "name": "Text to Speech",
+      "category": "text",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "word-counter",
+      "name": "Word Counter",
+      "category": "text",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "aadhaar-validator",
+      "name": "Aadhaar Validator",
+      "category": "utility",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "gst-number-validator",
+      "name": "GST Number Validator",
+      "category": "utility",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "indian-railway-pnr",
+      "name": "Indian Railway PNR",
+      "category": "utility",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "pan-card-validator",
+      "name": "PAN Card Validator",
+      "category": "utility",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "pin-code-lookup",
+      "name": "PIN Code Lookup",
+      "category": "utility",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ration-card-info",
+      "name": "Ration Card Info",
+      "category": "utility",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "vehicle-number-info",
+      "name": "Vehicle Number Info",
+      "category": "utility",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ifsc-bank-details",
+      "name": "IFSC Bank Details",
+      "category": "whatsapp",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "mobile-number-tracker",
+      "name": "Mobile Number Tracker",
+      "category": "whatsapp",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "upi-qr-generator",
+      "name": "UPI QR Generator",
+      "category": "whatsapp",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "whatsapp-formatter",
+      "name": "WhatsApp Formatter",
+      "category": "whatsapp",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "whatsapp-link-generator",
+      "name": "WhatsApp Link Generator",
+      "category": "whatsapp",
+      "tier": "L0",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "crop-yield-calculator",
+      "name": "Crop Yield Calculator",
+      "category": "agriculture",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://farmer.gov.in/",
+        "https://krishijagran.com/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "farm-profit-calculator",
+      "name": "Farm Profit Calculator",
+      "category": "agriculture",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://farmer.gov.in/",
+        "https://krishijagran.com/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "fertilizer-calculator",
+      "name": "Fertilizer Calculator",
+      "category": "agriculture",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://farmer.gov.in/",
+        "https://krishijagran.com/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "irrigation-calculator",
+      "name": "Irrigation Calculator",
+      "category": "agriculture",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://farmer.gov.in/",
+        "https://krishijagran.com/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "land-measurement-converter",
+      "name": "Land Measurement Converter",
+      "category": "agriculture",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://farmer.gov.in/",
+        "https://krishijagran.com/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "seed-rate-calculator",
+      "name": "Seed Rate Calculator",
+      "category": "agriculture",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://farmer.gov.in/",
+        "https://krishijagran.com/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "gemstone-recommendation",
+      "name": "Gemstone Recommendation",
+      "category": "astrology",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "kundli-calculator",
+      "name": "Kundli Calculator",
+      "category": "astrology",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "nakshatra-calculator",
+      "name": "Nakshatra Calculator",
+      "category": "astrology",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "name-numerology-calculator",
+      "name": "Name Numerology Calculator",
+      "category": "astrology",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "panchang-calculator",
+      "name": "Panchang Calculator",
+      "category": "astrology",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "rashi-calculator",
+      "name": "Rashi Calculator",
+      "category": "astrology",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "concrete-calculator",
+      "name": "Concrete Calculator",
+      "category": "construction",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.civilconcept.com/calculators",
+        "https://civilread.com/calculators/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "electrical-load-calculator",
+      "name": "Electrical Load Calculator",
+      "category": "construction",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.civilconcept.com/calculators",
+        "https://civilread.com/calculators/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "flooring-cost-calculator",
+      "name": "Flooring Cost Calculator",
+      "category": "construction",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.civilconcept.com/calculators",
+        "https://civilread.com/calculators/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "pipe-size-calculator",
+      "name": "Pipe Size Calculator",
+      "category": "construction",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.civilconcept.com/calculators",
+        "https://civilread.com/calculators/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "plywood-calculator",
+      "name": "Plywood Calculator",
+      "category": "construction",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.civilconcept.com/calculators",
+        "https://civilread.com/calculators/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "roof-area-calculator",
+      "name": "Roof Area Calculator",
+      "category": "construction",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.civilconcept.com/calculators",
+        "https://civilread.com/calculators/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "room-paint-visualizer",
+      "name": "Room Paint Visualizer",
+      "category": "construction",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.civilconcept.com/calculators",
+        "https://civilread.com/calculators/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "staircase-calculator",
+      "name": "Staircase Calculator",
+      "category": "construction",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.civilconcept.com/calculators",
+        "https://civilread.com/calculators/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "steel-weight-calculator",
+      "name": "Steel Weight Calculator",
+      "category": "construction",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.civilconcept.com/calculators",
+        "https://civilread.com/calculators/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "water-tank-calculator",
+      "name": "Water Tank Calculator",
+      "category": "construction",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.civilconcept.com/calculators",
+        "https://civilread.com/calculators/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "cooking-time-calculator",
+      "name": "Cooking Time Calculator",
+      "category": "cooking",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "gas-cylinder-calculator",
+      "name": "Gas Cylinder Calculator",
+      "category": "cooking",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "indian-food-calorie-counter",
+      "name": "Indian Food Calorie Counter",
+      "category": "cooking",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "recipe-unit-converter",
+      "name": "Recipe Unit Converter",
+      "category": "cooking",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "water-tds-calculator",
+      "name": "Water TDS Calculator",
+      "category": "cooking",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "blood-alcohol-calculator",
+      "name": "Blood Alcohol Calculator",
+      "category": "health",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/bmi-calculator.html",
+        "https://www.omnicalculator.com/health"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "blood-pressure-checker",
+      "name": "Blood Pressure Checker",
+      "category": "health",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/bmi-calculator.html",
+        "https://www.omnicalculator.com/health"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "bmr-calculator",
+      "name": "BMR Calculator",
+      "category": "health",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/bmi-calculator.html",
+        "https://www.omnicalculator.com/health"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "body-fat-calculator",
+      "name": "Body Fat Calculator",
+      "category": "health",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/bmi-calculator.html",
+        "https://www.omnicalculator.com/health"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "calorie-calculator",
+      "name": "Calorie Calculator",
+      "category": "health",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/bmi-calculator.html",
+        "https://www.omnicalculator.com/health"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "heart-rate-zone-calculator",
+      "name": "Heart Rate Zone Calculator",
+      "category": "health",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/bmi-calculator.html",
+        "https://www.omnicalculator.com/health"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ideal-weight-calculator",
+      "name": "Ideal Weight Calculator",
+      "category": "health",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/bmi-calculator.html",
+        "https://www.omnicalculator.com/health"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "macro-calculator",
+      "name": "Macro Calculator",
+      "category": "health",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/bmi-calculator.html",
+        "https://www.omnicalculator.com/health"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "menstrual-cycle-calculator",
+      "name": "Menstrual Cycle Calculator",
+      "category": "health",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/bmi-calculator.html",
+        "https://www.omnicalculator.com/health"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "pregnancy-calculator",
+      "name": "Pregnancy Calculator",
+      "category": "health",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/bmi-calculator.html",
+        "https://www.omnicalculator.com/health"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "protein-intake-calculator",
+      "name": "Protein Intake Calculator",
+      "category": "health",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/bmi-calculator.html",
+        "https://www.omnicalculator.com/health"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "sleep-calculator",
+      "name": "Sleep Calculator",
+      "category": "health",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/bmi-calculator.html",
+        "https://www.omnicalculator.com/health"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "water-intake-calculator",
+      "name": "Water Intake Calculator",
+      "category": "health",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/bmi-calculator.html",
+        "https://www.omnicalculator.com/health"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "event-checklist-generator",
+      "name": "Event Checklist Generator",
+      "category": "wedding",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "gift-registry-calculator",
+      "name": "Gift Registry Calculator",
+      "category": "wedding",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "guest-list-manager",
+      "name": "Guest List Manager",
+      "category": "wedding",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "wedding-budget-calculator",
+      "name": "Wedding Budget Calculator",
+      "category": "wedding",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "wedding-date-finder",
+      "name": "Wedding Date Finder",
+      "category": "wedding",
+      "tier": "L1",
+      "rateDeps": [],
+      "competitors": [],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ohms-law-calculator",
+      "name": "Ohm's Law Calculator",
+      "category": "electrical",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://serc.kerala.gov.in/",
+        "https://www.mahadiscom.in/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "power-consumption-calculator",
+      "name": "Power Consumption Calculator",
+      "category": "electrical",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://serc.kerala.gov.in/",
+        "https://www.mahadiscom.in/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "solar-panel-calculator",
+      "name": "Solar Panel Calculator",
+      "category": "electrical",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://serc.kerala.gov.in/",
+        "https://www.mahadiscom.in/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "transformer-calculator",
+      "name": "Transformer Calculator",
+      "category": "electrical",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://serc.kerala.gov.in/",
+        "https://www.mahadiscom.in/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "voltage-drop-calculator",
+      "name": "Voltage Drop Calculator",
+      "category": "electrical",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://serc.kerala.gov.in/",
+        "https://www.mahadiscom.in/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "wire-size-calculator",
+      "name": "Wire Size Calculator",
+      "category": "electrical",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://serc.kerala.gov.in/",
+        "https://www.mahadiscom.in/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "atal-pension-yojana-calculator",
+      "name": "Atal Pension Yojana (APY) Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "cagr-calculator",
+      "name": "CAGR Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "car-loan-calculator",
+      "name": "Car Loan Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "credit-score-estimator",
+      "name": "Credit Score Estimator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "education-loan-calculator",
+      "name": "Education Loan Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "elss-tax-calculator",
+      "name": "ELSS Tax Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "emergency-fund-calculator",
+      "name": "Emergency Fund Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "emi-bridge-calculator",
+      "name": "EMI Bridge Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "fd-calculator",
+      "name": "FD Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "fd-comparison",
+      "name": "FD Comparison",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "fire-number-calculator",
+      "name": "FIRE Number Calculator (India)",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "goal-based-sip-calculator",
+      "name": "Goal-Based SIP Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "home-loan-calculator",
+      "name": "Home Loan Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "home-loan-prepayment-calculator",
+      "name": "Home Loan Prepayment Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "kvp-calculator",
+      "name": "KVP (Kisan Vikas Patra) Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "loan-eligibility-calculator",
+      "name": "Loan Eligibility Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "mahila-samman-calculator",
+      "name": "Mahila Samman Savings Certificate Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [
+        "mssc"
+      ],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "mutual-fund-calculator",
+      "name": "Mutual Fund Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "nps-retirement-payout-calculator",
+      "name": "NPS Retirement Payout Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "nsc-calculator",
+      "name": "NSC Calculator (National Savings Certificate)",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "pension-calculator",
+      "name": "Pension Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "post-office-savings-calculator",
+      "name": "Post Office Savings Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [
+        "nsc",
+        "kvp",
+        "scss",
+        "mis",
+        "postOfficeRd",
+        "postOfficeTd1y",
+        "postOfficeTd2y",
+        "postOfficeTd3y",
+        "postOfficeTd5y",
+        "postOfficeSavings"
+      ],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ppf-calculator",
+      "name": "PPF Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [
+        "ppf"
+      ],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "rd-calculator",
+      "name": "RD Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "salary-calculator",
+      "name": "Salary Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "scss-calculator",
+      "name": "Senior Citizens Savings Scheme (SCSS) Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "sgb-returns-calculator",
+      "name": "Sovereign Gold Bond (SGB) Returns Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "stp-calculator",
+      "name": "STP (Systematic Transfer Plan) Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "sukanya-samriddhi-calculator",
+      "name": "Sukanya Samriddhi Calculator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [
+        "ssy"
+      ],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "tax-saving-fd-vs-elss-calculator",
+      "name": "Tax-Saving FD vs ELSS Comparator",
+      "category": "finance",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "electricity-rate-finder",
+      "name": "Electricity Rate Finder",
+      "category": "indiaguide",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.indiapost.gov.in/",
+        "https://www.rbi.org.in/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "lpg-subsidy-calculator",
+      "name": "LPG Subsidy Calculator",
+      "category": "indiaguide",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.indiapost.gov.in/",
+        "https://www.rbi.org.in/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "bbmp-property-tax-calculator",
+      "name": "BBMP Property Tax Calculator (Bangalore)",
+      "category": "realestate",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.99acres.com/property-tools",
+        "https://housing.com/calculators"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "brick-calculator",
+      "name": "Brick Calculator",
+      "category": "realestate",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.99acres.com/property-tools",
+        "https://housing.com/calculators"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "cement-calculator",
+      "name": "Cement Calculator",
+      "category": "realestate",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.99acres.com/property-tools",
+        "https://housing.com/calculators"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "interior-cost-estimator",
+      "name": "Interior Cost Estimator",
+      "category": "realestate",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.99acres.com/property-tools",
+        "https://housing.com/calculators"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "paint-calculator",
+      "name": "Paint Calculator",
+      "category": "realestate",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.99acres.com/property-tools",
+        "https://housing.com/calculators"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "plot-area-calculator",
+      "name": "Plot Area Calculator",
+      "category": "realestate",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.99acres.com/property-tools",
+        "https://housing.com/calculators"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "property-capital-gains-tax-calculator",
+      "name": "Property Capital Gains Tax Calculator",
+      "category": "realestate",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.99acres.com/property-tools",
+        "https://housing.com/calculators"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "tile-calculator",
+      "name": "Tile Calculator",
+      "category": "realestate",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.99acres.com/property-tools",
+        "https://housing.com/calculators"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "electricity-bill-calculator",
+      "name": "Electricity Bill Calculator",
+      "category": "tax",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://cleartax.in/paytax/taxcalculator",
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "epf-calculator",
+      "name": "EPF Calculator",
+      "category": "tax",
+      "tier": "L2",
+      "rateDeps": [
+        "epf"
+      ],
+      "competitors": [
+        "https://cleartax.in/paytax/taxcalculator",
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "nps-calculator",
+      "name": "NPS Calculator",
+      "category": "tax",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://cleartax.in/paytax/taxcalculator",
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "stamp-duty-calculator",
+      "name": "Stamp Duty Calculator",
+      "category": "tax",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://cleartax.in/paytax/taxcalculator",
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "car-insurance-estimator",
+      "name": "Car Insurance Estimator",
+      "category": "vehicle",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://parivahan.gov.in/",
+        "https://tis.nhai.gov.in/tollplazasonmap"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "mileage-calculator",
+      "name": "Mileage Calculator",
+      "category": "vehicle",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://parivahan.gov.in/",
+        "https://tis.nhai.gov.in/tollplazasonmap"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "road-trip-planner",
+      "name": "Road Trip Planner",
+      "category": "vehicle",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://parivahan.gov.in/",
+        "https://tis.nhai.gov.in/tollplazasonmap"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "toll-calculator",
+      "name": "Toll Calculator",
+      "category": "vehicle",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://parivahan.gov.in/",
+        "https://tis.nhai.gov.in/tollplazasonmap"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "tyre-size-calculator",
+      "name": "Tyre Size Calculator",
+      "category": "vehicle",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://parivahan.gov.in/",
+        "https://tis.nhai.gov.in/tollplazasonmap"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "vehicle-depreciation-calculator",
+      "name": "Vehicle Depreciation Calculator",
+      "category": "vehicle",
+      "tier": "L2",
+      "rateDeps": [],
+      "competitors": [
+        "https://parivahan.gov.in/",
+        "https://tis.nhai.gov.in/tollplazasonmap"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "emi-vs-rent-calculator",
+      "name": "EMI vs Rent Calculator",
+      "category": "indiaguide",
+      "tier": "L3",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.indiapost.gov.in/",
+        "https://www.rbi.org.in/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "govt-scheme-eligibility-finder",
+      "name": "Govt Scheme Eligibility Finder",
+      "category": "indiaguide",
+      "tier": "L3",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.indiapost.gov.in/",
+        "https://www.rbi.org.in/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "indian-festival-calendar",
+      "name": "Indian Festival Calendar",
+      "category": "indiaguide",
+      "tier": "L3",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.indiapost.gov.in/",
+        "https://www.rbi.org.in/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "indian-name-meaning",
+      "name": "Indian Name Meaning",
+      "category": "indiaguide",
+      "tier": "L3",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.indiapost.gov.in/",
+        "https://www.rbi.org.in/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "indian-pin-code-directory",
+      "name": "Indian PIN Code Directory",
+      "category": "indiaguide",
+      "tier": "L3",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.indiapost.gov.in/",
+        "https://www.rbi.org.in/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "train-seat-layout",
+      "name": "Train Seat Layout",
+      "category": "indiaguide",
+      "tier": "L3",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.indiapost.gov.in/",
+        "https://www.rbi.org.in/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "wedding-food-calculator",
+      "name": "Wedding Food Calculator",
+      "category": "indiaguide",
+      "tier": "L3",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.indiapost.gov.in/",
+        "https://www.rbi.org.in/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "ifsc-code-lookup",
+      "name": "IFSC Code Lookup",
+      "category": "utility",
+      "tier": "L3",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.calculator.net/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "appraisal-hike-calculator",
+      "name": "Appraisal Hike Calculator",
+      "category": "career",
+      "tier": "L4",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.ambitionbox.com/salaries/india-salary-calculator",
+        "https://www.naukri.com/salary-calculator"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "experience-calculator",
+      "name": "Experience Calculator",
+      "category": "career",
+      "tier": "L4",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.ambitionbox.com/salaries/india-salary-calculator",
+        "https://www.naukri.com/salary-calculator"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "in-hand-salary-calculator",
+      "name": "In-Hand Salary Calculator",
+      "category": "career",
+      "tier": "L4",
+      "rateDeps": [
+        "incomeTaxNewRegimeFy26_27",
+        "incomeTaxOldRegimeFy26_27"
+      ],
+      "competitors": [
+        "https://www.ambitionbox.com/salaries/india-salary-calculator",
+        "https://www.naukri.com/salary-calculator"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "notice-period-calculator",
+      "name": "Notice Period Calculator",
+      "category": "career",
+      "tier": "L4",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.ambitionbox.com/salaries/india-salary-calculator",
+        "https://www.naukri.com/salary-calculator"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "resume-builder",
+      "name": "Resume Builder",
+      "category": "career",
+      "tier": "L4",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.ambitionbox.com/salaries/india-salary-calculator",
+        "https://www.naukri.com/salary-calculator"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "resume-score-checker",
+      "name": "Resume Score Checker",
+      "category": "career",
+      "tier": "L4",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.ambitionbox.com/salaries/india-salary-calculator",
+        "https://www.naukri.com/salary-calculator"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "salary-comparison-tool",
+      "name": "Salary Comparison Tool",
+      "category": "career",
+      "tier": "L4",
+      "rateDeps": [],
+      "competitors": [
+        "https://www.ambitionbox.com/salaries/india-salary-calculator",
+        "https://www.naukri.com/salary-calculator"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "gratuity-calculator",
+      "name": "Gratuity Calculator",
+      "category": "finance",
+      "tier": "L4",
+      "rateDeps": [
+        "gratuityCeiling"
+      ],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "gst-calculator",
+      "name": "GST Calculator",
+      "category": "finance",
+      "tier": "L4",
+      "rateDeps": [
+        "gstSlabs"
+      ],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "income-tax-calculator",
+      "name": "Income Tax Calculator",
+      "category": "finance",
+      "tier": "L4",
+      "rateDeps": [
+        "incomeTaxNewRegimeFy26_27",
+        "incomeTaxOldRegimeFy26_27"
+      ],
+      "competitors": [
+        "https://groww.in/calculators",
+        "https://cleartax.in/calculators",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "bank-holidays-2026-calendar",
+      "name": "Bank Holidays 2026 Calendar (RBI)",
+      "category": "tax",
+      "tier": "L4",
+      "rateDeps": [],
+      "competitors": [
+        "https://cleartax.in/paytax/taxcalculator",
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "capital-gains-tax-calculator",
+      "name": "Capital Gains Tax Calculator",
+      "category": "tax",
+      "tier": "L4",
+      "rateDeps": [
+        "cgStcgEquityRate",
+        "cgLtcgEquityRate",
+        "cgLtcgEquityExemption",
+        "cgLtcgOtherRate"
+      ],
+      "competitors": [
+        "https://cleartax.in/paytax/taxcalculator",
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "crypto-tax-calculator",
+      "name": "Crypto Tax Calculator",
+      "category": "tax",
+      "tier": "L4",
+      "rateDeps": [],
+      "competitors": [
+        "https://cleartax.in/paytax/taxcalculator",
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "eighth-pay-commission-calculator",
+      "name": "8th Pay Commission Calculator",
+      "category": "tax",
+      "tier": "L4",
+      "rateDeps": [],
+      "competitors": [
+        "https://cleartax.in/paytax/taxcalculator",
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "gold-price-calculator",
+      "name": "Gold Price Calculator",
+      "category": "tax",
+      "tier": "L4",
+      "rateDeps": [],
+      "competitors": [
+        "https://cleartax.in/paytax/taxcalculator",
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "hra-calculator",
+      "name": "HRA Exemption Calculator",
+      "category": "tax",
+      "tier": "L4",
+      "rateDeps": [
+        "hraMetros",
+        "incomeTaxOldRegimeFy26_27"
+      ],
+      "competitors": [
+        "https://cleartax.in/paytax/taxcalculator",
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "hra-vs-80gg-calculator",
+      "name": "HRA vs Section 80GG Comparison Calculator",
+      "category": "tax",
+      "tier": "L4",
+      "rateDeps": [],
+      "competitors": [
+        "https://cleartax.in/paytax/taxcalculator",
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "msme-eligibility-checker",
+      "name": "MSME / Udyam Registration Eligibility Checker",
+      "category": "tax",
+      "tier": "L4",
+      "rateDeps": [],
+      "competitors": [
+        "https://cleartax.in/paytax/taxcalculator",
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "professional-tax-calculator",
+      "name": "Professional Tax Calculator (State-Wise)",
+      "category": "tax",
+      "tier": "L4",
+      "rateDeps": [],
+      "competitors": [
+        "https://cleartax.in/paytax/taxcalculator",
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "rent-receipt-generator",
+      "name": "Rent Receipt Generator",
+      "category": "tax",
+      "tier": "L4",
+      "rateDeps": [],
+      "competitors": [
+        "https://cleartax.in/paytax/taxcalculator",
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "salary-hike-calculator",
+      "name": "Salary Hike Calculator",
+      "category": "tax",
+      "tier": "L4",
+      "rateDeps": [],
+      "competitors": [
+        "https://cleartax.in/paytax/taxcalculator",
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "section-54-exemption-calculator",
+      "name": "Section 54 / 54F Capital Gains Exemption Calculator",
+      "category": "tax",
+      "tier": "L4",
+      "rateDeps": [],
+      "competitors": [
+        "https://cleartax.in/paytax/taxcalculator",
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "state-road-tax-calculator",
+      "name": "State Road Tax / Vehicle Registration Calculator",
+      "category": "tax",
+      "tier": "L4",
+      "rateDeps": [],
+      "competitors": [
+        "https://cleartax.in/paytax/taxcalculator",
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "tax-regime-comparator",
+      "name": "Old vs New Tax Regime Comparator",
+      "category": "tax",
+      "tier": "L4",
+      "rateDeps": [],
+      "competitors": [
+        "https://cleartax.in/paytax/taxcalculator",
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "tds-calculator",
+      "name": "TDS Calculator",
+      "category": "tax",
+      "tier": "L4",
+      "rateDeps": [],
+      "competitors": [
+        "https://cleartax.in/paytax/taxcalculator",
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "tds-on-rent-calculator",
+      "name": "TDS on Rent Calculator (194IB)",
+      "category": "tax",
+      "tier": "L4",
+      "rateDeps": [],
+      "competitors": [
+        "https://cleartax.in/paytax/taxcalculator",
+        "https://www.incometax.gov.in/iec/foportal/",
+        "https://www.bankbazaar.com/calculators.html"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "affidavit-generator",
+      "name": "Affidavit Generator",
+      "category": "legal",
+      "tier": "L5",
+      "rateDeps": [],
+      "competitors": [
+        "https://indiakanoon.org/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "court-fee-calculator",
+      "name": "Court Fee Calculator",
+      "category": "legal",
+      "tier": "L5",
+      "rateDeps": [],
+      "competitors": [
+        "https://indiakanoon.org/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "legal-notice-generator",
+      "name": "Legal Notice Generator",
+      "category": "legal",
+      "tier": "L5",
+      "rateDeps": [],
+      "competitors": [
+        "https://indiakanoon.org/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "rti-application-generator",
+      "name": "RTI Application Generator",
+      "category": "legal",
+      "tier": "L5",
+      "rateDeps": [],
+      "competitors": [
+        "https://indiakanoon.org/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    },
+    {
+      "slug": "voter-id-info",
+      "name": "Voter ID Info",
+      "category": "legal",
+      "tier": "L5",
+      "rateDeps": [],
+      "competitors": [
+        "https://indiakanoon.org/"
+      ],
+      "auditStatus": "pending",
+      "lastAudit": null,
+      "deviationVsCompetitors": null,
+      "notes": null
+    }
+  ]
+}
