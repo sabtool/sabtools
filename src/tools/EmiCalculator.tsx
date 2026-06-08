@@ -24,6 +24,10 @@ type Labels = {
   totalPayment: string;
   principal: string;
   interestLabel: string;
+  compareTitle: string;
+  reducingCol: string;
+  flatCol: string;
+  emiRow: string;
 };
 
 const LABELS: Record<Locale, Labels> = {
@@ -37,6 +41,10 @@ const LABELS: Record<Locale, Labels> = {
     totalPayment: "Total Payment",
     principal: "Principal",
     interestLabel: "Interest",
+    compareTitle: "Flat Rate vs Reducing Balance",
+    reducingCol: "Reducing Balance",
+    flatCol: "Flat Rate",
+    emiRow: "Monthly EMI",
   },
   "hi-IN": {
     loanAmount: "लोन राशि",
@@ -48,8 +56,38 @@ const LABELS: Record<Locale, Labels> = {
     totalPayment: "कुल भुगतान",
     principal: "मूलधन",
     interestLabel: "ब्याज",
+    compareTitle: "फ्लैट रेट बनाम रिड्यूसिंग बैलेंस",
+    reducingCol: "रिड्यूसिंग बैलेंस",
+    flatCol: "फ्लैट रेट",
+    emiRow: "मासिक ईएमआई",
   },
 };
+
+/** Standard reducing-balance EMI for a given annual rate (%) and months. */
+function reducingEmi(p: number, annualRatePct: number, n: number): number {
+  const r = annualRatePct / 12 / 100;
+  if (r <= 0) return p / n;
+  return (p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+}
+
+/**
+ * The reducing-balance rate that costs the SAME as a flat-rate loan at the
+ * given quoted rate — i.e. the "true" rate hiding behind a flat quote.
+ * Solved by binary search since there's no closed form. A flat X% typically
+ * lands near a reducing 1.8x–1.9x.
+ */
+function flatToReducingRate(p: number, flatAnnualPct: number, years: number): number {
+  const n = years * 12;
+  const flatEmiVal = (p + p * (flatAnnualPct / 100) * years) / n;
+  let lo = 0;
+  let hi = 100;
+  for (let i = 0; i < 80; i++) {
+    const mid = (lo + hi) / 2;
+    if (reducingEmi(p, mid, n) > flatEmiVal) hi = mid;
+    else lo = mid;
+  }
+  return (lo + hi) / 2;
+}
 
 export default function EmiCalculator({ locale = "en-IN" }: { locale?: Locale } = {}) {
   const t = LABELS[locale] ?? LABELS["en-IN"];
@@ -67,7 +105,20 @@ export default function EmiCalculator({ locale = "en-IN" }: { locale?: Locale } 
     const emi = (p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
     const totalPayment = emi * n;
     const totalInterest = totalPayment - p;
-    return { emi, totalPayment, totalInterest };
+
+    // Flat-rate equivalent at the SAME quoted rate: interest is charged on the
+    // full original principal for the whole tenure (how most car / personal /
+    // gold / two-wheeler loans are quoted). Looks cheaper, costs more.
+    const flatInterest = p * (rate / 100) * tenure;
+    const flatTotal = p + flatInterest;
+    const flatEmi = flatTotal / n;
+    const extraOnFlat = flatInterest - totalInterest;
+    const effRateOfFlat = flatToReducingRate(p, rate, tenure);
+
+    return {
+      emi, totalPayment, totalInterest,
+      flatEmi, flatInterest, flatTotal, extraOnFlat, effRateOfFlat,
+    };
   }, [principal, rate, tenure]);
 
   // Currency formatting: INR with Indian comma grouping (lakhs/crores).
@@ -145,6 +196,55 @@ export default function EmiCalculator({ locale = "en-IN" }: { locale?: Locale } 
                 style={{ width: `${100 - interestPercent}%` }}
               />
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Flat Rate vs Reducing Balance comparison */}
+      {result && (
+        <div className="result-card">
+          <div className="flex items-center justify-between mb-3">
+            <div className="text-sm font-semibold text-gray-700">{t.compareTitle}</div>
+            <div className="text-xs text-gray-400">same {rate}% quoted rate</div>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-gray-200">
+                  <th className="text-left p-2 text-gray-600"></th>
+                  <th className="text-right p-2 text-indigo-600">{t.reducingCol}</th>
+                  <th className="text-right p-2 text-red-600">{t.flatCol}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-100">
+                  <td className="p-2 text-gray-700">{t.emiRow}</td>
+                  <td className="p-2 text-right font-bold text-indigo-600">{fmt(result.emi)}</td>
+                  <td className="p-2 text-right font-bold text-red-600">{fmt(result.flatEmi)}</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="p-2 text-gray-700">{t.totalInterest}</td>
+                  <td className="p-2 text-right font-bold text-indigo-600">{fmt(result.totalInterest)}</td>
+                  <td className="p-2 text-right font-bold text-red-600">{fmt(result.flatInterest)}</td>
+                </tr>
+                <tr>
+                  <td className="p-2 text-gray-700">{t.totalPayment}</td>
+                  <td className="p-2 text-right font-bold text-indigo-600">{fmt(result.totalPayment)}</td>
+                  <td className="p-2 text-right font-bold text-red-600">{fmt(result.flatTotal)}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-3 text-sm bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-amber-900">
+            {locale === "hi-IN" ? (
+              <>
+                <b>{rate}%</b> फ्लैट रेट असल में लगभग <b>{result.effRateOfFlat.toFixed(1)}%</b> रिड्यूसिंग रेट जितना महंगा है — फ्लैट लोन पर आप <b>{fmt(result.extraOnFlat)}</b> ज़्यादा ब्याज देंगे। हमेशा रिड्यूसिंग बैलेंस के आधार पर तुलना करें।
+              </>
+            ) : (
+              <>
+                A <b>{rate}% flat</b> rate actually costs like a <b>{result.effRateOfFlat.toFixed(1)}% reducing-balance</b> rate — you{"'"}d pay <b>{fmt(result.extraOnFlat)}</b> more in interest on a flat-rate loan. Lenders quote flat rates because the number looks smaller; always compare on a reducing-balance basis.
+              </>
+            )}
           </div>
         </div>
       )}
