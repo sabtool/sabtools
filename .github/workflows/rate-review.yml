@@ -1,0 +1,96 @@
+name: Rate Review (Project Trust · Phase 4)
+
+# ────────────────────────────────────────────────────────────────────
+#  Weekly Rate Review — Project Trust Phase 4
+# ────────────────────────────────────────────────────────────────────
+#
+#  Every Monday at 09:00 IST (03:30 UTC), this workflow:
+#
+#    1. Checks out the repo.
+#    2. Runs `scripts/check-rate-staleness.mjs` which parses
+#       `src/data/rates.ts` and computes which government rates have
+#       aged past their reviewIntervalDays window.
+#    3. If anything is overdue, opens or updates a GitHub Issue titled
+#       "🔍 Weekly rate review — YYYY-MM-DD" with the list of overdue
+#       rates and direct links to the official source pages.
+#    4. GitHub automatically emails the repo owner (Rakesh) when an
+#       Issue is opened or updated — so a Monday-morning email lands
+#       in your inbox with NO smtp setup, NO secrets to manage, and
+#       NO ongoing cost.
+#
+#  How the user (Rakesh) responds:
+#    - Open the issue email Monday morning.
+#    - Click each official-source link in the table, glance at the rate.
+#    - Reply to the issue with "PPF: 7.1 confirmed" or "PPF: 7.3 new".
+#    - (Or just edit src/data/rates.ts directly — both work.)
+#    - Close the issue when done. The next Monday's run will reopen
+#      it only if anything has gone overdue again.
+#
+#  Manual run: trigger from the Actions tab — useful before any
+#  Budget speech or RBI MPC meeting where rates might have changed.
+
+on:
+  schedule:
+    # Every Monday at 03:30 UTC == 09:00 IST.
+    - cron: "30 3 * * 1"
+  workflow_dispatch:
+    # Allow Rakesh to trigger a manual review from the Actions tab.
+
+permissions:
+  contents: read    # Read src/data/rates.ts
+  issues: write     # Open / update the review issue
+
+jobs:
+  review:
+    name: Check rate freshness & open issue
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run rate-staleness checker
+        id: check
+        run: |
+          set -euo pipefail
+          # stdout = markdown report body; stderr = "overdueCount=N ..."
+          REPORT=$(node scripts/check-rate-staleness.mjs 2> /tmp/summary.txt)
+          OVERDUE=$(grep -oE "overdueCount=[0-9]+" /tmp/summary.txt | cut -d= -f2)
+          echo "overdue_count=$OVERDUE" >> "$GITHUB_OUTPUT"
+          # Write the report to a file so the next step can read it.
+          echo "$REPORT" > /tmp/report.md
+          echo "Overdue rates: $OVERDUE"
+          echo "--- Report preview ---"
+          head -40 /tmp/report.md
+
+      - name: Open / update the review issue
+        if: steps.check.outputs.overdue_count != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TITLE="🔍 Weekly rate review — $(date -u +%Y-%m-%d)"
+          BODY=$(cat /tmp/report.md)
+          # Look for an open issue with this week's title — update if it
+          # exists, create otherwise.
+          EXISTING=$(gh issue list --state open --label "rate-review" --json number,title --jq ".[] | select(.title==\"$TITLE\") | .number" || true)
+          if [ -n "$EXISTING" ]; then
+            echo "Updating existing issue #$EXISTING"
+            gh issue edit "$EXISTING" --body "$BODY"
+          else
+            echo "Opening new review issue"
+            gh issue create \
+              --title "$TITLE" \
+              --body "$BODY" \
+              --label "rate-review,project-trust"
+          fi
+
+      - name: Log "all clear" when nothing overdue
+        if: steps.check.outputs.overdue_count == '0'
+        run: |
+          echo "✅ All 28+ rates are within their review window this week. No issue opened."
+          echo "Next scheduled run: Monday 09:00 IST."
