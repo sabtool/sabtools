@@ -150,6 +150,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
+    // /compare + /alternatives hub index pages — give the comparison &
+    // alternative listicles a valid parent (their breadcrumbs linked to these
+    // index URLs which previously 404'd — technical-SEO audit).
+    {
+      url: `${baseUrl}/compare`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/alternatives`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    },
     {
       url: `${baseUrl}/best/free-gst-calculator-india`,
       lastModified: now,

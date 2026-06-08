@@ -123,7 +123,6 @@ const UPCOMING_ELECTIONS = [
 ];
 
 const RELATED_TOOLS = [
-  { slug: "voter-turnout-calculator", name: "Voter Turnout Calculator", icon: "🗳️" },
   { slug: "age-calculator", name: "Voter Age Eligibility (18+)", icon: "🎂" },
   { slug: "indian-pin-code-directory", name: "PIN Code → Constituency", icon: "📍" },
   { slug: "name-numerology-calculator", name: "Name Lucky Number", icon: "🔢" },

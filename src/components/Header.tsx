@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { categories } from "@/lib/tools";
+import { hindiToolSlugs } from "@/lib/hindi-tool-slugs";
 import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Header() {
@@ -17,9 +18,14 @@ export default function Header() {
       // Hindi → English: remove /hi prefix
       return pathname.replace(/^\/hi/, "") || "/";
     }
-    // English → Hindi: add /hi prefix
+    // English → Hindi: only deep-link to the Hindi tool page when it actually
+    // exists. English-only tools have no /hi/tools/<slug> page — linking there
+    // produced 4XX (technical-SEO audit). Otherwise fall back to the Hindi home.
     if (pathname.startsWith("/tools/")) {
-      return "/hi" + pathname;
+      const slug = pathname.slice("/tools/".length);
+      if (hindiToolSlugs.includes(slug)) {
+        return "/hi" + pathname;
+      }
     }
     return "/hi";
   };
