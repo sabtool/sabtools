@@ -192,4 +192,25 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
     description:
       "Calculate Step-Up (Top-Up) SIP returns with yearly increases — see how a 10% annual step-up grows your corpus vs a flat SIP. Free, no signup.",
   },
+
+  // ── Electrical (DECLINING: 502 impr @ pos 75 with template title only — see brief 2026-06-08) ──
+  "wire-size-calculator": {
+    title: "Wire Size Calculator — Cable mm² for Load (India)",
+    description:
+      "Find the right wire size in sq mm for your load — enter current, voltage & cable length to get the recommended copper/aluminium cable size for Indian wiring.",
+  },
+
+  // ── Date & time (DECLINING: 162 impr @ pos 40, template title only — see brief 2026-06-08) ──
+  "date-difference-calculator": {
+    title: "Date Difference Calculator — Days Between Two Dates",
+    description:
+      "Calculate the exact difference between two dates in years, months, weeks and days. Find days between dates instantly. Free, no signup, works on mobile.",
+  },
+
+  // ── Salary (DECLINING: "take home salary calculator" @ pos 79, template title only — see brief 2026-06-08) ──
+  "in-hand-salary-calculator": {
+    title: "In-Hand Salary Calculator — Take-Home Pay from CTC",
+    description:
+      "Calculate your in-hand take-home salary from CTC — monthly net pay after PF, professional tax and income tax (old & new regime), with a full payslip. Free.",
+  },
 };
