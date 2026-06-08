@@ -84,6 +84,7 @@ export default function Footer() {
               <li><Link href="/about" className="text-sm text-gray-400 hover:text-indigo-400 transition">About Us</Link></li>
               <li><Link href="/author/rakesh-seervi" className="text-sm text-gray-400 hover:text-indigo-400 transition">Our Team</Link></li>
               <li><Link href="/blog" className="text-sm text-gray-400 hover:text-indigo-400 transition">Blog</Link></li>
+              <li><Link href="/calc" className="text-sm text-gray-400 hover:text-indigo-400 transition">All Calculators</Link></li>
               <li><Link href="/privacy" className="text-sm text-gray-400 hover:text-indigo-400 transition">Privacy Policy</Link></li>
               <li><Link href="/terms" className="text-sm text-gray-400 hover:text-indigo-400 transition">Terms of Service</Link></li>
               <li><Link href="/disclaimer" className="text-sm text-gray-400 hover:text-indigo-400 transition">Disclaimer</Link></li>

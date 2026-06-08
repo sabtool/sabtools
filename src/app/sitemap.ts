@@ -73,6 +73,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
     {
+      // /calc hub — indexes all 200+ programmatic bank/loan/scheme calculators
+      // and gives every /calc/* page an incoming internal link (fixes the
+      // orphan-page issue flagged in the technical-SEO audit).
+      url: `${baseUrl}/calc`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+    {
       // Election hub. Updates whenever an election window opens or
       // whenever Lok Sabha / state election data is refreshed.
       url: `${baseUrl}/elections`,
