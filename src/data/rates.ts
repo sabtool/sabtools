@@ -301,7 +301,20 @@ export const INCOME_TAX_NEW_REGIME_FY26_27: RateEntry<IncomeTaxRegime> = {
   reviewIntervalDays: 365,
 };
 
-export const INCOME_TAX_OLD_REGIME_FY26_27: RateEntry<IncomeTaxRegime> = {
+// Old regime has age-banded basic-exemption thresholds. Below 60 gets
+// the 5% band starting at ₹2.5L; 60-80 senior citizens get the 5% band
+// starting at ₹3L (₹50k bigger 0% slab); above-80 super-senior citizens
+// get NO 5% slab at all — straight to 20% above ₹5L. We encode each as
+// its own slab table because a single slab table can't represent the
+// shifting band start points correctly.
+//
+// HISTORICAL BUG NOTE (fixed Project Trust Phase 2): the previous
+// implementation in IncomeTaxCalculator subtracted the basic exemption
+// AND then applied slabs whose first band started at 5% from 0 —
+// double-counting the exemption and over-taxing every old-regime user.
+// The age-specific slab tables below model the actual law correctly.
+
+export const INCOME_TAX_OLD_REGIME_FY26_27_BELOW_60: RateEntry<IncomeTaxRegime> = {
   value: {
     slabs: [
       { upTo: 250_000, rate: 0 },
@@ -314,15 +327,61 @@ export const INCOME_TAX_OLD_REGIME_FY26_27: RateEntry<IncomeTaxRegime> = {
     rebateMaxIncome: 500_000,
     cessPercent: 4,
     notes:
-      "Old regime, FY 2026-27. Different basic exemption by age: " +
-      "₹2.5L (below 60), ₹3L (60-80), ₹5L (above 80). " +
-      "Section 80C, 80D, 80G, 80E, HRA, LTA, etc. exemptions available.",
+      "Old regime, FY 2026-27, below 60. Basic exemption ₹2.5L. " +
+      "80C / 80D / HRA / LTA / etc. exemptions available.",
   },
   effectiveFrom: "2026-04-01",
   source: "https://www.incometax.gov.in/iec/foportal/help/individual/return-applicable-1",
   lastVerified: "2026-06-08",
   reviewIntervalDays: 365,
 };
+
+export const INCOME_TAX_OLD_REGIME_FY26_27_60_TO_80: RateEntry<IncomeTaxRegime> = {
+  value: {
+    slabs: [
+      { upTo: 300_000, rate: 0 },
+      { upTo: 500_000, rate: 5 },
+      { upTo: 1_000_000, rate: 20 },
+      { upTo: Infinity, rate: 30 },
+    ],
+    standardDeduction: 50_000,
+    rebateUnder87A: 12_500,
+    rebateMaxIncome: 500_000,
+    cessPercent: 4,
+    notes:
+      "Old regime, FY 2026-27, senior citizens (60-80). " +
+      "Basic exemption ₹3L (₹50k higher than below-60).",
+  },
+  effectiveFrom: "2026-04-01",
+  source: "https://www.incometax.gov.in/iec/foportal/help/individual/return-applicable-1",
+  lastVerified: "2026-06-08",
+  reviewIntervalDays: 365,
+};
+
+export const INCOME_TAX_OLD_REGIME_FY26_27_ABOVE_80: RateEntry<IncomeTaxRegime> = {
+  value: {
+    slabs: [
+      { upTo: 500_000, rate: 0 },
+      { upTo: 1_000_000, rate: 20 },
+      { upTo: Infinity, rate: 30 },
+    ],
+    standardDeduction: 50_000,
+    rebateUnder87A: 12_500,
+    rebateMaxIncome: 500_000,
+    cessPercent: 4,
+    notes:
+      "Old regime, FY 2026-27, super-senior citizens (above 80). " +
+      "Basic exemption ₹5L; NO 5% slab (skips straight to 20% above ₹5L).",
+  },
+  effectiveFrom: "2026-04-01",
+  source: "https://www.incometax.gov.in/iec/foportal/help/individual/return-applicable-1",
+  lastVerified: "2026-06-08",
+  reviewIntervalDays: 365,
+};
+
+// Convenience alias for the most-common case (below 60). The IT
+// calculator picks the right entry based on the user's selected age band.
+export const INCOME_TAX_OLD_REGIME_FY26_27 = INCOME_TAX_OLD_REGIME_FY26_27_BELOW_60;
 
 // ═══════════════════════════════════════════════════════════════════════
 //  GST (rates revised by GST Council, no fixed schedule)

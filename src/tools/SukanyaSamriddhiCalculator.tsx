@@ -1,10 +1,14 @@
 "use client";
 import { useState, useMemo } from "react";
+import { SSY } from "@/data/rates";
+import { RateTrustBadge } from "@/components/RateTrustBadge";
 
 export default function SukanyaSamriddhiCalculator() {
   const [yearlyDeposit, setYearlyDeposit] = useState(150000);
   const [girlAge, setGirlAge] = useState(5);
-  const [interestRate, setInterestRate] = useState(8.2);
+  // Default sourced from the central rates registry (src/data/rates.ts)
+  // — the Govt revises SSY rate quarterly.
+  const [interestRate, setInterestRate] = useState<number>(SSY.value);
   const [showTable, setShowTable] = useState(false);
 
   const fmt = (n: number) =>
@@ -63,7 +67,7 @@ export default function SukanyaSamriddhiCalculator() {
             <span className="text-sm font-bold text-indigo-600">{interestRate}%</span>
           </div>
           <input type="range" min={7} max={10} step={0.1} value={interestRate} onChange={(e) => setInterestRate(+e.target.value)} className="w-full" />
-          <div className="flex justify-between text-xs text-gray-400 mt-1"><span>7%</span><span>10% (Q1 FY 2026-27: 8.2%)</span></div>
+          <div className="flex justify-between text-xs text-gray-400 mt-1"><span>7%</span><span>10% (Q1 FY 2026-27: {SSY.value}%)</span></div>
         </div>
       </div>
 
@@ -143,10 +147,12 @@ export default function SukanyaSamriddhiCalculator() {
           <span className="text-lg">{"\u2139\uFE0F"}</span>
           <div>
             <p className="font-semibold mb-1">Disclaimer</p>
-            <p>SSY rate: 8.2% (Q4 FY 2025-26). Revised quarterly. Check indiapost.gov.in</p>
+            <p>SSY rate: {SSY.value}% (Q1 FY 2026-27). Revised quarterly by GOI. Check nsiindia.gov.in for latest.</p>
           </div>
         </div>
       </div>
+      {/* Phase 5 trust badge \u2014 last-verified date + official source link. */}
+      <RateTrustBadge entries={[SSY]} />
     </div>
   );
 }

@@ -1,8 +1,17 @@
 "use client";
 import { useState, useMemo } from "react";
+import { PPF, formatVerifiedDate } from "@/data/rates";
+import { RateTrustBadge } from "@/components/RateTrustBadge";
 
 /**
- * PPF Calculator — locale-aware labels (Phase 6 Round 3b Task B).
+ * PPF Calculator — locale-aware labels.
+ *
+ * Project Trust Phase 3: PPF rate is now read from src/data/rates.ts
+ * (the central rates registry) instead of being hardcoded. One update
+ * there → this tool reflects it instantly. The verification date in
+ * the disclaimer is also computed from the registry's lastVerified,
+ * so a single Phase 4 weekly-reminder workflow keeps everything in sync.
+ *
  * "PPF" stays as पीपीएफ (loanword) since that's the form used on official
  * India Post and SBI Hindi PPF pages and on Form 16 / Form 26AS.
  */
@@ -30,7 +39,7 @@ const LABELS: Record<Locale, {
     interestLabel: "Interest",
     maturity: "Maturity",
     disclaimerHeading: "Disclaimer",
-    disclaimerBody: "PPF rate: 7.1% (Q1 FY 2026-27, Apr-Jun 2026 — unchanged since Apr 2020, ratified for 7th consecutive year on 30 Mar 2026). Revised quarterly by GOI. Verified from nsiindia.gov.in on 8 Jun 2026.",
+    disclaimerBody: `Current PPF rate ${PPF.value}% p.a. (Q1 FY 2026-27 — unchanged since Apr 2020, ratified for 7th consecutive year on 30 Mar 2026). Revised quarterly by GOI. Verified from nsiindia.gov.in on ${formatVerifiedDate(PPF)}.`,
   },
   "hi-IN": {
     yearlyInvestment: "वार्षिक निवेश",
@@ -42,14 +51,17 @@ const LABELS: Record<Locale, {
     interestLabel: "ब्याज",
     maturity: "मैच्योरिटी",
     disclaimerHeading: "अस्वीकरण",
-    disclaimerBody: "पीपीएफ दर: 7.1% (Q1 FY 2026-27, अप्रैल-जून 2026 — अप्रैल 2020 से अपरिवर्तित, 30 मार्च 2026 को 7वें वर्ष के लिए पुष्टि)। भारत सरकार द्वारा त्रैमासिक संशोधित। 8 जून 2026 को nsiindia.gov.in से सत्यापित।",
+    disclaimerBody: `पीपीएफ दर: ${PPF.value}% (Q1 FY 2026-27 — अप्रैल 2020 से अपरिवर्तित, 30 मार्च 2026 को 7वें वर्ष के लिए पुष्टि)। भारत सरकार द्वारा त्रैमासिक संशोधित। ${formatVerifiedDate(PPF)} को nsiindia.gov.in से सत्यापित।`,
   },
 };
 
 export default function PpfCalculator({ locale = "en-IN" }: { locale?: Locale } = {}) {
   const t = LABELS[locale] ?? LABELS["en-IN"];
   const [yearly, setYearly] = useState(150000);
-  const [rate, setRate] = useState(7.1);
+  // Default rate sourced from the central rates registry (src/data/rates.ts)
+  // rather than being hardcoded — keeps this tool fresh automatically as
+  // the Government revises the PPF rate.
+  const [rate, setRate] = useState<number>(PPF.value);
   const [years, setYears] = useState(15);
 
   const result = useMemo(() => {
@@ -101,6 +113,10 @@ export default function PpfCalculator({ locale = "en-IN" }: { locale?: Locale } 
           </div>
         </div>
       </div>
+      {/* Phase 5: user-facing trust badge — shows when we last verified
+          the PPF rate against the official Govt source. Flips to amber
+          if overdue, red if very overdue. */}
+      <RateTrustBadge entries={[PPF]} />
     </div>
   );
 }

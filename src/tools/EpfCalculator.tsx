@@ -1,5 +1,7 @@
 "use client";
 import { useState, useMemo } from "react";
+import { EPF, formatVerifiedDate } from "@/data/rates";
+import { RateTrustBadge } from "@/components/RateTrustBadge";
 
 export default function EpfCalculator() {
   const [basicSalary, setBasicSalary] = useState(30000);
@@ -17,7 +19,9 @@ export default function EpfCalculator() {
     if (basicSalary <= 0 || currentAge >= retirementAge) return null;
 
     const years = retirementAge - currentAge;
-    const monthlyRate = 8.25 / 12 / 100; // EPF interest rate FY 2026-27 (EPFO CBT ratified, same as FY 2025-26)
+    // Sourced from src/data/rates.ts (Project Trust central registry) —
+    // automatically picks up the EPFO Board's annual revision.
+    const monthlyRate = EPF.value / 12 / 100;
     let totalEmployeeContrib = 0;
     let totalEmployerContrib = 0;
     let balance = currentBalance;
@@ -43,7 +47,7 @@ export default function EpfCalculator() {
   return (
     <div className="space-y-8">
       <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 text-sm text-blue-800">
-        <strong>EPF Interest Rate:</strong> 8.25% p.a. (FY 2026-27 — EPFO Central Board of Trustees ratified, same as FY 2025-26). Employer contributes 3.67% to EPF and 8.33% to EPS.
+        <strong>EPF Interest Rate:</strong> {EPF.value}% p.a. (FY 2026-27 — EPFO Central Board of Trustees ratified, same as FY 2025-26). Employer contributes 3.67% to EPF and 8.33% to EPS.
       </div>
 
       <div className="space-y-6">
@@ -149,10 +153,12 @@ export default function EpfCalculator() {
           <span className="text-lg">{"\u2139\uFE0F"}</span>
           <div>
             <p className="font-semibold mb-1">Disclaimer</p>
-            <p>EPF interest rate used: 8.25% (FY 2026-27 — ratified by EPFO Central Board of Trustees, unchanged from FY 2025-26). Set annually by EPFO. Verified from epfindia.gov.in on 8 Jun 2026.</p>
+            <p>EPF interest rate used: {EPF.value}% (FY 2026-27 — ratified by EPFO Central Board of Trustees, unchanged from FY 2025-26). Set annually by EPFO. Verified from epfindia.gov.in on {formatVerifiedDate(EPF)}.</p>
           </div>
         </div>
       </div>
+      {/* Phase 5 trust badge — flips amber if our EPF entry goes overdue. */}
+      <RateTrustBadge entries={[EPF]} />
     </div>
   );
 }

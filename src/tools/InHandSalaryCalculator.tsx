@@ -1,5 +1,10 @@
 "use client";
 import { useState, useMemo } from "react";
+import {
+  INCOME_TAX_NEW_REGIME_FY26_27,
+  INCOME_TAX_OLD_REGIME_FY26_27_BELOW_60 as OLD_REGIME_BELOW_60,
+} from "@/data/rates";
+import { RateTrustBadge } from "@/components/RateTrustBadge";
 
 export default function InHandSalaryCalculator() {
   const [ctc, setCtc] = useState("");
@@ -44,45 +49,43 @@ export default function InHandSalaryCalculator() {
 
     let tax = 0;
     if (regime === "new") {
-      // New Tax Regime FY 2026-27 (AY 2027-28)
-      const slabs = [
-        { limit: 400000, rate: 0 },
-        { limit: 800000, rate: 5 },
-        { limit: 1200000, rate: 10 },
-        { limit: 1600000, rate: 15 },
-        { limit: 2000000, rate: 20 },
-        { limit: 2400000, rate: 25 },
-        { limit: Infinity, rate: 30 },
-      ];
+      // New Tax Regime FY 2026-27 — slabs / rebate / std deduction
+      // sourced from the central rates registry (src/data/rates.ts).
+      const newRegime = INCOME_TAX_NEW_REGIME_FY26_27.value;
       let remaining = Math.max(0, taxableIncome);
       let prev = 0;
-      for (const slab of slabs) {
-        const taxable = Math.min(remaining, slab.limit - prev);
-        tax += (taxable * slab.rate) / 100;
-        remaining -= taxable;
-        prev = slab.limit;
-        if (remaining <= 0) break;
+      for (const slab of newRegime.slabs) {
+        const taxableInSlab = Math.min(remaining, slab.upTo - prev);
+        if (taxableInSlab <= 0) break;
+        tax += (taxableInSlab * slab.rate) / 100;
+        remaining -= taxableInSlab;
+        prev = slab.upTo;
       }
-      // Section 87A rebate: Income up to ₹12,00,000 (after standard deduction) = no tax (rebate up to ₹60,000)
-      if (taxableIncome <= 1200000) tax = Math.max(0, tax - 60000);
+      // Section 87A rebate (Clause 156 under new IT Act 2026)
+      if (taxableIncome <= newRegime.rebateMaxIncome) {
+        tax = Math.max(0, tax - newRegime.rebateUnder87A);
+      }
     } else {
-      // Old Tax Regime FY 2026-27 (slabs unchanged from FY 2025-26)
-      const slabs = [
-        { limit: 250000, rate: 5 },
-        { limit: 500000, rate: 20 },
-        { limit: Infinity, rate: 30 },
-      ];
+      // Old Tax Regime FY 2026-27 — assumes below-60 (salary calculators
+      // are typically used by working-age individuals). Uses the
+      // age-correct slab table from src/data/rates.ts which includes
+      // the 0% basic-exemption band, so we don't subtract ₹2.5L
+      // exemption separately (that was the pre-fix bug — see
+      // IncomeTaxCalculator for the full age-banded version).
+      const oldRegime = OLD_REGIME_BELOW_60.value;
       let remaining = Math.max(0, taxableIncome);
       let prev = 0;
-      for (const slab of slabs) {
-        const taxable = Math.min(remaining, slab.limit - prev);
-        tax += (taxable * slab.rate) / 100;
-        remaining -= taxable;
-        prev = slab.limit;
-        if (remaining <= 0) break;
+      for (const slab of oldRegime.slabs) {
+        const taxableInSlab = Math.min(remaining, slab.upTo - prev);
+        if (taxableInSlab <= 0) break;
+        tax += (taxableInSlab * slab.rate) / 100;
+        remaining -= taxableInSlab;
+        prev = slab.upTo;
       }
-      // Section 87A rebate for old regime: taxable income up to ₹5,00,000
-      if (taxableIncome <= 500000) tax = 0;
+      // Section 87A rebate
+      if (taxableIncome <= oldRegime.rebateMaxIncome) {
+        tax = Math.max(0, tax - oldRegime.rebateUnder87A);
+      }
     }
     const cess = tax * 0.04;
     const totalTax = tax + cess;
@@ -209,12 +212,17 @@ export default function InHandSalaryCalculator() {
           <span className="text-lg">{"\u2139\uFE0F"}</span>
           <div>
             <p className="font-semibold mb-1">Disclaimer</p>
-            <p>Tax calculations are based on FY 2025-26 slabs as announced in Union Budget 2025. This is an estimate for illustration purposes. For exact tax liability, consult a Chartered Accountant or use the official Income Tax portal at{" "}
+            <p>Tax calculations are based on FY 2026-27 slabs (Budget 2026 retained the FY 2025-26 structure unchanged). This is an estimate for illustration purposes. For exact tax liability, consult a Chartered Accountant or use the official Income Tax portal at{" "}
               <a href="https://www.incometax.gov.in" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-blue-700 hover:text-blue-900">incometax.gov.in</a>.
             </p>
           </div>
         </div>
       </div>
+      {/* Phase 5 trust badge — last-verified date for slab tables. */}
+      <RateTrustBadge
+        entries={[INCOME_TAX_NEW_REGIME_FY26_27, OLD_REGIME_BELOW_60]}
+        label="Tax slabs verified"
+      />
     </div>
   );
 }

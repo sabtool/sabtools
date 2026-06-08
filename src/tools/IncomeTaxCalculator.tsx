@@ -1,5 +1,12 @@
 "use client";
 import { useState, useMemo } from "react";
+import {
+  INCOME_TAX_NEW_REGIME_FY26_27,
+  INCOME_TAX_OLD_REGIME_FY26_27_BELOW_60,
+  INCOME_TAX_OLD_REGIME_FY26_27_60_TO_80,
+  INCOME_TAX_OLD_REGIME_FY26_27_ABOVE_80,
+} from "@/data/rates";
+import { RateTrustBadge } from "@/components/RateTrustBadge";
 
 /**
  * Income Tax Calculator — locale-aware labels.
@@ -87,52 +94,54 @@ export default function IncomeTaxCalculator({ locale = "en-IN" }: { locale?: Loc
 
     let tax = 0;
     if (regime === "new") {
-      // New Regime FY 2026-27 (AY 2027-28) — Budget 2026 retained the
-      // FY 2025-26 slab structure unchanged.
-      // Standard deduction ₹75,000
-      const taxableIncome = Math.max(0, inc - 75000);
-      const slabs = [
-        { limit: 400000, rate: 0 },
-        { limit: 800000, rate: 5 },
-        { limit: 1200000, rate: 10 },
-        { limit: 1600000, rate: 15 },
-        { limit: 2000000, rate: 20 },
-        { limit: 2400000, rate: 25 },
-        { limit: Infinity, rate: 30 },
-      ];
+      // New Regime FY 2026-27 — slabs sourced from the central rates
+      // registry (src/data/rates.ts) so a single Budget-time update
+      // there propagates here automatically.
+      const newRegime = INCOME_TAX_NEW_REGIME_FY26_27.value;
+      const taxableIncome = Math.max(0, inc - newRegime.standardDeduction);
       let remaining = taxableIncome;
       let prev = 0;
-      for (const slab of slabs) {
-        const taxable = Math.min(remaining, slab.limit - prev);
+      for (const slab of newRegime.slabs) {
+        const taxable = Math.min(remaining, slab.upTo - prev);
         if (taxable <= 0) break;
         tax += (taxable * slab.rate) / 100;
         remaining -= taxable;
-        prev = slab.limit;
+        prev = slab.upTo;
       }
-      // Section 87A rebate: Income up to ₹12,00,000 (after standard deduction) = no tax (rebate up to ₹60,000)
-      if (taxableIncome <= 1200000) tax = Math.max(0, tax - 60000);
+      // Section 87A rebate (Clause 156 under new IT Act 2026)
+      if (taxableIncome <= newRegime.rebateMaxIncome) {
+        tax = Math.max(0, tax - newRegime.rebateUnder87A);
+      }
     } else {
-      // Old Regime FY 2026-27 (slabs unchanged from FY 2025-26)
-      // Standard deduction ₹50,000
-      const stdDeduction = 50000;
-      const exemption = age === "below60" ? 250000 : age === "60to80" ? 300000 : 500000;
-      const taxable = Math.max(0, inc - stdDeduction - exemption);
-      const slabs = [
-        { limit: 250000, rate: 5 },
-        { limit: 500000, rate: 20 },
-        { limit: Infinity, rate: 30 },
-      ];
+      // Old Regime FY 2026-27 — age-specific slab table from the central
+      // rates registry. Each age band has a different starting 0% slab
+      // that encodes the basic exemption directly, so we DON'T subtract
+      // the basic exemption separately — that was the bug in the
+      // previous implementation (double-counted the exemption and
+      // over-taxed every old-regime user by ~₹20,000 at ₹10L income).
+      const oldRegimeEntry =
+        age === "above80"
+          ? INCOME_TAX_OLD_REGIME_FY26_27_ABOVE_80
+          : age === "60to80"
+            ? INCOME_TAX_OLD_REGIME_FY26_27_60_TO_80
+            : INCOME_TAX_OLD_REGIME_FY26_27_BELOW_60;
+      const oldRegime = oldRegimeEntry.value;
+      // Only subtract standard deduction — the 0% basic-exemption band
+      // is already encoded in the first slab.
+      const taxable = Math.max(0, inc - oldRegime.standardDeduction);
       let remaining = taxable;
       let prev = 0;
-      for (const slab of slabs) {
-        const t = Math.min(remaining, slab.limit - prev);
+      for (const slab of oldRegime.slabs) {
+        const t = Math.min(remaining, slab.upTo - prev);
         if (t <= 0) break;
         tax += (t * slab.rate) / 100;
         remaining -= t;
-        prev = slab.limit;
+        prev = slab.upTo;
       }
-      // Section 87A rebate for old regime: taxable income up to ₹5,00,000
-      if (taxable <= 500000) tax = 0;
+      // Section 87A rebate for old regime: taxable income up to ₹5L.
+      if (taxable <= oldRegime.rebateMaxIncome) {
+        tax = Math.max(0, tax - oldRegime.rebateUnder87A);
+      }
     }
 
     const cess = tax * 0.04;
@@ -196,6 +205,14 @@ export default function IncomeTaxCalculator({ locale = "en-IN" }: { locale?: Loc
         <strong>{t.disclaimer}</strong> {t.disclaimerBody}{" "}
         <a href="https://www.incometax.gov.in" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-blue-700 hover:text-blue-900">incometax.gov.in</a>.
       </div>
+      {/* Phase 5 trust badge \u2014 last-verified date for slab tables. */}
+      <RateTrustBadge
+        entries={[
+          INCOME_TAX_NEW_REGIME_FY26_27,
+          INCOME_TAX_OLD_REGIME_FY26_27_BELOW_60,
+        ]}
+        label="Tax slabs verified"
+      />
     </div>
   );
 }
