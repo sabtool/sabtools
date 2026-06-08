@@ -207,9 +207,10 @@
     "credit-score-estimator",
     "sql-table-generator",
     "ipl-nrr-calculator",
-    "whatsapp-link-generator"
+    "whatsapp-link-generator",
+    "legal-notice-generator"
   ],
-  "lastCategory": "whatsapp",
-  "totalPosts": 208,
-  "lastRun": "2026-06-07T08:29:47.049Z"
+  "lastCategory": "legal",
+  "totalPosts": 209,
+  "lastRun": "2026-06-08T09:00:34.354Z"
 }
