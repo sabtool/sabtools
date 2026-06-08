@@ -30,7 +30,7 @@ const LABELS: Record<Locale, {
     interestLabel: "Interest",
     maturity: "Maturity",
     disclaimerHeading: "Disclaimer",
-    disclaimerBody: "PPF rate: 7.1% (Q4 FY 2025-26). Revised quarterly by GOI. Check nsiindia.gov.in for latest.",
+    disclaimerBody: "PPF rate: 7.1% (Q1 FY 2026-27, Apr-Jun 2026 — unchanged since Apr 2020, ratified for 7th consecutive year on 30 Mar 2026). Revised quarterly by GOI. Verified from nsiindia.gov.in on 8 Jun 2026.",
   },
   "hi-IN": {
     yearlyInvestment: "वार्षिक निवेश",
@@ -42,7 +42,7 @@ const LABELS: Record<Locale, {
     interestLabel: "ब्याज",
     maturity: "मैच्योरिटी",
     disclaimerHeading: "अस्वीकरण",
-    disclaimerBody: "पीपीएफ दर: 7.1% (Q4 FY 2025-26)। भारत सरकार द्वारा त्रैमासिक संशोधित। नवीनतम के लिए nsiindia.gov.in देखें।",
+    disclaimerBody: "पीपीएफ दर: 7.1% (Q1 FY 2026-27, अप्रैल-जून 2026 — अप्रैल 2020 से अपरिवर्तित, 30 मार्च 2026 को 7वें वर्ष के लिए पुष्टि)। भारत सरकार द्वारा त्रैमासिक संशोधित। 8 जून 2026 को nsiindia.gov.in से सत्यापित।",
   },
 };
 

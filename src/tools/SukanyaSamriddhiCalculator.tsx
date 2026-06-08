@@ -63,7 +63,7 @@ export default function SukanyaSamriddhiCalculator() {
             <span className="text-sm font-bold text-indigo-600">{interestRate}%</span>
           </div>
           <input type="range" min={7} max={10} step={0.1} value={interestRate} onChange={(e) => setInterestRate(+e.target.value)} className="w-full" />
-          <div className="flex justify-between text-xs text-gray-400 mt-1"><span>7%</span><span>10% (Current: 8.2%)</span></div>
+          <div className="flex justify-between text-xs text-gray-400 mt-1"><span>7%</span><span>10% (Q1 FY 2026-27: 8.2%)</span></div>
         </div>
       </div>
 

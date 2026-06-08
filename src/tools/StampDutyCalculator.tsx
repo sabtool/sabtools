@@ -129,8 +129,19 @@ export default function StampDutyCalculator({ locale = "en-IN" }: { locale?: Loc
 
   return (
     <div className="space-y-6">
+      {/* State-wise stamp duty changes frequently (mini-budgets, women's
+          discounts, festive concessions). Our 20-state table is a
+          representative reference but must be verified with the state's
+          IGRS / Sub-Registrar portal before any actual property transaction. */}
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-800">
         <strong>{t.noteHeading}</strong> {t.noteBody}
+      </div>
+      <div className="bg-blue-50 border border-blue-200 rounded-xl px-4 py-2.5 text-xs text-blue-800">
+        <span className="font-semibold">📅 Rate-table last reviewed: 8 June 2026</span>{" "}
+        · States periodically revise stamp duty (mini-budgets, women&apos;s
+        concessions, festive discounts). For any actual transaction,
+        verify the current rate with your state&apos;s IGRS / Sub-Registrar
+        portal before signing the sale deed.
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

@@ -1,6 +1,21 @@
 "use client";
 import { useState, useMemo } from "react";
 
+/**
+ * FD Comparison — Bank FD rates board.
+ *
+ * IMPORTANT: bank FD rates change frequently (sometimes monthly), are
+ * tenure-slab specific, vary by deposit size, and differ between
+ * branches. The rates in this comparison are a representative snapshot
+ * we keep refreshed under Project Trust quarterly review. ALWAYS
+ * verify on the bank's own website before opening an FD.
+ *
+ * Last reviewed: 8 June 2026 (Q1 FY 2026-27 — RBI repo rate at 5.5%
+ * since Apr 2026 meeting). Bank-level rate-card URLs cited per row in
+ * the rate-source-registry (Phase 3 of Project Trust).
+ */
+const FD_RATES_LAST_REVIEWED = "8 June 2026";
+
 const BANKS = [
   { name: "SBI", rates: { "7d": 3.0, "1y": 6.8, "2y": 7.0, "3y": 6.75, "5y": 6.5, "10y": 6.5 } },
   { name: "HDFC Bank", rates: { "7d": 3.0, "1y": 6.6, "2y": 7.0, "3y": 7.0, "5y": 7.0, "10y": 7.0 } },
@@ -48,6 +63,22 @@ export default function FdComparison() {
 
   return (
     <div className="space-y-8">
+      {/* Bank FD rates are revised by individual banks — sometimes monthly
+          when RBI moves the repo rate. We refresh this table quarterly
+          and surface that date so users don't trust a stale snapshot. */}
+      <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-900 leading-relaxed">
+        <div className="flex items-start gap-2">
+          <span className="text-base">⚠️</span>
+          <div>
+            <strong>FD rates change frequently — verify before depositing.</strong>{" "}
+            Bank FD rates are revised by individual banks (often when RBI
+            adjusts the repo rate). The rates shown here are a snapshot
+            last refreshed on <strong>{FD_RATES_LAST_REVIEWED}</strong>{" "}
+            (Q1 FY 2026-27). Always confirm the current rate on the
+            bank&apos;s own website or branch before opening an FD.
+          </div>
+        </div>
+      </div>
       <div className="bg-indigo-50 border border-indigo-200 rounded-xl px-4 py-2 text-sm text-indigo-700 font-semibold text-center">
         📅 FD Rates as of March 2026
       </div>

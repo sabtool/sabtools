@@ -7,7 +7,7 @@ type ConsumerType = "general" | "ujjwala";
 /*
  * LPG subsidy rules — reviewed June 2026 against PIB / MoPNG.
  *
- * As of FY 2025-26 the ONLY active cylinder subsidy is the PMUY (Ujjwala)
+ * As of FY 2026-27 the ONLY active cylinder subsidy is the PMUY (Ujjwala)
  * "targeted subsidy": Rs 300 per 14.2 kg domestic refill, for up to 9 refills
  * a year, credited to the beneficiary's linked bank account via DBT (PAHAL).
  * The Rs 300 amount is uniform nationwide.

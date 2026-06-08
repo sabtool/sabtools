@@ -299,8 +299,8 @@ export default function GoalBasedSipCalculator() {
           <li>Hybrid / balanced funds: 8-10%</li>
           <li>Debt funds: 6-8%</li>
           <li>
-            PPF: 7.1% (FY 2025-26, set quarterly by Ministry of Finance);
-            Sukanya Samriddhi: 8.2%; EPF: 8.25%
+            PPF: 7.1% (Q1 FY 2026-27, set quarterly by Ministry of Finance);
+            Sukanya Samriddhi: 8.2%; EPF: 8.25% (FY 2026-27 EPFO-ratified)
           </li>
         </ul>
         <p className="mt-2">

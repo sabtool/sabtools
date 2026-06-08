@@ -2,7 +2,7 @@
 import { useState, useMemo } from "react";
 
 /**
- * Capital Gains Tax Calculator (India) — FY 2025-26 / AY 2026-27
+ * Capital Gains Tax Calculator (India) — FY 2026-27 / AY 2027-28
  *
  * VERIFIED DATA SOURCES:
  *
@@ -28,11 +28,12 @@ import { useState, useMemo } from "react";
  *    - ALWAYS taxed at applicable slab rate regardless of holding period
  *    - No LTCG benefit (Finance Act 2023 change)
  *
- * 5. Surcharge slabs (FY 2025-26):
+ * 5. Surcharge slabs (FY 2026-27, unchanged from FY 2025-26):
  *    - Capped at 15% for Section 111A & 112A income (no 25%/37% slab)
  *    - Capped at 25% for Section 112 income (no 37% slab)
  *
- * 6. Health & Education Cess: 4% on (tax + surcharge) per Sec 2(11) Finance Act 2025.
+ * 6. Health & Education Cess: 4% on (tax + surcharge). Rule retained in
+ *    Finance Act 2026 / new Income Tax Act 2026 (no change).
  *
  * Phase 6 Round 3b Task B — locale-aware labels. Statutory section numbers,
  * percentages, and date thresholds stay in English/numeric form because they
@@ -116,7 +117,7 @@ const UI: Record<Locale, {
   surcharge_standard: string;
 }> = {
   "en-IN": {
-    badge: "📊 FY 2025-26 · Post-Budget 2024 Rates · Section 111A / 112 / 112A",
+    badge: "📊 FY 2026-27 · Post-Budget 2024 Rates (Budget 2026 unchanged) · Section 111A / 112 / 112A",
     assetType: "Asset Type",
     purchasePrice: "Purchase Price (₹)",
     salePrice: "Sale Price (₹)",
@@ -148,7 +149,7 @@ const UI: Record<Locale, {
     effectiveRate: "Effective tax rate on gain:",
     indexationApplied: "Indexation grandfathering applied: 20% with indexation produced lower tax than 12.5% without — you should opt for the indexed treatment when filing.",
     lossNote: "💡 Capital loss treatment: Unlike crypto losses, regular capital losses CAN be set off against capital gains (LTCG losses against LTCG only, STCG losses against any capital gain) and carried forward up to 8 assessment years. Mention this loss in your ITR to preserve carry-forward.",
-    verifiedHeading: "Verified rules (FY 2025-26 / AY 2026-27):",
+    verifiedHeading: "Verified rules (FY 2026-27 / AY 2027-28):",
     verifiedRules: [
       "STCG on listed equity: 20% (Section 111A, raised from 15% by Budget 2024 effective 23-Jul-2024). Holding period: ≤12 months.",
       "LTCG on listed equity: 12.5% (Section 112A, raised from 10% by Budget 2024). Annual exemption: ₹1,25,000/FY (raised from ₹1L). Holding period: >12 months.",
@@ -171,7 +172,7 @@ const UI: Record<Locale, {
     surcharge_standard: "Standard surcharge slabs",
   },
   "hi-IN": {
-    badge: "📊 FY 2025-26 · पोस्ट-बजट 2024 दरें · धारा 111A / 112 / 112A",
+    badge: "📊 FY 2026-27 · पोस्ट-बजट 2024 दरें (बजट 2026 अपरिवर्तित) · धारा 111A / 112 / 112A",
     assetType: "संपत्ति प्रकार",
     purchasePrice: "खरीद मूल्य (₹)",
     salePrice: "बिक्री मूल्य (₹)",
@@ -203,7 +204,7 @@ const UI: Record<Locale, {
     effectiveRate: "गेन पर प्रभावी टैक्स दर:",
     indexationApplied: "इंडेक्सेशन ग्रैंडफादरिंग लागू: इंडेक्सेशन के साथ 20% पर टैक्स, बिना इंडेक्सेशन 12.5% से कम बना — फ़ाइलिंग के समय इंडेक्स्ड ट्रीटमेंट चुनें।",
     lossNote: "💡 कैपिटल लॉस का इलाज: क्रिप्टो लॉस के विपरीत, सामान्य कैपिटल लॉस को कैपिटल गेन के साथ सेट-ऑफ़ किया जा सकता है (LTCG लॉस सिर्फ़ LTCG से, STCG लॉस किसी भी कैपिटल गेन से) और 8 असेसमेंट साल तक कैरी-फ़ॉरवर्ड किया जा सकता है। कैरी-फ़ॉरवर्ड बचाने के लिए ITR में इस लॉस का ज़िक्र करें।",
-    verifiedHeading: "सत्यापित नियम (FY 2025-26 / AY 2026-27):",
+    verifiedHeading: "सत्यापित नियम (FY 2026-27 / AY 2027-28):",
     verifiedRules: [
       "लिस्टेड इक्विटी पर STCG: 20% (धारा 111A, बजट 2024 में 15% से बढ़ाई गई, 23-जुलाई-2024 से प्रभावी)। होल्डिंग अवधि: ≤12 महीने।",
       "लिस्टेड इक्विटी पर LTCG: 12.5% (धारा 112A, बजट 2024 में 10% से बढ़ाई गई)। वार्षिक छूट: ₹1,25,000/FY (₹1 लाख से बढ़ाई गई)। होल्डिंग अवधि: >12 महीने।",

@@ -143,12 +143,37 @@ export default function MahilaSammanCalculator() {
         👩 MSSC · 7.5% p.a. · Quarterly Compounding · 2-Year Lock-in
       </div>
 
-      <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-900 leading-relaxed">
-        <strong>📌 Scheme status:</strong> MSSC was a one-time scheme open
-        for new deposits between 1 April 2023 and 31 March 2025. No
-        extension has been notified as of FY 2025-26. Existing accounts
-        continue to earn 7.5% till maturity. This calculator helps existing
-        depositors check their maturity value.
+      {/* High-visibility closure notice. The scheme officially stopped
+          accepting new deposits on 31 March 2025 (SB Order No. 03/2025,
+          Dept. of Posts). Budget 2026 did not extend it. Verified from
+          ClearTax + India Post + Ministry of Communication notification
+          (8 Jun 2026). This banner must be loud — a first-time visitor
+          must understand they CANNOT open a fresh MSSC account today. */}
+      <div className="bg-red-50 border-2 border-red-300 rounded-xl p-4 text-sm text-red-900 leading-relaxed">
+        <div className="flex items-start gap-3">
+          <span className="text-2xl">🚫</span>
+          <div>
+            <p className="font-bold text-base text-red-800 mb-1">
+              Scheme Closed for New Accounts
+            </p>
+            <p className="mb-2">
+              The Mahila Samman Savings Certificate (MSSC) scheme stopped
+              accepting new deposits on{" "}
+              <strong>31 March 2025</strong> per SB Order No. 03/2025
+              issued by the Department of Posts. Budget 2026-27 did{" "}
+              <strong>not</strong> extend or relaunch the scheme.
+            </p>
+            <p className="text-xs text-red-800">
+              <strong>What this calculator is for:</strong> existing MSSC
+              account holders (opened before 31 Mar 2025) can use this to
+              compute their maturity at end of the 2-year tenure. The
+              7.5% rate, quarterly compounding and all other terms
+              continue till each existing account's maturity date.
+              Withdrawals via ECS to non-Post-Office bank accounts are
+              now permitted (Min. of Communication circular, 12 Jun 2025).
+            </p>
+          </div>
+        </div>
       </div>
 
       <div className="space-y-5">

@@ -13,6 +13,11 @@ interface SchemeInfo {
   description: string;
 }
 
+// Post Office small-savings rates — Q1 FY 2026-27 (Apr-Jun 2026).
+// Verified 8 Jun 2026 from nsiindia.gov.in + Department of Economic
+// Affairs (dea.gov.in/budget-division/475) quarterly notification.
+// Finance Ministry left these unchanged for the 8th consecutive
+// quarter on 31 Mar 2026.
 const schemes: Record<Scheme, SchemeInfo> = {
   nsc: { name: "National Savings Certificate (NSC)", rate: 7.7, tenure: 5, compounding: "Annually (reinvested)", minAmount: 1000, maxAmount: 100000000, description: "5-year certificate, interest compounded annually but paid at maturity. Tax deduction under 80C." },
   kvp: { name: "Kisan Vikas Patra (KVP)", rate: 7.5, tenure: 9.58, compounding: "Annually", minAmount: 1000, maxAmount: 100000000, description: "Doubles your money. Current rate: doubles in ~115 months (~9.6 years)." },
@@ -23,6 +28,8 @@ const schemes: Record<Scheme, SchemeInfo> = {
   td3: { name: "Time Deposit - 3 Year", rate: 7.1, tenure: 3, compounding: "Quarterly", minAmount: 1000, maxAmount: 100000000, description: "3-year fixed deposit with quarterly compounding." },
   td5: { name: "Time Deposit - 5 Year", rate: 7.5, tenure: 5, compounding: "Quarterly", minAmount: 1000, maxAmount: 100000000, description: "5-year fixed deposit with quarterly compounding. Tax deduction under 80C." },
 };
+
+const RATES_VERIFIED_ON = "8 Jun 2026"; // Q1 FY 2026-27 ratified rates
 
 export default function PostOfficeSavingsCalculator() {
   const [scheme, setScheme] = useState<Scheme>("nsc");
@@ -74,6 +81,10 @@ export default function PostOfficeSavingsCalculator() {
 
   return (
     <div className="space-y-8">
+      <div className="bg-green-50 border border-green-200 rounded-xl px-4 py-2.5 text-xs text-green-800 inline-block">
+        <span className="font-semibold">✅ Rates verified {RATES_VERIFIED_ON}</span>{" "}
+        · Q1 FY 2026-27 (Apr-Jun 2026) · Source: nsiindia.gov.in
+      </div>
       <div className="space-y-6">
         <div>
           <label className="text-sm font-semibold text-gray-700 mb-2 block">Select Scheme</label>

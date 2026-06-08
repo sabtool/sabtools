@@ -30,7 +30,8 @@ export default function InHandSalaryCalculator() {
     const grossAnnual = annual - employerPF;
     const grossMonthly = grossAnnual / 12;
 
-    // Income Tax calculation (FY 2025-26 / AY 2026-27)
+    // Income Tax calculation (FY 2026-27 / AY 2027-28)
+    // Budget 2026 retained the FY 2025-26 slab structure unchanged.
     let taxableIncome = grossAnnual - employeePF - annualPT;
     if (regime === "old") {
       // Old regime with 80C, HRA etc.
@@ -43,7 +44,7 @@ export default function InHandSalaryCalculator() {
 
     let tax = 0;
     if (regime === "new") {
-      // New Tax Regime FY 2025-26 (AY 2026-27)
+      // New Tax Regime FY 2026-27 (AY 2027-28)
       const slabs = [
         { limit: 400000, rate: 0 },
         { limit: 800000, rate: 5 },
@@ -65,7 +66,7 @@ export default function InHandSalaryCalculator() {
       // Section 87A rebate: Income up to ₹12,00,000 (after standard deduction) = no tax (rebate up to ₹60,000)
       if (taxableIncome <= 1200000) tax = Math.max(0, tax - 60000);
     } else {
-      // Old Tax Regime FY 2025-26
+      // Old Tax Regime FY 2026-27 (slabs unchanged from FY 2025-26)
       const slabs = [
         { limit: 250000, rate: 5 },
         { limit: 500000, rate: 20 },

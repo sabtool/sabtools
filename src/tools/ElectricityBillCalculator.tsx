@@ -115,6 +115,17 @@ export default function ElectricityBillCalculator() {
         <strong>Note:</strong> Tariff rates are approximate domestic (residential) rates and may vary by distribution
         company and category. Actual bills may include additional surcharges.
       </div>
+      {/* Electricity tariffs are state-specific AND DISCOM-specific
+          (Maharashtra alone has 3 DISCOMs with different slabs).
+          Tariffs are revised annually by State Electricity Regulatory
+          Commissions. Users must verify with their own DISCOM bill. */}
+      <div className="bg-blue-50 border border-blue-200 rounded-xl px-4 py-2.5 text-xs text-blue-800">
+        <span className="font-semibold">📅 Tariff data last reviewed: 8 June 2026</span>{" "}
+        · State Electricity Regulatory Commissions revise tariffs annually.
+        Tariffs also vary by DISCOM within the same state. Always compare
+        with your actual electricity bill — this calculator gives a
+        ball-park estimate, not the exact billable amount.
+      </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>

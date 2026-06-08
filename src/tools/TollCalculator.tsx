@@ -48,6 +48,25 @@ export default function TollCalculator() {
 
   return (
     <div className="space-y-8">
+      {/* NHAI revises toll rates every 1 April based on WPI inflation
+          and concessionaire agreements. Per-km rates and expressway
+          totals here are averages — actual plazas charge as per their
+          notified rate-card. */}
+      <div className="bg-blue-50 border border-blue-200 rounded-xl px-4 py-2.5 text-xs text-blue-800">
+        <span className="font-semibold">📅 Toll-rate data last reviewed: 8 June 2026</span>{" "}
+        · NHAI revises toll fees every 1 April (WPI-linked). Per-km figures
+        below are NHAI averages — your actual cost depends on the specific
+        plazas en route. Check{" "}
+        <a
+          href="https://tis.nhai.gov.in/tollplazasonmap"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline font-semibold"
+        >
+          NHAI TIS portal
+        </a>{" "}
+        for plaza-wise live rates.
+      </div>
       <div className="space-y-4">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>

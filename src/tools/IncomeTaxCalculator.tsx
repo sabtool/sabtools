@@ -2,9 +2,17 @@
 import { useState, useMemo } from "react";
 
 /**
- * Income Tax Calculator — locale-aware labels (Phase 6 Round 2 Task B).
- * Slab tables are universal (FY 2025-26 / AY 2026-27 from the IT Dept);
- * only the visible labels and category names switch language.
+ * Income Tax Calculator — locale-aware labels.
+ *
+ * Updated for FY 2026-27 / AY 2027-28. Budget 2026 (1 Feb 2026) left the
+ * new-regime slab structure UNCHANGED from FY 2025-26 — same ₹4L basic
+ * exemption, same Section 87A rebate of ₹60,000 (now placed in Clause 156
+ * of the new Income Tax Act 2026), same ₹75,000 standard deduction. So
+ * the slab table & math here remain mathematically correct; only the
+ * label / disclaimer year has been refreshed.
+ *
+ * Source verified 2026-06-08 from incometax.gov.in/iec/foportal/help/
+ * individual/return-applicable-1 + Budget 2026 release.
  */
 type Locale = "en-IN" | "hi-IN";
 
@@ -28,7 +36,7 @@ const LABELS: Record<Locale, {
   enterIncome: string;
 }> = {
   "en-IN": {
-    taxSlabsBadge: "Tax Slabs: FY 2025-26 (AY 2026-27)",
+    taxSlabsBadge: "Tax Slabs: FY 2026-27 (AY 2027-28)",
     annualIncome: "Annual Income (₹)",
     taxRegime: "Tax Regime",
     newRegime: "New Regime",
@@ -43,11 +51,11 @@ const LABELS: Record<Locale, {
     netIncome: "Net Income",
     effectiveRate: "Effective Tax Rate",
     disclaimer: "Disclaimer:",
-    disclaimerBody: "Tax calculations are based on FY 2025-26 rates as announced in Union Budget 2025. Surcharge and cess (4% health & education cess) are included. For exact tax liability, consult a Chartered Accountant or use the official Income Tax portal at",
+    disclaimerBody: "Tax calculations are based on FY 2026-27 / AY 2027-28 rates (Budget 2026 retained the FY 2025-26 slab structure unchanged). Standard deduction ₹75,000, Section 87A rebate up to ₹60,000 for income ≤ ₹12L (new regime). Surcharge and 4% health & education cess included. For exact tax liability, consult a CA or the official Income Tax portal at",
     enterIncome: "e.g. 1200000",
   },
   "hi-IN": {
-    taxSlabsBadge: "टैक्स स्लैब: FY 2025-26 (AY 2026-27)",
+    taxSlabsBadge: "टैक्स स्लैब: FY 2026-27 (AY 2027-28)",
     annualIncome: "वार्षिक आय (₹)",
     taxRegime: "टैक्स रिजीम",
     newRegime: "नया रिजीम",
@@ -62,7 +70,7 @@ const LABELS: Record<Locale, {
     netIncome: "शुद्ध आय",
     effectiveRate: "प्रभावी टैक्स दर",
     disclaimer: "अस्वीकरण:",
-    disclaimerBody: "ये गणनाएँ केंद्रीय बजट 2025 में घोषित FY 2025-26 की दरों पर आधारित हैं। सरचार्ज और सेस (4% हेल्थ एंड एजुकेशन सेस) शामिल हैं। सटीक टैक्स देयता के लिए चार्टर्ड अकाउंटेंट से सलाह लें या आधिकारिक इनकम टैक्स पोर्टल पर जाएँ —",
+    disclaimerBody: "ये गणनाएँ FY 2026-27 / AY 2027-28 की दरों पर आधारित हैं (बजट 2026 ने FY 2025-26 की स्लैब संरचना अपरिवर्तित रखी है)। स्टैंडर्ड डिडक्शन ₹75,000, सेक्शन 87A रिबेट ₹60,000 तक (नई रिजीम, आय ≤ ₹12 लाख)। सरचार्ज और 4% हेल्थ एंड एजुकेशन सेस शामिल हैं। सटीक टैक्स देयता के लिए CA से सलाह लें या आधिकारिक इनकम टैक्स पोर्टल पर जाएँ —",
     enterIncome: "उदा. 1200000",
   },
 };
@@ -79,8 +87,9 @@ export default function IncomeTaxCalculator({ locale = "en-IN" }: { locale?: Loc
 
     let tax = 0;
     if (regime === "new") {
-      // New Regime FY 2025-26 (AY 2026-27)
-      // Standard deduction of ₹75,000
+      // New Regime FY 2026-27 (AY 2027-28) — Budget 2026 retained the
+      // FY 2025-26 slab structure unchanged.
+      // Standard deduction ₹75,000
       const taxableIncome = Math.max(0, inc - 75000);
       const slabs = [
         { limit: 400000, rate: 0 },
@@ -103,8 +112,8 @@ export default function IncomeTaxCalculator({ locale = "en-IN" }: { locale?: Loc
       // Section 87A rebate: Income up to ₹12,00,000 (after standard deduction) = no tax (rebate up to ₹60,000)
       if (taxableIncome <= 1200000) tax = Math.max(0, tax - 60000);
     } else {
-      // Old Regime FY 2025-26
-      // Standard deduction of ₹50,000
+      // Old Regime FY 2026-27 (slabs unchanged from FY 2025-26)
+      // Standard deduction ₹50,000
       const stdDeduction = 50000;
       const exemption = age === "below60" ? 250000 : age === "60to80" ? 300000 : 500000;
       const taxable = Math.max(0, inc - stdDeduction - exemption);
