@@ -38981,6 +38981,178 @@ due date to file ITR for FY 2025-26 (AY 2026-27) is 31 July 2026 for Salaried & 
 <p>For Indian electrical work — sq mm cables, 230V/415V supply, 3% IS limit — a calculator built around those defaults removes friction and removes the most common mistake (forgetting to check the percentage against the standard).</p>
 
 <p><strong>Try SabTools' <a href="/tools/voltage-drop-calculator">Voltage Drop Calculator</a> →</strong> and pair it with the <a href="/tools/wire-size-calculator">Wire Size Calculator</a> for full cable selection in one workflow.</p>`,
+  },
+  {
+    slug: "news-2026-06-08-upi-international-payments-and-cross-border-updates",
+    title: "UPI international payments and cross-border updates (2026 Update)",
+    description: "UPI international payments and cross-border updates — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-06-08",
+    category: "Fintech",
+    readTime: "11 min read",
+    keywords: ["UPI international payments and", "fintech news india 2026", "india 2026 update"],
+    toolSlug: "upi-qr-generator",
+    image: {
+      src: "/blog/upi-qr-generator.webp",
+      alt: "UPI international payments and cross-border updates (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>UPI just crossed another border — and Indian travellers, NRIs, and merchants are all noticing</h2>
+
+<p>The Unified Payments Interface has had a busy 2025 abroad. In November, the National Payments Corporation of India's international arm switched on UPI acceptance in Cambodia. A few weeks earlier, NPCI signed a memorandum with NTT DATA to bring UPI to Japan. Qatar went live in late September. Cyprus signed up in June. The UPI–PayNow remittance corridor between India and Singapore added 13 more Indian banks in July. Behind these announcements is a number that explains the urgency: cross-border UPI transactions grew more than twenty-fold in a single year.</p>
+
+<p>If you are an Indian traveller planning a Southeast Asia trip, an NRI in Singapore sending money home, or a shopkeeper in Bengaluru whose customers increasingly include foreign tourists, the rules around how UPI works across borders have changed materially in the last six months. This post walks through what's actually shipped, what's still on the runway, and what you can do today.</p>
+
+<h2>Cambodia is the ninth country — and the rollout is bigger than the headlines suggest</h2>
+
+<p>The most recent addition to the UPI international map is Cambodia. 
+
+NPCI International Payments Limited (NIPL), the international arm of the National Payments Corporation of India, has officially partnered with ACLEDA Bank Plc. to launch Unified Payments Interface (UPI) acceptance in Cambodia
+
+. The linkage works through Cambodia's national QR standard, KHQR, which means an Indian traveller does not need a separate app or wallet — the same Google Pay, PhonePe, Paytm, or BHIM app you use at a kirana store in Pune can scan a Cambodian merchant's QR code.</p>
+
+<p>The scale of the merchant network matters. 
+
+The initiative is the first phase of cross-border QR payment linkage between India and Cambodia, enabling Indian travellers to make seamless QR-based payments using UPI-enabled applications at over 4.5 million merchant outlets across Cambodia, including tourist attractions, restaurants
+
+ and other establishments. Phase 2 is intended to be bidirectional. 
+
+Cambodian citizens visiting India will soon be able to use their domestic banking and digital payment applications to scan millions of UPI QR codes throughout India, completing a highly advanced, two-way interoperable financial network through Bakong's KHQR
+
+.</p>
+
+<p>That two-way interoperability is the bigger story. India's outbound tourism is well-understood; what is newer is the idea that a tourist landing in Mumbai or Goa from Phnom Penh can pay at a Colaba café using a Cambodian banking app scanning a Bharat QR sticker. 
+
+With Cambodia joining the network, UPI is now accepted in nine countries: Singapore, United Arab Emirates, France, Mauritius, Nepal, Bhutan, Qatar, Sri Lanka and Cambodia
+
+.</p>
+
+<h2>The numbers explain why NPCI is in such a hurry</h2>
+
+<p>For all the press releases, the underlying transaction data is what really tells the story of UPI's international growth. 
+
+Volumes surged from just 180 payments in FY22 and 144 in FY23 to 37,060 in FY24, before jumping over 20 times to more than 7,55,000 in FY25. In the first four months of FY26 alone, 6,01,000 transactions were processed.
+
+</p>
+
+<p>To put that into perspective: in the first four months of the current financial year, the system processed roughly 80% of the entire FY25 cross-border volume. The growth curve is steepening, not flattening. And it is happening against the backdrop of a much larger remittance flow. 
+
+For fiscal year ended March 2025, India reportedly saw remittances more than double to 35.46 billion, from $61 billion in fiscal year ended March 2017.
+
+ A meaningful slice of that 35 billion still travels through SWIFT-based bank wires or money transfer operators that charge significant FX markups — exactly the friction NPCI is targeting.</p>
+
+<h2>UPI–PayNow with Singapore: thirteen more banks, smaller fees</h2>
+
+<p>The India–Singapore remittance corridor is the most mature cross-border UPI use case, and it expanded materially in mid-2025. 
+
+UPI PayNow linkage grows as 13 Indian banks join, boosting India-Singapore real-time remittances and simplifying cross-border payments.
+
+ The expansion was announced on 
+
+July 17, 2025
+
+, and it widens the pool of Indian banks whose customers can receive money from Singapore directly into their UPI handle.</p>
+
+<p>For an NRI in Singapore sending S$500 to a parent in Coimbatore, this is the difference between an outbound wire that lands the next business day with a hidden FX spread of 1–2% and a real-time push from a PayNow app to a UPI ID that settles in seconds. Worldline, in its end-of-year recap, summed up the corridor's role plainly: 
+
+Singapore - The first international market for UPI through PayNow integration. Indian tourists and bus
+
+iness travellers gained immediate utility from the link.</p>
+
+<h2>Qatar, Cyprus, Japan: the pipeline for FY 2025-26</h2>
+
+<p>Three other developments in 2025 deserve attention because they expand UPI's footprint beyond the traditional Indian-diaspora corridors.</p>
+
+<p><strong>Qatar.</strong> UPI went live in Qatar in September. 
+
+Initially, UPI payments will be enabled at Qatar Duty Free outlets at airports and major tourist destinations.
+
+ The phased start at the airport duty-free is deliberate: Hamad International is the first point of contact for the lakhs of Indians transiting through Doha each year, and giving them UPI at duty-free is a high-visibility proof of concept before broader merchant rollout.</p>
+
+<p><strong>Cyprus.</strong> The European push continued in June. 
+
+In June 2025, Prime Minister Narendra Modi's historic visit to Cyprus marked a major milestone. Cyprus became the second European nation after France to adopt UPI services. The visit led to the signing of a Memorandum of Understanding (MoU)
+
+. Cyprus, like France, is a tourism-led corridor — Indian leisure travel to Europe has grown sharply post-pandemic, and the MoU is the legal scaffolding before a payment-rails go-live.</p>
+
+<p><strong>Japan.</strong> Perhaps the most strategically interesting deal of the year was inked in October. NTT DATA signed an MoU with NIPL to enable UPI acceptance across Japanese merchants. The NIPL leadership framed it as a beachhead. 
+
+Ritesh Shukla, MD &amp; CEO of NIPL, said, "The MoU with NTT DATA lays the foundation for enabling UPI acceptance in Japan. This partnership is an important step toward improving the digital payment experience for Indian travellers and simplifying cross-border payments. It also reflects our amb
+
+itions for the broader region.</p>
+
+<p>NIPL has been candid about where this is all going. 
+
+Expansion Plans: UPI will expand to 4-6 new countries in 2025. Target Regions: Qatar, Thailand, and Southeast Asia. Current Reach: UPI payments are accepted in Bhutan, Mauritius, Nepal, Singapore, Sri Lanka, and France.
+
+ Thailand has not gone live yet, but it remains a priority given the volume of Indian tourism into Bangkok, Phuket and Krabi.</p>
+
+<h2>What this actually means for an Indian traveller</h2>
+
+<p>The practical question for someone flying out of Delhi or Bangalore next month is simple: can I leave the forex card behind?</p>
+
+<p>The honest answer is "mostly, in nine countries, with a caveat." UPI international today works for outbound payments — you, an Indian resident with an Indian bank account and an Indian SIM-linked UPI handle, scanning a foreign merchant's QR. The merchant is paid in local currency; the conversion happens at the NPCI/partner-bank layer; you are debited in INR. The FX rate is typically tighter than what a credit card or forex card offers, though it varies by issuing bank.</p>
+
+<p>Outside these nine countries — say you are travelling to Germany, Australia, or the United States — UPI does not currently process retail merchant payments. You still need a card or a multi-currency wallet. And even within the nine, UPI acceptance is concentrated at merchants integrated with the local QR scheme (KHQR in Cambodia, FPS-style schemes elsewhere, NEOPAY/UAEFTS in the UAE). It is not yet universal in any country other than India itself.</p>
+
+<h2>NRIs: the rules on funding sources are still strict</h2>
+
+<p>If you are an NRI reading this from Dubai, London or Toronto, the most common question is whether you can use UPI on a foreign bank account. The short answer is no, and that has not changed in 2025.</p>
+
+<p>
+
+Direct linking of overseas bank accounts to Indian UPI apps remains not permitted under current RBI/FEMA rules. Cross-border use is enabled by settlement/linkage arran
+
+gements between NPCI and foreign payment schemes. What was enabled — back in 2023 and still very much in force — is registering a foreign mobile number on UPI when it is linked to an NRE or NRO account at an Indian bank. 
+
+From 30 April 2023, international mobile numbers from Malaysia, Singapore, Australia, Canada, Hong Kong, Oman, Qatar, USA, Saudi Arabia, UAE, and the UK will be able to access the UPI transaction facility. It will be available through non-resident external (NRE) and non-resident ordinary (NRO) 
+
+accounts.</p>
+
+<p>For NRIs who want to send larger sums home, the existing channels — outbound wires, UPI–PayNow for Singapore, money transfer operators — still apply, with the usual FEMA framework. 
+
+NRIs can remit up to USD 1 million per financial year from NRO accounts with required documentation and tax compliance. This limit is separate from LRS and governed under RBI's Non-Resident Account Master Directions.
+
+ For resident Indians sending money out, 
+
+as per current LRS regulations, Indian residents can remit up to USD 250,000 per financial year (April-March).
+
+</p>
+
+<p>One housekeeping point worth flagging: if you do receive an inward remittance through any of these channels, confirming the credit landed in the correct account starts with the IFSC on the receiving end. You can decode any bank's IFSC — issuing bank, branch and city — using SabTools' <a href="/tools/ifsc-bank-details">IFSC Bank Details lookup</a> before you share account details with a remitter abroad.</p>
+
+<h2>For Indian merchants: the inbound tourist opportunity</h2>
+
+<p>The flip side of UPI going global is foreign tourists coming to India and wanting to pay in their familiar app. Phase 2 of the Cambodia rollout, the UAE's NEOPAY/Mashreq integrations, and the Nepal–Fonepay corridor all share a common architecture: foreign-issued payment apps scanning UPI QR codes at Indian merchants.</p>
+
+<p>For a small business owner — say a homestay operator in Munnar, a handicrafts seller in Jaipur, or a café in Pondicherry that gets European backpackers — the practical implication is that the same Bharat QR/UPI QR sticker you already display can accept payments from a growing number of foreign apps without any change in your acquiring setup. The settlement still hits your Indian bank account in INR; the foreign issuer absorbs the FX conversion.</p>
+
+<p>If you don't yet have a UPI QR printed at your counter, or you want one that points to a specific UPI ID with a pre-filled merchant name and amount, you can build one in under a minute using SabTools' <a href="/tools/upi-qr-generator">UPI QR Generator</a> — it produces a scannable QR that works across GPay, PhonePe, Paytm, BHIM and the other apps your customers (Indian or foreign) are likely to be holding. Print it, paste it at the billing counter, and you are accepting payments from nine countries' worth of tourists in addition to your domestic UPI base.</p>
+
+<h2>What to watch in the rest of FY 2025-26</h2>
+
+<p>Several threads will play out between now and March 2026:</p>
+
+<ul>
+<li><strong>Cambodia Phase 2.</strong> The bidirectional KHQR–UPI linkage is committed but not yet live. When it ships, it will be the first time a non-South-Asian country can scan Indian QR codes at scale.</li>
+<li><strong>Japan and Thailand go-live.</strong> The NTT DATA MoU is at the foundation stage; an operational launch in Japan, plus the long-promised Thailand corridor, would meaningfully widen UPI's Asian footprint.</li>
+<li><strong>UAE deepening.</strong> NPCI International has signalled continued expansion in the UAE retail and hospitality sectors, which already host a large Indian diaspora and one of the heaviest India-bound remittance flows.</li>
+<li><strong>Europe beyond France and Cyprus.</strong> The Cyprus MoU is the second European foothold. Whether NIPL converts MoUs in other EU member states into live corridors will determine how much of the leisure-travel pie UPI captures.</li>
+</ul>
+
+<p>The longer-term ambition has been articulated by NPCI International. As one industry brief put it, 
+
+NPCI International has set an ambitious target to expand UPI's footprint to over 20 countries by 2027, with ongoing tie-ups in Europe, the Middle East, an
+
+d Asia.</p>
+
+<h2>The bottom line</h2>
+
+<p>UPI started life as a domestic instant-payments rail and has, in less than a decade, evolved into something the National Payments Corporation now positions as a cross-border standard. The 2025 numbers — a twenty-fold jump in cross-border volume, six lakh transactions in the first four months of FY26, a ninth country added, Japan and Cyprus in the pipeline — make the trajectory hard to dismiss.</p>
+
+<p>For Indian travellers, the practical takeaway is to update the mental list of UPI-accepting countries before your next trip — Singapore, UAE, France, Mauritius, Nepal, Bhutan, Qatar, Sri Lanka, Cambodia — and to confirm acceptance at the specific merchant categories you will use. For NRIs, the funding-source rules have not loosened, but corridors like UPI–PayNow are getting denser and cheaper. And for Indian merchants, the same QR sticker on your counter is quietly becoming an inbound-tourism payment terminal — which is a reasonable reason to make sure your UPI QR is correctly configured and clearly displayed.</p>
+
+<p>The pace of cross-border announcements will almost certainly continue through FY 2025-26. The pieces of paper signed in June, July, September, October, and November of 2025 turn into live payment rails in the months after. Watch this space — and your scanner.</p>`,
   }
 ];
 
