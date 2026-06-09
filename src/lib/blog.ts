@@ -39435,6 +39435,255 @@ d Asia.</p>
 <p><strong>Does mileage drop as a car ages?</strong> Yes — typically 5-10% by 50,000 km and 10-15% by 1,00,000 km, assuming regular servicing. Clogged air filters, worn spark plugs and dirty injectors are the usual culprits. Run a tank-to-tank mileage check every 3 months to catch sudden drops early.</p>
 
 <p>Track your real km/l, cost per km and the gap from your brochure figure in one screen — <a href="/tools/mileage-calculator">try SabTools' Mileage Calculator →</a></p>`,
+  },
+  {
+    slug: "news-2026-06-09-gst-council-meeting-decisions-and-rate-revisions",
+    title: "GST council meeting decisions and rate revisions (2026 Update)",
+    description: "GST council meeting decisions and rate revisions — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-06-09",
+    category: "Tax & Salary",
+    readTime: "12 min read",
+    keywords: ["GST council meeting decisions", "tax news india 2026", "india 2026 update"],
+    toolSlug: "income-tax-calculator",
+    image: {
+      src: "/blog/income-tax-calculator.webp",
+      alt: "GST council meeting decisions and rate revisions (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>The 56th GST Council meeting just rewrote India's indirect tax map</h2>
+
+<p>India's Goods and Services Tax architecture has been quietly running on four main slabs — 5%, 12%, 18% and 28% — since its launch in July 2017. That ended on 22 September 2025, when a sweeping rationalisation package recommended by the GST Council came into force. <a href="https://cleartax.in/s/56th-gst-council-meet-news" rel="noopener" target="_blank">
+
+The GST Council approved the Next gen GST reforms removing 12% and 28% tax slabs, while merging items into the 5% or 18% tax slabs, introduced a 40% tax slab for demerit goods, corrected the inverted tax structure on fertilizers, fabrics and more.
+
+</a></p>
+
+<p>The headline change is structural — India now runs a three-tier GST rate system of 5%, 18% and 40% — but for households, the practical change is what shifted slabs. Daily-use items, processed foods, small cars, electronics, cement, hotel stays under ₹7,500, and most footwear got cheaper. Tobacco, pan masala, online gaming, IPL tickets and big-engine cars got more expensive. And in one of the most consequential moves, individual life and health insurance premiums are now exempt from GST altogether.</p>
+
+<p>This post breaks down what the 56th GST Council actually decided, which goods and services are in which new bucket, what it means for an Indian household budget, and what to do next.</p>
+
+<h2>What exactly was decided — and when</h2>
+
+<p>The 56th GST Council met under the chairpersonship of Union Finance Minister Nirmala Sitharaman in New Delhi. <a href="https://open.money/blog/56-gst-council-meeting/" rel="noopener" target="_blank">
+
+The 56th GST Council Meeting, chaired by Finance Minister Nirmala Sitharaman on September 3–4, 2025, in New Delhi, has delivered historic GST reforms.
+
+</a> The political signal had come earlier — <a href="https://cleartax.in/s/56th-gst-council-meet-news" rel="noopener" target="_blank">
+
+15 August 2025- On the 79th Independence Day, 15th August 2025
+
+</a> — when the Prime Minister flagged a major overhaul of the GST framework from the Red Fort.</p>
+
+<p>The implementation date was deliberately chosen. <a href="https://www.taxtmi.com/article/detailed?id=15061" rel="noopener" target="_blank">
+
+The revised rates and rules will be effective from September 22, 2025, coinciding with the start of Navratri
+
+</a> — the festive period when discretionary spending picks up across India.</p>
+
+<p>There's one carve-out on timing worth knowing. <a href="https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2163560&reg=3&lang=2" rel="noopener" target="_blank">
+
+As per recommendations of the GST Council in its 56th meeting, the changes in GST rates on services and goods other than cigarettes, chewing tobacco products like zarda, unmanufactured tobacco and beedi will be effective from 22nd September, 2025.
+
+</a> For tobacco-related goods, the new rates apply only 
+
+from a date to be notified based on discharging of entire loan and interest liability on account of compensation cess
+
+. So if you're following the 40% rate on cigarettes, it doesn't kick in immediately — there's a sequencing issue tied to the residual compensation cess.</p>
+
+<h2>The new three-tier structure, in plain English</h2>
+
+<p>India has effectively scrapped the 12% and 28% middle/top slabs and consolidated everything into:</p>
+
+<ul>
+  <li><strong>5%</strong> — merit rate, for most essentials and mass-consumption goods</li>
+  <li><strong>18%</strong> — standard rate, the default for most other goods and services</li>
+  <li><strong>40%</strong> — demerit rate, for sin and luxury goods</li>
+</ul>
+
+<p><a href="https://cleartax.in/s/gst-rates" rel="noopener" target="_blank">
+
+A higher 40% rate is applied to select luxury and sin goods, while a few niche rates like 3% and 0.25% continue to exist.
+
+</a> The 3% rate on gold and the 0.25% rate on rough diamonds, along with composition scheme rates, were not touched.</p>
+
+<p><a href="https://www.taxtmi.com/article/detailed?id=15095" rel="noopener" target="_blank">
+
+Will make 175 items cheaper (processed foods, dry fruits, dairy, packaged snacks, refrigerators, ACs, automobiles, tractors, etc.). Average GST incidence may drop from 11.5% to below 10%.
+
+</a> That single line — average tax incidence falling roughly 150 basis points — is the macroeconomic point of the exercise. The bet is that a meaningful drop in effective tax on consumption will lift demand without blowing a permanent hole in revenue.</p>
+
+<h2>What got cheaper from 22 September 2025</h2>
+
+<h3>Daily essentials and personal care</h3>
+
+<p>This is the part most Indian households will notice first at the kirana store and on monthly grocery bills. <a href="https://www.enkash.com/resources/blog/56-gst-council-meeting-key-updates" rel="noopener" target="_blank">
+
+Personal care (down from 18%): soaps, shampoos, toothpaste, toothbrushes, talcum powder, hair oil, face powder
+
+</a> have all moved to 5%.</p>
+
+<p><a href="https://www.cashflo.io/magazine/highlights-of-the-56th-gst-council-meeting-major-reforms-and-rate-rationalisation" rel="noopener" target="_blank">
+
+Reduction from 18%/12% to 5%: Hair oil, shampoos, soaps, toothbrushes, toothpaste, bicycles, tableware, kitchenware, and more.
+
+</a> Bicycles and kitchenware moving to 5% is a clear pro-consumption signal.</p>
+
+<p>Several staples were taken to zero. <a href="https://www.cashflo.io/magazine/highlights-of-the-56th-gst-council-meeting-major-reforms-and-rate-rationalisation" rel="noopener" target="_blank">
+
+Reduction from 5% to NIL: UHT milk, paneer, chapati/roti, paratha, parotta, and other Indian breads.
+
+</a> For families that buy packaged paneer or paratha regularly — particularly in urban Maharashtra, Delhi NCR, Karnataka and Telangana — the entire 5% has gone.</p>
+
+<h3>Education stationery</h3>
+
+<p><a href="https://www.taxtmi.com/article/detailed?id=15061" rel="noopener" target="_blank">
+
+All educational stationery and materials like notebooks, pencils, erasers, maps, and globes are now exempt from GST, reducing educational costs for students.
+
+</a> Parents of school-going children and tier-2 city aspirants preparing for competitive exams will see this directly in their next stationery bill.</p>
+
+<h3>Appliances, electronics and cement</h3>
+
+<p>The 28% slab on white goods was the single biggest household irritant in the old GST regime. That's gone. <a href="https://www.enkash.com/resources/blog/56-gst-council-meeting-key-updates" rel="noopener" target="_blank">
+
+Appliances: ACs, dishwashers, TVs: 18% (down from 28%)
+
+</a> means a meaningful sticker-price drop on the big-ticket purchases that dominate festive-season shopping.</p>
+
+<p>Cement, the input that drives every home and infrastructure project, also moved. <a href="https://helptax.in/56th-gst-council-meeting-highlights-updates" rel="noopener" target="_blank">
+
+Cement—cut from 28% to 18%.
+
+</a> For a first-time home buyer in NCR or Pune, this matters indirectly: builders' construction cost falls, and the under-construction property GST equation tilts more favourably for end users.</p>
+
+<h3>Automobiles and two-wheelers</h3>
+
+<p>The auto rate restructuring is more nuanced than a single headline. <a href="https://helptax.in/56th-gst-council-meeting-highlights-updates" rel="noopener" target="_blank">
+
+Automobiles—small cars and 2-wheelers now at 12%. Auto parts, buses, ambulances, and 3-wheelers—all standardized at 18%.
+
+</a></p>
+
+<p>On the demerit side: <a href="https://gstdelhizone.gov.in/new-pdfs/FAQ-of-56th-GSt-council-Meeting.pdf" rel="noopener" target="_blank">
+
+The 40% rate is applicable only to motorcycles exceeding 350cc. Therefore the 18% rate also applies to motor cycles of 350cc or lesser than 350cc. ... The new GST rate on mid-size and big cars will be 40%
+
+</a>. So a Royal Enfield Classic 350 buyer is taxed differently from a 650cc bike buyer; a Maruti Alto buyer is taxed very differently from someone picking up a large SUV.</p>
+
+<h3>Healthcare goods</h3>
+
+<p>Several diagnostic and medical items moved sharply lower. <a href="https://www.enkash.com/resources/blog/56-gst-council-meeting-key-updates" rel="noopener" target="_blank">
+
+5% GST (down from 12–18%): thermometers, medical-grade oxygen, diagnostic kits, reagents, glucometers, corrective spectacles
+
+</a>. For Indian households dealing with chronic illness or routine diagnostics, the rate cut on glucometers and diagnostic kits is real money over a year.</p>
+
+<h3>Textiles, footwear, hotels</h3>
+
+<p><a href="https://www.taxtmi.com/article/detailed?id=15060" rel="noopener" target="_blank">
+
+Council approves measures: GST appellate tribunal operationalised, broad rate cuts across cement, textiles, hotels, ag
+
+...</a> The specifics: 
+
+rate cuts (28%?18%) for cement, TVs, ACs, certain transport goods and tyres; lowered rates for textiles, footwear up to ?2,500, and hotel stays up to ?7,500; reductions
+
+. Mid-segment travel — domestic hotel stays under ₹7,500 a night — is now cheaper, which lines up with the consumption-stimulus framing.</p>
+
+<h2>The big one: GST on insurance is now zero</h2>
+
+<p>If you carry a term insurance policy or a family floater health plan, this is the change that affects you directly every year, not just at festival time.</p>
+
+<p><a href="https://www.nivabupa.com/health-insurance-articles/effective-date-of-new-gst-on-health-insurance.html" rel="noopener" target="_blank">
+
+Update: As of September 22, 2025, the GST Council has exempted individual and senior citizen health insurance premiums from GST, reducing the rate from 18% to 0% to improve affordability.
+
+</a> The same exemption applies to individual life insurance.</p>
+
+<p><a href="https://a2ztaxcorp.net/cbic-notifies-major-gst-exemptions-for-individual-life-and-health-insurance-services-along-with-e-commerce-delivery-clarifications-with-effect-from-22nd-september-2025/" rel="noopener" target="_blank">
+
+Services of life insurance business provided by an insurer to the insured, where the insured is not a group, are now completely exempt from GST (Nil rate)
+
+</a> — meaning term plans, traditional endowment policies and ULITs purchased individually all qualify. Group plans remain taxable.</p>
+
+<p>The math is significant. <a href="https://www.bajajgeneralinsurance.com/blog/health-insurance-articles/gst-reforms-2025-zero-tax-health-insurance.html" rel="noopener" target="_blank">
+
+You will save the entire 18% GST that was previously charged on your premium. For example: If your annual premium is ₹25,000, you'll save ₹4,500
+
+</a>. For a salaried professional in Bangalore or Mumbai paying ₹40,000 a year on a family floater plus ₹15,000 on term insurance, that's roughly ₹9,900 in annual savings on the same coverage.</p>
+
+<p>One transition rule matters. <a href="https://www.bandhanlife.com/blog/gst-reforms-2025-zero-gst-on-individual-life-insurance-premiums" rel="noopener" target="_blank">
+
+This means that any eligible individual life or health insurance policy purchased or renewed on or after this date will be GST-free. Policies purchased before this date will still be subject to applicable GST until renewal.
+
+</a> So a policy bought in July 2025 still bears 18% GST until its next renewal date.</p>
+
+<h2>What got more expensive: the 40% demerit rate</h2>
+
+<p>The new 40% slab is wider than the old 28% + cess combination it replaces in some categories, and it's targeted firmly at sin and luxury consumption.</p>
+
+<p><a href="https://www.enkash.com/resources/blog/56-gst-council-meeting-key-updates" rel="noopener" target="_blank">
+
+Leisure &amp; Gaming: Casinos, gambling, race clubs, lottery, online gaming, IPL tickets → 40% GST.
+
+</a> Online gaming platforms and IPL ticket buyers will see this most directly. Pan masala, cigarettes and chewing tobacco are also in this bucket — but as flagged above, those take effect from a later notified date because of the compensation cess overhang.</p>
+
+<p>On the goods side: high-cc motorcycles, mid-size and large cars, and select luxury items are now in the 40% slab. The net effect is that an SUV that was previously 28% plus cess (often working out to an effective rate above 40%) doesn't necessarily get more expensive — but a small car at 18% is now clearly cheaper than a large car at 40%, sharpening the tax wedge between mass-market and premium autos.</p>
+
+<h2>Process reforms that fly under the radar</h2>
+
+<p>Two procedural changes are worth flagging because they affect anyone who has ever fought a GST notice or worried about taxation of demerit goods on the wholesale-versus-retail price.</p>
+
+<p>First, the GST Appellate Tribunal is finally being operationalised. For freelancers, consultants and small business owners who've had GST disputes piling up in court because the dedicated appellate forum didn't exist, this should ease the bottleneck.</p>
+
+<p>Second, the valuation base for tobacco-class products changes. <a href="https://taxo.online/wp-content/uploads/2025/09/Book-on-56th-Council-Highligts-by-Team-TAXO.pdf" rel="noopener" target="_blank">
+
+The Council has decided that GST will be levied on Retail Sale Price (RSP) instead of transaction value on Pan Masala, Gutkha, Cigarettes, Unmanufactured tobacco, and Chewing tobacco like Zarda.
+
+</a> Shifting from transaction value to RSP closes a long-standing valuation arbitrage and is one reason the effective tax incidence on these categories rises sharply.</p>
+
+<h2>What this means for your money — and what to actually do</h2>
+
+<h3>If you're a salaried professional</h3>
+
+<p>Your monthly grocery and personal care bill should get marginally lighter — soaps, shampoos, hair oil, toothpaste, packaged paneer and paratha all moved down. The bigger savings show up at festive purchases (TV, AC, refrigerator now at 18% instead of 28%) and at insurance renewal (zero GST on individual life and health). A Bangalore professional earning ₹18 lakh a year who renews a ₹35,000 family floater and pays ₹18,000 on term insurance saves roughly ₹9,540 in GST annually — money that previously went straight to the exchequer.</p>
+
+<p>This is also a sensible moment to redo your direct-tax planning for FY 2025-26 against the new consumption picture — if your insurance costs are lower, your effective take-home is slightly higher, and that affects how much you might want to direct into 80C, NPS or voluntary investments. Compare your liability under both regimes for FY 2025-26 using the <a href="/tools/income-tax-calculator">Income Tax Calculator</a> and see whether the residual cash from lower indirect taxes is best parked in tax-saving instruments or kept liquid.</p>
+
+<h3>If you run a small business or kirana store</h3>
+
+<p>The two-slab move (5% and 18%) genuinely simplifies invoicing and reduces the classification headache that dominated GST compliance until now. If your turnover is under ₹40 lakh, you're below the registration threshold for goods anyway, but for those above it, the reduced classification surface should mean fewer disputes. Re-check your HSN-wise rate master and update your billing software before issuing September-end invoices. A quick way to validate revised line-item totals at the new slabs is the <a href="/tools/gst-calculator">GST Calculator</a>.</p>
+
+<h3>If you're a freelancer or consultant</h3>
+
+<p>Most professional services remain at 18%, so your output invoicing doesn't change. But your input costs — particularly on laptops, peripherals, office consumables and personal-use items that get reimbursed — fall. Watch your input tax credit register carefully across the September-22 boundary; pre-22 invoices carry old rates, post-22 invoices carry new ones.</p>
+
+<h3>If you're a first-time home buyer</h3>
+
+<p>The cement rate cut from 28% to 18% feeds through to construction cost. For an under-construction property in NCR or Pune, monitor whether the developer passes on the input-side benefit. The 5% effective GST on affordable housing and 1% on the affordable housing slab were not changed, but reduced input costs should soften final pricing on new projects launched after September 2025.</p>
+
+<h2>The fine print Indian readers should remember</h2>
+
+<ol>
+  <li><strong>Sticker prices don't always reset overnight.</strong> Stock manufactured before 22 September carries the old MRP. Retailers were expected to issue revised price stickers, but enforcement varies. Always check the MRP and the GST line on the invoice.</li>
+  <li><strong>Tobacco rates are delayed.</strong> The 40% slab for pan masala and tobacco products applies only after compensation cess liabilities are fully discharged, with a date to be notified separately.</li>
+  <li><strong>Group insurance is still taxed.</strong> The 0% rate is only for individual life and health policies. Corporate group health policies provided by your employer still attract 18% GST, although you don't see it because the company pays it.</li>
+  <li><strong>"Effective from renewal" matters for insurance.</strong> If your policy was bought before 22 September 2025, your current term continues at the old rate. The exemption applies from your next renewal.</li>
+  <li><strong>Luxury motorcycles and cars are now in the 40% bucket.</strong> If you were planning a 500cc+ bike or a large SUV, factor in the revised tax incidence.</li>
+</ol>
+
+<h2>The bigger picture</h2>
+
+<p>The 56th GST Council meeting did three things that previous councils had been edging towards for years: it killed the 12% and 28% slabs, it ringfenced sin and luxury consumption at 40%, and it took the GST off individual insurance entirely. <a href="https://www.taxtmi.com/article/detailed?id=15061" rel="noopener" target="_blank">
+
+The 56th GST Council meeting has delivered landmark reforms, simplifying India's GST structure to three clear slabs: 5%, 18%, and 40%.
+
+</a></p>
+
+<p>For Indian consumers, the visible effects are concrete: cheaper personal care, cheaper appliances, cheaper small cars, cheaper hotel stays, zero GST on individual insurance, and a sharper tax on a narrow set of luxury and sin categories. For the macro picture, the average GST incidence falling from 11.5% towards below 10% is a real, measurable cut in the indirect tax burden Indian households carry.</p>
+
+<p>Whether it sustainably lifts consumption without leaving a revenue gap will be settled over the next few quarters. What's already settled is the structure — three slabs, narrower disputes, and a much shorter list of items where people argue about which bucket they belong in. For most readers, the right next step is mundane and useful: check what changed in the categories you spend on, time your renewals and big-ticket purchases accordingly, and make sure your direct-tax plan for FY 2025-26 still adds up against the new indirect-tax reality.</p>`,
   }
 ];
 
