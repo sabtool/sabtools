@@ -39153,6 +39153,153 @@ d Asia.</p>
 <p>For Indian travellers, the practical takeaway is to update the mental list of UPI-accepting countries before your next trip — Singapore, UAE, France, Mauritius, Nepal, Bhutan, Qatar, Sri Lanka, Cambodia — and to confirm acceptance at the specific merchant categories you will use. For NRIs, the funding-source rules have not loosened, but corridors like UPI–PayNow are getting denser and cheaper. And for Indian merchants, the same QR sticker on your counter is quietly becoming an inbound-tourism payment terminal — which is a reasonable reason to make sure your UPI QR is correctly configured and clearly displayed.</p>
 
 <p>The pace of cross-border announcements will almost certainly continue through FY 2025-26. The pieces of paper signed in June, July, September, October, and November of 2025 turn into live payment rails in the months after. Watch this space — and your scanner.</p>`,
+  },
+  {
+    slug: "lakh-crore-converter-guide-2026",
+    title: "How to Use Lakh/Crore to Million/Billion Converter Online — Step-by-Step Guide",
+    description: "Free Lakh/Crore to Million/Billion Converter online — convert between indian number system (lakh, crore, arab, kharab) and international (million, billion) w...",
+    date: "2026-06-09",
+    category: "Math",
+    readTime: "10 min read",
+    keywords: ["lakh to million", "crore to billion", "1 crore in million", "indian to international numbers", "arab to billion", "lakh crore converter", "indian numbering system", "lakh million crore billion"],
+    toolSlug: "lakh-crore-converter",
+    image: {
+      src: "/blog/lakh-crore-converter.webp",
+      alt: "Lakh/Crore to Million/Billion Converter — Free Online Convert between Indian number system (Lakh, Crore, Arab, Kharab) and international (Million, Billion) with exact mathematical equivalents Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>When Reliance Industries crossed a market capitalisation of <strong>$240 billion</strong> in 2024, every Indian business channel translated the headline into rupees — but the part that tripped up most viewers wasn't the dollar-to-rupee conversion. It was figuring out that <strong>$240 billion equals roughly ₹20 lakh crore</strong>, not ₹2 crore or ₹2,000 crore. The arithmetic gap between the Indian numbering system (lakh, crore, arab) and the international one (million, billion, trillion) is where most of us lose our footing — including bankers, CA students, and anyone who has ever tried to compare a US tech salary offer with a Bangalore one.</p>
+
+<p>This guide walks through the exact conversions, the logic behind why India counts in groups of two zeros after the first thousand, and the everyday situations — from <strong>NRI remittances</strong> to startup valuations to JEE/CAT problem sums — where you'll actually need to switch between the two systems.</p>
+
+<h2>The core conversion you need to memorise</h2>
+
+<p>Strip away everything else and only four numbers really matter:</p>
+
+<ul>
+<li><strong>1 Lakh = 1,00,000 = 0.1 Million</strong> (one-tenth of a million)</li>
+<li><strong>10 Lakh = 1 Million</strong></li>
+<li><strong>1 Crore = 1,00,00,000 = 10 Million</strong></li>
+<li><strong>100 Crore = 1 Billion</strong> (and equivalently, <strong>1 Arab = 1 Billion</strong>)</li>
+</ul>
+
+<p>Once you internalise that <em>1 crore = 10 million</em>, almost every other conversion is just multiplication or division by 10. A ₹500 crore Bollywood box office collection? That's $60 million at ₹83/USD. A ₹10,000 crore IPO from a company like LIC? Around <strong>.2 billion</strong>. The mental shortcut is to convert crores to millions by adding a zero, then divide by the exchange rate.</p>
+
+<p>For larger numbers, the Indian system continues with arab and kharab:</p>
+
+<ul>
+<li><strong>1 Arab = 100 Crore = 1 Billion = 1,00,00,00,000</strong></li>
+<li><strong>1 Kharab = 100 Arab = 10,000 Crore = 100 Billion</strong></li>
+<li><strong>1 Neel = 100 Kharab = 10 Lakh Crore = 10 Trillion</strong></li>
+</ul>
+
+<p>You'll rarely hear "arab" or "kharab" used in modern Indian business news — most anchors stick with "10,000 crore" rather than "1 kharab" — but the words still appear in Hindi-medium textbooks, NCERT exercises, and older government documents.</p>
+
+<h2>Why the two systems exist at all</h2>
+
+<p>The Indian numbering system, codified by mathematicians like Aryabhata and refined through the Vedic era, groups digits by <strong>two zeros after the first thousand</strong>: 1,000 → 10,000 → 1,00,000 (lakh) → 10,00,000 → 1,00,00,000 (crore). The international "short scale" system, used across the US, UK, and most multinational reporting, groups everything in threes: 1,000 → 10,000 → 100,000 → 1,000,000 (million) → 1,000,000,000 (billion).</p>
+
+<p>The split is not just academic. Indian comma placement (<strong>₹12,50,000</strong> for twelve and a half lakh) is officially recognised by the RBI, SEBI, and the Income Tax Department for domestic filings. But the moment you file a FATCA disclosure for a US brokerage account, submit a college application to a foreign university, or read your employer's global annual report, you're back in the world of millions and billions. Salaried professionals at companies like Infosys, TCS, and Wipro see both formats on the same payslip — the gross salary in rupees and lakhs, the global revenue in dollars and billions.</p>
+
+<h2>A quick reference table</h2>
+
+<p>Pin this table somewhere — it covers 95% of conversions you'll ever need:</p>
+
+<ul>
+<li><strong>10,000</strong> = 10 Thousand = 0.01 Lakh</li>
+<li><strong>1,00,000</strong> = 1 Lakh = 0.1 Million</li>
+<li><strong>10,00,000</strong> = 10 Lakh = 1 Million</li>
+<li><strong>1,00,00,000</strong> = 1 Crore = 10 Million</li>
+<li><strong>10,00,00,000</strong> = 10 Crore = 100 Million</li>
+<li><strong>1,00,00,00,000</strong> = 100 Crore = 1 Arab = 1 Billion</li>
+<li><strong>10,00,00,00,000</strong> = 1,000 Crore = 10 Arab = 10 Billion</li>
+<li><strong>1,00,00,00,00,000</strong> = 10,000 Crore = 1 Kharab = 100 Billion</li>
+<li><strong>10,00,00,00,00,000</strong> = 1 Lakh Crore = 1 Trillion</li>
+</ul>
+
+<p>So when the Union Budget for FY 2025-26 pegs total expenditure at around <strong>₹50.65 lakh crore</strong>, that's about <strong>$610 billion</strong> in international parlance — roughly the GDP of a country like Sweden.</p>
+
+<h2>Five real situations where you'll actually need this</h2>
+
+<h3>1. Comparing an offshore job offer</h3>
+
+<p>A software engineer in Hyderabad gets an offer from a Singapore-based company for <strong>SGD 120,000 per year</strong>. At ~₹62 per SGD, that's roughly ₹74.4 lakh annually. The same engineer's HDFC home loan EMI is quoted in lakhs, his RSU grant from the parent company is quoted in dollars and "thousand shares vesting at 80". To plan finances coherently you have to keep flipping between the two systems — and one missed zero turns a ₹74 lakh salary into ₹7.4 lakh on a spreadsheet.</p>
+
+<h3>2. Reading startup funding news</h3>
+
+<p>"Series B funding of $50 million" sounds vague until you realise it's ₹415 crore at current exchange rates. A "unicorn" valuation of  billion is exactly <strong>₹8,300 crore</strong>. When YourStory or Inc42 reports that a Bangalore SaaS firm raised "$25 million from Sequoia and Accel", that's ₹207.5 crore — meaningful context if you're a founder thinking about your own raise or a salaried employee whose ESOPs are pegged to a similar valuation.</p>
+
+<h3>3. NRI remittances and inward FDI</h3>
+
+<p>The RBI publishes inward remittance figures in US dollars — <strong>29 billion in FY 2023-24</strong>, the highest in the world. Translated, that's about <strong>₹10.7 lakh crore</strong> flowing into India annually from Indians abroad. For an individual NRI sending money home from Dubai or California, banks like ICICI and Axis quote conversion rates in rupees, but the cumulative transfer limit under the Liberalised Remittance Scheme is in dollars ($250,000 per year per resident). You can't plan transfers without doing this conversion at least twice a year.</p>
+
+<h3>4. School and competitive exam questions</h3>
+
+<p>CBSE Class 5 and Class 6 mathematics chapters explicitly cover both the Indian and International numbering systems. NCERT problem sets ask students to write 67,89,01,234 in the International system (answer: 678,901,234 or roughly 678.9 million). Aptitude sections of CAT, SSC CGL, and bank PO exams routinely test this — students who can mentally do "1 crore = 10 million" save 30-40 seconds per question. Pair this converter with the <a href="/tools/average-calculator">average calculator</a> when you're solving data interpretation sets that mix lakhs and millions in the same chart.</p>
+
+<h3>5. IPL, real estate, and headline-scale numbers</h3>
+
+<p>When Rishabh Pant was bought by Lucknow Super Giants for <strong>₹27 crore</strong> in the IPL 2025 auction, international outlets translated it as "$3.21 million" — a number that sounds smaller than it actually is in Indian purchasing terms. Mumbai real estate listings still throw around "$2 million luxury apartments" that work out to ₹16.6 crore. Without the conversion habit, you can't sanity-check whether a headline is sensational or routine.</p>
+
+<h2>The mistakes Indians most often make</h2>
+
+<p>Even people who deal with money daily slip up on these:</p>
+
+<ol>
+<li><strong>Confusing 1 billion with 100 crore vs 1,000 crore.</strong> The right answer is <strong>100 crore</strong>. The mistake usually happens because we mentally translate "billion" to "thousand crore" (which is 10 billion, not 1 billion).</li>
+<li><strong>Treating 1 lakh as 1 million.</strong> A lakh is 100,000 — only one-tenth of a million. The phrase "I earn six figures in dollars" from a US-based cousin doesn't equal "I earn six figures in rupees" — the former is ~₹83 lakh+, the latter is just over ₹1 lakh.</li>
+<li><strong>Misplacing commas.</strong> ₹1,000,000 written American-style looks like 10 lakh to an Indian eye that's used to ₹10,00,000 — but only if you count the digits. A ₹50,000,000 contract is actually ₹5 crore, not ₹50 lakh.</li>
+<li><strong>Forgetting that "lakh crore" is a hybrid Indian unit.</strong> 1 lakh crore = 10<sup>12</sup> = 1 trillion. The Indian government's revenue numbers, India's GDP, and large PSU balance sheets all use this unit. ₹3 lakh crore is ₹3,00,000,00,00,000 — or $36 billion.</li>
+</ol>
+
+<h2>Mental-math shortcuts that work in seconds</h2>
+
+<p>If you don't always have a calculator open, these tricks cover most situations:</p>
+
+<ul>
+<li><strong>Crore → Million:</strong> Multiply by 10. ₹450 crore = $450 × 10 / 83 million in USD... actually, easier: ₹450 crore = 4,500 million rupees ≈ $54 million.</li>
+<li><strong>Million → Crore:</strong> Divide by 10. $80 million × ₹83 = ₹6,640 million = ₹664 crore.</li>
+<li><strong>Billion → Crore:</strong> Multiply by 100. $2 billion = ₹200 × 83 = ₹16,600 crore = ₹1.66 lakh crore.</li>
+<li><strong>Lakh → Thousand (international):</strong> Multiply by 100. 5 lakh = 500 thousand.</li>
+</ul>
+
+<p>The exchange rate is the only variable that changes — anchor it mentally at ₹83-85 per USD and most quick estimates land within 5% of the right answer.</p>
+
+<h2>Where this converter saves you from spreadsheet errors</h2>
+
+<p>Manual conversion is fine for one number. The problems start when you're building a financial model that mixes formats: your salary in lakhs, your <a href="/tools/sip-calculator">SIP corpus projection</a> in crores, your foreign mutual fund holdings in dollars, your <a href="/tools/emi-calculator">home loan EMI</a> in rupees, and your child's potential US tuition fee in dollars. One stray zero in a Google Sheet and you'll either over-invest or panic-sell.</p>
+
+<p>The converter handles this in one click. You paste a number in any format — 1.5 crore, 15 million, 0.015 billion, 150 lakh — and get all equivalents instantly with correct Indian comma grouping. Useful for:</p>
+
+<ul>
+<li>Freelancers raising invoices in USD but reporting GST in rupees — see the <a href="/tools/gst-calculator">GST calculator</a> for the tax side once you've converted the principal.</li>
+<li>Small business owners reading import-export quotes from Chinese or European suppliers in millions, then calculating per-unit landed cost using the <a href="/tools/unit-price-calculator">unit price calculator</a>.</li>
+<li>Online sellers reporting Amazon US revenue in dollars but calculating Indian markups via the <a href="/tools/margin-calculator">margin calculator</a>.</li>
+<li>Writers and researchers translating Reserve Bank of India bulletins (which mix lakh crore and billion freely) for English-language reports — the <a href="/tools/word-counter">word counter</a> helps on the formatting side.</li>
+</ul>
+
+<h2>A note on the new "lakh" spelling and global usage</h2>
+
+<p>The Oxford English Dictionary added "lakh" and "crore" as standard English entries decades ago, and major international publications — The Economist, Financial Times, Bloomberg — now use "lakh crore" without translation when reporting Indian budget numbers because the rupee value of, say, ₹50 lakh crore would otherwise need a clunky "5 trillion rupees" gloss. This means the two systems are converging in usage, but not in mental math. You still need to convert when comparing across countries.</p>
+
+<p>One quirk worth noting: in some older Pakistani and Bangladeshi contexts, "arab" (100 crore) is used more frequently than in modern Indian English. If you're reading South Asian regional news, "5 arab rupees" means 500 crore — not some vague large number.</p>
+
+<h2>Frequently asked conversions</h2>
+
+<h3>How many million is 1 crore?</h3>
+<p><strong>1 crore = 10 million</strong>. So 5 crore = 50 million, 25 crore = 250 million, and ₹100 crore = ₹1,000 million = ₹1 billion (in rupees, not dollars — don't confuse the unit with the currency).</p>
+
+<h3>How many crore is 1 billion?</h3>
+<p><strong>1 billion = 100 crore.</strong> A "unicorn" startup valued at  billion is worth roughly ₹8,300 crore at ₹83/USD. A multi-billion-dollar acquisition like Walmart's Flipkart deal (6 billion) translates to over ₹1.3 lakh crore.</p>
+
+<h3>What is 1 trillion in the Indian system?</h3>
+<p><strong>1 trillion = 1 lakh crore = 10 kharab.</strong> India's GDP crossing $3.5 trillion means roughly ₹290 lakh crore — a number you'll see in every Economic Survey.</p>
+
+<h3>Is 1 lakh equal to 100k?</h3>
+<p>Yes. <strong>1 lakh = 1,00,000 = 100,000 = 100k.</strong> When you see "₹50k salary" on LinkedIn, that's ₹50,000 or half a lakh per month. "₹5L per annum" is the same as "₹500k per year".</p>
+
+<p>Open the <a href="/tools/lakh-crore-converter">Lakh/Crore to Million/Billion converter</a> and try it with your own numbers — your salary, a property listing, a startup valuation you read about this week. The conversions you do twice will stick in your head the third time. →</p>`,
   }
 ];
 

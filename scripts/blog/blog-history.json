@@ -209,9 +209,10 @@
     "ipl-nrr-calculator",
     "whatsapp-link-generator",
     "legal-notice-generator",
-    "voltage-drop-calculator"
+    "voltage-drop-calculator",
+    "lakh-crore-converter"
   ],
-  "lastCategory": "electrical",
-  "totalPosts": 210,
-  "lastRun": "2026-06-08T13:52:22.810Z"
+  "lastCategory": "math",
+  "totalPosts": 211,
+  "lastRun": "2026-06-09T07:35:20.941Z"
 }
