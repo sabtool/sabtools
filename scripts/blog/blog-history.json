@@ -211,9 +211,10 @@
     "legal-notice-generator",
     "voltage-drop-calculator",
     "lakh-crore-converter",
-    "mileage-calculator"
+    "mileage-calculator",
+    "nickname-generator"
   ],
-  "lastCategory": "vehicle",
-  "totalPosts": 212,
-  "lastRun": "2026-06-09T13:26:17.496Z"
+  "lastCategory": "fun",
+  "totalPosts": 213,
+  "lastRun": "2026-06-10T09:19:17.037Z"
 }
