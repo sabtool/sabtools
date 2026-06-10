@@ -2169,6 +2169,306 @@ export const programmaticPages: ProgrammaticPage[] = [
     content: "<p>Generate QR code for UPI payments. Create scannable UPI QR for Google Pay, PhonePe, Paytm and BHIM payments. This free tool works instantly in your browser with no data uploaded to any server.</p><p>Designed specifically for Indian users with relevant local context, standards and requirements. All calculations use the latest available rates and guidelines.</p><p>Bookmark this tool for quick access. Share with friends and colleagues who might find it useful. No signup, no fees, no limits.</p>",
     defaults: {},
   },
+  {
+    "slug": "1-lakh-crore-in-billion",
+    "toolSlug": "lakh-crore-converter",
+    "title": "1 Lakh Crore in Billion = 1,000 Billion",
+    "description": "1 lakh crore = 1,000 billion = 1 trillion. Convert 1 lakh crore to billion, million & trillion with a clear table. Free, no signup.",
+    "h1": "1 Lakh Crore in Billion",
+    "keywords": [
+      "1 lakh crore in billion",
+      "1 lakh crore to billion",
+      "1 lakh crore in million",
+      "1 lakh crore in trillion",
+      "how much is 1 lakh crore"
+    ],
+    "content": "<p><strong>1 lakh crore = 1,000 billion.</strong> In the international number system, 1 lakh crore equals 1,000 billion — the same as 1 trillion or 1,000,000 million.</p><p>Full conversion of 1 lakh crore:</p><table><thead><tr><th>Unit</th><th>Value</th></tr></thead><tbody><tr><td>Billion</td><td>1,000 billion</td></tr><tr><td>Million</td><td>1,000,000 million</td></tr><tr><td>Trillion</td><td>1 trillion</td></tr><tr><td>Crore</td><td>100,000 crore</td></tr><tr><td>In rupees</td><td>Rs 10,00,00,00,00,000</td></tr></tbody></table><p>Why this trips people up: the Indian system groups digits as lakh and crore, while the international system uses million, billion and trillion. They line up at fixed anchors — <strong>1 lakh crore = 1 trillion = 1,000 billion</strong> and <strong>1 crore = 10 million</strong> — so from there it is simple multiplication.</p><p>To convert any other amount instantly, use the free <a href='/tools/lakh-crore-converter'>Lakh Crore to Million &amp; Billion Converter</a> — type any value and get every format at once, no signup.</p>",
+    "defaults": {},
+    "faqs": [
+      {
+        "q": "How much is 1 lakh crore in billion?",
+        "a": "1 lakh crore = 1,000 billion (the same as 1 trillion)."
+      },
+      {
+        "q": "How much is 1 lakh crore in million?",
+        "a": "1 lakh crore = 1,000,000 million."
+      },
+      {
+        "q": "Is 1 lakh crore the same as 1 trillion?",
+        "a": "Yes. 1 lakh crore = 1 trillion, so 1 lakh crore = 1 trillion = 1,000 billion."
+      }
+    ]
+  },
+  {
+    "slug": "5-lakh-crore-in-billion",
+    "toolSlug": "lakh-crore-converter",
+    "title": "5 Lakh Crore in Billion = 5,000 Billion",
+    "description": "5 lakh crore = 5,000 billion = 5 trillion. Convert 5 lakh crore to billion, million & trillion with a clear table. Free, no signup.",
+    "h1": "5 Lakh Crore in Billion",
+    "keywords": [
+      "5 lakh crore in billion",
+      "5 lakh crore to billion",
+      "5 lakh crore in million",
+      "5 lakh crore in trillion",
+      "how much is 5 lakh crore"
+    ],
+    "content": "<p><strong>5 lakh crore = 5,000 billion.</strong> In the international number system, 5 lakh crore equals 5,000 billion — the same as 5 trillion or 5,000,000 million.</p><p>Full conversion of 5 lakh crore:</p><table><thead><tr><th>Unit</th><th>Value</th></tr></thead><tbody><tr><td>Billion</td><td>5,000 billion</td></tr><tr><td>Million</td><td>5,000,000 million</td></tr><tr><td>Trillion</td><td>5 trillion</td></tr><tr><td>Crore</td><td>500,000 crore</td></tr><tr><td>In rupees</td><td>Rs 50,00,00,00,00,000</td></tr></tbody></table><p>Why this trips people up: the Indian system groups digits as lakh and crore, while the international system uses million, billion and trillion. They line up at fixed anchors — <strong>1 lakh crore = 1 trillion = 1,000 billion</strong> and <strong>1 crore = 10 million</strong> — so from there it is simple multiplication.</p><p>To convert any other amount instantly, use the free <a href='/tools/lakh-crore-converter'>Lakh Crore to Million &amp; Billion Converter</a> — type any value and get every format at once, no signup.</p>",
+    "defaults": {},
+    "faqs": [
+      {
+        "q": "How much is 5 lakh crore in billion?",
+        "a": "5 lakh crore = 5,000 billion (the same as 5 trillion)."
+      },
+      {
+        "q": "How much is 5 lakh crore in million?",
+        "a": "5 lakh crore = 5,000,000 million."
+      },
+      {
+        "q": "Is 5 lakh crore the same as 5 trillion?",
+        "a": "Yes. 1 lakh crore = 1 trillion, so 5 lakh crore = 5 trillion = 5,000 billion."
+      }
+    ]
+  },
+  {
+    "slug": "10-lakh-crore-in-billion",
+    "toolSlug": "lakh-crore-converter",
+    "title": "10 Lakh Crore in Billion = 10,000 Billion",
+    "description": "10 lakh crore = 10,000 billion = 10 trillion. Convert 10 lakh crore to billion, million & trillion with a clear table. Free, no signup.",
+    "h1": "10 Lakh Crore in Billion",
+    "keywords": [
+      "10 lakh crore in billion",
+      "10 lakh crore to billion",
+      "10 lakh crore in million",
+      "10 lakh crore in trillion",
+      "how much is 10 lakh crore"
+    ],
+    "content": "<p><strong>10 lakh crore = 10,000 billion.</strong> In the international number system, 10 lakh crore equals 10,000 billion — the same as 10 trillion or 10,000,000 million.</p><p>Full conversion of 10 lakh crore:</p><table><thead><tr><th>Unit</th><th>Value</th></tr></thead><tbody><tr><td>Billion</td><td>10,000 billion</td></tr><tr><td>Million</td><td>10,000,000 million</td></tr><tr><td>Trillion</td><td>10 trillion</td></tr><tr><td>Crore</td><td>1,000,000 crore</td></tr><tr><td>In rupees</td><td>Rs 1,00,00,00,00,00,000</td></tr></tbody></table><p>Why this trips people up: the Indian system groups digits as lakh and crore, while the international system uses million, billion and trillion. They line up at fixed anchors — <strong>1 lakh crore = 1 trillion = 1,000 billion</strong> and <strong>1 crore = 10 million</strong> — so from there it is simple multiplication.</p><p>To convert any other amount instantly, use the free <a href='/tools/lakh-crore-converter'>Lakh Crore to Million &amp; Billion Converter</a> — type any value and get every format at once, no signup.</p>",
+    "defaults": {},
+    "faqs": [
+      {
+        "q": "How much is 10 lakh crore in billion?",
+        "a": "10 lakh crore = 10,000 billion (the same as 10 trillion)."
+      },
+      {
+        "q": "How much is 10 lakh crore in million?",
+        "a": "10 lakh crore = 10,000,000 million."
+      },
+      {
+        "q": "Is 10 lakh crore the same as 10 trillion?",
+        "a": "Yes. 1 lakh crore = 1 trillion, so 10 lakh crore = 10 trillion = 10,000 billion."
+      }
+    ]
+  },
+  {
+    "slug": "11-lakh-crore-in-billion",
+    "toolSlug": "lakh-crore-converter",
+    "title": "11 Lakh Crore in Billion = 11,000 Billion",
+    "description": "11 lakh crore = 11,000 billion = 11 trillion. Convert 11 lakh crore to billion, million & trillion with a clear table. Free, no signup.",
+    "h1": "11 Lakh Crore in Billion",
+    "keywords": [
+      "11 lakh crore in billion",
+      "11 lakh crore to billion",
+      "11 lakh crore in million",
+      "11 lakh crore in trillion",
+      "how much is 11 lakh crore"
+    ],
+    "content": "<p><strong>11 lakh crore = 11,000 billion.</strong> In the international number system, 11 lakh crore equals 11,000 billion — the same as 11 trillion or 11,000,000 million.</p><p>Full conversion of 11 lakh crore:</p><table><thead><tr><th>Unit</th><th>Value</th></tr></thead><tbody><tr><td>Billion</td><td>11,000 billion</td></tr><tr><td>Million</td><td>11,000,000 million</td></tr><tr><td>Trillion</td><td>11 trillion</td></tr><tr><td>Crore</td><td>1,100,000 crore</td></tr><tr><td>In rupees</td><td>Rs 1,10,00,00,00,00,000</td></tr></tbody></table><p>Why this trips people up: the Indian system groups digits as lakh and crore, while the international system uses million, billion and trillion. They line up at fixed anchors — <strong>1 lakh crore = 1 trillion = 1,000 billion</strong> and <strong>1 crore = 10 million</strong> — so from there it is simple multiplication.</p><p>To convert any other amount instantly, use the free <a href='/tools/lakh-crore-converter'>Lakh Crore to Million &amp; Billion Converter</a> — type any value and get every format at once, no signup.</p>",
+    "defaults": {},
+    "faqs": [
+      {
+        "q": "How much is 11 lakh crore in billion?",
+        "a": "11 lakh crore = 11,000 billion (the same as 11 trillion)."
+      },
+      {
+        "q": "How much is 11 lakh crore in million?",
+        "a": "11 lakh crore = 11,000,000 million."
+      },
+      {
+        "q": "Is 11 lakh crore the same as 11 trillion?",
+        "a": "Yes. 1 lakh crore = 1 trillion, so 11 lakh crore = 11 trillion = 11,000 billion."
+      }
+    ]
+  },
+  {
+    "slug": "15-lakh-crore-in-billion",
+    "toolSlug": "lakh-crore-converter",
+    "title": "15 Lakh Crore in Billion = 15,000 Billion",
+    "description": "15 lakh crore = 15,000 billion = 15 trillion. Convert 15 lakh crore to billion, million & trillion with a clear table. Free, no signup.",
+    "h1": "15 Lakh Crore in Billion",
+    "keywords": [
+      "15 lakh crore in billion",
+      "15 lakh crore to billion",
+      "15 lakh crore in million",
+      "15 lakh crore in trillion",
+      "how much is 15 lakh crore"
+    ],
+    "content": "<p><strong>15 lakh crore = 15,000 billion.</strong> In the international number system, 15 lakh crore equals 15,000 billion — the same as 15 trillion or 15,000,000 million.</p><p>Full conversion of 15 lakh crore:</p><table><thead><tr><th>Unit</th><th>Value</th></tr></thead><tbody><tr><td>Billion</td><td>15,000 billion</td></tr><tr><td>Million</td><td>15,000,000 million</td></tr><tr><td>Trillion</td><td>15 trillion</td></tr><tr><td>Crore</td><td>1,500,000 crore</td></tr><tr><td>In rupees</td><td>Rs 1,50,00,00,00,00,000</td></tr></tbody></table><p>Why this trips people up: the Indian system groups digits as lakh and crore, while the international system uses million, billion and trillion. They line up at fixed anchors — <strong>1 lakh crore = 1 trillion = 1,000 billion</strong> and <strong>1 crore = 10 million</strong> — so from there it is simple multiplication.</p><p>To convert any other amount instantly, use the free <a href='/tools/lakh-crore-converter'>Lakh Crore to Million &amp; Billion Converter</a> — type any value and get every format at once, no signup.</p>",
+    "defaults": {},
+    "faqs": [
+      {
+        "q": "How much is 15 lakh crore in billion?",
+        "a": "15 lakh crore = 15,000 billion (the same as 15 trillion)."
+      },
+      {
+        "q": "How much is 15 lakh crore in million?",
+        "a": "15 lakh crore = 15,000,000 million."
+      },
+      {
+        "q": "Is 15 lakh crore the same as 15 trillion?",
+        "a": "Yes. 1 lakh crore = 1 trillion, so 15 lakh crore = 15 trillion = 15,000 billion."
+      }
+    ]
+  },
+  {
+    "slug": "18-lakh-crore-in-billion",
+    "toolSlug": "lakh-crore-converter",
+    "title": "18 Lakh Crore in Billion = 18,000 Billion",
+    "description": "18 lakh crore = 18,000 billion = 18 trillion. Convert 18 lakh crore to billion, million & trillion with a clear table. Free, no signup.",
+    "h1": "18 Lakh Crore in Billion",
+    "keywords": [
+      "18 lakh crore in billion",
+      "18 lakh crore to billion",
+      "18 lakh crore in million",
+      "18 lakh crore in trillion",
+      "how much is 18 lakh crore"
+    ],
+    "content": "<p><strong>18 lakh crore = 18,000 billion.</strong> In the international number system, 18 lakh crore equals 18,000 billion — the same as 18 trillion or 18,000,000 million.</p><p>Full conversion of 18 lakh crore:</p><table><thead><tr><th>Unit</th><th>Value</th></tr></thead><tbody><tr><td>Billion</td><td>18,000 billion</td></tr><tr><td>Million</td><td>18,000,000 million</td></tr><tr><td>Trillion</td><td>18 trillion</td></tr><tr><td>Crore</td><td>1,800,000 crore</td></tr><tr><td>In rupees</td><td>Rs 1,80,00,00,00,00,000</td></tr></tbody></table><p>Why this trips people up: the Indian system groups digits as lakh and crore, while the international system uses million, billion and trillion. They line up at fixed anchors — <strong>1 lakh crore = 1 trillion = 1,000 billion</strong> and <strong>1 crore = 10 million</strong> — so from there it is simple multiplication.</p><p>To convert any other amount instantly, use the free <a href='/tools/lakh-crore-converter'>Lakh Crore to Million &amp; Billion Converter</a> — type any value and get every format at once, no signup.</p>",
+    "defaults": {},
+    "faqs": [
+      {
+        "q": "How much is 18 lakh crore in billion?",
+        "a": "18 lakh crore = 18,000 billion (the same as 18 trillion)."
+      },
+      {
+        "q": "How much is 18 lakh crore in million?",
+        "a": "18 lakh crore = 18,000,000 million."
+      },
+      {
+        "q": "Is 18 lakh crore the same as 18 trillion?",
+        "a": "Yes. 1 lakh crore = 1 trillion, so 18 lakh crore = 18 trillion = 18,000 billion."
+      }
+    ]
+  },
+  {
+    "slug": "20-lakh-crore-in-billion",
+    "toolSlug": "lakh-crore-converter",
+    "title": "20 Lakh Crore in Billion = 20,000 Billion",
+    "description": "20 lakh crore = 20,000 billion = 20 trillion. Convert 20 lakh crore to billion, million & trillion with a clear table. Free, no signup.",
+    "h1": "20 Lakh Crore in Billion",
+    "keywords": [
+      "20 lakh crore in billion",
+      "20 lakh crore to billion",
+      "20 lakh crore in million",
+      "20 lakh crore in trillion",
+      "how much is 20 lakh crore"
+    ],
+    "content": "<p><strong>20 lakh crore = 20,000 billion.</strong> In the international number system, 20 lakh crore equals 20,000 billion — the same as 20 trillion or 20,000,000 million.</p><p>Full conversion of 20 lakh crore:</p><table><thead><tr><th>Unit</th><th>Value</th></tr></thead><tbody><tr><td>Billion</td><td>20,000 billion</td></tr><tr><td>Million</td><td>20,000,000 million</td></tr><tr><td>Trillion</td><td>20 trillion</td></tr><tr><td>Crore</td><td>2,000,000 crore</td></tr><tr><td>In rupees</td><td>Rs 2,00,00,00,00,00,000</td></tr></tbody></table><p>Why this trips people up: the Indian system groups digits as lakh and crore, while the international system uses million, billion and trillion. They line up at fixed anchors — <strong>1 lakh crore = 1 trillion = 1,000 billion</strong> and <strong>1 crore = 10 million</strong> — so from there it is simple multiplication.</p><p>To convert any other amount instantly, use the free <a href='/tools/lakh-crore-converter'>Lakh Crore to Million &amp; Billion Converter</a> — type any value and get every format at once, no signup.</p>",
+    "defaults": {},
+    "faqs": [
+      {
+        "q": "How much is 20 lakh crore in billion?",
+        "a": "20 lakh crore = 20,000 billion (the same as 20 trillion)."
+      },
+      {
+        "q": "How much is 20 lakh crore in million?",
+        "a": "20 lakh crore = 20,000,000 million."
+      },
+      {
+        "q": "Is 20 lakh crore the same as 20 trillion?",
+        "a": "Yes. 1 lakh crore = 1 trillion, so 20 lakh crore = 20 trillion = 20,000 billion."
+      }
+    ]
+  },
+  {
+    "slug": "25-lakh-crore-in-billion",
+    "toolSlug": "lakh-crore-converter",
+    "title": "25 Lakh Crore in Billion = 25,000 Billion",
+    "description": "25 lakh crore = 25,000 billion = 25 trillion. Convert 25 lakh crore to billion, million & trillion with a clear table. Free, no signup.",
+    "h1": "25 Lakh Crore in Billion",
+    "keywords": [
+      "25 lakh crore in billion",
+      "25 lakh crore to billion",
+      "25 lakh crore in million",
+      "25 lakh crore in trillion",
+      "how much is 25 lakh crore"
+    ],
+    "content": "<p><strong>25 lakh crore = 25,000 billion.</strong> In the international number system, 25 lakh crore equals 25,000 billion — the same as 25 trillion or 25,000,000 million.</p><p>Full conversion of 25 lakh crore:</p><table><thead><tr><th>Unit</th><th>Value</th></tr></thead><tbody><tr><td>Billion</td><td>25,000 billion</td></tr><tr><td>Million</td><td>25,000,000 million</td></tr><tr><td>Trillion</td><td>25 trillion</td></tr><tr><td>Crore</td><td>2,500,000 crore</td></tr><tr><td>In rupees</td><td>Rs 2,50,00,00,00,00,000</td></tr></tbody></table><p>Why this trips people up: the Indian system groups digits as lakh and crore, while the international system uses million, billion and trillion. They line up at fixed anchors — <strong>1 lakh crore = 1 trillion = 1,000 billion</strong> and <strong>1 crore = 10 million</strong> — so from there it is simple multiplication.</p><p>To convert any other amount instantly, use the free <a href='/tools/lakh-crore-converter'>Lakh Crore to Million &amp; Billion Converter</a> — type any value and get every format at once, no signup.</p>",
+    "defaults": {},
+    "faqs": [
+      {
+        "q": "How much is 25 lakh crore in billion?",
+        "a": "25 lakh crore = 25,000 billion (the same as 25 trillion)."
+      },
+      {
+        "q": "How much is 25 lakh crore in million?",
+        "a": "25 lakh crore = 25,000,000 million."
+      },
+      {
+        "q": "Is 25 lakh crore the same as 25 trillion?",
+        "a": "Yes. 1 lakh crore = 1 trillion, so 25 lakh crore = 25 trillion = 25,000 billion."
+      }
+    ]
+  },
+  {
+    "slug": "50-lakh-crore-in-billion",
+    "toolSlug": "lakh-crore-converter",
+    "title": "50 Lakh Crore in Billion = 50,000 Billion",
+    "description": "50 lakh crore = 50,000 billion = 50 trillion. Convert 50 lakh crore to billion, million & trillion with a clear table. Free, no signup.",
+    "h1": "50 Lakh Crore in Billion",
+    "keywords": [
+      "50 lakh crore in billion",
+      "50 lakh crore to billion",
+      "50 lakh crore in million",
+      "50 lakh crore in trillion",
+      "how much is 50 lakh crore"
+    ],
+    "content": "<p><strong>50 lakh crore = 50,000 billion.</strong> In the international number system, 50 lakh crore equals 50,000 billion — the same as 50 trillion or 50,000,000 million.</p><p>Full conversion of 50 lakh crore:</p><table><thead><tr><th>Unit</th><th>Value</th></tr></thead><tbody><tr><td>Billion</td><td>50,000 billion</td></tr><tr><td>Million</td><td>50,000,000 million</td></tr><tr><td>Trillion</td><td>50 trillion</td></tr><tr><td>Crore</td><td>5,000,000 crore</td></tr><tr><td>In rupees</td><td>Rs 5,00,00,00,00,00,000</td></tr></tbody></table><p>Why this trips people up: the Indian system groups digits as lakh and crore, while the international system uses million, billion and trillion. They line up at fixed anchors — <strong>1 lakh crore = 1 trillion = 1,000 billion</strong> and <strong>1 crore = 10 million</strong> — so from there it is simple multiplication.</p><p>To convert any other amount instantly, use the free <a href='/tools/lakh-crore-converter'>Lakh Crore to Million &amp; Billion Converter</a> — type any value and get every format at once, no signup.</p>",
+    "defaults": {},
+    "faqs": [
+      {
+        "q": "How much is 50 lakh crore in billion?",
+        "a": "50 lakh crore = 50,000 billion (the same as 50 trillion)."
+      },
+      {
+        "q": "How much is 50 lakh crore in million?",
+        "a": "50 lakh crore = 50,000,000 million."
+      },
+      {
+        "q": "Is 50 lakh crore the same as 50 trillion?",
+        "a": "Yes. 1 lakh crore = 1 trillion, so 50 lakh crore = 50 trillion = 50,000 billion."
+      }
+    ]
+  },
+  {
+    "slug": "100-lakh-crore-in-billion",
+    "toolSlug": "lakh-crore-converter",
+    "title": "100 Lakh Crore in Billion = 100,000 Billion",
+    "description": "100 lakh crore = 100,000 billion = 100 trillion. Convert 100 lakh crore to billion, million & trillion with a clear table. Free, no signup.",
+    "h1": "100 Lakh Crore in Billion",
+    "keywords": [
+      "100 lakh crore in billion",
+      "100 lakh crore to billion",
+      "100 lakh crore in million",
+      "100 lakh crore in trillion",
+      "how much is 100 lakh crore"
+    ],
+    "content": "<p><strong>100 lakh crore = 100,000 billion.</strong> In the international number system, 100 lakh crore equals 100,000 billion — the same as 100 trillion or 100,000,000 million.</p><p>Full conversion of 100 lakh crore:</p><table><thead><tr><th>Unit</th><th>Value</th></tr></thead><tbody><tr><td>Billion</td><td>100,000 billion</td></tr><tr><td>Million</td><td>100,000,000 million</td></tr><tr><td>Trillion</td><td>100 trillion</td></tr><tr><td>Crore</td><td>10,000,000 crore</td></tr><tr><td>In rupees</td><td>Rs 10,00,00,00,00,00,000</td></tr></tbody></table><p>Why this trips people up: the Indian system groups digits as lakh and crore, while the international system uses million, billion and trillion. They line up at fixed anchors — <strong>1 lakh crore = 1 trillion = 1,000 billion</strong> and <strong>1 crore = 10 million</strong> — so from there it is simple multiplication.</p><p>To convert any other amount instantly, use the free <a href='/tools/lakh-crore-converter'>Lakh Crore to Million &amp; Billion Converter</a> — type any value and get every format at once, no signup.</p>",
+    "defaults": {},
+    "faqs": [
+      {
+        "q": "How much is 100 lakh crore in billion?",
+        "a": "100 lakh crore = 100,000 billion (the same as 100 trillion)."
+      },
+      {
+        "q": "How much is 100 lakh crore in million?",
+        "a": "100 lakh crore = 100,000,000 million."
+      },
+      {
+        "q": "Is 100 lakh crore the same as 100 trillion?",
+        "a": "Yes. 1 lakh crore = 1 trillion, so 100 lakh crore = 100 trillion = 100,000 billion."
+      }
+    ]
+  }
 ];
 
 export const programmaticPageMap = new Map(programmaticPages.map(p => [p.slug, p]));
