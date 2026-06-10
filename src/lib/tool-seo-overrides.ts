@@ -213,4 +213,21 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
     description:
       "Calculate your in-hand take-home salary from CTC — monthly net pay after PF, professional tax and income tax (old & new regime), with a full payslip. Free.",
   },
+
+  // ── Vehicle / transport (TECHNICAL: high-impression, template-title-only, buried — see brief 2026-06-10) ──
+  "toll-calculator": {
+    title: "Toll Calculator India — Highway & Expressway Toll",
+    description:
+      "Estimate FASTag toll charges for any Indian highway or expressway by vehicle type. Plan trip toll cost across NHAI plazas before driving. Free, no signup.",
+  },
+  "vehicle-depreciation-calculator": {
+    title: "Vehicle Depreciation Calculator — Car & Bike Value",
+    description:
+      "Calculate car or bike depreciation by the Written Down Value (WDV) method with a year-wise resale value table. Find your vehicle's current worth. Free.",
+  },
+  "kvp-calculator": {
+    title: "KVP Calculator — Kisan Vikas Patra Maturity (7.5%)",
+    description:
+      "Calculate Kisan Vikas Patra (KVP) maturity — money doubles in 115 months at 7.5% with a year-by-year breakdown. Free post-office KVP calculator, no signup.",
+  },
 };
