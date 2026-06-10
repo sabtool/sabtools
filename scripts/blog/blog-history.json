@@ -212,9 +212,10 @@
     "voltage-drop-calculator",
     "lakh-crore-converter",
     "mileage-calculator",
-    "nickname-generator"
+    "nickname-generator",
+    "working-days-calculator"
   ],
-  "lastCategory": "fun",
-  "totalPosts": 213,
-  "lastRun": "2026-06-10T09:19:17.037Z"
+  "lastCategory": "datetime",
+  "totalPosts": 214,
+  "lastRun": "2026-06-10T13:12:45.844Z"
 }
