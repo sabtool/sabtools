@@ -40162,6 +40162,170 @@ The 56th GST Council meeting has delivered landmark reforms, simplifying India's
 <p>For the second consecutive year, the Finance Ministry has not touched the old regime while continuing to enrich the new one. <a href="https://www.bajajfinserv.in/insights/income-tax-slab" rel="noopener" target="_blank">Finance Minister Nirmala Sitharaman has kept both the new and old tax regimes unchanged in Budget 2026, meaning taxpayers will continue to follow the same slab rates that were applicable for FY 2025–26.</a> The policy intent is hard to misread: the new regime is being positioned as the default destination, and the old regime is being preserved as an optional legacy for taxpayers with deep deduction stacks.</p>
 
 <p>For the salaried professional in Bengaluru on ₹18 lakh, the freelancer in Pune managing quarterly advance tax, and the small business owner in Surat filing under presumptive income — the question is no longer "which regime is better in general." It's "which regime is better for <em>my</em> numbers, this year." Calculate both, pick the lower one, and file. The architecture of Indian personal taxation has shifted under your feet over the past 18 months; the worst outcome is leaving money on the table because you defaulted to the regime you used three years ago.</p>`,
+  },
+  {
+    slug: "gst-invoice-generator-guide-2026",
+    title: "GST Invoice Generator Guide — How It Works, Tips & Benefits",
+    description: "Free GST Invoice Generator online — generate formatted gst invoice with cgst/sgst breakdown for indian businesses. Step-by-step guide with tips. 100% free, w...",
+    date: "2026-06-11",
+    category: "Business",
+    readTime: "11 min read",
+    keywords: ["gst", "invoice", "cgst", "sgst", "tax", "billing", "india", "gst invoice generator"],
+    toolSlug: "gst-invoice-generator",
+    image: {
+      src: "/blog/gst-invoice-generator.webp",
+      alt: "GST Invoice Generator — Free Online Generate formatted GST invoice with CGST/SGST breakdown for Indian businesses Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>A Surat textile wholesaler ships ₹2,80,000 worth of sarees to a boutique in Bengaluru. The buyer's accountant rejects the invoice the next morning — the GSTIN is missing a check digit, the place of supply is wrong, and the seller has charged CGST + SGST instead of IGST on an inter-state sale. Result: the buyer can't claim input tax credit, the seller has to issue a credit note and re-bill, and ₹50,400 of GST sits in limbo for weeks. None of this is exotic. It happens every working day across small businesses in India because most invoice formats people download from random templates don't match what the GST law actually expects.</p>
+
+<p>The <a href="/tools/gst-invoice-generator">GST Invoice Generator</a> on SabTools is built to fix exactly this. You enter the seller's GSTIN and address, the buyer's GSTIN and address, the line items with HSN/SAC codes, and the tool figures out whether the sale is intra-state (CGST + SGST) or inter-state (IGST), applies the right rate, totals everything in Indian comma format, and gives you a printable invoice you can hand to your CA or upload to your client's vendor portal.</p>
+
+<h2>What the GST law actually requires on a tax invoice</h2>
+
+<p>Rule 46 of the CGST Rules lists 16 specific fields a tax invoice must carry. Most free Word templates floating around miss at least three of them. Here's the non-negotiable list:</p>
+
+<ul>
+<li><strong>Supplier's name, address, and 15-digit GSTIN</strong> — the GSTIN encodes the state code (first 2 digits), PAN (next 10), entity number (1), default Z (1), and a check digit (1). "27AAAPA1234A1Z5" means a Maharashtra entity.</li>
+<li><strong>Invoice number</strong> — must be a consecutive serial, unique for the financial year, max 16 characters, can include letters and slashes (e.g., <strong>INV/2025-26/0142</strong>).</li>
+<li><strong>Date of issue</strong> — DD/MM/YYYY format.</li>
+<li><strong>Recipient's name, billing address, shipping address, and GSTIN</strong> if registered. If the buyer is unregistered and the invoice value crosses ₹50,000, you still need their name, address, and state.</li>
+<li><strong>Place of supply</strong> with state code — this is the single field that decides CGST+SGST vs IGST. Missing it is the most common reason invoices get rejected.</li>
+<li><strong>HSN code for goods or SAC code for services</strong>, line item description, quantity, unit (NOS, KGS, MTR, etc.), unit rate, and taxable value.</li>
+<li><strong>Tax breakup</strong>: CGST rate and amount, SGST rate and amount, or IGST rate and amount. Cess if applicable.</li>
+<li><strong>Total invoice value in words</strong> ("Rupees Two Lakh Eighty Thousand Only").</li>
+<li><strong>Signature</strong> of the supplier or authorized signatory — digital signature is valid.</li>
+</ul>
+
+<p>The SabTools generator pre-fills the structural fields and only asks you for the data that actually changes per invoice — seller details, buyer details, line items. That cuts a 7-minute manual job to under a minute, especially if you're billing the same client repeatedly.</p>
+
+<h2>CGST + SGST or IGST? The place-of-supply rule</h2>
+
+<p>This is where most first-time GST taxpayers get tangled. The rule is mechanical once you internalise it:</p>
+
+<ul>
+<li><strong>Supplier's state = Place of supply</strong> → it's an <strong>intra-state</strong> sale → charge <strong>CGST + SGST</strong>, each at half the total rate.</li>
+<li><strong>Supplier's state ≠ Place of supply</strong> → it's an <strong>inter-state</strong> sale → charge <strong>IGST</strong> at the full rate.</li>
+</ul>
+
+<p>Take a concrete example. Priya runs a Shopify-based home decor store registered in Karnataka (GSTIN starts with 29). Three orders go out on the same morning:</p>
+
+<ol>
+<li>A ₹10,000 lamp shipped to a customer in Mysuru, Karnataka. Place of supply = Karnataka. She charges <strong>CGST 9% (₹900) + SGST 9% (₹900) = ₹1,800</strong>. Invoice total: ₹11,800.</li>
+<li>The same ₹10,000 lamp shipped to a customer in Pune, Maharashtra. Place of supply = Maharashtra. She charges <strong>IGST 18% (₹1,800)</strong>. Invoice total is the same ₹11,800 — but the tax goes entirely to the central pool for later settlement with Maharashtra.</li>
+<li>A ₹10,000 lamp picked up by a customer who walks into her Indiranagar store. Place of supply = Karnataka (location of supply). CGST + SGST again.</li>
+</ol>
+
+<p>The customer's GSTIN state code is a helpful tell — but the actual rule is place of supply, not the buyer's registration state. Goods picked up ex-warehouse by a Mumbai buyer in Bengaluru remain a Karnataka supply, attracting CGST + SGST. The invoice generator asks for both buyer state and place of supply separately so you don't blur these.</p>
+
+<h2>Picking the right GST rate</h2>
+
+<p>India runs four main GST slabs plus a few special rates:</p>
+
+<ul>
+<li><strong>5%</strong> — packaged food items, footwear under ₹1,000, economy air travel, small restaurants, apparel under ₹1,000.</li>
+<li><strong>12%</strong> — processed foods, mobile phones (since the April 2020 hike), business class air travel, work contracts in some categories.</li>
+<li><strong>18%</strong> — the residual default for most services (software, consulting, marketing, SaaS), branded apparel above ₹1,000, restaurants in non-AC hotels.</li>
+<li><strong>28%</strong> — luxury goods, automobiles, ACs, cement, tobacco (often with additional cess).</li>
+<li>Plus 0% (exempted: fresh produce, books, healthcare) and 0.25%/3% (rough/finished diamonds and bullion).</li>
+</ul>
+
+<p>If you're not sure which slab applies to your product or service, the safer path is to confirm the HSN/SAC code first and then look up the notification — don't guess based on what your competitor charges. A wrong rate either leaks margin or invites a GST notice with interest at 18% per annum. Once you've picked the rate, use the <a href="/tools/gst-calculator">GST calculator</a> for a quick sanity check on the tax-inclusive and tax-exclusive amounts before keying them into the invoice.</p>
+
+<h2>HSN and SAC codes — and why the digit count matters</h2>
+
+<p>The CBIC mandates HSN reporting based on aggregate turnover in the previous financial year:</p>
+
+<ul>
+<li>Turnover up to <strong>₹5 crore</strong>: 4-digit HSN is mandatory on B2B invoices, optional on B2C.</li>
+<li>Turnover above <strong>₹5 crore</strong>: 6-digit HSN mandatory on all invoices.</li>
+<li>For exports and imports: 8-digit HSN, always.</li>
+</ul>
+
+<p>Services use SAC codes (Service Accounting Code), all starting with 99. For instance, IT consulting is <strong>998313</strong>, legal services are <strong>998213</strong>, freelance content writing falls under <strong>998361</strong> (advertising services) or <strong>998391</strong> (specialty design) depending on output. A Pune freelancer billing a Bengaluru SaaS company ₹1,20,000 for three months of UI design would use SAC <strong>998391</strong>, IGST at 18% = ₹21,600, invoice total ₹1,41,600.</p>
+
+<h2>A full worked example</h2>
+
+<p>Let's walk through what the generator produces. Anand runs Spark Electricals in Hyderabad (GSTIN 36AABCS1234E1Z9). On 14 November 2025 he sells to a contractor registered in Telangana:</p>
+
+<ul>
+<li>20 units of 1.5 ton split AC at ₹32,000/unit — HSN 8415, GST 28%</li>
+<li>10 units of copper wire bundle at ₹4,500/unit — HSN 7408, GST 18%</li>
+<li>Installation service charged at ₹15,000 lump sum — SAC 998719, GST 18%</li>
+</ul>
+
+<p>The generator computes:</p>
+
+<ul>
+<li>Line 1 taxable value: ₹6,40,000 → CGST 14% = ₹89,600, SGST 14% = ₹89,600.</li>
+<li>Line 2 taxable value: ₹45,000 → CGST 9% = ₹4,050, SGST 9% = ₹4,050.</li>
+<li>Line 3 taxable value: ₹15,000 → CGST 9% = ₹1,350, SGST 9% = ₹1,350.</li>
+<li>Subtotal taxable: <strong>₹7,00,000</strong>. Total CGST: ₹95,000. Total SGST: ₹95,000.</li>
+<li>Invoice total: <strong>₹8,90,000</strong> — "Rupees Eight Lakh Ninety Thousand Only".</li>
+</ul>
+
+<p>If the same contractor was registered in Andhra Pradesh instead, every CGST + SGST pair above collapses into a single IGST line at the full rate — ₹1,79,200 + ₹8,100 + ₹2,700 = ₹1,90,000 IGST. Total invoice ₹8,90,000 either way. The split changes; the customer's outgo doesn't.</p>
+
+<h2>E-invoicing: when you must move beyond a PDF</h2>
+
+<p>If your aggregate turnover in any financial year from 2017-18 onwards exceeded <strong>₹5 crore</strong>, you must generate e-invoices via the Invoice Registration Portal (IRP). The portal returns an Invoice Reference Number (IRN) and a QR code, both of which must appear on the physical invoice. A standalone PDF invoice — even a well-formatted one — is not legally valid for B2B and exports if you cross the threshold.</p>
+
+<p>The SabTools generator is designed for the <strong>below-₹5-crore segment</strong> — freelancers, consultants, small traders, D2C founders, professional service firms — who need a clean, compliant tax invoice without IRN integration. If you're above the threshold, use the generated invoice as a draft and push the JSON to your e-invoicing software (TallyPrime, Zoho Books, ClearTax e-Invoicing) for IRN registration.</p>
+
+<h2>Reverse charge, exports, and other edge cases</h2>
+
+<p>A few situations need an extra annotation on the invoice:</p>
+
+<ul>
+<li><strong>Reverse Charge Mechanism (RCM):</strong> services like legal services from an advocate to a business, or GTA freight, attract RCM. The invoice must explicitly state <em>"Tax payable on reverse charge basis"</em>. The supplier shows ₹0 tax; the recipient pays the tax to the government and claims credit.</li>
+<li><strong>Exports:</strong> tax invoices for exports must carry the line <em>"Supply meant for export under LUT without payment of IGST"</em> (if you've filed an LUT) or <em>"Supply meant for export on payment of IGST"</em> (if you've not filed LUT and want a refund route). Place of supply is the country code.</li>
+<li><strong>SEZ supplies:</strong> treated as zero-rated, similar to exports — needs explicit mention.</li>
+<li><strong>Composition dealers:</strong> can't issue a tax invoice. They issue a <em>"Bill of Supply"</em> and the line <em>"Composition taxable person, not eligible to collect tax on supplies"</em> is mandatory.</li>
+</ul>
+
+<h2>Invoice numbering — small detail, big consequence</h2>
+
+<p>The serial must be consecutive within a financial year. Skipping numbers, repeating them, or restarting mid-year is a red flag during GST audit. A clean convention:</p>
+
+<ul>
+<li><strong>INV/25-26/0001</strong> through <strong>INV/25-26/9999</strong> for the year — restart at INV/26-27/0001 on 1 April 2026.</li>
+<li>If you have multiple branches or invoice books, prefix the series: <strong>BLR/INV/25-26/0001</strong> for Bengaluru, <strong>HYD/INV/25-26/0001</strong> for Hyderabad.</li>
+</ul>
+
+<p>Cancelled invoices stay in the series — don't reuse the number. Issue a credit note instead.</p>
+
+<h2>Five mistakes that cost real money</h2>
+
+<ol>
+<li><strong>Wrong place of supply.</strong> Charging CGST + SGST on what is actually an inter-state supply (or vice versa). The fix involves a credit note plus a fresh invoice, and the buyer's ITC stays frozen until both sides reconcile in GSTR-2B.</li>
+<li><strong>Missing HSN/SAC.</strong> Penalty of ₹25,000 under Section 125 for each violation if you're in the mandatory-HSN bracket.</li>
+<li><strong>Rounding errors.</strong> Use commercial rounding to the nearest rupee on the final tax amount, not on each line — otherwise reconciliation with GSTR-1 fails.</li>
+<li><strong>Issuing tax invoices when you're not registered.</strong> If your turnover is below the ₹40L (goods) / ₹20L (services) threshold and you've not registered, you cannot collect GST. Doing so attracts a 100% penalty.</li>
+<li><strong>Invoice date later than supply date.</strong> Time of supply for goods is the earlier of dispatch date or invoice date; for services, it's the earlier of service completion or invoice date — but invoice must be issued within 30 days of service completion. Backdating to fit a different month is the fastest route to a notice.</li>
+</ol>
+
+<h2>Where invoicing fits in your business workflow</h2>
+
+<p>For a small business or solo consultant, the invoice is one node in a tighter loop. You raise the invoice → email it → follow up at 15 and 30 days → record the payment → file GSTR-1 by the 11th of the next month → reconcile in GSTR-3B by the 20th. The faster you can produce a clean invoice, the less time you bleed on the front end. Pair the generator with two other utilities to tighten the loop further: a <a href="/tools/break-even-calculator">break-even calculator</a> to know exactly how many invoices a month you need to clear fixed costs, and an <a href="/tools/roi-calculator">ROI calculator</a> when you're pitching a project to a client and need to show them the payback period in their language.</p>
+
+<p>Service-business owners juggling client work and personal finances often use the same hour to do their billing and review their investments — punch SIP top-up numbers into the <a href="/tools/sip-calculator">SIP calculator</a> right after raising the month's invoices, since that's usually when cash flow visibility is sharpest. Founders eyeing a home purchase from business income can sanity-check what their declared turnover supports using the <a href="/tools/home-loan-affordability">home loan affordability calculator</a> — banks underwrite self-employed applicants on the last two ITRs and average monthly bank credits, so the invoicing discipline directly shapes the loan eligibility number.</p>
+
+<h2>Quick FAQ</h2>
+
+<h3>Can I issue a GST invoice if I'm not GST registered?</h3>
+<p>No. Unregistered businesses must issue a regular bill or cash memo — never a "tax invoice" — and cannot charge GST. The generator is meant for businesses with a valid GSTIN. If you're below the registration threshold, the document you generate is for record-keeping only and tax fields should be left blank.</p>
+
+<h3>What's the difference between a tax invoice and a bill of supply?</h3>
+<p>A tax invoice is for taxable supplies and shows GST. A bill of supply is for exempt supplies (e.g., fresh fruits) or for composition scheme dealers — no GST is charged. Mixing the two formats invites scrutiny.</p>
+
+<h3>Can I revise a GST invoice after issuing it?</h3>
+<p>You cannot edit a filed invoice. You issue a <strong>credit note</strong> (for downward revision) or <strong>debit note</strong> (for upward revision), both of which carry their own serial numbers and get reported in GSTR-1. Both seller and buyer adjust their returns in the same month if possible — or by November of the next financial year at the latest.</p>
+
+<h3>How many copies of the invoice do I need?</h3>
+<p>For goods: three copies — original for recipient, duplicate for transporter, triplicate for supplier. For services: two copies — original for recipient, duplicate for supplier. Each must be clearly marked.</p>
+
+<p>Open the <a href="/tools/gst-invoice-generator">GST Invoice Generator</a> and bill your next client in under a minute →</p>`,
   }
 ];
 
