@@ -230,4 +230,25 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
     description:
       "Calculate Kisan Vikas Patra (KVP) maturity — money doubles in 115 months at 7.5% with a year-by-year breakdown. Free post-office KVP calculator, no signup.",
   },
+
+  // ── Finance (BEHAVIOUR/UX run 2026-06-11: top-used PostHog tool + GSC pos-4 "daily interest calculator india", template title only) ──
+  "daily-interest-calculator": {
+    title: "Daily Interest Calculator — Date-wise Loan Byaj",
+    description:
+      "Calculate loan interest day by day with the exact day count between two dates. Daily byaj / interest for hand loans in India. Free, no signup.",
+  },
+
+  // ── Career (notice-period-buyout query clicked @ pos 11; template title only — see brief 2026-06-11) ──
+  "notice-period-calculator": {
+    title: "Notice Period Calculator — Last Day & Buyout Amount",
+    description:
+      "Calculate your last working day, days remaining and notice-period buyout amount from your resignation and joining dates, with a calendar view. Free.",
+  },
+
+  // ── Date & time (15 impr @ pos 47, template title only — see brief 2026-06-11) ──
+  "countdown-timer": {
+    title: "Countdown Timer — Days Left to Any Date or Event",
+    description:
+      "Create a live countdown timer to any future date or event — see days, hours and minutes remaining. Free online countdown timer, works on mobile.",
+  },
 };
