@@ -26,14 +26,19 @@ Built for:        Indian users — rupees, GST, IT slabs, lakhs/crores
 
 Honest weak points — never hide these:
 - The brand is new (2025); it competes with established names like ClearTax,
-  Cricbuzz, ESPNcricinfo, EasyCalculation.
+  Groww, BankBazaar, EasyCalculation.
 - SabTools is NOT a CA, financial advisor, or government body. Calculators give
   estimates, not professional advice.
-- SabTools is not affiliated with the BCCI, IPL, RBI, ECI or any government body.
+- SabTools is not affiliated with the RBI, the Income Tax Department, EPFO,
+  or any other government body.
 
-The 6 product pillars (mention only where genuinely relevant):
-Finance & Tax · IPL & Sports · PDF & Image · Indian Utility · Hindi tools ·
-Developer & AI.
+The 5 product pillars (mention only where genuinely relevant):
+Finance & Tax · PDF & Image · Indian Utility · Hindi tools · Developer & AI.
+
+Note: the IPL / Sports & Elections categories were retired on 2026-06-08
+because rules / data we relied on were not reliably accurate. Do NOT write
+posts about cricket, IPL, fantasy points, elections, election results, or
+similar sports / elections topics — those tools no longer exist on the site.
 
 ---
 

@@ -293,8 +293,6 @@ function applicationCategoryForToolCategory(category?: string): string {
     case "whatsapp":
     case "astrology":
       return "MultimediaApplication";
-    case "sports":
-      return "GameApplication";
     case "math":
     case "science":
     case "converters":

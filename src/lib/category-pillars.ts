@@ -3289,8 +3289,14 @@ export const categoryPillars: Record<string, CategoryPillar> = {
   },
 
   // ──────────────────────────────────────────────────────────────────────
-  // 38. Sports & Cricket — 6 tools (Phase 4 Round 3)
-  // ──────────────────────────────────────────────────────────────────────
+  // 38. Sports & Cricket — RETIRED on 2026-06-08.
+  // Removed because the IPL fantasy / NRR / DLS rules we relied on
+  // were inconsistent across platforms and tournaments, and we could
+  // not guarantee accuracy with the same rigour as the Government-rate
+  // tools (Project Trust). The block below is preserved commented for
+  // git-blame history but never reached because the `sports` slug has
+  // been removed from src/lib/tools.ts categories array.
+  /*
   sports: {
     whatIs:
       "Sports and cricket tools on SabTools.in handle the scoring, run-rate, and fantasy-points math that every Indian cricket follower runs constantly through IPL season and ICC tournaments — what is the required run rate (RRR) for the chasing team given balls remaining, what is the Net Run Rate (NRR) for a team's league standing, what fantasy points does a player earn for a 50 with two sixes, what is the Duckworth-Lewis-Stern (DLS) revised target for a rain-interrupted match, and what is each franchise's auction-cap remaining after retention. These tools follow the official rules published by the [Board of Control for Cricket in India (BCCI)](https://www.bcci.tv/) for IPL and the ICC for international matches, and are calibrated for the specific quirks of T20 / IPL / ODI / Test scoring that generic cricket calculators miss. For non-cricket sports, athletics-governance and Olympic-discipline tools draw on the [Sports Authority of India](https://sportsauthorityofindia.nic.in/) framework that operates the country's training centres and competitive structure.",
@@ -3377,6 +3383,7 @@ export const categoryPillars: Record<string, CategoryPillar> = {
       },
     ],
   },
+  */
 };
 
 /**

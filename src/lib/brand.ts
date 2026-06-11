@@ -66,7 +66,7 @@ export const BRAND = {
    * privacy posture; flags Hindi capability; no first-person marketing.
    */
   longDescription:
-    "SabTools.in is a free online tools platform offering 450+ tools across 38 categories including GST, EMI, income tax calculators, PDF and image tools, AI writing utilities, sports calculators, and developer resources. All tools run client-side in the browser with zero data collection. 424+ tools are also available in Hindi at /hi. No signup required.",
+    "SabTools.in is a free online tools platform offering 450+ tools across 37 categories including GST, EMI, income tax calculators, PDF and image tools, AI writing utilities, and developer resources. All tools run client-side in the browser with zero data collection. 420+ tools are also available in Hindi at /hi. No signup required.",
   /** Year the site was founded. Used in Organization schema + about page. */
   founded: "2025",
   /** Founder's full name. Used in Organization.founder, about page, articles. */
@@ -83,8 +83,12 @@ export const BRAND = {
    * across the site reads from this constant.
    */
   totalTools: 450,
-  /** Verified category count (38 includes "Sports & Cricket" added in IPL Phase 1). */
-  totalCategories: 38,
+  /** Verified category count — 37 after Sports & Cricket retired (2026-06-08).
+   *  The Sports category was removed because the IPL-related tools relied
+   *  on data feeds we could not keep reliably accurate (NRR formulas vary
+   *  by tournament, fantasy points keep changing). Aligns with Project
+   *  Trust principle: fewer accurate tools beats more inaccurate ones. */
+  totalCategories: 37,
   /** Hindi-localized tool count (subset of totalTools). */
   hindiTools: 424,
   /** Primary audience (used in schema.org Audience nodes). */

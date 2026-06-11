@@ -5,7 +5,6 @@ import { programmaticPages } from "@/lib/programmatic-pages";
 import { authors } from "@/lib/authors";
 import { hindiToolSlugs } from "@/lib/hindi";
 import { categoryPillarsHi } from "@/lib/category-pillars-hi";
-import { IPL_TEAMS, IPL_HISTORY, IPL_RECORDS } from "@/lib/ipl-data";
 
 export const dynamic = "force-static";
 
@@ -81,63 +80,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.7,
     },
-    {
-      // Election hub. Updates whenever an election window opens or
-      // whenever Lok Sabha / state election data is refreshed.
-      url: `${baseUrl}/elections`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      // Sports hub. Live cricket scores refresh every minute on-page;
-      // sitemap-level changeFrequency is "daily" because schedules and
-      // upcoming-match cards may shift day-to-day.
-      url: `${baseUrl}/sports`,
-      lastModified: now,
-      changeFrequency: "daily",
-      priority: 0.8,
-    },
-    // === IPL Phase 2 — programmatic SEO pages ===
-    // Main IPL 2026 hub. High priority because it's the entry point for
-    // all IPL traffic and links to teams / history / records.
-    {
-      url: `${baseUrl}/sports/ipl-2026`,
-      lastModified: now,
-      changeFrequency: "daily",
-      priority: 0.9,
-    },
-    // 10 team pages — each targets that team's branded queries
-    // (e.g. "mumbai indians ipl titles", "csk all winners").
-    ...IPL_TEAMS.map((t) => ({
-      url: `${baseUrl}/sports/ipl-2026/teams/${t.slug}`,
-      lastModified: now,
-      changeFrequency: "weekly" as const,
-      priority: 0.7,
-    })),
-    // Records hub
-    {
-      url: `${baseUrl}/sports/ipl-records`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    // 8 individual record pages — each targets specific record queries
-    // (e.g. "highest individual score in ipl", "ipl most wickets ever").
-    ...IPL_RECORDS.map((r) => ({
-      url: `${baseUrl}/sports/ipl-records/${r.slug}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.6,
-    })),
-    // 18 history pages (one per IPL season 2008-2025) — long-tail search
-    // (e.g. "ipl 2016 winner", "ipl 2008 final venue").
-    ...IPL_HISTORY.map((s) => ({
-      url: `${baseUrl}/sports/ipl-history/${s.year}`,
-      lastModified: s.finalDate + "T00:00:00.000Z",
-      changeFrequency: "yearly" as const,
-      priority: 0.6,
-    })),
+    // Elections and Sports hubs retired on 2026-06-08 — sitemap entries
+    // removed so Google de-indexes the URLs naturally. vercel.json
+    // additionally 301-redirects /sports/* and /elections/* → /.
     // === /best hub + /best/* listicles (Phase 3 Rounds 1 + 2) ===
     // High-intent comparison guides ranking SabTools tools against
     // competitor calculators. Hub at /best (priority 0.8) sits one
