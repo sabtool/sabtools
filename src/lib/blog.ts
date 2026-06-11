@@ -40516,6 +40516,215 @@ The 56th GST Council meeting has delivered landmark reforms, simplifying India's
 <p>If you're an Indian board student — Class 10 or 12, CBSE, ICSE, or state board — the right answer is the calculator that already knows your board's rules. RapidTables and Calculator.net are well-built generic tools, and they have their place for raw math and US-style GPA. But for the actual calculation you're trying to do on results day, you don't want to be looking up "what's the CBSE CGPA formula again?" — you want the rule applied automatically and the right number on the first try.</p>
 
 <p>Try SabTools' <a href="/tools/board-percentage-calculator">Board Percentage Calculator</a> → for CBSE, ICSE, and state board percentage, CGPA, and best-of-5 in one click.</p>`,
+  },
+  {
+    slug: "news-2026-06-11-latest-ppf-epf-nps-rate-changes-and-what-they-mean-for-india",
+    title: "Latest PPF / EPF / NPS rate changes and what they mean for Indian s... (2026 Update)",
+    description: "Latest PPF / EPF / NPS rate changes and what they mean for Indian savers — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-06-11",
+    category: "Finance",
+    readTime: "11 min read",
+    keywords: ["Latest PPF / EPF", "finance news india 2026", "india 2026 update"],
+    toolSlug: "emi-calculator",
+    image: {
+      src: "/blog/emi-calculator.webp",
+      alt: "Latest PPF / EPF / NPS rate changes and what they mean for Indian s... (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>Small Savings Rates Stay Flat, EPF Holds at 8.25%, and UPS Joins the NPS Lineup — Here's What Indian Savers Need to Know</h2>
+
+<p>India's retirement and long-term savings landscape went through a quietly significant year. The Ministry of Finance left interest rates on Public Provident Fund (PPF), Sukanya Samriddhi and other small savings schemes untouched yet again, the Employees' Provident Fund Organisation (EPFO) kept its rate at 8.25% for FY 2024-25, and the Unified Pension Scheme (UPS) went live on 1 April 2025 as a new option under the National Pension System (NPS). Individually, each of these is incremental. Together, they reshape how a salaried professional in Bengaluru, a small business owner in Surat, or a homemaker in Lucknow should think about parking long-term money in FY 2025-26.</p>
+
+<p>Below is a clean breakdown of what changed, what didn't, and what to do about it.</p>
+
+<h2>PPF and Other Small Savings: 7.1% Holds for Another Quarter</h2>
+
+<p>The headline news on the small savings front is that there is no news — and that itself is the story.</p>
+
+<p><a href="https://www.businesstoday.in/personal-finance/news/story/ppf-scss-nsc-rates-unchanged-for-oct-dec-2025-as-govt-holds-small-savings-rates-496346-2025-09-30" rel="noopener" target="_blank">According to a Business Today report dated 30 September 2025</a>, 
+
+the government has kept interest rates on small savings schemes unchanged for the October–December 2025 quarter, despite a 100-basis-point cut in the repo rate by the Reserve Bank of India (RBI) in recent months.
+
+ This is notable because small savings rates are formally linked to government bond yields and are reviewed every quarter. With RBI easing rates aggressively in 2025, many savers had expected a downward revision; instead, the floor has held.</p>
+
+<p>Per the Finance Ministry's Q3 FY 2025-26 notification, as <a href="https://www.business-standard.com/finance/personal-finance/interest-rate-on-small-savings-schemes-retained-for-oct-dec-quarter-125100100606_1.html" rel="noopener" target="_blank">reported by Business Standard on 1 October 2025</a>, the prevailing rates are:</p>
+
+<ul>
+  <li><strong>Public Provident Fund (PPF):</strong> 
+
+7.1 per cent
+
+</li>
+  <li><strong>National Savings Certificate (NSC):</strong> 
+
+7.7 per cent
+
+</li>
+  <li><strong>Senior Citizen Savings Scheme (SCSS):</strong> 
+
+8.2 per cent
+
+</li>
+  <li><strong>Sukanya Samriddhi Yojana (SSY):</strong> 
+
+8.2 per cent
+
+</li>
+  <li><strong>Monthly Income Account (MIS):</strong> 
+
+7.4 per cent
+
+</li>
+</ul>
+
+<p>Upstox's small savings live-blog updated on 9 October 2025 confirms the same: 
+
+the PPF account is currently offering 7.1% interest compounded annually. For the July-September quarter also, the Government had kept the PPF interest rate unchanged.
+
+</p>
+
+<h3>Why the Status Quo Is Actually a Win</h3>
+
+<p>For salaried savers who max out the ₹1.5 lakh PPF limit every year for 80C benefits, this stability is good news. Bank fixed deposit rates have been re-priced lower across SBI, HDFC Bank, ICICI Bank, Axis Bank and Kotak Mahindra Bank in the wake of RBI's repo cuts. PPF, in contrast, continues to deliver a tax-free 7.1%. <a href="https://www.kanakkupillai.com/learn/ppf-interest-rate/" rel="noopener" target="_blank">As Kanakkupillai notes in its 15 October 2025 update</a>, 
+
+the PPF interest rate for FY 2025-26 is 7.1% per annum, which will be credited to your PPF account on 31 March 2026.
+
+ The credit cycle matters because 
+
+interest is calculated monthly, i.e on the lowest balance between the 5th of each month and the month-end, and credited annually.
+
+</p>
+
+<p>That mechanic — interest reckoned on the minimum balance between the 5th and the month-end — is the single most ignored rule by retail investors. <a href="https://www.icici.bank.in/personal-banking/investments/ppf/ppf-calculator" rel="noopener" target="_blank">ICICI Bank's PPF calculator page</a> spells it out: 
+
+to maximise the interest earned, invest before the 5th of every month.
+
+ A deposit made on the 6th earns nothing for that month.</p>
+
+<h3>What a 7.1% Tax-Free Rate Really Means</h3>
+
+<p>For an investor in the 30% tax slab, a 7.1% tax-free return is equivalent to roughly a 10.14% pre-tax taxable yield. There is no bank FD in India today offering that on a 15-year tenure with sovereign backing. SCSS at 8.2% remains the best parking option for retired parents — and the ₹30 lakh deposit ceiling, combined with 80C deduction on the principal, is why senior couples in Pune and Chennai continue to use it as a default retirement income engine.</p>
+
+<h2>EPF: 8.25% Confirmed for FY 2024-25, Credit Now Substantially Done</h2>
+
+<p>The second big anchor of Indian retirement saving — the Employees' Provident Fund — has also held its rate. <a href="https://www.business-standard.com/finance/personal-finance/no-change-in-epf-rate-8-25-set-for-2024-25-what-this-means-for-you-125022800648_1.html" rel="noopener" target="_blank">As Business Standard reported on 28 February 2025</a>, 
+
+the Employees' Provident Fund Organisation (EPFO) board on Friday retained 8.25 per cent interest rates on employees' provident fund deposits for 2024-25 despite rising inflation
+
+.</p>
+
+<p>Government ratification took some time. <a href="https://www.businesstoday.in/personal-finance/news/story/epf-interest-rate-8-25-percent-2024-25-central-government-confirmation-478095-2025-05-28" rel="noopener" target="_blank">Business Today reported on 28 May 2025</a> that 
+
+the central government has sanctioned an 8.25% interest rate on Employees' Provident Fund deposits for the fiscal year 2024-25, consistent with the prior year. This decision, endorsed by the EPFO's Central Board of Trustees and requiring Finance
+
+ Ministry concurrence.</p>
+
+<p>For the seven-crore-plus salaried Indians who watch their PF passbook religiously, the credit timing matters as much as the rate. <a href="https://www.caalley.com/news-updates/indian-news/epfo-interest-credit-8-25-announced-for-2024-25-process-to-finish-this-week-says-mandaviya" rel="noopener" target="_blank">A 8 July 2025 update from CAalley</a> citing Labour Minister Mansukh Mandaviya confirms: 
+
+Government approval for the rate came on 22 May 2025, and annual account updates began on 6 June. Interest has been credited to 96.51% of member accounts, with the remainder to be updated soon.
+
+</p>
+
+<h3>How EPF Stacks Up Against Other Long-Term Options</h3>
+
+<p>Here is the relevant context: <a href="https://ddnews.gov.in/en/govt-ratifies-interest-rate-on-pf-deposits-at-8-25-pc-for-fy-2024-25-2/" rel="noopener" target="_blank">DD News notes</a> that 
+
+the EPFO had earlier increased the interest rate on EPF for its 7 crore members to 8.25 per cent for 2023-24, from 8.15 per cent in 2022-23.
+
+ So we now have two consecutive years at 8.25% — a notable plateau in a falling-rate environment.</p>
+
+<p>What this means in practical numbers: a 32-year-old IT professional in Hyderabad contributing 12% of a ₹1,00,000 basic salary, with a matching employer contribution split between EPS and EPF, compounds at a tax-free 8.25%. Over a 28-year horizon to age 60, that beats most balanced mutual funds on a risk-adjusted basis, and it does so without market exposure. The EPF rate, like PPF, is a sovereign comfort rate — and at 8.25%, it currently sits more than 110 basis points above PPF.</p>
+
+<h3>Make Sure the Interest Actually Hit Your Account</h3>
+
+<p>If you haven't yet seen FY 2024-25 interest in your passbook, log into the EPFO unified member portal with your UAN or check via the UMANG app. <a href="https://www.angelone.in/news/personal-finance/epf-interest-rate-2025-26-stays-at-8-25-here-is-when-the-money-will-be-credited-to-your-epfo-account" rel="noopener" target="_blank">Angel One notes</a> that 
+
+FY 2024-25 interest was approved by the government in May 2025, and the credit process was completed around July 2025. Besides, FY 2023-24 interest began being credited in August and continued until December.
+
+ Verify before you start the new financial year so any mismatch can be flagged with your employer's PF officer.</p>
+
+<h2>NPS Returns and the Brand-New Unified Pension Scheme</h2>
+
+<p>While PPF and EPF rates are administered, the National Pension System works differently — its returns are market-linked, and that is both its strength and its volatility risk.</p>
+
+<p><a href="https://www.bajajfinserv.in/investments/nps-returns" rel="noopener" target="_blank">According to Bajaj Finserv, citing ICICI Bank data</a>, 
+
+Tier 1 equity investments have shown average returns of 10.5% over 1 year, 9.8% over 3 years, and 11.2% over 5 years.
+
+ That is solidly above PPF and a touch above EPF over a five-year window, but with the obvious caveat that these returns are not guaranteed.</p>
+
+<p>The official NPS Trust website is clear on the point: <a href="https://npstrust.org.in/weekly-snapshot-nps-schemes" rel="noopener" target="_blank">as the NPS Trust portal states</a>, 
+
+NPS does not offer any fixed returns. The returns under NPS are market-linked. Is the withdrawal at retirement under NPS tax-free? Lump sum withdrawal of up to 60% is exempted from tax.
+
+</p>
+
+<h3>The Big NPS Development of 2025: Unified Pension Scheme</h3>
+
+<p>The most consequential structural change in retirement policy this year is the Unified Pension Scheme, launched as an option within NPS for Central Government employees. <a href="https://www.pfrda.org.in/web/pfrda/schemes/national-pension-system/unified-pension-scheme" rel="noopener" target="_blank">As the PFRDA describes it</a>, 
+
+the Unified Pension Scheme (UPS) is a pension scheme introduced by the Government of India, effective 1st April 2025, as an option under the National Pension System (NPS) for Central Government employees. It is designed to provide assured, inflation-indexed, and adequate retirement benefits
+
+.</p>
+
+<p>The opt-in window matters. <a href="https://www.indiafirstlife.com/knowledge-center/retirement-planning/unified-pension-scheme-new-rules-after-april-2025" rel="noopener" target="_blank">IndiaFirst Life's explainer on the scheme</a> states that 
+
+the system for the Unified Pension Scheme went live on April 1, 2025. Eligible employees must opt in by June 30, 2025.
+
+ Central Government employees in Delhi, Mumbai, Kolkata and elsewhere who were on NPS thus had a one-time election to switch.</p>
+
+<p>The headline benefit on offer: <a href="https://www.businesstoday.in/personal-finance/retirement-planning/story/unified-pension-scheme-who-all-will-qualify-for-50-guaranteed-pension-under-ups-from-april-1-468879-2025-03-22" rel="noopener" target="_blank">according to Business Today reporting from 22 March 2025</a>, 
+
+the launch date for the new pension plan 'Unified Pension Scheme (UPS)' by the Centre has been set for April 1, 2025. The Centre is set to introduce the Unified Pension Scheme (UPS) on April 1, providing a fixed pension security to central
+
+ government employees. The promise of a 50% guaranteed pension brings UPS philosophically closer to the old defined-benefit pension and away from the pure market-linked NPS model.</p>
+
+<p>Importantly, retired NPS subscribers also got recognition. <a href="https://www.businesstoday.in/personal-finance/retirement-planning/story/unified-pension-scheme-fixed-pension-benefits-central-government-retirees-478446-2025-05-30" rel="noopener" target="_blank">A Business Today report dated 30 May 2025</a> confirms that 
+
+starting April 1, eligible employees can conveniently enroll in the UPS program through the Protean CRA portal. The Central government has introduced enhanced retirement benefits under the Unified Pension Scheme (UPS) for eligible National Pension
+
+ System retirees.</p>
+
+<p>For private-sector employees who are not eligible for UPS, the takeaway is different: regular NPS continues as the primary tax-efficient retirement vehicle, with the additional ₹50,000 deduction under Section 80CCD(1B) over and above the ₹1.5 lakh 80C limit still intact.</p>
+
+<h2>What This Combined Picture Means for Indian Savers</h2>
+
+<p>Step back from the individual schemes and the FY 2025-26 picture looks like this:</p>
+
+<ul>
+  <li><strong>Risk-free, sovereign-backed tax-free anchor:</strong> PPF at 7.1%</li>
+  <li><strong>Salaried compulsory retirement anchor:</strong> EPF at 8.25%</li>
+  <li><strong>Senior parents' income anchor:</strong> SCSS at 8.2%</li>
+  <li><strong>Daughter's education/marriage corpus:</strong> SSY at 8.2%</li>
+  <li><strong>Market-linked long-horizon growth:</strong> NPS Tier-1 Equity, historically around 10–11%</li>
+</ul>
+
+<p>This is a remarkably stable architecture in a year when bank deposit rates fell. A salaried professional in Bangalore earning ₹18 lakh per annum can realistically build a four-layer retirement portfolio: mandatory EPF, voluntary PPF up to ₹1.5 lakh, NPS up to ₹50,000 for the extra 80CCD(1B) deduction, and equity SIPs on top for inflation-beating growth.</p>
+
+<h3>How Loan Decisions Fit In</h3>
+
+<p>Here is where the RBI's 100-bps cut becomes relevant in a different way. While savings rates have held firm, lending rates have fallen — repo-linked home loan EMIs across SBI, HDFC Bank and Bank of Baroda have come down materially in 2025. That changes the math on a question every first-time home buyer in NCR or Pune wrestles with: prepay the loan or invest the surplus?</p>
+
+<p>If your home loan now sits around 8.10% to 8.40% after the cuts, and your EPF is earning 8.25% tax-free, the answer is no longer obvious — it depends on tenure remaining, your tax slab, and your liquidity needs. Before you make that call, run the actual EMI and interest schedule at your current rate and your new rate side by side. You can do this in under a minute with the <a href="/tools/emi-calculator">EMI Calculator</a> — punch in your outstanding principal, the revised interest rate, and the residual tenure, and you'll see exactly how much interest you'd save by prepaying ₹1 lakh today versus letting that ₹1 lakh sit in PPF at 7.1% for the next 15 years. For most readers in the 30% bracket with more than 10 years left on the loan, the post-tax math now leans more towards investing than aggressive prepayment — but check your own numbers before acting.</p>
+
+<h2>What to Do This Quarter</h2>
+
+<p>Five concrete actions, based on what the data actually says:</p>
+
+<ol>
+  <li><strong>Top up your PPF before the 5th of each month.</strong> The interest-on-minimum-balance rule means a 6th-of-the-month deposit forfeits a full month's interest. Set a standing instruction in your SBI or HDFC Bank net-banking for the 1st.</li>
+  <li><strong>Check your EPF passbook now.</strong> FY 2024-25 interest at 8.25% has been credited to nearly all member accounts. If yours is missing, raise an EPFiGMS grievance with your UAN.</li>
+  <li><strong>If you have not used the ₹50,000 NPS deduction under 80CCD(1B), open or top up a Tier-1 account before 31 March 2026.</strong> This is over and above your ₹1.5 lakh 80C limit and is the single most under-utilised tax break for salaried Indians.</li>
+  <li><strong>If you are a Central Government employee who missed the UPS opt-in window of 30 June 2025</strong>, watch PFRDA notifications for any extension or fresh window — these have historically been re-opened.</li>
+  <li><strong>Senior citizens in your family should max out SCSS up to ₹30 lakh per individual</strong> while the 8.2% rate persists. Banks are cutting senior-citizen FD rates; SCSS remains the highest-yielding sovereign-backed senior income product in the market.</li>
+</ol>
+
+<h2>The Bigger Signal</h2>
+
+<p>The pattern across PPF, EPF and NPS in FY 2025-26 is consistent: administered rates have held firm even as the RBI has cut the repo by 100 basis points and bank deposit rates have softened. That is a deliberate policy choice — small savings rates are politically sensitive, EPF covers seven crore households, and the UPS launch signals an unmistakable tilt back towards retirement income security after two decades of pushing market-linked pensions.</p>
+
+<p>For Indian savers, this is a moment to consolidate. The sovereign anchors are stable. The tax breaks are intact. The new options — UPS for government employees, the steady NPS framework for everyone else — are in place. The work now is to use them correctly: deposit on the 1st, verify your passbook, claim every deduction, and rerun your loan math at the new lower rates. The architecture has not changed. The discipline of using it well is what determines whether you retire comfortably or just adequately.</p>`,
   }
 ];
 
