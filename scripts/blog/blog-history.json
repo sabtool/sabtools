@@ -214,9 +214,10 @@
     "mileage-calculator",
     "nickname-generator",
     "working-days-calculator",
-    "gst-invoice-generator"
+    "gst-invoice-generator",
+    "board-percentage-calculator"
   ],
-  "lastCategory": "business",
-  "totalPosts": 215,
-  "lastRun": "2026-06-11T09:51:40.741Z"
+  "lastCategory": "exam",
+  "totalPosts": 216,
+  "lastRun": "2026-06-11T13:57:06.183Z"
 }
