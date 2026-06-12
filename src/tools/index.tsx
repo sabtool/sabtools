@@ -291,6 +291,7 @@ const toolComponents: Record<string, AnyComponent> = {
   "image-to-pdf": dynamic(() => import("./ImageToPdf")),
   "pdf-to-image": dynamic(() => import("./PdfToImage")),
   "pdf-page-remover": dynamic(() => import("./PdfPageRemover")),
+  "pdf-to-speech": dynamic(() => import("./PdfToSpeech")),
 
   // Converter Tools (additional 8)
   "currency-converter": dynamic(() => import("./CurrencyConverter")),

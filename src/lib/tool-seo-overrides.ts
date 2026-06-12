@@ -252,6 +252,23 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
       "Create a live countdown timer to any future date or event — see days, hours and minutes remaining. Free online countdown timer, works on mobile.",
   },
 
+  // ── PDF · long-tail wedge against Speechify / NaturalReader / ReadLoudly
+  // (all of which require signup, upload PDFs to their servers, and watermark
+  // free-tier audio). We can't out-rank them on "pdf to speech" head terms,
+  // so we target queries where their value-prop breaks down:
+  //   - "private pdf reader"          (we're 100% client-side)
+  //   - "pdf to speech no signup"     (we never ask)
+  //   - "listen pdf hindi free"       (we surface OS Hindi voices)
+  //   - "pdf voice reader for students" (free, unlimited, no caps)
+  // Title leads with "Listen to PDF Aloud" (Google-friendly phrasing,
+  // 4,400+ searches/mo per Ahrefs), keeps "Free" and the Hindi/English
+  // qualifier inside the 60-char budget. ──
+  "pdf-to-speech": {
+    title: "Listen to PDF Aloud — Free PDF to Speech (Hindi/Eng)",
+    description:
+      "Upload a PDF and listen — free, no signup, no upload to any server. Indian English & Hindi voices. 100% private. Perfect for students & long reads.",
+  },
+
   // ── HIGH-RANK / LOW-CTR title fixes (brief 2026-06-12) ──
   "experience-calculator": {
     title: "Work Experience Calculator — Years, Months & Multiple Jobs",

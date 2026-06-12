@@ -346,6 +346,25 @@ export const tools: Tool[] = [
   { name: "Image to PDF", slug: "image-to-pdf", description: "Convert multiple images to PDF with A4, Letter and Legal page sizes", category: "pdf", icon: "🖼️", keywords: ["image", "pdf", "convert", "jpg", "png", "photo"] },
   { name: "PDF to Image", slug: "pdf-to-image", description: "Get PDF file info and extract text content from PDF files", category: "pdf", icon: "🖼️", keywords: ["pdf", "image", "convert", "extract", "png", "jpg"] },
   { name: "PDF Page Remover", slug: "pdf-page-remover", description: "Remove specific pages from PDF and download remaining content", category: "pdf", icon: "🗑️", keywords: ["pdf", "remove", "delete", "pages", "page remover"] },
+  { name: "PDF to Speech", slug: "pdf-to-speech", description: "Upload a PDF and listen to it read aloud in Indian English or Hindi. 100% private — your file never leaves your browser. No signup, no upload, no ads. Free unlimited use. Perfect for students, long reports & accessibility.", category: "pdf", icon: "🔊", keywords: [
+    // Core intent (head terms — long-shot but worth signaling)
+    "pdf to speech", "pdf reader", "read pdf aloud", "pdf to audio",
+    "pdf to voice", "text to speech pdf", "listen to pdf", "pdf voice reader",
+    "pdf audio reader", "tts pdf",
+    // Indian / Hindi long-tail (low-competition, our wedge)
+    "hindi pdf reader", "pdf to speech hindi", "hindi pdf padhne wala",
+    "pdf to speech india", "indian english pdf reader",
+    "pdf audio in hindi", "hindi pdf to mp3 alternative",
+    // Privacy long-tail (competitor weakness)
+    "private pdf reader", "offline pdf reader online",
+    "pdf reader no upload", "pdf to speech no signup",
+    "free pdf reader without account", "pdf reader without watermark",
+    // Use-case long-tail
+    "pdf reader for students", "study pdf audio", "audio book maker pdf",
+    "upsc pdf audio reader", "competitive exam pdf reader",
+    "accessibility pdf reader", "dyslexia pdf reader",
+    "ebook to audio free", "research paper audio reader"
+  ], hindiName: "पीडीएफ टू स्पीच" },
 
   // Converter Tools (additional)
   { name: "Currency Converter", slug: "currency-converter", description: "Convert between INR, USD, EUR, GBP, AED, SAR, JPY and more currencies", category: "converters", icon: "💱", keywords: ["currency", "converter", "inr", "usd", "eur", "exchange rate", "rupee", "dollar"] },
