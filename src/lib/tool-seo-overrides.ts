@@ -251,4 +251,21 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
     description:
       "Create a live countdown timer to any future date or event — see days, hours and minutes remaining. Free online countdown timer, works on mobile.",
   },
+
+  // ── HIGH-RANK / LOW-CTR title fixes (brief 2026-06-12) ──
+  "experience-calculator": {
+    title: "Work Experience Calculator — Years, Months & Multiple Jobs",
+    description:
+      "Calculate total work experience in years, months & days across multiple jobs with overlap detection. Perfect for resumes & job applications. Free.",
+  },
+  "gas-cylinder-calculator": {
+    title: "Gas Cylinder Calculator — How Long a 14.2 kg LPG Lasts",
+    description:
+      "Find how many days a 14.2 kg LPG cylinder lasts for your cooking, plus the per-meal cost vs induction. Free gas cylinder calculator, no signup.",
+  },
+  "lpg-subsidy-calculator": {
+    title: "LPG Subsidy Calculator — Effective Cylinder Price India",
+    description:
+      "Calculate your LPG cylinder price after subsidy, monthly cooking-gas cost and an induction-vs-LPG comparison. Free LPG subsidy calculator, no signup.",
+  },
 };
