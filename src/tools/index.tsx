@@ -57,6 +57,7 @@ const toolComponents: Record<string, AnyComponent> = {
   "grammar-checker": dynamic(() => import("./GrammarChecker")),
   "sentence-counter": dynamic(() => import("./SentenceCounter")),
   "text-encryption": dynamic(() => import("./TextEncryption")),
+  "language-translator": dynamic(() => import("./LanguageTranslator")),
 
   // Converter Tools (8)
   "length-converter": dynamic(() => import("./LengthConverter")),

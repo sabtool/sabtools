@@ -133,7 +133,7 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://adservice.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://pagead2.googlesyndication.com https://api.postalpincode.in https://www.googleapis.com https://api.allorigins.win; frame-src https://pagead2.googlesyndication.com https://www.google.com; object-src 'none'; worker-src 'self' blob:; base-uri 'self'" }
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://adservice.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://pagead2.googlesyndication.com https://api.postalpincode.in https://www.googleapis.com https://api.allorigins.win https://api.mymemory.translated.net; frame-src https://pagead2.googlesyndication.com https://www.google.com; object-src 'none'; worker-src 'self' blob:; base-uri 'self'" }
       ]
     }
   ]
