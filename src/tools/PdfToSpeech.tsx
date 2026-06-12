@@ -5,18 +5,27 @@ import { useState, useEffect, useRef, useCallback } from "react";
  * PDF to Speech — upload a PDF, listen to it.
  *
  * 100% client-side:
- *   - PDF text extraction uses the same regex-based parser as
- *     PdfToWord.tsx (BT/ET text blocks → readable strings). Works
- *     for text-PDFs (study notes, articles, reports, e-books with
- *     selectable text). Image-only / scanned PDFs aren't supported
- *     here — they need OCR which is a separate tool.
+ *   - PDF text extraction uses Mozilla's pdfjs-dist (PDF.js). Properly
+ *     decompresses Flate-encoded streams, parses font encodings, and
+ *     extracts real text — works on PDFs from Word, Google Docs,
+ *     reportlab, fpdf, LaTeX, Acrobat, etc. The earlier regex-based
+ *     extractor only worked on the simplest text PDFs and produced
+ *     garbage on anything compressed (which is most modern PDFs).
+ *
+ *     pdfjs-dist is loaded lazily via dynamic import — only fetched
+ *     when the user actually uploads a PDF. The 1.2 MB worker file
+ *     is served from /pdf.worker.min.mjs (same-origin, copied at
+ *     install time from node_modules/pdfjs-dist/build/) so the CSP
+ *     `worker-src 'self'` directive permits it.
+ *
  *   - Text-to-speech uses the browser's built-in Web Speech API
  *     (`speechSynthesis`). Free, no API key, supports Indian English
  *     and (where the OS provides them) Hindi voices.
  *
  * Privacy: the file you upload NEVER leaves your browser. The PDF
- * is read into memory, parsed locally, and read aloud by your
- * device. Nothing is uploaded to any server.
+ * is read into memory, parsed locally by the pdf.js worker (also
+ * running locally), and read aloud by your device. Nothing is
+ * uploaded to any server.
  *
  * Download-as-MP3 is NOT supported here because the Web Speech API
  * doesn't expose the synthesised audio as a downloadable buffer.
@@ -33,44 +42,70 @@ interface PdfTextResult {
 
 const MAX_FILE_BYTES = 30 * 1024 * 1024; // 30 MB cap — reasonable for client memory.
 
-function extractPdfText(buffer: ArrayBuffer): PdfTextResult {
-  // Reuses the BT/ET text-block extraction from PdfToWord — fast,
-  // dependency-free, works on most text PDFs.
-  const bytes = new Uint8Array(buffer);
-  const raw = new TextDecoder("utf-8", { fatal: false }).decode(bytes);
+/**
+ * Extract real text from a PDF using pdfjs-dist (Mozilla PDF.js).
+ *
+ * Lazily imports the library on first use — keeps the main bundle
+ * small. Configures the worker to load from /pdf.worker.min.mjs
+ * (copied to /public at install time, so it's served same-origin).
+ */
+async function extractPdfText(buffer: ArrayBuffer): Promise<PdfTextResult> {
+  // Lazy-load pdfjs-dist — ~1 MB library, only fetched when the user
+  // actually uploads a PDF. Once loaded, the chunk is cached for the
+  // session.
+  const pdfjs = await import("pdfjs-dist");
 
-  const pageMatches = raw.match(/\/Type\s*\/Page[^s]/g);
-  const pageEstimate = pageMatches
-    ? pageMatches.length
-    : Math.max(1, Math.ceil(bytes.length / 3000));
-
-  const extracted: string[] = [];
-  const btBlocks = raw.match(/BT[\s\S]*?ET/g) || [];
-  for (const block of btBlocks) {
-    const parts = block.match(/\(([^)]*)\)/g) || [];
-    for (const p of parts) {
-      const inner = p.slice(1, -1);
-      if (inner.trim().length > 0) extracted.push(inner);
-    }
+  // Worker file lives at /public/pdf.worker.min.mjs (copied from
+  // node_modules at install time). Serving it from the same origin
+  // means the CSP `worker-src 'self'` directive permits it without
+  // changes. The worker runs ENTIRELY in the user's browser — no
+  // network requests beyond fetching the script itself.
+  if (!pdfjs.GlobalWorkerOptions.workerSrc) {
+    pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
   }
 
-  // Fallback for PDFs with non-standard text encoding.
-  if (extracted.length === 0) {
-    const streams = raw.match(/stream[\s\S]*?endstream/g) || [];
-    for (const s of streams) {
-      const readable = s
-        .replace(/stream|endstream/g, "")
-        .replace(/[^\x20-\x7E\n\r\t]/g, " ")
-        .replace(/\s+/g, " ")
-        .trim();
-      if (readable.length > 20) extracted.push(readable);
-    }
+  // Clone the ArrayBuffer because pdfjs internally takes ownership
+  // (detaches the buffer), which makes it unusable afterwards.
+  const data = new Uint8Array(buffer.slice(0));
+
+  const loadingTask = pdfjs.getDocument({
+    data,
+    // Disable font fetching from the public CDN — keeps us offline /
+    // privacy-friendly. The text content is still extracted; only the
+    // visual rendering would have been affected.
+    disableFontFace: true,
+    useSystemFonts: false,
+  });
+
+  const pdf = await loadingTask.promise;
+  const numPages = pdf.numPages;
+
+  const pageTexts: string[] = [];
+  for (let i = 1; i <= numPages; i++) {
+    const page = await pdf.getPage(i);
+    const content = await page.getTextContent();
+    // Each item in content.items has a `str` field (TextItem) — join
+    // them with spaces to reconstruct readable text. Filter out
+    // TextMarkedContent items which don't have a `str`.
+    const pageText = content.items
+      .map((item) => {
+        const it = item as { str?: string };
+        return typeof it.str === "string" ? it.str : "";
+      })
+      .filter(Boolean)
+      .join(" ");
+    pageTexts.push(pageText);
+    // Free the page resources immediately — keeps memory usage low
+    // for long PDFs.
+    page.cleanup();
   }
 
-  return {
-    text: extracted.join("\n").replace(/\s+/g, " ").trim(),
-    pageEstimate,
-  };
+  // Cleanup the document.
+  await pdf.cleanup();
+
+  const text = pageTexts.join("\n\n").replace(/[ \t]+/g, " ").trim();
+
+  return { text, pageEstimate: numPages };
 }
 
 export default function PdfToSpeech() {
@@ -148,18 +183,28 @@ export default function PdfToSpeech() {
     setPageEstimate(0);
     try {
       const buffer = await f.arrayBuffer();
-      const { text: extracted, pageEstimate: p } = extractPdfText(buffer);
+      const { text: extracted, pageEstimate: p } = await extractPdfText(buffer);
       setPageEstimate(p);
       if (!extracted) {
         setText("");
         setError(
-          "We couldn't extract any text from this PDF. It may be a scanned image PDF (needs OCR) or use a non-standard encoding. Try a text-based PDF — e.g. one you can copy text from in Adobe Reader."
+          "We couldn't extract any text from this PDF. It may be a scanned image PDF (needs OCR) or a password-protected PDF. Try a text-based PDF — one where you can select and copy text in Adobe Reader."
         );
       } else {
         setText(extracted);
       }
-    } catch {
-      setError("Couldn't read the PDF. Try another file.");
+    } catch (err) {
+      console.error("[PDF to Speech] extraction failed", err);
+      // pdfjs returns specific error messages we can surface to the user.
+      const msg =
+        err instanceof Error
+          ? err.message.includes("password")
+            ? "This PDF is password-protected. Decrypt it first, then try again."
+            : err.message.includes("Invalid PDF")
+              ? "This file isn't a valid PDF. Try another file."
+              : "Couldn't read the PDF. It may be corrupted or use an unsupported format."
+          : "Couldn't read the PDF. Try another file.";
+      setError(msg);
     }
     setLoading(false);
   }, []);
