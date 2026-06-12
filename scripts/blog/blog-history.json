@@ -215,9 +215,10 @@
     "nickname-generator",
     "working-days-calculator",
     "gst-invoice-generator",
-    "board-percentage-calculator"
+    "board-percentage-calculator",
+    "govt-scheme-eligibility-finder"
   ],
-  "lastCategory": "exam",
-  "totalPosts": 216,
-  "lastRun": "2026-06-11T13:57:06.183Z"
+  "lastCategory": "indiaguide",
+  "totalPosts": 217,
+  "lastRun": "2026-06-12T09:04:00.117Z"
 }
