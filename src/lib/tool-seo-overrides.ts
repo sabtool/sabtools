@@ -285,4 +285,19 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
     description:
       "Calculate your LPG cylinder price after subsidy, monthly cooking-gas cost and an induction-vs-LPG comparison. Free LPG subsidy calculator, no signup.",
   },
+
+  // ── STRIKING-DISTANCE title fixes (brief 2026-06-13, N=13) ──
+  // college-fee-calculator: pos 4.7, 12 impr, 2 clicks, template title only;
+  // water-tank-calculator: pos 18.1, 25 impr, template title only. Both never
+  // overridden — generic "${name} — Free Online Tool" caps CTR at top of SERP.
+  "college-fee-calculator": {
+    title: "College Fee Calculator — IIT, NIT, Medical & MBA + Loan EMI",
+    description:
+      "Estimate total IIT, NIT, private engineering, MBBS & MBA college fees in India, then size an education loan and see the monthly EMI. Free, no signup.",
+  },
+  "water-tank-calculator": {
+    title: "Water Tank Calculator — Size by Family in Litres (India)",
+    description:
+      "Find the right overhead & underground water tank size in litres for your family, based on daily usage per person. Free water tank calculator, no signup.",
+  },
 };

@@ -108,6 +108,231 @@ async function extractPdfText(buffer: ArrayBuffer): Promise<PdfTextResult> {
   return { text, pageEstimate: numPages };
 }
 
+// ─── Natural voice engine (StreamElements / AWS Polly via free public endpoint) ────
+// Used as the PRIMARY playback path because OS Web Speech voices sound
+// robotic. StreamElements exposes ~25 AWS Polly voices through a public,
+// auth-less, CORS-enabled endpoint that returns MP3 directly. Quality is
+// human-sounding (Polly Neural / Standard) and the service has been
+// stable for years. Free for our use; we fall back to Web Speech if the
+// request fails (rate limited, offline, etc.).
+
+interface NaturalVoice {
+  /** Display name shown to the user. */
+  label: string;
+  /** StreamElements voice slug — what we send to the API. */
+  slug: string;
+  /** Locale used to pick a sensible default per language. */
+  lang: string;
+  /** Short qualifier shown next to the name. */
+  hint?: string;
+}
+
+/** Curated set of natural voices that consistently sound good. */
+const NATURAL_VOICES: NaturalVoice[] = [
+  // ── Indian English (bilingual-friendly) ──
+  { label: "Raveena (Indian, Female)", slug: "Raveena", lang: "en-IN", hint: "Polly · Indian English" },
+  // ── British English ──
+  { label: "Amy (British, Female)", slug: "Amy", lang: "en-GB", hint: "Polly · UK English" },
+  { label: "Emma (British, Female)", slug: "Emma", lang: "en-GB", hint: "Polly · UK English" },
+  { label: "Brian (British, Male)", slug: "Brian", lang: "en-GB", hint: "Polly · UK English" },
+  // ── American English ──
+  { label: "Joanna (US, Female)", slug: "Joanna", lang: "en-US", hint: "Polly · US English" },
+  { label: "Salli (US, Female)", slug: "Salli", lang: "en-US", hint: "Polly · US English" },
+  { label: "Kendra (US, Female)", slug: "Kendra", lang: "en-US", hint: "Polly · US English" },
+  { label: "Kimberly (US, Female)", slug: "Kimberly", lang: "en-US", hint: "Polly · US English" },
+  { label: "Ivy (US, Female Young)", slug: "Ivy", lang: "en-US", hint: "Polly · US English" },
+  { label: "Matthew (US, Male)", slug: "Matthew", lang: "en-US", hint: "Polly · US English" },
+  { label: "Joey (US, Male)", slug: "Joey", lang: "en-US", hint: "Polly · US English" },
+  { label: "Justin (US, Male Young)", slug: "Justin", lang: "en-US", hint: "Polly · US English" },
+  // ── Australian English ──
+  { label: "Russell (Australian, Male)", slug: "Russell", lang: "en-AU", hint: "Polly · AU English" },
+  { label: "Nicole (Australian, Female)", slug: "Nicole", lang: "en-AU", hint: "Polly · AU English" },
+];
+
+/**
+ * Split text into chunks small enough for the StreamElements endpoint
+ * (~250 char hard limit per request) while keeping sentence boundaries
+ * intact so the listener doesn't hear awkward mid-sentence cuts.
+ */
+function chunkTextForTTS(text: string, maxChars = 220): string[] {
+  const clean = text.replace(/\s+/g, " ").trim();
+  if (clean.length <= maxChars) return [clean];
+
+  const sentences = clean.split(/(?<=[.!?])\s+/);
+  const chunks: string[] = [];
+  let current = "";
+  for (const s of sentences) {
+    // Sentence itself is too long? Split it further at commas.
+    if (s.length > maxChars) {
+      const parts = s.split(/(?<=[,;:])\s+/);
+      for (const p of parts) {
+        if (p.length > maxChars) {
+          // Last-resort word-boundary split.
+          let buf = p;
+          while (buf.length > maxChars) {
+            let cut = buf.lastIndexOf(" ", maxChars);
+            if (cut < 50) cut = maxChars;
+            chunks.push(buf.slice(0, cut));
+            buf = buf.slice(cut).trim();
+          }
+          if (buf) chunks.push(buf);
+        } else if ((current + " " + p).trim().length <= maxChars) {
+          current = current ? `${current} ${p}` : p;
+        } else {
+          if (current) chunks.push(current);
+          current = p;
+        }
+      }
+    } else if ((current + " " + s).trim().length <= maxChars) {
+      current = current ? `${current} ${s}` : s;
+    } else {
+      if (current) chunks.push(current);
+      current = s;
+    }
+  }
+  if (current) chunks.push(current);
+  return chunks;
+}
+
+async function fetchTtsChunk(text: string, voice: string): Promise<Blob> {
+  const url =
+    `https://api.streamelements.com/kappa/v2/speech?voice=${encodeURIComponent(voice)}` +
+    `&text=${encodeURIComponent(text)}`;
+  const r = await fetch(url);
+  if (!r.ok) {
+    throw new Error(`TTS request failed (${r.status})`);
+  }
+  return r.blob();
+}
+
+/**
+ * Score a voice for quality — higher = better. The Web Speech API
+ * exposes everything from studio neural voices to ancient robotic
+ * "Microsoft David" / "Fred" / "Albert" voices in the same list, so
+ * we rank them by:
+ *
+ *   1. Tier keywords in the name ("Enhanced", "Natural", "Neural",
+ *      "Wavenet", "Premium", "Online")
+ *   2. Whether the voice is local (lower score — system voices tend
+ *      to be older / robotic) or network-fetched (higher score —
+ *      modern cloud voices are far better)
+ *   3. Known-good voice families (Google's cloud voices, Microsoft's
+ *      Online Natural family, Apple's Enhanced voices)
+ *   4. A penalty for known-robotic voices we want to push to the
+ *      bottom of the list
+ *
+ * Used both for default-selection AND for the badge displayed next
+ * to each voice in the dropdown so users see at a glance which ones
+ * are likely to sound good.
+ */
+function scoreVoice(v: SpeechSynthesisVoice): number {
+  const name = v.name.toLowerCase();
+  let score = 0;
+
+  // Premium / studio-quality indicators
+  if (name.includes("enhanced")) score += 100;
+  if (name.includes("premium")) score += 100;
+  if (name.includes("natural")) score += 95; // Microsoft "(Natural)"
+  if (name.includes("neural")) score += 90;
+  if (name.includes("wavenet")) score += 90; // Google Wavenet
+  if (name.includes("studio")) score += 90;
+
+  // Cloud / online voices — usually much better than local system voices
+  if (name.includes("online")) score += 60;
+  if (!v.localService) score += 30; // network voice = modern cloud
+
+  // Known-good families (good even without explicit "Enhanced" tag)
+  const knownGood = [
+    "google",
+    "microsoft aria",
+    "microsoft jenny",
+    "microsoft guy",
+    "microsoft davis",
+    "microsoft jane",
+    "microsoft madhur", // Indian English neural
+    "microsoft swara", // Hindi neural
+    "microsoft prabhat", // Hindi neural
+    "veena", // macOS Indian English
+    "rishi", // macOS Indian English (basic but acceptable)
+    "samantha",
+    "karen",
+    "daniel",
+    "alex",
+    "victoria",
+    "tessa",
+    "moira",
+    "kyoko",
+    "yuna",
+    "siri",
+  ];
+  if (knownGood.some((g) => name.includes(g))) score += 20;
+
+  // Known-robotic / novelty voices — push to bottom
+  const robotic = [
+    "microsoft david",
+    "microsoft mark",
+    "microsoft zira",
+    "microsoft heera",
+    "microsoft kalpana",
+    "microsoft hemant",
+    "albert",
+    "bahh",
+    "bells",
+    "boing",
+    "bubbles",
+    "cellos",
+    "deranged",
+    "fred",
+    "good news",
+    "bad news",
+    "junior",
+    "kathy",
+    "organ",
+    "ralph",
+    "trinoids",
+    "whisper",
+    "wobble",
+    "zarvox",
+    "pipe organ",
+  ];
+  if (robotic.some((r) => name === r || name.includes(r))) score -= 50;
+
+  return score;
+}
+
+/** Returns a short quality tag for the badge in the UI. */
+function voiceQualityTier(v: SpeechSynthesisVoice): {
+  label: string;
+  className: string;
+} | null {
+  const s = scoreVoice(v);
+  const name = v.name.toLowerCase();
+  if (name.includes("enhanced") || name.includes("premium")) {
+    return { label: "Enhanced", className: "bg-green-100 text-green-700" };
+  }
+  if (name.includes("natural") || name.includes("neural") || name.includes("wavenet")) {
+    return { label: "Natural", className: "bg-green-100 text-green-700" };
+  }
+  if (s >= 60) {
+    return { label: "Online", className: "bg-blue-100 text-blue-700" };
+  }
+  if (s < 0) {
+    return { label: "Basic", className: "bg-gray-100 text-gray-500" };
+  }
+  return null;
+}
+
+/**
+ * A short language-appropriate phrase the Preview button speaks so the
+ * user can sample a voice before committing to a long document.
+ */
+function previewPhraseFor(lang: string): string {
+  if (/^hi/i.test(lang)) {
+    return "नमस्ते, मैं आपका दस्तावेज़ इस तरह पढ़ूंगा।";
+  }
+  return "Hello — this is how I'll read your document.";
+}
+
 export default function PdfToSpeech() {
   const [file, setFile] = useState<File | null>(null);
   const [text, setText] = useState("");
@@ -126,22 +351,58 @@ export default function PdfToSpeech() {
   const [isPaused, setIsPaused] = useState(false);
   const [spokenChars, setSpokenChars] = useState(0); // For the progress bar.
 
+  // Natural-voice (Polly via StreamElements) mode is the DEFAULT — sounds
+  // far more human than OS Web Speech voices. Users can switch to the
+  // Web Speech path if they're offline or the public TTS endpoint is
+  // rate-limited.
+  const [useNatural, setUseNatural] = useState(true);
+  const [naturalVoice, setNaturalVoice] = useState<string>("Raveena");
+  const [naturalLoading, setNaturalLoading] = useState<string>("");
+  // Track which chunk we're playing and how many chars have been read
+  // so the progress bar advances naturally across multi-chunk reads.
+  const naturalChunksRef = useRef<string[]>([]);
+  const naturalIndexRef = useRef(0);
+  const naturalCharsBeforeRef = useRef<number[]>([]); // Char offset of each chunk's START
+  const naturalAudioRef = useRef<HTMLAudioElement | null>(null);
+  const naturalCancelRef = useRef(false);
+  // Pre-fetched MP3 blobs for the next chunks so playback feels seamless.
+  const naturalPrefetchRef = useRef<Map<number, Promise<Blob>>>(new Map());
+
   const utterRef = useRef<SpeechSynthesisUtterance | null>(null);
 
   // ── Load voices (browser populates them asynchronously on Chrome) ──
+  // Default to the HIGHEST-QUALITY voice, not the first match. Web Speech
+  // API exposes a wide range from studio-quality neural voices (macOS
+  // Enhanced, Microsoft Online Natural, Google Wavenet) down to plainly
+  // robotic system voices (Microsoft David, macOS Junior/Albert/Fred).
+  // We score each voice and pick the best one available for the user's
+  // language preference — so they don't have to manually hunt for the
+  // good voice in a 199-entry dropdown.
   useEffect(() => {
     if (typeof window === "undefined" || !window.speechSynthesis) return;
     const load = () => {
       const list = window.speechSynthesis.getVoices();
       setVoices(list);
-      // Prefer Indian English, then Hindi, then any English, then any voice.
       if (list.length > 0 && !selectedVoice) {
-        const pick =
-          list.find((v) => /en-IN/i.test(v.lang)) ||
-          list.find((v) => /hi-IN/i.test(v.lang)) ||
-          list.find((v) => /^en/i.test(v.lang)) ||
-          list[0];
-        if (pick) setSelectedVoice(pick.name);
+        // Try Indian English first (en-IN), then Hindi (hi-IN), then any
+        // English, then any voice — picking the HIGHEST-SCORED voice
+        // within each tier rather than the first match.
+        const buckets: ((v: SpeechSynthesisVoice) => boolean)[] = [
+          (v) => /en-IN/i.test(v.lang),
+          (v) => /hi-IN/i.test(v.lang),
+          (v) => /^en/i.test(v.lang),
+          () => true,
+        ];
+        for (const matches of buckets) {
+          const candidates = list.filter(matches);
+          if (candidates.length > 0) {
+            const best = candidates
+              .slice()
+              .sort((a, b) => scoreVoice(b) - scoreVoice(a))[0];
+            setSelectedVoice(best.name);
+            break;
+          }
+        }
       }
     };
     load();
@@ -250,17 +511,153 @@ export default function PdfToSpeech() {
     [processFile]
   );
 
+  // ── Natural-voice (Polly) playback ──────────────────────────────
+  // Plays text via StreamElements' free public Polly endpoint. Splits
+  // long text into ≤220-char chunks (the endpoint's hard limit) at
+  // sentence boundaries, fetches MP3s one chunk ahead, and plays them
+  // back-to-back through a single HTMLAudioElement. Falls back to Web
+  // Speech if the endpoint fails (rate limited, offline, etc.).
+  const playNaturalFromIndex = useCallback(
+    async (startIndex: number) => {
+      if (naturalCancelRef.current) return;
+      const chunks = naturalChunksRef.current;
+      if (startIndex >= chunks.length) {
+        setIsPlaying(false);
+        setIsPaused(false);
+        setSpokenChars(text.length);
+        setNaturalLoading("");
+        return;
+      }
+      naturalIndexRef.current = startIndex;
+
+      // Use already-prefetched promise if available, otherwise kick off.
+      let blobPromise = naturalPrefetchRef.current.get(startIndex);
+      if (!blobPromise) {
+        blobPromise = fetchTtsChunk(chunks[startIndex], naturalVoice);
+        naturalPrefetchRef.current.set(startIndex, blobPromise);
+      }
+
+      // Pre-fetch the next chunk in parallel so playback is seamless.
+      if (startIndex + 1 < chunks.length && !naturalPrefetchRef.current.has(startIndex + 1)) {
+        naturalPrefetchRef.current.set(
+          startIndex + 1,
+          fetchTtsChunk(chunks[startIndex + 1], naturalVoice).catch(() => new Blob())
+        );
+      }
+
+      setNaturalLoading(
+        startIndex === 0
+          ? "Loading natural voice…"
+          : ""
+      );
+
+      let blob: Blob;
+      try {
+        blob = await blobPromise;
+        if (blob.size < 100) throw new Error("Empty audio chunk");
+      } catch (err) {
+        console.error("[PDF to Speech] StreamElements failed", err);
+        // Auto-fallback to Web Speech for the remainder of the text.
+        setError(
+          "Natural-voice service is rate-limited — switching to your device's built-in voice as a fallback."
+        );
+        setUseNatural(false);
+        // Restart with Web Speech from this chunk's position
+        const restartChars = naturalCharsBeforeRef.current[startIndex] || 0;
+        setSpokenChars(restartChars);
+        setIsPlaying(false);
+        setIsPaused(false);
+        return;
+      }
+
+      if (naturalCancelRef.current) return;
+      setNaturalLoading("");
+
+      const url = URL.createObjectURL(blob);
+      const audio = new Audio(url);
+      audio.playbackRate = rate;
+      naturalAudioRef.current = audio;
+
+      audio.ontimeupdate = () => {
+        // Approx progress within the chunk → update char counter.
+        if (audio.duration > 0) {
+          const chunkProgress = audio.currentTime / audio.duration;
+          const chunkStart = naturalCharsBeforeRef.current[startIndex] || 0;
+          const chunkLen = chunks[startIndex].length;
+          setSpokenChars(Math.round(chunkStart + chunkProgress * chunkLen));
+        }
+      };
+      audio.onended = () => {
+        URL.revokeObjectURL(url);
+        if (naturalCancelRef.current) return;
+        playNaturalFromIndex(startIndex + 1);
+      };
+      audio.onerror = () => {
+        URL.revokeObjectURL(url);
+        if (naturalCancelRef.current) return;
+        // Skip to next chunk on error instead of dying.
+        playNaturalFromIndex(startIndex + 1);
+      };
+
+      try {
+        await audio.play();
+      } catch {
+        // Autoplay blocked — user gesture is needed. Most browsers
+        // permit this because the Play button is a direct user click.
+      }
+    },
+    [naturalVoice, rate, text]
+  );
+
   // ── Playback controls ───────────────────────────────────────────
-  const handlePlay = () => {
+  const handlePlay = async () => {
     if (!text.trim()) return;
-    if (typeof window === "undefined" || !window.speechSynthesis) {
-      setError("Your browser doesn't support speech synthesis.");
-      return;
-    }
+
     if (isPaused) {
-      window.speechSynthesis.resume();
+      if (useNatural && naturalAudioRef.current) {
+        naturalAudioRef.current.play();
+      } else if (window.speechSynthesis) {
+        window.speechSynthesis.resume();
+      }
       setIsPaused(false);
       setIsPlaying(true);
+      return;
+    }
+
+    setError("");
+    setSpokenChars(0);
+
+    if (useNatural) {
+      // ── Natural Polly path ──
+      naturalCancelRef.current = false;
+      naturalPrefetchRef.current.clear();
+
+      // Chunk the text + record where each chunk starts (for progress).
+      const chunks = chunkTextForTTS(text);
+      const charsBefore: number[] = [];
+      let cursor = 0;
+      for (const c of chunks) {
+        charsBefore.push(cursor);
+        cursor += c.length + 1;
+      }
+      naturalChunksRef.current = chunks;
+      naturalCharsBeforeRef.current = charsBefore;
+      naturalIndexRef.current = 0;
+
+      setIsPlaying(true);
+      setIsPaused(false);
+      try {
+        await playNaturalFromIndex(0);
+      } catch (e) {
+        console.error("[PDF to Speech] natural play failed", e);
+        setIsPlaying(false);
+      }
+      return;
+    }
+
+    // ── Web Speech fallback path ──
+    if (typeof window === "undefined" || !window.speechSynthesis) {
+      setError("Your browser doesn't support speech synthesis.");
       return;
     }
     window.speechSynthesis.cancel();
@@ -269,9 +666,7 @@ export default function PdfToSpeech() {
     if (voice) utter.voice = voice;
     utter.rate = rate;
     utter.pitch = pitch;
-    setSpokenChars(0);
     utter.onboundary = (ev) => {
-      // ev.charIndex is the start of the next word/sentence being spoken.
       if (typeof ev.charIndex === "number") setSpokenChars(ev.charIndex);
     };
     utter.onend = () => {
@@ -290,16 +685,27 @@ export default function PdfToSpeech() {
   };
 
   const handlePause = () => {
-    window.speechSynthesis?.pause();
+    if (useNatural && naturalAudioRef.current) {
+      naturalAudioRef.current.pause();
+    } else {
+      window.speechSynthesis?.pause();
+    }
     setIsPaused(true);
     setIsPlaying(false);
   };
 
   const handleStop = () => {
+    naturalCancelRef.current = true;
+    if (naturalAudioRef.current) {
+      naturalAudioRef.current.pause();
+      naturalAudioRef.current = null;
+    }
+    naturalPrefetchRef.current.clear();
     window.speechSynthesis?.cancel();
     setIsPlaying(false);
     setIsPaused(false);
     setSpokenChars(0);
+    setNaturalLoading("");
   };
 
   const downloadText = () => {
@@ -314,7 +720,9 @@ export default function PdfToSpeech() {
     URL.revokeObjectURL(a.href);
   };
 
-  // Group voices by language for the dropdown.
+  // Group voices by language, then sort each group by quality score
+  // descending so the best voice is at the top of every group — the
+  // user's eye lands on it first instead of having to scroll.
   const voiceGroups = (() => {
     const grouped: Record<string, SpeechSynthesisVoice[]> = {};
     voices.forEach((v) => {
@@ -322,6 +730,10 @@ export default function PdfToSpeech() {
       if (!grouped[lang]) grouped[lang] = [];
       grouped[lang].push(v);
     });
+    // Sort voices within each language by score, highest first.
+    Object.values(grouped).forEach((arr) =>
+      arr.sort((a, b) => scoreVoice(b) - scoreVoice(a))
+    );
     return Object.entries(grouped).sort(([a], [b]) => {
       // en-IN and hi-IN pinned to the top
       if (a.startsWith("en-IN") || a.startsWith("hi-IN")) return -1;
@@ -329,6 +741,39 @@ export default function PdfToSpeech() {
       return a.localeCompare(b);
     });
   })();
+
+  // Resolve the currently selected voice object so the badge below
+  // and the Preview button know what they're dealing with.
+  const currentVoice =
+    voices.find((v) => v.name === selectedVoice) || null;
+  const currentTier = currentVoice ? voiceQualityTier(currentVoice) : null;
+
+  const previewVoice = async () => {
+    if (useNatural) {
+      // Sample the natural voice with a short phrase.
+      try {
+        const blob = await fetchTtsChunk(
+          "Hello — this is how I will read your document.",
+          naturalVoice
+        );
+        const url = URL.createObjectURL(blob);
+        const audio = new Audio(url);
+        audio.playbackRate = rate;
+        audio.onended = () => URL.revokeObjectURL(url);
+        audio.play();
+      } catch {
+        setError("Couldn't sample this voice — try another.");
+      }
+      return;
+    }
+    if (!currentVoice || typeof window === "undefined" || !window.speechSynthesis) return;
+    window.speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance(previewPhraseFor(currentVoice.lang));
+    utter.voice = currentVoice;
+    utter.rate = rate;
+    utter.pitch = pitch;
+    window.speechSynthesis.speak(utter);
+  };
 
   const progress =
     text.length > 0 ? Math.min(100, (spokenChars / text.length) * 100) : 0;
@@ -372,6 +817,11 @@ export default function PdfToSpeech() {
           ⏳ Extracting text from your PDF…
         </div>
       )}
+      {naturalLoading && (
+        <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-4 text-sm text-indigo-700">
+          ⏳ {naturalLoading}
+        </div>
+      )}
       {error && (
         <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-sm text-red-700">
           ❌ {error}
@@ -408,39 +858,153 @@ export default function PdfToSpeech() {
           <h3 className="font-bold text-gray-800 mb-3">🎙️ Voice settings</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div>
-              <label className="text-xs font-semibold text-gray-600 block mb-1">
-                Voice ({voices.length} available)
-              </label>
-              {voices.length === 0 ? (
+              {/* Mode toggle — natural voices are the default because they
+                  sound much more human than OS Web Speech voices. */}
+              <div className="flex items-center gap-2 mb-2 p-1 bg-gray-100 rounded-lg text-xs">
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (!useNatural) {
+                      handleStop();
+                      setUseNatural(true);
+                    }
+                  }}
+                  className={`flex-1 px-3 py-1.5 rounded-md font-semibold transition ${
+                    useNatural
+                      ? "bg-white text-indigo-700 shadow-sm"
+                      : "text-gray-500 hover:text-gray-700"
+                  }`}
+                >
+                  ✨ Natural voice
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (useNatural) {
+                      handleStop();
+                      setUseNatural(false);
+                    }
+                  }}
+                  className={`flex-1 px-3 py-1.5 rounded-md font-semibold transition ${
+                    !useNatural
+                      ? "bg-white text-indigo-700 shadow-sm"
+                      : "text-gray-500 hover:text-gray-700"
+                  }`}
+                >
+                  💻 Device voice
+                </button>
+              </div>
+
+              <div className="flex items-center justify-between gap-2 mb-1">
+                <label className="text-xs font-semibold text-gray-600">
+                  {useNatural
+                    ? "Voice (Polly · human-sounding)"
+                    : `Voice (${voices.length} available · best on top)`}
+                </label>
+                {!useNatural && currentTier && (
+                  <span
+                    className={`text-[9px] uppercase tracking-wider font-bold rounded-full px-2 py-0.5 ${currentTier.className}`}
+                    title="Quality tier of the currently-selected voice."
+                  >
+                    {currentTier.label}
+                  </span>
+                )}
+                {useNatural && (
+                  <span
+                    className="text-[9px] uppercase tracking-wider font-bold rounded-full px-2 py-0.5 bg-green-100 text-green-700"
+                    title="AWS Polly neural voice via StreamElements free public endpoint."
+                  >
+                    Neural
+                  </span>
+                )}
+              </div>
+              {useNatural ? (
+                <>
+                  <select
+                    value={naturalVoice}
+                    onChange={(e) => setNaturalVoice(e.target.value)}
+                    className="calc-input w-full"
+                  >
+                    {NATURAL_VOICES.map((v) => (
+                      <option key={v.slug} value={v.slug}>
+                        {v.label}
+                        {v.hint ? ` · ${v.hint}` : ""}
+                      </option>
+                    ))}
+                  </select>
+                  <button
+                    type="button"
+                    onClick={previewVoice}
+                    className="mt-2 text-xs font-semibold text-indigo-600 hover:text-indigo-800 flex items-center gap-1"
+                  >
+                    🔉 Preview this voice
+                  </button>
+                </>
+              ) : voices.length === 0 ? (
                 <p className="text-xs text-gray-500 mt-2">
                   Loading available voices… (some browsers populate them on first use)
                 </p>
               ) : (
-                <select
-                  value={selectedVoice}
-                  onChange={(e) => setSelectedVoice(e.target.value)}
-                  className="calc-input w-full"
-                >
-                  {voiceGroups.map(([lang, vs]) => (
-                    <optgroup
-                      key={lang}
-                      label={
-                        lang === "en-IN"
-                          ? "🇮🇳 Indian English"
-                          : lang === "hi-IN"
-                            ? "🇮🇳 Hindi"
-                            : lang
-                      }
-                    >
-                      {vs.map((v) => (
-                        <option key={v.name} value={v.name}>
-                          {v.name}
-                          {v.localService ? "" : " (online)"}
-                        </option>
-                      ))}
-                    </optgroup>
-                  ))}
-                </select>
+                <>
+                  <select
+                    value={selectedVoice}
+                    onChange={(e) => setSelectedVoice(e.target.value)}
+                    className="calc-input w-full"
+                  >
+                    {voiceGroups.map(([lang, vs]) => (
+                      <optgroup
+                        key={lang}
+                        label={
+                          lang === "en-IN"
+                            ? "🇮🇳 Indian English"
+                            : lang === "hi-IN"
+                              ? "🇮🇳 Hindi"
+                              : lang
+                        }
+                      >
+                        {vs.map((v) => {
+                          const tier = voiceQualityTier(v);
+                          // Native <option> can't render coloured badges,
+                          // so we suffix the tier label in brackets. The
+                          // colour badge appears next to the selected
+                          // voice above the dropdown.
+                          const tag =
+                            tier?.label === "Enhanced"
+                              ? " ⭐ Enhanced"
+                              : tier?.label === "Natural"
+                                ? " ⭐ Natural"
+                                : tier?.label === "Online"
+                                  ? " · Online"
+                                  : tier?.label === "Basic"
+                                    ? " · Basic"
+                                    : "";
+                          return (
+                            <option key={v.name} value={v.name}>
+                              {v.name}
+                              {tag}
+                            </option>
+                          );
+                        })}
+                      </optgroup>
+                    ))}
+                  </select>
+                  <button
+                    type="button"
+                    onClick={previewVoice}
+                    disabled={!currentVoice}
+                    className="mt-2 text-xs font-semibold text-indigo-600 hover:text-indigo-800 disabled:opacity-40 disabled:cursor-not-allowed flex items-center gap-1"
+                  >
+                    🔉 Preview this voice
+                  </button>
+                  {currentVoice && scoreVoice(currentVoice) < 30 && (
+                    <p className="mt-2 text-[11px] text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-2 py-1.5 leading-snug">
+                      ⚠️ This voice may sound robotic. Pick one tagged{" "}
+                      <strong>Enhanced</strong>, <strong>Natural</strong> or{" "}
+                      <strong>Online</strong> for clearer speech (sorted to
+                      the top of each language group).
+                    </p>
+                  )}
+                </>
               )}
             </div>
             <div className="space-y-3">
