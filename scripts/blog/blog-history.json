@@ -216,9 +216,10 @@
     "working-days-calculator",
     "gst-invoice-generator",
     "board-percentage-calculator",
-    "govt-scheme-eligibility-finder"
+    "govt-scheme-eligibility-finder",
+    "vehicle-depreciation-calculator"
   ],
-  "lastCategory": "indiaguide",
-  "totalPosts": 217,
-  "lastRun": "2026-06-12T09:04:00.117Z"
+  "lastCategory": "vehicle",
+  "totalPosts": 218,
+  "lastRun": "2026-06-13T08:01:24.016Z"
 }
