@@ -1982,11 +1982,11 @@ export const programmaticPages: ProgrammaticPage[] = [
   {
     slug: "take-home-salary-calculator-india",
     toolSlug: "in-hand-salary-calculator",
-    title: "Take Home Salary Calculator India",
-    description: "Calculate take home salary from CTC for Indian employees. Comprehensive salary breakup with PF, tax and all deductions.",
-    h1: "Take Home Salary Calculator - India",
-    keywords: ["take home salary calculator","take home pay india","net salary calculator","salary after deductions","hand salary calculator india","salary calculator india"],
-    content: "<p>Calculate take home salary from CTC for Indian employees. Comprehensive salary breakup with PF, tax and all deductions. Get accurate monthly salary breakup with all deduction components clearly shown.</p><p>Indian salary structure typically includes basic pay (40-50% of CTC), HRA, special allowance, EPF (both employee and employer), gratuity and insurance. Only some components are taxable.</p><p>Understanding your salary breakup helps in tax planning, loan eligibility calculation and financial planning. Use this tool before accepting job offers to compare actual take-home amounts.</p>",
+    title: "Take Home Salary Calculator — CTC to Monthly In-Hand (2026)",
+    description: "Convert CTC to monthly take-home salary in India. See PF, professional tax and income tax (old vs new regime) deducted, with a full payslip breakup. Free.",
+    h1: "Take Home Salary Calculator — CTC to Monthly In-Hand",
+    keywords: ["take home salary calculator","ctc to in hand salary","monthly take home from ctc","net salary calculator india","salary after deductions","in hand salary from ctc"],
+    content: "<p>This calculator converts your annual CTC into the monthly take-home (in-hand) salary you actually receive after every standard Indian deduction: employee EPF (12% of basic), professional tax, and income tax under both the old and new regimes. It returns a line-by-line payslip so you can see exactly where the gap between CTC and in-hand comes from.</p><p>The two biggest reasons your in-hand is lower than your CTC: (1) the <strong>employer's</strong> EPF contribution and gratuity provision are counted inside CTC but never paid to you monthly, and (2) income tax and professional tax are withheld each month. A ₹12 LPA CTC, for example, lands roughly ₹86,000–₹97,000 in-hand per month depending on your regime, basic-pay split and PF policy — enter your CTC above for the exact figure.</p><p>Use it before accepting an offer: compare two CTCs on <em>in-hand</em>, not headline package. Toggle old vs new regime to see which lowers your tax for your specific 80C/HRA situation. All math runs in your browser — no salary data leaves your device.</p>",
     defaults: {},
   },
   {

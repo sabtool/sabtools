@@ -300,4 +300,17 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
     description:
       "Find the right overhead & underground water tank size in litres for your family, based on daily usage per person. Free water tank calculator, no signup.",
   },
+
+  // ── Agriculture (DECLINING: page @ pos 23.2 on 53 impr / 1 click, deep page-3, template title only — see brief 2026-06-14) ──
+  "crop-yield-calculator": {
+    title: "Crop Yield Calculator — Yield, MSP Revenue & Profit per Acre",
+    description:
+      "Estimate crop yield in quintals and revenue at MSP for rice, wheat, sugarcane & cotton, then your profit per acre after input costs. Free, no signup.",
+  },
+  // ── Astrology (DECLINING: "accurate gemstone calculator" @ pos 77.7, page @ pos 80.2 on 34 impr / 2 clicks, template title only — see brief 2026-06-14) ──
+  "gemstone-recommendation": {
+    title: "Gemstone Recommendation by Rashi — Weight, Metal & Mantra",
+    description:
+      "Find your recommended gemstone (ratna) by Rashi — Neelam, Pukhraj, Panna, Manik & more — with carat weight, metal, finger and mantra. Free, instant.",
+  },
 };
