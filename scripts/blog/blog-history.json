@@ -217,9 +217,10 @@
     "gst-invoice-generator",
     "board-percentage-calculator",
     "govt-scheme-eligibility-finder",
-    "vehicle-depreciation-calculator"
+    "vehicle-depreciation-calculator",
+    "flowchart-maker"
   ],
-  "lastCategory": "vehicle",
-  "totalPosts": 218,
-  "lastRun": "2026-06-13T08:01:24.016Z"
+  "lastCategory": "charts",
+  "totalPosts": 219,
+  "lastRun": "2026-06-14T09:26:04.526Z"
 }
