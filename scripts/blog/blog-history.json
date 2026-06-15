@@ -218,9 +218,10 @@
     "board-percentage-calculator",
     "govt-scheme-eligibility-finder",
     "vehicle-depreciation-calculator",
-    "flowchart-maker"
+    "flowchart-maker",
+    "ai-birthday-wish-generator"
   ],
-  "lastCategory": "charts",
-  "totalPosts": 219,
-  "lastRun": "2026-06-14T09:26:04.526Z"
+  "lastCategory": "ai",
+  "totalPosts": 220,
+  "lastRun": "2026-06-15T11:06:24.666Z"
 }
