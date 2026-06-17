@@ -14,7 +14,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/optimize-images.mjs",
+    "prebuild": "node scripts/check-csp-coverage.mjs && node scripts/optimize-images.mjs",
     "build": "next build",
     "postinstall": "cp -f node_modules/pdfjs-dist/build/pdf.worker.min.mjs public/pdf.worker.min.mjs 2>/dev/null || true",
     "optimize-images": "node scripts/optimize-images.mjs",
