@@ -149,7 +149,12 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50" />
         <div className="absolute inset-0 opacity-30 hero-pattern" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 text-center">
-          <div className="animate-fade-in-up">
+          {/* LCP fix (brief 2026-06-17): the H1 below is the homepage LCP
+              element. Wrapping it in `animate-fade-in-up` (which starts at
+              opacity:0) made Chrome record LCP only after the 0.5s fade —
+              real-user LCP was 6008ms on mobile (PostHog, n=26). The hero now
+              paints immediately; the fade is kept only for the search bar. */}
+          <div>
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur rounded-full px-4 py-1.5 text-sm font-medium text-indigo-600 shadow-sm border border-indigo-100 mb-6">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
               {BRAND.totalTools}+ Free Tools — No Signup Required
