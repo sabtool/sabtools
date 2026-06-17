@@ -19,22 +19,34 @@ const CURRENCY_INFO: Record<string, { name: string; symbol: string }> = {
   NPR: { name: "Nepalese Rupee", symbol: "Rs" },
 };
 
+// Offline fallback rates — used ONLY if the live API is unreachable
+// (CSP block, user offline, API down). Refreshed 17 Jun 2026 from the
+// same open.er-api.com source the tool normally queries live. Values
+// are stored as "rate per 1 INR" (i.e. how many target-currency units
+// you get for 1 rupee), matching the API's response shape.
+//
+// If you're updating these manually, the live API at
+//   https://open.er-api.com/v6/latest/INR
+// returns the exact numbers to paste in. Don't drift more than a few
+// months without refreshing — stale offline values made the tool show
+// 1 USD = ₹83 in June 2026 when the real rate was ₹94.6 (CSP was
+// blocking the fetch and nobody noticed for months).
 const FALLBACK_RATES: Record<string, number> = {
   INR: 1,
-  USD: 0.01193,
-  EUR: 0.01098,
-  GBP: 0.00943,
-  AED: 0.04382,
-  SAR: 0.04476,
-  JPY: 1.793,
-  AUD: 0.01841,
-  CAD: 0.01634,
-  SGD: 0.01601,
-  CNY: 0.08695,
-  THB: 0.4167,
-  MYR: 0.05319,
-  BDT: 1.4286,
-  NPR: 1.6,
+  USD: 0.010569, // 1 USD ≈ ₹94.62
+  EUR: 0.009108, // 1 EUR ≈ ₹109.79
+  GBP: 0.007875, // 1 GBP ≈ ₹126.98
+  AED: 0.038814, // 1 AED ≈ ₹25.76
+  SAR: 0.039633, // 1 SAR ≈ ₹25.23
+  JPY: 1.6952,   // 1 JPY ≈ ₹0.59 (≈ ₹58.99 per ¥100)
+  AUD: 0.014953, // 1 AUD ≈ ₹66.88
+  CAD: 0.014795, // 1 CAD ≈ ₹67.59
+  SGD: 0.013553, // 1 SGD ≈ ₹73.78
+  CNY: 0.071379, // 1 CNY ≈ ₹14.01
+  THB: 0.343757, // 1 THB ≈ ₹2.91
+  MYR: 0.043011, // 1 MYR ≈ ₹23.25
+  BDT: 1.298456, // 1 BDT ≈ ₹0.77
+  NPR: 1.6,      // 1 NPR ≈ ₹0.625 (pegged 1:1.6 to INR)
 };
 
 const SUPPORTED_CODES = Object.keys(CURRENCY_INFO);
