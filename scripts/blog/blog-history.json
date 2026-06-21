@@ -224,9 +224,10 @@
     "quadratic-solver",
     "wedding-food-calculator",
     "college-fee-calculator",
-    "csv-to-json"
+    "csv-to-json",
+    "statistics-calculator"
   ],
-  "lastCategory": "data",
-  "totalPosts": 225,
-  "lastRun": "2026-06-20T08:31:34.956Z"
+  "lastCategory": "science",
+  "totalPosts": 226,
+  "lastRun": "2026-06-21T08:36:11.192Z"
 }
