@@ -136,6 +136,13 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
       "Calculate your EPF maturity corpus at retirement with employee and employer contributions at the current interest rate. Free India EPF tool.",
   },
 
+  // ── Startup / SaaS metrics ──────────────────────────────────────────
+  "cac-ltv-ratio-calculator": {
+    title: "LTV CAC Ratio Calculator — SaaS & Startup Unit Economics",
+    description:
+      "Free LTV:CAC ratio calculator for SaaS & startups. Get CAC, LTV, payback period + verdict against the 3× industry benchmark. India-focused, no signup.",
+  },
+
   // ── SEO ──────────────────────────────────────────────────────────────
   "seo-checker": {
     title: "Free SEO Checker — Website Audit & Report Tool",

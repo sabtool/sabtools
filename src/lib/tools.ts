@@ -333,6 +333,16 @@ export const tools: Tool[] = [
   { name: "Profit & Loss Calculator", slug: "profit-loss-calculator", description: "Calculate gross profit, operating profit, net profit and margins", category: "business", icon: "📈", keywords: ["profit", "loss", "margin", "revenue", "p&l", "income statement"] },
   { name: "Break-Even Calculator", slug: "break-even-calculator", description: "Calculate break-even point in units and revenue with profit visualization", category: "business", icon: "⚖️", keywords: ["break even", "fixed cost", "variable cost", "profit", "units"] },
   { name: "ROI Calculator", slug: "roi-calculator", description: "Calculate Return on Investment, annualized return and total profit/loss", category: "business", icon: "💰", keywords: ["roi", "return", "investment", "profit", "annualized"] },
+  { name: "CAC to LTV Ratio Calculator", slug: "cac-ltv-ratio-calculator", description: "Calculate your SaaS / startup CAC, LTV, LTV:CAC ratio and CAC payback period — with industry benchmarks, verdict band and founder advice for India SaaS targeting US or India markets.", category: "business", icon: "📊", keywords: [
+    // Head terms
+    "cac to ltv calculator", "ltv cac ratio calculator", "ltv to cac calculator", "customer acquisition cost calculator", "customer lifetime value calculator",
+    // SaaS / unit-economics phrasing
+    "saas unit economics calculator", "saas metrics calculator", "ltv cac ratio for saas", "ltv cac benchmark", "cac payback calculator",
+    // Indian startup market
+    "saas calculator india", "indian startup metrics calculator", "ltv cac india", "saas founder calculator",
+    // Long-tail
+    "what is a good ltv cac ratio", "calculate ltv cac for startup", "ltv cac ratio formula", "free ltv cac calculator no signup"
+  ] },
   { name: "Home Loan Affordability", slug: "home-loan-affordability", description: "Calculate maximum home loan amount based on income and EMI-to-income ratio", category: "business", icon: "🏠", keywords: ["home loan", "affordability", "emi", "income", "eligibility", "housing"] },
   { name: "Rent vs Buy Calculator", slug: "rent-vs-buy-calculator", description: "Compare total cost of buying vs renting a property over a period", category: "business", icon: "🏡", keywords: ["rent", "buy", "property", "real estate", "comparison", "emi"] },
   { name: "Carpet Area Calculator", slug: "carpet-area-calculator", description: "Calculate carpet area from super built-up area using loading factor for Indian real estate", category: "business", icon: "📐", keywords: ["carpet area", "built up", "super built up", "loading factor", "rera", "real estate"] },

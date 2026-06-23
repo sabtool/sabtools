@@ -278,6 +278,7 @@ const toolComponents: Record<string, AnyComponent> = {
   "profit-loss-calculator": dynamic(() => import("./ProfitLossCalculator")),
   "break-even-calculator": dynamic(() => import("./BreakEvenCalculator")),
   "roi-calculator": dynamic(() => import("./RoiCalculator")),
+  "cac-ltv-ratio-calculator": dynamic(() => import("./CacLtvRatioCalculator")),
   "home-loan-affordability": dynamic(() => import("./HomeLoanAffordability")),
   "rent-vs-buy-calculator": dynamic(() => import("./RentVsBuyCalculator")),
   "carpet-area-calculator": dynamic(() => import("./CarpetAreaCalculator")),

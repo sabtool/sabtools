@@ -2120,6 +2120,23 @@ const defaultContent: CategoryTemplate = {
  *     Dietetic Association and clinical nutrition globally
  */
 export const slugFormulas: Record<string, ToolFormula> = {
+  "cac-ltv-ratio-calculator": {
+    formula:
+      "CAC                 = (Monthly Sales + Marketing Spend) ÷ New Customers Acquired\n" +
+      "Customer Lifetime   = 1 ÷ Monthly Churn Rate                 (months)\n" +
+      "LTV                 = ARPU × Gross Margin × Customer Lifetime\n" +
+      "LTV : CAC Ratio     = LTV ÷ CAC\n" +
+      "CAC Payback Period  = CAC ÷ (ARPU × Gross Margin)            (months)",
+    variables: [
+      { symbol: "CAC", description: "Customer Acquisition Cost — total sales + marketing spend divided by new paying customers in the same period" },
+      { symbol: "ARPU", description: "Average Revenue Per User per month (also called ARPA — average revenue per account)" },
+      { symbol: "Gross Margin", description: "Revenue minus cost of serving the customer (hosting, support, payment fees) as a fraction" },
+      { symbol: "Monthly Churn", description: "Cancellations divided by active customers at the start of the month" },
+      { symbol: "Ratio benchmark", description: "<1 unfundable · 1–3 sub-optimal · 3–5 healthy SaaS standard · >5 likely under-investing in growth" },
+    ],
+    explanation:
+      "This is the David Skok / Bessemer Venture Partners formulation that became the SaaS industry standard. CAC measures how much you spend to bring in one paying customer. LTV measures the lifetime gross-margin contribution that customer brings. The LTV ÷ CAC ratio tells you whether the unit economics fundamentally work — 3× or higher is what Series A investors expect. The CAC payback period is a separate cash-flow metric — how many months to recover the acquisition cost — and healthy SaaS targets under 12 months.",
+  },
   "emi-calculator": {
     formula: "EMI = P × r × (1 + r)^n / ((1 + r)^n − 1)",
     variables: [
