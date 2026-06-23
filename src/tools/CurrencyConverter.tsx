@@ -138,8 +138,11 @@ export default function CurrencyConverter() {
   }, []);
 
   if (loading) {
+    // Reserve the same vertical space the loaded UI will occupy so the
+    // layout does not jump when rates arrive (fixes real-user CLS 0.281
+    // measured on mobile — see SEO brief 2026-06-23). Presentational only.
     return (
-      <div className="space-y-6">
+      <div className="space-y-6" style={{ minHeight: 360 }}>
         <div className="result-card text-center">
           <div className="text-lg font-semibold text-indigo-600 animate-pulse">Loading rates...</div>
           <div className="text-sm text-gray-500 mt-2">Fetching live exchange rates from API</div>
@@ -197,7 +200,7 @@ export default function CurrencyConverter() {
       </div>
 
       {result !== null && amount && (
-        <div className="result-card text-center">
+        <div className="result-card text-center" style={{ minHeight: 96 }}>
           <div className="text-sm text-gray-500">
             {CURRENCY_INFO[from].symbol} {formatNum(parseFloat(amount))} {from} =
           </div>
