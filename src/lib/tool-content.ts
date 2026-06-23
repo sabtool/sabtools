@@ -2120,6 +2120,25 @@ const defaultContent: CategoryTemplate = {
  *     Dietetic Association and clinical nutrition globally
  */
 export const slugFormulas: Record<string, ToolFormula> = {
+  "saas-rule-of-40-calculator": {
+    formula:
+      "Rule of 40 Score = YoY Revenue Growth % + Profit Margin %\n\n" +
+      "Healthy benchmark    ≥ 40\n" +
+      "Top quartile         ≥ 60\n" +
+      "Top decile           ≥ 80\n\n" +
+      "Auto-compute helpers:\n" +
+      "  Growth %  = (Current ARR − Last-year ARR) ÷ Last-year ARR × 100\n" +
+      "  Margin %  = Profit ÷ Revenue × 100      (use EBITDA, FCF or Net)",
+    variables: [
+      { symbol: "Growth %", description: "Year-over-year revenue or ARR growth, as a percentage" },
+      { symbol: "Margin %", description: "Profit margin — EBITDA / FCF / Net depending on context. Can be negative." },
+      { symbol: "EBITDA", description: "Earnings before interest, taxes, depreciation, amortization — public-market default" },
+      { symbol: "FCF", description: "Free cash flow — operating cash minus capex. Most conservative." },
+      { symbol: "40 threshold", description: "Brad Feld's original benchmark; Bessemer Cloud Index uses 40 as the pass/fail line" },
+    ],
+    explanation:
+      "Brad Feld popularised the Rule of 40 in 2015 and Bessemer Venture Partners made it the standard public SaaS health metric. The mathematical insight: high-growth SaaS justifies negative margins (growth compounds), and mature SaaS justifies slower growth (margin delivers cash today). The 40 threshold is the break-even between the two — companies below it are either growing too slowly OR burning too much.",
+  },
   "startup-valuation-calculator": {
     formula:
       "Post-money valuation = Investment ÷ Investor's equity %\n" +

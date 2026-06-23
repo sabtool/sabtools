@@ -280,6 +280,7 @@ const toolComponents: Record<string, AnyComponent> = {
   "roi-calculator": dynamic(() => import("./RoiCalculator")),
   "cac-ltv-ratio-calculator": dynamic(() => import("./CacLtvRatioCalculator")),
   "startup-valuation-calculator": dynamic(() => import("./StartupValuationCalculator")),
+  "saas-rule-of-40-calculator": dynamic(() => import("./SaasRuleOf40Calculator")),
   "home-loan-affordability": dynamic(() => import("./HomeLoanAffordability")),
   "rent-vs-buy-calculator": dynamic(() => import("./RentVsBuyCalculator")),
   "carpet-area-calculator": dynamic(() => import("./CarpetAreaCalculator")),

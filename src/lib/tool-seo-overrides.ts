@@ -137,6 +137,11 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
   },
 
   // ── Startup / SaaS metrics ──────────────────────────────────────────
+  "saas-rule-of-40-calculator": {
+    title: "SaaS Rule of 40 Calculator — Growth + Margin Health Score",
+    description:
+      "Free SaaS Rule of 40 calculator. Combines YoY growth + profit margin against the 40 benchmark. EBITDA / FCF / Net options, Bessemer Cloud Index bands.",
+  },
   "startup-valuation-calculator": {
     title: "Startup Valuation Calculator — Pre & Post-Money + Dilution",
     description:

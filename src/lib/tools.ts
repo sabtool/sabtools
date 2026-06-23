@@ -333,6 +333,18 @@ export const tools: Tool[] = [
   { name: "Profit & Loss Calculator", slug: "profit-loss-calculator", description: "Calculate gross profit, operating profit, net profit and margins", category: "business", icon: "📈", keywords: ["profit", "loss", "margin", "revenue", "p&l", "income statement"] },
   { name: "Break-Even Calculator", slug: "break-even-calculator", description: "Calculate break-even point in units and revenue with profit visualization", category: "business", icon: "⚖️", keywords: ["break even", "fixed cost", "variable cost", "profit", "units"] },
   { name: "ROI Calculator", slug: "roi-calculator", description: "Calculate Return on Investment, annualized return and total profit/loss", category: "business", icon: "💰", keywords: ["roi", "return", "investment", "profit", "annualized"] },
+  { name: "SaaS Rule of 40 Calculator", slug: "saas-rule-of-40-calculator", description: "Calculate your SaaS Rule of 40 score (growth + margin) and see how you stack up against the Bessemer Cloud Index. Supports EBITDA, FCF and Net margin. India-focused benchmarks for Series A through public-listed SaaS.", category: "business", icon: "📈", keywords: [
+    // Head terms
+    "saas rule of 40 calculator", "rule of 40 calculator", "rule of 40 saas", "saas health metric",
+    // SaaS metrics phrasing
+    "saas metrics calculator", "bessemer cloud index", "saas growth margin", "ebitda margin saas",
+    // Indian context
+    "indian saas metrics", "saas rule of 40 india", "freshworks rule of 40", "saas founder calculator india",
+    // Long-tail
+    "what is rule of 40", "rule of 40 formula", "rule of 40 benchmark", "growth vs profit saas", "snowflake rule of 40",
+    // Margin variants
+    "fcf margin calculator", "growth margin trade off"
+  ] },
   { name: "Startup Post-Money Valuation Calculator", slug: "startup-valuation-calculator", description: "Calculate post-money and pre-money valuation, founder dilution, ESOP top-up math (pre vs post money) and price-per-share for any startup funding round. Built for Indian SaaS and Series A/B negotiations.", category: "business", icon: "💼", keywords: [
     // Head terms
     "post money valuation calculator", "pre money valuation calculator", "startup valuation calculator", "startup funding calculator",
