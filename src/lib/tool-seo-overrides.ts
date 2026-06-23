@@ -137,6 +137,11 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
   },
 
   // ── Startup / SaaS metrics ──────────────────────────────────────────
+  "startup-valuation-calculator": {
+    title: "Startup Valuation Calculator — Pre & Post-Money + Dilution",
+    description:
+      "Free post-money & pre-money valuation calculator for startups. Get cap table, founder dilution, ESOP pre vs post-money split + India Series A benchmarks.",
+  },
   "cac-ltv-ratio-calculator": {
     title: "LTV CAC Ratio Calculator — SaaS & Startup Unit Economics",
     description:

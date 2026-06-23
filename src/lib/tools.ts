@@ -333,6 +333,18 @@ export const tools: Tool[] = [
   { name: "Profit & Loss Calculator", slug: "profit-loss-calculator", description: "Calculate gross profit, operating profit, net profit and margins", category: "business", icon: "📈", keywords: ["profit", "loss", "margin", "revenue", "p&l", "income statement"] },
   { name: "Break-Even Calculator", slug: "break-even-calculator", description: "Calculate break-even point in units and revenue with profit visualization", category: "business", icon: "⚖️", keywords: ["break even", "fixed cost", "variable cost", "profit", "units"] },
   { name: "ROI Calculator", slug: "roi-calculator", description: "Calculate Return on Investment, annualized return and total profit/loss", category: "business", icon: "💰", keywords: ["roi", "return", "investment", "profit", "annualized"] },
+  { name: "Startup Post-Money Valuation Calculator", slug: "startup-valuation-calculator", description: "Calculate post-money and pre-money valuation, founder dilution, ESOP top-up math (pre vs post money) and price-per-share for any startup funding round. Built for Indian SaaS and Series A/B negotiations.", category: "business", icon: "💼", keywords: [
+    // Head terms
+    "post money valuation calculator", "pre money valuation calculator", "startup valuation calculator", "startup funding calculator",
+    // Equity / dilution
+    "equity dilution calculator", "founder dilution calculator", "cap table calculator", "esop pool calculator", "esop dilution calculator",
+    // Indian context
+    "startup valuation calculator india", "indian startup funding calculator", "seed round valuation india", "series a valuation india",
+    // Specific instruments
+    "ccd convertible debenture calculator", "safe note calculator india", "convertible note calculator",
+    // Long-tail
+    "what is post money valuation", "pre money vs post money", "founder ownership after series a"
+  ] },
   { name: "CAC to LTV Ratio Calculator", slug: "cac-ltv-ratio-calculator", description: "Calculate your SaaS / startup CAC, LTV, LTV:CAC ratio and CAC payback period — with industry benchmarks, verdict band and founder advice for India SaaS targeting US or India markets.", category: "business", icon: "📊", keywords: [
     // Head terms
     "cac to ltv calculator", "ltv cac ratio calculator", "ltv to cac calculator", "customer acquisition cost calculator", "customer lifetime value calculator",

@@ -2120,6 +2120,23 @@ const defaultContent: CategoryTemplate = {
  *     Dietetic Association and clinical nutrition globally
  */
 export const slugFormulas: Record<string, ToolFormula> = {
+  "startup-valuation-calculator": {
+    formula:
+      "Post-money valuation = Investment ÷ Investor's equity %\n" +
+      "Pre-money valuation  = Post-money − Investment\n" +
+      "Price per share      = Pre-money ÷ Shares outstanding (pre-round)\n" +
+      "Founder % (ESOP pre-money)  = (1 − existing ESOP) × (1 − new ESOP) × (1 − investor %)\n" +
+      "Founder % (ESOP post-money) = (1 − existing ESOP) × (1 − investor %) × (1 − new ESOP)",
+    variables: [
+      { symbol: "Investment", description: "Cheque size the new investor is bringing into the round (in ₹)" },
+      { symbol: "Investor's equity %", description: "Percentage of the company the investor will own after the round" },
+      { symbol: "Pre-money", description: "What the company was worth right before the cheque cleared" },
+      { symbol: "Post-money", description: "Pre-money + investment — also the headline valuation reported in press" },
+      { symbol: "ESOP pre vs post-money", description: "Whether the new ESOP pool is created before (founders dilute) or after (everyone dilutes) the round closes — the single most contested term-sheet clause" },
+    ],
+    explanation:
+      "Post-money valuation is the simple division: cheque size ÷ equity given. The tricky part is the ESOP pool — investors push for pre-money pool creation, which dilutes only founders; founders should push for post-money pool creation, where everyone shares the dilution. On a ₹50 Cr Indian Series A at 20% with a 10% pool top-up, the choice is worth roughly 2 percentage points of founder equity. Multiply by your eventual exit value and the dollar difference is enormous.",
+  },
   "cac-ltv-ratio-calculator": {
     formula:
       "CAC                 = (Monthly Sales + Marketing Spend) ÷ New Customers Acquired\n" +
