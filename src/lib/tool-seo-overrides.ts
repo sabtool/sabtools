@@ -137,6 +137,11 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
   },
 
   // ── Startup / SaaS metrics ──────────────────────────────────────────
+  "burn-rate-runway-calculator": {
+    title: "Burn Rate & Runway Calculator — Startup Cash Projection",
+    description:
+      "Free startup burn rate & runway calculator. 24-month cash projection, burn multiple (Sacks), Default Alive (YC). Built for Indian seed & Series A founders.",
+  },
   "saas-rule-of-40-calculator": {
     title: "SaaS Rule of 40 Calculator — Growth + Margin Health Score",
     description:

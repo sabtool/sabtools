@@ -2120,6 +2120,24 @@ const defaultContent: CategoryTemplate = {
  *     Dietetic Association and clinical nutrition globally
  */
 export const slugFormulas: Record<string, ToolFormula> = {
+  "burn-rate-runway-calculator": {
+    formula:
+      "Gross burn           = Total monthly expenses\n" +
+      "Net burn             = Monthly expenses − Monthly revenue\n" +
+      "Runway (months)      = Current cash ÷ Net burn\n" +
+      "Zero-cash date       = Today + Runway months\n" +
+      "Burn multiple        = Net burn ÷ Net new ARR (same period)\n" +
+      "Default Alive (YC)   = Will you cross break-even before cash runs out?",
+    variables: [
+      { symbol: "Gross burn", description: "Total monthly cash leaving the bank — salaries, ads, tools, rent, tax" },
+      { symbol: "Net burn", description: "Gross burn minus monthly revenue — actual cash loss per month" },
+      { symbol: "Runway", description: "Months until cash hits zero (cash ÷ net burn); infinite if profitable" },
+      { symbol: "Burn multiple", description: "David Sacks framework — <1 amazing, 1-1.5 great, 2-3 okay, >3 suspect" },
+      { symbol: "Default Alive", description: "Paul Graham YC framework — will current trajectory reach profitability before cash runs out?" },
+    ],
+    explanation:
+      "Two frameworks built in. Paul Graham's Default Alive vs Default Dead (YC 2015) projects MoM revenue growth forward and asks whether you reach break-even before cash runs out. David Sacks' Burn Multiple (Craft Ventures 2020) divides net burn by net new ARR added in the same period — under 1.0 is amazing, 1-2 great, 2-3 okay, above 3 is suspect. Both are the standard Indian VC questions at every board meeting.",
+  },
   "saas-rule-of-40-calculator": {
     formula:
       "Rule of 40 Score = YoY Revenue Growth % + Profit Margin %\n\n" +

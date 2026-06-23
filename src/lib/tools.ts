@@ -333,6 +333,13 @@ export const tools: Tool[] = [
   { name: "Profit & Loss Calculator", slug: "profit-loss-calculator", description: "Calculate gross profit, operating profit, net profit and margins", category: "business", icon: "📈", keywords: ["profit", "loss", "margin", "revenue", "p&l", "income statement"] },
   { name: "Break-Even Calculator", slug: "break-even-calculator", description: "Calculate break-even point in units and revenue with profit visualization", category: "business", icon: "⚖️", keywords: ["break even", "fixed cost", "variable cost", "profit", "units"] },
   { name: "ROI Calculator", slug: "roi-calculator", description: "Calculate Return on Investment, annualized return and total profit/loss", category: "business", icon: "💰", keywords: ["roi", "return", "investment", "profit", "annualized"] },
+  { name: "Burn Rate & Runway Calculator", slug: "burn-rate-runway-calculator", description: "Calculate startup burn rate, runway in months, and 24-month cash projection. Includes burn multiple (David Sacks framework) and Default Alive / Dead status (Paul Graham YC framework). Built for Indian seed and Series A founders.", category: "business", icon: "⏳", keywords: [
+    "burn rate calculator", "runway calculator", "startup runway calculator", "cash runway calculator",
+    "gross burn vs net burn", "burn multiple calculator", "default alive default dead", "saas burn calculator",
+    "startup runway india", "indian startup burn rate", "seed runway india", "series a runway",
+    "how many months runway do i have", "when should i raise next round", "startup cash projection",
+    "calculate burn multiple saas", "paul graham default alive", "david sacks burn multiple"
+  ] },
   { name: "SaaS Rule of 40 Calculator", slug: "saas-rule-of-40-calculator", description: "Calculate your SaaS Rule of 40 score (growth + margin) and see how you stack up against the Bessemer Cloud Index. Supports EBITDA, FCF and Net margin. India-focused benchmarks for Series A through public-listed SaaS.", category: "business", icon: "📈", keywords: [
     // Head terms
     "saas rule of 40 calculator", "rule of 40 calculator", "rule of 40 saas", "saas health metric",
