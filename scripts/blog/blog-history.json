@@ -227,9 +227,10 @@
     "csv-to-json",
     "statistics-calculator",
     "indian-festival-calendar",
-    "countdown-timer"
+    "countdown-timer",
+    "ifsc-bank-details"
   ],
-  "lastCategory": "datetime",
-  "totalPosts": 228,
-  "lastRun": "2026-06-23T07:14:04.828Z"
+  "lastCategory": "whatsapp",
+  "totalPosts": 229,
+  "lastRun": "2026-06-24T07:33:14.632Z"
 }
