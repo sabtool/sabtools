@@ -229,9 +229,10 @@
     "indian-festival-calendar",
     "countdown-timer",
     "ifsc-bank-details",
-    "mind-map-generator"
+    "mind-map-generator",
+    "pdf-to-speech"
   ],
-  "lastCategory": "charts",
-  "totalPosts": 230,
-  "lastRun": "2026-06-25T07:39:48.526Z"
+  "lastCategory": "pdf",
+  "totalPosts": 231,
+  "lastRun": "2026-06-26T08:18:54.536Z"
 }
