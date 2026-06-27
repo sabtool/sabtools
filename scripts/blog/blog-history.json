@@ -230,9 +230,10 @@
     "countdown-timer",
     "ifsc-bank-details",
     "mind-map-generator",
-    "pdf-to-speech"
+    "pdf-to-speech",
+    "cooking-time-calculator"
   ],
-  "lastCategory": "pdf",
-  "totalPosts": 231,
-  "lastRun": "2026-06-26T08:18:54.536Z"
+  "lastCategory": "cooking",
+  "totalPosts": 232,
+  "lastRun": "2026-06-27T08:02:14.501Z"
 }
