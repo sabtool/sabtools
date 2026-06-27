@@ -138,6 +138,7 @@ const toolComponents: Record<string, AnyComponent> = {
 
   // SEO Tools (8)
   "seo-checker": dynamic(() => import("./SeoChecker")),
+  "seo-roi-calculator": dynamic(() => import("./SeoRoiCalculator")),
   "meta-tag-generator": dynamic(() => import("./MetaTagGenerator")),
   "open-graph-generator": dynamic(() => import("./OpenGraphGenerator")),
   "robots-txt-generator": dynamic(() => import("./RobotsTxtGenerator")),

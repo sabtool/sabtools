@@ -2120,6 +2120,25 @@ const defaultContent: CategoryTemplate = {
  *     Dietetic Association and clinical nutrition globally
  */
 export const slugFormulas: Record<string, ToolFormula> = {
+  "seo-roi-calculator": {
+    formula:
+      "Monthly clicks    = Search volume × CTR(target rank)\n" +
+      "Monthly leads     = Monthly clicks × Conversion rate\n" +
+      "Monthly revenue   = Monthly leads × Customer value\n" +
+      "Monthly uplift    = Target monthly revenue − Current monthly revenue\n" +
+      "12-month revenue  = Uplift × max(0, 12 − Months to rank)\n" +
+      "12-month ROI      = (12-month revenue − 12-month spend) ÷ 12-month spend × 100\n" +
+      "Payback (months)  = first month where cumulative profit ≥ 0",
+    variables: [
+      { symbol: "Search volume", description: "Monthly Google searches for the target keyword (from Ahrefs / Semrush / GKP)" },
+      { symbol: "CTR(rank)", description: "Click-through rate by SERP position (Sistrix 2024: #1=30%, #2=16%, #3=10%, #10=1.2%)" },
+      { symbol: "Conversion rate", description: "% of organic visitors who become customers — SaaS 1-3%, e-comm 1-2%, services 3-8%" },
+      { symbol: "Customer value", description: "AOV for one-time purchases or LTV for SaaS / subscription" },
+      { symbol: "Months to rank", description: "Realistic time to reach target position — 3-6mo for low-comp, 12-24mo for high-comp" },
+    ],
+    explanation:
+      "The SEO ROI formula prices each rank position by its CTR, then scales by your funnel conversion and customer value. The key variable is CTR-by-rank — moving from position 25 to position 3 on an 8,000-volume keyword takes you from ~24 clicks/month to ~800 clicks/month, a 33× increase. The Sistrix 2024 CTR study (80M-keyword sample) is the industry-standard benchmark used here.",
+  },
   "burn-rate-runway-calculator": {
     formula:
       "Gross burn           = Total monthly expenses\n" +

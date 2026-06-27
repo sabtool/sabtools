@@ -136,6 +136,13 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
       "Calculate your EPF maturity corpus at retirement with employee and employer contributions at the current interest rate. Free India EPF tool.",
   },
 
+  // ── Marketing / SEO ROI ─────────────────────────────────────────────
+  "seo-roi-calculator": {
+    title: "SEO ROI Calculator — Project Organic Revenue + Payback",
+    description:
+      "Free SEO ROI calculator. Project organic clicks, conversions, 12-month revenue uplift, payback period using Sistrix CTR benchmarks. Built for India.",
+  },
+
   // ── Startup / SaaS metrics ──────────────────────────────────────────
   "burn-rate-runway-calculator": {
     title: "Burn Rate & Runway Calculator — Startup Cash Projection",

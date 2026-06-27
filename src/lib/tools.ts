@@ -216,6 +216,14 @@ export const tools: Tool[] = [
   { name: "Image Format Converter", slug: "image-format-converter", description: "Convert images between PNG, JPG, WebP, BMP, GIF, ICO, TIFF, AVIF formats with quality control", category: "image", icon: "🔄", keywords: ["image converter", "format converter", "png to jpg", "jpg to png", "webp to jpg", "heic to jpg", "convert image", "image format"] },
 
   // SEO Tools
+  { name: "SEO ROI Calculator", slug: "seo-roi-calculator", description: "Calculate the ROI of your SEO campaign — projects organic clicks, conversions, revenue and payback period based on Sistrix CTR benchmarks. Built for Indian SaaS, e-commerce and lead-gen.", category: "seo", icon: "📈", keywords: [
+    "seo roi calculator", "seo return on investment calculator", "seo investment calculator",
+    "organic search roi", "seo cost benefit analysis", "calculate seo roi",
+    "seo agency roi", "is seo worth it", "seo vs ppc calculator",
+    "ctr by position calculator", "google rank ctr calculator",
+    "seo roi india", "seo agency cost india", "indian saas seo roi",
+    "how to measure seo roi", "seo payback period", "long tail seo roi"
+  ] },
   { name: "Meta Tag Generator", slug: "meta-tag-generator", description: "Generate SEO-friendly meta tags for your website", category: "seo", icon: "🏷️", keywords: ["meta tags", "seo", "title", "description", "og tags"] },
   { name: "Open Graph Generator", slug: "open-graph-generator", description: "Generate Open Graph meta tags for social media sharing", category: "seo", icon: "📱", keywords: ["open graph", "og", "facebook", "twitter", "social media"] },
   { name: "Robots.txt Generator", slug: "robots-txt-generator", description: "Generate robots.txt file for search engine crawlers", category: "seo", icon: "🤖", keywords: ["robots.txt", "seo", "crawler", "search engine", "sitemap"] },
