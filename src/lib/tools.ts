@@ -216,6 +216,15 @@ export const tools: Tool[] = [
   { name: "Image Format Converter", slug: "image-format-converter", description: "Convert images between PNG, JPG, WebP, BMP, GIF, ICO, TIFF, AVIF formats with quality control", category: "image", icon: "🔄", keywords: ["image converter", "format converter", "png to jpg", "jpg to png", "webp to jpg", "heic to jpg", "convert image", "image format"] },
 
   // SEO Tools
+  { name: "Email Marketing ROI Calculator", slug: "email-marketing-roi-calculator", description: "Project email marketing program ROI from list size, open rate, CTR, conversion, AOV and ESP cost — with India-specific benchmarks (B2C 22-28% open, 1.5-3% CTR; B2B 30-38% open, 2.5-5% CTR) and DPDP Act compliance notes.", category: "seo", icon: "📧", keywords: [
+    "email marketing roi calculator", "email marketing calculator india",
+    "email roi calculator", "newsletter roi calculator", "mailchimp roi calculator",
+    "open rate calculator", "ctr calculator email", "email marketing benchmarks india",
+    "esp comparison india", "brevo vs mailchimp", "zoho campaigns calculator",
+    "moengage roi", "mailmodo roi", "dpdp act email marketing",
+    "email marketing rate india", "b2b email marketing roi", "b2c email marketing roi",
+    "abandoned cart email roi", "welcome series roi"
+  ] },
   { name: "Website Ad Revenue Estimator", slug: "ad-revenue-estimator", description: "Estimate monthly AdSense / Ezoic / Mediavine ad revenue from pageviews, RPM, ad units, viewability and fill rate — with India-specific RPM benchmarks by niche (5-20× lower than US) and AdSense tax math.", category: "seo", icon: "💰", keywords: [
     "adsense calculator", "ad revenue calculator", "website ad revenue estimator",
     "adsense earnings calculator", "rpm calculator", "cpm calculator india",

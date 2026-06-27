@@ -2120,6 +2120,27 @@ const defaultContent: CategoryTemplate = {
  *     Dietetic Association and clinical nutrition globally
  */
 export const slugFormulas: Record<string, ToolFormula> = {
+  "email-marketing-roi-calculator": {
+    formula:
+      "Emails sent / month = List size × Sends per month\n" +
+      "Opens               = Emails sent × Open rate %\n" +
+      "Clicks              = Opens × CTR %\n" +
+      "Conversions         = Clicks × Conversion rate %\n" +
+      "Revenue             = Conversions × AOV (or lead value)\n" +
+      "Cost                = ESP cost + Copywriting cost\n" +
+      "ROI multiple        = Revenue ÷ Cost\n" +
+      "Net profit          = Revenue − Cost",
+    variables: [
+      { symbol: "List size", description: "Active opted-in subscribers (not cold or bought)" },
+      { symbol: "Open rate %", description: "India B2C 22-28%, B2B 30-38%. Apple MPP inflates this slightly" },
+      { symbol: "CTR %", description: "Click-through as % of opens. India B2C 1.5-3%, B2B 2.5-5%" },
+      { symbol: "Conversion rate %", description: "Email-to-purchase conversion. India e-comm 1-3%, B2B lead → SQL 2-5%" },
+      { symbol: "AOV (₹)", description: "Average Order Value (B2C) or blended lead value (B2B)" },
+      { symbol: "Cost (₹)", description: "ESP subscription + copywriting + design + ops" },
+    ],
+    explanation:
+      "Email marketing compounds at each funnel stage — small improvements at the top multiply downstream. Indian B2C programs typically earn ₹20-50 per ₹1 spent, B2B SaaS ₹30-70. Compliance: DPDP Act 2023 requires explicit consent, purpose statement at signup, easy unsubscribe, and consent record-keeping. Penalties up to ₹250 crore per breach.",
+  },
   "ad-revenue-estimator": {
     formula:
       "Paid impressions    = Pageviews × Ads per page × Viewability % × Fill rate %\n" +

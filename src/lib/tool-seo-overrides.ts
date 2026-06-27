@@ -137,6 +137,11 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
   },
 
   // ── Marketing / SEO ROI ─────────────────────────────────────────────
+  "email-marketing-roi-calculator": {
+    title: "Email Marketing ROI Calculator India — Benchmarks + Cost",
+    description:
+      "Free email marketing ROI calculator with India-specific benchmarks (B2C, B2B, creator). Compares Mailchimp / Brevo / Zoho cost. DPDP Act compliance notes.",
+  },
   "ad-revenue-estimator": {
     title: "AdSense Revenue Calculator India — RPM by Niche + Tax",
     description:
