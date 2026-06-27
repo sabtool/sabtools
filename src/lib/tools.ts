@@ -216,6 +216,15 @@ export const tools: Tool[] = [
   { name: "Image Format Converter", slug: "image-format-converter", description: "Convert images between PNG, JPG, WebP, BMP, GIF, ICO, TIFF, AVIF formats with quality control", category: "image", icon: "🔄", keywords: ["image converter", "format converter", "png to jpg", "jpg to png", "webp to jpg", "heic to jpg", "convert image", "image format"] },
 
   // SEO Tools
+  { name: "Website Ad Revenue Estimator", slug: "ad-revenue-estimator", description: "Estimate monthly AdSense / Ezoic / Mediavine ad revenue from pageviews, RPM, ad units, viewability and fill rate — with India-specific RPM benchmarks by niche (5-20× lower than US) and AdSense tax math.", category: "seo", icon: "💰", keywords: [
+    "adsense calculator", "ad revenue calculator", "website ad revenue estimator",
+    "adsense earnings calculator", "rpm calculator", "cpm calculator india",
+    "blog revenue calculator", "adsense india rpm", "ezoic earnings calculator",
+    "mediavine earnings calculator", "youtube ad revenue alternative",
+    "how much can i earn from adsense", "blog monetization calculator india",
+    "adsense tax india", "section 9 cgst adsense", "section 44ada blogger",
+    "ad rpm by niche india", "google adsense rpm india 2026"
+  ] },
   { name: "SEO ROI Calculator", slug: "seo-roi-calculator", description: "Calculate the ROI of your SEO campaign — projects organic clicks, conversions, revenue and payback period based on Sistrix CTR benchmarks. Built for Indian SaaS, e-commerce and lead-gen.", category: "seo", icon: "📈", keywords: [
     "seo roi calculator", "seo return on investment calculator", "seo investment calculator",
     "organic search roi", "seo cost benefit analysis", "calculate seo roi",

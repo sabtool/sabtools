@@ -2120,6 +2120,23 @@ const defaultContent: CategoryTemplate = {
  *     Dietetic Association and clinical nutrition globally
  */
 export const slugFormulas: Record<string, ToolFormula> = {
+  "ad-revenue-estimator": {
+    formula:
+      "Paid impressions    = Pageviews × Ads per page × Viewability % × Fill rate %\n" +
+      "Monthly revenue (₹) = (Paid impressions ÷ 1,000) × RPM\n" +
+      "Annual revenue      = Monthly revenue × 12\n" +
+      "Page RPM            = Monthly revenue ÷ Pageviews × 1,000\n" +
+      "After tax (~30%)    = Monthly revenue × (1 − 0.312)   (30% slab + 4% cess)",
+    variables: [
+      { symbol: "Pageviews", description: "Monthly pageviews from Google Analytics or Search Console (not sessions / users)" },
+      { symbol: "Ads per page", description: "Display + link ad units per page (AdSense ~3, Mediavine ~5-7)" },
+      { symbol: "Viewability %", description: "% of ads actually rendered in user's viewport. Industry standard 50-70%" },
+      { symbol: "Fill rate %", description: "% of ad slots filled with a paid ad. AdSense India 80-95%" },
+      { symbol: "RPM (₹)", description: "Revenue per 1,000 impressions. India general: ₹40-200; finance: ₹400-1,200; insurance: ₹800-2,500" },
+    ],
+    explanation:
+      "The four multipliers (ads/page × viewability × fill rate ÷ 1000) are what make real ad revenue diverge sharply from naive pageviews × RPM math. Indian RPMs are 5-20× lower than US RPMs because of lower advertiser bid prices, currency translation, and shallower advertiser demand. Tax: AdSense is business income (Section 44ADA presumptive option for sub-₹50L, ITR-3 above); plus 18% GST reverse charge under Section 9(1)(b) CGST Act above ₹20L turnover.",
+  },
   "seo-roi-calculator": {
     formula:
       "Monthly clicks    = Search volume × CTR(target rank)\n" +

@@ -137,6 +137,11 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
   },
 
   // ── Marketing / SEO ROI ─────────────────────────────────────────────
+  "ad-revenue-estimator": {
+    title: "AdSense Revenue Calculator India — RPM by Niche + Tax",
+    description:
+      "Free AdSense / Ezoic / Mediavine ad revenue calculator. India-specific RPM benchmarks by niche (5-20× lower than US). Includes GST + ITR tax math.",
+  },
   "seo-roi-calculator": {
     title: "SEO ROI Calculator — Project Organic Revenue + Payback",
     description:

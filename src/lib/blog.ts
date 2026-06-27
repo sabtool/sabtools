@@ -42651,8 +42651,7 @@ starting April 1, eligible employees can conveniently enroll in the UPS program 
     date: "2026-06-26",
     category: "PDF",
     readTime: "7 min read",
-    keywords: ["// core intent (head terms — long-shot but worth signaling)
-    pdf to speech", "pdf reader", "read pdf aloud", "pdf to audio", "pdf to voice", "text to speech pdf", "listen to pdf", "pdf voice reader"],
+    keywords: ["pdf to speech", "pdf reader", "read pdf aloud", "pdf to audio", "pdf to voice", "text to speech pdf", "listen to pdf", "pdf voice reader"],
     toolSlug: "pdf-to-speech",
     image: {
       src: "/blog/pdf-to-speech.webp",
