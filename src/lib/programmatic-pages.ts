@@ -255,10 +255,10 @@ export const programmaticPages: ProgrammaticPage[] = [
     slug: "1-crore-home-loan-emi",
     toolSlug: "emi-calculator",
     title: "1 Crore Home Loan EMI Calculator",
-    description: "Calculate EMI for Rs 1,00,00,000 home loan. Find monthly installment at different interest rates and tenures for 1 Crore housing loan.",
+    description: "Calculate 1 Crore home loan EMI for 10, 15 and 20 years. Free monthly installment & total interest for a Rs 1,00,00,000 housing loan — no signup.",
     h1: "1 Crore Home Loan EMI Calculator",
-    keywords: ["1-crore home loan emi","1 crore home loan monthly payment","emi for 1 crore home loan","1 crore housing loan emi","home loan 1 crore emi","1-crore loan calculator"],
-    content: "<p>A Rs 1,00,00,000 home loan at 8.5% interest for 20 years gives an approximate EMI of Rs 86,781 per month. Adjust the interest rate and tenure to match your bank's offer.</p><p>For a 1 Crore home loan, banks typically require a minimum salary of Rs 2,00,000 per month. Your home loan eligibility depends on income, existing EMIs, credit score and property value.</p><p>Most banks offer the best rates for loan amounts under Rs 30 lakh. Consider increasing your down payment to reduce the loan amount and save on total interest.</p>",
+    keywords: ["1-crore home loan emi","1 crore home loan monthly payment","emi for 1 crore home loan","1 crore housing loan emi","home loan 1 crore emi","1-crore loan calculator","1 crore home loan emi for 10 years","1 crore loan emi for 10 years"],
+    content: "<p>A Rs 1,00,00,000 home loan at 8.5% interest for 20 years gives an approximate EMI of Rs 86,781 per month. Adjust the interest rate and tenure to match your bank's offer.</p><p><strong>1 Crore home loan EMI by tenure (at 8.5%):</strong> for <strong>10 years</strong> the EMI is about Rs 1,23,986 per month (total interest ~Rs 48.78 lakh); for <strong>15 years</strong> about Rs 98,474 per month (total interest ~Rs 77.25 lakh); for <strong>20 years</strong> about Rs 86,781 per month (total interest ~Rs 1.08 crore). A shorter 10-year tenure raises the monthly EMI but cuts the total interest by more than half versus 20 years.</p><p>For a 1 Crore home loan, banks typically require a minimum salary of Rs 2,00,000 per month. Your home loan eligibility depends on income, existing EMIs, credit score and property value.</p><p>Most banks offer the best rates for loan amounts under Rs 30 lakh. Consider increasing your down payment to reduce the loan amount and save on total interest.</p>",
     defaults: {"loanAmount":10000000},
   },
   {
