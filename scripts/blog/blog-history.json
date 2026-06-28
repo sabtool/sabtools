@@ -231,9 +231,10 @@
     "ifsc-bank-details",
     "mind-map-generator",
     "pdf-to-speech",
-    "cooking-time-calculator"
+    "cooking-time-calculator",
+    "wood-beam-span-calculator"
   ],
-  "lastCategory": "cooking",
-  "totalPosts": 232,
-  "lastRun": "2026-06-27T08:02:14.501Z"
+  "lastCategory": "construction",
+  "totalPosts": 233,
+  "lastRun": "2026-06-28T08:12:29.471Z"
 }
