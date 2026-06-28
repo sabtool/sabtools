@@ -657,6 +657,18 @@ export const tools: Tool[] = [
     "structural timber design", "lvl 1.9e vs 2.0e",
     "indian timber group a b c"
   ] },
+  { name: "Floor Load Capacity Calculator", slug: "floor-load-capacity-calculator", description: "Compute maximum allowable load (kN/m² + kg/m²) on plywood, OSB, particle board or RCC slab floors. Per-1m-strip section design with IS 303/IS 710/IS 456 stresses, IS 875 live-load verdicts, and ₹/m² cost.", category: "construction", icon: "📐", keywords: [
+    "floor load capacity calculator", "plywood load calculator",
+    "rcc slab load calculator", "is 875 floor live load",
+    "ply floor thickness for span", "osb floor capacity",
+    "marine plywood load capacity", "subfloor capacity calculator",
+    "mezzanine floor calculator", "kg per square meter floor",
+    "raised access floor load", "particle board load capacity",
+    "is 303 plywood stress", "is 710 marine plywood",
+    "concrete slab load capacity m20 m25",
+    "how much weight can a floor hold", "office floor load 3 kn/m2",
+    "storage floor capacity 5 kn"
+  ] },
   { name: "Steel Weight Calculator", slug: "steel-weight-calculator", description: "Calculate weight of TMT bars, flat bars, angles, channels, pipes & plates with cost estimation", category: "construction", icon: "🔩", keywords: ["steel", "tmt", "bar", "weight", "rebar", "construction", "iron", "sariya"] },
   { name: "Plywood Calculator", slug: "plywood-calculator", description: "Calculate plywood sheets needed for walls, ceiling & floor with 10% wastage and cost estimate", category: "construction", icon: "🪵", keywords: ["plywood", "sheet", "8x4", "furniture", "interior", "wood", "laminate"] },
   { name: "Flooring Cost Calculator", slug: "flooring-cost-calculator", description: "Calculate flooring cost for tile, marble, granite, wood, vinyl & laminate with labor and wastage", category: "construction", icon: "🏠", keywords: ["flooring", "tile", "marble", "granite", "wooden", "vinyl", "laminate", "sqft"] },

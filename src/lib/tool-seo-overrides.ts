@@ -137,6 +137,11 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
   },
 
   // ── Construction ────────────────────────────────────────────────────
+  "floor-load-capacity-calculator": {
+    title: "Floor Load Capacity Calculator — Plywood, OSB, RCC India",
+    description:
+      "Free floor load calculator per IS 303 / IS 710 / IS 456. Plywood / OSB / particle / RCC slab. Bending + deflection check, IS 875 live load verdict, ₹/m².",
+  },
   "wood-beam-span-calculator": {
     title: "Wood Beam Span Calculator — IS 883 Timber + LVL India",
     description:

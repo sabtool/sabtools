@@ -2120,6 +2120,35 @@ const defaultContent: CategoryTemplate = {
  *     Dietetic Association and clinical nutrition globally
  */
 export const slugFormulas: Record<string, ToolFormula> = {
+  "floor-load-capacity-calculator": {
+    formula:
+      "Section properties (1 m wide × t mm thick strip):\n" +
+      "  I = 1000 × t³ / 12        (mm⁴)\n" +
+      "  Z = 1000 × t² / 6         (mm³)\n\n" +
+      "Self-weight:\n" +
+      "  w_sw   = ρ × 9.81 × t / 1000    (kN/m²)\n\n" +
+      "Sheet & PCC (allowable stress):\n" +
+      "  M_allow = Z × σ / 1e6           (kN·m)\n" +
+      "  w_max_bending     = 8 × M_allow / L²    (simply supported)\n" +
+      "  w_max_bending     = 10 × M_allow / L²   (continuous)\n" +
+      "  w_max_deflection  = 384 × E × I × (L/k) / (5 × L⁴)\n\n" +
+      "RCC slab (IS 456 limit-state / 1.5):\n" +
+      "  M_u = 0.138 × fck × b × d²\n" +
+      "  M_allow = M_u / 1.5\n\n" +
+      "Final capacity = MIN(bending, deflection)\n" +
+      "Live load available = Capacity − self-weight − finish dead load\n" +
+      "1 kN/m² = 102 kg/m²",
+    variables: [
+      { symbol: "t (mm)", description: "Floor thickness — 12-25 mm plywood, 100-200 mm RCC slab" },
+      { symbol: "L (m)", description: "Span — joist spacing for sheet, beam spacing for slab" },
+      { symbol: "σ_allow (N/mm²)", description: "IS 303 BWR 30, IS 710 BWP 35, marine 38, OSB 18, particle 14" },
+      { symbol: "E (N/mm²)", description: "Modulus of elasticity — drives deflection" },
+      { symbol: "L/k", description: "Deflection limit: L/240 utility, L/360 standard, L/480 brittle finish" },
+      { symbol: "ρ (kg/m³)", description: "Material density: plywood 620-700, OSB 620, RCC 2500" },
+    ],
+    explanation:
+      "Two safety checks govern floor design. Bending: actual moment must not exceed Z×σ. Deflection: actual mid-span deflection must not exceed L/360. For sheet materials over normal joist spans, deflection usually governs. IS 875 minimum live loads: residential 2 kN/m², office 3 kN/m², storage 5 kN/m². Always subtract self-weight + finish dead load (tiles 0.5, marble 1.0 kN/m²) from total capacity to get live-load availability.",
+  },
   "wood-beam-span-calculator": {
     formula:
       "Section properties (rectangular):\n" +
