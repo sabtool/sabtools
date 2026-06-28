@@ -669,6 +669,16 @@ export const tools: Tool[] = [
     "how much weight can a floor hold", "office floor load 3 kn/m2",
     "storage floor capacity 5 kn"
   ] },
+  { name: "Mulch & Gravel Calculator", slug: "mulch-gravel-calculator", description: "Calculate mulch, gravel, pebbles, sand, topsoil and compost volume + weight + bag count + truck loads + ₹ cost for landscaping coverage areas. 17 materials, rectangle / circle / triangle shapes, India 2026 rates.", category: "construction", icon: "🪨", keywords: [
+    "mulch calculator india", "gravel calculator", "pebble calculator landscaping",
+    "topsoil calculator", "compost calculator", "coco coir mulch calculator",
+    "wood mulch calculator", "landscaping cost calculator india",
+    "garden bed material calculator", "driveway gravel calculator",
+    "20mm aggregate calculator", "white pebble calculator",
+    "river sand calculator", "m-sand calculator", "manure calculator",
+    "mulch bags per square meter", "truck capacity for gravel",
+    "how much mulch tree", "landscape material india 2026"
+  ] },
   { name: "Steel Weight Calculator", slug: "steel-weight-calculator", description: "Calculate weight of TMT bars, flat bars, angles, channels, pipes & plates with cost estimation", category: "construction", icon: "🔩", keywords: ["steel", "tmt", "bar", "weight", "rebar", "construction", "iron", "sariya"] },
   { name: "Plywood Calculator", slug: "plywood-calculator", description: "Calculate plywood sheets needed for walls, ceiling & floor with 10% wastage and cost estimate", category: "construction", icon: "🪵", keywords: ["plywood", "sheet", "8x4", "furniture", "interior", "wood", "laminate"] },
   { name: "Flooring Cost Calculator", slug: "flooring-cost-calculator", description: "Calculate flooring cost for tile, marble, granite, wood, vinyl & laminate with labor and wastage", category: "construction", icon: "🏠", keywords: ["flooring", "tile", "marble", "granite", "wooden", "vinyl", "laminate", "sqft"] },

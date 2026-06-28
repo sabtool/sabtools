@@ -137,6 +137,11 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
   },
 
   // ── Construction ────────────────────────────────────────────────────
+  "mulch-gravel-calculator": {
+    title: "Mulch & Gravel Calculator India — Bags, Trucks, ₹ Cost",
+    description:
+      "Free mulch, gravel, pebble & topsoil calculator for India. Volume, weight, bag count, truck loads & cost. 17 materials, rectangle/circle/triangle shapes.",
+  },
   "floor-load-capacity-calculator": {
     title: "Floor Load Capacity Calculator — Plywood, OSB, RCC India",
     description:

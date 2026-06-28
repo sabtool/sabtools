@@ -2120,6 +2120,37 @@ const defaultContent: CategoryTemplate = {
  *     Dietetic Association and clinical nutrition globally
  */
 export const slugFormulas: Record<string, ToolFormula> = {
+  "mulch-gravel-calculator": {
+    formula:
+      "Area (m²):\n" +
+      "  Rectangle = L × W\n" +
+      "  Circle    = π × (D÷2)²\n" +
+      "  Triangle  = ½ × B × H\n\n" +
+      "Volume:\n" +
+      "  Raw vol   = Area × (Depth ÷ 1000)         (m³)\n" +
+      "  Final vol = Raw vol × (1 + Wastage%)      (m³)\n\n" +
+      "Conversions:\n" +
+      "  1 m³ = 35.3147 cft\n" +
+      "  1 brass = 100 cft = 2.83 m³\n" +
+      "  1 m² = 10.7639 sq ft\n\n" +
+      "Weight + bags:\n" +
+      "  Weight (kg) = Volume × Density\n" +
+      "  Bags 25kg   = ⌈Weight ÷ 25⌉\n" +
+      "  Bags 50kg   = ⌈Weight ÷ 50⌉\n\n" +
+      "Truck count (volume basis):\n" +
+      "  1-ton pickup ≈ 0.65 m³\n" +
+      "  5-ton truck  ≈ 3.0 m³\n" +
+      "  10-ton truck ≈ 6.0 m³\n\n" +
+      "Cost = Volume (cft) × Rate (₹/cft)",
+    variables: [
+      { symbol: "Density (kg/m³)", description: "Wood mulch 300, coco coir 240, river pebbles 1700, sand 1650, aggregate 1700, topsoil 1400, compost 700" },
+      { symbol: "Depth (mm)", description: "Mulch beds 50-75, around trees 75-100, decorative 25-50, driveway base 100, topsoil 100-200" },
+      { symbol: "Wastage %", description: "10-15% standard for landscaping — covers spillage + compaction + edge top-up" },
+      { symbol: "Truck capacity", description: "Tata Ace 0.65 m³, Tata 407 3.0 m³, tipper 6 m³ — bulk is 25-40% cheaper per m³ than bags" },
+    ],
+    explanation:
+      "Volume of material = area × depth × (1 + wastage). Weight = volume × density (varies wildly: mulch 300 kg/m³, pebbles 1700 kg/m³). Bag count divides by 25 or 50 kg retail size. Truck count divides by typical capacity. Cost is volume in cft × ₹/cft rate (Indian suppliers price by cft, not m³). Always order 10-15% extra for compaction and spillage.",
+  },
   "floor-load-capacity-calculator": {
     formula:
       "Section properties (1 m wide × t mm thick strip):\n" +

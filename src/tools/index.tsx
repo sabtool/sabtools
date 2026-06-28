@@ -144,6 +144,7 @@ const toolComponents: Record<string, AnyComponent> = {
   "concrete-footing-calculator": dynamic(() => import("./ConcreteFootingCalculator")),
   "wood-beam-span-calculator": dynamic(() => import("./WoodBeamSpanCalculator")),
   "floor-load-capacity-calculator": dynamic(() => import("./FloorLoadCapacityCalculator")),
+  "mulch-gravel-calculator": dynamic(() => import("./MulchGravelCalculator")),
   "meta-tag-generator": dynamic(() => import("./MetaTagGenerator")),
   "open-graph-generator": dynamic(() => import("./OpenGraphGenerator")),
   "robots-txt-generator": dynamic(() => import("./RobotsTxtGenerator")),
