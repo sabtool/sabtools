@@ -204,6 +204,7 @@ const toolComponents: Record<string, AnyComponent> = {
   "eighth-pay-commission-calculator": dynamic(() => import("./EighthPayCommissionCalculator")),
   "crypto-tax-calculator": dynamic(() => import("./CryptoTaxCalculator")),
   "capital-gains-tax-calculator": dynamic(() => import("./CapitalGainsTaxCalculator")),
+  "unlisted-shares-cgt-calculator": dynamic(() => import("./UnlistedSharesCgtCalculator")),
   "tax-regime-comparator": dynamic(() => import("./TaxRegimeComparator")),
   "goal-based-sip-calculator": dynamic(() => import("./GoalBasedSipCalculator")),
   "lakh-crore-converter": dynamic(() => import("./LakhCroreConverter")),

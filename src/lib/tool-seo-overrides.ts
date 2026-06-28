@@ -115,6 +115,11 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
     description:
       "Calculate TDS deduction for salary, rent, professional fees and more across all sections. See the net amount after tax. Free India TDS tool.",
   },
+  "unlisted-shares-cgt-calculator": {
+    title: "Unlisted Shares CGT Calculator India — ESOP + Startup Exit",
+    description:
+      "Calculate LTCG / STCG tax on unlisted shares — ESOPs, startup equity, buyback — per Finance Act 2024 (12.5% LTCG). Surcharge, cess, 54F/54EC exemption guide.",
+  },
   "capital-gains-tax-calculator": {
     title: "Capital Gains Tax Calculator — LTCG & STCG (India)",
     description:

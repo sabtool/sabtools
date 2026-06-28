@@ -2539,6 +2539,35 @@ export const slugFormulas: Record<string, ToolFormula> = {
     explanation:
       "Age in years-months-days uses calendar arithmetic, not a flat division. Each month-component decrements when the today.day < DOB.day (borrows ~30 days), then years decrement when months go negative (borrows 12 months). This is the same logic used by the Income Tax e-filing portal to compute age for senior-citizen / super-senior tax slabs (60+ and 80+).",
   },
+  "unlisted-shares-cgt-calculator": {
+    formula:
+      "Holding period (months) = (Sale FY × 12 + sale month) − (Purchase FY × 12 + purchase month)\n" +
+      "  > 24 months → Long-term (LTCG)\n" +
+      "  ≤ 24 months → Short-term (STCG)\n\n" +
+      "Capital gain = Sale price − Cost of acquisition − Improvement − Transfer expenses\n\n" +
+      "LTCG tax (post Finance Act 2024):\n" +
+      "  Tax = 12.5% × Gain        (no indexation allowed for unlisted shares)\n\n" +
+      "STCG tax:\n" +
+      "  Tax = Slab rate × Gain    (Section 111A does NOT apply to unlisted)\n\n" +
+      "Surcharge on capital gains:\n" +
+      "  ≤ 50L     : 0%\n" +
+      "  50L−1Cr   : 10%\n" +
+      "  1Cr−2Cr   : 15%\n" +
+      "  > 2Cr     : 15%  (capped for capital gains)\n\n" +
+      "Cess: 4% on (Tax + Surcharge)\n" +
+      "Total tax = Base tax + Surcharge + Cess\n" +
+      "Net in hand = Sale price − Total tax − Transfer expenses",
+    variables: [
+      { symbol: "Sale price", description: "Total consideration received from buyer / company" },
+      { symbol: "Cost of acquisition", description: "ESOP holders: FMV at exercise date (perquisite tax already paid). Founders: subscription price" },
+      { symbol: "Holding period 24m", description: "Statutory threshold for LTCG vs STCG on unlisted shares (Section 2(42A))" },
+      { symbol: "LTCG rate 12.5%", description: "Finance Act 2024 — flat rate, no indexation. Applied retroactively from 23 July 2024" },
+      { symbol: "Section 54F", description: "Exempt LTCG by investing net sale consideration in residential property within 2 years. Cap ₹10 Cr" },
+      { symbol: "Section 54EC", description: "Exempt up to ₹50L LTCG by investing in NHAI / REC / IRFC / PFC bonds within 6 months. 5-year lock-in" },
+    ],
+    explanation:
+      "Finance Act 2024 made two big changes for unlisted shares effective 23 July 2024: (1) LTCG rate reduced from 20% with indexation to 12.5% without indexation — favourable for most growth-stock holders; (2) buy-back proceeds now taxable in seller's hands as dividend income at slab rate (was earlier tax-free after company-paid distribution tax). For ESOP holders, holding period starts from exercise date (not grant or vest), and cost basis is FMV at exercise. Section 54F (residential property) and Section 54EC (NHAI/REC bonds) remain useful exemption pathways for large exits.",
+  },
   "capital-gains-tax-calculator": {
     formula:
       "Capital gain = Sale price − Purchase price (− improvement & transfer cost)\n\nPost-Budget 2024 (FY 2025-26):\n  STCG on equity (Sec 111A)    → 20% (raised from 15%)\n  LTCG on equity (Sec 112A)    → 12.5% above ₹1.25L exempt (raised from 10%)\n  STCG on others (slab-rate)   → as per income tax slab\n  LTCG on others (Sec 112)     → 12.5% (indexation removed for sales after 23 Jul 2024)",

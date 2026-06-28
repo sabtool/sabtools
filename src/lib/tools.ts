@@ -301,6 +301,18 @@ export const tools: Tool[] = [
   { name: "8th Pay Commission Calculator", slug: "eighth-pay-commission-calculator", description: "Calculate expected salary under 8th Pay Commission with fitment factor, HRA and allowances comparison", category: "tax", icon: "🏛️", keywords: ["8th pay commission", "pay commission calculator", "fitment factor", "government salary", "7th cpc", "8th cpc", "central government"] },
   { name: "Crypto Tax Calculator", slug: "crypto-tax-calculator", description: "Calculate 30% crypto tax under Section 115BBH plus 1% TDS, surcharge and cess for FY 2025-26", category: "tax", icon: "🪙", keywords: ["crypto tax calculator india", "cryptocurrency tax", "vda tax", "section 115bbh", "1% tds crypto", "section 194s", "bitcoin tax india", "ethereum tax", "30% crypto tax"] },
   { name: "Capital Gains Tax Calculator", slug: "capital-gains-tax-calculator", description: "Calculate STCG and LTCG tax for stocks, mutual funds, property and gold with post-Budget 2024 rates (FY 2025-26)", category: "tax", icon: "📊", keywords: ["capital gains tax calculator", "ltcg calculator india", "stcg calculator", "section 111a", "section 112a", "section 112", "ltcg 12.5%", "stcg 20%", "property capital gains", "equity ltcg exemption"], hindiName: "कैपिटल गेन्स टैक्स कैलकुलेटर" },
+  { name: "Capital Gains Tax — Unlisted Shares (ESOP)", slug: "unlisted-shares-cgt-calculator", description: "Calculate LTCG / STCG tax on unlisted shares — ESOPs, startup equity, secondary tender, buyback — per Finance Act 2024 (12.5% LTCG, slab STCG). Surcharge + cess + Section 54F / 54EC exemption guidance.", category: "tax", icon: "🚀", keywords: [
+    "unlisted shares capital gains", "esop capital gains calculator india",
+    "startup equity tax", "private company shares ltcg",
+    "section 112 unlisted shares", "12.5% ltcg unlisted",
+    "esop tax calculator india", "secondary share sale tax",
+    "buyback tax 2024", "finance act 2024 unlisted shares",
+    "esop exercise tax", "section 54f exemption esop",
+    "section 54ec bonds ltcg", "founder shares tax",
+    "angel investor exit tax", "section 56(2)(viib) angel tax",
+    "fmv unlisted shares rule 11ua",
+    "nri capital gains unlisted shares"
+  ], hindiName: "अनलिस्टेड शेयर कैपिटल गेन्स" },
   { name: "Old vs New Tax Regime Comparator", slug: "tax-regime-comparator", description: "Side-by-side comparison of Old vs New tax regime for FY 2025-26 with all deductions, surcharge and cess to find the rupee-level winner", category: "tax", icon: "⚖️", keywords: ["old vs new regime", "tax regime comparison", "new tax regime fy 2025-26", "section 87a rebate", "tax slab comparison", "which regime is better", "75000 standard deduction", "1200000 rebate", "income tax comparator"] },
   { name: "TDS on Rent Calculator (194IB)", slug: "tds-on-rent-calculator", description: "Calculate TDS on rent under Section 194IB at 2% rate for tenants paying above ₹50,000/month with annual deduction, threshold and PAN-less rate handling", category: "tax", icon: "🏠", keywords: ["tds on rent", "section 194ib", "tds rent 50000", "form 26qc", "form 16c", "2% tds rent", "rent above 50000", "tenant tds", "194ib calculator"] },
   { name: "State Road Tax / Vehicle Registration Calculator", slug: "state-road-tax-calculator", description: "Calculate state-wise road tax for new car registration with verified rates for 21 Indian states and UTs including Maharashtra, Karnataka, Delhi, Tamil Nadu, Gujarat, UP and EV exemptions", category: "tax", icon: "🚗", keywords: ["road tax calculator", "vehicle registration tax", "rto charges", "state wise road tax", "car registration cost", "maharashtra road tax", "karnataka road tax", "delhi road tax", "ev road tax exemption"] },
