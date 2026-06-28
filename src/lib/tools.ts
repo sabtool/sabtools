@@ -646,6 +646,17 @@ export const tools: Tool[] = [
     "is 456 concrete mix design", "tmt bar weight 12mm 16mm",
     "footing cost calculator india 2026", "concrete dry volume factor 1.54"
   ] },
+  { name: "Wood Beam Span Calculator", slug: "wood-beam-span-calculator", description: "Calculate maximum allowable span and load for timber and LVL beams per IS 883 — supports 13 Indian species (teak, sal, deodar, eucalyptus + 1.9E/2.0E LVL), simply supported and cantilever, bending and L/350 deflection check.", category: "construction", icon: "🌲", keywords: [
+    "wood beam span calculator", "lvl beam calculator india",
+    "timber beam span calculator", "is 883 timber design",
+    "teak beam span", "sal beam load capacity", "deodar beam calculator",
+    "laminated veneer lumber calculator", "wood beam deflection calculator",
+    "floor beam span calculator", "cantilever timber beam",
+    "wood beam size for span", "is 875 live load",
+    "max span 100x200 beam", "wood beam cost calculator india",
+    "structural timber design", "lvl 1.9e vs 2.0e",
+    "indian timber group a b c"
+  ] },
   { name: "Steel Weight Calculator", slug: "steel-weight-calculator", description: "Calculate weight of TMT bars, flat bars, angles, channels, pipes & plates with cost estimation", category: "construction", icon: "🔩", keywords: ["steel", "tmt", "bar", "weight", "rebar", "construction", "iron", "sariya"] },
   { name: "Plywood Calculator", slug: "plywood-calculator", description: "Calculate plywood sheets needed for walls, ceiling & floor with 10% wastage and cost estimate", category: "construction", icon: "🪵", keywords: ["plywood", "sheet", "8x4", "furniture", "interior", "wood", "laminate"] },
   { name: "Flooring Cost Calculator", slug: "flooring-cost-calculator", description: "Calculate flooring cost for tile, marble, granite, wood, vinyl & laminate with labor and wastage", category: "construction", icon: "🏠", keywords: ["flooring", "tile", "marble", "granite", "wooden", "vinyl", "laminate", "sqft"] },

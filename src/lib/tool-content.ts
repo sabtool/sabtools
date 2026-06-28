@@ -2120,6 +2120,34 @@ const defaultContent: CategoryTemplate = {
  *     Dietetic Association and clinical nutrition globally
  */
 export const slugFormulas: Record<string, ToolFormula> = {
+  "wood-beam-span-calculator": {
+    formula:
+      "Section properties (rectangular):\n" +
+      "  Area    = b × d\n" +
+      "  I       = b·d³ / 12   (mm⁴)\n" +
+      "  Z       = b·d² / 6    (mm³)\n\n" +
+      "Simply supported, UDL w (kN/m):\n" +
+      "  M_max   = w·L² / 8\n" +
+      "  V_max   = w·L / 2\n" +
+      "  δ_max   = 5·w·L⁴ / (384·E·I)\n\n" +
+      "Cantilever, UDL:\n" +
+      "  M_max   = w·L² / 2\n" +
+      "  V_max   = w·L\n" +
+      "  δ_max   = w·L⁴ / (8·E·I)\n\n" +
+      "Bending check       : M ≤ Z · σ_allow\n" +
+      "Deflection check    : δ ≤ L / 350    (IS 883 floor beam default)",
+    variables: [
+      { symbol: "b, d (mm)", description: "Beam breadth × depth — d is the deeper (load-bearing) dimension" },
+      { symbol: "I (mm⁴)", description: "Moment of inertia — drives deflection. Doubles with each ~25% increase in d" },
+      { symbol: "Z (mm³)", description: "Section modulus — drives bending capacity" },
+      { symbol: "σ_allow (N/mm²)", description: "Permissible bending stress per IS 883 group A 16.5, B 10.5, C 7.0; LVL 19-24" },
+      { symbol: "E (N/mm²)", description: "Modulus of elasticity — drives deflection. Indian timber 6000-12500, LVL 13200-14000" },
+      { symbol: "L (m)", description: "Clear span between supports" },
+      { symbol: "w (kN/m)", description: "Line load = (Dead + Live area load × tributary width) for slab loading" },
+    ],
+    explanation:
+      "Two safety checks govern timber beam design. Bending: actual moment must not exceed Z × σ_allow. Deflection: actual mid-span deflection must not exceed L/350 (IS 883 default for floor beams). For spans above ~3 m, deflection usually governs because δ scales with L⁴ while M scales with L². Fix oversized deflection by increasing d (not b) — δ scales as 1/d³. LVL gives 30-40% strength advantage over Group A timber at similar cost per cft.",
+  },
   "concrete-footing-calculator": {
     formula:
       "Rectangle volume   = L × W × D\n" +

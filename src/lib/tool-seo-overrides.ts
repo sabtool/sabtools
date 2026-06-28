@@ -137,6 +137,11 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
   },
 
   // ── Construction ────────────────────────────────────────────────────
+  "wood-beam-span-calculator": {
+    title: "Wood Beam Span Calculator — IS 883 Timber + LVL India",
+    description:
+      "Free wood / LVL beam span calculator per IS 883:1994. Supports teak, sal, deodar, eucalyptus + 1.9E/2.0E LVL. Bending + L/350 deflection check, cost per cft.",
+  },
   "concrete-footing-calculator": {
     title: "Concrete Footing Calculator India — Cement, Sand, Steel & ₹",
     description:
