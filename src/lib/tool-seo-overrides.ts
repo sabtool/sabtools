@@ -136,6 +136,13 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
       "Calculate your EPF maturity corpus at retirement with employee and employer contributions at the current interest rate. Free India EPF tool.",
   },
 
+  // ── Construction ────────────────────────────────────────────────────
+  "concrete-footing-calculator": {
+    title: "Concrete Footing Calculator India — Cement, Sand, Steel & ₹",
+    description:
+      "Free RCC footing calculator with M10-M30 mix designs, brass conversion, rebar weight (IS:1786) and full bill of materials with India 2026 rates. PCC + design mix supported.",
+  },
+
   // ── Marketing / SEO ROI ─────────────────────────────────────────────
   "email-marketing-roi-calculator": {
     title: "Email Marketing ROI Calculator India — Benchmarks + Cost",

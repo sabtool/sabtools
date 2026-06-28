@@ -636,6 +636,16 @@ export const tools: Tool[] = [
 
   // Construction (10)
   { name: "Concrete Calculator", slug: "concrete-calculator", description: "Calculate concrete volume, cement bags, sand & aggregate for M15/M20/M25 grades with cost estimate", category: "construction", icon: "🧱", keywords: ["concrete", "cement", "sand", "aggregate", "rcc", "m20", "m25", "construction"] },
+  { name: "Concrete Footing Volume Calculator", slug: "concrete-footing-calculator", description: "Calculate concrete volume, cement bags, sand, aggregate, water and rebar steel for RCC footings — supports rectangular, square, circular and trapezoidal shapes with M10-M30 mix designs, brass conversion and full bill of materials with India cost rates.", category: "construction", icon: "🏗️", keywords: [
+    "concrete footing calculator", "rcc footing volume calculator",
+    "footing concrete calculator india", "isolated footing calculator",
+    "raft foundation concrete", "concrete volume calculator m20 m25",
+    "trapezoidal footing calculator", "circular footing calculator",
+    "footing cement bag calculator", "footing material estimation",
+    "concrete bill of materials", "brass to cubic meter", "rebar weight footing",
+    "is 456 concrete mix design", "tmt bar weight 12mm 16mm",
+    "footing cost calculator india 2026", "concrete dry volume factor 1.54"
+  ] },
   { name: "Steel Weight Calculator", slug: "steel-weight-calculator", description: "Calculate weight of TMT bars, flat bars, angles, channels, pipes & plates with cost estimation", category: "construction", icon: "🔩", keywords: ["steel", "tmt", "bar", "weight", "rebar", "construction", "iron", "sariya"] },
   { name: "Plywood Calculator", slug: "plywood-calculator", description: "Calculate plywood sheets needed for walls, ceiling & floor with 10% wastage and cost estimate", category: "construction", icon: "🪵", keywords: ["plywood", "sheet", "8x4", "furniture", "interior", "wood", "laminate"] },
   { name: "Flooring Cost Calculator", slug: "flooring-cost-calculator", description: "Calculate flooring cost for tile, marble, granite, wood, vinyl & laminate with labor and wastage", category: "construction", icon: "🏠", keywords: ["flooring", "tile", "marble", "granite", "wooden", "vinyl", "laminate", "sqft"] },

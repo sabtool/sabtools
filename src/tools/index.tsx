@@ -141,6 +141,7 @@ const toolComponents: Record<string, AnyComponent> = {
   "seo-roi-calculator": dynamic(() => import("./SeoRoiCalculator")),
   "ad-revenue-estimator": dynamic(() => import("./AdRevenueEstimator")),
   "email-marketing-roi-calculator": dynamic(() => import("./EmailMarketingRoiCalculator")),
+  "concrete-footing-calculator": dynamic(() => import("./ConcreteFootingCalculator")),
   "meta-tag-generator": dynamic(() => import("./MetaTagGenerator")),
   "open-graph-generator": dynamic(() => import("./OpenGraphGenerator")),
   "robots-txt-generator": dynamic(() => import("./RobotsTxtGenerator")),

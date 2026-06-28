@@ -2120,6 +2120,29 @@ const defaultContent: CategoryTemplate = {
  *     Dietetic Association and clinical nutrition globally
  */
 export const slugFormulas: Record<string, ToolFormula> = {
+  "concrete-footing-calculator": {
+    formula:
+      "Rectangle volume   = L × W × D\n" +
+      "Square volume      = Side² × D\n" +
+      "Circular volume    = π × (D/2)² × Depth\n" +
+      "Trapezoidal vol    = Depth/3 × (A₁ + A₂ + √(A₁ × A₂))\n" +
+      "Wet volume         = Per-footing × Count × (1 + Wastage%)\n" +
+      "Dry volume         = Wet volume × 1.54   (BIS shrinkage factor)\n" +
+      "Cement qty (m³)    = Dry vol × Cement-part ÷ Total-parts\n" +
+      "Cement bags        = ⌈Cement kg ÷ 50⌉\n" +
+      "Water (w/c 0.50)   = Cement kg × 0.5  litres\n" +
+      "Steel weight       = ((d² × L) ÷ 162) kg/m   [BIS-IS:1786]\n" +
+      "1 brass            = 100 ft³ = 2.83 m³",
+    variables: [
+      { symbol: "L, W, D", description: "Length, width, depth of footing in metres" },
+      { symbol: "Dry-volume factor 1.54", description: "BIS-accepted shrinkage + voids allowance — skipping this under-orders cement by ~35%" },
+      { symbol: "Cement bulk density", description: "1440 kg/m³ — 1 bag of 50 kg = 0.0347 m³" },
+      { symbol: "Mix parts", description: "M10 1:3:6, M15 1:2:4, M20 1:1.5:3, M25 1:1:2, M30 1:0.75:1.5 (cement:sand:aggregate)" },
+      { symbol: "Steel formula d²/162", description: "Standard BIS-IS:1786 formula for TMT bar weight per metre" },
+    ],
+    explanation:
+      "Volume calculations follow IS 456:2000 nominal-mix tables. The 1.54 dry-volume factor compensates for shrinkage between dry components and wet concrete plus voids in sand/aggregate — it is the single most overlooked step in DIY estimation. Water-cement ratio fixed at 0.50 (IS 456 max for footings exposed to soil). Steel weight uses the BIS-IS:1786 standard d²/162 kg/m formula. Brass conversion (100 ft³ = 2.83 m³) included for Maharashtra/Gujarat suppliers who sell sand/aggregate by the brass.",
+  },
   "email-marketing-roi-calculator": {
     formula:
       "Emails sent / month = List size × Sends per month\n" +
