@@ -232,9 +232,10 @@
     "mind-map-generator",
     "pdf-to-speech",
     "cooking-time-calculator",
-    "wood-beam-span-calculator"
+    "wood-beam-span-calculator",
+    "pan-card-validator"
   ],
-  "lastCategory": "construction",
-  "totalPosts": 233,
-  "lastRun": "2026-06-28T08:12:29.471Z"
+  "lastCategory": "utility",
+  "totalPosts": 234,
+  "lastRun": "2026-06-29T09:19:36.425Z"
 }
