@@ -237,9 +237,10 @@
     "flexbox-playground",
     "sukanya-samriddhi-calculator",
     "nps-calculator",
-    "color-palette-extractor"
+    "color-palette-extractor",
+    "vehicle-number-info"
   ],
-  "lastCategory": "image",
-  "totalPosts": 238,
-  "lastRun": "2026-07-03T06:48:12.381Z"
+  "lastCategory": "utility",
+  "totalPosts": 239,
+  "lastRun": "2026-07-04T07:48:20.764Z"
 }
