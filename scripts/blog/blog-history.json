@@ -238,9 +238,10 @@
     "sukanya-samriddhi-calculator",
     "nps-calculator",
     "color-palette-extractor",
-    "vehicle-number-info"
+    "vehicle-number-info",
+    "floor-load-capacity-calculator"
   ],
-  "lastCategory": "utility",
-  "totalPosts": 239,
-  "lastRun": "2026-07-04T07:48:20.764Z"
+  "lastCategory": "construction",
+  "totalPosts": 240,
+  "lastRun": "2026-07-05T08:00:51.367Z"
 }
