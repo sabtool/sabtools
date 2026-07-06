@@ -239,9 +239,10 @@
     "nps-calculator",
     "color-palette-extractor",
     "vehicle-number-info",
-    "floor-load-capacity-calculator"
+    "floor-load-capacity-calculator",
+    "flip-a-coin"
   ],
-  "lastCategory": "construction",
-  "totalPosts": 240,
-  "lastRun": "2026-07-05T08:00:51.367Z"
+  "lastCategory": "fun",
+  "totalPosts": 241,
+  "lastRun": "2026-07-06T08:26:43.128Z"
 }
