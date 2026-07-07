@@ -240,9 +240,10 @@
     "color-palette-extractor",
     "vehicle-number-info",
     "floor-load-capacity-calculator",
-    "flip-a-coin"
+    "flip-a-coin",
+    "scholarship-eligibility-checker"
   ],
-  "lastCategory": "fun",
-  "totalPosts": 241,
-  "lastRun": "2026-07-06T08:26:43.128Z"
+  "lastCategory": "exam",
+  "totalPosts": 242,
+  "lastRun": "2026-07-07T08:16:49.956Z"
 }
