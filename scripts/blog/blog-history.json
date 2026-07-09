@@ -242,9 +242,10 @@
     "floor-load-capacity-calculator",
     "flip-a-coin",
     "scholarship-eligibility-checker",
-    "ip-geolocation"
+    "ip-geolocation",
+    "discount-calculator"
   ],
-  "lastCategory": "security",
-  "totalPosts": 243,
-  "lastRun": "2026-07-08T06:45:32.927Z"
+  "lastCategory": "math",
+  "totalPosts": 244,
+  "lastRun": "2026-07-09T08:04:01.129Z"
 }
