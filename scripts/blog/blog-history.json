@@ -243,9 +243,10 @@
     "flip-a-coin",
     "scholarship-eligibility-checker",
     "ip-geolocation",
-    "discount-calculator"
+    "discount-calculator",
+    "lpg-subsidy-calculator"
   ],
-  "lastCategory": "math",
-  "totalPosts": 244,
-  "lastRun": "2026-07-09T08:04:01.129Z"
+  "lastCategory": "indiaguide",
+  "totalPosts": 245,
+  "lastRun": "2026-07-10T08:05:21.441Z"
 }
