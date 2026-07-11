@@ -244,9 +244,10 @@
     "scholarship-eligibility-checker",
     "ip-geolocation",
     "discount-calculator",
-    "lpg-subsidy-calculator"
+    "lpg-subsidy-calculator",
+    "car-insurance-estimator"
   ],
-  "lastCategory": "indiaguide",
-  "totalPosts": 245,
-  "lastRun": "2026-07-10T08:05:21.441Z"
+  "lastCategory": "vehicle",
+  "totalPosts": 246,
+  "lastRun": "2026-07-11T06:18:47.972Z"
 }
