@@ -245,9 +245,10 @@
     "ip-geolocation",
     "discount-calculator",
     "lpg-subsidy-calculator",
-    "car-insurance-estimator"
+    "car-insurance-estimator",
+    "redirect-checker"
   ],
-  "lastCategory": "vehicle",
-  "totalPosts": 246,
-  "lastRun": "2026-07-11T06:18:47.972Z"
+  "lastCategory": "seo",
+  "totalPosts": 247,
+  "lastRun": "2026-07-12T07:16:02.388Z"
 }
