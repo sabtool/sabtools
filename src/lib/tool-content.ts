@@ -2120,6 +2120,25 @@ const defaultContent: CategoryTemplate = {
  *     Dietetic Association and clinical nutrition globally
  */
 export const slugFormulas: Record<string, ToolFormula> = {
+  "gate-score-calculator": {
+    formula:
+      "GATE Score (0-1000):\n" +
+      "  S = Sq + (St − Sq) × (M − Mq) ÷ (M̄t − Mq)\n\n" +
+      "GATE Percentile:\n" +
+      "  Percentile = ((N − Rank) ÷ N) × 100\n\n" +
+      "Marks (out of 100):\n" +
+      "  M = marks for correct answers − negative marks\n" +
+      "  (−⅓ per wrong 1-mark MCQ, −⅔ per wrong 2-mark MCQ; no negative marking for MSQ and NAT)",
+    variables: [
+      { symbol: "M", description: "Your marks out of 100 (normalized marks for multi-session papers like CS, CE, ME)" },
+      { symbol: "Mq", description: "Qualifying marks of the paper (General category cutoff)" },
+      { symbol: "M̄t", description: "Mean marks of the top 0.1% (or top 10) candidates in that paper" },
+      { symbol: "Sq / St", description: "Fixed anchor scores: 350 at the qualifying marks, 900 at the top-0.1% mean" },
+      { symbol: "N, Rank", description: "N = total candidates who appeared in your paper; Rank = your All India Rank in it" },
+    ],
+    explanation:
+      "GATE marks out of 100 are first normalized across sessions (for multi-session papers), then linearly mapped to the 0-1000 GATE score using two anchors: the qualifying cutoff maps to 350 and the top-0.1% mean maps to 900. Percentile is a different number — ((N − Rank) ÷ N) × 100 — it only tells you what share of candidates you beat. M.Tech admissions and PSU shortlists use the score and rank, not the percentile.",
+  },
   "mulch-gravel-calculator": {
     formula:
       "Area (m²):\n" +

@@ -379,4 +379,11 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
     description:
       "Find your recommended gemstone (ratna) by Rashi — Neelam, Pukhraj, Panna, Manik & more — with carat weight, metal, finger and mantra. Free, instant.",
   },
+
+  // ── Exam (NEW-QUERY: "gate percentile calculator" pos 35.7 — tool computes percentile but template title hides it; brief 2026-07-15) ──
+  "gate-score-calculator": {
+    title: "GATE Score & Percentile Calculator — From Your Marks",
+    description:
+      "Convert GATE marks to a score out of 1000, check if you qualify, and see your estimated percentile instantly. Free, no signup.",
+  },
 };

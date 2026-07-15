@@ -2468,6 +2468,36 @@ export const programmaticPages: ProgrammaticPage[] = [
         "a": "Yes. 1 lakh crore = 1 trillion, so 100 lakh crore = 100 trillion = 100,000 billion."
       }
     ]
+  },
+  {
+    "slug": "28-lakh-crore-in-billion",
+    "toolSlug": "lakh-crore-converter",
+    "title": "28 Lakh Crore in Billion = 28,000 Billion",
+    "description": "28 lakh crore = 28,000 billion = 28 trillion. Convert 28 lakh crore to billion, million & trillion with a clear table. Free, no signup.",
+    "h1": "28 Lakh Crore in Billion",
+    "keywords": [
+      "28 lakh crore in billion",
+      "28 lakh crore to billion",
+      "28 lakh crore in million",
+      "28 lakh crore in trillion",
+      "how much is 28 lakh crore"
+    ],
+    "content": "<p><strong>28 lakh crore = 28,000 billion.</strong> In the international number system, 28 lakh crore equals 28,000 billion — the same as 28 trillion or 28,000,000 million.</p><p>Full conversion of 28 lakh crore:</p><table><thead><tr><th>Unit</th><th>Value</th></tr></thead><tbody><tr><td>Billion</td><td>28,000 billion</td></tr><tr><td>Million</td><td>28,000,000 million</td></tr><tr><td>Trillion</td><td>28 trillion</td></tr><tr><td>Crore</td><td>2,800,000 crore</td></tr><tr><td>In rupees</td><td>Rs 2,80,00,00,00,00,000</td></tr></tbody></table><p>Why this trips people up: the Indian system groups digits as lakh and crore, while the international system uses million, billion and trillion. They line up at fixed anchors — <strong>1 lakh crore = 1 trillion = 1,000 billion</strong> and <strong>1 crore = 10 million</strong> — so from there it is simple multiplication.</p><p>To convert any other amount instantly, use the free <a href='/tools/lakh-crore-converter'>Lakh Crore to Million &amp; Billion Converter</a> — type any value and get every format at once, no signup.</p><p>Popular related conversions: <a href='/calc/25-lakh-crore-in-billion'>25 lakh crore in billion</a>, <a href='/calc/15-lakh-crore-in-billion'>15 lakh crore in billion</a> and <a href='/calc/50-lakh-crore-in-billion'>50 lakh crore in billion</a>.</p>",
+    "defaults": {},
+    "faqs": [
+      {
+        "q": "How much is 28 lakh crore in billion?",
+        "a": "28 lakh crore = 28,000 billion (the same as 28 trillion)."
+      },
+      {
+        "q": "How much is 28 lakh crore in million?",
+        "a": "28 lakh crore = 28,000,000 million."
+      },
+      {
+        "q": "Is 28 lakh crore the same as 28 trillion?",
+        "a": "Yes. 1 lakh crore = 1 trillion, so 28 lakh crore = 28 trillion = 28,000 billion."
+      }
+    ]
   }
 ];
 
