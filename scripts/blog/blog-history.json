@@ -249,9 +249,10 @@
     "redirect-checker",
     "brick-calculator",
     "feet-to-meters",
-    "svg-editor"
+    "svg-editor",
+    "weight-converter"
   ],
-  "lastCategory": "developer",
-  "totalPosts": 250,
-  "lastRun": "2026-07-15T06:40:02.811Z"
+  "lastCategory": "converters",
+  "totalPosts": 251,
+  "lastRun": "2026-07-16T06:39:44.710Z"
 }
