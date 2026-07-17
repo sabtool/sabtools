@@ -250,9 +250,10 @@
     "brick-calculator",
     "feet-to-meters",
     "svg-editor",
-    "weight-converter"
+    "weight-converter",
+    "concrete-footing-calculator"
   ],
-  "lastCategory": "converters",
-  "totalPosts": 251,
-  "lastRun": "2026-07-16T06:39:44.710Z"
+  "lastCategory": "construction",
+  "totalPosts": 252,
+  "lastRun": "2026-07-17T07:05:15.848Z"
 }
