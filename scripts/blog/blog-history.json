@@ -251,9 +251,10 @@
     "feet-to-meters",
     "svg-editor",
     "weight-converter",
-    "concrete-footing-calculator"
+    "concrete-footing-calculator",
+    "blur-background"
   ],
-  "lastCategory": "construction",
-  "totalPosts": 252,
-  "lastRun": "2026-07-17T07:05:15.848Z"
+  "lastCategory": "image",
+  "totalPosts": 253,
+  "lastRun": "2026-07-18T06:23:38.677Z"
 }
