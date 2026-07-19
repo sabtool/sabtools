@@ -252,9 +252,10 @@
     "svg-editor",
     "weight-converter",
     "concrete-footing-calculator",
-    "blur-background"
+    "blur-background",
+    "margin-calculator"
   ],
-  "lastCategory": "image",
-  "totalPosts": 253,
-  "lastRun": "2026-07-18T06:23:38.677Z"
+  "lastCategory": "math",
+  "totalPosts": 254,
+  "lastRun": "2026-07-19T06:45:50.112Z"
 }
