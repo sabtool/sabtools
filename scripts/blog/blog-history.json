@@ -253,9 +253,10 @@
     "weight-converter",
     "concrete-footing-calculator",
     "blur-background",
-    "margin-calculator"
+    "margin-calculator",
+    "color-picker"
   ],
-  "lastCategory": "math",
-  "totalPosts": 254,
-  "lastRun": "2026-07-19T06:45:50.112Z"
+  "lastCategory": "developer",
+  "totalPosts": 255,
+  "lastRun": "2026-07-20T06:42:23.036Z"
 }
