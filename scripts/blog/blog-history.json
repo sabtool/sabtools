@@ -255,9 +255,10 @@
     "blur-background",
     "margin-calculator",
     "color-picker",
-    "stamp-duty-calculator"
+    "stamp-duty-calculator",
+    "cac-ltv-ratio-calculator"
   ],
-  "lastCategory": "tax",
-  "totalPosts": 256,
-  "lastRun": "2026-07-21T06:29:03.856Z"
+  "lastCategory": "business",
+  "totalPosts": 257,
+  "lastRun": "2026-07-22T06:52:46.839Z"
 }
