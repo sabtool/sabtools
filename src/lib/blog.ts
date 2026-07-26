@@ -46208,9 +46208,7 @@ starting April 1, eligible employees can conveniently enroll in the UPS program 
     date: "2026-07-22",
     category: "Business",
     readTime: "7 min read",
-    keywords: ["// head terms
-    cac to ltv calculator", "ltv cac ratio calculator", "ltv to cac calculator", "customer acquisition cost calculator", "customer lifetime value calculator", "// saas / unit-economics phrasing
-    saas unit economics calculator", "saas metrics calculator", "ltv cac ratio for saas"],
+    keywords: ["cac to ltv calculator", "ltv cac ratio calculator", "ltv to cac calculator", "customer acquisition cost calculator", "customer lifetime value calculator", "saas unit economics calculator", "saas metrics calculator", "ltv cac ratio for saas"],
     toolSlug: "cac-ltv-ratio-calculator",
     image: {
       src: "/blog/cac-ltv-ratio-calculator.webp",
