@@ -260,9 +260,10 @@
     "page-speed-estimator",
     "indian-name-meaning",
     "break-even-calculator",
-    "photo-enhancer"
+    "photo-enhancer",
+    "crypto-tax-calculator"
   ],
-  "lastCategory": "image",
-  "totalPosts": 261,
-  "lastRun": "2026-07-26T07:34:03.951Z"
+  "lastCategory": "tax",
+  "totalPosts": 262,
+  "lastRun": "2026-07-27T07:43:26.790Z"
 }
