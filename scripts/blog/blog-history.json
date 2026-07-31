@@ -263,9 +263,10 @@
     "photo-enhancer",
     "crypto-tax-calculator",
     "pixels-to-rem",
-    "toll-calculator"
+    "toll-calculator",
+    "indian-railway-pnr"
   ],
-  "lastCategory": "vehicle",
-  "totalPosts": 264,
-  "lastRun": "2026-07-29T06:25:23.054Z"
+  "lastCategory": "utility",
+  "totalPosts": 265,
+  "lastRun": "2026-07-31T07:05:12.525Z"
 }
