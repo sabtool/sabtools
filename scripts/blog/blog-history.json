@@ -264,9 +264,10 @@
     "crypto-tax-calculator",
     "pixels-to-rem",
     "toll-calculator",
-    "indian-railway-pnr"
+    "indian-railway-pnr",
+    "burn-rate-runway-calculator"
   ],
-  "lastCategory": "utility",
-  "totalPosts": 265,
-  "lastRun": "2026-07-31T07:05:12.525Z"
+  "lastCategory": "business",
+  "totalPosts": 266,
+  "lastRun": "2026-08-01T06:59:08.624Z"
 }
