@@ -265,9 +265,10 @@
     "pixels-to-rem",
     "toll-calculator",
     "indian-railway-pnr",
-    "burn-rate-runway-calculator"
+    "burn-rate-runway-calculator",
+    "pin-code-lookup"
   ],
-  "lastCategory": "business",
-  "totalPosts": 266,
-  "lastRun": "2026-08-01T06:59:08.624Z"
+  "lastCategory": "utility",
+  "totalPosts": 267,
+  "lastRun": "2026-08-02T06:44:17.795Z"
 }
