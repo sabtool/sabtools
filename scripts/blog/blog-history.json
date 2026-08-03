@@ -266,9 +266,10 @@
     "toll-calculator",
     "indian-railway-pnr",
     "burn-rate-runway-calculator",
-    "pin-code-lookup"
+    "pin-code-lookup",
+    "http-header-checker"
   ],
-  "lastCategory": "utility",
-  "totalPosts": 267,
-  "lastRun": "2026-08-02T06:44:17.795Z"
+  "lastCategory": "security",
+  "totalPosts": 268,
+  "lastRun": "2026-08-03T07:29:47.112Z"
 }
