@@ -289,7 +289,10 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
             be the first thing visible under the title. */}
         <AdBanner format="horizontal" className="mb-8" />
 
-        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8">
+        {/* id="tool-capture-area" — DownloadPDF captures this whole wrapper
+            so the exported PDF contains BOTH the inputs and the results,
+            for every tool, regardless of internal markup. */}
+        <div id="tool-capture-area" className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8">
           {children}
         </div>
 
