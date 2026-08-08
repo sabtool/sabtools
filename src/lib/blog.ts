@@ -48266,9 +48266,7 @@ starting April 1, eligible employees can conveniently enroll in the UPS program 
     date: "2026-08-07",
     category: "Business",
     readTime: "7 min read",
-    keywords: ["// head terms
-    saas rule of 40 calculator", "rule of 40 calculator", "rule of 40 saas", "saas health metric", "// saas metrics phrasing
-    saas metrics calculator", "bessemer cloud index", "saas growth margin", "ebitda margin saas"],
+    keywords: ["saas rule of 40 calculator", "rule of 40 calculator", "rule of 40 saas", "saas health metric", "saas metrics calculator", "bessemer cloud index", "saas growth margin", "ebitda margin saas"],
     toolSlug: "saas-rule-of-40-calculator",
     image: {
       src: "/blog/saas-rule-of-40-calculator.webp",

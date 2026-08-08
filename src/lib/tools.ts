@@ -379,37 +379,23 @@ export const tools: Tool[] = [
     "calculate burn multiple saas", "paul graham default alive", "david sacks burn multiple"
   ] },
   { name: "SaaS Rule of 40 Calculator", slug: "saas-rule-of-40-calculator", description: "Calculate your SaaS Rule of 40 score (growth + margin) and see how you stack up against the Bessemer Cloud Index. Supports EBITDA, FCF and Net margin. India-focused benchmarks for Series A through public-listed SaaS.", category: "business", icon: "📈", keywords: [
-    // Head terms
     "saas rule of 40 calculator", "rule of 40 calculator", "rule of 40 saas", "saas health metric",
-    // SaaS metrics phrasing
     "saas metrics calculator", "bessemer cloud index", "saas growth margin", "ebitda margin saas",
-    // Indian context
     "indian saas metrics", "saas rule of 40 india", "freshworks rule of 40", "saas founder calculator india",
-    // Long-tail
     "what is rule of 40", "rule of 40 formula", "rule of 40 benchmark", "growth vs profit saas", "snowflake rule of 40",
-    // Margin variants
     "fcf margin calculator", "growth margin trade off"
   ] },
   { name: "Startup Post-Money Valuation Calculator", slug: "startup-valuation-calculator", description: "Calculate post-money and pre-money valuation, founder dilution, ESOP top-up math (pre vs post money) and price-per-share for any startup funding round. Built for Indian SaaS and Series A/B negotiations.", category: "business", icon: "💼", keywords: [
-    // Head terms
     "post money valuation calculator", "pre money valuation calculator", "startup valuation calculator", "startup funding calculator",
-    // Equity / dilution
     "equity dilution calculator", "founder dilution calculator", "cap table calculator", "esop pool calculator", "esop dilution calculator",
-    // Indian context
     "startup valuation calculator india", "indian startup funding calculator", "seed round valuation india", "series a valuation india",
-    // Specific instruments
     "ccd convertible debenture calculator", "safe note calculator india", "convertible note calculator",
-    // Long-tail
     "what is post money valuation", "pre money vs post money", "founder ownership after series a"
   ] },
   { name: "CAC to LTV Ratio Calculator", slug: "cac-ltv-ratio-calculator", description: "Calculate your SaaS / startup CAC, LTV, LTV:CAC ratio and CAC payback period — with industry benchmarks, verdict band and founder advice for India SaaS targeting US or India markets.", category: "business", icon: "📊", keywords: [
-    // Head terms
     "cac to ltv calculator", "ltv cac ratio calculator", "ltv to cac calculator", "customer acquisition cost calculator", "customer lifetime value calculator",
-    // SaaS / unit-economics phrasing
     "saas unit economics calculator", "saas metrics calculator", "ltv cac ratio for saas", "ltv cac benchmark", "cac payback calculator",
-    // Indian startup market
     "saas calculator india", "indian startup metrics calculator", "ltv cac india", "saas founder calculator",
-    // Long-tail
     "what is a good ltv cac ratio", "calculate ltv cac for startup", "ltv cac ratio formula", "free ltv cac calculator no signup"
   ] },
   { name: "Home Loan Affordability", slug: "home-loan-affordability", description: "Calculate maximum home loan amount based on income and EMI-to-income ratio", category: "business", icon: "🏠", keywords: ["home loan", "affordability", "emi", "income", "eligibility", "housing"] },
@@ -426,19 +412,15 @@ export const tools: Tool[] = [
   { name: "PDF to Image", slug: "pdf-to-image", description: "Get PDF file info and extract text content from PDF files", category: "pdf", icon: "🖼️", keywords: ["pdf", "image", "convert", "extract", "png", "jpg"] },
   { name: "PDF Page Remover", slug: "pdf-page-remover", description: "Remove specific pages from PDF and download remaining content", category: "pdf", icon: "🗑️", keywords: ["pdf", "remove", "delete", "pages", "page remover"] },
   { name: "PDF to Speech", slug: "pdf-to-speech", description: "Upload a PDF and listen to it read aloud in Indian English or Hindi. 100% private — your file never leaves your browser. No signup, no upload, no ads. Free unlimited use. Perfect for students, long reports & accessibility.", category: "pdf", icon: "🔊", keywords: [
-    // Core intent (head terms — long-shot but worth signaling)
     "pdf to speech", "pdf reader", "read pdf aloud", "pdf to audio",
     "pdf to voice", "text to speech pdf", "listen to pdf", "pdf voice reader",
     "pdf audio reader", "tts pdf",
-    // Indian / Hindi long-tail (low-competition, our wedge)
     "hindi pdf reader", "pdf to speech hindi", "hindi pdf padhne wala",
     "pdf to speech india", "indian english pdf reader",
     "pdf audio in hindi", "hindi pdf to mp3 alternative",
-    // Privacy long-tail (competitor weakness)
     "private pdf reader", "offline pdf reader online",
     "pdf reader no upload", "pdf to speech no signup",
     "free pdf reader without account", "pdf reader without watermark",
-    // Use-case long-tail
     "pdf reader for students", "study pdf audio", "audio book maker pdf",
     "upsc pdf audio reader", "competitive exam pdf reader",
     "accessibility pdf reader", "dyslexia pdf reader",

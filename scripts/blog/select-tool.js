@@ -40,6 +40,13 @@ function loadTools() {
   let match;
   while ((match = regex.exec(content)) !== null) {
     const keywords = match[6]
+      // Strip `// comment` annotation lines that appear inside some
+      // keywords arrays in tools.ts. Without this, the raw comment text
+      // gets embedded into blog.ts as a broken multi-line string literal
+      // and the whole site build fails (this has bitten us three times).
+      .split("\n")
+      .map((line) => line.replace(/\s*\/\/.*$/, ""))
+      .join(" ")
       .split(",")
       .map((k) => k.trim().replace(/"/g, ""))
       .filter(Boolean);
