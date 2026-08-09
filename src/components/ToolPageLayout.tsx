@@ -14,7 +14,8 @@ import DownloadPDF from "@/components/DownloadPDF";
 import ToolRating from "@/components/ToolRating";
 import ToolUsageCounter from "@/components/ToolUsageCounter";
 import ReviewedBy from "@/components/ReviewedBy";
-import Testimonials from "@/components/Testimonials";
+// Testimonials import removed 2026-08 — the component rendered a shared
+// pool of fabricated quotes presented as page-specific social proof.
 import NewsletterSignup from "@/components/NewsletterSignup";
 import type { Tool } from "@/lib/tools";
 import { categories } from "@/lib/tools";
@@ -388,20 +389,11 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
             </>
           )}
 
-          {/* Real-World Examples */}
-          {content.realWorldExamples && content.realWorldExamples.length > 0 && (
-            <>
-              <h2 className="text-xl font-bold text-gray-800 mt-8">Real-World Examples</h2>
-              <div className="space-y-3 mt-3">
-                {content.realWorldExamples.map((example, i) => (
-                  <div key={i} className="flex items-start gap-3 p-4 bg-blue-50/50 rounded-xl border border-blue-100/50">
-                    <span className="text-blue-500 text-lg shrink-0">📌</span>
-                    <p className="text-gray-600 text-sm leading-relaxed">{example}</p>
-                  </div>
-                ))}
-              </div>
-            </>
-          )}
+          {/* "Real-World Examples" section removed 2026-08 — the anecdotes
+              were fabricated (invented names/cities/outcomes), which
+              contradicts the site's no-fabricated-data promise and is an
+              E-E-A-T liability on YMYL pages. Replace only with real,
+              consented case studies if ever reinstated. */}
 
           <h3 className="text-lg font-semibold text-gray-800 mt-8">Why Choose {tool.name} on SabTools.in?</h3>
           <ul className="text-gray-600 space-y-2 mt-3">
@@ -492,8 +484,9 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
             BUILD_MONTH_YEAR), so no separate freshness pill is needed. */}
         <ReviewedBy category={tool.category} />
 
-        {/* User Testimonials — social proof */}
-        <Testimonials category={tool.category} toolSlug={tool.slug} />
+        {/* Testimonials section removed 2026-08 — quotes were fabricated
+            and shared across unrelated tools while presented as
+            page-specific social proof. Reinstate only with real reviews. */}
 
         {/* User Rating — engagement signal */}
         <div className="mt-8">

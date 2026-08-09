@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAuthorByCategory, getAuthorBySlug, type Author } from "@/lib/authors";
+import { getAuthorByCategory, type Author } from "@/lib/authors";
 import { BUILD_MONTH_YEAR } from "@/lib/schema";
 
 /**
@@ -24,12 +24,12 @@ interface ReviewedByProps {
 }
 
 export default function ReviewedBy({ category }: ReviewedByProps) {
-  // Resolve the canonical reviewer for this category, falling back to the
-  // founder when no expert covers it (e.g. legal, construction, electrical
-  // — categories that don't have a dedicated domain expert). The founder
-  // is always present, so this never returns undefined.
-  const reviewer: Author =
-    getAuthorByCategory(category) ?? getAuthorBySlug("rakesh-seervi")!;
+  // Only render a byline when a real author genuinely covers this
+  // category. No fallback: claiming review by someone outside their
+  // declared expertise is an E-E-A-T liability, not a signal — for
+  // categories without a qualified reviewer we show nothing.
+  const reviewer: Author | undefined = getAuthorByCategory(category);
+  if (!reviewer) return null;
 
   return (
     <div className="flex items-center gap-3 px-4 py-2.5 border border-indigo-100 rounded-[10px] bg-slate-50 max-w-[480px] mt-4">

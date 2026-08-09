@@ -10,7 +10,6 @@ export interface ToolContentData {
   howToSteps: string[];
   keyFeatures: string[];
   benefits: string[];
-  realWorldExamples: string[];
   tipsAndBestPractices: string[];
   indianContext: string;
   faqs: { question: string; answer: string }[];
@@ -53,7 +52,6 @@ interface CategoryTemplate {
   howToSteps: string[];
   keyFeatures: string[];
   benefits: string[];
-  realWorldExamples: string[];
   tipsAndBestPractices: string[];
   indianContextTemplate: string;
   faqTemplates: { q: string; a: string }[];
@@ -96,13 +94,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Helps you negotiate better terms with lenders by knowing exact figures before walking into any bank branch",
       "Saves time that would otherwise go into manual spreadsheet formulas or waiting for a CA appointment for basic financial math",
       "Accessible from any device — phone, tablet, or laptop — so you can crunch numbers during your lunch break or commute"
-    ],
-    realWorldExamples: [
-      "Rahul from Pune was comparing home loan offers from three different banks. He used {name} to calculate the total interest payable over twenty years for each offer and discovered that a 0.25 percent rate difference would save him 3.2 lakhs over the full loan tenure, making his bank selection straightforward",
-      "Priya, a software engineer in Hyderabad, wanted to know whether prepaying her car loan or investing that money in a mutual fund SIP would be smarter. She ran both scenarios through {name} and found that investing gave her 1.8 lakhs more over five years after accounting for Section 80C benefits",
-      "Suresh runs a kirana store in Indore and needed to figure out the true cost of a business loan offered at a flat rate of nine percent. {name} helped him convert that to the effective annual rate, which turned out to be over sixteen percent — and he negotiated a better deal armed with that knowledge",
-      "Meera, a retired school principal in Jaipur, used {name} to plan her Senior Citizens Savings Scheme withdrawals alongside her pension income to stay below the taxable threshold while maximizing quarterly interest payouts",
-      "Ankit and his wife in Noida were saving for their daughter's college education eight years away. They used {name} to model different monthly SIP amounts and found that starting with just 5,000 rupees per month in an equity fund could grow to nearly 7 lakhs by the time their daughter finishes Class 12"
     ],
     tipsAndBestPractices: [
       "Always compare results across multiple scenarios before making financial decisions — try adjusting the tenure by one or two years to see how it impacts your monthly payment and total interest outgo significantly",
@@ -160,13 +151,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "No internet needed after page load — perfect for students in areas with unreliable connectivity who can load it once and use offline",
       "Supports decimal precision far beyond what basic phone calculators offer, crucial for science and engineering applications",
       "Free forever with no ads blocking the result or premium features hidden behind a paywall"
-    ],
-    realWorldExamples: [
-      "Sneha, a Class 11 student in Kota preparing for JEE, used {name} to cross-check her solutions to trigonometry problems every evening. Over three months she identified and corrected a recurring sign error in her manual calculations that would have cost her marks in the actual exam",
-      "Vikram, an architect in Chennai, needed to calculate the area of an irregularly shaped plot for a residential project. He used {name} to compute the precise figure in square feet and square metres, which he then plugged into his AutoCAD drawing with confidence",
-      "A group of Class 8 students at a government school in Bhopal used {name} during a math lab session. Their teacher projected the tool on the classroom smartboard and demonstrated how changing inputs in a percentage calculator affects profit and loss outcomes",
-      "Deepak, an accountant at a textile firm in Surat, uses {name} every month to verify depreciation calculations before filing GST returns. The step-by-step output gives him documentation he can attach to his working papers during audits",
-      "Kavita, a home tutor in Patna, shares {name} links with her students via WhatsApp after each class so they can practice and verify their homework solutions independently before the next session"
     ],
     tipsAndBestPractices: [
       "When verifying exam solutions, enter the exact numbers from the question rather than rounded values to ensure your comparison is meaningful and catches actual errors",
@@ -226,13 +210,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Consistent results every time — unlike manual editing where fatigue leads to missed errors in long documents",
       "Integrates naturally into any workflow since it uses standard copy-paste that works with every text editor and CMS"
     ],
-    realWorldExamples: [
-      "Neha, a content writer in Mumbai, receives briefs from international clients with inconsistent capitalization. She pastes each document into {name} before editing, saving roughly twenty minutes per article on formatting cleanup that she now spends on improving the actual content quality",
-      "Ajay manages social media for a Jaipur-based clothing brand and needs to convert product descriptions between uppercase for Instagram stories, title case for Facebook posts, and sentence case for the website. {name} lets him transform the same text three ways in under a minute",
-      "A PhD researcher at JNU was preparing a bibliography and needed to count words in her abstract precisely because the journal mandated a strict 250-word limit. {name} gave her the exact count including hyphenated terms, which her word processor was miscounting",
-      "Sunil, a data entry operator at a Nagpur logistics company, uses {name} to clean customer address data by removing extra spaces and standardizing formats before uploading to their CRM system — reducing address-related delivery errors by nearly forty percent",
-      "Pooja, a Hindi blogger from Lucknow, uses {name} to process mixed Hindi-English text for her bilingual lifestyle blog. The tool handles Devanagari script without stripping characters, which was a persistent problem with other text tools she had tried"
-    ],
     tipsAndBestPractices: [
       "Keep the tool bookmarked in your browser toolbar or add it to your home screen on mobile — you will use it far more often than you expect once it becomes part of your workflow",
       "For long documents, process sections separately rather than pasting the entire piece at once — this makes it easier to review changes and catch any unexpected transformations",
@@ -290,13 +267,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Useful for NRIs and international shoppers who frequently need to convert between currencies, sizes, and measurement systems",
       "Completely free and unlimited — convert as many values as you need without restrictions, ads blocking results, or premium upsells"
     ],
-    realWorldExamples: [
-      "Amit, a real estate broker in Lucknow, regularly uses {name} to convert land measurements between bigha, square feet, and square metres for clients who understand different systems. One conversion error he caught using the tool saved a client from overpaying by nearly two lakh rupees on a plot purchase",
-      "Fatima, a home cook in Hyderabad, follows international recipes from YouTube that use cups and ounces. She keeps {name} open on her phone while cooking to convert measurements into grams and millilitres that match her Indian measuring tools and kitchen scale",
-      "Rajesh, an export manager at a Surat textile firm, converts between metres, yards, and inches daily when processing orders from buyers in the US, UK, and Middle East. {name} prevents the measurement miscommunications that once resulted in a wrong fabric cut worth fifty thousand rupees",
-      "Priya, a NEET aspirant in Patna, uses {name} to quickly convert between CGS and SI units while solving physics numericals. Having the conversion factor displayed alongside the result helps her memorize the common ones for the actual exam",
-      "Suresh, a retired goldsmith in Thrissur, still helps his son price jewellery and uses {name} to convert between tola and gram measurements — the traditional unit he learned the trade with and the metric standard that modern customers expect to see"
-    ],
     tipsAndBestPractices: [
       "When converting land measurements in India, always confirm which state-specific definition applies — a bigha in Rajasthan is roughly 27,000 square feet while in West Bengal it is about 14,400 square feet",
       "For cooking conversions, remember that ingredient density matters — a cup of flour weighs differently than a cup of sugar, so use weight-based conversions rather than volume whenever accuracy is important",
@@ -352,13 +322,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Useful during interviews and coding assessments when you need a quick utility but cannot install software on the test machine",
       "Helps junior developers understand data transformations by showing input and output side by side with clear labeling",
       "Reliable backup tool when your local development environment is broken, updating, or otherwise unavailable"
-    ],
-    realWorldExamples: [
-      "Arjun, a backend developer at a Bangalore fintech startup, used {name} to debug a payment gateway integration where the callback URL encoding was breaking. Pasting the URL into the tool revealed a double-encoding issue that his code was introducing, saving hours of printf debugging",
-      "Divya, a QA engineer at Infosys Pune, uses {name} daily to format API response JSON payloads for bug reports. Her developers appreciate the clean formatted output instead of single-line JSON dumps that are impossible to read in Jira tickets",
-      "Karthik, a freelance developer in Chennai working on an Aadhaar integration project, needed to verify Base64 encoding of biometric data. {name} let him test the encoding without writing a temporary script or exposing production data to an online tool with server-side processing",
-      "A team of three developers at a Noida agency was debugging a webhook integration and needed to decode JWT tokens from a partner API. {name} decoded the payload instantly, revealing that the token expiry was set incorrectly on the partner side — not a bug in their code",
-      "Megha, a computer science student at IIT Bombay, used {name} while preparing for her campus placements. She practiced hash generation and encoding questions by checking her manual understanding against the tool's output during study sessions"
     ],
     tipsAndBestPractices: [
       "Keep SabTools developer tools in a dedicated browser bookmark folder so you can access the right utility in two clicks during debugging sessions",
@@ -416,13 +379,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Works reliably on budget Android phones that struggle with heavy image editing apps, since browser-based processing is lighter",
       "No learning curve — anyone who can upload a file and click a button can produce professional-quality image processing results"
     ],
-    realWorldExamples: [
-      "Sneha runs a small jewellery business from her home in Jaipur and lists products on Instagram and Meesho. She uses {name} to resize and compress her phone photos to meet platform requirements, maintaining image quality while keeping file sizes under the upload limits",
-      "Vikram needed to upload his photo for a government job application that required a JPEG under 50 KB with specific pixel dimensions. The original photo from the studio was 3 MB. {name} let him resize and compress it to exactly the required specifications without visiting the studio again",
-      "A real estate agent in Pune photographs properties on his phone and uses {name} to process twenty to thirty images per listing — resizing them for the agency website and compressing them for WhatsApp sharing with potential buyers",
-      "Anita, a Class 10 student in Bhopal, was preparing a science project presentation and needed to convert screenshots from PNG to JPEG to reduce the file size of her PowerPoint. {name} converted all twelve images in minutes without quality loss visible on the projector",
-      "Deepak, a freelance graphic designer in Kolkata, uses {name} as a quick utility when clients send images in formats that his design software does not import natively — a WebP to PNG conversion takes seconds versus finding and installing a converter plugin"
-    ],
     tipsAndBestPractices: [
       "For government form uploads with strict file size limits, start with eighty percent quality compression — this usually achieves significant size reduction with no visible quality loss",
       "When resizing images, maintain the aspect ratio to avoid stretched or squished output — most tools on SabTools lock the ratio by default for this reason",
@@ -479,13 +435,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Regular use prevents SEO regression — small technical changes to your site can silently break SEO elements that periodic checks would catch",
       "Supports the growing community of Indian freelance SEO professionals who need free tools when starting their consulting practice"
     ],
-    realWorldExamples: [
-      "Prakash runs a plumbing services website targeting customers in Bangalore. He used {name} to analyze his homepage and discovered his title tag was generic instead of including location keywords. After fixing it to include Bangalore-specific terms, his organic inquiries increased by thirty-five percent over two months",
-      "Meera, a food blogger writing in Hindi, used {name} to check the keyword optimization of her recipe posts. The tool revealed her meta descriptions were missing on forty percent of posts, and adding them improved her click-through rate from Google search results noticeably",
-      "A Surat-based diamond exporter used {name} to analyze their product pages for international SEO signals. The tool identified missing hreflang tags and incorrect canonical URLs that were causing their site to rank poorly in non-Indian Google search results",
-      "Rohit, a freelance digital marketer in Delhi, uses {name} for quick SEO audits during client pitches. He runs the analysis live during meetings to demonstrate specific issues on the prospect's website, which has helped him close several consulting contracts",
-      "An educational coaching institute in Kota used {name} to optimize their course pages for search terms like JEE coaching and NEET preparation. The analysis revealed slow page load times due to uncompressed images, and fixing this improved their Google ranking from page three to page one for two key terms"
-    ],
     tipsAndBestPractices: [
       "Run SEO analysis on your most important pages first — your homepage, top service pages, and highest-traffic blog posts deserve optimization attention before less-visited pages",
       "Focus on fixing critical issues before chasing minor improvements — a missing meta description on your homepage matters more than a slightly non-optimal keyword density on a blog post",
@@ -540,13 +489,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Supports financial planning by computing exact days between deposit and maturity dates for fixed deposits and recurring deposits",
       "Prevents embarrassing scheduling errors when coordinating meetings across India, the US, Europe, and Middle East timezones",
       "Free and instant access from any device — no need to install calendar apps or timezone converter applications"
-    ],
-    realWorldExamples: [
-      "Amit was applying for a government bank job with an age limit of thirty years as of a specific cutoff date. He used {name} to calculate his exact age on that date and confirmed he was eligible by just forty-seven days — information that gave him the confidence to complete the lengthy application process",
-      "Priya manages a distributed software team with members in Bangalore, London, and San Francisco. She uses {name} every Monday to find overlapping working hours across all three timezones, accounting for daylight saving shifts that change the overlap window twice a year",
-      "Suresh, an FD investor in Coimbatore, wanted to compare the maturity amounts of deposits with different tenures. He used {name} to calculate the exact number of days for each tenure option, which he then used in his interest calculation to find the optimal deposit period",
-      "A wedding planner in Udaipur used {name} to count the exact number of days between the booking date and the wedding date for a December destination wedding. The business day count helped her create a realistic vendor payment schedule excluding Sundays and major holidays",
-      "Kavita, a law student in Delhi, used {name} to verify that legal notice periods and filing deadlines in a case study were correctly calculated, accounting for court holidays and the difference between calendar days and working days in Indian legal proceedings"
     ],
     tipsAndBestPractices: [
       "Always verify which date format a form expects before entering calculated dates — India uses DD/MM/YYYY but some online systems default to MM/DD/YYYY and transposing day and month causes silent errors",
@@ -603,13 +545,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Helps students learning cybersecurity concepts by demonstrating how hashing, encryption, and password strength evaluation actually work",
       "Works on any device including shared computers and public terminals where installing software is not an option — just use the browser"
     ],
-    realWorldExamples: [
-      "Ankit, an IT administrator at a Gurugram company, used {name} to generate unique strong passwords for thirty-seven employee email accounts during a security overhaul after their previous provider suffered a data breach. The tool's offline capability meant credentials were never exposed to any network",
-      "Divya, a freelance web developer in Bangalore, uses {name} to generate bcrypt hashes for testing user authentication modules in her client projects. Having a trusted reference implementation helps her verify that her code's output matches the expected hash values",
-      "Ramesh, a retired banker in Pune, was worried about the strength of his net banking and UPI passwords. He used {name}'s password strength checker to evaluate them and discovered two of his five banking passwords were vulnerable to dictionary attacks — he replaced them immediately",
-      "A college computer science lab in Hyderabad uses {name} during cybersecurity practical sessions. Students generate different types of hashes for the same input string to visually understand how SHA-256, SHA-512, and MD5 produce different outputs and why some are more secure than others",
-      "Priya, a small business owner in Jaipur, needed to hash customer email addresses before sharing data with her marketing analytics provider. {name} let her hash the addresses locally without exposing actual email addresses to any third-party service during the process"
-    ],
     tipsAndBestPractices: [
       "Generate passwords of at least sixteen characters combining uppercase, lowercase, numbers, and special characters — shorter passwords are increasingly vulnerable to modern computing power",
       "Never use the same password across multiple accounts regardless of how strong it is — a breach on one site compromises all accounts sharing that credential",
@@ -664,13 +599,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Completely safe to use since it generates standard WhatsApp-compatible links and text without accessing your account or message history",
       "Free alternative to paid WhatsApp marketing tools that charge monthly fees for basic link generation and message formatting features",
       "Works instantly on mobile browsers — generate a link or format text while standing in your shop and share it with a customer in seconds"
-    ],
-    realWorldExamples: [
-      "Rajesh runs a mobile repair shop in Ahmedabad and placed a WhatsApp click-to-chat link generated by {name} on his Google Business listing. His customer inquiries tripled because people could message him directly without the friction of finding and saving his number first",
-      "Meera, a home tutor in Pune, uses {name} to create formatted class schedules and homework announcements for her student WhatsApp groups. Bold headings and structured lists make her messages look professional and ensure parents read the important details",
-      "A real estate agent in Gurgaon generates unique WhatsApp links for each property listing he posts on social media. When a potential buyer clicks the link, a pre-written message about that specific property opens in WhatsApp, making follow-up organized and trackable",
-      "Anita manages orders for her home bakery in Bangalore through WhatsApp. She used {name} to create a formatted order template that customers copy-paste when placing orders, reducing back-and-forth messages about size, flavor, delivery date, and address by over sixty percent",
-      "A coaching institute in Kota sends daily practice question links to students via WhatsApp broadcast. They use {name} to format these messages with question numbers in bold and answer options clearly structured, making the content easier to read on phone screens"
     ],
     tipsAndBestPractices: [
       "Always include a pre-filled message in your click-to-chat links so you know which product, ad, or page the customer is coming from — this context helps you respond appropriately",
@@ -728,13 +656,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Useful for nutritionists and fitness trainers who need quick calculations for multiple clients during consultation sessions",
       "Completely free — no subscription, no premium health tracking tier, no data-harvesting health app that monetizes your medical information"
     ],
-    realWorldExamples: [
-      "Sunita, a forty-five-year-old homemaker in Nagpur, used {name} to calculate her BMI and discovered she fell in the overweight category for South Asian standards even though her weight seemed normal by Western BMI charts. This motivated her to consult a nutritionist and start a structured walking routine",
-      "Arjun, a software professional in Bangalore with a sedentary lifestyle, used {name} to calculate his daily calorie requirement and realized he was consuming nearly eight hundred excess calories daily from office snacks and evening chai with biscuits. He adjusted his diet based on the tool's output",
-      "A gym trainer in Pune uses {name} to quickly calculate BMI and body fat estimates for new members during their first assessment session, saving time on manual calculations and giving clients professional-looking initial health metrics",
-      "Priya, a first-time expecting mother in Hyderabad, used pregnancy-related health tools on SabTools to track her weight gain against recommended ranges and calculate expected milestones, which helped her ask more informed questions during her gynaecologist visits",
-      "Retired Colonel Sharma in Dehradun monitors his health metrics monthly using {name} after his cardiac event. He tracks BMI, waist-to-hip ratio, and estimated calorie needs, sharing the results with his cardiologist through screenshots during video consultations"
-    ],
     tipsAndBestPractices: [
       "Measure your height and weight at the same time of day when tracking over time — morning measurements before breakfast are most consistent for accurate comparisons",
       "Remember that BMI is a screening tool, not a diagnostic one — it does not distinguish between muscle mass and fat mass, so athletes may show misleadingly high readings",
@@ -789,13 +710,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Helps freelancers and consultants who lack employer-provided Form 16 estimate their annual tax obligation and plan advance tax payments",
       "Updated promptly after budget announcements so you can model next year's tax liability while the budget speech is still being discussed",
       "Free alternative to paid tax filing software that charges for premium features like regime comparison and detailed deduction optimization"
-    ],
-    realWorldExamples: [
-      "Kavita, a marketing manager in Mumbai earning fifteen lakhs per year, used {name} to compare both tax regimes. The tool showed she would save twenty-two thousand rupees by staying with the old regime because her home loan interest and Section 80C investments created enough deductions to offset the higher slab rates",
-      "Rohan is a freelance graphic designer in Bangalore with variable monthly income. He uses {name} quarterly to estimate his advance tax obligation, ensuring he pays the right amount each quarter and avoids the interest penalty under Section 234B that caught him off guard in his first year of freelancing",
-      "A Surat-based textile business owner uses {name} to estimate his total tax liability across salary and business income components. The slab-wise breakdown helps his CA prepare the final return faster because the initial computation is already accurate",
-      "Anita, an NRI returning to India, used {name} to understand how her residency status change would affect tax on her Indian rental income and savings bank interest. The tool helped her plan the financial year of transition with clear liability estimates",
-      "Deepak, a school teacher in Patna, had never filed taxes independently before. He used {name} to calculate his liability step by step and realized that with his 80C investments and standard deduction, his net payable tax was significantly lower than the TDS his school was deducting — he filed for a refund"
     ],
     tipsAndBestPractices: [
       "Run the tax comparison between old and new regimes every year — your optimal regime can change based on changes in your income level and deduction profile",
@@ -853,13 +767,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Works offline after loading, making it available during flights, road trips, and other moments without internet connectivity",
       "Family-friendly content appropriate for all ages — parents can let children use the tools without content concerns"
     ],
-    realWorldExamples: [
-      "A group of college friends in Delhi could not decide which restaurant to visit for a birthday dinner. They entered their four options into {name} and let the randomizer decide — the result was accepted unanimously with laughter, ending a twenty-minute debate in five seconds",
-      "Priya, a Class 5 teacher in Pune, uses {name} to randomly select students for reading aloud and answering questions. The fun element of the random selection keeps the class engaged and removes any perception of teacher favoritism in her thirty-five-student classroom",
-      "During a Diwali office party at a Gurgaon tech company, the HR team used {name} as a party game — each employee generated a result and the funniest one won a prize. The activity broke the ice between teams that rarely interact during normal work days",
-      "Ravi shares his daily {name} results in his family WhatsApp group of twenty-three members. His grandmother in Varanasi responds every time, making it a small daily connection point across three generations spread across four cities",
-      "A wedding DJ in Bangalore uses {name} to pick random songs, dedications, and game participants during sangeet and reception events — adding an element of surprise that guests enjoy more than pre-planned activities"
-    ],
     tipsAndBestPractices: [
       "Use fun tools during social gatherings and parties as instant icebreakers — they work better than forced introductions for getting people talking and laughing",
       "Teachers can integrate {name} into classroom routines to make random selection fair and exciting rather than anxiety-inducing for students",
@@ -914,13 +821,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Ensures cross-browser compatibility through correct property syntax and appropriate vendor prefixes where still required",
       "Free and immediately accessible — no design software license, no package installation, no build configuration needed",
       "Provides consistent code quality whether you are a junior developer learning the ropes or a senior engineer in a hurry"
-    ],
-    realWorldExamples: [
-      "Arjun, a frontend developer at a Bangalore startup, used {name} to prototype six different button hover effects for a client presentation. Each effect took about thirty seconds to generate visually compared to the five minutes it would have taken to code and test each one manually",
-      "A web design student at NIIT in Hyderabad used {name} to understand how CSS gradient stops work. By adjusting the color positions and seeing the gradient update live, she learned in ten minutes what an hour of reading documentation had failed to clarify",
-      "Sneha, a freelance designer in Pune, uses {name} to create CSS code for the visual effects her clients request. She designs the look in the tool, copies the code, and delivers it to the developer — eliminating the back-and-forth that used to happen when she described effects verbally",
-      "A development team at an e-commerce company in Noida standardized their shadow and border-radius values by generating them through {name} and creating a design token file. This ensured visual consistency across their sixty-page product catalog",
-      "Karthik, a WordPress theme customizer in Chennai, uses {name} when clients request specific visual effects. He generates the CSS visually, adds it to the theme's custom CSS field, and the client sees the result in minutes rather than waiting for a full development cycle"
     ],
     tipsAndBestPractices: [
       "Start with subtle values and increase gradually — it is easier to add more shadow or gradient intensity than to dial back from an extreme starting point",
@@ -977,13 +877,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Integrates into existing workflows through standard copy-paste — no file import-export dance or special connector needed",
       "Handles Indian data formats including INR currency values, Indian phone numbers, and date formats in DD/MM/YYYY convention"
     ],
-    realWorldExamples: [
-      "Anita, an accountant at a Surat textile company, receives GST invoice data in different formats from forty suppliers. She uses {name} to standardize the data before importing it into Tally — a task that used to take her entire Friday afternoon now takes under an hour",
-      "A market research firm in Mumbai collected survey responses from three thousand participants across five Indian cities. {name} helped the analyst clean duplicate entries, standardize city name spellings, and convert the data into a format their statistical software could import",
-      "Deepak, a school administrator in Jaipur, needed to merge student data from three different Excel files with inconsistent column orders. {name} helped him reformat and align the data before uploading it to the school management portal",
-      "A startup founder in Bangalore exported her customer database from one CRM to migrate to another. {name} converted the CSV export into the JSON format required by the new CRM, handling field mapping and date format conversion in the process",
-      "Rajesh, a freelance data entry professional in Nagpur, uses {name} to clean and validate batches of records before submitting them to clients — catching duplicates, fixing formatting issues, and ensuring data quality that keeps his clients satisfied"
-    ],
     tipsAndBestPractices: [
       "Always review a sample of the processed output before using the entire dataset — spot-checking ten rows can catch configuration errors that would affect thousands of records",
       "For multi-step data cleaning, work through one transformation at a time rather than trying to fix everything in a single pass — this makes it easier to verify each step",
@@ -1037,13 +930,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Enables consistent branding across platforms by standardizing profile elements and content formatting",
       "Accessible to beginners who are just starting their social media journey and do not know platform-specific technical requirements",
       "Useful for digital marketing professionals who manage multiple client accounts and need quick utility tools during daily workflow"
-    ],
-    realWorldExamples: [
-      "Priya manages social media for a Jaipur handicraft brand and uses {name} to format product descriptions differently for Instagram captions, Facebook posts, and WhatsApp Business catalog entries — ensuring each platform gets properly optimized content from the same source information",
-      "Vikram, a YouTube creator in Bangalore with two hundred thousand subscribers, uses {name} to optimize his video titles and descriptions for search visibility. The tool helps him include relevant keywords without making titles feel stuffed or unnatural",
-      "A digital marketing agency in Delhi uses {name} across their team of twelve social media managers. Each manager handles three to four client accounts and the tool helps them maintain consistent formatting standards without custom templates for each platform",
-      "Meera started her food blog on Instagram while studying in Pune and used {name} to create an optimized bio, consistent hashtag sets for her posts, and properly formatted recipe text that displays well on mobile screens where ninety percent of her audience views her content",
-      "Rohan, a real estate agent in Noida, uses {name} to create compelling property listing text formatted for WhatsApp broadcast, Facebook Marketplace, and Instagram Stories — three different platforms requiring three different content approaches from the same property details"
     ],
     tipsAndBestPractices: [
       "Optimize your social media profiles separately for each platform rather than copying the same bio everywhere — each platform has different character limits and audience expectations",
@@ -1101,13 +987,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Free to use — critical for students from economically weaker sections who cannot afford paid educational apps or coaching institute tools",
       "Provides clarity in the college admission process by converting marks across different board systems to comparable scales"
     ],
-    realWorldExamples: [
-      "Shreya, a Class 12 CBSE student in Bhopal, used {name} to calculate her predicted aggregate based on pre-board scores. The tool showed she needed eighty-five percent in chemistry to reach her target of ninety percent overall — a specific goal she could focus her remaining study time on achieving",
-      "A school principal in Indore uses {name} at the end of each term to convert CGPA to percentage for the school's newsletter and parent communication. The tool handles the entire batch of two hundred students' results in minutes instead of the hours it took using spreadsheets",
-      "Amit was confused about college admission cutoffs because his ICSE percentage could not be directly compared with CBSE CGPA-based cutoffs. {name} converted his ICSE marks to the CBSE-equivalent scale, clarifying his standing in the admission process",
-      "Kavita, a BCA student at a Pune university, needed to calculate her SGPA and CGPA across six semesters with different credit weightages. {name} applied her university's exact credit-point formula and showed her cumulative GPA was higher than her rough mental estimate, qualifying her for a scholarship she had assumed she would miss",
-      "A coaching centre in Kota uses {name} to help JEE aspirants estimate their expected rank based on mock test scores and historical cutoff data. Students use this to calibrate their college preferences during the JoSAA counseling process"
-    ],
     tipsAndBestPractices: [
       "Verify which conversion formula your specific institution uses before relying on the result — CBSE's official CGPA-to-percentage conversion differs from what some universities independently apply",
       "Calculate your target score backwards from your goal — if you need a ninety percent aggregate, use {name} to find the minimum marks needed in each remaining subject to get there",
@@ -1163,13 +1042,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Saves time during quotation preparation when clients expect pricing breakdowns including GST, discounts, and delivery charges on the spot",
       "Helps new entrepreneurs understand business economics before committing capital — model your business idea's finances before spending a rupee"
     ],
-    realWorldExamples: [
-      "Deepak runs an auto parts wholesale business in Ludhiana and used {name} to calculate the break-even quantity for a new product line. The analysis showed he needed to sell just four hundred units monthly to cover costs — well within his distribution capacity, so he went ahead with the order",
-      "Meera, a Bangalore-based freelance consultant, uses {name} to prepare client quotations with proper GST breakdowns. The tool automatically splits the tax into CGST and SGST for intra-state clients and applies IGST for inter-state billing, matching what she needs to report in her GST return",
-      "A Surat-based garment manufacturer used {name} to compare three bank loan offers for machinery expansion. The tool calculated the total repayment including interest for each option, revealing that the lowest EMI offer actually cost more over the full tenure due to a longer repayment period",
-      "Ankit started a cloud kitchen in Pune and used {name} to model his pricing. By entering ingredient costs, packaging expenses, delivery charges, and his target margin, the tool showed him the minimum menu price needed for profitability — information that shaped his entire business strategy",
-      "A women's self-help group in rural Rajasthan uses {name} to calculate profit margins on their handloom products before taking them to craft fairs and government exhibitions. The tool helps them price products competitively while ensuring fair wages for all group members"
-    ],
     tipsAndBestPractices: [
       "When calculating margins, always factor in GST liability — a product with a twenty-percent margin before tax may have a significantly lower effective margin if GST is applicable at eighteen percent",
       "Model your business scenarios with conservative revenue estimates and higher-than-expected costs — if the numbers still work, the business idea is robust enough to handle real-world uncertainties",
@@ -1224,13 +1096,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Batch processing capability reduces time when handling multiple documents for applications",
       "Consistent results regardless of the source software that created the original PDF"
     ],
-    realWorldExamples: [
-      "Sneha from Delhi needed to submit college admission documents — marksheets, certificate, ID proof, and photos — as a single merged PDF under five MB. She used {name} to combine six files and compress from twelve MB to three MB in under a minute",
-      "Rajiv, an HR manager in Chennai, receives hundreds of resume PDFs weekly and uses {name} to compress large portfolios so they fit within email attachment limits for forwarding to hiring managers",
-      "Kavitha, a lawyer in Kochi, needed pages fifteen to twenty-two from a seventy-page court filing. {name} split the document precisely without affecting the original",
-      "Manoj runs a travel agency in Varanasi and regularly merges passport copies, visa documents, and itineraries into single packets using {name} for embassy submissions",
-      "Pooja, a Class 12 student in Patna, compressed her CBSE marksheet PDFs from eight MB to under one MB each for the JEE Main application portal's strict size limit"
-    ],
     tipsAndBestPractices: [
       "Before compressing important documents, keep a copy of the original — you may want the uncompressed version for printing or archival",
       "When merging PDFs for applications, arrange them in the order required by the submission portal before uploading to avoid redoing the merge",
@@ -1283,13 +1148,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Works on any device including basic smartphones accessible even in areas with limited computing resources",
       "No app installation required — use instantly from any browser without cluttering your phone",
       "Eliminates calls to bank branches or post offices for basic lookup information"
-    ],
-    realWorldExamples: [
-      "Deepak, a bank executive in Lucknow, uses {name} daily to verify IFSC codes on cheques before processing NEFT transfers — catching incorrect codes weekly that would have caused failed transactions",
-      "Sunita needed to fill her daughter's school form requiring her husband's PAN. She used {name} to verify the format was correct before submitting since incorrect PAN entries cause verification delays",
-      "Amit, a used car dealer in Jaipur, runs vehicle registration numbers through {name} to verify the registration state and year before purchasing — spotting vehicles with discrepancies",
-      "A CA firm in Pune processes hundreds of GST registrations annually and uses {name} as a quick first check on GSTIN formats before entering them into accounting software",
-      "Priyanka was sending money to her parents in Bihar and needed the IFSC code for their bank branch. {name} found it instantly using the bank name and branch location"
     ],
     tipsAndBestPractices: [
       "When verifying PAN numbers, the fourth character indicates entity type — P for individual, C for company, F for firm, H for HUF — helping you spot obvious errors",
@@ -1344,13 +1202,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Accessible from construction sites on mobile phones for on-the-spot calculations",
       "Reduces disputes with contractors through transparent calculations both parties can verify"
     ],
-    realWorldExamples: [
-      "Dinesh bought a plot measuring two bigha in Jaipur and needed square feet conversion for his architect. {name} handled it instantly, accounting for Rajasthani pucca bigha that differs from UP standard",
-      "Sangeeta in Nagpur was quoted 18 lakhs for interior work. {name} helped her independently estimate costs and found the contractor's quote was 3.5 lakhs above fair market rates",
-      "A contractor in Coimbatore uses {name} before every project to generate material lists — cement bags, steel tonnage, brick count — as the basis for supplier purchase orders",
-      "Neha compared two Gurgaon apartments — one quoted at carpet area, the other super built-up. {name} normalized both to carpet area for fair price-per-square-foot comparison",
-      "Raju, a painter in Hyderabad, calculates exact paint quantities for client quotes using {name} — accounting for primer coats, texture walls, and ceilings that manual estimates undercount"
-    ],
     tipsAndBestPractices: [
       "Always add five to ten percent wastage margin to material calculations — construction sites have spillage, breakage, and cutting waste",
       "When converting land, verify which bigha variant your region uses — pucca and kaccha differ by over sixty percent in actual area",
@@ -1403,13 +1254,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Accounts for Indian ambient temperature derating that international calculators ignore",
       "Free alternative to expensive electrical design software for residential installation planning",
       "Results verifiable against standard reference tables by electricians and inspectors"
-    ],
-    realWorldExamples: [
-      "Sudhir building a house in Bhopal needed fifteen-meter cable from distribution board to kitchen for geyser and microwave. {name} calculated wire size accounting for combined load, distance, and voltage drop",
-      "An electrician in Coimbatore uses {name} at every job site to verify wire size for AC installations — different tonnage ACs draw different starting currents",
-      "Meena's family in Mysore evaluated a three-kilowatt rooftop solar system. {name} estimated daily generation, battery requirements, and payback period against BESCOM tariff rates",
-      "A factory manager in Ludhiana calculated voltage drop across ninety-meter cable run and discovered existing cable was undersized, explaining persistent motor underperformance",
-      "Rohit compared his monthly bill against {name} calculations and discovered his old refrigerator was consuming double its rated wattage, prompting replacement"
     ],
     tipsAndBestPractices: [
       "Always use the next higher standard wire size if your calculation falls between two available sizes — safer and only marginally more expensive",
@@ -1464,13 +1308,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Saves time and reduces waste by calculating exact ingredient quantities rather than over-estimating",
       "Free to use with no ads obstructing information on mobile screens during cooking"
     ],
-    realWorldExamples: [
-      "Anita in Mumbai followed her grandmother's recipe calling for two katori besan and one chamach haldi. {name} converted these to 180 grams and 6 grams for precise measurement on her digital scale",
-      "A catering service in Hyderabad scales biryani recipes from ten servings to two hundred for weddings — ensuring consistent flavour by maintaining exact proportions",
-      "Deepa tracked daily calorie intake using {name} to log typical meals — two rotis with dal at lunch, rice with sabzi at dinner — getting accurate counts that Western fitness apps miscalculate for Indian food",
-      "Vikram's family in Pune kept running out of LPG unexpectedly. After logging usage in {name} for two months, they predicted refill dates within three days accuracy",
-      "Reshma in Canada wanted to make her mother's rajma using Indian glass and katori measurements. {name} converted everything to metric cups and grams for her Canadian measuring tools"
-    ],
     tipsAndBestPractices: [
       "When converting katori to grams, always specify the ingredient — sugar weighs much more than poha in the same katori due to density differences",
       "For recipe scaling above four times original, adjust spices slightly less than proportionally — linear scaling often makes large batches too intense",
@@ -1523,13 +1360,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Dietary preference tracking avoids catering mishaps at events with mixed vegetarian and non-vegetarian guests",
       "Free tool that saves the cost of hiring a wedding planner for basic organizational and budgeting tasks",
       "Shareable plans let the entire family contribute to planning without confusion about who is handling what"
-    ],
-    realWorldExamples: [
-      "Pooja and Amit in Delhi had a total budget of 25 lakhs for their wedding. {name} helped them allocate across seven events and they ended up spending only 23.5 lakhs by identifying areas where they were initially over-budgeting",
-      "A family in Jaipur was planning a destination wedding in Udaipur for 400 guests. {name} estimated catering, venue, and transportation costs based on Tier 2 city pricing and helped them negotiate with vendors using data-backed figures",
-      "Ravi's parents in Chennai wanted a muhurat in November-December 2026 for his wedding. {name} listed all auspicious dates per the Tamil Panchang so they could check venue availability for the best options",
-      "Meera was planning a small court marriage in Bangalore followed by a reception for 150 people. {name} gave her a focused budget plan skipping traditional ceremony costs while properly estimating reception expenses",
-      "A joint family in Lucknow was coordinating a wedding with three days of events across two venues. {name}'s timeline planner helped them sequence vendor deliveries and decoration setups without conflicts"
     ],
     tipsAndBestPractices: [
       "Always keep a ten to fifteen percent buffer in your total budget for unexpected expenses — Indian weddings almost always have last-minute additions",
@@ -1584,13 +1414,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Free to use — no subscription fee that would be a burden for small and marginal farmers",
       "Works offline after page loads — essential in rural India where internet connectivity is intermittent"
     ],
-    realWorldExamples: [
-      "Suresh, a wheat farmer in Madhya Pradesh with eight bigha land, used {name} to calculate exact DAP and urea requirements — saving around 2,000 rupees per season by not over-applying fertilizer as he had been doing by habit",
-      "A progressive farmer in Punjab compared paddy versus maize profitability using {name} before the kharif season, discovering that maize with lower input costs and comparable MSP would give higher per-bigha profit",
-      "Ramesh in Maharashtra calculated irrigation water requirements for his sugarcane crop using {name} and optimized his drip irrigation schedule, reducing water usage by nearly twenty percent",
-      "A farmer producer organization in Telangana uses {name} to calculate seed requirements when distributing bulk seed purchases among member farmers, ensuring accurate allocation based on each farmer's land holding",
-      "Geeta in Rajasthan estimated her organic wheat farming costs versus conventional costs using {name} and decided to transition two bigha to organic after seeing the premium pricing would cover higher labour costs"
-    ],
     tipsAndBestPractices: [
       "Get your soil tested at the nearest Krishi Vigyan Kendra before relying on general fertilizer recommendations — soil-specific NPK needs can differ significantly from standard guidelines",
       "When calculating profit, use conservative yield estimates and factor in at least ten percent post-harvest losses for grains and twenty percent for perishable crops",
@@ -1643,13 +1466,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Board percentage conversion helps during college admissions where different boards use different scales",
       "Saves the cost of paid exam coaching apps that charge for basic score prediction features",
       "Previous year data analysis provides context for your score that raw numbers alone cannot convey"
-    ],
-    realWorldExamples: [
-      "After NEET 2026, Priya from Kota estimated her score using {name} with 155 correct and 25 incorrect answers. The tool predicted 595 out of 720, and her actual score came within 5 marks of this estimate",
-      "Arjun used {name} after every JEE Main mock test during his preparation year, tracking his predicted score and percentile week by week — watching his estimated percentile climb from 89 to 97 over six months",
-      "Kavita appeared for SSC CGL and was unsure about her chances for the Tax Assistant post. {name} showed her predicted score exceeded the previous three years' cutoffs for OBC category, giving her confidence to start preparation for the next stage",
-      "Ravi converted his VTU CGPA of 7.8 to percentage using {name} for a campus placement requirement — the tool used VTU's official formula rather than the generic multiplication method that gives different results",
-      "A coaching institute in Patna uses {name} with their students after every practice test to provide instant score breakdowns and identify weak sections that need more focused preparation"
     ],
     tipsAndBestPractices: [
       "After any exam, note down your answers immediately from memory and use {name} with the official answer key when released for the most accurate score prediction",
@@ -1704,13 +1520,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Free to use without requiring dealer apps or insurance aggregator accounts that collect your phone number",
       "Mobile-friendly for use at showrooms when comparing models or at fuel stations for quick cost calculations"
     ],
-    realWorldExamples: [
-      "Anil in Pune was deciding between the petrol and diesel variants of his new car. {name} showed that with his daily commute of 30 km, the diesel variant would only break even after 4.5 years — making petrol the smarter choice for his usage",
-      "Kavita planned a family road trip from Bangalore to Goa and used {name} to estimate total fuel cost at 4,200 rupees and toll charges at approximately 1,100 rupees — helping her budget the trip accurately",
-      "Rajesh checked his Maruti Swift's insurance renewal quote against {name}'s estimate and found the insurer was charging 3,000 rupees more than expected for the comprehensive premium — he negotiated a better rate",
-      "A fleet manager in Mumbai uses {name} to calculate per-kilometre running costs for the company's twenty delivery vehicles, helping set accurate delivery charge pricing",
-      "Suresh was selling his five-year-old Honda City and used the depreciation calculator to determine fair market value — avoiding underselling to a dealer who quoted significantly below the calculated value"
-    ],
     tipsAndBestPractices: [
       "When comparing petrol versus diesel, calculate the break-even distance — if you drive less than 1,500 km monthly, petrol is almost always cheaper considering the higher purchase price of diesel variants",
       "For road trips, plan fuel stops based on your tank range rather than waiting until the fuel warning light appears — highway fuel stations in India can sometimes be far apart",
@@ -1763,13 +1572,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Available in English making Vedic astrology accessible to younger generations who may not read Sanskrit or Hindi texts",
       "No personal data stored — birth details are processed in your browser and not saved on any server",
       "Cultural preservation by making traditional Jyotish calculations accessible through modern technology"
-    ],
-    realWorldExamples: [
-      "Meera's family in Varanasi wanted to check her Rashi and Nakshatra for her baby's naming ceremony. {name} identified the birth Nakshatra and suggested starting letters for the baby's name according to tradition",
-      "Arun in Chennai checked multiple dates in December for his grihapravesh ceremony using {name}'s muhurat finder, identifying three auspicious dates that he then confirmed with his family priest",
-      "A young professional in Delhi was curious about her Kundli but did not have the detailed birth chart her parents had from a pandit. {name} generated a complete chart from her birth details that matched her family's older paper Kundli",
-      "Rahul was starting a new business and wanted to pick an auspicious date for incorporation. {name}'s Panchang data helped him avoid Rahu Kaal timings and identify shubh muhurat windows",
-      "Priya checked her and her fiance's Rashi compatibility using {name} as a first reference before the formal Kundli matching discussion with both families"
     ],
     tipsAndBestPractices: [
       "For accurate Kundli generation, the exact birth time matters significantly — even a fifteen-minute difference can change the Lagna and house placements",
@@ -1824,13 +1626,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Helps small businesses and individuals budget for legal compliance costs like agreement registration and trademark filing",
       "Available on mobile for quick reference even when at a court complex or government office"
     ],
-    realWorldExamples: [
-      "Sunita in Pune was buying a flat and used {name} to calculate stamp duty and registration charges for Maharashtra — the total came to 7.2 percent of agreement value, helping her budget beyond just the property price",
-      "Amit filed an RTI application to his municipal corporation about road repair funds. {name} gave him the exact format, fee amount, and the correct authority to address it to — he received a response within twenty-five days",
-      "A small business owner in Jaipur needed to send a legal notice to a defaulting client. {name} provided the standard format which he reviewed with his lawyer, saving two thousand rupees in drafting fees",
-      "Ravi was considering filing a consumer complaint about a defective phone. {name} showed him the court fee was just twenty rupees for claims under five lakhs, encouraging him to proceed with the complaint",
-      "Priya used the document checklist for property registration in Karnataka before visiting the sub-registrar office, ensuring she had all nineteen required documents and avoiding the typical multiple-visit ordeal"
-    ],
     tipsAndBestPractices: [
       "Always verify calculated fees at the relevant court or registrar office before making demand drafts — fee acts get amended and recent changes may not be immediately reflected",
       "For property stamp duty, check if your state offers concessions for women buyers, first-time buyers, or properties in certain value ranges — many states have special lower rates",
@@ -1883,13 +1678,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Free to use without the subscription fees that services like ChatGPT Plus, Jasper, or Copy.ai charge",
       "Helps students improve writing skills by seeing well-structured versions of their rough ideas",
       "Professional tone options help job seekers craft better cover letters, LinkedIn summaries, and application emails"
-    ],
-    realWorldExamples: [
-      "Ankit, a software developer in Bangalore, used {name} to compose a professional email declining a job offer gracefully — the AI produced a polite, well-structured response that he customized with specific details about his decision",
-      "Priya needed to write a product description for her handmade jewellery business on Instagram. {name} generated five different bio options and she combined elements from two of them to create her perfect profile",
-      "A college student in Delhi used {name} to restructure her rough essay notes into a properly outlined argument for her political science assignment — she then expanded each point with her own research and citations",
-      "Ramesh, a small business owner in Surat, needed to send a professional follow-up to a client in English. {name} helped him compose the email confidently, as his conversational English was better than his written English",
-      "A Hindi blogger used {name} to generate article outlines in Hindi for her cooking blog, saving two hours per post on structuring content while she focused on adding her personal recipes and photographs"
     ],
     tipsAndBestPractices: [
       "Always edit AI-generated content to add your personal voice and specific details — the best results come from using AI output as a starting draft rather than final copy",
@@ -1944,13 +1732,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Works on mobile phones so students can solve problems anywhere without carrying laptops or scientific calculators",
       "Supports the mathematical notation and conventions used in Indian textbooks and competitive exam papers"
     ],
-    realWorldExamples: [
-      "Arjun, a JEE aspirant in Kota, uses {name} to verify his manual solutions for integration problems — the step-by-step output helps him identify exactly where his working diverges from the correct method",
-      "A statistics professor in Mumbai assigns homework problems and recommends students check their answers using {name} — the tool shows the complete working so students cannot just copy the final answer",
-      "Priya needed to compute eigenvalues for a 4x4 matrix in her engineering mechanics course. Manual calculation would take thirty minutes — {name} produced the result with working in seconds",
-      "A research scholar at IIT Delhi used {name} to verify statistical calculations for his thesis data analysis before submitting — the tool confirmed his regression coefficients matched his manual computation",
-      "Meera in Class 12 was struggling to visualize how changing coefficients affects the graph of a quadratic function. {name}'s interactive plotter let her adjust values and see the curve change in real-time"
-    ],
     tipsAndBestPractices: [
       "Use the step-by-step feature to learn solution methods rather than just copying answers — understanding the process is what exam questions test",
       "For graphing, try multiple function variations to build intuition — change one coefficient at a time and observe how the graph transforms",
@@ -2003,13 +1784,6 @@ const categoryContent: Record<string, CategoryTemplate> = {
       "Wastage factors based on Indian construction practices give practical quantities rather than theoretical minimums",
       "Detailed breakdowns help verify contractor material requests — know exactly what quantities are genuinely needed",
       "Covers all major construction activities from foundation to finishing so you can estimate an entire project"
-    ],
-    realWorldExamples: [
-      "Ashok was building a house in Indore and used {name} to calculate M20 concrete quantity for his 1200 square foot roof slab — the tool told him he needed 8.5 cubic meters, while his contractor had estimated 11 cubic meters, saving him over 15,000 rupees",
-      "A contractor in Bangalore uses {name} before every project to generate complete material lists for client quotations — ensuring accuracy builds client trust and prevents embarrassing mid-project cost revisions",
-      "Meena was renovating her bathroom in Pune and used the tile calculator to determine she needed 142 tiles including five percent cutting wastage — buying exactly the right quantity avoided both shortage and excess",
-      "Ramesh, a civil engineering student, used {name} to verify his quantity surveying assignment calculations against the tool's IS code-based computation and identified two errors in his manual working",
-      "A self-building homeowner in Kerala calculated his foundation concrete, wall brickwork, roof slab, plastering, and flooring materials separately using {name} — creating a complete procurement plan before breaking ground"
     ],
     tipsAndBestPractices: [
       "Always include wastage factors — five percent for steel, seven percent for bricks, and ten percent for tiles is standard Indian construction practice",
@@ -2067,13 +1841,6 @@ const defaultContent: CategoryTemplate = {
     "Indian localization makes tools relevant and accurate for Indian users — something most international tool websites cannot match",
     "Trusted by thousands of daily users across India for personal, professional, and academic calculation needs",
     "Regular updates ensure tools reflect current standards, rates, and requirements"
-  ],
-  realWorldExamples: [
-    "A college student in Bhopal uses {name} during study sessions to quickly verify calculations without switching between multiple apps or websites",
-    "Rajesh, a small shop owner in Lucknow, relies on {name} for daily business calculations that would otherwise require paid software or manual computation",
-    "Priya, a content creator in Bangalore, uses {name} as part of her daily workflow for tasks that would otherwise take much longer to complete manually",
-    "A government office clerk in Patna uses {name} to quickly process routine calculations that come up repeatedly in his administrative work",
-    "Anita, a homemaker in Pune, uses {name} for household planning and management tasks that help her organize daily life more efficiently"
   ],
   tipsAndBestPractices: [
     "Bookmark {name} on your phone's home screen for instant access — in Chrome, tap the three-dot menu and select Add to Home Screen",
@@ -2717,7 +2484,6 @@ export function getToolContent(toolName: string, toolDescription: string, catego
   const howToSteps = template.howToSteps.map(replacePlaceholders);
   const keyFeatures = template.keyFeatures.map(replacePlaceholders);
   const benefits = template.benefits.map(replacePlaceholders);
-  const realWorldExamples = template.realWorldExamples.map(replacePlaceholders);
   const tipsAndBestPractices = template.tipsAndBestPractices.map(replacePlaceholders);
 
   const faqs = template.faqTemplates.map(f => ({
@@ -2754,7 +2520,6 @@ export function getToolContent(toolName: string, toolDescription: string, catego
     howToSteps,
     keyFeatures,
     benefits,
-    realWorldExamples,
     tipsAndBestPractices,
     indianContext,
     faqs,

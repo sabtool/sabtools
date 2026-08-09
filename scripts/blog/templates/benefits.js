@@ -53,8 +53,6 @@ function generateBenefits(tool, keywords) {
     <p>Here's why thousands of Indians use ${tool.name} on SabTools.in every day:</p>
     <ul>
       ${bulletHtml}
-      <li>Used by 10,000+ people daily across India</li>
-      <li>Rated 4.8/5 by users for accuracy and ease of use</li>
     </ul>
 
     <p>Whether you're a student, working professional, business owner, or homemaker — ${tool.name} is designed to be simple enough for anyone to use, yet powerful enough for expert-level accuracy.</p>
