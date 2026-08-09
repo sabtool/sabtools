@@ -40,7 +40,13 @@ export async function generateMetadata({
     title: page.title,
     description: page.description,
     keywords: [...page.keywords, "free online tool", "sabtools", "india", "calculator", "no signup"],
-    alternates: { canonical: `https://sabtools.in/calc/${slug}` },
+    // Canonical points at the PARENT tool page, not self (2026-08 SEO
+    // audit): the 211 /calc/ variants are 85-98.6% text-identical
+    // parameter swaps of their parent calculator — Google's definition
+    // of near-duplicates. Canonicalizing consolidates their signals
+    // into /tools/{toolSlug} and removes the doorway-page exposure
+    // while keeping the pages live for direct traffic.
+    alternates: { canonical: `https://sabtools.in/tools/${page.toolSlug}` },
     openGraph: {
       title: `${page.title} — Free Calculator`,
       description: page.description,

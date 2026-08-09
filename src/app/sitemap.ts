@@ -18,6 +18,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://sabtools.in";
   const now = new Date().toISOString();
   const stableDate = "2026-03-15T00:00:00.000Z";
+  // Content stamp for evergreen surfaces (tools / categories / hubs /
+  // listicles). Bump ONLY when their content materially changes — using
+  // the per-build timestamp here put one identical lastmod on 700+ URLs
+  // every deploy, which Google treats as noise and ignores (2026-08 audit).
+  // 2026-08-09: fabricated-content removal changed every tool page.
+  const contentStamp = "2026-08-09T00:00:00.000Z";
 
   // Per-URL hreflang in the sitemap is one of the three places Google
   // will accept the alternate-language signal (HTML head, HTTP header,
@@ -76,7 +82,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       // and gives every /calc/* page an incoming internal link (fixes the
       // orphan-page issue flagged in the technical-SEO audit).
       url: `${baseUrl}/calc`,
-      lastModified: now,
+      lastModified: contentStamp,
       changeFrequency: "weekly",
       priority: 0.7,
     },
@@ -91,7 +97,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // crawl frequently but rank below the hub.
     {
       url: `${baseUrl}/best`,
-      lastModified: now,
+      lastModified: contentStamp,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
@@ -100,43 +106,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // index URLs which previously 404'd — technical-SEO audit).
     {
       url: `${baseUrl}/compare`,
-      lastModified: now,
+      lastModified: contentStamp,
       changeFrequency: "weekly" as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/alternatives`,
-      lastModified: now,
+      lastModified: contentStamp,
       changeFrequency: "weekly" as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/best/free-gst-calculator-india`,
-      lastModified: now,
+      lastModified: contentStamp,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/best/free-emi-calculator-india`,
-      lastModified: now,
+      lastModified: contentStamp,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/best/free-pdf-tools-india`,
-      lastModified: now,
+      lastModified: contentStamp,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/best/free-income-tax-calculator-india`,
-      lastModified: now,
+      lastModified: contentStamp,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/best/hindi-calculator-tools`,
-      lastModified: now,
+      lastModified: contentStamp,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
@@ -147,49 +153,49 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Same priority 0.7 as /best/* — they're sibling content surfaces.
     {
       url: `${baseUrl}/compare/sabtools-vs-toolvala`,
-      lastModified: now,
+      lastModified: contentStamp,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/compare/sabtools-vs-indiatoolkit`,
-      lastModified: now,
+      lastModified: contentStamp,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/compare/sabtools-vs-cleartax`,
-      lastModified: now,
+      lastModified: contentStamp,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/compare/sabtools-vs-easycalculation`,
-      lastModified: now,
+      lastModified: contentStamp,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/compare/sabtools-vs-uptools`,
-      lastModified: now,
+      lastModified: contentStamp,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/alternatives/to-toolvala`,
-      lastModified: now,
+      lastModified: contentStamp,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/alternatives/to-indiatoolkit`,
-      lastModified: now,
+      lastModified: contentStamp,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/alternatives/to-cleartax-calculators`,
-      lastModified: now,
+      lastModified: contentStamp,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
@@ -201,7 +207,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const hasHindiPillar = Boolean(categoryPillarsHi[cat.slug]);
     return {
       url: `${baseUrl}/category/${cat.slug}`,
-      lastModified: now,
+      lastModified: contentStamp,
       changeFrequency: "weekly" as const,
       priority: 0.8,
       ...(hasHindiPillar
@@ -224,7 +230,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const hasHindi = hindiToolSlugs.includes(tool.slug);
     return {
       url: `${baseUrl}/tools/${tool.slug}`,
-      lastModified: now,
+      lastModified: contentStamp,
       changeFrequency: "weekly" as const,
       priority: 0.9,
       ...(hasHindi
@@ -264,13 +270,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...(post.image ? { images: [`${baseUrl}${post.image.src}`] } : {}),
   }));
 
-  // Programmatic calculator pages (/calc/*)
-  const calcPages: MetadataRoute.Sitemap = programmaticPages.map((page) => ({
-    url: `${baseUrl}/calc/${page.slug}`,
-    lastModified: now,
-    changeFrequency: "weekly" as const,
-    priority: 0.7,
-  }));
+  // Programmatic calculator pages (/calc/*) — REMOVED from the sitemap
+  // 2026-08. The 211 variants measured 85-98.6% text-identical to each
+  // other (SEO audit: doorway-page pattern at 4x the safety threshold).
+  // They now rel-canonical to their parent /tools/ page and stay live
+  // for direct/ad traffic, but are no longer advertised for indexing.
+  const calcPages: MetadataRoute.Sitemap = [];
+  void programmaticPages; // import retained for the /calc hub page
 
   // Author profile pages
   const authorPages: MetadataRoute.Sitemap = authors.map((author) => ({
