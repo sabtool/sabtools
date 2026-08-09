@@ -301,6 +301,16 @@ export const tools: Tool[] = [
   { name: "8th Pay Commission Calculator", slug: "eighth-pay-commission-calculator", description: "Calculate expected salary under 8th Pay Commission with fitment factor, HRA and allowances comparison", category: "tax", icon: "🏛️", keywords: ["8th pay commission", "pay commission calculator", "fitment factor", "government salary", "7th cpc", "8th cpc", "central government"] },
   { name: "Crypto Tax Calculator", slug: "crypto-tax-calculator", description: "Calculate 30% crypto tax under Section 115BBH plus 1% TDS, surcharge and cess for FY 2025-26", category: "tax", icon: "🪙", keywords: ["crypto tax calculator india", "cryptocurrency tax", "vda tax", "section 115bbh", "1% tds crypto", "section 194s", "bitcoin tax india", "ethereum tax", "30% crypto tax"] },
   { name: "Capital Gains Tax Calculator", slug: "capital-gains-tax-calculator", description: "Calculate STCG and LTCG tax for stocks, mutual funds, property and gold with post-Budget 2024 rates (FY 2025-26)", category: "tax", icon: "📊", keywords: ["capital gains tax calculator", "ltcg calculator india", "stcg calculator", "section 111a", "section 112a", "section 112", "ltcg 12.5%", "stcg 20%", "property capital gains", "equity ltcg exemption"], hindiName: "कैपिटल गेन्स टैक्स कैलकुलेटर" },
+  { name: "Section 44ADA Calculator (Freelancer Tax)", slug: "section-44ada-calculator", description: "Presumptive taxation calculator for freelancers, consultants, doctors, lawyers and other professionals — 50% deemed profit, ₹50L/₹75L eligibility check, new vs old regime FY 2025-26, and a full 44ADA vs ITR-3 comparison.", category: "tax", icon: "🧾", keywords: [
+    "section 44ada calculator", "44ada presumptive taxation", "freelancer tax calculator india",
+    "presumptive tax professionals", "44ada vs itr-3", "50 percent deemed profit",
+    "75 lakh limit 44ada", "freelancer income tax india fy 2025-26",
+    "software consultant tax india", "itr-4 sugam professionals",
+    "44ada eligibility", "no books of account professionals",
+    "advance tax 15 march presumptive", "44ada vs 44ad",
+    "technical consultancy 44ada", "doctor tax presumptive india",
+    "lawyer tax calculator india", "gst lut freelancer export"
+  ], hindiName: "सेक्शन 44ADA कैलकुलेटर" },
   { name: "Capital Gains Tax — Unlisted Shares (ESOP)", slug: "unlisted-shares-cgt-calculator", description: "Calculate LTCG / STCG tax on unlisted shares — ESOPs, startup equity, secondary tender, buyback — per Finance Act 2024 (12.5% LTCG, slab STCG). Surcharge + cess + Section 54F / 54EC exemption guidance.", category: "tax", icon: "🚀", keywords: [
     "unlisted shares capital gains", "esop capital gains calculator india",
     "startup equity tax", "private company shares ltcg",

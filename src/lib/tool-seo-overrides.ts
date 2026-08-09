@@ -115,6 +115,11 @@ export const slugSeoOverrides: Record<string, ToolSeoOverride> = {
     description:
       "Calculate TDS deduction for salary, rent, professional fees and more across all sections. See the net amount after tax. Free India TDS tool.",
   },
+  "section-44ada-calculator": {
+    title: "Section 44ADA Calculator — Freelancer Tax India FY 2025-26",
+    description:
+      "Free 44ADA presumptive tax calculator: 50% deemed profit, ₹50L/₹75L eligibility, new vs old regime, 44ADA vs ITR-3 comparison. For freelancers & professionals.",
+  },
   "unlisted-shares-cgt-calculator": {
     title: "Unlisted Shares CGT Calculator India — ESOP + Startup Exit",
     description:

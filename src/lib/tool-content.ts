@@ -2325,6 +2325,31 @@ export const slugFormulas: Record<string, ToolFormula> = {
     explanation:
       "Age in years-months-days uses calendar arithmetic, not a flat division. Each month-component decrements when the today.day < DOB.day (borrows ~30 days), then years decrement when months go negative (borrows 12 months). This is the same logic used by the Income Tax e-filing portal to compute age for senior-citizen / super-senior tax slabs (60+ and 80+).",
   },
+  "section-44ada-calculator": {
+    formula:
+      "Eligibility:\n" +
+      "  Specified profession u/s 44AA(1) AND resident individual / firm (not LLP)\n" +
+      "  Gross receipts ≤ ₹50,00,000\n" +
+      "  (₹75,00,000 if cash receipts ≤ 5% of total — Finance Act 2023)\n\n" +
+      "Deemed income = Gross receipts × 50%   (or higher if declared)\n\n" +
+      "Tax — new regime FY 2025-26:\n" +
+      "  0-4L nil · 4-8L 5% · 8-12L 10% · 12-16L 15%\n" +
+      "  16-20L 20% · 20-24L 25% · above 24L 30%\n" +
+      "  Section 87A: zero tax when total income ≤ ₹12,00,000\n\n" +
+      "Tax — old regime: 0-2.5L nil · 2.5-5L 5% · 5-10L 20% · >10L 30%\n" +
+      "  Chapter VI-A deductions (80C, 80D, NPS) reduce taxable income\n\n" +
+      "+ Surcharge (>₹50L: 10%; >₹1Cr: 15%) + 4% Health & Education Cess\n" +
+      "Advance tax: 100% in one installment by 15 March",
+    variables: [
+      { symbol: "Gross receipts", description: "Total professional income for the FY before any expenses" },
+      { symbol: "50% presumption", description: "Deemed profit under 44ADA — a flat effective deduction with zero bookkeeping" },
+      { symbol: "₹50L / ₹75L limit", description: "Base limit ₹50L; enhanced ₹75L when cash receipts ≤ 5% (bank/UPI/card count as non-cash)" },
+      { symbol: "87A rebate", description: "New regime FY 2025-26: total income up to ₹12L pays zero tax — so up to ₹24L receipts can be tax-free under 44ADA" },
+      { symbol: "Advance tax", description: "One installment by 15 March (vs 4 quarterly dates for regular taxpayers)" },
+    ],
+    explanation:
+      "Section 44ADA lets specified professionals (legal, medical, engineering, architecture, accountancy, technical consultancy — the route most Indian software freelancers use) declare 50% of gross receipts as taxable profit with no books of account and no tax audit. With the FY 2025-26 new-regime rebate covering income to ₹12L, a freelancer with ₹24L receipts pays zero income tax. Compare against ITR-3 with actual expenses when real costs exceed 50% of receipts. Unlike 44AD, there is no 5-year lock-in on switching.",
+  },
   "unlisted-shares-cgt-calculator": {
     formula:
       "Holding period (months) = (Sale FY × 12 + sale month) − (Purchase FY × 12 + purchase month)\n" +
