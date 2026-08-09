@@ -12,24 +12,27 @@ interface AdBannerProps {
 }
 
 /**
- * Ad placeholder that reserves space via min-height even before AdSense is
- * approved. Reserving the slot height avoids CLS when real ads eventually
- * load (report §2.3) — the layout stays identical whether the slot is empty,
- * still loading, or filled with a creative.
+ * Ad slot marker — currently renders NOTHING visible.
  *
- * Once AdSense is approved, replace the inner content with the <ins
- * className="adsbygoogle"> tag; the outer min-height wrapper stays the same.
+ * 2026-08 visual audit finding: the previous version reserved 90-250px
+ * of empty space per slot "to avoid CLS when ads load", but no
+ * `<ins class="adsbygoogle">` was ever mounted anywhere in the codebase,
+ * so the boxes stayed permanently empty — 4 slots x ~154px (box +
+ * margins) per page of pure dead space, pushing the actual calculator
+ * below the fold on mobile. AdSense auto-ads (script-level) inject and
+ * size their own containers independently of these divs, so reserving
+ * space here bought nothing.
+ *
+ * The component is kept (zero-height) so the ~40 call sites don't need
+ * touching and so a real managed-slot implementation can be dropped in
+ * later: when AdSense manual slots are actually wired, restore a
+ * min-height AND render the <ins> tag in the same commit — never one
+ * without the other.
  */
 export default function AdBanner({ format = "horizontal", className = "" }: AdBannerProps) {
-  const minHeights: Record<NonNullable<AdBannerProps["format"]>, string> = {
-    horizontal: "min-h-[90px]",
-    vertical: "min-h-[600px]",
-    rectangle: "min-h-[250px]",
-  };
-
   return (
     <div
-      className={`w-full ${minHeights[format]} ${className}`}
+      className={`w-full ${className}`}
       aria-hidden="true"
       data-ad-slot-placeholder={format}
     />

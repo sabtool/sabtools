@@ -259,15 +259,20 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
           ]}
         />
 
-        <div className="mb-8">
-          <div className="flex items-start sm:items-center gap-4 mb-3 flex-col sm:flex-row sm:justify-between">
-            <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-2xl bg-indigo-50 flex items-center justify-center text-3xl shadow-sm">
+        {/* Compact title block (2026-08 visual audit): on mobile the old
+            block consumed 210-362px before the first calculator input —
+            long descriptions wrapped to 4 lines and pushed the tool below
+            the 812px fold entirely on content-heavy pages. Smaller icon +
+            2-line description clamp on mobile reclaim ~80-150px. */}
+        <div className="mb-5 sm:mb-8">
+          <div className="flex items-start sm:items-center gap-3 sm:gap-4 mb-3 flex-col sm:flex-row sm:justify-between">
+            <div className="flex items-center gap-3 sm:gap-4">
+              <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-2xl bg-indigo-50 flex items-center justify-center text-2xl sm:text-3xl shadow-sm shrink-0">
                 {tool.icon}
               </div>
               <div>
-                <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900">{tool.name}</h1>
-                <p className="text-gray-500">{tool.description}</p>
+                <h1 className="text-xl sm:text-3xl font-extrabold text-gray-900">{tool.name}</h1>
+                <p className="text-gray-500 text-sm sm:text-base line-clamp-2 sm:line-clamp-none">{tool.description}</p>
                 <div className="mt-1">
                   <ToolUsageCounter slug={tool.slug} />
                 </div>
@@ -292,7 +297,11 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
             once on the homepage hero (and in the footer if reintroduced
             later) — that's enough. Tool pages should let the tool itself
             be the first thing visible under the title. */}
-        <AdBanner format="horizontal" className="mb-8" />
+        {/* Pre-calculator ad slot REMOVED from the critical path (2026-08
+            visual audit): the empty 90px placeholder + 64px of margins sat
+            between the title and the first input on every tool page,
+            directly causing the below-fold failure on mobile. The
+            below-calculator slot at the end of the page remains. */}
 
         {/* id="tool-capture-area" — DownloadPDF captures this whole wrapper
             so the exported PDF contains BOTH the inputs and the results,

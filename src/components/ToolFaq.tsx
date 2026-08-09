@@ -49,7 +49,16 @@ export default function ToolFaq({ toolName, description, customFaqs }: ToolFaqPr
       <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
       <div className="space-y-3">
         {faqs.map((faq, index) => (
-          <FaqAccordionItem key={index} question={faq.question} answer={faq.answer} />
+          <FaqAccordionItem
+            key={index}
+            question={faq.question}
+            answer={faq.answer}
+            // First two answers open by default: visible text for users
+            // AND for AI text-extraction pipelines that skip JS (2026-08
+            // GEO audit — accordion-hidden answers were invisible to
+            // GPTBot/ClaudeBot-style extractors).
+            defaultOpen={index < 2}
+          />
         ))}
       </div>
       {/*
@@ -62,8 +71,16 @@ export default function ToolFaq({ toolName, description, customFaqs }: ToolFaqPr
   );
 }
 
-function FaqAccordionItem({ question, answer }: { question: string; answer: string }) {
-  const [isOpen, setIsOpen] = useState(false);
+function FaqAccordionItem({
+  question,
+  answer,
+  defaultOpen = false,
+}: {
+  question: string;
+  answer: string;
+  defaultOpen?: boolean;
+}) {
+  const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
     <div className="border border-gray-200 rounded-xl overflow-hidden faq-item">
@@ -86,11 +103,18 @@ function FaqAccordionItem({ question, answer }: { question: string; answer: stri
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
-      {isOpen && (
-        <div className="px-5 pb-4 text-sm text-gray-600 leading-relaxed bg-gray-50 faq-a">
-          {answer}
-        </div>
-      )}
+      {/* ALWAYS rendered — collapsed via CSS, never removed from the DOM.
+          The previous `{isOpen && ...}` meant the answer text did not
+          exist in the server HTML at all: the Speakable selector `.faq-a`
+          matched zero nodes and AI/text extractors saw questions with no
+          answers (confirmed by three independent audit agents). */}
+      <div
+        className={`px-5 pb-4 text-sm text-gray-600 leading-relaxed bg-gray-50 faq-a ${
+          isOpen ? "" : "hidden"
+        }`}
+      >
+        {answer}
+      </div>
     </div>
   );
 }

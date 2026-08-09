@@ -23,7 +23,9 @@ interface ShareButtonsProps {
 // Brand-tinted button shells. Same shape/size, hover ring matches each
 // platform's identity so it still feels recognisable without emojis.
 const BTN_BASE =
-  "w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-150 hover:-translate-y-0.5 hover:shadow-sm";
+  // 44x44px — WCAG/Google tap-target minimum. Was 36x36 (w-9 h-9),
+  // flagged by the 2026-08 visual audit on all 7 action-row icons.
+  "w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-150 hover:-translate-y-0.5 hover:shadow-sm";
 
 export default function ShareButtons({ title }: ShareButtonsProps) {
   const [copied, setCopied] = useState(false);

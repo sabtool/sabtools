@@ -48,7 +48,7 @@ export default function FavoriteButton({ slug }: { slug: string }) {
     setTimeout(() => setAnimating(false), 300);
   };
 
-  if (!mounted) return <div className="w-9 h-9" />;
+  if (!mounted) return <div className="w-11 h-11" />;
 
   return (
     <button
@@ -59,7 +59,7 @@ export default function FavoriteButton({ slug }: { slug: string }) {
       // whole action bar sits in one consistent line. Amber when active,
       // neutral when inactive — mirrors the brand-tint approach used by
       // each share icon.
-      className={`w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-150 hover:-translate-y-0.5 hover:shadow-sm ${
+      className={`w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-150 hover:-translate-y-0.5 hover:shadow-sm ${
         isFav
           ? "bg-amber-100 text-amber-600"
           : "bg-gray-100 hover:bg-amber-50 text-gray-500 hover:text-amber-500"
