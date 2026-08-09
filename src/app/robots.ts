@@ -61,10 +61,10 @@ export default function robots(): MetadataRoute.Robots {
       // ByteDance (TikTok / Doubao) AI
       { userAgent: "Bytespider", allow: "/" },
     ],
+    // Only the index — it already references sitemap.xml + sitemap-hi.xml
+    // internally; declaring the children again was redundant (audit M-batch).
     sitemap: [
       "https://sabtools.in/sitemap-index.xml",
-      "https://sabtools.in/sitemap.xml",
-      "https://sabtools.in/sitemap-hi.xml",
     ],
   };
 }

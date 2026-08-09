@@ -2788,7 +2788,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "percentage-calculator-guide-2026",
-    title: "Free Percentage Calculator Online — No Signup Required | SabTools",
+    title: "Free Percentage Calculator Online — No Signup Required",
     description: "Calculate percentages, percentage change, increase & decrease. Use our free percentage calculator with no signup. Instant results on any device. Made for India.",
     date: "2026-04-02",
     category: "Math",
@@ -3197,12 +3197,12 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "gst-calculator-guide-2026",
-    title: "Free GST Calculator Online — No Signup Required | SabTools",
+    title: "Free GST Calculator Online — No Signup Required",
     description: "Calculate GST amount and total price with 5%, 12%, 18%, 28% rates. Use our free gst calculator with no signup. Instant results on any device. Made for India.",
     date: "2026-04-03",
     category: "Finance",
     readTime: "7 min read",
-    keywords: ["gst", "goods and services tax", "tax", "india tax", "gst calculator", "gst calculator canada", "gst calculator nz", "gst calculator australia"],
+    keywords: ["gst", "goods and services tax", "tax", "india tax", "gst calculator", "gst rate india", "cgst sgst calculator", "gst slab 18 percent"],
     toolSlug: "gst-calculator",
     image: {
       src: "/blog/gst-calculator.webp",
@@ -3471,7 +3471,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "fd-calculator-guide-2026",
-    title: "Free FD Calculator Online — No Signup Required | SabTools",
+    title: "Free FD Calculator Online — No Signup Required",
     description: "Calculate Fixed Deposit maturity amount and interest earned. Use our free fd calculator with no signup. Instant results on any device. Made for India.",
     date: "2026-04-03",
     category: "Finance",
@@ -4019,7 +4019,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "compound-interest-calculator-guide-2026",
-    title: "Free Compound Interest Calculator Online — No Signup Required | SabTools",
+    title: "Free Compound Interest Calculator Online — No Signup Required",
     description: "Calculate compound interest with different compounding frequencies. Use our free compound interest calculator with no signup. Instant results on any device. ...",
     date: "2026-04-04",
     category: "Finance",
@@ -4158,7 +4158,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "image-compressor-guide-2026",
-    title: "Free Image Compressor Online — No Signup Required | SabTools",
+    title: "Free Image Compressor Online — No Signup Required",
     description: "Compress images to reduce file size without losing quality. Use our free image compressor with no signup. Instant results on any device. Made for India.",
     date: "2026-04-04",
     category: "Image",
@@ -4567,7 +4567,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "salary-calculator-guide-2026",
-    title: "Free Salary Calculator Online — No Signup Required | SabTools",
+    title: "Free Salary Calculator Online — No Signup Required",
     description: "Calculate in-hand salary from CTC with PF, Tax & deductions. Use our free salary calculator with no signup. Instant results on any device. Made for India.",
     date: "2026-04-05",
     category: "Finance",
@@ -4706,7 +4706,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "password-generator-guide-2026",
-    title: "Free Password Generator Online — No Signup Required | SabTools",
+    title: "Free Password Generator Online — No Signup Required",
     description: "Generate strong, secure random passwords with custom length and characters. Use our free password generator with no signup. Instant results on any device. Ma...",
     date: "2026-04-05",
     category: "Security",
@@ -6330,7 +6330,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "steel-weight-calculator-guide-2026",
-    title: "Free Steel Weight Calculator Online — No Signup Required | SabTools",
+    title: "Free Steel Weight Calculator Online — No Signup Required",
     description: "Calculate weight of TMT bars, flat bars, angles, channels, pipes & plates with cost estimation. Use our free steel weight calculator with no signup. Instant ...",
     date: "2026-04-07",
     category: "Construction",
@@ -6465,7 +6465,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "protein-intake-calculator-guide-2026",
-    title: "Free Protein Intake Calculator Online — No Signup Required | SabTools",
+    title: "Free Protein Intake Calculator Online — No Signup Required",
     description: "Calculate daily protein needs based on weight, activity and fitness goal. Use our free protein intake calculator with no signup. Instant results on any devic...",
     date: "2026-04-07",
     category: "Health",
@@ -8220,7 +8220,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "csv-viewer-editor-guide-2026",
-    title: "Free CSV Viewer & Editor Online — No Signup Required | SabTools",
+    title: "Free CSV Viewer & Editor Online — No Signup Required",
     description: "Upload or paste CSV data, view in editable table with sort, filter and export. Use our free csv viewer & editor with no signup. Instant results on any device...",
     date: "2026-04-10",
     category: "Data & Charts",
@@ -10245,7 +10245,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "image-to-base64-guide-2026",
-    title: "Free Image to Base64 Online — No Signup Required | SabTools",
+    title: "Free Image to Base64 Online — No Signup Required",
     description: "Convert images to Base64 encoded string for embedding in code. Use our free image to base64 with no signup. Instant results on any device. Made for India.",
     date: "2026-04-13",
     category: "Data Tools",
@@ -11730,7 +11730,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "date-add-subtract-guide-2026",
-    title: "Free Date Add/Subtract Online — No Signup Required | SabTools",
+    title: "Free Date Add/Subtract Online — No Signup Required",
     description: "Add or subtract days, months, years from a date. Use our free date add/subtract with no signup. Instant results on any device. Made for India.",
     date: "2026-04-15",
     category: "Date & Time",
@@ -12270,7 +12270,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "graph-paper-generator-guide-2026",
-    title: "Free Graph Paper Generator Online — No Signup Required | SabTools",
+    title: "Free Graph Paper Generator Online — No Signup Required",
     description: "Generate printable graph, ruled, dot grid, isometric & blank paper in A4/Letter with custom colors. Use our free graph paper generator with no signup. Instan...",
     date: "2026-04-16",
     category: "Student",
@@ -12675,7 +12675,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "guest-list-manager-guide-2026",
-    title: "Free Guest List Manager Online — No Signup Required | SabTools",
+    title: "Free Guest List Manager Online — No Signup Required",
     description: "Manage wedding guest list with RSVP tracking, categories, side filters and text export. Use our free guest list manager with no signup. Instant results on an...",
     date: "2026-04-17",
     category: "Wedding",
@@ -14430,7 +14430,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "json-to-csv-guide-2026",
-    title: "Free JSON to CSV Converter Online — No Signup Required | SabTools",
+    title: "Free JSON to CSV Converter Online — No Signup Required",
     description: "Convert JSON data to CSV format for spreadsheets. Use our free json to csv converter with no signup. Instant results on any device. Made for India.",
     date: "2026-04-19",
     category: "Data Tools",
@@ -14700,7 +14700,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "stopwatch-guide-2026",
-    title: "Free Stopwatch Online — No Signup Required | SabTools",
+    title: "Free Stopwatch Online — No Signup Required",
     description: "Online stopwatch with lap timing and millisecond precision. Use our free stopwatch with no signup. Instant results on any device. Made for India.",
     date: "2026-04-20",
     category: "Date & Time",
@@ -15780,7 +15780,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "aspect-ratio-calculator-guide-2026",
-    title: "Free Aspect Ratio Calculator Online — No Signup Required | SabTools",
+    title: "Free Aspect Ratio Calculator Online — No Signup Required",
     description: "Calculate and convert aspect ratios for images and videos. Use our free aspect ratio calculator with no signup. Instant results on any device. Made for India.",
     date: "2026-04-21",
     category: "Data Tools",
@@ -17535,7 +17535,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "panchang-calculator-guide-2026",
-    title: "Free Panchang Calculator Online — No Signup Required | SabTools",
+    title: "Free Panchang Calculator Online — No Signup Required",
     description: "Get daily Panchang with Tithi, Nakshatra, Yoga, Karana & Vaar for any date. Use our free panchang calculator with no signup. Instant results on any device. M...",
     date: "2026-04-24",
     category: "Astrology",
@@ -17940,7 +17940,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "ip-address-lookup-guide-2026",
-    title: "Free IP Address Lookup Online — No Signup Required | SabTools",
+    title: "Free IP Address Lookup Online — No Signup Required",
     description: "Find your public IP address and basic location information. Use our free ip address lookup with no signup. Instant results on any device. Made for India.",
     date: "2026-04-24",
     category: "Fun & Utility",
@@ -18075,7 +18075,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "gift-registry-calculator-guide-2026",
-    title: "Free Gift Registry Calculator Online — No Signup Required | SabTools",
+    title: "Free Gift Registry Calculator Online — No Signup Required",
     description: "Estimate wedding gifts by guest category and calculate return gift budget. Use our free gift registry calculator with no signup. Instant results on any devic...",
     date: "2026-04-25",
     category: "Wedding",
@@ -19290,7 +19290,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "room-paint-visualizer-guide-2026",
-    title: "Free Room Paint Visualizer Online — No Signup Required | SabTools",
+    title: "Free Room Paint Visualizer Online — No Signup Required",
     description: "Calculate paint quantity with door/window deductions and preview wall colors on 3D room canvas. Use our free room paint visualizer with no signup. Instant re...",
     date: "2026-04-26",
     category: "Construction",
@@ -19965,7 +19965,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "rd-calculator-guide-2026",
-    title: "Free RD Calculator Online — No Signup Required | SabTools",
+    title: "Free RD Calculator Online — No Signup Required",
     description: "Calculate Recurring Deposit maturity amount and interest. Use our free rd calculator with no signup. Instant results on any device. Made for India.",
     date: "2026-04-27",
     category: "Finance",
@@ -20239,7 +20239,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     slug: "body-fat-calculator-guide-2026",
-    title: "Free Body Fat Calculator Online — No Signup Required | SabTools",
+    title: "Free Body Fat Calculator Online — No Signup Required",
     description: "Estimate body fat percentage using US Navy method. Use our free body fat calculator with no signup. Instant results on any device. Made for India.",
     date: "2026-04-28",
     category: "Health",
@@ -22538,7 +22538,7 @@ A cumulative 125 basis points
   },
   {
     slug: "notice-period-calculator-guide-2026",
-    title: "Free Notice Period Calculator Online — No Signup Required | SabTools",
+    title: "Free Notice Period Calculator Online — No Signup Required",
     description: "Calculate last working day, days remaining and notice period buyout amount with calendar view. Use our free notice period calculator with no signup. Instant ...",
     date: "2026-05-03",
     category: "Career",
@@ -23030,7 +23030,7 @@ in the Union Budget 2026-27 presented on February 1, 2026, Finance Minister Nirm
   },
   {
     slug: "ohms-law-calculator-guide-2026",
-    title: "Free Ohm's Law Calculator Online — No Signup Required | SabTools",
+    title: "Free Ohm's Law Calculator Online — No Signup Required",
     description: "Calculate voltage, current, resistance and power using Ohm's law - enter any 2 values. Use our free ohm's law calculator with no signup. Instant results on a...",
     date: "2026-05-04",
     category: "Electrical",
@@ -23231,7 +23231,7 @@ in the Union Budget 2026-27 presented on February 1, 2026, Finance Minister Nirm
   },
   {
     slug: "tile-calculator-guide-2026",
-    title: "Free Tile Calculator Online — No Signup Required | SabTools",
+    title: "Free Tile Calculator Online — No Signup Required",
     description: "Calculate tiles needed for a room with wastage buffer and cost estimate. Use our free tile calculator with no signup. Instant results on any device. Made for...",
     date: "2026-05-05",
     category: "Real Estate",
@@ -24818,7 +24818,7 @@ The growth kept up, with monthly peaks like November 2025 at over ₹19 billion 
   },
   {
     slug: "ideal-weight-calculator-guide-2026",
-    title: "Free Ideal Weight Calculator Online — No Signup Required | SabTools",
+    title: "Free Ideal Weight Calculator Online — No Signup Required",
     description: "Calculate ideal body weight using Devine, Robinson, Miller & Hamwi formulas. Use our free ideal weight calculator with no signup. Instant results on any devi...",
     date: "2026-05-09",
     category: "Health",
@@ -25179,7 +25179,7 @@ The growth kept up, with monthly peaks like November 2025 at over ₹19 billion 
   },
   {
     slug: "ai-product-description-guide-2026",
-    title: "Free AI Product Description Online — No Signup Required | SabTools",
+    title: "Free AI Product Description Online — No Signup Required",
     description: "Generate product descriptions in Short, Medium & Long formats with Professional, Casual or Luxury tone. Use our free ai product description with no signup. I...",
     date: "2026-05-10",
     category: "AI Writing",
@@ -26670,7 +26670,7 @@ As a result of the review of the mutual fund regulations, there has been a 44% r
   },
   {
     slug: "voter-id-info-guide-2026",
-    title: "Free Voter ID Info Online — No Signup Required | SabTools",
+    title: "Free Voter ID Info Online — No Signup Required",
     description: "Validate EPIC number format, parse state codes and check voter ID status information. Use our free voter id info with no signup. Instant results on any devic...",
     date: "2026-05-13",
     category: "Legal",
@@ -27867,7 +27867,7 @@ The Income Tax Bill 2025 restructures Section 80C by consolidating various deduc
   },
   {
     slug: "fancy-text-generator-guide-2026",
-    title: "Free Fancy Text Generator Online — No Signup Required | SabTools",
+    title: "Free Fancy Text Generator Online — No Signup Required",
     description: "Convert text to fancy Unicode fonts for social media. Use our free fancy text generator with no signup. Instant results on any device. Made for India.",
     date: "2026-05-16",
     category: "Text Tools",
@@ -28274,7 +28274,7 @@ The Income Tax Bill 2025 restructures Section 80C by consolidating various deduc
   },
   {
     slug: "ai-meta-description-generator-guide-2026",
-    title: "Free AI Meta Description Generator Online — No Signup Required | SabTools",
+    title: "Free AI Meta Description Generator Online — No Signup Required",
     description: "Generate 5 SEO meta descriptions with character count indicator for blog, product, service & tool pages. Use our free ai meta description generator with no s...",
     date: "2026-05-17",
     category: "AI Writing",
@@ -29299,7 +29299,7 @@ SGB 2017-18 Series VIII: RBI Announces Final Redemption Price, Investors Set To 
   },
   {
     slug: "compress-pdf-guide-2026",
-    title: "Free Compress PDF Online — No Signup Required | SabTools",
+    title: "Free Compress PDF Online — No Signup Required",
     description: "Reduce PDF file size with low, medium and high compression levels. Use our free compress pdf with no signup. Instant results on any device. Made for India.",
     date: "2026-05-19",
     category: "PDF",
@@ -30248,7 +30248,7 @@ India leads globally in mobile data usage per subscriber, averaging 21.2 GB per 
   },
   {
     slug: "resume-builder-guide-2026",
-    title: "Free Resume Builder Online — No Signup Required | SabTools",
+    title: "Free Resume Builder Online — No Signup Required",
     description: "Build a professional resume with multiple templates (Classic, Modern, Creative) and print/download. Use our free resume builder with no signup. Instant resul...",
     date: "2026-05-21",
     category: "Career",
@@ -33883,7 +33883,7 @@ SEBI circular SEBI/HO/IMD/IMD-SEC-3/P/CIR/2025/15 dated February 12, 2025 has gu
   },
   {
     slug: "unit-price-calculator-guide-2026",
-    title: "Free Unit Price Calculator Online — No Signup Required | SabTools",
+    title: "Free Unit Price Calculator Online — No Signup Required",
     description: "Compare product prices per unit to find best value for grocery shopping. Use our free unit price calculator with no signup. Instant results on any device. Ma...",
     date: "2026-05-29",
     category: "Math",
@@ -37611,7 +37611,7 @@ small finance banks remain the clear leaders in terms of returns
   },
   {
     slug: "sql-table-generator-guide-2026",
-    title: "Free SQL Table Generator Online — No Signup Required | SabTools",
+    title: "Free SQL Table Generator Online — No Signup Required",
     description: "Design database tables and generate CREATE TABLE SQL for MySQL, PostgreSQL and SQLite. Use our free sql table generator with no signup. Instant results on an...",
     date: "2026-06-06",
     category: "Data & Charts",
@@ -41536,7 +41536,7 @@ starting April 1, eligible employees can conveniently enroll in the UPS program 
   },
   {
     slug: "csv-to-json-guide-2026",
-    title: "Free CSV to JSON Converter Online — No Signup Required | SabTools",
+    title: "Free CSV to JSON Converter Online — No Signup Required",
     description: "Convert CSV data to JSON format for APIs. Use our free csv to json converter with no signup. Instant results on any device. Made for India.",
     date: "2026-06-20",
     category: "Data Tools",
@@ -41806,7 +41806,7 @@ starting April 1, eligible employees can conveniently enroll in the UPS program 
   },
   {
     slug: "indian-festival-calendar-guide-2026",
-    title: "Free Indian Festival Calendar Online — No Signup Required | SabTools",
+    title: "Free Indian Festival Calendar Online — No Signup Required",
     description: "Indian festivals & holidays 2025-2030 with religion filter, monthly view and export. Use our free indian festival calendar with no signup. Instant results on...",
     date: "2026-06-22",
     category: "India Guide",
@@ -41941,7 +41941,7 @@ starting April 1, eligible employees can conveniently enroll in the UPS program 
   },
   {
     slug: "countdown-timer-guide-2026",
-    title: "Free Countdown Timer Online — No Signup Required | SabTools",
+    title: "Free Countdown Timer Online — No Signup Required",
     description: "Create countdown timer to any future date or event. Use our free countdown timer with no signup. Instant results on any device. Made for India.",
     date: "2026-06-23",
     category: "Date & Time",
@@ -42211,7 +42211,7 @@ starting April 1, eligible employees can conveniently enroll in the UPS program 
   },
   {
     slug: "mind-map-generator-guide-2026",
-    title: "Free Mind Map Generator Online — No Signup Required | SabTools",
+    title: "Free Mind Map Generator Online — No Signup Required",
     description: "Create radial mind maps with color-coded branches and sub-branches, download as PNG. Use our free mind map generator with no signup. Instant results on any d...",
     date: "2026-06-25",
     category: "Data & Charts",
@@ -42484,7 +42484,7 @@ starting April 1, eligible employees can conveniently enroll in the UPS program 
   },
   {
     slug: "cooking-time-calculator-guide-2026",
-    title: "Free Cooking Time Calculator Online — No Signup Required | SabTools",
+    title: "Free Cooking Time Calculator Online — No Signup Required",
     description: "Get cooking times for Indian dishes across pressure cooker, microwave, oven and stovetop. Use our free cooking time calculator with no signup. Instant result...",
     date: "2026-06-27",
     category: "Cooking",
@@ -45178,7 +45178,7 @@ starting April 1, eligible employees can conveniently enroll in the UPS program 
   },
   {
     slug: "concrete-footing-calculator-guide-2026",
-    title: "Free Concrete Footing Volume Calculator Online — No Signup Required | SabTools",
+    title: "Free Concrete Footing Volume Calculator Online — No Signup Required",
     description: "Calculate concrete volume, cement bags, sand, aggregate, water and rebar steel for RCC footings — supports rectangular, square, circular and trapezoidal shap...",
     date: "2026-07-17",
     category: "Construction",
@@ -45718,7 +45718,7 @@ starting April 1, eligible employees can conveniently enroll in the UPS program 
   },
   {
     slug: "stamp-duty-calculator-guide-2026",
-    title: "Free Stamp Duty Calculator Online — No Signup Required | SabTools",
+    title: "Free Stamp Duty Calculator Online — No Signup Required",
     description: "Calculate stamp duty and registration charges state-wise in India. Use our free stamp duty calculator with no signup. Instant results on any device. Made for...",
     date: "2026-07-21",
     category: "Tax & Salary",
@@ -45853,7 +45853,7 @@ starting April 1, eligible employees can conveniently enroll in the UPS program 
   },
   {
     slug: "cac-ltv-ratio-calculator-guide-2026",
-    title: "Free CAC to LTV Ratio Calculator Online — No Signup Required | SabTools",
+    title: "Free CAC to LTV Ratio Calculator Online — No Signup Required",
     description: "Calculate your SaaS / startup CAC, LTV, LTV:CAC ratio and CAC payback period — with industry benchmarks, verdict band and founder advice for India SaaS targe...",
     date: "2026-07-22",
     category: "Business",
@@ -47881,7 +47881,7 @@ starting April 1, eligible employees can conveniently enroll in the UPS program 
   },
   {
     slug: "saas-rule-of-40-calculator-guide-2026",
-    title: "Free SaaS Rule of 40 Calculator Online — No Signup Required | SabTools",
+    title: "Free SaaS Rule of 40 Calculator Online — No Signup Required",
     description: "Calculate your SaaS Rule of 40 score (growth + margin) and see how you stack up against the Bessemer Cloud Index. Supports EBITDA, FCF and Net margin. India-...",
     date: "2026-08-07",
     category: "Business",

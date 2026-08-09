@@ -31,12 +31,16 @@ interface HiSitemapItem {
 export async function GET() {
   const baseUrl = "https://sabtools.in";
   const now = new Date().toISOString();
+  // Same honest-lastmod policy as sitemap.ts: evergreen Hindi tool /
+  // category pages carry a content stamp bumped only on real changes;
+  // per-build timestamps on all 462 URLs neutralised the signal (audit).
+  const contentStamp = "2026-08-09T00:00:00.000Z";
 
   const urls: HiSitemapItem[] = [
     {
       loc: `${baseUrl}/hi`,
       enLoc: `${baseUrl}/`,
-      lastmod: now,
+      lastmod: contentStamp,
       changefreq: "daily",
       priority: "0.9",
     },
@@ -44,7 +48,7 @@ export async function GET() {
     ...Object.keys(categoryPillarsHi).map((slug) => ({
       loc: `${baseUrl}/hi/category/${slug}`,
       enLoc: `${baseUrl}/category/${slug}`,
-      lastmod: now,
+      lastmod: contentStamp,
       changefreq: "weekly",
       priority: "0.8",
     })),
@@ -53,7 +57,7 @@ export async function GET() {
     ...hindiToolSlugs.map((slug) => ({
       loc: `${baseUrl}/hi/tools/${slug}`,
       enLoc: `${baseUrl}/tools/${slug}`,
-      lastmod: now,
+      lastmod: contentStamp,
       changefreq: "weekly",
       priority: "0.7",
     })),

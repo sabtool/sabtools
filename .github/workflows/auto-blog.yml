@@ -126,6 +126,19 @@ jobs:
           GOOGLE_SERVICE_ACCOUNT_KEY: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_KEY }}
         continue-on-error: true
 
+      # IndexNow — instant discovery for Bing/Yandex + the AI engines that
+      # read the Bing index (Copilot, ChatGPT search). No secret needed:
+      # ownership is proven by the key file at /<key>.txt on the site.
+      - name: Submit new post to IndexNow
+        run: |
+          NEW_URL=$(node -e "const t=require('./scripts/blog/.current-tool.json');console.log('https://sabtools.in/blog/'+(t.blogSlug||''))" 2>/dev/null || true)
+          if [ -n "$NEW_URL" ] && [ "$NEW_URL" != "https://sabtools.in/blog/" ]; then
+            node scripts/indexnow-submit.mjs "$NEW_URL"
+          else
+            echo "No new blog URL found to submit"
+          fi
+        continue-on-error: true
+
       # Auto-post the new blog to X (@Sabtoolsin) via X API v2 + OAuth 1.0a.
       # Best-effort: the script always exits 0 and only emits ::warning::
       # annotations on failure, so a missing-credentials or X-outage day

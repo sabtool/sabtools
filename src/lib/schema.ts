@@ -113,7 +113,8 @@ export function organizationNode() {
     sameAs: [
       "https://x.com/Sabtoolsin",
       "https://www.youtube.com/@sabtools",
-      "https://www.linkedin.com/company/sabtools",
+      // LinkedIn company URL removed 2026-08 — audit confirmed it 404s.
+      // Re-add only after the company page actually exists.
       "https://github.com/sabtool",
     ],
     // Member references — Person @ids of every named expert on the

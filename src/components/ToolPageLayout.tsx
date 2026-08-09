@@ -122,9 +122,10 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
   // Compose featureList from content.keyFeatures (rich capability statements)
   // and fall back to tool.keywords. Capped to 12 entries — Google ignores past
   // ~10 and a long list can look spammy.
-  const featureList = [...(content.keyFeatures ?? []), ...(tool.keywords ?? [])]
-    .filter(Boolean)
-    .slice(0, 12);
+  // keyFeatures only — appending raw SEO keywords produced bare fragments
+  // like "emi", "loan" in the schema featureList, which reads as keyword
+  // stuffing and is semantically wrong for the field (audit finding).
+  const featureList = [...(content.keyFeatures ?? [])].filter(Boolean).slice(0, 12);
 
   // Optional tutorial video (lib/tool-videos.ts). When present we both embed
   // it on the page AND emit a VideoObject in the @graph. Without the embed,
@@ -144,7 +145,10 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
       url: pageUrl,
       name: `${tool.name} — Free Online ${cat?.name || "Tool"}`,
       description: tool.description,
-      inLanguage: SUPPORTED_LANGUAGES,
+      // en-IN only: these documents are English (html lang="en-IN"); the
+      // Hindi variant lives at /hi/... as a separate URL. Claiming hi-IN
+      // here was flagged by the audit as a false language signal.
+      inLanguage: "en-IN",
       primaryEntityId: webAppId,
       breadcrumbId,
       dateModified: BUILD_DATE,
@@ -174,7 +178,7 @@ export default function ToolPageLayout({ tool, children }: ToolPageLayoutProps) 
       // Slug for applicationCategory mapping ("finance" → FinanceApplication)
       // — Phase 2 Step 2.3 schema.org rich-result optimisation.
       categorySlug: cat?.slug,
-      inLanguage: SUPPORTED_LANGUAGES,
+      inLanguage: "en-IN",
       mainEntityOfPage: webPageId,
       // E-E-A-T author attribution — same domain expert who reviews the
       // category (Priya Sharma for Finance, Dr. Rajesh Kumar for Health,
