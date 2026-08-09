@@ -272,9 +272,10 @@
     "paint-calculator",
     "ai-youtube-script-outline",
     "saas-rule-of-40-calculator",
-    "property-capital-gains-tax-calculator"
+    "property-capital-gains-tax-calculator",
+    "text-to-slug"
   ],
-  "lastCategory": "realestate",
-  "totalPosts": 273,
-  "lastRun": "2026-08-08T04:42:34.953Z"
+  "lastCategory": "text",
+  "totalPosts": 274,
+  "lastRun": "2026-08-09T04:52:05.883Z"
 }
