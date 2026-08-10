@@ -273,9 +273,10 @@
     "ai-youtube-script-outline",
     "saas-rule-of-40-calculator",
     "property-capital-gains-tax-calculator",
-    "text-to-slug"
+    "text-to-slug",
+    "javascript-minifier"
   ],
-  "lastCategory": "text",
-  "totalPosts": 274,
-  "lastRun": "2026-08-09T04:52:05.883Z"
+  "lastCategory": "developer",
+  "totalPosts": 275,
+  "lastRun": "2026-08-10T05:11:32.848Z"
 }
