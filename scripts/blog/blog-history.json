@@ -274,9 +274,10 @@
     "saas-rule-of-40-calculator",
     "property-capital-gains-tax-calculator",
     "text-to-slug",
-    "javascript-minifier"
+    "javascript-minifier",
+    "business-name-generator"
   ],
-  "lastCategory": "developer",
-  "totalPosts": 275,
-  "lastRun": "2026-08-10T05:11:32.848Z"
+  "lastCategory": "business",
+  "totalPosts": 276,
+  "lastRun": "2026-08-11T05:28:51.428Z"
 }
