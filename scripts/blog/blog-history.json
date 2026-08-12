@@ -275,9 +275,10 @@
     "property-capital-gains-tax-calculator",
     "text-to-slug",
     "javascript-minifier",
-    "business-name-generator"
+    "business-name-generator",
+    "mulch-gravel-calculator"
   ],
-  "lastCategory": "business",
-  "totalPosts": 276,
-  "lastRun": "2026-08-11T05:28:51.428Z"
+  "lastCategory": "construction",
+  "totalPosts": 277,
+  "lastRun": "2026-08-12T06:08:39.647Z"
 }
