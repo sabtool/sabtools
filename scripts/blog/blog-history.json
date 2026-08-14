@@ -277,9 +277,10 @@
     "javascript-minifier",
     "business-name-generator",
     "mulch-gravel-calculator",
-    "id-card-generator"
+    "id-card-generator",
+    "schema-markup-generator"
   ],
-  "lastCategory": "image",
-  "totalPosts": 278,
-  "lastRun": "2026-08-13T05:31:01.885Z"
+  "lastCategory": "seo",
+  "totalPosts": 279,
+  "lastRun": "2026-08-14T06:27:12.403Z"
 }
