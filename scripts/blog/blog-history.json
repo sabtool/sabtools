@@ -280,9 +280,10 @@
     "id-card-generator",
     "schema-markup-generator",
     "tyre-size-calculator",
-    "aadhaar-validator"
+    "aadhaar-validator",
+    "image-border-adder"
   ],
-  "lastCategory": "utility",
-  "totalPosts": 281,
-  "lastRun": "2026-08-16T05:33:41.909Z"
+  "lastCategory": "image",
+  "totalPosts": 282,
+  "lastRun": "2026-08-17T04:54:34.363Z"
 }
