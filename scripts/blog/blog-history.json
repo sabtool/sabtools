@@ -281,9 +281,10 @@
     "schema-markup-generator",
     "tyre-size-calculator",
     "aadhaar-validator",
-    "image-border-adder"
+    "image-border-adder",
+    "aadhaar-masked-generator"
   ],
-  "lastCategory": "image",
-  "totalPosts": 282,
-  "lastRun": "2026-08-17T04:54:34.363Z"
+  "lastCategory": "indiaguide",
+  "totalPosts": 283,
+  "lastRun": "2026-08-18T04:41:26.116Z"
 }
