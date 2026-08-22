@@ -285,9 +285,10 @@
     "aadhaar-masked-generator",
     "meta-tag-generator",
     "data-storage-converter",
-    "atal-pension-yojana-calculator"
+    "atal-pension-yojana-calculator",
+    "section-44ada-calculator"
   ],
-  "lastCategory": "finance",
-  "totalPosts": 286,
-  "lastRun": "2026-08-21T05:07:21.025Z"
+  "lastCategory": "tax",
+  "totalPosts": 287,
+  "lastRun": "2026-08-22T05:00:29.683Z"
 }
