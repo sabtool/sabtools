@@ -290,9 +290,10 @@
     "webp-to-jpg",
     "seo-roi-calculator",
     "prime-number-checker",
-    "whois-lookup"
+    "whois-lookup",
+    "structured-data-generator"
   ],
-  "lastCategory": "security",
-  "totalPosts": 291,
-  "lastRun": "2026-08-26T04:36:48.014Z"
+  "lastCategory": "seo",
+  "totalPosts": 292,
+  "lastRun": "2026-08-27T15:39:43.359Z"
 }
