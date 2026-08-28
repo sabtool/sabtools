@@ -291,9 +291,10 @@
     "seo-roi-calculator",
     "prime-number-checker",
     "whois-lookup",
-    "structured-data-generator"
+    "structured-data-generator",
+    "train-seat-layout"
   ],
-  "lastCategory": "seo",
-  "totalPosts": 292,
-  "lastRun": "2026-08-27T15:39:43.359Z"
+  "lastCategory": "indiaguide",
+  "totalPosts": 293,
+  "lastRun": "2026-08-28T15:50:46.491Z"
 }
