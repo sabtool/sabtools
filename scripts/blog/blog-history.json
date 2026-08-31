@@ -294,9 +294,10 @@
     "structured-data-generator",
     "train-seat-layout",
     "typing-speed-test",
-    "photo-to-sketch"
+    "photo-to-sketch",
+    "tax-regime-comparator"
   ],
-  "lastCategory": "image",
-  "totalPosts": 295,
-  "lastRun": "2026-08-30T10:35:21.650Z"
+  "lastCategory": "tax",
+  "totalPosts": 296,
+  "lastRun": "2026-08-31T10:41:11.459Z"
 }
