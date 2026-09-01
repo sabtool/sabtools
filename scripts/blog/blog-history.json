@@ -295,9 +295,10 @@
     "train-seat-layout",
     "typing-speed-test",
     "photo-to-sketch",
-    "tax-regime-comparator"
+    "tax-regime-comparator",
+    "ai-paragraph-to-bullets"
   ],
-  "lastCategory": "tax",
-  "totalPosts": 296,
-  "lastRun": "2026-08-31T10:41:11.459Z"
+  "lastCategory": "ai",
+  "totalPosts": 297,
+  "lastRun": "2026-09-01T09:54:42.613Z"
 }
