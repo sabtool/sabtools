@@ -296,9 +296,10 @@
     "typing-speed-test",
     "photo-to-sketch",
     "tax-regime-comparator",
-    "ai-paragraph-to-bullets"
+    "ai-paragraph-to-bullets",
+    "svg-to-png"
   ],
-  "lastCategory": "ai",
-  "totalPosts": 297,
-  "lastRun": "2026-09-01T09:54:42.613Z"
+  "lastCategory": "image",
+  "totalPosts": 298,
+  "lastRun": "2026-09-02T08:27:03.934Z"
 }
