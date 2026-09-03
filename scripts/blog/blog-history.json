@@ -297,9 +297,10 @@
     "photo-to-sketch",
     "tax-regime-comparator",
     "ai-paragraph-to-bullets",
-    "svg-to-png"
+    "svg-to-png",
+    "text-repeater"
   ],
-  "lastCategory": "image",
-  "totalPosts": 298,
-  "lastRun": "2026-09-02T08:27:03.934Z"
+  "lastCategory": "text",
+  "totalPosts": 299,
+  "lastRun": "2026-09-03T08:44:34.679Z"
 }
