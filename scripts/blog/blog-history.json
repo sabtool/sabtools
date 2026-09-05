@@ -299,9 +299,10 @@
     "ai-paragraph-to-bullets",
     "svg-to-png",
     "text-repeater",
-    "trig-calculator"
+    "trig-calculator",
+    "speech-to-text"
   ],
-  "lastCategory": "science",
-  "totalPosts": 300,
-  "lastRun": "2026-09-04T08:53:42.350Z"
+  "lastCategory": "text",
+  "totalPosts": 301,
+  "lastRun": "2026-09-05T08:35:41.137Z"
 }
