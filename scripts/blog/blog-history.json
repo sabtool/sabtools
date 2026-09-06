@@ -300,9 +300,10 @@
     "svg-to-png",
     "text-repeater",
     "trig-calculator",
-    "speech-to-text"
+    "speech-to-text",
+    "sitemap-validator"
   ],
-  "lastCategory": "text",
-  "totalPosts": 301,
-  "lastRun": "2026-09-05T08:35:41.137Z"
+  "lastCategory": "seo",
+  "totalPosts": 302,
+  "lastRun": "2026-09-06T09:13:28.225Z"
 }
