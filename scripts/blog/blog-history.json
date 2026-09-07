@@ -301,9 +301,10 @@
     "text-repeater",
     "trig-calculator",
     "speech-to-text",
-    "sitemap-validator"
+    "sitemap-validator",
+    "url-encoder-decoder"
   ],
-  "lastCategory": "seo",
-  "totalPosts": 302,
-  "lastRun": "2026-09-06T09:13:28.225Z"
+  "lastCategory": "developer",
+  "totalPosts": 303,
+  "lastRun": "2026-09-07T09:06:50.302Z"
 }
