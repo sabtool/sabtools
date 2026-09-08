@@ -302,9 +302,10 @@
     "trig-calculator",
     "speech-to-text",
     "sitemap-validator",
-    "url-encoder-decoder"
+    "url-encoder-decoder",
+    "algebra-solver"
   ],
-  "lastCategory": "developer",
-  "totalPosts": 303,
-  "lastRun": "2026-09-07T09:06:50.302Z"
+  "lastCategory": "science",
+  "totalPosts": 304,
+  "lastRun": "2026-09-08T08:23:07.191Z"
 }
