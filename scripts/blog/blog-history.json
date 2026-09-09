@@ -303,9 +303,10 @@
     "speech-to-text",
     "sitemap-validator",
     "url-encoder-decoder",
-    "algebra-solver"
+    "algebra-solver",
+    "startup-valuation-calculator"
   ],
-  "lastCategory": "science",
-  "totalPosts": 304,
-  "lastRun": "2026-09-08T08:23:07.191Z"
+  "lastCategory": "business",
+  "totalPosts": 305,
+  "lastRun": "2026-09-09T08:32:08.570Z"
 }
