@@ -305,9 +305,10 @@
     "url-encoder-decoder",
     "algebra-solver",
     "startup-valuation-calculator",
-    "length-converter"
+    "length-converter",
+    "text-encryption"
   ],
-  "lastCategory": "converters",
-  "totalPosts": 306,
-  "lastRun": "2026-09-10T09:19:59.528Z"
+  "lastCategory": "text",
+  "totalPosts": 307,
+  "lastRun": "2026-09-11T09:34:52.651Z"
 }
