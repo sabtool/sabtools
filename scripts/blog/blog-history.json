@@ -308,9 +308,10 @@
     "length-converter",
     "text-encryption",
     "terms-conditions-generator",
-    "probability-calculator"
+    "probability-calculator",
+    "eighth-pay-commission-calculator"
   ],
-  "lastCategory": "science",
-  "totalPosts": 309,
-  "lastRun": "2026-09-13T09:47:57.741Z"
+  "lastCategory": "tax",
+  "totalPosts": 310,
+  "lastRun": "2026-09-14T10:23:12.789Z"
 }
