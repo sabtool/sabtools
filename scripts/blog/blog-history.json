@@ -309,9 +309,10 @@
     "text-encryption",
     "terms-conditions-generator",
     "probability-calculator",
-    "eighth-pay-commission-calculator"
+    "eighth-pay-commission-calculator",
+    "html-encoder-decoder"
   ],
-  "lastCategory": "tax",
-  "totalPosts": 310,
-  "lastRun": "2026-09-14T10:23:12.789Z"
+  "lastCategory": "developer",
+  "totalPosts": 311,
+  "lastRun": "2026-09-15T09:35:19.370Z"
 }
