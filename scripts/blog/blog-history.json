@@ -310,9 +310,10 @@
     "terms-conditions-generator",
     "probability-calculator",
     "eighth-pay-commission-calculator",
-    "html-encoder-decoder"
+    "html-encoder-decoder",
+    "lucky-number-generator"
   ],
-  "lastCategory": "developer",
-  "totalPosts": 311,
-  "lastRun": "2026-09-15T09:35:19.370Z"
+  "lastCategory": "fun",
+  "totalPosts": 312,
+  "lastRun": "2026-09-16T09:25:46.597Z"
 }
