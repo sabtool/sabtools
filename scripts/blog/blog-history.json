@@ -311,9 +311,10 @@
     "probability-calculator",
     "eighth-pay-commission-calculator",
     "html-encoder-decoder",
-    "lucky-number-generator"
+    "lucky-number-generator",
+    "dns-lookup-tool"
   ],
-  "lastCategory": "fun",
-  "totalPosts": 312,
-  "lastRun": "2026-09-16T09:25:46.597Z"
+  "lastCategory": "security",
+  "totalPosts": 313,
+  "lastRun": "2026-09-17T10:06:08.161Z"
 }
