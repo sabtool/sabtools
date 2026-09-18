@@ -312,9 +312,10 @@
     "eighth-pay-commission-calculator",
     "html-encoder-decoder",
     "lucky-number-generator",
-    "dns-lookup-tool"
+    "dns-lookup-tool",
+    "headline-analyzer"
   ],
-  "lastCategory": "security",
-  "totalPosts": 313,
-  "lastRun": "2026-09-17T10:06:08.161Z"
+  "lastCategory": "seo",
+  "totalPosts": 314,
+  "lastRun": "2026-09-18T08:26:53.532Z"
 }
