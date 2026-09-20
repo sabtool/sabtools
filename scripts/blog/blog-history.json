@@ -314,9 +314,10 @@
     "lucky-number-generator",
     "dns-lookup-tool",
     "headline-analyzer",
-    "nps-retirement-payout-calculator"
+    "nps-retirement-payout-calculator",
+    "professional-tax-calculator"
   ],
-  "lastCategory": "finance",
-  "totalPosts": 315,
-  "lastRun": "2026-09-19T09:03:46.241Z"
+  "lastCategory": "tax",
+  "totalPosts": 316,
+  "lastRun": "2026-09-20T10:01:48.378Z"
 }
