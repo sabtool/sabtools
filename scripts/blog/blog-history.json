@@ -315,9 +315,10 @@
     "dns-lookup-tool",
     "headline-analyzer",
     "nps-retirement-payout-calculator",
-    "professional-tax-calculator"
+    "professional-tax-calculator",
+    "temperature-converter"
   ],
-  "lastCategory": "tax",
-  "totalPosts": 316,
-  "lastRun": "2026-09-20T10:01:48.378Z"
+  "lastCategory": "converters",
+  "totalPosts": 317,
+  "lastRun": "2026-09-21T09:17:10.974Z"
 }
