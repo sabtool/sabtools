@@ -316,9 +316,10 @@
     "headline-analyzer",
     "nps-retirement-payout-calculator",
     "professional-tax-calculator",
-    "temperature-converter"
+    "temperature-converter",
+    "sgb-returns-calculator"
   ],
-  "lastCategory": "converters",
-  "totalPosts": 317,
-  "lastRun": "2026-09-21T09:17:10.974Z"
+  "lastCategory": "finance",
+  "totalPosts": 318,
+  "lastRun": "2026-09-22T09:21:36.169Z"
 }
