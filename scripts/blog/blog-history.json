@@ -318,9 +318,10 @@
     "professional-tax-calculator",
     "temperature-converter",
     "sgb-returns-calculator",
-    "backlink-checker"
+    "backlink-checker",
+    "image-format-converter"
   ],
-  "lastCategory": "seo",
-  "totalPosts": 319,
-  "lastRun": "2026-09-23T09:14:56.742Z"
+  "lastCategory": "image",
+  "totalPosts": 320,
+  "lastRun": "2026-09-24T09:08:20.730Z"
 }
