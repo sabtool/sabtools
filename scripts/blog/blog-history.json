@@ -320,9 +320,10 @@
     "sgb-returns-calculator",
     "backlink-checker",
     "image-format-converter",
-    "salary-hike-calculator"
+    "salary-hike-calculator",
+    "regex-tester"
   ],
-  "lastCategory": "tax",
-  "totalPosts": 321,
-  "lastRun": "2026-09-25T09:14:04.533Z"
+  "lastCategory": "developer",
+  "totalPosts": 322,
+  "lastRun": "2026-09-26T10:04:25.027Z"
 }
