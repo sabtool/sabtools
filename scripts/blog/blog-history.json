@@ -324,9 +324,10 @@
     "regex-tester",
     "quote-generator",
     "volume-converter",
-    "markdown-to-html"
+    "markdown-to-html",
+    "seo-checker"
   ],
-  "lastCategory": "developer",
-  "totalPosts": 325,
-  "lastRun": "2026-09-29T11:33:04.081Z"
+  "lastCategory": "seo",
+  "totalPosts": 326,
+  "lastRun": "2026-09-30T10:43:37.720Z"
 }
