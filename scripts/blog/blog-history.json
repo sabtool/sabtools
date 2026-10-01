@@ -325,9 +325,10 @@
     "quote-generator",
     "volume-converter",
     "markdown-to-html",
-    "seo-checker"
+    "seo-checker",
+    "electricity-rate-finder"
   ],
-  "lastCategory": "seo",
-  "totalPosts": 326,
-  "lastRun": "2026-09-30T10:43:37.720Z"
+  "lastCategory": "indiaguide",
+  "totalPosts": 327,
+  "lastRun": "2026-10-01T11:25:38.018Z"
 }
