@@ -326,9 +326,10 @@
     "volume-converter",
     "markdown-to-html",
     "seo-checker",
-    "electricity-rate-finder"
+    "electricity-rate-finder",
+    "yaml-to-json"
   ],
-  "lastCategory": "indiaguide",
-  "totalPosts": 327,
-  "lastRun": "2026-10-01T11:25:38.018Z"
+  "lastCategory": "developer",
+  "totalPosts": 328,
+  "lastRun": "2026-10-02T11:00:42.179Z"
 }
