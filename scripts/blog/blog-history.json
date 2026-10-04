@@ -328,9 +328,10 @@
     "seo-checker",
     "electricity-rate-finder",
     "yaml-to-json",
-    "number-system-converter"
+    "number-system-converter",
+    "split-bill-calculator"
   ],
-  "lastCategory": "converters",
-  "totalPosts": 329,
-  "lastRun": "2026-10-03T09:38:35.468Z"
+  "lastCategory": "fun",
+  "totalPosts": 330,
+  "lastRun": "2026-10-04T10:38:57.930Z"
 }
