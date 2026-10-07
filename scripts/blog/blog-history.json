@@ -331,9 +331,10 @@
     "number-system-converter",
     "split-bill-calculator",
     "image-rotate-flip",
-    "speed-converter"
+    "speed-converter",
+    "cagr-calculator"
   ],
-  "lastCategory": "converters",
-  "totalPosts": 332,
-  "lastRun": "2026-10-06T11:51:01.144Z"
+  "lastCategory": "finance",
+  "totalPosts": 333,
+  "lastRun": "2026-10-07T10:57:37.782Z"
 }
