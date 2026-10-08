@@ -332,9 +332,10 @@
     "split-bill-calculator",
     "image-rotate-flip",
     "speed-converter",
-    "cagr-calculator"
+    "cagr-calculator",
+    "fuel-cost-calculator"
   ],
-  "lastCategory": "finance",
-  "totalPosts": 333,
-  "lastRun": "2026-10-07T10:57:37.782Z"
+  "lastCategory": "fun",
+  "totalPosts": 334,
+  "lastRun": "2026-10-08T11:47:45.351Z"
 }
