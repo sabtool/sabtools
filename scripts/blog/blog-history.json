@@ -333,9 +333,10 @@
     "image-rotate-flip",
     "speed-converter",
     "cagr-calculator",
-    "fuel-cost-calculator"
+    "fuel-cost-calculator",
+    "jwt-decoder"
   ],
-  "lastCategory": "fun",
-  "totalPosts": 334,
-  "lastRun": "2026-10-08T11:47:45.351Z"
+  "lastCategory": "developer",
+  "totalPosts": 335,
+  "lastRun": "2026-10-09T12:14:25.897Z"
 }
