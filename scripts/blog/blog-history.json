@@ -336,9 +336,10 @@
     "fuel-cost-calculator",
     "jwt-decoder",
     "image-to-png",
-    "liters-to-gallons"
+    "liters-to-gallons",
+    "profit-loss-calculator"
   ],
-  "lastCategory": "converters",
-  "totalPosts": 337,
-  "lastRun": "2026-10-11T11:00:18.596Z"
+  "lastCategory": "business",
+  "totalPosts": 338,
+  "lastRun": "2026-10-12T11:59:38.792Z"
 }
