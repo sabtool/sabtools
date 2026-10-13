@@ -337,9 +337,10 @@
     "jwt-decoder",
     "image-to-png",
     "liters-to-gallons",
-    "profit-loss-calculator"
+    "profit-loss-calculator",
+    "language-translator"
   ],
-  "lastCategory": "business",
-  "totalPosts": 338,
-  "lastRun": "2026-10-12T11:59:38.792Z"
+  "lastCategory": "text",
+  "totalPosts": 339,
+  "lastRun": "2026-10-13T12:13:48.849Z"
 }
