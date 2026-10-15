@@ -339,9 +339,10 @@
     "liters-to-gallons",
     "profit-loss-calculator",
     "language-translator",
-    "hex-to-rgb"
+    "hex-to-rgb",
+    "paragraph-rewriter"
   ],
-  "lastCategory": "converters",
-  "totalPosts": 340,
-  "lastRun": "2026-10-14T10:22:50.633Z"
+  "lastCategory": "text",
+  "totalPosts": 341,
+  "lastRun": "2026-10-15T09:14:59.984Z"
 }
