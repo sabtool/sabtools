@@ -340,9 +340,10 @@
     "profit-loss-calculator",
     "language-translator",
     "hex-to-rgb",
-    "paragraph-rewriter"
+    "paragraph-rewriter",
+    "age-on-planet-calculator"
   ],
-  "lastCategory": "text",
-  "totalPosts": 341,
-  "lastRun": "2026-10-15T09:14:59.984Z"
+  "lastCategory": "fun",
+  "totalPosts": 342,
+  "lastRun": "2026-10-16T08:38:29.658Z"
 }
