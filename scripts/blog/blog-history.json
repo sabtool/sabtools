@@ -341,9 +341,10 @@
     "language-translator",
     "hex-to-rgb",
     "paragraph-rewriter",
-    "age-on-planet-calculator"
+    "age-on-planet-calculator",
+    "image-filters"
   ],
-  "lastCategory": "fun",
-  "totalPosts": 342,
-  "lastRun": "2026-10-16T08:38:29.658Z"
+  "lastCategory": "image",
+  "totalPosts": 343,
+  "lastRun": "2026-10-17T08:19:33.265Z"
 }
