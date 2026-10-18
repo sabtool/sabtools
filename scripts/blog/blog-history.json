@@ -342,9 +342,10 @@
     "hex-to-rgb",
     "paragraph-rewriter",
     "age-on-planet-calculator",
-    "image-filters"
+    "image-filters",
+    "ai-hashtag-generator-pro"
   ],
-  "lastCategory": "image",
-  "totalPosts": 343,
-  "lastRun": "2026-10-17T08:19:33.265Z"
+  "lastCategory": "ai",
+  "totalPosts": 344,
+  "lastRun": "2026-10-18T08:27:50.238Z"
 }
