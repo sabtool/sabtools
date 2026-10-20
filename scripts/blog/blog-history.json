@@ -344,9 +344,10 @@
     "age-on-planet-calculator",
     "image-filters",
     "ai-hashtag-generator-pro",
-    "tip-calculator"
+    "tip-calculator",
+    "ai-linkedin-post-generator"
   ],
-  "lastCategory": "fun",
-  "totalPosts": 345,
-  "lastRun": "2026-10-19T09:37:35.728Z"
+  "lastCategory": "ai",
+  "totalPosts": 346,
+  "lastRun": "2026-10-20T10:16:54.926Z"
 }
