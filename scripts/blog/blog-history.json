@@ -348,9 +348,10 @@
     "ai-linkedin-post-generator",
     "emi-bridge-calculator",
     "email-marketing-roi-calculator",
-    "pixel-art-maker"
+    "pixel-art-maker",
+    "open-graph-generator"
   ],
-  "lastCategory": "image",
-  "totalPosts": 349,
-  "lastRun": "2026-10-24T09:13:48.143Z"
+  "lastCategory": "seo",
+  "totalPosts": 350,
+  "lastRun": "2026-10-25T10:00:25.044Z"
 }
