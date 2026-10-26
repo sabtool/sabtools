@@ -350,9 +350,10 @@
     "email-marketing-roi-calculator",
     "pixel-art-maker",
     "open-graph-generator",
-    "pomodoro-timer"
+    "pomodoro-timer",
+    "ai-motivational-quote-generator"
   ],
-  "lastCategory": "fun",
-  "totalPosts": 351,
-  "lastRun": "2026-10-25T15:10:24.937Z"
+  "lastCategory": "ai",
+  "totalPosts": 352,
+  "lastRun": "2026-10-26T09:27:33.258Z"
 }
