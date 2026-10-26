@@ -351,9 +351,10 @@
     "pixel-art-maker",
     "open-graph-generator",
     "pomodoro-timer",
-    "ai-motivational-quote-generator"
+    "ai-motivational-quote-generator",
+    "scientific-calculator"
   ],
-  "lastCategory": "ai",
-  "totalPosts": 352,
-  "lastRun": "2026-10-26T09:27:33.258Z"
+  "lastCategory": "fun",
+  "totalPosts": 353,
+  "lastRun": "2026-10-26T16:24:05.116Z"
 }
