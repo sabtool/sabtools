@@ -59615,6 +59615,199 @@ the optimism assumes earnings remain supportive, US tariff tensions ease and the
 <p>That's a separate workflow. XML-from-JSON requires decisions about which keys become attributes vs child elements, root element name, and namespace handling — all things the forward conversion captures but the reverse has to guess.</p>
 
 <p>Paste your XML, keep an eye on the attributes, and verify the output against your schema before shipping. <a href="/tools/xml-to-json">Open the XML to JSON Converter →</a></p>`,
+  },
+  {
+    slug: "image-resizer-comparison-2026",
+    title: "Best Free Image Resizer in India 2026 — Tools Compared",
+    description: "Honest comparison of free Image Resizer options in India for 2026 — features, accuracy, privacy, signup requirements. Picks the best for Indian users.",
+    date: "2026-10-27",
+    category: "Image",
+    readTime: "10 min read",
+    keywords: ["image", "resize", "dimensions", "scale", "width", "height", "image resizer", "image resizer in kb", "best image resizer india", "image resizer comparison"],
+    toolSlug: "image-resizer",
+    image: {
+      src: "/blog/image-resizer.webp",
+      alt: "Image Resizer comparison — SabTools vs other free Indian tools (2026)",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>The real decision: which image resizer actually works for Indian use cases?</h2>
+
+<p>If you're uploading a photo for an <strong>SSC exam application</strong>, a <strong>UPSC form</strong>, or your <strong>passport renewal</strong>, you've probably hit the same wall every Indian applicant hits — the portal demands "photo between 20KB and 50KB, dimensions 3.5cm × 4.5cm, JPEG only." Your phone camera shot is 4MB. Now what?</p>
+
+<p>The quick verdict: for Indian government forms, exam portals, and KB-targeted resizing, <a href="/tools/image-resizer">SabTools' Image Resizer</a> is the fastest route because it runs entirely in your browser (no upload wait), hits exact KB targets, and doesn't ask you to sign up. <a href="https://tinypng.com/" rel="noopener" target="_blank">TinyPNG</a> is still the gold standard if you only care about compression quality for web images. <a href="https://squoosh.app/" rel="noopener" target="_blank">Squoosh</a> is a brilliant engineer's tool for tuning a single image. <a href="https://www.iloveimg.com/resize-image" rel="noopener" target="_blank">ILoveIMG</a> is fine for occasional use but trips over its upload/paywall model.</p>
+
+<p>This guide compares all four honestly, with a bias toward what Indian users actually need: KB-based output, govt form presets, no login friction, and the ability to resize without handing your face photo to a server you've never heard of.</p>
+
+<h2>Quick comparison table (the gist)</h2>
+
+<ul>
+  <li><strong>SabTools Image Resizer</strong> — browser-based, no signup, exact pixel/percentage/KB targeting, Indian form presets. Free with no tier upsell.</li>
+  <li><strong>TinyPNG</strong> — world-class compression, but files are uploaded to their servers, free tier limited to 20 images and 5MB each. No resize-to-KB option.</li>
+  <li><strong>Squoosh</strong> — browser-based (privacy win), excellent format controls, but one image at a time and no India-specific presets.</li>
+  <li><strong>ILoveIMG</strong> — broad tool suite, but upload-based processing with persistent "Go Premium" prompts.</li>
+</ul>
+
+<h2>How each tool handles a real Indian scenario</h2>
+
+<p>Let's run the same job through each: <strong>Priya is applying for an SBI PO exam</strong>. The portal demands:</p>
+
+<ul>
+  <li>Photo: JPEG, 200 × 230 pixels, between 20KB and 50KB</li>
+  <li>Signature: JPEG, 140 × 60 pixels, between 10KB and 20KB</li>
+</ul>
+
+<p>Her source photo is a 3.8MB iPhone shot. Here's how the four tools handle it.</p>
+
+<h3>SabTools Image Resizer</h3>
+
+<p>Priya opens <a href="/tools/image-resizer">/tools/image-resizer</a>, drops the photo in, types <strong>200 × 230 px</strong>, picks JPEG, and sets a target of <strong>40KB</strong>. The tool runs the resize and quality-ladder locally — nothing uploaded. Download, attach to the SBI portal, done. The signature file follows the same workflow at 140 × 60 and 15KB. Total time: about 90 seconds for both.</p>
+
+<p>Because processing is in-browser, there's no "uploading… 42%" progress bar and no server queue. On a mid-range phone the compute is near-instant for images under 10MB.</p>
+
+<h3>TinyPNG</h3>
+
+<p><a href="https://tinypng.com/" rel="noopener" target="_blank">TinyPNG</a> will absolutely crush her 3.8MB file down to maybe 900KB with its celebrated panda algorithm — the compression quality is genuinely excellent. But TinyPNG doesn't <em>resize</em> to specific pixel dimensions on the free tool, and it doesn't let you target a specific KB cap. The output will be whatever TinyPNG decides. For a web blog, perfect. For "exactly 200×230 pixels, under 50KB", it's the wrong tool.</p>
+
+<p>Also worth noting: Priya's photo gets uploaded to TinyPNG's servers for processing. For a casual stock photo that's fine. For a face photo attached to a bank exam application, some users prefer not to.</p>
+
+<h3>Squoosh</h3>
+
+<p><a href="https://squoosh.app/" rel="noopener" target="_blank">Squoosh</a> is Google's open-source image tool and it's genuinely excellent engineering. It runs in the browser (privacy-respecting, same as SabTools), gives you dropdowns for MozJPEG, WebP, AVIF, and shows a live side-by-side quality preview. For tuning a single image, nothing beats it.</p>
+
+<p>The limits for Priya's use case: Squoosh handles one image at a time, has no "target 40KB" slider (you adjust quality manually and read the output size), and offers no Indian form presets. If she had 20 photos to resize for an alumni directory, she'd be clicking through 20 individual sessions.</p>
+
+<h3>ILoveIMG</h3>
+
+<p><a href="https://www.iloveimg.com/resize-image" rel="noopener" target="_blank">ILoveIMG's resizer</a> lets Priya enter dimensions in pixels or percentages, which is good. The output will be close to what she needs. But the file is uploaded to iloveimg.com's servers, and the free tier wedges in "Go Premium" prompts between actions. For infrequent use it's fine; for someone resizing 50 images for a wedding invite batch, the friction adds up.</p>
+
+<h2>Where each tool genuinely wins</h2>
+
+<h3>TinyPNG wins on pure compression quality</h3>
+
+<p>If you don't care about dimensions and just want the smallest file at acceptable quality for a website or email attachment, TinyPNG's output is hard to beat. Their algorithm has had years of tuning. The brand recognition is also fair — it's the one tool non-technical colleagues have heard of.</p>
+
+<h3>Squoosh wins on single-image deep tuning</h3>
+
+<p>Need WebP output at quality 72 with chroma subsampling off? Squoosh gives you every knob. For a frontend developer picking the best format and compression for a hero image, Squoosh is the right lab bench. And because it's by the Chrome team and open-source, the trust floor is high.</p>
+
+<h3>ILoveIMG wins on bundled tool variety</h3>
+
+<p>If you also need to merge PDFs, split pages, convert HEIC, and rotate images in one site, ILoveIMG's broad menu is convenient. You trade privacy and the paywall nag for a one-stop URL.</p>
+
+<h3>SabTools wins on Indian form workflows</h3>
+
+<p>SabTools was built around what Indian users actually search for — "image resizer in KB", "resize photo to 20KB for SSC", "passport photo 4.5cm × 3.5cm 300 DPI". The tool defaults, presets, and KB-targeting feature exist because that's the dominant Indian use case. The three competitors above weren't designed around Indian govt form workflows and it shows.</p>
+
+<h2>Resize in KB — the feature Indian users actually need</h2>
+
+<p>Almost every Indian government and exam portal — <strong>UPSC, SSC, IBPS, SBI, UIDAI, PAN, Passport Seva, state RTO portals</strong> — specifies image uploads in <em>kilobytes</em>, not dimensions alone. "Minimum 20KB, maximum 50KB" is the standard phrasing.</p>
+
+<p>Of the four tools in this round-up:</p>
+
+<ul>
+  <li><strong>SabTools</strong>: KB-target input is a first-class feature. You enter a maximum size and the tool iterates quality until the output lands under it.</li>
+  <li><strong>TinyPNG</strong>: No KB targeting. Compression is take-what-we-give-you.</li>
+  <li><strong>Squoosh</strong>: You can watch the output size live and adjust quality manually, but no "automatic target" button.</li>
+  <li><strong>ILoveIMG</strong>: Resize by pixels or percent, no KB target.</li>
+</ul>
+
+<p>If "image resizer in KB" is your actual query — and it's one of the highest-volume image-tool searches from India — only SabTools and (with manual effort) Squoosh fit.</p>
+
+<h2>Privacy & where your file goes</h2>
+
+<p>This matters more for Indian users than most Western tool round-ups acknowledge. The files people resize in India are often <strong>face photos, signatures, Aadhaar scans, PAN cards, passport pages, cancelled cheques, income proofs</strong>. These are documents you probably don't want sitting on a random SaaS server.</p>
+
+<ul>
+  <li><strong>SabTools</strong> — processing happens in your browser. The image never leaves your device. No upload, no server-side copy, no retention policy to read because there's nothing to retain.</li>
+  <li><strong>Squoosh</strong> — same browser-based model. Google's Chrome team built it as a reference WebAssembly app, so files stay local.</li>
+  <li><strong>TinyPNG</strong> — files are uploaded to their servers for processing. Their <a href="https://tinypng.com/" rel="noopener" target="_blank">privacy policy</a> says they delete files after a few hours, which is reasonable, but your file is still briefly on third-party infrastructure.</li>
+  <li><strong>ILoveIMG</strong> — upload-based processing. Same category as TinyPNG for data-flow.</li>
+</ul>
+
+<p>For a web stock photo of a sunset: who cares. For a face photo attached to your UPSC application: browser-based tools (SabTools, Squoosh) are the cleaner choice.</p>
+
+<h2>Signups, ads, and paid tiers</h2>
+
+<p>Free tool pages have a predictable life cycle: they start generous, add an email gate, then wedge a paywall. Here's where each stands as of 2026:</p>
+
+<ul>
+  <li><strong>SabTools</strong> — no signup for any calculator or image tool. No tier upsell. Ads appear only on guide articles, not on tool pages themselves.</li>
+  <li><strong>TinyPNG</strong> — free tier capped at <strong>20 images per batch, 5MB per file</strong>. Paid "TinyPNG Pro" removes limits. For a one-off resize this is fine; for a photographer processing a shoot, it's a real cap.</li>
+  <li><strong>Squoosh</strong> — fully free, no signup, no paid tier. Google funds it as an open-source showcase.</li>
+  <li><strong>ILoveIMG</strong> — free tier works but prompts "Premium" at nearly every step. Batch sizes and advanced features sit behind the paywall.</li>
+</ul>
+
+<p>If you resize images once a quarter, these differences barely register. If you're resizing dozens of files during admission season or exam-form season, SabTools and Squoosh are the frictionless pair.</p>
+
+<h2>Related image & document workflows</h2>
+
+<p>Resizing is usually one step in a bigger task. A few related SabTools you might reach for in the same session:</p>
+
+<ul>
+  <li><a href="/tools/passport-photo-maker">Passport Photo Maker</a> — generates the full passport, visa, Aadhaar, or PAN photo at <strong>300 DPI</strong> with proper crop guides. Use this instead of resizing if you're starting from scratch.</li>
+  <li><a href="/tools/id-card-generator">ID Card Generator</a> — for school, corporate, or hospital ID cards at print-ready 300 DPI.</li>
+  <li><a href="/tools/instagram-grid-maker">Instagram Grid Maker</a> — splits a single large image into tiles for seamless profile grids.</li>
+  <li><a href="/tools/image-text-extractor-ocr">Image Text Extractor (OCR)</a> — if your source is a scanned document and you need the text pulled out before resizing a cleaner version.</li>
+</ul>
+
+<p>Having the resize, OCR, and passport-photo flows on one site saves the "upload to tool A, download, upload to tool B" round-trip.</p>
+
+<h2>When to use which — honest recommendations</h2>
+
+<h3>Use SabTools Image Resizer when…</h3>
+
+<ul>
+  <li>You need to hit a <strong>specific KB target</strong> (20KB, 50KB, 100KB) for a government or exam portal.</li>
+  <li>Your file is a <strong>personal document</strong> you'd rather not upload to a third-party server.</li>
+  <li>You want zero signup friction and no paywall nag.</li>
+  <li>You're resizing a face photo for Aadhaar, PAN, passport, UPSC, SSC, IBPS, SBI, or state RTO forms.</li>
+</ul>
+
+<h3>Use TinyPNG when…</h3>
+
+<ul>
+  <li>You're compressing <strong>web images</strong> (blog posts, product photos, email headers) and you want the smallest file with the least quality loss.</li>
+  <li>The dimensions and exact file size don't matter — only "make it smaller".</li>
+  <li>Your batch is under 20 images and 5MB each.</li>
+</ul>
+
+<h3>Use Squoosh when…</h3>
+
+<ul>
+  <li>You're a developer <strong>tuning a single hero image</strong> and want AVIF/WebP/MozJPEG side-by-side comparisons.</li>
+  <li>You want browser-based privacy but need deeper format controls than most free tools expose.</li>
+  <li>You're processing one image at a time, carefully.</li>
+</ul>
+
+<h3>Use ILoveIMG when…</h3>
+
+<ul>
+  <li>You're already in their ecosystem for PDF or format-conversion work and resizing is a small side task.</li>
+  <li>You don't mind the paywall prompts and server-side processing.</li>
+</ul>
+
+<h2>FAQs specific to this comparison</h2>
+
+<h3>Which tool is best for resizing a photo to under 50KB for SSC or UPSC?</h3>
+
+<p>SabTools, because it accepts a KB target directly. TinyPNG and ILoveIMG don't let you cap by KB. Squoosh lets you eyeball the live output size and adjust quality, but it's manual trial-and-error.</p>
+
+<h3>Does SabTools match TinyPNG on raw compression quality?</h3>
+
+<p>For strongly compressed web images at low quality settings, TinyPNG's algorithm often produces marginally smaller files at the same perceived quality — that's their specialty. For the typical Indian use case (resize a 3MB photo to 200×230 pixels at 40KB), the output quality is visually indistinguishable because the resize is doing most of the size reduction, not the compression curve.</p>
+
+<h3>Is my photo actually safe with a browser-based tool?</h3>
+
+<p>Yes. "Browser-based" means the JavaScript running on the page processes the file inside your browser tab using your device's CPU. There's no network upload step for the image itself. You can verify this by opening DevTools → Network tab and watching for upload traffic (you'll see none for SabTools or Squoosh during the resize).</p>
+
+<h2>Bottom line</h2>
+
+<p>For <strong>Indian government forms, exam applications, and KB-targeted resizing</strong>, SabTools is purpose-built for the job and keeps your file on your device. For <strong>web image compression at scale</strong>, TinyPNG is still the quality leader. For <strong>developer-grade format tuning</strong> on single images, Squoosh is the specialist tool. For <strong>mixed PDF-and-image chores</strong>, ILoveIMG is a convenient one-stop site if the paywall nag doesn't bother you.</p>
+
+<p>Pick the one that matches the task — none of these are "the best" in every situation, and the honest recommendation is to keep two in your bookmarks: a browser-based tool like SabTools for personal documents, and TinyPNG for public web images.</p>
+
+<p>Try <a href="/tools/image-resizer">SabTools' Image Resizer</a> → set your exact pixel dimensions or KB target, download, done.</p>`,
   }
 ];
 
