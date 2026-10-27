@@ -59450,6 +59450,171 @@ the optimism assumes earnings remain supportive, US tariff tensions ease and the
 <p>Indian equities enter the final quarter of FY 2025-26 with the index near record highs, valuations off their late-2024 peaks after the correction earlier in 2025, a central bank that has already shifted to easing, and a domestic flow structure that is now the primary driver of marginal demand. The street's central case — Sensex in the 95,000-107,000 range and Nifty 28,300-30,000 by December 2026 — implies 10-25% upside, but with the usual asterisks around earnings and geopolitics.</p>
 
 <p>For the Indian reader, the practical response is simpler than the forecasts suggest. Keep SIPs running, use the lower rate cycle to either prepay loans faster or redirect the EMI savings into equity, lean toward large-cap and consumption-exposed names within equity allocation, and don't confuse the all-time high headlines with permission to borrow money and chase stocks. On a 10-year view, Indian equity has rewarded that boring discipline more than any clever rotation strategy — and nothing in the current outlook argues for abandoning it now.</p>`,
+  },
+  {
+    slug: "xml-to-json-guide-2026",
+    title: "XML to JSON Converter Guide — How It Works, Tips & Benefits",
+    description: "Free XML to JSON Converter online — convert xml to json using domparser with attribute support. Step-by-step guide with tips. 100% free, works on mobile. 202...",
+    date: "2026-10-27",
+    category: "Developer",
+    readTime: "11 min read",
+    keywords: ["xml", "json", "convert", "parse", "transform", "xml to json converter", "xml to json converter online", "xml to json converter in sap cpi"],
+    toolSlug: "xml-to-json",
+    image: {
+      src: "/blog/xml-to-json.webp",
+      alt: "XML to JSON Converter — Free Online Convert XML to JSON using DOMParser with attribute support Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>If you've ever integrated with the GSTN e-invoice API, pulled a PAN verification response from NSDL, or debugged a SAP CPI iFlow at an Infosys or TCS client project, you already know the pain: half the Indian enterprise world still speaks XML, but every modern frontend, Node.js service, and MongoDB document wants JSON. Converting between the two by hand — especially when the XML has attributes, namespaces, and nested CDATA — eats hours that should have gone into shipping the feature.</p>
+
+<p>The <strong>XML to JSON Converter</strong> at SabTools.in handles this grunt work in the browser. It uses the native <code>DOMParser</code> API, preserves attributes (that's the part most online converters silently drop), and runs entirely client-side so you can paste a GSTR-1 response or a Razorpay settlement XML without wondering whether your data is being logged on someone's server. Here's how to use it well, where it fits in a real Indian dev workflow, and the edge cases that trip people up.</p>
+
+<h2>Why XML still refuses to die in Indian enterprise</h2>
+
+<p>Despite JSON eating the API world after 2015, XML is deeply embedded in Indian systems that handle money, identity, and compliance:</p>
+
+<ul>
+<li><strong>GSTN APIs</strong> — The e-invoice IRN generation and GSTR filing endpoints historically returned XML payloads, and many ERP integrators still parse legacy XML responses when reconciling B2B invoices.</li>
+<li><strong>NSDL and UTIITSL</strong> — PAN verification, TIN-FC uploads, and NSDL CAS (Consolidated Account Statement) files are XML-first.</li>
+<li><strong>SAP ecosystems</strong> — Every large Indian SI (TCS, Wipro, Infosys, HCL) runs SAP projects where IDocs, SOAP endpoints, and CPI (Cloud Platform Integration) iFlows are XML throughout.</li>
+<li><strong>Banking and NPCI</strong> — ISO 20022 messages for NEFT/RTGS reconciliation, SBI and HDFC corporate banking file formats, and several UPI switch logs still arrive as XML.</li>
+<li><strong>RBI reporting</strong> — XBRL (an XML dialect) is mandatory for scheduled commercial banks filing supervisory returns.</li>
+</ul>
+
+<p>A developer at a Bangalore fintech might get a 2 MB XML dump from an IRDAI partner at 11 PM on a Tuesday, need to extract 47 policy records into a Postgres table by morning, and have no appetite for writing a custom parser. Paste, convert, pipe into <a href="/tools/json-validator">a JSON validator</a> to confirm structure, and you're querying with <code>jq</code> in five minutes.</p>
+
+<h2>How the converter actually works under the hood</h2>
+
+<p>The tool uses the browser's built-in <code>DOMParser</code> — the same engine Chrome and Firefox use to parse HTML — to build a DOM tree from your XML, then walks it recursively to produce a JSON structure. Because it runs in your tab, nothing is uploaded. For a developer at Zerodha or Razorpay handling customer PII or transaction payloads, that matters: no XML containing a customer's PAN or UPI VPA leaves the laptop.</p>
+
+<p>The conversion follows a predictable set of rules:</p>
+
+<ol>
+<li><strong>Element names become JSON keys.</strong> A <code>&lt;invoice&gt;</code> element becomes an <code>invoice</code> key.</li>
+<li><strong>Text content becomes string values.</strong> Numbers like <code>&lt;amount&gt;49999.00&lt;/amount&gt;</code> remain strings — XML is typeless, so the converter doesn't guess. You cast in your downstream code.</li>
+<li><strong>Attributes are preserved</strong> under an <code>@attributes</code> key (or similar prefix). This is the critical bit — a GST invoice XML like <code>&lt;Item sl="1" hsn="998314"&gt;</code> loses the <code>sl</code> and <code>hsn</code> values in lazy converters, which is catastrophic when you're reconciling line items.</li>
+<li><strong>Repeated siblings become arrays.</strong> Three <code>&lt;LineItem&gt;</code> children under <code>&lt;Invoice&gt;</code> collapse into a <code>LineItem: [...]</code> array automatically.</li>
+<li><strong>Namespaces are flattened</strong> into the key name (<code>ns2:Address</code> → <code>"ns2:Address"</code>), which keeps the output valid even for SOAP envelopes.</li>
+</ol>
+
+<h2>A concrete GST e-invoice example</h2>
+
+<p>Say you receive this fragment from a GSTN sandbox response:</p>
+
+<pre><code>&lt;Invoice irn="35e4bf..." version="1.1"&gt;
+  &lt;Seller gstin="29ABCDE1234F1Z5"&gt;
+    &lt;LegalName&gt;Acme Traders Pvt Ltd&lt;/LegalName&gt;
+    &lt;State&gt;Karnataka&lt;/State&gt;
+  &lt;/Seller&gt;
+  &lt;LineItem sl="1" hsn="998314"&gt;
+    &lt;Qty&gt;2&lt;/Qty&gt;
+    &lt;UnitPrice&gt;24999.00&lt;/UnitPrice&gt;
+  &lt;/LineItem&gt;
+  &lt;LineItem sl="2" hsn="852872"&gt;
+    &lt;Qty&gt;1&lt;/Qty&gt;
+    &lt;UnitPrice&gt;89990.00&lt;/UnitPrice&gt;
+  &lt;/LineItem&gt;
+&lt;/Invoice&gt;</code></pre>
+
+<p>After conversion, you get a JSON object where <code>Invoice.LineItem</code> is a two-element array, each with its <code>@attributes.sl</code> and <code>@attributes.hsn</code> intact. You can now loop through the items, multiply <code>Qty × UnitPrice</code> (₹1,39,988 total before tax), apply 18% IGST via the <a href="/tools/gst-calculator">GST Calculator</a> to confirm your math, and push the reconciled record into your ledger. The whole exercise takes less than ten minutes instead of the forty you'd spend writing XPath selectors in Python.</p>
+
+<h2>XML to JSON converter in SAP CPI — a specific note</h2>
+
+<p>If you're a SAP CPI developer at an Indian service company, you already know CPI ships with an <strong>XML to JSON Converter</strong> step inside iFlows. The question is: why would you also want a browser-based tool?</p>
+
+<p>Three reasons come up constantly in real projects:</p>
+
+<ul>
+<li><strong>Local prototyping before deploying the iFlow.</strong> You get a sample payload from the SuccessFactors or Ariba side, want to see how it'll look after conversion, but don't want to burn a cycle redeploying the iFlow just to inspect the shape. Paste the XML locally, see the JSON instantly, then configure the CPI step with correct keys.</li>
+<li><strong>Debugging CPI output.</strong> CPI's conversion rules differ subtly from vanilla <code>DOMParser</code> — especially around <code>&lt;root&gt;</code> handling and the <code>jsonRootElementName</code> parameter. Running both and diffing them tells you whether a bug lives in the iFlow or in the downstream consumer.</li>
+<li><strong>Pre-flight validation.</strong> If a client sends a SOAP response via email asking "can you handle this?", you don't need to spin up a CPI tenant. Convert in-browser, validate, and respond.</li>
+</ul>
+
+<p>The browser tool won't replace CPI for production message routing, but it's a far faster feedback loop for the ten micro-decisions you make while designing an iFlow — the kind of decisions that otherwise require a round-trip through Eclipse Adapter Design or the Web UI.</p>
+
+<h2>Attribute handling: the detail that matters most</h2>
+
+<p>Most "online XML to JSON" tools either drop attributes entirely or merge them awkwardly with child elements, which breaks any schema that depends on attribute values. Consider a Razorpay settlement notification where each payout line looks like <code>&lt;Payout id="pout_MkA1..." status="processed"&gt;</code>. If the <code>id</code> and <code>status</code> attributes vanish during conversion, you've lost both your primary key and the only field that tells you whether to credit the merchant's dashboard.</p>
+
+<p>The SabTools converter keeps attributes under a dedicated key so you can access them predictably: <code>payload.Payout[0]["@attributes"].id</code>. If you prefer a different attribute prefix (some teams use <code>$</code> or <code>_attr</code> to match <code>xml2js</code> conventions from their Node backend), do a global find-and-replace on the output string before parsing. Takes two seconds.</p>
+
+<p>One more gotcha for Indian payloads: the <strong>GSTIN</strong> (15 characters, like <code>29ABCDE1234F1Z5</code>) often sits as an attribute on seller/buyer nodes. Verify after conversion that the GSTIN hasn't been coerced into any numeric type — it's always a string, and losing the leading state code (29 for Karnataka, 27 for Maharashtra, 07 for Delhi, 24 for Gujarat) breaks every downstream lookup.</p>
+
+<h2>Real workflows for the Indian dev community</h2>
+
+<p>A few patterns I've seen work well across CodeChef meetups, Smart India Hackathon teams, and startup engineering channels:</p>
+
+<h3>1. Hackathon payload prototyping</h3>
+
+<p>Smart India Hackathon problem statements from banks (Union Bank, Bank of Baroda) often ship with sample XML datasets. Teams who convert the XML to JSON on day one and work from the JSON for the rest of the hackathon ship cleaner demos. The judges don't care which format you parsed — they care about what the app does.</p>
+
+<h3>2. Legacy API wrapper services</h3>
+
+<p>A freelancer in Jaipur building a Flask microservice that wraps an old PAN-verification SOAP endpoint can prototype the response transformation in-browser, nail the JSON shape, and only then write the Python <code>xmltodict</code> code. You save at least a round of trial-and-error.</p>
+
+<h3>3. Postman collection cleanup</h3>
+
+<p>When your team imports a vendor's XML-based Postman collection, half the responses need to be converted to JSON for the frontend team to consume. Convert each sample response, store it as a mock JSON, and the React or Flutter dev at the other end doesn't need to touch XML at all.</p>
+
+<h3>4. Encoding and URL-safe payloads</h3>
+
+<p>When you need to embed a short XML snippet in a webhook callback URL for debugging, convert it to JSON first (smaller, cleaner), then pass it through a <a href="/tools/url-encoder-decoder">URL encoder</a> so special characters don't break the query string. This is a surprisingly common pattern when testing Razorpay or PayU callback URLs locally with ngrok.</p>
+
+<h2>Edge cases that will bite you</h2>
+
+<p>A few quirks worth internalising before you push converted JSON to production:</p>
+
+<ul>
+<li><strong>Mixed content.</strong> XML allows text and child elements to intermix: <code>&lt;note&gt;Dear &lt;name&gt;Riya&lt;/name&gt;, your SIP of ₹10,000...&lt;/note&gt;</code>. JSON doesn't have a natural representation for this. The converter will keep the child element but you'll lose the text ordering. For transactional data this is almost never a problem; for marketing XML it can be.</li>
+<li><strong>CDATA sections</strong> are flattened to plain strings. If your XML uses CDATA to wrap HTML (common in CMS exports from WordPress-based Indian news sites), the HTML comes through as a string. You might then want to run it through <a href="/tools/html-to-markdown">an HTML-to-Markdown converter</a> if you're migrating content.</li>
+<li><strong>Empty elements.</strong> <code>&lt;MiddleName/&gt;</code> becomes <code>"MiddleName": ""</code> or <code>null</code> depending on the implementation. Decide what your schema expects and normalise early.</li>
+<li><strong>Large files.</strong> The browser-based approach is fine for payloads up to roughly 5–10 MB. For 50 MB RBI XBRL filings, switch to a streaming parser in Node.js — <code>sax</code> or <code>fast-xml-parser</code> are solid picks.</li>
+<li><strong>Order-sensitive siblings.</strong> JSON objects don't guarantee key order; arrays do. If your downstream consumer cares about the order of <code>&lt;LineItem&gt;</code>s (for invoice reconciliation, it does), rely on the array structure, never on object key iteration order.</li>
+</ul>
+
+<h2>After conversion: validating the output</h2>
+
+<p>Converting isn't the end of the pipeline. Two quick checks save hours:</p>
+
+<ol>
+<li><strong>Validate the JSON structure.</strong> Paste the output into <a href="/tools/json-validator">the JSON Validator</a> to catch any malformed output and get a quick summary of key counts, depth, and array sizes. For a GST invoice with 100 line items, confirming the array length matches your expectation is a 3-second sanity check that catches silent data loss.</li>
+<li><strong>Spot-check numeric fields.</strong> Remember, all XML text comes through as strings. If you're going to total up invoice amounts, cast explicitly — <code>parseFloat</code> in JavaScript, <code>Decimal</code> in Python. For a ₹10,00,000 payout, floating-point error accumulated across 500 line items can leave you ₹2 short on reconciliation, and your finance team will not find it funny.</li>
+</ol>
+
+<h2>When XML to JSON is the wrong move</h2>
+
+<p>Not every XML-to-JSON conversion is a good idea. A few cases where you should pause:</p>
+
+<ul>
+<li><strong>Digitally signed XML</strong> (XMLDSig). Converting to JSON breaks the signature. If you're handling signed GSTN e-invoices or NSDL CAS files, keep the signed XML as-is for audit purposes and only convert a copy for internal processing.</li>
+<li><strong>XSD-validated schemas.</strong> If your consumer validates against an XSD, converting round-trips won't match the original byte-for-byte. Store the original.</li>
+<li><strong>XSLT pipelines.</strong> If there's already an XSLT transformation downstream, intercepting it with JSON conversion just adds a format hop. Leave it alone.</li>
+</ul>
+
+<h2>Pairing with other developer tools</h2>
+
+<p>XML conversion rarely stands alone. In a typical build pipeline for an Indian SaaS product — think a Chennai-based B2B billing startup — the converter sits next to half a dozen other utilities. You might <a href="/tools/url-encoder-decoder">encode a URL parameter</a> before firing a test request, generate a <a href="/tools/tailwind-generator">Tailwind component</a> for the admin dashboard that renders the converted data, and run <a href="/tools/percentage-calculator">percentage calculations</a> on the parsed numbers for an analytics preview. Having these in one tab, loading in under a second even on a patchy 4G connection in a Pune co-working space, matters more than any of them being individually fancy.</p>
+
+<h2>Quick FAQ</h2>
+
+<h3>Does this converter handle SOAP envelopes?</h3>
+
+<p>Yes. SOAP is just XML with a specific envelope structure. The namespaces (<code>soap:Envelope</code>, <code>soap:Body</code>) are preserved as string keys. You'll typically drill into <code>Envelope.Body</code> to get to the actual payload.</p>
+
+<h3>Can I convert XML with Devanagari or Tamil text?</h3>
+
+<p>Yes — the converter is Unicode-safe. Hindi, Tamil, Bengali, Marathi text in XML elements comes through as proper UTF-8 JSON strings. Useful when parsing Aadhaar demographic responses or multilingual GSTN templates.</p>
+
+<h3>Why does my numeric field show up as a string in the JSON output?</h3>
+
+<p>XML is typeless by design — <code>&lt;amount&gt;49999.00&lt;/amount&gt;</code> is literally the text "49999.00". JSON converters that auto-cast numbers can silently corrupt GSTIN codes (which start with digits but must stay strings) or PAN numbers. The safer default is to keep everything as strings and cast on the consumer side.</p>
+
+<h3>Can I do the reverse — JSON back to XML?</h3>
+
+<p>That's a separate workflow. XML-from-JSON requires decisions about which keys become attributes vs child elements, root element name, and namespace handling — all things the forward conversion captures but the reverse has to guess.</p>
+
+<p>Paste your XML, keep an eye on the attributes, and verify the output against your schema before shipping. <a href="/tools/xml-to-json">Open the XML to JSON Converter →</a></p>`,
   }
 ];
 
