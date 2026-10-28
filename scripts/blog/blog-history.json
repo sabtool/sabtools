@@ -354,9 +354,10 @@
     "ai-motivational-quote-generator",
     "scientific-calculator",
     "xml-to-json",
-    "image-resizer"
+    "image-resizer",
+    "ai-paragraph-rewriter"
   ],
-  "lastCategory": "image",
-  "totalPosts": 355,
-  "lastRun": "2026-10-27T16:52:51.560Z"
+  "lastCategory": "ai",
+  "totalPosts": 356,
+  "lastRun": "2026-10-28T10:55:38.520Z"
 }
