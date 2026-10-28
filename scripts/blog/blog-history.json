@@ -355,9 +355,10 @@
     "scientific-calculator",
     "xml-to-json",
     "image-resizer",
-    "ai-paragraph-rewriter"
+    "ai-paragraph-rewriter",
+    "roll-a-dice"
   ],
-  "lastCategory": "ai",
-  "totalPosts": 356,
-  "lastRun": "2026-10-28T10:55:38.520Z"
+  "lastCategory": "fun",
+  "totalPosts": 357,
+  "lastRun": "2026-10-28T16:49:48.225Z"
 }
