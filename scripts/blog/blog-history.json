@@ -356,9 +356,10 @@
     "xml-to-json",
     "image-resizer",
     "ai-paragraph-rewriter",
-    "roll-a-dice"
+    "roll-a-dice",
+    "robots-txt-generator"
   ],
-  "lastCategory": "fun",
-  "totalPosts": 357,
-  "lastRun": "2026-10-28T16:49:48.225Z"
+  "lastCategory": "seo",
+  "totalPosts": 358,
+  "lastRun": "2026-10-29T11:26:41.307Z"
 }
