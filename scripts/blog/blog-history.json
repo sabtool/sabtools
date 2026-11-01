@@ -362,9 +362,10 @@
     "msme-eligibility-checker",
     "ai-social-caption-generator",
     "domain-age-checker",
-    "bank-holidays-2026-calendar"
+    "bank-holidays-2026-calendar",
+    "gratuity-calculator"
   ],
-  "lastCategory": "tax",
-  "totalPosts": 363,
-  "lastRun": "2026-10-31T16:00:11.848Z"
+  "lastCategory": "finance",
+  "totalPosts": 364,
+  "lastRun": "2026-11-01T11:31:47.606Z"
 }

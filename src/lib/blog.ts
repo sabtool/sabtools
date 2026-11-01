@@ -61815,6 +61815,147 @@ There are multiple ways to invest in gold in India, and GST impact varies across
 <p>For holders, 2025 and 2026 are the harvest years — tranches issued in 2017-18 and 2018-19 have been maturing with triple-digit percentage returns, and the premature-redemption window is being activated for the 2019-20 and 2020-21 vintages on RBI's published schedule. For new buyers, the SGB versus physical gold comparison has materially shifted now that the capital-gains exemption applies only to original subscribers who hold to maturity. And for anyone sitting on a maturing SGB payout, the smartest next move usually is not reinvesting it in more gold — it is deploying it against the highest-cost liability on your household balance sheet, which in most Indian middle-class homes is still the home loan.</p>
 
 <p>Watch the RBI press-release page for the next six-monthly premature redemption calendar, which typically drops in late March for the April-September window and late September for the October-March window. That calendar is now the main SGB event in the Indian investor's year.</p>`,
+  },
+  {
+    slug: "gratuity-calculator-guide-2026",
+    title: "Gratuity Calculator — Free Online Tool | Features, Tips & FAQ",
+    description: "Calculate gratuity amount based on salary and years of service. Use our free gratuity calculator with no signup. Instant results on any device. Made for India.",
+    date: "2026-11-01",
+    category: "Finance",
+    readTime: "10 min read",
+    keywords: ["gratuity", "retirement", "salary", "service", "gratuity calculator", "gratuity calculator india", "gratuity calculator online", "gratuity calculator formula"],
+    toolSlug: "gratuity-calculator",
+    image: {
+      src: "/blog/gratuity-calculator.webp",
+      alt: "Gratuity Calculator — Free Online Calculate gratuity amount based on salary and years of service Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>When Rakesh, a 42-year-old project manager at an IT services company in Bangalore, resigned after 12 years and 7 months of service with a last-drawn basic+DA of <strong>₹85,000</strong>, HR handed him a gratuity cheque of <strong>₹6,37,500</strong>. He had expected closer to ₹10 lakh — mostly because he'd been using his CTC figure, not basic+DA, and because he didn't know that 7 months rounds the service period up to 13 years. That one misunderstanding was the difference between a comfortable down payment on a Pune 2BHK and a shortfall he had to cover from his emergency fund.</p>
+
+<p>Gratuity is one of those line items in Indian employment that almost everyone has heard of, very few understand correctly, and most people only think about the week they resign or retire. The Payment of Gratuity Act, 1972 governs it, the formula is fixed by law, and the number is rarely what your gut tells you it should be. A gratuity calculator exists precisely because the mental math (half a month's salary per year, roughly) breaks down the moment you factor in the <strong>15/26 ratio</strong>, the rounding rules, and the <strong>₹20 lakh</strong> tax-exemption ceiling.</p>
+
+<h2>What gratuity actually is — and who gets it</h2>
+
+<p>Gratuity is a lump-sum payment your employer makes to you as a thank-you for long service. It's not a bonus, not a provident-fund-style savings scheme, and not something you contribute to — the entire amount comes from the employer. The Payment of Gratuity Act applies to every establishment with 10 or more employees, which covers almost all private companies, factories, mines, oil fields, plantations, ports, railways, and shops in India.</p>
+
+<p>You become eligible for gratuity after completing <strong>5 years of continuous service</strong> with the same employer. The two exceptions where the 5-year rule is waived are death and permanent disablement — in those cases, the nominee or employee receives gratuity regardless of tenure. There's also a well-known Madras High Court interpretation that treats 4 years and 240 days as "5 years" for eligibility, though most HR teams play it safe and insist on a full 5 years before releasing the payment.</p>
+
+<p>If you're switching jobs after 4 years and 10 months, you forfeit gratuity entirely. That's a real planning input — if your tenure is close to the threshold, negotiating a 2-month notice extension can be worth lakhs. For a professional earning ₹60,000 basic+DA, waiting those extra weeks unlocks roughly <strong>₹1,73,000</strong> in gratuity that would otherwise be zero.</p>
+
+<h2>The formula, broken down with real numbers</h2>
+
+<p>For employees covered under the Payment of Gratuity Act (the vast majority), the formula is:</p>
+
+<p><strong>Gratuity = (Last drawn basic salary + DA) × 15 × Number of years of service ÷ 26</strong></p>
+
+<p>Three things people get wrong here:</p>
+
+<ol>
+  <li><strong>"Salary" means basic + dearness allowance only</strong> — not CTC, not gross, not in-hand. HRA, LTA, special allowance, bonuses, performance pay, and employer PF contributions are all excluded. If your CTC is ₹18 lakh but your basic+DA is ₹45,000/month, the formula uses ₹45,000.</li>
+  <li><strong>The 26 in the denominator</strong> represents working days in a month (excluding Sundays). The 15 represents half a month of wages for each year of service.</li>
+  <li><strong>Years of service rounds in a specific way:</strong> if you've worked more than 6 months in the final year, it rounds up; 6 months or less, it rounds down. So 7 years 7 months = 8 years, but 7 years 5 months = 7 years.</li>
+</ol>
+
+<p>Let's run through Priya's case. She worked at an HDFC Bank branch in Hyderabad for 11 years and 8 months. Her last basic+DA was ₹58,000. Years of service rounds up to 12.</p>
+
+<p>Gratuity = (58,000 × 15 × 12) ÷ 26 = <strong>₹4,01,538</strong></p>
+
+<p>Compare that with her colleague Suresh — same basic salary, but 11 years 4 months of service, rounded down to 11 years:</p>
+
+<p>Gratuity = (58,000 × 15 × 11) ÷ 26 = <strong>₹3,67,962</strong></p>
+
+<p>Four months of calendar difference, ₹33,576 of gratuity difference. If you're planning your exit, the <a href="/tools/age-calculator">exact day calculator</a> for your joining and resignation dates matters more than most people realise.</p>
+
+<h3>Non-covered employees get a slightly different formula</h3>
+
+<p>If your employer isn't covered by the Act (very small establishments, some trusts), gratuity is still often paid as a goodwill gesture, and the formula changes to:</p>
+
+<p><strong>Gratuity = (Last drawn salary × 15 × Years of service) ÷ 30</strong></p>
+
+<p>The denominator becomes 30 (full month) instead of 26, which reduces the payout by about 13%. Also, in this case, "salary" includes commissions on sales, which can push the number up for sales roles.</p>
+
+<h2>The ₹20 lakh tax exemption — and when you'll actually hit it</h2>
+
+<p>Under Section 10(10) of the Income Tax Act, gratuity received by private-sector employees is tax-free up to <strong>₹20,00,000</strong> in your lifetime, cumulatively across all employers. This limit was raised from ₹10 lakh to ₹20 lakh in March 2019 and continues to apply in FY 2025-26.</p>
+
+<p>Government employees (central, state, local body) get <strong>100% tax exemption</strong> on gratuity with no cap.</p>
+
+<p>The exemption for private-sector employees is actually the lowest of three figures:</p>
+
+<ul>
+  <li>Actual gratuity received</li>
+  <li>₹20,00,000</li>
+  <li>Last salary × 15/26 × years of service (the formula amount)</li>
+</ul>
+
+<p>In most cases the formula amount and the actual received amount are the same, so you only worry about the ₹20 lakh cap. When does someone cross it? Roughly, a basic+DA of ₹1,80,000/month with 20 years of service produces ₹20.77 lakh — meaning the top ₹77,000 is taxable at your slab rate. If you're in the <strong>30% slab under the new regime</strong>, that's about ₹24,000 of tax on the excess.</p>
+
+<p>A senior tech executive in Bengaluru with 25 years of service and a basic of ₹2.5 lakh/month would see a formula gratuity of ₹43.26 lakh — of which ₹20 lakh is exempt and <strong>₹23.26 lakh gets taxed at 30%</strong>, costing roughly ₹7.25 lakh in tax (plus cess). The calculator shows you both the gross and the net post-tax number so there are no surprises when the TDS hits.</p>
+
+<h2>How to use the SabTools gratuity calculator</h2>
+
+<p>The <a href="/tools/gratuity-calculator">gratuity calculator</a> needs three inputs:</p>
+
+<ol>
+  <li><strong>Last drawn monthly salary (Basic + DA):</strong> Pull this from your most recent payslip. Don't use CTC. If your payslip shows "Basic" as ₹35,000 and "DA" as ₹5,000, enter ₹40,000. If there's no DA line (common in private companies), enter just the basic.</li>
+  <li><strong>Years of completed service:</strong> Enter whole years. The tool handles the 6-month rounding — if you worked 8 years 7 months, enter 9. If 8 years 5 months, enter 8.</li>
+  <li><strong>Employee type:</strong> Choose whether you're covered under the Payment of Gratuity Act (default for most salaried folks) or not covered (small firms, some non-profits).</li>
+</ol>
+
+<p>The output gives you the gratuity amount, the tax-exempt portion, any taxable portion, and the approximate tax outgo based on your slab. From there you can plug the net figure into your <a href="/tools/fire-number-calculator">retirement corpus plan</a> or use it as a lump-sum prepayment on an outstanding <a href="/tools/emi-calculator">home loan EMI</a>.</p>
+
+<h2>Common mistakes Indian employees make with gratuity</h2>
+
+<h3>Using CTC instead of Basic + DA</h3>
+
+<p>This is the single biggest error. CTC inflates the expected number by 2-3x. For a professional with ₹24 lakh CTC where basic is only 35% of CTC, the gratuity base is ₹70,000/month, not ₹2,00,000. Over 15 years that's a ₹6.05 lakh gratuity, not ₹17.3 lakh.</p>
+
+<h3>Assuming it's paid when you switch jobs under 5 years</h3>
+
+<p>If you've been at your current company for 4 years and 11 months and have a competing offer, finishing out even one more month changes the calculation entirely. Many employees walk away from lakhs because they didn't check tenure before accepting a new role.</p>
+
+<h3>Forgetting to update the nominee</h3>
+
+<p>Form F is where you nominate who receives your gratuity if you pass away. Many employees never fill this out, or fill it once at joining and never update it after marriage, divorce, or a child's birth. In disputes, unclaimed gratuity sits with the employer for years before courts resolve it.</p>
+
+<h3>Confusing gratuity with EPF</h3>
+
+<p>EPF is your contribution plus the employer's, and you can withdraw or transfer it between jobs. Gratuity is 100% employer-funded and only payable after 5 years at the <em>same</em> employer. Switching jobs resets your gratuity clock to zero every time. A professional who changes employers every 3 years will accumulate zero gratuity across a 25-year career — a serious hidden cost of job-hopping.</p>
+
+<h2>Gratuity in your broader retirement math</h2>
+
+<p>For most salaried Indians, gratuity is the second-largest lump sum they'll ever receive after EPF withdrawal. Factored properly, it can seed a sizeable retirement corpus. A conservative example: Vineet, 55 years old, retires from Axis Bank after 28 years with last basic+DA of ₹1,20,000. His gratuity:</p>
+
+<p>(1,20,000 × 15 × 28) ÷ 26 = <strong>₹19,38,461</strong></p>
+
+<p>Entirely tax-free (under ₹20 lakh). If he parks this in a senior citizen FD at <strong>7.5% for 5 years</strong>, it generates roughly ₹1.45 lakh/year in interest — a meaningful supplement to his pension. Alternatively, deployed as a lump-sum prepayment on a home loan with 8 years remaining, it could shave 4-5 years off the tenure and save ₹8-10 lakh in interest.</p>
+
+<p>When you're mapping out your post-retirement cash flows, think of gratuity as the "cushion" tranche — it's not meant to fund decades of expenses on its own, but it bridges the gap between your last paycheque and the point where your pension/annuity/SWP income stabilises. Use the <a href="/tools/salary-calculator">salary calculator</a> to project what your basic+DA will look like in your final year, then feed that figure into the gratuity calculator to get a realistic retirement-year number.</p>
+
+<h2>Edge cases worth knowing</h2>
+
+<ul>
+  <li><strong>Contract employees and consultants:</strong> If you're on a fixed-term contract that's structured as employment (with PF, TDS under section 192), gratuity accrues normally. If you're invoiced as a consultant with TDS under 194J, no gratuity applies — you're not an "employee" under the Act.</li>
+  <li><strong>Transfer within the same group:</strong> If your employer transfers you from Infosys BPM to Infosys Ltd. and your service is treated as continuous (specified in your transfer letter), the clock keeps running. If it's treated as a fresh appointment, it resets.</li>
+  <li><strong>Dismissal for misconduct:</strong> An employer can legally forfeit all or part of your gratuity if termination was for proven misconduct causing damage to the company. This is rare and usually litigated.</li>
+  <li><strong>Death of employee:</strong> The 5-year rule doesn't apply. Even 11 months of service produces a prorated gratuity payable to the nominee, computed on completed months.</li>
+  <li><strong>Multiple employers in a lifetime:</strong> The ₹20 lakh tax exemption is cumulative across your career, not per employer. Someone who received ₹8 lakh tax-free at employer A has only ₹12 lakh of exemption left for subsequent gratuity payments.</li>
+</ul>
+
+<h2>When should you actually run this calculation?</h2>
+
+<p>Three moments matter:</p>
+
+<ol>
+  <li><strong>Before accepting a new job offer</strong> — especially if you're within 1-2 years of the 5-year mark at your current employer. The gratuity you'd forfeit is part of the real cost of switching.</li>
+  <li><strong>Three to six months before planned retirement or resignation</strong> — so you know exactly what to expect, can plan the deployment of the lump sum, and spot any discrepancy early if HR calculates it differently.</li>
+  <li><strong>During annual financial planning</strong> — treat accrued gratuity as a receivable in your net worth statement. Over a 20-year career it's often ₹10-15 lakh of hidden wealth that doesn't show up on any investment statement.</li>
+</ol>
+
+<p>A quick <a href="/tools/percentage-calculator">percentage check</a> on how much of your target retirement corpus gratuity will cover is a useful reality calibration. For most mid-career professionals, it's 8-12% of the total — meaningful, but not something to retire on by itself.</p>
+
+<p>Plug in your own basic+DA and years of service — <a href="/tools/gratuity-calculator">open the Gratuity Calculator →</a></p>`,
   }
 ];
 
