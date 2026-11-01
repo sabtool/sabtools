@@ -363,9 +363,10 @@
     "ai-social-caption-generator",
     "domain-age-checker",
     "bank-holidays-2026-calendar",
-    "gratuity-calculator"
+    "gratuity-calculator",
+    "ai-testimonial-generator"
   ],
-  "lastCategory": "finance",
-  "totalPosts": 364,
-  "lastRun": "2026-11-01T11:31:47.606Z"
+  "lastCategory": "ai",
+  "totalPosts": 365,
+  "lastRun": "2026-11-01T16:58:16.829Z"
 }
