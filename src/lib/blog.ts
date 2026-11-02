@@ -62581,6 +62581,242 @@ There are multiple ways to invest in gold in India, and GST impact varies across
 <p><strong>Do I need a web manifest file for a PWA?</strong> If your site is a progressive web app that users install on their Android home screens, yes — you'll want <code>site.webmanifest</code> referencing the 192×192 and 512×512 PNG variants. For a standard brochure site or Shopify store, you can ignore it.</p>
 
 <p>Try SabTools' <a href="/tools/favicon-generator">Favicon Generator</a> → upload your logo once, download the full pack, and get on with building the actual site.</p>`,
+  },
+  {
+    slug: "news-2026-11-02-itr-filing-deadline-updates-and-section-44ada-44ad-changes",
+    title: "ITR filing deadline updates and Section 44ADA / 44AD changes (2026 Update)",
+    description: "ITR filing deadline updates and Section 44ADA / 44AD changes — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-11-02",
+    category: "Tax & Salary",
+    readTime: "12 min read",
+    keywords: ["ITR filing deadline updates", "tax news india 2026", "india 2026 update"],
+    toolSlug: "income-tax-calculator",
+    image: {
+      src: "/blog/income-tax-calculator.webp",
+      alt: "ITR filing deadline updates and Section 44ADA / 44AD changes (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>The headline: CBDT extended ITR deadlines three times for AY 2025-26 — and the ₹75 lakh presumptive scheme is now the default for most freelancers</h2>
+
+<p>If you spent the second half of 2025 trying to track Income Tax Return deadlines, you were not alone. The Central Board of Direct Taxes (CBDT) pushed back due dates for Assessment Year 2025-26 on three separate occasions, high courts in Punjab, Haryana and Himachal Pradesh issued their own orders, and tax audit cases ended up with an entirely new timeline. Alongside this, the enhanced presumptive taxation limits under <strong>Section 44ADA</strong> (₹75 lakh for professionals) and <strong>Section 44AD</strong> (₹3 crore for small businesses) — introduced by the Finance Act 2023 — have now become the standard planning tool for lakhs of consultants, doctors, architects and shop owners filing returns for FY 2024-25.</p>
+
+<p>This post walks through what actually changed, what the final deadlines looked like, and what the enhanced 44AD / 44ADA thresholds mean for a Bangalore freelancer, a Pune retailer or a Delhi consultant filing their return this cycle.</p>
+
+<h2>What changed in the ITR deadline calendar for AY 2025-26</h2>
+
+<h3>Extension #1: From 31 July to 15 September 2025</h3>
+
+<p>The original due date for non-audit taxpayers — salaried individuals, pensioners, small freelancers and anyone not required to get accounts audited — was 31 July 2025. 
+
+In the press release dated May 27, 2025, the Central Board of Direct Taxes (CBDT) has officially extended the due date for filing Income Tax Returns (ITR) for the Financial Year 2024-25 (Assessment Year 2025-26).
+
+ The new deadline was pushed to 15 September 2025, giving taxpayers roughly six additional weeks to complete their filings.</p>
+
+<p>The reason for the first extension was practical. The income tax portal, utility software for various ITR forms (ITR-1 through ITR-7) and backend validations needed updates to reflect changes introduced in the Finance Act 2024 and the revised tax regime structure. 
+
+The extension of the due date for filing Income Tax Returns for FY 2024–25 (AY 2025–26) to 15 September 2025 provides additional time for taxpayers to complete their compliance obligations.
+
+</p>
+
+<h3>Extension #2: One more day — 16 September 2025</h3>
+
+<p>Even with the September 15 cushion, the last-day rush was brutal. 
+
+Income Tax Filing: Centre extends ITR deadline for AY 2025-26 by one day, giving taxpayers until September 16 to complete submissions.
+
+ The e-filing portal reported load-related issues on the final day, and the government added a single additional day — a rare, surgical extension rather than a sweeping one.</p>
+
+<h3>Extension #3: Audit cases pushed to 10 December 2025</h3>
+
+<p>The bigger procedural shift happened for taxpayers whose accounts require audit under Section 44AB — businesses above the presumptive thresholds, companies, and professionals who have opted out of 44ADA.</p>
+
+<p>
+
+CBDT extends Tax Audit Report deadline to Nov 10, 2025, and ITR for non-TP audit cases to Dec 10, 2025.
+
+ This was a two-stage change: the Tax Audit Report (TAR) under Form 3CD had to be furnished by 10 November 2025, and the corresponding ITR had to be filed by 10 December 2025.</p>
+
+<p>
+
+CBDT Circular 15/2025 extends the AY 2025-26 ITR filing
+
+ dates was the formal instrument used. Importantly, there was a carve-out: 
+
+✅ Tax Audit Report (Form 3CD) — Deadline moved from 31st October to 10th November 2025 ✅ ITR Filing for Audit Cases — Due date extended from 31st October to 10th December 2025 ❌ No change in deadlines for Transfer Pricing (TP) reports
+
+. If your business had international transactions or specified domestic transactions requiring a transfer pricing report, you did not get the extra time.</p>
+
+<h3>The high court interventions</h3>
+
+<p>Before the CBDT formalised the audit extension, two high courts had already stepped in. 
+
+ITR deadline: Two High Courts extend tax filing deadline for tax audit cases to November 30; check details. The Punjab & Haryana High Court merged five tax-related writ petitions into one and extended deadlines, while the Himachal Pradesh High Court similarly granted tax-audit assessees time
+
+ until November 30, 2025. The Gujarat High Court had also asked CBDT to explain the mismatch between the extended audit report deadline and the ITR deadline for audit cases. 
+
+Audit report filing deadline extended to October
+
+ — the sequence of events shows how litigation pushed administrative extensions.</p>
+
+<p>Eventually, the CBDT's 10 December 2025 cutoff for audit-case ITRs became the operative deadline nationally, overriding the earlier 30 November high court dates.</p>
+
+<h2>Why this matters for Indian taxpayers right now</h2>
+
+<p>Three different categories of taxpayers were affected differently, and understanding which bucket you fell into decides what you do next:</p>
+
+<ul>
+<li><strong>Salaried and non-audit filers:</strong> The relevant deadline was 16 September 2025. If you filed by then, you preserved the right to carry forward capital losses, claim a refund without delay, and avoid the Section 234F late fee.</li>
+<li><strong>Audit cases (business / professional income above thresholds):</strong> You had until 10 December 2025, with the Tax Audit Report due by 10 November 2025.</li>
+<li><strong>Transfer pricing cases:</strong> No extension — original timelines applied.</li>
+</ul>
+
+<h3>Missed the deadline? The belated return window</h3>
+
+<p>If you missed your applicable deadline, the belated return route under Section 139(4) remains open. 
+
+31 December 2026 is the last date to file a belated ITR for AY 2026-27. Under Section 139(4), a belated return can be filed by this date or before completion of assessment, whichever is earlier.
+
+ For AY 2025-26, the equivalent cutoff was 31 December 2025.</p>
+
+<p>The cost of filing belated is defined by Section 234F. 
+
+When filing a belated ITR, a late fee will apply under Section 234F of the Income Tax Act, 1961: ₹1,000 for gross income up to ₹5 lakh and ₹5,000 for income above ₹5 lakh.
+
+ On top of the fee, interest under Section 234A, 234B and 234C can apply where tax is still owed — and crucially, you lose the ability to carry forward business or capital losses to future years.</p>
+
+<h2>Section 44ADA: Why ₹75 lakh is the new ceiling for professionals</h2>
+
+<p>Running in parallel to the deadline chaos was the first full year of use for the enhanced presumptive thresholds introduced by the Finance Act 2023. For professionals — doctors, lawyers, chartered accountants, architects, engineers, IT consultants, interior designers and others listed under Section 44AA — the Section 44ADA scheme lets you declare <strong>50% of gross receipts as taxable income</strong> without maintaining detailed books.</p>
+
+<h3>The old limit and the new limit</h3>
+
+<p>Historically, 44ADA was available for professionals with gross receipts up to ₹50 lakh in a financial year. The Finance Act 2023 raised that ceiling, but with a specific condition tied to how the professional receives money.</p>
+
+<p>
+
+Section 44ADA India - ₹75 L limit with ≥95% digital receipts; 50% deemed profit; AY 2025-26
+
+. In plain language: if at least 95% of your gross receipts arrive through banking channels — bank transfers, UPI, cheques, cards, demand drafts — you can continue to use 44ADA all the way up to ₹75 lakh. If more than 5% of your receipts are in cash, the limit snaps back to ₹50 lakh.</p>
+
+<h3>How 44ADA works in practice</h3>
+
+<p>Consider a management consultant in Pune who billed ₹68 lakh in FY 2024-25, entirely through UPI and NEFT. Under 44ADA:</p>
+
+<ul>
+<li>Deemed taxable income = 50% of ₹68,00,000 = <strong>₹34,00,000</strong></li>
+<li>No requirement to maintain books of accounts under Section 44AA</li>
+<li>No tax audit requirement under Section 44AB, provided she sticks with the scheme</li>
+<li>She files using ITR-4 (Sugam)</li>
+</ul>
+
+<p>If she had instead declared a lower profit (say she claimed actual expenses took her true profit to ₹24 lakh), she would exit the scheme, be required to maintain books, and 
+
+Tax audit applicability under Section 44AB is determined by turnover, digital transactions, and presumptive taxation choices under Section 44AD (Business) and Section 44ADA (Profession).
+
+ trigger a mandatory audit.</p>
+
+<h3>Advance tax under 44ADA</h3>
+
+<p>One structural simplification: professionals under 44ADA do not have to pay advance tax in quarterly instalments the way other taxpayers do. The entire advance tax liability can be discharged in one go by 15 March of the financial year. For a Bangalore IT consultant who has lumpy project invoicing, this is a significant cash-flow relief.</p>
+
+<h2>Section 44AD: The ₹3 crore threshold for small businesses</h2>
+
+<p>The parallel scheme for small businesses — not professionals — is Section 44AD. The Finance Act 2023 changes made this scheme considerably more generous.</p>
+
+<p>
+
+The default turnover threshold for Section 44AD eligibility is ₹2 crores, raised to ₹3 crores where cash receipts are below 5% of total receipts, a threshold enhancement introduced by the Finance Act 2023 effective from AY 2024-25.
+
+</p>
+
+<p>Under 44AD, the presumed income is calculated differently from 44ADA:</p>
+
+<ul>
+<li><strong>8% of gross turnover</strong> on receipts in cash</li>
+<li><strong>6% of gross turnover</strong> on receipts via digital modes (NEFT, RTGS, UPI, cards, bank transfers, cheques)</li>
+</ul>
+
+<p>
+
+Presumptive Income Calculation: Tax is calculated at 8% of total gross turnover (or 6% for digital transactions) if the annual turnover is below ₹2 crore (or ₹3 crore if at least 95% of receipts are through digital modes).
+
+</p>
+
+<h3>Worked example: A kirana store in Nashik</h3>
+
+<p>Imagine a small retailer in Nashik with an annual turnover of ₹1.8 crore in FY 2024-25. Breakdown of receipts:</p>
+
+<ul>
+<li>₹1.65 crore via UPI and card payments</li>
+<li>₹0.15 crore in cash</li>
+</ul>
+
+<p>Deemed income under 44AD:</p>
+<ul>
+<li>Digital receipts: 6% of ₹1,65,00,000 = <strong>₹9,90,000</strong></li>
+<li>Cash receipts: 8% of ₹15,00,000 = <strong>₹1,20,000</strong></li>
+<li>Total deemed income = <strong>₹11,10,000</strong></li>
+</ul>
+
+<p>That ₹11.1 lakh figure flows into the owner's personal ITR. Deductions under Chapter VI-A (80C, 80D) can still be claimed if the Old Regime is chosen. Whether the Old Regime or New Regime results in lower tax depends on his investment profile.</p>
+
+<p>This is exactly the kind of comparison where a planning tool helps. You can run both regimes side-by-side using the <a href="/tools/income-tax-calculator">Income Tax Calculator for FY 2025-26</a> and see, in rupee terms, whether the Old Regime deductions beat the New Regime's lower slab rates for your income level. For a kirana owner with limited 80C exposure, the New Regime often wins; for a salaried professional with a home loan and PPF, the Old Regime still has an edge.</p>
+
+<h2>Who should (and shouldn't) use 44AD / 44ADA</h2>
+
+<h3>Section 44AD eligibility</h3>
+
+<p>Only certain taxpayer types can use the scheme. 
+
+Section 44AD (FY 2025-26): Resident individual, HUF, partnership firm (not LLP).
+
+ Companies and LLPs are excluded. Also excluded are:</p>
+
+<ul>
+<li>Professionals covered under Section 44ADA (they must use 44ADA, not 44AD)</li>
+<li>Businesses earning agency commission or brokerage</li>
+<li>Businesses engaged in plying, hiring or leasing goods carriages (covered separately under Section 44AE)</li>
+</ul>
+
+<h3>Section 44ADA eligibility</h3>
+
+<p>44ADA applies to professionals listed under Section 44AA(1): legal, medical, engineering, architectural, accountancy, technical consultancy, interior decoration and other notified professions. Resident individuals and partnership firms (excluding LLPs) qualify.</p>
+
+<h3>The 5-year lock-in — read this before opting in</h3>
+
+<p>A trap many first-time filers miss: once you opt into 44AD, you are expected to continue in the scheme for five consecutive assessment years. If you declare lower profits than the presumptive rate in any of those years, you are locked out of 44AD for the next five AYs and will have to maintain books and get them audited. 44ADA does not have the same five-year lock-in in the same form, but switching out still triggers audit requirements if income exceeds the basic exemption limit.</p>
+
+<h2>What to do before 31 December 2025 (and beyond)</h2>
+
+<h3>If you missed the September / December deadlines</h3>
+
+<ol>
+<li><strong>File a belated return by 31 December 2025</strong> for AY 2025-26. Expect the Section 234F fee of ₹1,000 or ₹5,000 depending on your income level, plus any interest under 234A.</li>
+<li><strong>Pay self-assessment tax first</strong>, then file. Belated returns with unpaid tax attract compounding interest.</li>
+<li><strong>Accept that losses cannot be carried forward.</strong> Capital losses, business losses and speculation losses from FY 2024-25 lapse if the return is filed belated — only unabsorbed depreciation and house property losses can still be carried forward.</li>
+</ol>
+
+<h3>If you are planning FY 2025-26 (current year)</h3>
+
+<ol>
+<li><strong>Decide between presumptive and regular taxation early.</strong> If your professional receipts are tracking below ₹75 lakh and almost everything is digital, 44ADA is almost always simpler.</li>
+<li><strong>Push customers / clients onto UPI, bank transfer or cards.</strong> Keeping cash receipts below 5% unlocks the higher ₹3 crore / ₹75 lakh ceilings and the 6% presumed rate on 44AD digital receipts.</li>
+<li><strong>Keep a reconciliation file.</strong> Even if you don't maintain full books under 44AD/44ADA, keep bank statements, invoices and GST returns organised. An assessment notice can still arrive, and you'll need to show how receipts were categorised.</li>
+<li><strong>Plan advance tax.</strong> 44ADA professionals can pay by 15 March; everyone else follows the 15 June / 15 Sept / 15 Dec / 15 March quarterly schedule.</li>
+</ol>
+
+<h2>The bigger picture: compliance pressure is driving extensions</h2>
+
+<p>The three deadline extensions for AY 2025-26 were not isolated administrative choices. They reflected a broader pattern — portal load issues, late utility releases, pending transfer pricing clarifications, and the regulatory shift towards a more digital tax ecosystem. 
+
+Section 44ADA: Presumptive Tax for Professionals Explained with Real Numbers (FY 2025-26)
+
+ and the broader presumptive framework are increasingly the government's preferred route for small taxpayers precisely because they reduce dispute surface area for both sides.</p>
+
+<p>For a freelancer in Hyderabad earning ₹32 lakh, a consultant in Mumbai billing ₹58 lakh, or a Jaipur retailer with ₹1.2 crore turnover, the message from the last two Union Budgets is consistent: file digitally, keep cash receipts under 5%, use the presumptive scheme, and treat the ITR filing deadline as a hard date rather than a rolling expectation.</p>
+
+<p>The CBDT's willingness to extend in 2025 should not be read as a permanent softening. The audit case extension to 10 December was tied to specific portal and audit utility issues, and transfer pricing cases received no relief at all. For AY 2026-27 (FY 2025-26 income), professionals and small businesses should plan for the original 31 July 2026 and 31 October 2026 deadlines, use the enhanced 44AD / 44ADA thresholds to simplify compliance, and stop relying on last-minute reprieves that may not come.</p>`,
   }
 ];
 
