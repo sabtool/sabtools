@@ -364,9 +364,10 @@
     "domain-age-checker",
     "bank-holidays-2026-calendar",
     "gratuity-calculator",
-    "ai-testimonial-generator"
+    "ai-testimonial-generator",
+    "home-loan-affordability"
   ],
-  "lastCategory": "ai",
-  "totalPosts": 365,
-  "lastRun": "2026-11-01T16:58:16.829Z"
+  "lastCategory": "business",
+  "totalPosts": 366,
+  "lastRun": "2026-11-02T11:41:46.993Z"
 }

@@ -62262,6 +62262,154 @@ There are multiple ways to invest in gold in India, and GST impact varies across
 <p>Two broad trends are visible from the AY 2025-26 cycle. First, the CBDT is clearly willing to extend when ITR utilities or audit infrastructure aren't ready — but these extensions should be treated as cushions, not planning assumptions. Second, the policy direction on 44AD and 44ADA is unambiguously tilted toward digital-first businesses and professionals. The ₹75 lakh and ₹3 crore ceilings only unlock when cash receipts stay below 5%. The signal is that if your receipts flow through banking channels, you get the lighter compliance regime; if you remain cash-heavy, you get the smaller limits and more scrutiny.</p>
 
 <p>Add the Income-tax Act, 2025 into the mix — effective 1 April 2026, consolidating 44AD, 44ADA and 44AE into Section 58 without altering the thresholds or rates — and the next 12 months are mostly about getting comfortable with new section numbers and new ITR utilities, not re-learning the economics of presumptive taxation. For small business owners in Surat, consultants in Chennai, salaried employees in Delhi, and freelancers across tier-2 cities, that's a rare bit of continuity. The deadlines will keep moving. The core maths of 50%, 6%, 8% and the ₹50L/₹75L/₹2Cr/₹3Cr thresholds, for now, holds steady.</p>`,
+  },
+  {
+    slug: "home-loan-affordability-guide-2026",
+    title: "How to Use Home Loan Affordability Online — Step-by-Step Guide",
+    description: "Free Home Loan Affordability online — calculate maximum home loan amount based on income and emi-to-income ratio. Step-by-step guide with tips. 100% free, wo...",
+    date: "2026-11-02",
+    category: "Business",
+    readTime: "10 min read",
+    keywords: ["home loan", "affordability", "emi", "income", "eligibility", "housing", "home loan affordability calculator", "home loan affordability calculator india"],
+    toolSlug: "home-loan-affordability",
+    image: {
+      src: "/blog/home-loan-affordability.webp",
+      alt: "Home Loan Affordability — Free Online Calculate maximum home loan amount based on income and EMI-to-income ratio Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>A software engineer in Whitefield earning <strong>₹18L per annum</strong> walks into an SBI branch expecting a ₹1.2 crore home loan sanction. He walks out with a ₹68L eligibility letter. The gap isn't the bank being stingy — it's the way Indian lenders actually calculate how much EMI your take-home can absorb once existing EMIs, credit card dues, and a mandatory ₹25,000 "surplus for living" are deducted. Most buyers find this out the hard way, after they've already paid the token amount on a flat in Sarjapur.</p>
+
+<p>The <strong>Home Loan Affordability</strong> calculator on SabTools exists to flip that order — figure out your realistic maximum loan <em>before</em> you shortlist properties, book site visits, or sign a sale agreement. It uses the same FOIR-based logic (Fixed Obligation to Income Ratio) that SBI, HDFC, ICICI, Axis, and Kotak run internally, so the number you see is close to what a lender will actually sanction at today's rates.</p>
+
+<h2>What "affordability" really means to an Indian bank</h2>
+
+<p>Home loan eligibility in India isn't a single formula — it's a ceiling defined by three constraints, and your sanctioned amount is the lowest of the three:</p>
+
+<ol>
+  <li><strong>Income multiplier</strong>: Most banks cap the loan at 60–72 times your net monthly income. A ₹1L monthly take-home therefore caps you around ₹60–72L on multiplier alone.</li>
+  <li><strong>FOIR (Fixed Obligation to Income Ratio)</strong>: The sum of your proposed home loan EMI plus all existing EMIs cannot exceed 40–55% of net monthly income. Lower income = lower allowed ratio.</li>
+  <li><strong>LTV (Loan-to-Value)</strong>: RBI caps loans at <strong>90% of property value for loans up to ₹30L</strong>, <strong>80% for ₹30L–₹75L</strong>, and <strong>75% above ₹75L</strong>. The remaining 10–25% is your down payment, in cash.</li>
+</ol>
+
+<p>The affordability calculator uses your net income, existing EMI commitments, tenure, and interest rate to compute the maximum EMI you can take on — then reverse-engineers that into a loan amount. It's the inverse of what the <a href="/tools/emi-calculator">standard EMI calculator</a> does: that one tells you the EMI for a given loan; this one tells you the loan for a given EMI capacity.</p>
+
+<h2>The FOIR table banks actually use</h2>
+
+<p>Few borrowers realise FOIR is a sliding scale, not a flat 50%. Here's roughly how major Indian lenders tier it in FY 2025-26:</p>
+
+<ul>
+  <li>Net monthly income below <strong>₹30,000</strong>: FOIR capped at 40%</li>
+  <li>Income <strong>₹30,000 – ₹50,000</strong>: 50%</li>
+  <li>Income <strong>₹50,000 – ₹1,20,000</strong>: 55%</li>
+  <li>Income above <strong>₹1,20,000</strong>: 60–65% (varies by bank; HDFC and Kotak go higher for premium salaried profiles)</li>
+</ul>
+
+<p>So a ₹25,000/month earner in a tier-2 city like Nashik gets only ₹10,000 of EMI headroom. A ₹1.5L/month tech lead in HSR Layout gets ₹90,000–₹97,500 of headroom. This is why two people with the "same" income on paper — one in Indore, one in Gurgaon — qualify for radically different loan amounts.</p>
+
+<h2>Walking through a real example</h2>
+
+<p>Take <strong>Priya</strong>, a 29-year-old product manager in Bangalore. Her CTC is ₹22L; after tax, PF, and professional tax, her monthly take-home is ₹1,45,000. She has a car loan EMI of ₹18,000 running for the next 3 years.</p>
+
+<p>Here's how the calculator processes her inputs:</p>
+
+<ul>
+  <li>Net monthly income: <strong>₹1,45,000</strong></li>
+  <li>FOIR allowed (above ₹1.2L tier): <strong>60%</strong> → ₹87,000 total EMI capacity</li>
+  <li>Minus existing car EMI: ₹87,000 − ₹18,000 = <strong>₹69,000 available for home loan EMI</strong></li>
+  <li>At HDFC's current rate of <strong>8.75%</strong> for a <strong>25-year tenure</strong>, ₹69,000 EMI supports a principal of approximately <strong>₹83.8L</strong></li>
+  <li>With 80% LTV on a ₹75L–above property, she'd need around <strong>₹21L down payment</strong>, meaning she can look at properties up to roughly <strong>₹1.05 crore</strong></li>
+</ul>
+
+<p>Now contrast with <strong>Arjun</strong>, a 34-year-old small business owner in Surat with declared annual income of ₹14L, no existing EMIs, but ₹40,000 monthly SIP contributions. SIPs don't count as fixed obligations for FOIR, but his lower income band (around ₹95,000 net monthly) means a 55% FOIR cap — ₹52,250 EMI capacity. At SBI's 8.50% for 20 years, that funds a <strong>₹60.5L loan</strong>. His ongoing <a href="/tools/sip-calculator">SIP investments</a> stay untouched, which is the right outcome — never liquidate long-term equity to force-fit a bigger loan.</p>
+
+<h2>Why the "20-30-3" rule is more honest than any calculator</h2>
+
+<p>Veteran personal finance advisors in India push a sanity check that no bank will tell you about:</p>
+
+<ul>
+  <li><strong>20% down payment</strong> minimum (ideally 25% to avoid being margin-stressed)</li>
+  <li><strong>30% of take-home</strong> as the ceiling for home loan EMI — not 50%, not 60%</li>
+  <li><strong>3 times annual income</strong> as the property price ceiling</li>
+</ul>
+
+<p>Priya's bank will happily sanction ₹83L. Priya's financial advisor will tell her to borrow ₹55–60L. The calculator shows you both numbers — the aggressive bank-max and the conservative life-max — so you can decide where on that spectrum you want to live for the next 20 years.</p>
+
+<p>A ₹69,000 EMI on ₹1.45L take-home leaves roughly ₹76,000 for everything else: Bangalore rent-equivalent maintenance, groceries, parents' expenses, insurance, SIPs, travel, emergencies. It works until a layoff, a medical event, or an interest-rate reset pushes the EMI to ₹78,000. That's the real stress test.</p>
+
+<h2>Costs the affordability number hides</h2>
+
+<p>Your sanctioned loan is not your home-buying budget. Four line items that quietly inflate the actual outflow:</p>
+
+<ol>
+  <li><strong>Stamp duty and registration</strong>: 5–7% of property value in Maharashtra (currently 6% in Mumbai, 7% in Pune for male buyers), 5.6% in Karnataka, 7% in Delhi, 4.9% in Gujarat. On a ₹80L flat in Pune, that's a straight <strong>₹5.6L</strong> cash outflow, not loanable.</li>
+  <li><strong>GST on under-construction property</strong>: 1% for affordable housing (under ₹45L), 5% for other residential. Ready-to-move properties are GST-exempt. Use the <a href="/tools/gst-calculator">GST calculator</a> to see what a 5% GST looks like on your target budget.</li>
+  <li><strong>Processing fees and legal/technical</strong>: 0.35–1% of loan amount upfront. On a ₹70L loan that's ₹25,000–₹70,000.</li>
+  <li><strong>Interior and move-in</strong>: Realistically ₹8–15L for a 2BHK in a metro, depending on whether you buy furniture or build modular. Few first-time buyers budget this.</li>
+</ol>
+
+<p>Add it up: a buyer with ₹20L in savings looking at a ₹80L property, after 20% down payment (₹16L) + stamp duty (₹5L) + registration (₹60k) + processing (₹25k) + basic interiors (₹5L) is already short by ₹7L before the first EMI even hits. The affordability calculator shows loan eligibility; your actual budget needs this stack layered on top.</p>
+
+<h2>Rent vs buy — the decision the calculator doesn't make</h2>
+
+<p>Just because you can afford a ₹1 crore loan doesn't mean buying beats renting. In most of Bangalore and Mumbai right now, the rental yield sits at <strong>2.5–3.5%</strong> while home loan interest runs at <strong>8.5–9%</strong>. A ₹1.2 crore flat in Hinjewadi rents for ₹32,000–₹38,000. Owning it costs ₹88,000+ in EMI alone, plus maintenance, property tax, and opportunity cost on the ₹24L down payment.</p>
+
+<p>Run your specific numbers through the <a href="/tools/rent-vs-buy-calculator">rent vs buy calculator</a> before you commit. Over a 7-year horizon in high-yield areas like Gurugram's Golf Course Extension or Thane's Ghodbunder, buying tends to win if property appreciation is 6%+. In rental-heavy micro-markets like Powai or Koramangala, renting often wins over 5-year windows.</p>
+
+<h2>Tenure trade-off: 20 years vs 30 years</h2>
+
+<p>Longer tenure = lower EMI = higher eligibility. A ₹60L loan at 8.75%:</p>
+
+<ul>
+  <li>15 years → EMI <strong>₹59,957</strong>, total interest <strong>₹47.9L</strong></li>
+  <li>20 years → EMI <strong>₹53,023</strong>, total interest <strong>₹67.3L</strong></li>
+  <li>25 years → EMI <strong>₹49,318</strong>, total interest <strong>₹87.9L</strong></li>
+  <li>30 years → EMI <strong>₹47,205</strong>, total interest <strong>₹1.09 crore</strong></li>
+</ul>
+
+<p>Pushing from 20 to 30 years drops the EMI by ₹5,800/month but adds <strong>₹42L in interest</strong>. The right play for most salaried buyers under 35: take 25-30 years for the eligibility boost, then prepay aggressively from year 4 onwards using bonuses and increments. Most Indian home loans have zero prepayment penalty on floating-rate loans (RBI mandate), so this strategy is penalty-free.</p>
+
+<h2>Interest rate: fixed, floating, and the EBLR game</h2>
+
+<p>Since October 2019, RBI has required all new floating-rate retail loans to be linked to an <strong>External Benchmark Lending Rate (EBLR)</strong> — usually the repo rate. With repo at <strong>5.50%</strong> in late 2026, most banks price home loans at repo + 3.0% to 3.5% = 8.50% to 9.00%, with the final rate depending on your CIBIL score and loan size.</p>
+
+<p>CIBIL impact in rupee terms is brutal: a CIBIL of 800+ gets you 8.40% at SBI; a CIBIL of 720 gets you 8.90%. On a ₹60L loan over 20 years, that 0.50% difference is <strong>₹4.2L in extra interest</strong>. Before you apply, pull your free CIBIL report, clear any pending credit card dues, and avoid new EMI commitments for 6 months.</p>
+
+<h2>Tax benefits that improve effective affordability</h2>
+
+<p>The after-tax cost of a home loan is lower than the sticker rate because of two Income Tax Act provisions:</p>
+
+<ul>
+  <li><strong>Section 24(b)</strong>: Deduction up to <strong>₹2L per year</strong> on interest paid for self-occupied property (old tax regime).</li>
+  <li><strong>Section 80C</strong>: Principal repayment counts toward the <strong>₹1.5L</strong> annual 80C limit.</li>
+</ul>
+
+<p>For a 30% slab taxpayer in the old regime, these two together save up to <strong>₹1.05L per year in tax</strong>, dropping the effective interest cost from 8.75% to roughly 7.1%. Note: the new tax regime (default from FY 2024-25) does not allow these deductions for self-occupied property, so if you're on the new regime, the effective rate is the sticker rate. Decide which regime you'll stay on before you model affordability.</p>
+
+<h2>Common mistakes the calculator helps you avoid</h2>
+
+<ol>
+  <li><strong>Using CTC instead of take-home</strong>: Banks compute FOIR on net salary (after PF, tax, insurance). Always enter the number on your payslip's "net pay" line, not the offer letter CTC.</li>
+  <li><strong>Forgetting co-applicant income</strong>: Adding your spouse as co-applicant can lift eligibility by 60–80%. If both earn ₹1L each, you qualify for ~₹1.6 crore combined — not ₹80L × 2. Use the <a href="/tools/percentage-calculator">percentage calculator</a> to figure what proportion each applicant contributes for the eventual tax split.</li>
+  <li><strong>Ignoring the age cap</strong>: Most banks require the loan to end by age 65 (sometimes 70). A 50-year-old applying for a 25-year tenure gets auto-reduced to 15 years, which crashes eligibility by 25–30%.</li>
+  <li><strong>Not stress-testing for rate hikes</strong>: Model your EMI at a <strong>+1.5% rate shock</strong>. If a ₹55,000 EMI becomes ₹61,000 and your budget breaks, you're over-borrowing.</li>
+</ol>
+
+<h2>FAQs real Indian buyers actually search</h2>
+
+<h3>Does rental income from an existing property count toward home loan eligibility?</h3>
+<p>Yes, banks typically add 70–75% of documented rental income (shown in ITR) to your eligible income. The 25–30% haircut accounts for vacancy and maintenance.</p>
+
+<h3>Can self-employed professionals use this calculator?</h3>
+<p>Yes, but input your average net profit from the last 2–3 years of ITR, not gross receipts. Self-employed FOIR caps are typically 10% lower than salaried, and banks apply a stricter income multiple of 3–4× annual profit rather than 5–6× for salaried.</p>
+
+<h3>How do PMAY (Pradhan Mantri Awas Yojana) subsidies change affordability?</h3>
+<p>Under the revived PMAY-U 2.0 scheme (2024-25 onwards), eligible EWS/LIG/MIG applicants get an interest subsidy that effectively reduces EMI. Factor it only if your household income is under ₹9L (MIG-I) or ₹18L (MIG-II) and this is your first home.</p>
+
+<h3>Is it better to maximise loan amount or down payment?</h3>
+<p>Mathematically, if you can earn more than 9% post-tax on investments (equity SIPs historically deliver 11–13% long-term), maximising the loan and investing the surplus wins. If your surplus would otherwise sit in savings or FDs at 6–7%, a bigger down payment wins. The threshold is your personal return assumption, not a universal rule.</p>
+
+<p>The affordability number is the single most important input into your home search — it decides the micro-market, the configuration, and whether you're a buyer or still a renter for another two years. Enter your actual take-home, existing EMIs, and realistic tenure, then run the number against your target property's price. <a href="/tools/home-loan-affordability">Open the Home Loan Affordability calculator →</a></p>`,
   }
 ];
 
