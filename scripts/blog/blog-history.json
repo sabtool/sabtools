@@ -367,9 +367,10 @@
     "ai-testimonial-generator",
     "home-loan-affordability",
     "favicon-generator",
-    "ai-thank-you-note"
+    "ai-thank-you-note",
+    "sql-formatter"
   ],
-  "lastCategory": "ai",
-  "totalPosts": 368,
-  "lastRun": "2026-11-03T11:55:04.425Z"
+  "lastCategory": "developer",
+  "totalPosts": 369,
+  "lastRun": "2026-11-03T18:15:41.520Z"
 }
