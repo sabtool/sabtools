@@ -366,9 +366,10 @@
     "gratuity-calculator",
     "ai-testimonial-generator",
     "home-loan-affordability",
-    "favicon-generator"
+    "favicon-generator",
+    "ai-thank-you-note"
   ],
-  "lastCategory": "image",
-  "totalPosts": 367,
-  "lastRun": "2026-11-02T20:03:41.302Z"
+  "lastCategory": "ai",
+  "totalPosts": 368,
+  "lastRun": "2026-11-03T11:55:04.425Z"
 }
