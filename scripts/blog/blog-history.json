@@ -371,9 +371,10 @@
     "sql-formatter",
     "random-name-generator",
     "ai-pickup-line-generator",
-    "home-loan-prepayment-calculator"
+    "home-loan-prepayment-calculator",
+    "ad-revenue-estimator"
   ],
-  "lastCategory": "finance",
-  "totalPosts": 372,
-  "lastRun": "2026-11-05T12:53:36.202Z"
+  "lastCategory": "seo",
+  "totalPosts": 373,
+  "lastRun": "2026-11-05T17:36:18.617Z"
 }
