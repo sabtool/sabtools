@@ -372,9 +372,10 @@
     "random-name-generator",
     "ai-pickup-line-generator",
     "home-loan-prepayment-calculator",
-    "ad-revenue-estimator"
+    "ad-revenue-estimator",
+    "ai-flashcard-generator"
   ],
-  "lastCategory": "seo",
-  "totalPosts": 373,
-  "lastRun": "2026-11-05T17:36:18.617Z"
+  "lastCategory": "ai",
+  "totalPosts": 374,
+  "lastRun": "2026-11-06T11:57:51.180Z"
 }
