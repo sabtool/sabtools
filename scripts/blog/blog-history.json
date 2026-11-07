@@ -374,9 +374,10 @@
     "home-loan-prepayment-calculator",
     "ad-revenue-estimator",
     "ai-flashcard-generator",
-    "elss-tax-calculator"
+    "elss-tax-calculator",
+    "heic-to-jpg"
   ],
-  "lastCategory": "finance",
-  "totalPosts": 375,
-  "lastRun": "2026-11-06T17:12:05.403Z"
+  "lastCategory": "image",
+  "totalPosts": 376,
+  "lastRun": "2026-11-07T11:23:20.258Z"
 }

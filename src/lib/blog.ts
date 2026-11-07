@@ -64733,6 +64733,118 @@ Scheme E Tier-I 1-year return of -6.25%
 <p>The direction of personal loan rates from here depends on three variables: whether the RBI delivers further cuts in its remaining FY 2025-26 policy meetings, whether banks pass those cuts through to unsecured retail (the lag is typically longer than on home loans), and how the risk-weighting regime for unsecured consumer credit evolves. The RBI has been publicly cautious about the growth rate of unsecured retail lending over the past 18 months, and any tightening of risk weights would push rates in the opposite direction — up — regardless of what the repo rate does.</p>
 
 <p>For now, the practical takeaway for an Indian borrower in late 2025 is this: the floor rates at SBI, HDFC Bank and Bajaj Finance have converged near 10%, but the real variation is in who actually qualifies for those floors, how fees are capped, and how long you can stretch the tenure. Shortlist at least two lenders, get written sanction letters, run the exact numbers through an EMI calculator, and only then pick the offer that minimises your total interest outflow — not just the one with the most attention-grabbing starting rate.</p>`,
+  },
+  {
+    slug: "heic-to-jpg-guide-2026",
+    title: "Best Free HEIC to JPG Converter Online for India (2026)",
+    description: "Use HEIC to JPG Converter online for free — convert heic and other image formats to jpg with quality control. No signup, instant results. Made for India. Try...",
+    date: "2026-11-07",
+    category: "Image",
+    readTime: "11 min read",
+    keywords: ["heic", "heif", "jpg", "jpeg", "convert", "iphone", "apple", "heic to jpg converter"],
+    toolSlug: "heic-to-jpg",
+    image: {
+      src: "/blog/heic-to-jpg.webp",
+      alt: "HEIC to JPG Converter — Free Online Convert HEIC and other image formats to JPG with quality control Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>Picture this: it's 11:47 PM, the UPSC application portal closes at midnight, and the photo you clicked on your iPhone 13 refuses to upload. The portal demands a JPEG under 300 KB. Your file is a <strong>.HEIC</strong> — a format the Government of India's recruitment websites have never heard of. You panic, Google "HEIC to JPG," and end up on a shady site asking for your email address to download the converted file. This is the single most common image problem for iPhone users in India, and it has nothing to do with your phone being broken.</p>
+
+<p>Apple switched the default camera format on iPhones to HEIC (High Efficiency Image Container, based on the HEIF standard) back in 2017 with iOS 11. The format is genuinely clever — it stores roughly the same image quality as JPEG at about half the file size. The problem is that almost nothing in the Indian digital ecosystem actually supports it. SSC exam portals, PAN correction forms, bank KYC uploads, insurance claim websites, government tender submissions, school admission portals, WhatsApp Web, most home printers, and even many corporate HR systems all expect <strong>.jpg</strong> or <strong>.jpeg</strong>. Until that changes — and it won't for years — you need a reliable way to convert.</p>
+
+<h2>Why your iPhone photo is HEIC in the first place</h2>
+
+<p>When you open the Camera app on any iPhone from the iPhone 7 onwards, iOS looks at your storage format setting. If it's set to "High Efficiency" (the default since 2017), every photo you take is saved as HEIC. A 12-megapixel photo that would be around <strong>3.5 MB as JPEG</strong> ends up closer to <strong>1.8 MB as HEIC</strong> — a huge win if you're on a 128 GB iPhone with 40,000 photos of your toddler.</p>
+
+<p>The trouble starts the moment that photo leaves your phone. AirDrop to another iPhone? Stays HEIC. Share to WhatsApp (mobile)? WhatsApp quietly converts it to JPEG during upload, so your friend sees a JPG. Email it to yourself to open on a Windows laptop? Arrives as HEIC. Open it in Microsoft Paint, IrfanView, or an older version of Photoshop? Error. Upload it to the <strong>Income Tax e-filing portal</strong> for your profile picture? Rejected.</p>
+
+<p>You can avoid the problem entirely by going to <em>Settings → Camera → Formats → Most Compatible</em> on your iPhone, which switches capture to JPEG permanently. But most people only discover this trick after they've already shot 2,000 photos in HEIC — and those older files still need converting. That's where the <a href="/tools/heic-to-jpg">HEIC to JPG Converter</a> comes in.</p>
+
+<h2>Where HEIC actually breaks things in India</h2>
+
+<p>It helps to know exactly where you'll hit a wall, because it affects how you should set up your conversion:</p>
+
+<ul>
+  <li><strong>Government recruitment portals</strong> — UPSC, SSC, IBPS, RRB, state PSCs. Every single one asks for JPEG. UPSC accepts 20–300 KB, SSC asks for 20–50 KB at roughly 200×230 pixels.</li>
+  <li><strong>Passport Seva and Aadhaar enrollment</strong> — passport online appointments typically need a 4.5×3.5 cm photo at 35–40 KB JPEG.</li>
+  <li><strong>Bank KYC and video KYC</strong> — HDFC, ICICI, SBI, Axis, Kotak online account opening flows all ask for JPG/PNG. Upload a HEIC and you'll get a cryptic "invalid file type" message with no explanation.</li>
+  <li><strong>Insurance claims</strong> — HDFC Ergo, ICICI Lombard, Star Health claim portals want vehicle damage photos or hospital bills as JPG/PDF.</li>
+  <li><strong>GST portal</strong> — if you're a freelancer or small business owner uploading invoice evidence, HEIC is a no-go. The portal only accepts JPG and PDF for annexure uploads.</li>
+  <li><strong>School and college admission</strong> — CBSE, state board, and university portals (DU, Mumbai University, Anna University) all specify JPEG with strict size limits.</li>
+  <li><strong>WhatsApp Web and desktop</strong> — unlike the mobile app, the web version doesn't auto-convert. Drag a HEIC in and it either fails silently or sends a broken preview.</li>
+</ul>
+
+<p>In practical terms: if you own an iPhone in India, you will need to convert HEIC to JPG at least once a month, probably more often. Banking on the browser extension of some obscure converter is not a long-term plan.</p>
+
+<h2>How the converter actually works</h2>
+
+<p>The <a href="/tools/heic-to-jpg">HEIC to JPG Converter on SabTools</a> runs entirely in your browser. You drop a .heic (or .heif) file in, pick a quality level, and get a .jpg back. Nothing is uploaded to a server, which matters when the "photo" you're converting is a scan of your PAN card, a selfie with your Aadhaar, or a medical report. Think about what you're uploading before you use any random online converter — a lot of them store your images for 24 hours "for processing."</p>
+
+<p>The workflow is deliberately boring, which is the point:</p>
+
+<ol>
+  <li>Transfer the HEIC file from your iPhone to your laptop. AirDrop to a Mac keeps it HEIC. iCloud for Windows downloads it as HEIC. A USB cable via Windows Explorer also pulls HEIC. Email-to-self will too if you don't tap "Actual Size."</li>
+  <li>Open the converter and drop the file in.</li>
+  <li>Pick a quality setting — <strong>90–95%</strong> for anything you'll print or submit to a government portal, <strong>75–85%</strong> if you need a small file size for WhatsApp or email.</li>
+  <li>Download the .jpg.</li>
+</ol>
+
+<p>Quality matters more than people realise. If you convert a HEIC at 100% JPEG quality, the output file can actually be <em>larger</em> than the original HEIC — sometimes 2–3× larger — because JPEG is a less efficient codec. A 1.8 MB HEIC turns into a 4.2 MB JPEG at max quality. If you're trying to hit the UPSC 300 KB limit, that won't work. Drop the quality slider to around 70–80% and you'll typically land between 150 KB and 400 KB for a 12 MP image, which is exactly what most portals want.</p>
+
+<h2>Hitting exact file size targets for government forms</h2>
+
+<p>This is the part most converter guides skip. Government forms don't just want JPEG — they want JPEG within a tight byte range. Here's what actually works:</p>
+
+<ul>
+  <li><strong>SSC/CGL photo (20–50 KB, 200×230 px)</strong>: Convert HEIC to JPG at 80% quality first, then run it through the <a href="/tools/bulk-image-resizer">Bulk Image Resizer</a> to bring the dimensions down to 200×230. The size drop from resizing usually gets you well under 50 KB.</li>
+  <li><strong>UPSC photo (20–300 KB JPEG)</strong>: Convert at 85–90% quality, usually no resizing needed. A standard iPhone portrait will land at around 200–280 KB, comfortably within range.</li>
+  <li><strong>Passport application (35–40 KB, 4.5×3.5 cm)</strong>: Convert at 75% quality, then resize to 413×531 pixels (which is 3.5×4.5 cm at 300 DPI). Target file size will fall in range automatically.</li>
+  <li><strong>Voter ID / EPIC (2×2 inch JPEG)</strong>: Convert at 85% quality and resize to 600×600 pixels. Most state election commission portals accept anything under 100 KB.</li>
+  <li><strong>Bank KYC selfie</strong>: Convert at 90% quality. Banks usually allow up to 2 MB, so no size squeeze needed, but they insist on JPG/PNG — the format change alone is the fix.</li>
+</ul>
+
+<p>A quick reality check: if you're submitting a passport photo, don't convert a candid iPhone selfie. Get a proper 2×2 photo from a studio in a plain background — the government rejects informal shots. The converter solves the format problem, not the composition problem.</p>
+
+<h2>Batch converting a whole trip's worth of photos</h2>
+
+<p>The single-file workflow is fine for one UPSC application. But what if you went to Goa, shot 400 photos on your iPhone, and now your cousin in Jaipur wants them over WhatsApp — and she's on Android with a phone that renders HEIC as blank squares?</p>
+
+<p>Select all 400 files at once and drop them into the converter. Set the quality to around 80% (invisible difference from the original, half the file size), and let the browser crunch through them. On a modern laptop — even a ₹45,000 mid-range Windows machine with an i5 — 400 HEIC conversions take about three to four minutes. You'll end up with a folder of JPGs you can zip and upload to Google Drive or Google Photos, both of which handle JPEG perfectly and will auto-optimise further.</p>
+
+<p>If you're also planning to shrink the images for WhatsApp sharing (which has a 16 MB per image cap but compresses aggressively above 1 MB anyway), run the batch through <a href="/tools/bulk-image-resizer">Bulk Image Resizer</a> after conversion and set a 70% scale. Your 400 photos will drop from roughly 720 MB total to under 100 MB — sendable even on a 4G hotspot.</p>
+
+<h2>What about HEIC to PNG, or PNG to JPG, or the other 200 permutations?</h2>
+
+<p>HEIC to JPG covers 90% of cases, but not all. If you need transparency (say, you're pulling a product shot off a brand's marketing kit for your Shopify store), you want PNG, not JPG — JPEG doesn't support transparent backgrounds. Use the <a href="/tools/image-to-png">Image to PNG Converter</a> for that case.</p>
+
+<p>If you need WebP for your website (Google PageSpeed loves WebP, and it's roughly 25–30% smaller than JPEG at the same quality), or if you're going the other way — someone sent you a WebP that won't open in PowerPoint — the <a href="/tools/image-format-converter">Image Format Converter</a> handles the full matrix: PNG, JPG, WebP, BMP, GIF, ICO, TIFF, AVIF. Think of it as the Swiss army knife; the HEIC-to-JPG tool is the dedicated screwdriver for the one problem you actually have most often.</p>
+
+<p>For the creatively inclined, the <a href="/tools/image-to-ascii-art">Image to ASCII Art converter</a> turns any image (yes, including a HEIC you've converted to JPG first) into text art — a fun way to share a photo over SMS or paste into a Slack channel.</p>
+
+<h2>A few things to know before you convert</h2>
+
+<p>HEIC files on iPhones sometimes come in two varieties: a standard HEIC single image and a "Live Photo" HEIC that bundles a short motion clip inside. When you convert a Live Photo HEIC to JPG, only the still frame survives — the motion is discarded. This is fine for form uploads but worth knowing if you were hoping to preserve the animation. For that, you'd need to extract the motion as a separate MOV file on the iPhone first.</p>
+
+<p>EXIF metadata — the embedded data showing camera model, GPS location, date, aperture — carries over to the converted JPG by default. If you're uploading a photo of your flat for a rental listing and don't want the GPS coordinates of your Pune apartment going public, strip the EXIF data before sharing. Most photo viewers show you a "Remove Location" option in the share menu.</p>
+
+<p>The converter handles HEIF (.heif) files identically to HEIC. The two are essentially the same format with a different extension — HEIC is Apple's naming, HEIF is the generic ISO/IEC standard name. Some newer Android phones (Samsung Galaxy S23+ and up, Google Pixel 8) also now shoot HEIF by default, so this isn't a pure iPhone problem anymore.</p>
+
+<h2>Quick answers to the real questions</h2>
+
+<h3>Why can't Windows open HEIC without extra software?</h3>
+<p>Microsoft licensed HEVC (the codec HEIC depends on) separately from Windows itself. You can install the "HEIF Image Extensions" from the Microsoft Store for free, but you also need the "HEVC Video Extensions" — which cost ₹79 as a one-time purchase. Most people prefer to just convert the file than pay for a codec they'll use rarely.</p>
+
+<h3>Will converting HEIC to JPG reduce image quality?</h3>
+<p>Slightly, but almost imperceptibly if you pick 85% quality or higher. Both formats are lossy, but the recompression step adds a small quality hit. For social media, WhatsApp, forms, printing up to A4 — you won't see the difference. For professional photography portfolios, keep the HEIC original and convert only a working copy.</p>
+
+<h3>Is it safe to convert a photo of my Aadhaar or PAN card online?</h3>
+<p>Only if the converter runs client-side in the browser (no upload to a server). SabTools' converter does the conversion locally — your file never leaves your laptop. Still, a healthy habit: never upload sensitive documents to converters that ask you to sign in or that advertise "cloud storage" of your converted files.</p>
+
+<h3>Can I convert JPG back to HEIC?</h3>
+<p>Technically yes with specialised tools, but there's almost never a reason to. HEIC has no advantage once a JPG exists — you can't magically recover the detail the JPEG compression discarded. Just keep the JPG.</p>
+
+<p>If you're already staring at a folder of .HEIC files and a government portal deadline, <a href="/tools/heic-to-jpg">open the HEIC to JPG Converter and drop your files in →</a></p>`,
   }
 ];
 
