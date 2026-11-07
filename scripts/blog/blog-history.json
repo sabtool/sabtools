@@ -375,9 +375,10 @@
     "ad-revenue-estimator",
     "ai-flashcard-generator",
     "elss-tax-calculator",
-    "heic-to-jpg"
+    "heic-to-jpg",
+    "utm-link-builder"
   ],
-  "lastCategory": "image",
-  "totalPosts": 376,
-  "lastRun": "2026-11-07T11:23:20.258Z"
+  "lastCategory": "seo",
+  "totalPosts": 377,
+  "lastRun": "2026-11-07T16:23:30.282Z"
 }
