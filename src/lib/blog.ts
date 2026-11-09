@@ -65830,6 +65830,201 @@ a majority of users are still holding back from 5G
 <p>Yes, as long as the font supports the script. For Devanagari (Hindi, Marathi), fonts like Noto Sans Devanagari and Mukta work well. For Tamil, Noto Sans Tamil. For Bengali, Noto Sans Bengali. Many schools in Maharashtra and Tamil Nadu issue bilingual certificates (English + regional script) — design them with the English text on top and the regional script below for best readability.</p>
 
 <p>Open the <a href="/tools/certificate-generator">Certificate Generator</a> and build your first one in the next ten minutes →</p>`,
+  },
+  {
+    slug: "state-road-tax-calculator-comparison-2026",
+    title: "State Road Tax / Vehicle Registration Calculator: SabTools vs BankBazaar vs ClearTax — Honest Comparison (2026)",
+    description: "Honest comparison of free State Road Tax / Vehicle Registration Calculator options in India for 2026 — features, accuracy, privacy, signup requirements. Picks t",
+    date: "2026-11-09",
+    category: "Tax & Salary",
+    readTime: "10 min read",
+    keywords: ["road tax calculator", "vehicle registration tax", "rto charges", "state wise road tax", "car registration cost", "maharashtra road tax", "karnataka road tax", "delhi road tax", "best state road tax / vehicle registration calculator india", "state road tax / vehicle registration calculator comparison"],
+    toolSlug: "state-road-tax-calculator",
+    image: {
+      src: "/blog/state-road-tax-calculator.webp",
+      alt: "State Road Tax / Vehicle Registration Calculator comparison — SabTools vs other free Indian tools (2026)",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>The real decision: specialist road tax tool vs generic tax platforms</h2>
+
+<p>If you're buying a new car in India and trying to figure out the on-road price, the number that trips up most buyers isn't the EMI or the insurance — it's the <strong>state road tax (also called RTO tax or motor vehicle tax)</strong>. A ₹10 lakh ex-showroom Hyundai Creta in Bangalore attracts ~13% road tax (around ₹1.3 lakh), while the same car in Delhi might be charged ~10% plus a 2% MCD parking surcharge. That's a ₹30,000+ difference just by state.</p>
+
+<p>Most readers searching for a road tax calculator end up asking: "Which tool actually has my state's rate updated?" The honest answer is that India's biggest tax platforms — <a href="https://cleartax.in/" rel="noopener" target="_blank">ClearTax</a>, <a href="https://tax2win.in/" rel="noopener" target="_blank">Tax2win</a>, and <a href="https://quicko.com/" rel="noopener" target="_blank">Quicko</a> — focus on income tax and don't publish a dedicated road tax calculator at all. Road tax lives in a different corner of the internet: car portals and specialist tools. This post compares SabTools' <a href="/tools/state-road-tax-calculator">State Road Tax / Vehicle Registration Calculator</a> against the broader landscape of what Indian buyers actually use.</p>
+
+<h3>Quick verdict</h3>
+
+<p>If you want <strong>verified state-wise rates for 21 states and UTs, EV exemption logic, and no signup wall</strong>, SabTools is the fastest path to a clean number. If you want a car portal that also tries to sell you the car (CarDekho, CarWale), their calculators are embedded in the buying journey but less transparent about how the number is built. And if you're hoping ClearTax or Quicko have a road tax tool — they don't. They stop at income tax, HRA, and capital gains.</p>
+
+<h2>Why road tax is harder to calculate than income tax</h2>
+
+<p>Income tax in India is centrally governed. Every tool — ClearTax's <a href="https://cleartax.in/paytax/TaxCalculator" rel="noopener" target="_blank">Income Tax Calculator</a>, Tax2win's <a href="https://tax2win.in/tax-calculator" rel="noopener" target="_blank">Income Tax Calculator</a>, Quicko's <a href="https://tools.quicko.com/income-tax-calculator/" rel="noopener" target="_blank">Income Tax Calculator</a> — works off the same slabs published by the Finance Act. Accuracy differences are marginal.</p>
+
+<p>Road tax is the opposite. It's levied by each <strong>State Motor Vehicles Department</strong> under the Motor Vehicles Act, 1988, which means:</p>
+
+<ul>
+  <li>Maharashtra charges <strong>11–13%</strong> of ex-showroom price for petrol cars, 13% for cars above ₹20 lakh.</li>
+  <li>Karnataka charges <strong>13–18%</strong> depending on invoice price (bumps to 18% above ₹20L).</li>
+  <li>Delhi charges <strong>4–12.5%</strong> with a MCD parking fee added for cars above ₹4L.</li>
+  <li>Tamil Nadu charges <strong>10–20%</strong> (petrol) with lifetime tax calculated on cost + 60% GST adjustment.</li>
+  <li>Uttar Pradesh adds <strong>7%</strong> extra on top for cars above ₹10L (temporary registration charge).</li>
+  <li>Gujarat charges a flat <strong>6%</strong> for private vehicles — one of the lowest in India.</li>
+</ul>
+
+<p>No single national tool updates every state's amendment. Which is why a generic tax calculator is useless here — you need something built specifically for this.</p>
+
+<h2>The actual landscape: who offers what</h2>
+
+<h3>Tax platforms (ClearTax, Tax2win, Quicko)</h3>
+
+<p><a href="https://cleartax.in/" rel="noopener" target="_blank">ClearTax</a> is the biggest tax brand in India and runs genuinely useful calculators like the <a href="https://cleartax.in/paytax/hra-calculator" rel="noopener" target="_blank">HRA Calculator</a> and <a href="https://cleartax.in/paytax/tds-calculator" rel="noopener" target="_blank">TDS Calculator</a>. But if you search ClearTax for "road tax" or "RTO charges", you'll find explainer articles, not a calculator. Same story with Tax2win's <a href="https://tax2win.in/hra-calculator" rel="noopener" target="_blank">HRA tool</a> and Quicko's <a href="https://tools.quicko.com/capital-gains-tax-calculator/" rel="noopener" target="_blank">Capital Gains Tax Calculator</a> — all strong in their niche, none covering vehicle registration tax.</p>
+
+<p>This isn't a weakness per se; it's a scope decision. These platforms route their revenue through ITR filing and CA-assisted services, so their tools are built around that funnel. Road tax is a one-time transaction for most buyers, so there's no filing hook — which is probably why they skip it.</p>
+
+<h3>Car portals (CarDekho, CarWale, Spinny)</h3>
+
+<p>Car portals embed road tax inside on-road price calculators on individual car listings. These are useful when you're shopping for a specific model because they bundle insurance, RTO, and handling charges into one figure. The trade-off: the calculation logic isn't always shown. You see "₹1,42,000 RTO" on a Creta listing but can't audit whether that's based on ex-showroom, invoice, or CIF value, or whether it includes the green tax or MCD parking fee.</p>
+
+<p>For buyers comparing across states (common for people transferring jobs or relocating), a model-specific calculator is less useful than a state-rate calculator that works for any car.</p>
+
+<h3>Specialist calculators (SabTools)</h3>
+
+<p>SabTools' <a href="/tools/state-road-tax-calculator">State Road Tax Calculator</a> takes the opposite approach: pick your state, enter the ex-showroom price and fuel type, and get a transparent breakdown of road tax plus registration charges. Coverage includes Maharashtra, Karnataka, Delhi, Tamil Nadu, Gujarat, UP, West Bengal, Telangana, Kerala, Andhra Pradesh, Rajasthan, Punjab, Haryana, Madhya Pradesh, Bihar, Odisha, Assam, Chhattisgarh, Jharkhand, Uttarakhand, and Chandigarh UT — 21 regions total.</p>
+
+<h2>Side-by-side comparison</h2>
+
+<table>
+  <tr>
+    <th>Criterion</th>
+    <th>SabTools Road Tax Calc</th>
+    <th>ClearTax / Tax2win / Quicko</th>
+    <th>Car portal calculators</th>
+  </tr>
+  <tr>
+    <td>Dedicated road tax tool</td>
+    <td>Yes</td>
+    <td>No (income tax only)</td>
+    <td>Bundled into on-road price</td>
+  </tr>
+  <tr>
+    <td>State coverage</td>
+    <td>21 states + UTs</td>
+    <td>N/A</td>
+    <td>Usually all states (model-tied)</td>
+  </tr>
+  <tr>
+    <td>EV exemption logic</td>
+    <td>Yes (state-specific)</td>
+    <td>N/A</td>
+    <td>Sometimes shown</td>
+  </tr>
+  <tr>
+    <td>Signup required</td>
+    <td>No</td>
+    <td>Email gate for saving results</td>
+    <td>Often ties to lead capture</td>
+  </tr>
+  <tr>
+    <td>Upsells on tool page</td>
+    <td>None</td>
+    <td>Push to paid filing</td>
+    <td>Dealer referrals</td>
+  </tr>
+  <tr>
+    <td>Transparent calculation</td>
+    <td>Yes (shows % and base)</td>
+    <td>N/A</td>
+    <td>Varies by portal</td>
+  </tr>
+</table>
+
+<h2>A worked example: ₹12 lakh Tata Nexon across four states</h2>
+
+<p>Let's say Arjun in Pune is comparing road tax on a Tata Nexon (petrol, ex-showroom ₹12,00,000) across four states because he's deciding whether to register in Maharashtra, Karnataka, Delhi, or Gujarat (his hometown).</p>
+
+<ul>
+  <li><strong>Maharashtra:</strong> 11% × ₹12,00,000 = <strong>₹1,32,000</strong></li>
+  <li><strong>Karnataka:</strong> 13% × ₹12,00,000 = <strong>₹1,56,000</strong></li>
+  <li><strong>Delhi:</strong> 10% × ₹12,00,000 + MCD parking ₹4,000 = <strong>₹1,24,000</strong></li>
+  <li><strong>Gujarat:</strong> 6% × ₹12,00,000 = <strong>₹72,000</strong></li>
+</ul>
+
+<p>That's an <strong>₹84,000 difference</strong> between Gujarat and Karnataka for the same car. A tax platform calculator wouldn't answer this question. A model-specific CarDekho page gives one state at a time. A state-rate calculator like SabTools' answers it in four lookups, with the same base price and transparent math each time.</p>
+
+<h2>Where each option genuinely wins</h2>
+
+<h3>ClearTax wins on income tax, not road tax</h3>
+
+<p>If you're comparing old vs new regime, computing HRA exemption, or estimating self-assessment tax before 15 March, <a href="https://cleartax.in/" rel="noopener" target="_blank">ClearTax</a> remains best-in-class in India. Its explainers are updated for AY 2026-27 and the regulatory depth is unmatched. Just don't expect it to help you figure out Delhi vs Noida registration costs.</p>
+
+<h3>Quicko wins on capital gains and trader taxation</h3>
+
+<p>If you're a Zerodha or Groww user who needs to reconcile F&O turnover, equity STCG/LTCG, or mutual fund redemptions, Quicko's <a href="https://tools.quicko.com/capital-gains-tax-calculator/" rel="noopener" target="_blank">Capital Gains Calculator</a> is built for exactly that. Its broker integration pulls statements directly — something generic calculators can't do. Again, zero overlap with road tax.</p>
+
+<h3>Car portals win when you're shopping one model</h3>
+
+<p>If you've narrowed down to "Hyundai i20 Sportz in Hyderabad", the on-road price on CarDekho or CarWale includes RTO, insurance, handling, and often a current showroom offer. That's more useful than running three separate calculators. The limitation: these numbers are dealership-specific and can shift by ₹5,000–20,000 with discounts.</p>
+
+<h3>SabTools wins when you're comparing or budgeting</h3>
+
+<p>If you haven't fixed on a model yet, or you're deciding between two cities, or you want to understand how much road tax inflates your ₹10L sedan budget (spoiler: typically ₹1-1.8L extra), a <a href="/tools/state-road-tax-calculator">standalone state tax calculator</a> gives you a clean spreadsheet-style view. No forced model picker, no insurance bundling, no dealer lead form.</p>
+
+<h2>The EV angle: where the gap gets wider</h2>
+
+<p>EV road tax is where generic tax platforms are most absent and where SabTools' specialization matters. Indian states have radically different EV incentives:</p>
+
+<ul>
+  <li><strong>Maharashtra:</strong> Full road tax exemption on EVs till March 2025 (and extended by policy).</li>
+  <li><strong>Delhi:</strong> 100% road tax waiver + registration fee waiver under Delhi EV Policy.</li>
+  <li><strong>Karnataka:</strong> Full exemption on electric vehicles.</li>
+  <li><strong>Tamil Nadu:</strong> 100% exemption till end of EV policy period.</li>
+  <li><strong>Gujarat:</strong> 100% road tax exemption + subsidy on battery capacity.</li>
+  <li><strong>UP:</strong> Partial exemption for EVs manufactured in-state.</li>
+</ul>
+
+<p>A buyer comparing a ₹18 lakh Tata Nexon EV against a ₹12 lakh Nexon petrol in Bangalore saves <strong>~₹2.3 lakh in road tax alone</strong> (13% of ₹18L vs 0%), which materially changes TCO math. The SabTools calculator surfaces this automatically when EV is selected — not as a disclaimer, as the actual computed figure. Neither ClearTax nor Tax2win nor Quicko addresses this because it's outside their income tax scope.</p>
+
+<h2>Privacy and signup walls — the quiet differentiator</h2>
+
+<p>Road tax queries carry personal signal: your car budget, your state, your purchase timing. Platforms that push email capture on tool results build a profile they can later monetize (loan referrals, insurance leads, dealer intros). ClearTax and Tax2win both nudge users toward email signup when saving or downloading results — reasonable for a filing platform, less welcome on a calculator you're using twice.</p>
+
+<p>SabTools runs calculations entirely in your browser. There's no backend logging your ex-showroom price, no "we'll email you quotes from dealers", no ad retargeting kicking in later. For a one-off number like road tax, that's the right default. You can also pair it with the <a href="/tools/emi-calculator">EMI Calculator</a> to work out the car loan math and the <a href="/tools/electricity-bill-calculator">Electricity Bill Calculator</a> if you're sizing up EV charging costs at home — all without a single signup.</p>
+
+<h2>What's actually missing from SabTools (honest list)</h2>
+
+<p>To not sound like a puff piece — three things SabTools doesn't do that other tools sometimes do:</p>
+
+<ol>
+  <li><strong>Insurance quote integration.</strong> CarDekho and Acko blend road tax into on-road price along with live insurance premium quotes. SabTools doesn't quote insurance — you'll need a separate step for that.</li>
+  <li><strong>Model-specific ex-showroom auto-fill.</strong> You enter the ex-showroom price yourself; SabTools doesn't maintain a car model database. If you want "pick a car, see the number", a car portal is faster.</li>
+  <li><strong>Dealer handling charges.</strong> Road tax and registration fees are covered; dealer logistics/handling (₹8,000–25,000 typical) vary by showroom and aren't included. You'll see this as a line item at the delivery stage.</li>
+</ol>
+
+<p>For the specific question of "what does my state charge for road tax on a ₹X ex-showroom car", SabTools is the cleanest answer. For "what will I write on the final cheque at the Hyundai showroom", a car portal plus the dealer quote is more complete.</p>
+
+<h2>Related calculators worth running at the same time</h2>
+
+<p>Buying a car typically triggers a cluster of adjacent money decisions. Three SabTools calculators pair naturally with road tax:</p>
+
+<ul>
+  <li><a href="/tools/emi-calculator">EMI Calculator</a> — once you know ex-showroom + road tax + insurance, feed the on-road total here to see the monthly EMI across 5 vs 7 years at HDFC/SBI/ICICI auto loan rates.</li>
+  <li><a href="/tools/salary-hike-calculator">Salary Hike Calculator</a> — common planning question: "how much hike do I need next appraisal to afford this EMI?" Two minutes to check.</li>
+  <li><a href="/tools/sip-calculator">SIP Calculator</a> — useful counterfactual if you're deciding between buying the car in cash vs financing it and SIP-ing the lump sum. A ₹5L SIP over 7 years at 12% beats most 7-year auto loans mathematically.</li>
+</ul>
+
+<p>Business buyers also check the <a href="/tools/msme-eligibility-checker">MSME / Udyam Registration Eligibility Checker</a> because commercial vehicle registration under an MSME-registered proprietorship opens up slightly different depreciation and GST input credit treatment.</p>
+
+<h2>Bottom line: when to use which</h2>
+
+<p><strong>Use <a href="/tools/state-road-tax-calculator">SabTools' State Road Tax Calculator</a></strong> when you want a clean, state-by-state breakdown; when you're comparing registration across cities; when you're pricing an EV and need the exemption applied; or when you don't want to hand over your email just to see a number.</p>
+
+<p><strong>Use <a href="https://cleartax.in/" rel="noopener" target="_blank">ClearTax</a>, <a href="https://tax2win.in/" rel="noopener" target="_blank">Tax2win</a>, or <a href="https://quicko.com/" rel="noopener" target="_blank">Quicko</a></strong> for everything else tax-related — income tax projection, HRA, TDS, capital gains. They're the right tools for those jobs, but not this one.</p>
+
+<p><strong>Use a car portal</strong> when you've committed to a specific model and want the full on-road price including insurance, dealer charges, and current showroom offers in one view.</p>
+
+<p>Most buyers end up using two tools in sequence: SabTools to figure out the road tax budget by state, then a car portal to validate the final quote from their actual dealership.</p>
+
+<p>Ready to see your state's rate? Try the <a href="/tools/state-road-tax-calculator">SabTools State Road Tax / Vehicle Registration Calculator →</a></p>`,
   }
 ];
 

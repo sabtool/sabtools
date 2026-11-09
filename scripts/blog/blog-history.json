@@ -379,9 +379,10 @@
     "utm-link-builder",
     "post-office-savings-calculator",
     "text-to-speech",
-    "certificate-generator"
+    "certificate-generator",
+    "state-road-tax-calculator"
   ],
-  "lastCategory": "image",
-  "totalPosts": 380,
-  "lastRun": "2026-11-09T12:21:23.761Z"
+  "lastCategory": "tax",
+  "totalPosts": 381,
+  "lastRun": "2026-11-09T20:27:10.175Z"
 }
