@@ -378,9 +378,10 @@
     "heic-to-jpg",
     "utm-link-builder",
     "post-office-savings-calculator",
-    "text-to-speech"
+    "text-to-speech",
+    "certificate-generator"
   ],
-  "lastCategory": "text",
-  "totalPosts": 379,
-  "lastRun": "2026-11-08T17:24:06.532Z"
+  "lastCategory": "image",
+  "totalPosts": 380,
+  "lastRun": "2026-11-09T12:21:23.761Z"
 }
