@@ -66025,6 +66025,247 @@ a majority of users are still holding back from 5G
 <p>Most buyers end up using two tools in sequence: SabTools to figure out the road tax budget by state, then a car portal to validate the final quote from their actual dealership.</p>
 
 <p>Ready to see your state's rate? Try the <a href="/tools/state-road-tax-calculator">SabTools State Road Tax / Vehicle Registration Calculator →</a></p>`,
+  },
+  {
+    slug: "news-2026-11-10-latest-mutual-fund-regulations-and-sebi-updates-affecting-in",
+    title: "Latest mutual fund regulations and SEBI updates affecting Indian in... (2026 Update)",
+    description: "Latest mutual fund regulations and SEBI updates affecting Indian investors — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-11-10",
+    category: "Finance",
+    readTime: "14 min read",
+    keywords: ["Latest mutual fund regulations", "finance news india 2026", "india 2026 update"],
+    toolSlug: "emi-calculator",
+    image: {
+      src: "/blog/emi-calculator.webp",
+      alt: "Latest mutual fund regulations and SEBI updates affecting Indian in... (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>SEBI's regulatory recalibration: what's actually changed for Indian mutual fund investors</h2>
+
+<p>The last twelve months have been the busiest regulatory stretch for India's mutual fund industry in nearly three decades. The Securities and Exchange Board of India (SEBI) has rewritten the foundational 1996 Mutual Funds Regulations, launched an entirely new asset class, introduced a lighter framework for passive schemes, tightened insider-trading rules on fund units, and quietly made it possible for a salaried professional in Pune or a shopkeeper in Surat to start a Systematic Investment Plan with as little as ₹250 a month.</p>
+
+<p>For retail investors — now numbering well over 10 crore folios — these changes affect what you pay in fees, how your nominations are recorded, which products you can access, and how transparently your fund house must disclose risk. This update walks through what SEBI has actually notified, when the rules take effect, and what an ordinary investor in India should do in response.</p>
+
+<h2>The big one: Mutual Fund Regulations 2026</h2>
+
+<p>On 17 December 2025, the SEBI board approved a complete overhaul of the mutual fund rulebook. 
+
+India's capital markets regulator, the Securities and Exchange Board of India (SEBI), on Wednesday, December 17, 2025, approved a significant overhaul of mutual fund expense ratio norms
+
+. The framework replaces the SEBI (Mutual Funds) Regulations, 1996 and is being implemented in phases, with most provisions effective from 1 April 2026.</p>
+
+<h3>From TER to BER</h3>
+
+<p>The most visible shift is a redefinition of how fund costs are presented. 
+
+At the heart of SEBI's latest regulation is a redefinition of the way mutual fund expenses are calculated. Instead of the traditional Total Expense Ratio (TER), SEBI has introduced a new concept called the Base Expense Ratio (BER)
+
+. The familiar TER does not disappear, but becomes an aggregate figure. 
+
+The TER will continue to exist, but only as an aggregate of the BER, brokerage, regulatory charges and statutory levies. SEBI has also allowed mutual fund schemes to introduce performance-linked base expense ratios, subject to the regulator's
+
+ approval.</p>
+
+<p>In plain English: your scheme information document will now show a smaller headline number (BER), with brokerage and statutory items like Securities Transaction Tax broken out separately. 
+
+Total Expense Ratio, or TER, is presented as BER plus permitted brokerage and applicable regulatory and statutory levies. The SEBI Mutual Fund Regulations 2026 also reduce brokerage caps, remove an additional expense allowance and enable more
+
+ cost transparency.</p>
+
+<h3>Lower base expense limits across categories</h3>
+
+<p>
+
+SEBI has reduced the base expense ratio limits across the equity, debt, index funds, exchange-traded funds, and fund-of-funds catego
+
+ries. The idea is to compress what Indian investors pay for management, bring it closer to global norms, and end the long-standing complaint that TER slabs in India have been among the highest in Asia.</p>
+
+<p>However, early data suggests the picture is more nuanced than the headline reduction implies. 
+
+The average monthly TER of flexi-cap funds stood at 2.23% in May, compared
+
+ with earlier periods, and some fund categories have seen their expense ratios rise rather than fall in the transition months as fund houses recalibrate. Value Research has cautioned investors that 
+
+Don't assume your fund costs are dropping 10–15 basis
+
+ points automatically — the real impact will depend on how each AMC reclassifies brokerage and statutory levies.</p>
+
+<h3>Performance-linked fees arrive in India</h3>
+
+<p>The 2026 framework also opens the door to performance-based pricing. 
+
+Mutual fund schemes may now opt to charge a base expense ratio that varies with performance, subject to conditions that SEBI will specify
+
+. This is a structural shift: until now, a scheme charged the same percentage whether it beat its benchmark or lagged. Expect new launches in FY 2026-27 where part of the fee is contingent on the fund actually delivering alpha.</p>
+
+<h2>The ₹10 lakh bet: Specialised Investment Funds (SIFs)</h2>
+
+<p>On the other end of the investor spectrum, SEBI has carved out an entirely new vehicle for people who want more sophistication than a plain mutual fund allows but can't justify the ticket size of a Portfolio Management Service. 
+
+A Specialized Investment Fund (SIF) is a SEBI-regulated investment product introduced in India from April 1, 2025
+
+. The framework itself was notified in December 2024.</p>
+
+<p>
+
+Effective 1st April 2025, a Specialised Investment Fund or SIF is a new avenue to build wealth. The Securities Exchange Board of India (SEBI) introduced the framework in December 2024
+
+. SIFs sit between a mutual fund and a PMS — they are managed by AMCs but allow much more flexible strategies than a conventional scheme.</p>
+
+<h3>Who is this for?</h3>
+
+<p>The pricing tells you everything. 
+
+While most mutual fund schemes allow investors to start with relatively small amounts, SIFs require a minimum investment threshold of ₹10 lakh
+
+ across all strategies with a single fund house. 
+
+SIFs require a minimum investment of ₹10 lakh and offer investors access to advanced strategies such as long-short investing, sector rotation, dynamic asset allocat
+
+ion and other techniques previously restricted to institutional and PMS investors.</p>
+
+<p>For a Bengaluru technologist with ₹30–40 lakh of liquid savings, SIFs now offer a formal, SEBI-regulated route into strategies like equity long-short — something that previously required either a PMS onboarding of ₹50 lakh or an unregulated AIF. For a first-time salaried investor earning ₹15 lakh a year, SIFs remain out of reach, and that's by design: SEBI has deliberately set the bar high because these products carry higher risk.</p>
+
+<h2>MF Lite: a quieter track for passive schemes</h2>
+
+<p>Alongside the heavy-duty rewrite of the main regulations, SEBI has created a parallel, lighter-touch framework for index funds and ETFs. 
+
+The Mutual Funds Lite framework is designed exclusively for passive mutual fund schemes. Januar
+
+y 2025 saw the operational guidelines released.</p>
+
+<p>
+
+The Securities and Exchange Board of India (SEBI) introduced the Mutual Fund Lite (MF Lite) framework to address this, creating a separate, lighter-touch regulatory route for passively manage
+
+d schemes. The thinking: passive funds — those that merely replicate an index like Nifty 50 or Sensex — don't need the same level of compliance overhead as actively managed schemes.</p>
+
+<p>For investors, the practical outcome should be more passive funds launched by more sponsors, including entities that historically found the full AMC licensing burden prohibitive. If you've been buying Nifty 50 index funds or Bharat Bond ETFs, expect more competition and potentially lower expense ratios in this corner of the market over FY 2026-27.</p>
+
+<h2>₹250 SIPs: financial inclusion meets mutual funds</h2>
+
+<p>Perhaps the most socially significant recent move is the push for micro-SIPs. 
+
+Speaking at a recent symposium, SEBI Chairperson Madhabi Puri Buch unveiled plans to introduce a ₹250 minimum systematic investment plan (SIP)
+
+. The initiative is designed to bring first-time investors from tier-3 towns, students, and informal-sector workers into the formal mutual fund ecosystem.</p>
+
+<p>
+
+Currently, the standard minimum SIP amount in India typically ranges from ₹500 to ₹1,000
+
+. Dropping that floor to ₹250 is a direct response to the reality that for a college student in Patna preparing for competitive exams, or a part-time worker in a Hyderabad call centre, ₹500 a month can be a stretch. AMFI, 
+
+following a nudge from Sebi, the Association of Mutual Funds in India (Amfi) wrote to fund houses on June 27, seeking information on their pla
+
+ns to operationalise bite-sized SIPs, has coordinated the industry rollout.</p>
+
+<p>If you already run SIPs, this doesn't change your existing instalments. But it does open the door to layering multiple small SIPs across schemes — say ₹250 in a large-cap index fund, ₹250 in a flexi-cap, and ₹250 in a balanced advantage fund — without needing ₹3,000 a month to do it. Before you set up new SIPs, run the numbers through the <a href="/tools/sip-calculator">SIP Calculator</a> to see what a ₹250 or ₹500 monthly contribution becomes over 10, 15 or 20 years at realistic equity return assumptions.</p>
+
+<h2>Nomination rules: up to 10 nominees, mandatory for single holders</h2>
+
+<p>Effective 1 March 2025, SEBI significantly expanded nomination rules for mutual fund folios and demat accounts. 
+
+Starting March 1, 2025, the Securities and Exchange Board of India (SEBI) will enforce updated rules for mutual fund and demat account nominations. # SEBI's New Nomination Rules for Mutual Funds: Everything You Need to Know Investors can now nomina
+
+te up to ten individuals, compared to the earlier limit of three.</p>
+
+<p>
+
+Mutual fund investment: The Securities and Exchange Board of India (Sebi) has introduced new regulations regarding nomination rules for mutual funds and demat accounts in order to address the issue of unclaimed assets and enhance the efficient
+
+ transmission process after an investor's death. Unclaimed mutual fund assets had become a chronic problem, with thousands of crores lying in dormant folios because nomination details were either missing or outdated.</p>
+
+<p>
+
+Going forward, nomination has been made mandatory for all single-holder accounts. So if you hol
+
+d any mutual fund folio in a single name, you must either designate a nominee or formally opt out. Joint holders have more flexibility, but single-holder folios without nomination may face operational restrictions.</p>
+
+<p>If you have a Mumbai-based salaried professional's portfolio of five or six folios from different AMCs, the practical takeaway is to log into each AMC's website (or your CAMS/KFintech account), add or update nominees, and consider adding percentage allocations across up to ten family members — useful for anyone with multiple adult children or a complex family situation.</p>
+
+<h2>Insider trading rules now cover mutual fund units</h2>
+
+<p>A regulatory change that flew under the retail radar but has large governance implications: mutual fund units are now treated like listed securities for insider trading purposes. 
+
+Capital markets regulator Securities and Exchanges Board of India's recent notification clarifies that the insider trading rules will encompass mutual fund units effective November 1, 2024. Starting November 1, 2024, SEBI's insider trading rules wil
+
+l apply to transactions in mutual fund units by designated persons at AMCs.</p>
+
+<p>
+
+The market regulator, Sebi, has tightened the regulatory framework regarding the prevention of insider trading in mutual fund units. Under the new regulations, Asset Management Companies (AMCs) are required to disclose information on the holdings
+
+ of AMC employees, trustees, and their relatives on a quarterly basis.</p>
+
+<p>For retail investors, the significance is indirect but real: this closes a loophole where AMC employees could, in theory, buy or redeem large quantities of their own fund units ahead of material non-public information — say, a planned portfolio reshuffle or a stress event. Expect cleaner conduct and more public trust in AMC decisions.</p>
+
+<h2>Stress tests, REIT reclassification and the September 2025 board meeting</h2>
+
+<p>SEBI's 12 September 2025 board meeting produced several changes that matter for how your portfolio is constructed. 
+
+SEBI Board Meet (Sept 2025): Key Regulatory Changes in MPS, IPO Rules, FPIs, and MF Access to REITs. The Securities and Exchange Board of India (SEBI) held its board meeting on 12 September 2025 and announced important changes across Minimum
+
+ public shareholding, IPO rules, FPIs, and mutual fund access to real estate trusts.</p>
+
+<p>
+
+Further, SEBI has approved amendments to re-classify Real Estate Investment Trusts (REITs) as equity instruments for the purpose of mutual fund investments, while Infrastructure Investment Trusts (InvITs) will continue to be treated as hybrid
+
+ instruments. This is a quiet but meaningful change. Mutual funds — especially equity schemes — now have more room to allocate to REITs within their equity sleeve, which should widen the pool of institutional capital flowing into India's commercial real estate story.</p>
+
+<p>On the risk side, the ongoing stress-testing regime for small and mid-cap funds — introduced after a sharp AUM surge in those categories — has been tightened. 
+
+The regulator's move comes after small-cap mutual fund AUM surged from Rs 1.5 lakh crore in March 2024 to roughly Rs 3.2 lakh crore by February 2026. This rapid growth raised concerns that a sudden wave of redemptions could force fund managers
+
+ to dump illiquid holdings at distressed prices. AMCs now publish periodic stress-test disclosures showing how many days it would take to liquidate 25% and 50% of a scheme's portfolio in adverse conditions.</p>
+
+<h2>Why all this is happening now: the SIP boom</h2>
+
+<p>The regulatory intensity reflects a simple reality: Indian households have never put more money into mutual funds. 
+
+Monthly SIP inflows reached a record Rs 29,361 crore in September. SIP assets climbed to Rs 15.52 lakh crore, accounting for 20.5% of the total mutual fund
+
+ industry AUM, according to AMFI's September 2025 monthly note.</p>
+
+<p>And the trend continued. 
+
+SIP inflows hit record high. SIP inflows touched a new all-time high of Rs 29,529 crore in October, marking a growth of 0.57% on-month and
+
+ continued expansion in the SIP account base. With more than 8.6 crore active SIP accounts, SEBI's regulatory focus on cost reduction, disclosure quality, and investor protection is both timely and politically unavoidable.</p>
+
+<h2>What an Indian investor should actually do</h2>
+
+<h3>Audit your folios before April 2026</h3>
+
+<p>With the Regulations 2026 kicking in on 1 April 2026, your scheme information documents and account statements will look different. Expect reformatted cost disclosures, possibly reclassified schemes (SEBI has flagged concerns about overlapping portfolios and misleading scheme names), and in some cases, scheme mergers. Download your latest Consolidated Account Statement from CAMS or KFintech now and keep it as a baseline so you can spot changes in FY 2026-27.</p>
+
+<h3>Update nominations across every folio</h3>
+
+<p>If you have any single-holder folio without a nominee, fix it. Use the full allowance of up to ten nominees where it makes sense — this is especially useful for investors with multiple dependents or complex succession plans.</p>
+
+<h3>Rethink your overall personal finance architecture</h3>
+
+<p>Lower mutual fund costs and easier SIPs don't exist in isolation. If you're also servicing a home loan in NCR or Pune, a car loan in Bengaluru, or a personal loan taken during a medical emergency, the right question is how much of your monthly surplus to route into SIPs versus prepaying debt. A ₹50 lakh home loan at 8.5% over 20 years carries a very different opportunity cost than a 9.5% personal loan over 5 years. Before deciding whether to raise your SIP by ₹5,000 or make an extra EMI prepayment, work out your current loan schedule using the <a href="/tools/emi-calculator">EMI Calculator</a> — you can model what dropping the tenure by even 2 years saves in interest, and compare that against expected mutual fund returns at a conservative 11–12% CAGR assumption.</p>
+
+<h3>Don't chase SIFs unless you qualify and understand them</h3>
+
+<p>The ₹10 lakh SIF minimum is not a milestone to aspire to on its own. These products use strategies like long-short equity that can underperform a plain Nifty 50 index fund in long bull runs. If you're a first-time investor in your 20s or early 30s, a plain-vanilla equity SIP in a well-rated flexi-cap or index fund remains the appropriate starting point.</p>
+
+<h3>Track the AMFI monthly notes</h3>
+
+<p>AMFI publishes industry data every month covering inflows, SIP contributions, category-level AUMs and stress-test disclosures. Spending 10 minutes a month on these notes is a cheap way to stay informed about where the industry — and your money — is heading, without relying on sensationalised business-channel coverage.</p>
+
+<h2>The bottom line</h2>
+
+<p>The regulatory arc from November 2024 (insider trading on MF units) through December 2024 (SIF framework), January 2025 (MF Lite), March 2025 (nominations), April 2025 (SIFs operational), September 2025 (REIT reclassification), and December 2025 (Regulations 2026) is unusually consistent in direction: lower costs, cleaner disclosures, more product choice, and stronger governance. Combined with record-breaking SIP inflows — 
+
+SIP inflows touched a new all-time high of Rs 29,529 crore in October
+
+ 2025 — the mutual fund industry in India is being rewired for a much larger retail base than it has ever served before.</p>
+
+<p>For the salaried professional, the small business owner, and the first-time investor alike, the right posture isn't excitement about any single change. It's a quiet, methodical review of your own folios, nominations, costs, and the balance between investing and debt repayment — informed by the actual notifications SEBI has issued, not the headlines about them.</p>`,
   }
 ];
 
