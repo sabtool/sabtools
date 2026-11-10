@@ -380,9 +380,10 @@
     "post-office-savings-calculator",
     "text-to-speech",
     "certificate-generator",
-    "state-road-tax-calculator"
+    "state-road-tax-calculator",
+    "ai-math-solver"
   ],
-  "lastCategory": "tax",
-  "totalPosts": 381,
-  "lastRun": "2026-11-09T20:27:10.175Z"
+  "lastCategory": "ai",
+  "totalPosts": 382,
+  "lastRun": "2026-11-10T11:56:42.897Z"
 }
