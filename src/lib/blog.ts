@@ -67073,6 +67073,115 @@ SIP inflows touched a new all-time high of Rs 29,529 crore in October
 <p>The specialist tools — JSONFormatter and Online JSON Tools — are excellent at exactly one thing and worth keeping bookmarked for that one thing. FreeFormatter covers more ground but makes you tab-hop between one-tool-per-page layouts. SabTools' Code Beautifier is the one page you can keep pinned when your day involves mixed languages, when you care about keeping code out of third-party servers, and when you'd rather not see an ad banner every time you hit "Format."</p>
 
 <p>Try <a href="/tools/code-beautifier">SabTools' Code Beautifier →</a> next time you have a minified blob to clean up — it's the only tab you'll need open.</p>`,
+  },
+  {
+    slug: "news-2026-11-11-itr-filing-deadline-updates-and-section-44ada-44ad-changes",
+    title: "ITR filing deadline updates and Section 44ADA / 44AD changes (2026 Update)",
+    description: "ITR filing deadline updates and Section 44ADA / 44AD changes — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-11-11",
+    category: "Tax & Salary",
+    readTime: "11 min read",
+    keywords: ["ITR filing deadline updates", "tax news india 2026", "india 2026 update"],
+    toolSlug: "income-tax-calculator",
+    image: {
+      src: "/blog/income-tax-calculator.webp",
+      alt: "ITR filing deadline updates and Section 44ADA / 44AD changes (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>CBDT pushed two ITR deadlines in AY 2025-26 — and presumptive taxation is heading for a bigger rewrite</h2>
+
+<p>The Central Board of Direct Taxes has extended the income tax return filing deadline for Assessment Year 2025-26 not once but twice this cycle, giving relief first to individual taxpayers and then separately to taxpayers whose accounts require audit. Alongside the calendar shuffle, the presumptive taxation regime under Section 44AD and Section 44ADA — the scheme used by millions of small businesses, freelancers and professionals across India — is sitting on the cusp of a structural rewrite as the Income-tax Act, 2025 prepares to take effect from tax year 2026-27.</p>
+
+<p>For a salaried professional in Bangalore, a Kirana shop owner in Pune, or a consultant in Hyderabad billing clients digitally, the practical impact of these updates is immediate: what form to file, what rates of deemed profit to use, which deadlines still apply, and whether a late filing fee is now unavoidable. This post walks through what CBDT has formally notified, what has changed in presumptive taxation this year, and what is coming in the new Act.</p>
+
+<h2>Deadline extension 1: 31 July pushed to 15 September 2025 (and then 16 September)</h2>
+
+<p>The first extension landed in late May. According to <a href="https://www.ey.com/en_in/technical/alerts-hub/2025/05/cbdt-extends-due-date-for-personal-income-tax-return-filing-for-tax-year-2024-25" rel="noopener" target="_blank">EY's tax alert</a>, CBDT issued a press release dated 27 May 2025 extending the due date for filing ITRs for tax year 2024-25, citing structural and content revisions to the notified ITR forms and the need for a smooth, accurate filing window. The <a href="https://www.taxmann.com/post/blog/cbdt-extends-itr-filing-deadline" rel="noopener" target="_blank">Taxmann summary</a> frames the shift plainly: to ease the compliance burden on individual taxpayers and small businesses, the CBDT extended the due date for filing ITRs for Assessment Year 2025-26 from 31 July 2025 to 15 September 2025.</p>
+
+<p>That was the headline deadline for most non-audit taxpayers — salaried individuals, pensioners, freelancers whose receipts fall below audit thresholds, and professionals opting for presumptive taxation.</p>
+
+<p>The story did not end on 15 September. As <a href="https://www.taxbuddy.com/blog/itr-deadline-extension-2025" rel="noopener" target="_blank">TaxBuddy reported</a>, on 15 September 2025 — as technical glitches disrupted access to the e-filing portal — CBDT announced a final one-day extension to 16 September 2025. <a href="https://www.indiafilings.com/learn/income-tax-itr-filing-due-date" rel="noopener" target="_blank">IndiaFilings</a> confirms the same mechanics: the CBDT further extended the due date for filing ITRs for AY 2025-26 from 15 September 2025 to 16 September 2025.</p>
+
+<p>Behind the dates sits the <a href="https://www.deccanherald.com/business/personal-finance/income-tax-return-filing-deadline-extended-to-september-15-3559166" rel="noopener" target="_blank">reason CBDT gave the public</a>: the notified ITRs for AY 2025-26 have undergone structural and content revisions aimed at simplifying compliance, enhancing transparency and enabling accurate reporting. Translation: utilities on the e-filing portal needed more time to catch up, and taxpayers needed more runway to use them.</p>
+
+<h2>Deadline extension 2: Audit cases pushed from 31 October to 10 December 2025</h2>
+
+<p>The second extension came in late October and applied to a different cohort — taxpayers whose accounts require a tax audit under the Income-tax Act, 1961. Per the <a href="https://www.kcorptax.in/blog/due-date-of-tax-audit-and-itr-filing-extended/" rel="noopener" target="_blank">KCorp Tax summary</a> of Circular No. 15/2025 dated 29 October 2025, the new deadlines are 10 November 2025 for filing audit reports and 10 December 2025 for submitting ITRs in audit cases.</p>
+
+<p>The <a href="https://fintaxblog.com/cbdt-further-extends-itr-filing-deadline-for-ay-2025-26-to-december-10-2025/" rel="noopener" target="_blank">FinTaxBlog write-up</a> states the shift precisely: the due date for filing Income Tax Returns under Section 139(1) has been moved from 31 October 2025 to 10 December 2025 for audit cases. <a href="https://taxguru.in/income-tax/cbdt-extends-tax-audit-itr-deadlines-ay-2025-26-due-dates.html" rel="noopener" target="_blank">Taxguru's circular-level reading</a> confirms the same pair of dates: Tax Audit Report deadline 10 November 2025, and ITR for non-transfer-pricing audit cases 10 December 2025.</p>
+
+<p>One important carve-out: as <a href="https://www.business-standard.com/economy/news/cbdt-extends-return-filing-deadline-for-audit-cases-to-december-10-125102901435_1.html" rel="noopener" target="_blank">Business Standard</a> flagged, tax experts pointed out that the press release appears to have missed granting relief to taxpayers covered under transfer pricing provisions. Multinational groups and Indian entities with international related-party transactions should therefore not assume the same date applies to them.</p>
+
+<h3>Who the audit-case extension actually helps</h3>
+<ul>
+  <li><strong>Private limited companies and LLPs</strong> whose accounts are statutorily audited.</li>
+  <li><strong>Proprietors and partnership firms</strong> with turnover crossing Section 44AB thresholds.</li>
+  <li><strong>Professionals</strong> who were earlier eligible for Section 44ADA but opted out and now have a tax audit because their declared profit fell below 50%.</li>
+  <li><strong>Businesses that exited Section 44AD mid-cycle</strong> — the infamous "five-year lock-in" trap that many Kirana retailers and traders do not realise exists until it is triggered.</li>
+</ul>
+
+<h2>Section 44AD and 44ADA for FY 2025-26: what the limits actually look like</h2>
+
+<p>Independent of the deadline changes, the presumptive taxation scheme itself continues to operate under thresholds that were enhanced a couple of Budgets ago and are still in force for FY 2025-26. The <a href="https://www.regitom.com/presumptive-taxation-44ad-44ada-ay-2026-27" rel="noopener" target="_blank">Regitom guide</a> summarises both tracks: the enhanced limits — Rs 3 crore for Section 44AD and Rs 75 lakh for Section 44ADA — apply only if cash receipts stay at 5% or less of total receipts; otherwise the Rs 2 crore and Rs 50 lakh base limits apply.</p>
+
+<p><a href="https://cleartax.in/s/section-44ada" rel="noopener" target="_blank">ClearTax's explainer</a> states the 44ADA mechanics for professionals the same way: the limit is increased to ₹75 lakh if the total amount received in cash does not exceed 5 percent of the total gross receipts of such previous year. For small-business taxpayers under 44AD, <a href="https://tax2win.in/guide/section-44ad-presumptive-scheme" rel="noopener" target="_blank">Tax2win</a> ties the ₹3 crore upper limit to the same condition: the increased ceiling applies only when over 95% of transactions are made in digital form.</p>
+
+<h3>What counts as deemed profit for FY 2025-26</h3>
+
+<p>The <a href="https://taxgst.in/presumptive-taxation-44ad-44ada-freelancers-guide/" rel="noopener" target="_blank">TaxGST guide</a> lays out the deemed-profit rates currently in force: Section 44AD covers businesses up to ₹2 crore turnover, or ₹3 crore with 95% digital receipts, at 8%/6% deemed profit for FY 2025-26, while 44ADA sets deemed profit at 50% of gross receipts for professionals. The <a href="https://legalsuvidha.com/blog/presumptive-taxation-44ad-44ada" rel="noopener" target="_blank">Legal Suvidha summary</a> echoes this for professionals: gross receipts limit of ₹50 lakh basic, ₹75 lakh if cash receipts are ≤ 5%, with a flat 50% deemed profit rate.</p>
+
+<p>Under the scheme, the deemed profit is final — it already stands in for all expenses, which is why a Mumbai-based graphic designer billing ₹40 lakh a year through UPI and bank transfers can compute tax on ₹20 lakh of presumed income without separately claiming depreciation, rent, laptop AMC or electricity bills.</p>
+
+<h2>The hidden trap: five-year lock-in and advance tax</h2>
+
+<p>Entering presumptive taxation is simple. Exiting it is not. The <a href="https://pardeepjha.com/blog/presumptive-taxation-44ad-44ada-fy-2025-26" rel="noopener" target="_blank">Pardeep Jha & Associates</a> write-up spells out the two most common consequences for FY 2025-26: you can claim 44AD up to ₹3 crore if cash receipts stay ≤ 5%, but if they exceed 5% or you cross ₹3 crore, you must move to regular books and a tax audit applies. The second consequence is the lock-in — once a 44AD taxpayer opts out, they are typically barred from the scheme for the next five assessment years.</p>
+
+<p>Advance tax is the other practical catch. Section 44AD and 44ADA filers get a simplified advance-tax rhythm: 100% of advance tax is payable by 15 March of the financial year, instead of the four-instalment schedule everyone else follows. Miss it, and Section 234B/234C interest starts ticking.</p>
+
+<h2>The structural shift coming: Sections 44AD, 44ADA and 44AE fold into Section 58</h2>
+
+<p>This is the change most Indian professionals have not fully internalised yet. The Income-tax Act, 2025 replaces the 1961 Act and reorganises presumptive taxation. According to the <a href="https://www.taxmann.com/post/blog/presumptive-taxation-under-ita" rel="noopener" target="_blank">Taxmann commentary</a>, Sections 44AD, 44ADA and 44AE have been repealed and merged into Section 58 of the Income-tax Act, 2025.</p>
+
+<p>The <a href="https://taxguru.in/income-tax/section-58-presumptive-taxation-income-tax-act-2025.html" rel="noopener" target="_blank">Taxguru walkthrough</a> describes the new design: Section 58 replaces Sections 44AD, 44ADA, and 44AE, presumptive taxation now follows a table-based codified structure, and the business category keeps the ₹2 crore / ₹3 crore limits. The <a href="https://www.olambit.com/blog/presumptive-taxation-44ad-new-act-2025/" rel="noopener" target="_blank">Olambit summary</a> confirms the substance is preserved: 44AD, 44ADA and 44AE are merged into Section 58 under the Income Tax Act 2025, with business deemed profit at 8% (cash) / 6% (digital) and professionals at 50% deemed profit with a ₹75 lakh turnover limit.</p>
+
+<p>When does this kick in? According to <a href="https://taxguru.in/income-tax/presumptive-taxation-residents-1961-act-via-a-vis-2025-act.html" rel="noopener" target="_blank">Taxguru's comparative analysis</a>, the Income-tax Act, 2025 is effective from tax year 2026-27 and replaces the earlier assessment-year framework with a unified "tax year", consolidating presumptive taxation provisions into a single Section 58. So FY 2025-26 — the year most readers are filing or planning for right now — remains governed by the 1961 Act's Sections 44AD and 44ADA. The shift to Section 58 begins from the next cycle.</p>
+
+<h2>ITR-4 Sugam: new disclosure fields for presumptive taxpayers</h2>
+
+<p>The form that most 44AD / 44ADA taxpayers use — ITR-4, officially "Sugam" — has also been updated for AY 2025-26. <a href="https://www.outlookmoney.com/tax/itr-4-rolled-out-for-ay-2025-26-know-if-youre-eligible-to-file-sugam-form" rel="noopener" target="_blank">Outlook Money</a> reports that the Income Tax Department rolled out the ITR-4 form for AY 2025-26 for freelancers, small business owners and professionals earning income under the presumptive taxation scheme.</p>
+
+<p>The bigger change is a new disclosure requirement. Per <a href="https://www.business-standard.com/finance/personal-finance/income-tax-return-2026-itr-4-rule-change-investment-disclosure-explained-126042900786_1.html" rel="noopener" target="_blank">Business Standard</a>, the CBDT has made investment disclosure mandatory in ITR-4 (Sugam), the form used by those opting for presumptive taxation. The <a href="https://taxguru.in/income-tax/itr-4-sugam-blind-presumptive-compliance.html" rel="noopener" target="_blank">Taxguru explainer</a> describes the field: ITR-4 (Sugam) now includes a new field under "Financial Particulars of the Business" seeking details relating to investments made during the financial year.</p>
+
+<p>For a Chennai-based 44ADA professional who has been filing a two-page ITR for years without declaring mutual fund SIPs, property deposits or fixed deposits booked out of professional receipts, this is the end of "blind" presumptive compliance. The <a href="https://www.businesstoday.in/personal-finance/tax/story/itr-4-sugam-decoded-who-can-file-whats-new-for-ay-2025-26-check-details-475268-2025-05-08" rel="noopener" target="_blank">Business Today walkthrough</a> adds some flexibility — the form now accommodates modest equity or property gains during the year for taxpayers otherwise falling under presumptive taxation.</p>
+
+<h2>What should you actually do about all this?</h2>
+
+<p>The planning takeaways differ by taxpayer type, but they all start with running the numbers under both the old and new tax regimes. The <a href="/tools/income-tax-calculator">SabTools Income Tax Calculator</a> computes your liability under both regimes for FY 2025-26 so you can decide which one gives you the lower outgo — particularly important for 44ADA professionals, whose declared presumed income (50% of gross receipts) may make the new regime's lower slabs more attractive once Section 80C and HRA deductions are off the table.</p>
+
+<p>Beyond that:</p>
+
+<ul>
+  <li><strong>Non-audit taxpayers who filed by 16 September 2025</strong> are compliant on the original deadline front. If you missed it, you are now in belated-return territory.</li>
+  <li><strong>Audit-case taxpayers</strong> had until 10 November 2025 for the tax audit report and 10 December 2025 for the ITR itself.</li>
+  <li><strong>44ADA professionals near ₹75 lakh</strong> should audit their payment mix — if even one client paid you partly in cash and your total cash receipts crossed 5%, the usable ceiling drops back to ₹50 lakh and the audit requirement may be triggered.</li>
+  <li><strong>44AD businesses near ₹3 crore</strong> face the same risk, except the implications are worse — the 5-year lock-out triggers if you opt out, blocking re-entry into 44AD until FY 2030-31.</li>
+  <li><strong>Everyone filing ITR-4</strong> should keep documentation ready for the new investment disclosure field — bank statements, demat statements, FD receipts, property deposit confirmations.</li>
+</ul>
+
+<h2>Missed the deadline? Belated return window and the 234F fee</h2>
+
+<p>Taxpayers who did not file by the applicable due date still have a window — but it costs money. <a href="https://www.taxbuddy.com/blog/section-234f-late-filing-penalty" rel="noopener" target="_blank">TaxBuddy's Section 234F explainer</a> confirms that for AY 2025-26, the last date to file a belated or revised return is 31 December 2025.</p>
+
+<p>The late-filing fee itself is slab-based. Per <a href="https://www.taxbuddy.com/blog/penalty-for-late-filing-of-income-tax-return" rel="noopener" target="_blank">TaxBuddy's penalty guide</a>, if total income is up to ₹5 lakh, the late filing fee under Section 234F is restricted to ₹1,000; if income exceeds ₹5 lakh, the penalty becomes ₹5,000. <a href="https://cleartax.in/s/how-to-file-income-tax-return-for-last-years" rel="noopener" target="_blank">ClearTax's belated-return guide</a> states the same: a late fee of ₹5,000 is levied under Section 234F while filing a belated return, reduced to ₹1,000 if total income is less than ₹5 lakh.</p>
+
+<p>A belated return also closes certain doors: you lose the ability to carry forward most business and capital losses, and you forfeit the option to switch tax regimes if you were entitled to pick one at filing. For a Gurgaon-based salaried professional with no business income and tax already deducted at source, the ₹5,000 fee may be worth absorbing just to clear the compliance slate. For a 44AD trader carrying forward losses, it hurts more.</p>
+
+<h2>The bottom line for Indian taxpayers</h2>
+
+<p>FY 2025-26 is a transitional year on the direct-tax calendar. The CBDT has shown willingness to extend deadlines when e-filing utilities or form revisions get in the way — first by six weeks for non-audit cases, then by six weeks for audit cases — but it has not reduced the underlying compliance obligations. Presumptive taxation under 44AD and 44ADA continues in its current form for one more cycle, with the ₹3 crore / ₹75 lakh enhanced ceilings available only where cash receipts stay within 5%. The ITR-4 form has quietly grown teeth around investment disclosure. And from tax year 2026-27, the whole regime moves into Section 58 of the Income-tax Act, 2025.</p>
+
+<p>If you file under 44AD or 44ADA, treat this year as the time to clean up your payment-mix data, track your digital-receipt percentage through the year, and sit the numbers in a tax calculator to decide the Old vs New regime question before you submit. The deadlines moved. The math has not.</p>`,
   }
 ];
 
