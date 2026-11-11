@@ -382,9 +382,10 @@
     "certificate-generator",
     "state-road-tax-calculator",
     "ai-math-solver",
-    "css-grid-generator"
+    "css-grid-generator",
+    "plagiarism-checker"
   ],
-  "lastCategory": "developer",
-  "totalPosts": 383,
-  "lastRun": "2026-11-10T18:37:45.560Z"
+  "lastCategory": "text",
+  "totalPosts": 384,
+  "lastRun": "2026-11-11T12:14:27.110Z"
 }
