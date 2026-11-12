@@ -67182,6 +67182,116 @@ SIP inflows touched a new all-time high of Rs 29,529 crore in October
 <p>FY 2025-26 is a transitional year on the direct-tax calendar. The CBDT has shown willingness to extend deadlines when e-filing utilities or form revisions get in the way — first by six weeks for non-audit cases, then by six weeks for audit cases — but it has not reduced the underlying compliance obligations. Presumptive taxation under 44AD and 44ADA continues in its current form for one more cycle, with the ₹3 crore / ₹75 lakh enhanced ceilings available only where cash receipts stay within 5%. The ITR-4 form has quietly grown teeth around investment disclosure. And from tax year 2026-27, the whole regime moves into Section 58 of the Income-tax Act, 2025.</p>
 
 <p>If you file under 44AD or 44ADA, treat this year as the time to clean up your payment-mix data, track your digital-receipt percentage through the year, and sit the numbers in a tax calculator to decide the Old vs New regime question before you submit. The deadlines moved. The math has not.</p>`,
+  },
+  {
+    slug: "electricity-bill-calculator-guide-2026",
+    title: "Electricity Bill Calculator Online Free — Complete Guide (2026)",
+    description: "Use Electricity Bill Calculator online for free — calculate monthly electricity bill based on units consumed and state tariff. No signup, instant results. Ma...",
+    date: "2026-11-12",
+    category: "Tax & Salary",
+    readTime: "11 min read",
+    keywords: ["electricity bill", "bijli bill", "units", "tariff", "state wise", "electricity bill calculator", "electricity bill calculator tamil nadu", "electricity bill calculator mp"],
+    toolSlug: "electricity-bill-calculator",
+    image: {
+      src: "/blog/electricity-bill-calculator.webp",
+      alt: "Electricity Bill Calculator — Free Online Calculate monthly electricity bill based on units consumed and state tariff Tool on SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<p>Open any WhatsApp family group in June and you'll find at least one forwarded screenshot of a shocking electricity bill — ₹8,400 for a 2BHK in Hyderabad, ₹12,000 for a villa in Gurgaon, ₹5,600 for a modest flat in Chennai that was ₹2,100 the previous month. The reaction is always the same: "Meter kharab hai" or "DISCOM is cheating us." Usually, neither is true. What's actually happening is that Indian electricity tariffs are <strong>telescopic (slab-based)</strong>, and the moment your monthly units cross a slab boundary, the per-unit rate jumps sharply — sometimes by ₹3-4 per unit. A household that quietly used 290 units all winter can suddenly consume 520 units in May because of two ACs running 10 hours a day, and the bill doesn't just double — it nearly triples.</p>
+
+<p>The Electricity Bill Calculator on SabTools lets you enter your monthly units and your state (or DISCOM) and get a realistic bill estimate before the paper one arrives — including slab-wise energy charges, fixed charges, electricity duty, and fuel adjustment where applicable. This guide walks through how Indian bijli bills are actually structured, what the tariffs look like across major states in 2025, and how to use the calculator to plan your AC usage, size a solar rooftop, or just figure out whether that "high bill" is genuinely wrong or just how the slab math works.</p>
+
+<h2>What actually goes into an Indian electricity bill</h2>
+
+<p>Most people look at the total amount and ignore the breakdown. But every residential electricity bill in India, whether from BESCOM in Bangalore, MSEDCL in Pune, TANGEDCO in Chennai, or BSES Rajdhani in South Delhi, is built from the same five components:</p>
+
+<ul>
+  <li><strong>Energy charges</strong> — the per-unit (kWh) cost, charged slab-wise. This is the largest chunk.</li>
+  <li><strong>Fixed charges / demand charges</strong> — a flat monthly fee based on your sanctioned load (kW) or connection type. Typically ₹25-₹150 per kW per month.</li>
+  <li><strong>Fuel Adjustment Charge (FAC / FPPCA)</strong> — a variable surcharge that lets DISCOMs pass through changes in coal and gas prices. Often ₹0.10 to ₹0.80 per unit.</li>
+  <li><strong>Electricity duty / government levy</strong> — a state tax, usually 5-15% of energy charges. In Maharashtra it's around 16% for residential; Tamil Nadu keeps it low for the first 100 units.</li>
+  <li><strong>Meter rent, wheeling charges, miscellaneous</strong> — small line items, typically ₹10-₹80 in total.</li>
+</ul>
+
+<p>The tricky part is the slab structure. Unlike your <a href="/tools/gst-calculator">GST rate</a> which is a flat 5%, 12%, 18% or 28% applied uniformly, electricity slabs are telescopic in most states — meaning if you consume 350 units, the first 100 are billed at the lowest rate, the next 200 at the middle rate, and the final 50 at a higher rate. A few states (like Tamil Nadu for higher consumers) use a "non-telescopic" or "cliff" system where crossing a threshold pushes your <em>entire</em> consumption to the higher slab. That cliff is where bill shock happens.</p>
+
+<h2>State-wise tariff snapshots for 2025</h2>
+
+<p>Rates change every year when State Electricity Regulatory Commissions (SERCs) issue new tariff orders — usually in March or April, effective from April 1. Here are approximate residential slabs as of mid-2025 for the states SabTools users ask about most. Always cross-check with your latest bill, because FAC and duty vary monthly.</p>
+
+<h3>Tamil Nadu (TANGEDCO)</h3>
+
+<p>Tamil Nadu revamped its tariff in 2022 and the structure is bi-monthly for most domestic consumers. For bi-monthly consumption up to 500 units, the slabs are roughly: first 100 units free, 101-400 at ₹4.70, 401-500 at ₹6.30. Above 500 units bi-monthly, the structure shifts — the first 400 are at ₹5.20, next 100 at ₹6.65, next 100 at ₹8.25, and anything above 600 at ₹9.65. A Chennai household using 450 units in two months would pay roughly: 100 free + 300 × ₹4.70 + 50 × ₹6.30 = <strong>₹1,725</strong> before fixed charges and taxes. The same household jumping to 650 bi-monthly units because of summer AC usage pays about ₹3,615 — a 109% jump for a 44% increase in consumption. That's the cliff effect people complain about when searching for an <strong>electricity bill calculator Tamil Nadu</strong>.</p>
+
+<h3>Madhya Pradesh (MPPKVVCL / MPMKVVCL / MPPoKVVCL)</h3>
+
+<p>MP's three DISCOMs (West, Central, East) follow a similar monthly tariff set by MPERC. Approximate slabs: 0-50 units at ₹4.21, 51-150 at ₹5.17, 151-300 at ₹6.55, above 300 at ₹6.72. Fixed charges run ₹65-₹110 per connection. A household in Indore consuming 280 units: 50 × 4.21 + 100 × 5.17 + 130 × 6.55 = ₹210 + ₹517 + ₹852 = <strong>₹1,579</strong> in energy charges alone. Add fixed, FCA, and 9% electricity duty and the final bill lands near ₹1,870. Searches for <strong>electricity bill calculator MP</strong> usually come from Bhopal, Indore, Jabalpur and Gwalior consumers trying to reconcile their bill after the Atal Griha Jyoti subsidy was restructured.</p>
+
+<h3>Maharashtra (MSEDCL / BEST / Tata Power / Adani)</h3>
+
+<p>MSEDCL (covering most of Maharashtra outside Mumbai) uses: 0-100 at ₹4.71, 101-300 at ₹10.29, 301-500 at ₹14.55, 500+ at ₹16.64. These are among the highest residential rates in India. A Pune household at 420 units: 100 × 4.71 + 200 × 10.29 + 120 × 14.55 = ₹471 + ₹2,058 + ₹1,746 = <strong>₹4,275</strong> in energy charges. Add ~16% electricity duty, wheeling charges, and fixed charges and the total crosses ₹5,500. This is why rooftop solar payback in Maharashtra is often 4-5 years versus 7-8 in cheaper-tariff states.</p>
+
+<h3>Karnataka (BESCOM, MESCOM, HESCOM)</h3>
+
+<p>Karnataka's Gruha Jyothi scheme gives 200 free units to eligible households. Beyond that: 0-50 at ₹4.95, 51-100 at ₹6.80, 101-200 at ₹8.25, 201-300 at ₹9.65, above 300 at ₹10.55 (approximate 2025 figures). A Bangalore IT professional in a 3BHK pulling 380 units: energy charge works out to roughly ₹3,000, plus fixed charges (~₹110 per kW), FAC and 9% electricity tax, bringing the bill to around ₹3,650.</p>
+
+<h3>Delhi (BSES Rajdhani, BSES Yamuna, Tata Power-DDL)</h3>
+
+<p>Delhi has one of the most subsidised structures. Slabs: 0-200 at ₹3.00, 201-400 at ₹4.50, 401-800 at ₹6.50, 801-1200 at ₹7.00, above 1200 at ₹8.00. Consumers using up to 200 units get it effectively free (state subsidy). PPAC (Power Purchase Adjustment Charge) adds another 25-30% on top in 2025. A Dwarka household at 650 units: 200 × 3 + 200 × 4.50 + 250 × 6.50 = ₹600 + ₹900 + ₹1,625 = ₹3,125, plus PPAC of ~₹900, plus fixed and taxes — final bill around ₹4,400.</p>
+
+<h2>What one unit of electricity actually buys you</h2>
+
+<p>A kWh (unit) is 1,000 watts running for 1 hour. The reason bills explode in April-June is that most Indian appliances are rated in hundreds or thousands of watts, and summer usage stacks them together. Rough monthly consumption by appliance:</p>
+
+<ul>
+  <li><strong>1.5-ton 3-star split AC</strong>: 1.5 kW running 8 hours/day = 360 units/month. At Maharashtra's top slab (₹16.64), that single AC costs ₹5,990 per month.</li>
+  <li><strong>1.5-ton 5-star inverter AC</strong>: effective ~0.9 kW average, 8 hours = 216 units/month. Same AC at Bangalore's top slab (₹10.55) = ₹2,280. The 5-star inverter saves roughly ₹3,700/month over a non-inverter 3-star in Pune during peak summer.</li>
+  <li><strong>Refrigerator (double door, 300L)</strong>: ~45 units/month (always on).</li>
+  <li><strong>Geyser (15L)</strong>: 2 kW × 1 hour/day = 60 units/month. Switch off at the plug after use.</li>
+  <li><strong>Ceiling fan</strong>: 75W × 12 hours = 27 units/month per fan.</li>
+  <li><strong>LED bulbs (10 bulbs, 9W each)</strong>: 27 units/month.</li>
+  <li><strong>WiFi router, set-top box, TV standby</strong>: 20-30 units/month if left on 24×7.</li>
+</ul>
+
+<p>Run a quick <a href="/tools/percentage-calculator">percentage comparison</a> between your winter and summer bills — if the jump is more than 2.5× your baseline, your AC usage pattern is likely the single biggest lever. A Noida family running two 1.5-ton 3-star ACs for 10 hours/day in May adds ~900 units to their baseline — pushing them from the ₹3/unit slab straight into the ₹7/unit slab for a large portion of consumption.</p>
+
+<h2>Using the calculator: three realistic scenarios</h2>
+
+<p><strong>Scenario 1 — Ayesha, a freelance designer in Jaipur (RVPN/JVVNL).</strong> She works from home, runs an AC 6 hours a day in summer, and her monthly consumption spikes from 180 units in winter to 450 in June. Entering 450 units for Rajasthan into the calculator shows energy charges of ~₹2,850 plus fixed and taxes, bringing her bill to ~₹3,400. She's considering whether to buy a 5-star inverter AC that would cut her consumption by ~35%, dropping her to 340 units and saving her approximately ₹900 per month during April-October. Over seven summer months, that's ₹6,300 saved annually — the inverter AC's ₹15,000 premium over a basic 3-star pays back in about 2.5 summers.</p>
+
+<p><strong>Scenario 2 — The Kulkarni family in Pune (MSEDCL).</strong> 3BHK flat, 630 units in May. The calculator shows energy charges of ₹6,575, plus 16% electricity duty, ~₹120 wheeling, fixed charges of ₹130 — final bill ~₹8,200. They're evaluating a 3 kW rooftop solar system (~₹1.8L after subsidy). It would generate ~380 units/month on average, cutting their grid consumption to 250 units. New bill would drop to ~₹2,250. Monthly savings ₹5,950, annual ~₹71,000. Payback in 2.5 years — and net metering means summer excess offsets winter shortfalls. You can model this against a <a href="/tools/sip-calculator">SIP in an index fund</a> for the same ₹1.8L: at 12% CAGR the SIP returns ~₹21,600 in year one, but the solar system "returns" ₹71,000 tax-free. Rooftop solar is one of the few investments in India that structurally beats mutual funds for high-tariff states.</p>
+
+<p><strong>Scenario 3 — Senthil in Coimbatore (TANGEDCO).</strong> Bi-monthly bill of 540 units. Entering this into the calculator shows how the TN cliff works: at 540 units bi-monthly he falls into the above-500 category, where the first 400 units get re-billed at ₹5.20 instead of ₹4.70, and the next 100 jump to ₹6.65. If he can cut consumption to 495 units bi-monthly — just 45 units less, roughly one hour less of AC per day — he stays in the lower bracket and saves nearly ₹600 per two-month cycle. This is the single most useful calculation for Tamil Nadu residents and explains why so many people search for an electricity bill calculator for TN specifically.</p>
+
+<h2>Smart ways to pull your bill down</h2>
+
+<ol>
+  <li><strong>Target the slab boundary, not just absolute units.</strong> If you're at 320 units in Karnataka, cutting to 300 isn't just 20 units saved — it drops those final 20 from ₹10.55 to ₹9.65 and keeps you out of the top slab entirely.</li>
+  <li><strong>Set AC to 26°C, not 22°C.</strong> BEE estimates each degree below 24°C adds roughly 6% to AC consumption. Going from 22°C to 26°C can cut AC bill by ~24%.</li>
+  <li><strong>Replace old fridges and ACs.</strong> A 10-year-old 2-star fridge uses 2.5× the power of a new 5-star. The ₹30,000 replacement pays back in 3-4 years at Maharashtra/Delhi tariffs.</li>
+  <li><strong>Use the geyser's thermostat, not the switch.</strong> A geyser left on at 60°C cycles on/off and uses less power than switching it on 20 minutes before every bath.</li>
+  <li><strong>Apply for rooftop solar under PM Surya Ghar.</strong> Central subsidy of ₹30,000 per kW up to 3 kW (max ₹78,000). Combined with state subsidies in Gujarat and Rajasthan, net cost can drop below ₹40,000 per kW.</li>
+  <li><strong>Check your sanctioned load.</strong> If you're paying fixed charges for 5 kW but only using 3 kW peak, apply to reduce sanctioned load. Each unused kW of sanctioned load costs ₹25-₹150/month across states.</li>
+</ol>
+
+<p>The savings from these changes aren't trivial. A Mumbai family cutting 150 units/month from their summer bill saves around ₹2,500/month — ₹30,000 per year. That's bigger than most people's <a href="/tools/salary-hike-calculator">annual appraisal hike</a> after taxes, and it compounds year after year. Redirect those savings into an <a href="/tools/epf-calculator">EPF voluntary contribution</a> or a long-term equity SIP and you've turned "bill shock" into genuine wealth creation.</p>
+
+<h2>Common questions Indian users ask</h2>
+
+<h3>Why is my neighbour's bill lower when our flats are identical?</h3>
+<p>Three likely reasons: different sanctioned load (affects fixed charges), different billing cycle start dates (your cycle may capture more peak-AC days), and appliance mix (one inverter AC vs one non-inverter changes consumption by 40%). Enter both consumption figures into the calculator — you'll usually find the per-unit average is identical and the difference is purely volume.</p>
+
+<h3>Does the calculator include GST?</h3>
+<p>No, and that's correct — electricity supply to domestic consumers is <strong>exempt from GST</strong>. What you see on the bill as "tax" is state electricity duty, not GST. Builders and commercial consumers do pay GST on some charges, but household bills don't.</p>
+
+<h3>Why does my bill show "arrears" even though I paid on time?</h3>
+<p>Usually one of: a meter reading adjustment from a previous estimated bill, a FAC true-up for an earlier quarter, or a tariff revision applied retroactively from April 1. The calculator estimates current-month charges only; arrears are historical and shown separately on the physical bill.</p>
+
+<h3>Can I use this for commercial or industrial connections?</h3>
+<p>The default slabs are residential (LT-1 category). Commercial (LT-2) and industrial (HT) tariffs have different structures including time-of-day (TOD) charges, maximum demand charges in kVA, and power factor penalties. The calculator gives you a ballpark but for a shop or factory bill, cross-check against your DISCOM's published tariff schedule.</p>
+
+<p>Stop wondering whether your DISCOM is overcharging you — plug your units into the <a href="/tools/electricity-bill-calculator">Electricity Bill Calculator</a> with your state selected and see the slab-by-slab math behind every rupee on your bijli bill →</p>`,
   }
 ];
 
