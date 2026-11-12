@@ -67502,6 +67502,211 @@ SIP inflows touched a new all-time high of Rs 29,529 crore in October
 <p>For actual restoration — the de-yellowing, contrast recovery, and sharpening that old family photos need — SabTools' <a href="/tools/old-photo-restorer">Old Photo Restorer</a> is the right default. It's purpose-built for that task, runs locally in your browser, doesn't ask for a signup, and sits next to the other Indian-use-case tools (DPI changer, passport-photo maker, filters) you'll likely need in the same session. TinyPNG, ILoveIMG and Squoosh are strong tools for compression, resizing and format conversion respectively — use them after restoration, not instead of it.</p>
 
 <p>If you have a stack of scanned prints waiting to be fixed before the next family gathering, try the <a href="/tools/old-photo-restorer">Old Photo Restorer</a> on one image first — it takes about a minute to see whether the four sliders get you where you want to go.</p>`,
+  },
+  {
+    slug: "news-2026-11-12-indian-developer-tools-and-saas-launches",
+    title: "Indian developer tools and SaaS launches (2026 Update)",
+    description: "Indian developer tools and SaaS launches — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-11-12",
+    category: "Tech Updates",
+    readTime: "11 min read",
+    keywords: ["Indian developer tools and", "tech news india 2026", "india 2026 update"],
+    toolSlug: "json-formatter",
+    image: {
+      src: "/blog/json-formatter.webp",
+      alt: "Indian developer tools and SaaS launches (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>India's developer tools and SaaS scene just had its most consequential year</h2>
+
+<p>Something quietly shifted in Indian software in 2025. The country that built back-office services for the world now ships the tools those services run on. From Postman's AI Agent Builder to Zoho's unexpected consumer breakout with Arattai, from BrowserStack crossing ₹771 crore in domestic revenue to a new wave of agentic AI infrastructure companies like Composio and Sarvam, the Indian dev-tools and SaaS stack has become a story the whole world is watching.</p>
+
+<p>For Indian developers, product managers, and founders, this isn't just vanity news. It changes which APIs you integrate, which vendors you can trust long-term, and — increasingly — which Indian-built platforms are mature enough to replace foreign incumbents in your production stack. Here is what actually launched, what raised money, and what you should do about it.</p>
+
+<h2>The scale of what's happened</h2>
+
+<p>The Indian SaaS industry has always had an export tilt, but the proportion is striking. 
+
+Roughly 80 to 85 percent of Indian SaaS revenue comes from global customers, led by Zoho, Freshworks, Postman, and BrowserStack, on the back of an engineering cost base 60 to 75 percent below the United States.
+
+ That export engine is what gives these companies the oxygen to keep investing in developer tools even as venture funding for pure-SaaS has tightened globally.</p>
+
+<p>The Bessemer India team has described the market more broadly, noting that 
+
+several category-leading SaaS companies have already emerged from the region, including Zoho, Freshworks, Gainsight, iCertis, BrowserStack, Postman, Hasura, Amagi, Zenoti, and more.
+
+ Most of 2025's news has come from exactly this cohort doubling down — either by acquiring their way into AI tooling or by launching entirely new product lines.</p>
+
+<h2>Postman: the biggest Indian-origin dev-tools story of 2025</h2>
+
+<h3>From API client to AI agent factory</h3>
+
+<p>Postman spent the year reframing what it is. In January, the company moved beyond API testing into agent orchestration. 
+
+Postman launched an AI agent builder on top of its API platform on January 22, 2025. Since it was founded in 2014, India-based Postman has made a name for itself as one of the most popular platforms for building and using APIs, with 500,000 organizations now using the service.
+
+</p>
+
+<p>A separate industry profile puts the strategic logic more directly: 
+
+in January 2025, Postman launched something that reframed the entire platform — an AI Agent Builder that lets developers design, test, and deploy AI agents using the same API infrastructure they already use to build software.
+
+ For anyone on an Indian product team already using Postman collections for QA, this means your existing API inventory is now the raw material for agent workflows — no separate tool, no new vendor.</p>
+
+<h3>Two acquisitions that signal a direction</h3>
+
+<p>Postman then went shopping. 
+
+In November 2025, Postman acquired liblab, a platform that automates the generation and maintenance of SDKs.
+
+ A month later, it added another piece: 
+
+Postman acquired liblab (SDK generation) in November 2025 and Fern (SDK tooling) in December 2025.
+
+ Together they tell a clear story. The company is betting that API developers will spend less time hand-writing client libraries and more time orchestrating them, with Postman sitting in the middle.</p>
+
+<p>For Indian engineering teams, the practical takeaway is that the "test one endpoint in Postman, ship an SDK by Friday" workflow is about to become a default. If your team has been maintaining hand-written TypeScript or Python SDKs for internal APIs, the tooling to auto-generate them is now part of a platform you probably already pay for.</p>
+
+<h2>Zoho: from quiet exporter to consumer disruptor</h2>
+
+<h3>Arattai's viral September</h3>
+
+<p>The most unexpected Indian software story of 2025 came from Chennai. Zoho's long-standing in-house messaging app, Arattai, suddenly broke out of its enterprise niche. 
+
+In early October 2025, Arattai topped app charts in India, fueled by a surge of daily registrations — reportedly jumping from around 3,000 per day to 350,000 per day in just three days. Zoho's Arattai hit 7.5 million downloads, topping India's charts as a swadeshi alternative to WhatsApp.
+
+</p>
+
+<p>Public endorsements helped light the fuse. 
+
+On October 4, Mahindra Group chairman Anand Mahindra said he downloaded the app "with pride," a public pat on the back that set off a wave of goodwill for the swadeshi challenger to WhatsApp.
+
+ The arc wasn't entirely one-way — 
+
+the app dropped from the top ranking in late October 2025
+
+ — but a messaging app from a bootstrapped Indian SaaS company reaching the top of the charts even briefly is, on its own, a cultural data point.</p>
+
+<h3>Zoho Pay and Zoho POS: the fintech turn</h3>
+
+<p>Zoho also used the Arattai moment to lay down distribution for a bigger ambition. 
+
+Zoho is preparing to enter India's consumer payments market with Zoho Pay, a payments app that will also be embedded inside its homegrown chat platform Arattai, the company's payments chief said. Zoho has not given a firm launch date.
+
+ That piece dates to a report published on October 23, 2025.</p>
+
+<p>On the merchant side, the hardware arm moved faster. 
+
+Zoho Corp founder Sridhar Vembu announced the launch of Zoho Payments Point-of-Sale (POS) devices that allow merchants to accept payments, generate bills, print receipts and sync records across systems. He also confirmed that the company's messaging platform Arattai will soon integrate with Zoho Pay.
+
+</p>
+
+<p>If you run a small retail shop in Pune, Coimbatore, or Indore and have been stitching together a billing printer, a payments terminal, and a separate accounting app, this stack starts to collapse. The strategic value for Zoho is obvious — it already sells Books, Invoice, Inventory, and CRM to Indian SMBs, and a payments layer is the missing piece.</p>
+
+<h2>BrowserStack: proof that Indian dev-tools can scale to $225M ARR</h2>
+
+<p>Mumbai-headquartered BrowserStack is the quiet giant in this story. The automated testing platform crossed a revenue threshold in FY2025 that few Indian software companies have ever touched. 
+
+BrowserStack is headquartered in Mumbai, with revenue of $225 million in 2025 and more than 1,200 employees as of March 2025.
+
+</p>
+
+<p>The domestic entity's numbers are instructive for anyone trying to understand how Indian SaaS economics actually work. 
+
+BrowserStack's Indian operating entity, Browserstack Software Private Limited, reported revenue of about INR 771.2 crore for FY25.
+
+ That's about ₹7,71,00,00,000 flowing through a single Indian software company's books — yet 
+
+its Indian entity reported standalone revenue of Rs 771 crore in fiscal 2025, a year-on-year increase of 13%, with the bulk of revenues generated from the US and Ireland.
+
+</p>
+
+<p>The company also returned capital to employees at a scale that's unusual for Indian tech. 
+
+BrowserStack announced a USD 125 million ESOP and share buyback programme.
+
+ For Indian software engineers weighing offers, that's a real signal: ESOPs from mature Indian SaaS companies are starting to look like credible liquidity, not theoretical paper.</p>
+
+<h2>Freshworks: the agentic-AI pivot</h2>
+
+<p>NASDAQ-listed Freshworks, the other Chennai-origin SaaS giant, spent 2025 rebuilding its product around AI agents. The headline launch came at mid-year: 
+
+Freshworks unveiled a significant upgrade to its Freddy AI platform, introducing new agentic capabilities designed to enable businesses to deploy AI agents that act autonomously across customer support, IT service, and related enterprise functions.
+
+</p>
+
+<p>The company framed the full stack in a June launch: 
+
+with Freshworks' Freddy Agentic AI Platform, customer support teams can thrive with AI tools that autonomously manage and resolve customer issues from start to finish.
+
+ Integrations followed. 
+
+Enhanced Freddy AI Agents can now search Google Drive to access more data and provide richer answers, process images within tickets (like screenshots of errors), and integrate seamlessly with both service portals and popular apps employees already use.
+
+</p>
+
+<p>For a mid-sized Indian company running Freshdesk for customer support — say, a D2C brand in Bangalore handling 2,000 tickets a month — this is the difference between hiring another support agent and routing the majority of first-response work to an AI that already lives inside the tool you use.</p>
+
+<h2>The new wave: Composio, Sarvam, and agent infrastructure</h2>
+
+<h3>Composio: the connective tissue for AI agents</h3>
+
+<p>While the incumbents moved, a newer Bengaluru-origin company raised a Series A that lets us see what investors think comes next. 
+
+Agentic AI startup Composio secured USD 25 million in a Series A funding round led by Lightspeed Venture Partners. Founded in 2023 by Soham Ganatra and Karan Vaidya, Composio operates out of San Francisco and Bengaluru.
+
+</p>
+
+<p>What Composio actually does is instructive. 
+
+Composio, which helps AI agents interact with tools and applications, raised $25 million in a Series A funding round led by Lightspeed Venture Partners.
+
+ The thesis is that models are becoming commodities; the real moat is in the plumbing that lets an agent reliably talk to Slack, GitHub, Google Calendar, Zendesk, and a few hundred other SaaS tools. 
+
+The earlier $4 million seed round brought Composio's total funding to $29 million.
+
+</p>
+
+<h3>Sarvam: the sovereign AI bet</h3>
+
+<p>On the model layer, Bengaluru-based Sarvam AI had the loudest year of any Indian AI startup. 
+
+Sarvam AI's Series A closed at Rs 415 crore (approximately $50 million) led by Lightspeed Venture Partners and Peak XV Partners.
+
+ The company has since been designated the government's chosen builder for India's first indigenous foundation model.</p>
+
+<p>What this means for Indian developers is that there is now a credible local alternative in the model layer, with Indic-language performance that's hard to match from a San Francisco data centre. If you're building a customer-service bot in Marathi, a document-summariser in Tamil, or a compliance assistant in Hindi, the options list in 2026 is going to look very different from the options list in 2024.</p>
+
+<h2>What all this means for Indian developers and SaaS buyers</h2>
+
+<h3>Your stack now has serious Indian options</h3>
+
+<p>Five years ago, an Indian startup picking its initial SaaS stack would default to US-built tools for almost everything — APIs, testing, support, analytics. In 2026, there is a defensible Indian-origin option in nearly every category: Postman for APIs, BrowserStack for testing, Freshworks for support, Zoho for the back office, Hasura for backend, Composio for agent integration. Picking Indian-origin tools now is a procurement decision, not a patriotic one.</p>
+
+<h3>Agents are the new API</h3>
+
+<p>Across almost every launch we've looked at, the pattern is the same: wrap existing API surface area in an agent layer. Postman's AI Agent Builder, Freshworks' Freddy Studio, Composio's agent plumbing — they're all betting that the next five years of enterprise software will be less about humans clicking buttons and more about agents calling APIs on humans' behalf.</p>
+
+<p>If you're an Indian developer debugging those agent calls, you'll spend more time than ever staring at raw request and response bodies: nested JSON from webhook deliveries, OAuth token payloads, tool-call arguments, Server-Sent Events chunks. Keeping a clean validation workflow for those payloads matters — a misplaced comma or unescaped quote in an agent's JSON output can quietly break an entire chain. Many Indian engineers already keep our <a href="/tools/json-formatter">JSON Formatter</a> open in a browser tab precisely for this: paste the raw payload from your logs, get a readable, syntax-highlighted tree, spot the missing bracket in seconds, and get back to debugging the agent itself rather than its envelope.</p>
+
+<h3>What to do this quarter if you're an Indian engineering leader</h3>
+
+<ul>
+  <li><strong>Audit your SDK generation.</strong> With Postman's acquisitions of liblab and Fern, hand-maintained client SDKs for your internal APIs are becoming legacy. Pilot auto-generation on one service before Q4.</li>
+  <li><strong>Price-check your testing infra.</strong> BrowserStack's domestic entity now sells into India at scale. If you're still using ad-hoc BrowserStack-equivalent setups via international credit cards, there's a cleaner procurement path via an Indian GST invoice.</li>
+  <li><strong>Try Zoho Pay for a side project.</strong> If you run a Shopify store, a tutoring business, or any small side venture, Zoho Pay's embedded flow inside Arattai is worth watching — especially as it starts to integrate with Zoho Books.</li>
+  <li><strong>Prototype one agent workflow in Freddy or Postman.</strong> Pick a boring internal process — password resets, invoice follow-ups, lead qualification — and ship an agent, not a form.</li>
+  <li><strong>Add an Indian LLM to your evals.</strong> Even if you stay on OpenAI or Anthropic in production, Sarvam-class models now belong in your benchmark set, especially for Indic-language workloads.</li>
+</ul>
+
+<h2>The bigger picture</h2>
+
+<p>The common thread across Postman's agent builder, BrowserStack's $225M run-rate, Freshworks' Freddy pivot, Zoho's consumer push, Composio's $25M Series A, and Sarvam's sovereign-model ambition is that Indian software has graduated from the "cheaper alternative" story. These companies are shipping first, not copying. They're acquiring foreign tooling, not being acquired. They're defining categories like agent integration and sovereign AI rather than defending older ones.</p>
+
+<p>For developers, founders, and buyers sitting in Bengaluru, Pune, Hyderabad, or Gurugram, the practical consequence is simple: your short-list of SaaS and dev-tools vendors in 2026 should look very different from your short-list in 2023. Many of the best options will have a Chennai, Mumbai, or Bengaluru office — and in several categories, no serious global alternative at all.</p>
+
+<p>The next 12 months will test whether Zoho Pay can convert Arattai attention into actual UPI volume, whether Postman's SDK bets pay off, and whether Composio's agent-plumbing thesis survives contact with real enterprise workloads. But even if some of these bets miss, the direction is set. India isn't just running the world's SaaS back-office anymore. It's building the APIs the back-office calls.</p>`,
   }
 ];
 
