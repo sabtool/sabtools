@@ -67292,6 +67292,216 @@ SIP inflows touched a new all-time high of Rs 29,529 crore in October
 <p>The default slabs are residential (LT-1 category). Commercial (LT-2) and industrial (HT) tariffs have different structures including time-of-day (TOD) charges, maximum demand charges in kVA, and power factor penalties. The calculator gives you a ballpark but for a shop or factory bill, cross-check against your DISCOM's published tariff schedule.</p>
 
 <p>Stop wondering whether your DISCOM is overcharging you — plug your units into the <a href="/tools/electricity-bill-calculator">Electricity Bill Calculator</a> with your state selected and see the slab-by-slab math behind every rupee on your bijli bill →</p>`,
+  },
+  {
+    slug: "old-photo-restorer-comparison-2026",
+    title: "Old Photo Restorer: SabTools vs BankBazaar vs ClearTax — Honest Comparison (2026)",
+    description: "Honest comparison of free Old Photo Restorer options in India for 2026 — features, accuracy, privacy, signup requirements. Picks the best for Indian users.",
+    date: "2026-11-12",
+    category: "Image",
+    readTime: "10 min read",
+    keywords: ["restore photo", "old photo", "enhance", "vintage", "repair", "sharpen", "de-yellow", "old photo restorer", "best old photo restorer india", "old photo restorer comparison"],
+    toolSlug: "old-photo-restorer",
+    image: {
+      src: "/blog/old-photo-restorer.webp",
+      alt: "Old Photo Restorer comparison — SabTools vs other free Indian tools (2026)",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>The real decision: dedicated restorer or stitched-together workflow?</h2>
+
+<p>If you've just scanned your grandfather's 1962 wedding photo and are now trying to figure out which free tool actually restores it — adjusts the faded contrast, removes the yellow tint, sharpens the soft focus — you'll quickly notice most "free image tools" online aren't really built for this. <a href="https://tinypng.com/" rel="noopener" target="_blank">TinyPNG</a> compresses. <a href="https://www.iloveimg.com/" rel="noopener" target="_blank">ILoveIMG</a> resizes and converts. <a href="https://squoosh.app/" rel="noopener" target="_blank">Squoosh</a> optimises for web delivery. None of those three were designed to de-yellow a faded print or lift detail out of a 60-year-old negative scan.</p>
+
+<p><strong>Quick verdict:</strong> for actual restoration work — contrast, brightness, sharpening, and de-yellowing of old prints — SabTools' <a href="/tools/old-photo-restorer">Old Photo Restorer</a> is the only tool in this comparison that was built specifically for the job and runs entirely in your browser without an upload. The other three are excellent at what they do (compression, resizing, format conversion), but you'd use them <em>after</em> restoration, not instead of it. This guide walks through what each tool actually does, where the honest trade-offs are, and the Indian-user context that shifts the recommendation.</p>
+
+<h2>What "restoring an old photo" actually involves</h2>
+
+<p>Before picking a tool, it helps to be specific about the problem. A typical Indian family album from the 1960s–1990s has one or more of these issues:</p>
+
+<ul>
+  <li><strong>Yellowing / colour cast</strong> — paper prints oxidise over decades, especially in humid climates like coastal Maharashtra or Kerala. The whites turn cream, the blacks turn brown.</li>
+  <li><strong>Faded contrast</strong> — sunlight exposure through glass frames pulls out the dynamic range. Shadows look grey instead of black.</li>
+  <li><strong>Softness</strong> — scanner introduces mild blur, or the original print was never that sharp to begin with.</li>
+  <li><strong>Brightness drift</strong> — some photos are too dark (underexposed negative), some are washed out (bleached by light).</li>
+</ul>
+
+<p>Scratches, torn corners and missing chunks are a separate problem — that's generative AI inpainting territory, which no free browser tool handles reliably. What <em>is</em> solvable with classic image-processing controls — contrast, brightness, sharpen, de-yellow — is exactly what a dedicated restorer should expose. That's the yardstick for this comparison.</p>
+
+<h2>SabTools Old Photo Restorer: what it actually does</h2>
+
+<p>The <a href="/tools/old-photo-restorer">Old Photo Restorer</a> on SabTools gives you four sliders aimed at the specific damage patterns above: contrast boost, brightness correction, a sharpen pass, and a de-yellow / colour-cast neutraliser. Everything runs client-side — the photo never leaves your device. That matters if you're restoring something personal: a grandparent's portrait, a wedding photograph, a military service picture. No upload means no retention policy to read, no account to delete later.</p>
+
+<p>Practical example. Priya in Pune scans a 1978 photo of her father at IIT Kanpur's graduation. The print has turned warm-yellow, the blacks of his gown look brown, and the detail in the tassel is soft. In the Old Photo Restorer:</p>
+
+<ul>
+  <li>Push de-yellow to roughly 35–45% to neutralise the paper cast.</li>
+  <li>Add 15–25% contrast to bring the blacks back.</li>
+  <li>A light brightness nudge if the midtones look muddy.</li>
+  <li>Sharpen at 20–30% to recover edge detail without creating halos.</li>
+</ul>
+
+<p>The export is a PNG you can then optionally compress or resize for sharing on WhatsApp family groups. Browser-based, no signup, no watermark.</p>
+
+<h3>Where SabTools wins honestly</h3>
+
+<ul>
+  <li><strong>Purpose-built controls</strong> — the four sliders map directly to the four most common old-photo problems. You're not fishing through a generic editor looking for the right combination of filters.</li>
+  <li><strong>Zero upload</strong> — important for personal/family photos you'd rather not hand to an unknown server.</li>
+  <li><strong>Indian-context workflow</strong> — pair it with the <a href="/tools/image-dpi-changer">Image DPI Changer</a> if you want to print the restored photo at 300 DPI on 4×6 glossy paper from a local photo lab, or the <a href="/tools/passport-photo-maker">Passport Photo Maker</a> if you're restoring a grandparent's old photo for a government form or memorial card.</li>
+</ul>
+
+<h3>Where SabTools doesn't pretend to compete</h3>
+
+<ul>
+  <li>It doesn't do AI face reconstruction, scratch inpainting, or colourisation of black-and-white photos. Those are heavier features that need large ML models — a browser-based free tool can't ship that responsibly.</li>
+  <li>Severely damaged photos (missing sections, deep creases) need either a paid desktop app like Photoshop's Neural Filters or a specialist service.</li>
+</ul>
+
+<h2>TinyPNG: brilliant at compression, wrong tool for restoration</h2>
+
+<p><a href="https://tinypng.com/" rel="noopener" target="_blank">TinyPNG</a> is a global name in image compression, and deservedly so. If you've just restored a 12 MB scan and need to email it to relatives in Canada without blowing past attachment limits, TinyPNG's JPEG/PNG compressor will cut file size by 60–80% with barely visible quality loss. That's its lane, and it owns it.</p>
+
+<p>But it is <strong>not</strong> a restoration tool. There are no contrast, brightness, sharpen, or colour-cast controls. You drop a photo in, and it comes out smaller — and if it went in yellow and faded, it comes out yellow, faded, and smaller.</p>
+
+<p>Honest trade-offs with TinyPNG even within its own category:</p>
+
+<ul>
+  <li>Files are uploaded to their servers for processing. For holiday snaps, that's fine. For family archive scans, some users would rather keep them local.</li>
+  <li>Free tier is capped at 20 images and 5 MB per image. A 600 DPI scan of a large print easily exceeds 5 MB.</li>
+  <li>No India-specific presets — if you're restoring a photo for an application form with a strict 20 KB or 50 KB limit, you'll have to eyeball the compression.</li>
+</ul>
+
+<p><strong>Use TinyPNG when:</strong> you already have a cleaned-up image and need aggressive compression for email or web upload.</p>
+
+<h2>ILoveIMG: a broad toolkit, but restoration isn't in it</h2>
+
+<p><a href="https://www.iloveimg.com/" rel="noopener" target="_blank">ILoveIMG</a> covers a wide swathe of image tasks — <a href="https://www.iloveimg.com/compress-image" rel="noopener" target="_blank">compression</a>, <a href="https://www.iloveimg.com/resize-image" rel="noopener" target="_blank">resizing</a>, cropping, format conversion, watermarking, and some light editing. It's a decent Swiss-army knife if your workflow involves bulk resizing hundreds of photos.</p>
+
+<p>Where it falls short for old-photo restoration specifically:</p>
+
+<ul>
+  <li>Its photo editor exposes generic brightness/contrast adjustments but no dedicated de-yellow or targeted colour-cast neutraliser — you'd be manually balancing RGB channels.</li>
+  <li>Files are uploaded to their servers, which is a privacy consideration for personal archives.</li>
+  <li>The free tier works but pushes a paid plan upsell for batch and premium features.</li>
+</ul>
+
+<p>If your old-photo project is really a "I need to resize 40 scans to the same dimensions and compress them for a family cloud drive" project, ILoveIMG is a fine fit. For the actual repair of fade, yellowing, and softness, you'll leave disappointed.</p>
+
+<h2>Squoosh: Google's optimiser, not an editor</h2>
+
+<p><a href="https://squoosh.app/" rel="noopener" target="_blank">Squoosh</a> is an open-source project from the Google Chrome team. Technically impressive, genuinely privacy-respecting (it runs in your browser — files don't leave your device, which is rare in this space and worth calling out), and its WebP / AVIF compression quality is best-in-class for web use.</p>
+
+<p>However, Squoosh is explicitly an <em>image compression / format conversion</em> tool. It has resize and a few basic quality controls, but no contrast, brightness, sharpen, or de-yellow pipeline. You wouldn't restore a photo in Squoosh any more than you'd fix a leaky tap with a stapler.</p>
+
+<p>Other limitations worth noting:</p>
+
+<ul>
+  <li>Single-image processing — no batch mode, which is annoying if you're restoring 50 scans from a family album.</li>
+  <li>No India-specific presets for government form sizes (passport photo 20–50 KB, PAN card photo 20 KB, etc.).</li>
+</ul>
+
+<p><strong>Use Squoosh when:</strong> you need surgical control over compression quality for a final web-ready export of your restored photo.</p>
+
+<h2>Head-to-head: what each tool actually does</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Capability</strong></td>
+      <td><strong>SabTools Old Photo Restorer</strong></td>
+      <td><strong>TinyPNG</strong></td>
+      <td><strong>ILoveIMG</strong></td>
+      <td><strong>Squoosh</strong></td>
+    </tr>
+    <tr>
+      <td>Contrast / brightness repair</td>
+      <td>Yes (dedicated sliders)</td>
+      <td>No</td>
+      <td>Basic</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>De-yellow / colour-cast fix</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>No (manual RGB only)</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Sharpening</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>Basic</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Processes locally in browser</td>
+      <td>Yes</td>
+      <td>No — uploads</td>
+      <td>No — uploads</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Signup required</td>
+      <td>No</td>
+      <td>No (free tier)</td>
+      <td>No (free tier)</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Free-tier file / count limit</td>
+      <td>None listed</td>
+      <td>20 files / 5 MB each</td>
+      <td>Pushes paid for bulk</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>Indian-use-case tooling nearby</td>
+      <td>Yes (DPI changer, passport-photo maker)</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Privacy: why browser-based matters for family photos</h2>
+
+<p>This is worth a dedicated section because it separates the field cleanly. TinyPNG and ILoveIMG upload your image to their servers. They have reasonable privacy policies and auto-delete timelines, and for everyday compression that's a sensible trade. But the photos most people want to restore are the ones with the most sentimental and personal content — a late parent, a childhood home that no longer exists, a sibling who's no longer around. For those, "it processes on my laptop and never goes anywhere" is a real feature, not a marketing line.</p>
+
+<p>SabTools' Old Photo Restorer and Squoosh both qualify on this front. The difference is that only SabTools is set up to actually repair the photo. Squoosh will just compress whatever you give it, unedited.</p>
+
+<h2>Where TinyPNG / ILoveIMG / Squoosh are genuinely the right call</h2>
+
+<p>Being honest: don't abandon these tools. They're good at their jobs.</p>
+
+<ul>
+  <li><strong>TinyPNG</strong> — final-stage compression when you're emailing a 12 MB restored scan to NRI family in the US or uploading to a photo-book printing service like Canvera or Zoomin.</li>
+  <li><strong>ILoveIMG</strong> — batch resizing 40 restored photos to a uniform 1920×1280 for a shared Google Drive album.</li>
+  <li><strong>Squoosh</strong> — if you're a designer or developer embedding the restored photo on a website and need AVIF / WebP at surgically tuned quality.</li>
+</ul>
+
+<p>A realistic Indian family-archive workflow in 2026 might look like this: scan at 600 DPI on a flatbed scanner → restore on SabTools' <a href="/tools/old-photo-restorer">Old Photo Restorer</a> → optionally apply a creative tint with <a href="/tools/image-filters">Image Filters</a> for a memorial-style sepia print → adjust DPI to 300 using the <a href="/tools/image-dpi-changer">Image DPI Changer</a> for lab printing → compress with TinyPNG or Squoosh for the WhatsApp family group share. Each tool in its own lane.</p>
+
+<h2>A quick 3-question FAQ</h2>
+
+<h3>Can SabTools restore a photo with scratches or missing corners?</h3>
+
+<p>No — and no free browser tool can do this reliably. Scratch repair and inpainting need AI models that are too heavy to run client-side. SabTools' Old Photo Restorer handles contrast, brightness, sharpening and de-yellowing, which covers the majority of 1960s–1990s print issues. For physical damage, you'd look at Photoshop's Neural Filters or a paid online service.</p>
+
+<h3>If I'm restoring a photo for a government form, do I also need the Passport Photo Maker?</h3>
+
+<p>Often yes. Restore the photo first in the Old Photo Restorer to fix the fade and yellowing, then take the output into the <a href="/tools/passport-photo-maker">Passport Photo Maker</a> to crop it to passport / Aadhaar / PAN proportions at 300 DPI. If the form has a strict KB limit, finish with a compression pass.</p>
+
+<h3>Why not just use a phone app?</h3>
+
+<p>You can, and some free apps (Google Photos' "Enhance" button, for instance) do a decent one-tap job. The reason to use a slider-based tool is control: when a one-tap AI "enhance" overcooks the yellows and blows out the highlights of your 1965 wedding photo, you can't dial it back. Four sliders give you the granularity to stop at the right spot — especially for high-contrast scenes like Indian wedding photos where saris and gold jewellery often get clipped by auto-enhancers.</p>
+
+<h2>Bottom line</h2>
+
+<p>For actual restoration — the de-yellowing, contrast recovery, and sharpening that old family photos need — SabTools' <a href="/tools/old-photo-restorer">Old Photo Restorer</a> is the right default. It's purpose-built for that task, runs locally in your browser, doesn't ask for a signup, and sits next to the other Indian-use-case tools (DPI changer, passport-photo maker, filters) you'll likely need in the same session. TinyPNG, ILoveIMG and Squoosh are strong tools for compression, resizing and format conversion respectively — use them after restoration, not instead of it.</p>
+
+<p>If you have a stack of scanned prints waiting to be fixed before the next family gathering, try the <a href="/tools/old-photo-restorer">Old Photo Restorer</a> on one image first — it takes about a minute to see whether the four sliders get you where you want to go.</p>`,
   }
 ];
 

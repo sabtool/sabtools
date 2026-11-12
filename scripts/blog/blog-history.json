@@ -385,9 +385,10 @@
     "css-grid-generator",
     "plagiarism-checker",
     "code-beautifier",
-    "electricity-bill-calculator"
+    "electricity-bill-calculator",
+    "old-photo-restorer"
   ],
-  "lastCategory": "tax",
-  "totalPosts": 386,
-  "lastRun": "2026-11-12T12:52:31.162Z"
+  "lastCategory": "image",
+  "totalPosts": 387,
+  "lastRun": "2026-11-12T17:45:09.500Z"
 }
