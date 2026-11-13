@@ -68036,6 +68036,189 @@ Sarvam AI's Series A closed at Rs 415 crore (approximately $50 million) led by L
 <p>But if what you actually want is a short story in a chosen genre, in under 10 seconds, with no account and no data trail — the SabTools AI Story Generator is built exactly for that use case, and the free-unlimited pricing isn't a trial that's going to flip on you next month.</p>
 
 <p>Try the <a href="/tools/ai-story-generator">SabTools AI Story Generator →</a> and generate your first Adventure, Romance, Mystery, SciFi, Horror, or Comedy story in a click.</p>`,
+  },
+  {
+    slug: "news-2026-11-13-upi-transaction-limit-changes-and-new-npci-rules",
+    title: "UPI transaction limit changes and new NPCI rules (2026 Update)",
+    description: "UPI transaction limit changes and new NPCI rules — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-11-13",
+    category: "Banking",
+    readTime: "11 min read",
+    keywords: ["UPI transaction limit changes", "banking news india 2026", "india 2026 update"],
+    toolSlug: "emi-calculator",
+    image: {
+      src: "/blog/emi-calculator.webp",
+      alt: "UPI transaction limit changes and new NPCI rules (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>NPCI resets the UPI ceiling: what's new and why it matters</h2>
+
+<p>India's Unified Payments Interface has quietly crossed a threshold that changes how high-value money moves through smartphones. On September 15, 2025, the National Payments Corporation of India (NPCI) activated a sweeping revision of UPI transaction limits, pushing the per-transaction ceiling in several categories from ₹2 lakh to ₹5 lakh and allowing cumulative daily limits of up to ₹10 lakh for verified merchants. 
+
+Unified Payments Interface (UPI) users can now make Person-to-Merchant (P2M) transactions of upto 10 lakh rupees within 24 hours, with verified merchant for specified categories effective from today.
+
+</p>
+
+<p>For most Indians, UPI has been the default way to split a dinner bill, pay a kirana shop, or send ₹5,000 to a parent. But as the payment rail has matured, so have the use cases — insurance premiums, mutual fund SIPs, IPO applications, hospital bills, education fees, EMI collections and even ticketing for big-ticket holidays. The ₹1 lakh standard cap no longer fits those use cases, and NPCI has now formally acknowledged that reality. This is part of a broader set of rule changes that also took effect from August 1, 2025, tightening the operational guardrails around balance checks, auto-pay mandates and transaction status queries.</p>
+
+<p>Taken together, the revisions reshape the practical envelope within which Indian consumers and merchants will transact for the rest of FY 2025-26. Here's what changed, what it means for your wallet, and what you should do differently from this month onward.</p>
+
+<h2>The September 15 reset: ₹5 lakh per transaction, ₹10 lakh per day</h2>
+
+<p>The headline change is simple. 
+
+NPCI has hiked the limit for Person-to-Merchant (P2M) transactions from Rs 5 lakh to Rs 10 lakh.
+
+ But the detail matters, because the new ceilings are category-specific and only apply to transactions with verified merchants. 
+
+Effective September 15, 2025, users can now transact up to ₹10 lakh in 24 hours for specific verified merchant categories. These changes apply exclusively to Person-to-Merchant (P2M) payments involving verified merchants.
+
+</p>
+
+<h3>Category-by-category: where the new ₹5 lakh per-transaction limit applies</h3>
+
+<p>According to the NPCI circular that triggered the September revision, the raised limits cover several high-value use cases that Indian consumers encounter regularly. 
+
+These categories include sectors like capital markets, insurance, government payments, travel, and credit card bill payments.
+
+</p>
+
+<p>The breakdown that matters most for an average salaried Indian:</p>
+
+<ul>
+  <li><strong>Capital markets and insurance:</strong> 
+
+The per-UPI transaction limit for both capital markets and insurance has been raised from Rs 2 lakh per transaction to Rs 5 lakh per transaction.
+
+ This means an IPO application, a one-shot ELSS top-up, or a term insurance renewal can now go through in a single UPI tap.</li>
+  <li><strong>Credit card bill payments:</strong> 
+
+Credit card bill payments can now be made up to Rs 5 lakh per transaction, with a maximum of Rs 6 lakh in a day.
+
+ Useful if you're clearing a large statement after a wedding or an overseas trip.</li>
+  <li><strong>Loan repayments and EMI collections:</strong> 
+
+For loan repayments and EMI collections, the new limit is Rs 5 lakh per transaction and Rs 10 lakh per day.
+
+ This is particularly relevant for part-prepayments on home and auto loans, where you want to knock down principal without resorting to a NEFT/RTGS transfer.</li>
+  <li><strong>Travel, government payments, hospitals, education and IPO subscriptions:</strong> 
+
+The standard UPI limit is 1 lakh rupees per transaction, while tax, hospital, education, IPO, insurance, travel and other verified merchants allow up to 5 lakh.
+
+</li>
+</ul>
+
+<p>Importantly, the standard ₹1 lakh ceiling for peer-to-peer (P2P) transfers — the one that applies when you Google Pay a friend or PhonePe your maid — remains unchanged. 
+
+Standard UPI daily limit: Rs.1,00,000 across all UPI apps combined, per the NPCI
+
+. If you were hoping to send your brother ₹3 lakh in one go, you still can't. The higher ceilings are strictly for payments to verified merchants in approved categories.</p>
+
+<h3>Why ₹10 lakh and why now</h3>
+
+<p>The timing reflects both scale and policy intent. UPI has become the plumbing of the Indian economy, not a side rail. 
+
+Data released by the National Payments Corporation of India (NPCI) showed that UPI processed 21.63 billion transactions in December 2025, the highest ever recorded in a single month.
+
+ And according to the Ministry of Finance, 
+
+monthly transaction volumes crossed 2,000 crore transactions for the first time in August 2025, reaching 2,001 crore transactions, signalling a new scale of adoption.
+
+</p>
+
+<p>At that scale, forcing high-value payments onto older rails like NEFT or IMPS created friction without meaningful fraud benefits — especially when the merchant was already KYC-verified. The move pushes UPI deeper into categories (insurance, mutual funds, EMI collections) where the alternatives are clunkier and slower.</p>
+
+<h2>The August 1 rules: fewer balance checks, stricter auto-pay timings</h2>
+
+<p>Before the September limit hike, NPCI tightened a different set of operational rules that took effect six weeks earlier. These changes were less about headlines and more about reducing the load on the UPI switch — but they have real behavioural implications.</p>
+
+<h3>Balance check caps</h3>
+
+<p>If you have a habit of refreshing your bank balance every few hours, this change affects you. 
+
+From August 1, UPI users can only check balances 50 times per app daily; autopay mandates will be executed only during non-peak hours, per NPCI rules.
+
+ Fifty balance checks per app sounds generous, but if you use PhonePe, Google Pay and Paytm interchangeably, the ceiling is per-app, not combined.</p>
+
+<h3>Auto-pay mandates restricted to off-peak windows</h3>
+
+<p>The bigger operational change is on auto-pay. 
+
+NPCI has rolled out revised UPI operational rules: Auto-Pay Restriction: Auto-debit mandates will now be executed only during non-peak hours: before 10 AM, 1–5 PM, or after 9:30 PM.
+
+ If you have a SIP debiting every 5th, a Netflix subscription renewing on the 10th, or an insurance premium on auto-pay, the actual debit will happen in these windows — not necessarily at midnight as before.</p>
+
+<p>NPCI also capped the number of retry attempts. 
+
+Modified Autopay Transactions: For every UPI mandate, 1 main transaction would be initiated with up to 3 more retries only.
+
+ If your account has insufficient funds and all four attempts fail, the mandate stops retrying. You'll need to manually settle it to avoid late fees or broken SIP cycles.</p>
+
+<h3>UPI Lite: enhanced for small, offline-style payments</h3>
+
+<p>For low-value payments where the PIN step feels like friction, UPI Lite has been quietly upgraded. 
+
+According to the latest NPCI circular dated February 27, 2025, "For UPI Lite, the enhanced limit shall be Rs 1000 per transaction with Rs 5,000 being the total limit.
+
+" 
+
+UPI Lite operates as a separate on-device wallet with Rs.1,000 per-transaction and Rs.5,000 wallet balance limits.
+
+ That makes it a cleaner fit for daily commutes, chai stalls, and auto-rickshaw fares where the earlier ₹500 cap used to force a fallback to regular UPI.</p>
+
+<h2>What this means for different kinds of Indian households</h2>
+
+<p>The combined effect of the August and September rule changes depends heavily on how you use UPI. Four common scenarios:</p>
+
+<h3>The salaried professional in Bangalore or Mumbai</h3>
+
+<p>If you earn ₹15-25 lakh per year, three of these changes compound. First, your mutual fund SIP of ₹50,000 and your annual LIC/term insurance premium of ₹1.5 lakh now sit comfortably within one UPI tap each, instead of requiring net-banking. Second, if you pay your HDFC or ICICI credit card bill from UPI, the new ₹5 lakh per-transaction cap means even a heavy-spending month after a vacation goes through in one shot. Third, the auto-pay window change means your SIP debit may now hit at 7:30 AM rather than 12:05 AM — so your salary account needs to be funded a bit earlier in the cycle.</p>
+
+<h3>The first-time home loan applicant in NCR or Pune</h3>
+
+<p>For home loan borrowers, the quieter but powerful change is in EMI and part-prepayment flows. Lenders are now able to accept part-prepayment via UPI up to ₹5 lakh per transaction (₹10 lakh per day cumulative) under the loan repayments category. If you receive an annual bonus of ₹3-4 lakh and want to knock down principal immediately, you no longer need to visit a branch or set up an RTGS. Before you send the money, it's worth running the numbers — a ₹3 lakh prepayment on a ₹50 lakh, 20-year home loan at 8.75% can shrink your tenure by several months. You can model the exact impact on your existing loan with the <a href="/tools/emi-calculator">SabTools EMI Calculator</a> before you commit the funds, so you know whether to reduce tenure or EMI.</p>
+
+<h3>The small business owner running a retail shop</h3>
+
+<p>If you're a merchant below the ₹40 lakh GST threshold and you've been accepting UPI into a static QR, the P2M limit hike changes how you can position your business. Accepting payments of ₹2-5 lakh — common in furniture, electronics, jewellery resale, or wholesale — is now UPI-native, provided your settlement account is registered as a verified merchant. This reduces the drop-off rate at the till, especially for customers who don't carry credit cards or don't want to use them. On the flip side, your own outgoing payments — like supplier EMIs on equipment loans — can now also be routed via UPI up to ₹5 lakh each.</p>
+
+<h3>The freelancer managing GST and quarterly advance tax</h3>
+
+<p>Tax payments were among the earliest categories where the ₹5 lakh per-transaction limit applied, and that remains in force. If you're a consultant paying advance tax of ₹2-3 lakh each quarter, UPI through the TIN 2.0 portal is now a credible alternative to net-banking — particularly if your bank's net-banking is flaky on the 15th of September, December, March or June.</p>
+
+<h2>Things that haven't changed — and common misconceptions</h2>
+
+<p>The limit hike has generated enough coverage that some confusion has crept in. A few clarifications:</p>
+
+<ul>
+  <li><strong>P2P transfers remain at ₹1 lakh per day.</strong> If you're sending money to another individual's UPI ID or phone number (not a merchant), the standard cap still applies. The ₹5 lakh and ₹10 lakh ceilings are exclusively for P2M.</li>
+  <li><strong>Your bank's internal cap may be lower.</strong> NPCI sets the ceiling, but each bank can impose a stricter limit. 
+
+NPCI permits up to ₹5,00,000 per transaction for specific categories (e.g., hospitals, education, IPO).
+
+ If your SBI or Kotak UPI stops at ₹1 lakh for a hospital bill, the issue is your bank's setting, not NPCI's rule — you may need to call customer care to raise it.</li>
+  <li><strong>The merchant must be "verified" in the relevant category.</strong> Just because an app accepts UPI doesn't mean the ₹5 lakh ceiling applies. The merchant has to be registered in the right MCC (merchant category code) with their payment aggregator. If the payment fails, check whether the merchant's category actually qualifies.</li>
+  <li><strong>UPI Lite is not for high-value payments.</strong> With a ₹1,000 per-transaction and ₹5,000 wallet cap, it's designed for grocery and transport — not for paying a hospital or a mutual fund house.</li>
+</ul>
+
+<h2>What you should do this week</h2>
+
+<p>Three concrete actions for Indian UPI users, regardless of which city or income bracket you're in:</p>
+
+<ol>
+  <li><strong>Review your auto-pay calendar.</strong> If you have SIPs, EMIs, or OTT subscriptions on auto-pay, map them to the new NPCI debit windows (before 10 AM, 1–5 PM, or after 9:30 PM). Make sure your salary or primary account has sufficient balance <em>before</em> the earliest window, not after.</li>
+  <li><strong>Enable UPI Lite for small payments.</strong> With a ₹1,000 per-transaction and ₹5,000 wallet limit, it's the most frictionless option for tea stalls, metro top-ups and auto rides. It also reduces load on your main UPI handle, leaving the standard pipe free for larger payments.</li>
+  <li><strong>Check which of your high-value flows can migrate to UPI.</strong> Credit card bills, insurance renewals, mutual fund investments, and loan prepayments are all candidates. Doing so reduces failed transactions during NEFT/RTGS windows and gives you an instant confirmation.</li>
+</ol>
+
+<h2>The bigger picture: UPI is being repositioned as universal payment rail</h2>
+
+<p>Taken together, the February 2025 UPI Lite tweak, the August 1 operational rules, and the September 15 limit hike signal a deliberate NPCI strategy. The regulator is segmenting UPI into three distinct lanes: small-value, frictionless payments through UPI Lite; everyday peer-to-peer transfers at the ₹1 lakh standard limit; and high-value merchant payments at ₹5 lakh per transaction and ₹10 lakh per day for verified use cases.</p>
+
+<p>For a decade, Indians have thought of UPI as a replacement for cash. What's happening in FY 2025-26 is different — UPI is being repositioned as a replacement for net-banking, RTGS and card-based bill payments in the ₹1 lakh to ₹10 lakh range. December 2025's record of 21.63 billion transactions already proves the scale exists. The limit hike simply unlocks the value tier that was previously trapped on slower rails.</p>
+
+<p>If you're an Indian consumer, the practical implication is straightforward: your UPI app is now the default tool for almost any payment you'll ever need to make, except P2P transfers above ₹1 lakh. For borrowers, investors and merchants, that's a meaningful upgrade — one that takes effect without you having to download anything new. The rails changed. Your usage can too.</p>`,
   }
 ];
 
