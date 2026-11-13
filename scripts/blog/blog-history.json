@@ -386,9 +386,10 @@
     "plagiarism-checker",
     "code-beautifier",
     "electricity-bill-calculator",
-    "old-photo-restorer"
+    "old-photo-restorer",
+    "tailwind-generator"
   ],
-  "lastCategory": "image",
-  "totalPosts": 387,
-  "lastRun": "2026-11-12T17:45:09.500Z"
+  "lastCategory": "developer",
+  "totalPosts": 388,
+  "lastRun": "2026-11-13T12:36:53.133Z"
 }
