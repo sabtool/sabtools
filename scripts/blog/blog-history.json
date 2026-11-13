@@ -387,9 +387,10 @@
     "code-beautifier",
     "electricity-bill-calculator",
     "old-photo-restorer",
-    "tailwind-generator"
+    "tailwind-generator",
+    "ai-story-generator"
   ],
-  "lastCategory": "developer",
-  "totalPosts": 388,
-  "lastRun": "2026-11-13T12:36:53.133Z"
+  "lastCategory": "ai",
+  "totalPosts": 389,
+  "lastRun": "2026-11-13T18:34:37.908Z"
 }
