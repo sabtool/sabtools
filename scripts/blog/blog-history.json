@@ -389,9 +389,10 @@
     "old-photo-restorer",
     "tailwind-generator",
     "ai-story-generator",
-    "business-card-maker"
+    "business-card-maker",
+    "grammar-checker"
   ],
-  "lastCategory": "image",
-  "totalPosts": 390,
-  "lastRun": "2026-11-14T11:29:32.624Z"
+  "lastCategory": "text",
+  "totalPosts": 391,
+  "lastRun": "2026-11-14T16:59:29.657Z"
 }
