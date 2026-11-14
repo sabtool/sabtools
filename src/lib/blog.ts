@@ -68497,6 +68497,132 @@ NPCI permits up to ₹5,00,000 per transaction for specific categories (e.g., ho
 <p>If you also run calculations alongside your writing — say, a loan document that mentions an EMI figure, or an SIP projection in a financial blog post — the same no-signup philosophy applies to <a href="/tools/emi-calculator">EMI Calculator</a> and <a href="/tools/sip-calculator">SIP Calculator</a>. All tools, one tab, nothing uploaded.</p>
 
 <p><strong>Try <a href="/tools/grammar-checker">SabTools' Grammar Checker</a> →</strong> paste any draft and see the errors flagged in under a second.</p>`,
+  },
+  {
+    slug: "news-2026-11-14-sovereign-gold-bond-sgb-tranches-and-how-they-compare-to-phy",
+    title: "Sovereign Gold Bond (SGB) tranches and how they compare to physical... (2026 Update)",
+    description: "Sovereign Gold Bond (SGB) tranches and how they compare to physical gold — what changed, what it means for Indian readers, and how to act on it. Updated 2026.",
+    date: "2026-11-14",
+    category: "Finance",
+    readTime: "11 min read",
+    keywords: ["Sovereign Gold Bond (SGB)", "finance news india 2026", "india 2026 update"],
+    toolSlug: "emi-calculator",
+    image: {
+      src: "/blog/emi-calculator.webp",
+      alt: "Sovereign Gold Bond (SGB) tranches and how they compare to physical... (2026 Update) — SabTools.in",
+      width: 1200,
+      height: 630,
+    },
+    content: `<h2>The quiet end of India's Sovereign Gold Bond chapter</h2>
+
+<p>If you were waiting for the Reserve Bank of India's familiar email about the next Sovereign Gold Bond tranche this year, you waited in vain. There hasn't been one — not in FY 2024-25, and not in FY 2025-26 so far. The last primary issuance was <a href="https://goldenpi.com/blog/bond-news/sovereign-gold-bond-scheme-discontinued-for-new-issues/" rel="noopener" target="_blank">Series IV of 2023-24, which went to subscribers in February 2024</a>, and nothing has followed. During the post-Budget 2025 media briefing, the Finance Ministry effectively confirmed that <a href="https://www.impriindia.com/insights/policy-update/sovereign-gold-bond/" rel="noopener" target="_blank">the scheme has been discontinued for fresh subscriptions, though existing bondholders continue to be serviced</a>.</p>
+
+<p>The silence has been loud for a reason. SGBs were, for nine years, one of the smartest ways an Indian saver could own gold — paper-backed by the sovereign, paying a 2.5% coupon, and (crucially) exempt from capital gains tax at maturity. Their disappearance changes the arithmetic for every household that automatically parked a share of its savings in gold. This piece looks at what has actually happened to the scheme in 2025, what existing bondholders are being paid on premature redemption, and how SGBs — even without new tranches — still beat physical gold on almost every count that matters for an Indian investor.</p>
+
+<h2>Why the government walked away from SGBs</h2>
+
+<p>The reasoning was never ideological. It was fiscal. Speaking to reporters after Budget 2024, Finance Minister Nirmala Sitharaman acknowledged that <a href="https://www.outlookbusiness.com/economy-and-policy/govt-likely-to-discontinue-sovereign-gold-bond-schemes-confirms-finance-ministry" rel="noopener" target="_blank">SGBs had turned out to be a "fairly expensive" borrowing instrument for the government</a>. Economic Affairs Secretary Ajay Seth was more pointed, noting that <a href="https://goldenpi.com/blog/bond-news/sovereign-gold-bond-scheme-discontinued-for-new-issues/" rel="noopener" target="_blank">the scheme had become a high-cost borrowing method compared to traditional bonds, and the hoped-for reduction in physical gold imports had not materialised</a>.</p>
+
+<p>Both observations are, with the benefit of hindsight, correct. When SGBs were launched in 2015, gold was trading near ₹26,000 per 10 grams. When Series IV of 2023-24 was issued, gold had already crossed ₹60,000. Today it is well above ₹1,00,000. The government, having issued bonds linked to gold at those earlier prices, now has to redeem them at current prices — plus pay 2.5% semi-annual interest along the way. That is not a cheap way to borrow money.</p>
+
+<p>From the investor's side, of course, the arithmetic has been glorious. Let's look at what redemptions have actually paid in 2025.</p>
+
+<h2>The premature redemption calendar: a 2025 ledger of eye-watering returns</h2>
+
+<p>Even though no new tranches are being issued, the RBI has been busy on the other side of the ledger — announcing premature redemption prices for bonds that have crossed their fifth anniversary and are eligible for early exit. The numbers tell their own story.</p>
+
+<ul>
+  <li>On <strong>February 11, 2025</strong>, the RBI set the <a href="https://www.business-standard.com/finance/personal-finance/rbi-sets-rs-8-499-as-early-redemption-price-for-sgb-2019-20-series-ix-125021100732_1.html" rel="noopener" target="_blank">premature redemption price for SGB 2019-20 Series IX at ₹8,499 per gram</a>.</li>
+  <li>On <strong>April 23, 2025</strong>, two SGB series were made eligible for early exit, with the <a href="https://www.businesstoday.in/personal-finance/investment/story/rbi-announces-premature-redemption-for-two-sgb-series-on-april-23-473231-2025-04-23" rel="noopener" target="_blank">redemption price fixed at ₹9,669 per unit</a>.</li>
+  <li>Just days later, for the <strong>April 28, 2025</strong> window, the RBI set the <a href="https://www.businesstoday.in/personal-finance/investment/story/one-more-sgb-redemption-rbi-fixes-rs-9600-premature-redemption-price-for-bonds-due-on-april-28-473710-2025-04-26" rel="noopener" target="_blank">price for SGB Scheme Series I of 2020-21 at ₹9,600 per unit</a>.</li>
+  <li>The <strong>June 11, 2025</strong> window delivered <a href="https://www.businesstoday.in/personal-finance/investment/story/sgb-early-exit-paid-rs-9630unit-over-200-returns-from-2017-tranche-next-window-opens-on-jun-11-479455-2025-06-07" rel="noopener" target="_blank">₹9,630 per unit, translating to over 200% returns for the 2017 tranche holders who chose to exit</a>.</li>
+  <li>For the <strong>August 11, 2025</strong> redemption of SGB 2019-20 Series-IX and 2020-21 Series-V, the <a href="https://www.outlookmoney.com/invest/gold/rbi-announces-pre-mature-redemption-for-these-sgbsheres-how-to-redeem" rel="noopener" target="_blank">RBI set the price at ₹10,070 per gram</a>.</li>
+  <li>For SGB 2019-20 Series-III due on <strong>August 14, 2025</strong>, the <a href="https://www.teamleaseregtech.com/updates/article/45528/rbi-notified-regarding-the-premature-redemption-under-sovereign-gold-b/" rel="noopener" target="_blank">redemption price was set at ₹9,991 per unit, based on the simple average of closing gold prices for the three preceding business days</a>.</li>
+  <li>And on <strong>December 10, 2025</strong>, SGB 2019-20 Series VII became eligible for <a href="https://www.angelone.in/news/personal-finance/rbi-fixes-premature-redemption-price-for-sgb-2019-20-series-vii-at-12-827-on-december-10-2025" rel="noopener" target="_blank">premature redemption at ₹12,827 per unit</a>.</li>
+</ul>
+
+<p>The maturity side is even more striking. The <a href="https://upstox.com/news/personal-finance/latest-updates/another-sgb-series-delivers-over-200-returns-as-gold-s-relentless-bull-run-continues-to-impress-investors/article-178910/" rel="noopener" target="_blank">SGB 2017-18 Series II matured on July 28, 2025, delivering a return of over 250% over eight years</a>. And one analyst, running the numbers on the January 2019 issue, pointed out that the <a href="https://altinvestorpro.substack.com/p/205-returns-on-gold" rel="noopener" target="_blank">nominal value per gram was ₹3,214 on 22 January 2019 and the redemption value had risen to ₹9,820 per gram by 22 July 2025 — a return of 205% in capital terms alone</a>, before counting the 2.5% annual coupon.</p>
+
+<h3>The 300-400% tranches are now surfacing</h3>
+
+<p>As the earliest tranches hit maturity, headline returns have crossed even the 200% mark. Reporting on recent matured SGB series has highlighted <a href="https://www.business-standard.com/topic/sovereign-gold-bonds" rel="noopener" target="_blank">387% returns on a redeemed 2017-18 SGB series, 380% returns on SGB 2017-18 Series XIII at ₹13,563, and 200% returns for SGB 2019-20-VI with the redemption price set at ₹11,992 per gram</a>. For investors who had the discipline to stay put for eight years — ignoring every intervening correction — SGBs have been one of the best-performing government-backed instruments in independent India's history.</p>
+
+<h2>Can you still buy SGBs in 2025-26? Yes — but only on the secondary market</h2>
+
+<p>This is the part most investors miss. The scheme is closed to fresh primary issuance, but the bonds already issued continue to trade. <a href="https://upstox.com/news/personal-finance/investing/can-i-still-invest-in-the-sovereign-gold-bond-sgb-scheme/article-183870/" rel="noopener" target="_blank">Investors who still want to own SGBs must now do so on the secondary market, with both the BSE and NSE offering SGBs for trading in demat form</a>. <a href="https://cleartax.in/s/sovereign-gold-bonds" rel="noopener" target="_blank">Only the RBI can issue SGBs on behalf of the central government, but the bonds are tradable on the stock exchange</a>.</p>
+
+<p>Three things to keep in mind if you go this route:</p>
+
+<ol>
+  <li><strong>Liquidity is thin.</strong> <a href="https://goldenpi.com/blog/sovereign-gold-bond/sovereign-gold-bond-vs-gold-etf/" rel="noopener" target="_blank">SGBs can be sold on the secondary market, but liquidity may be limited</a>. Bid-ask spreads can be wider than you'd like, and some series trade infrequently.</li>
+  <li><strong>Prices may trade at a discount or premium to the underlying gold value.</strong> Some older, long-dated series trade below the implied gold price, which has historically been considered an opportunity by informed investors.</li>
+  <li><strong>The tax exemption at RBI redemption only applies if you hold to maturity.</strong> If you sell on the exchange before the bond matures, capital gains rules apply.</li>
+</ol>
+
+<p>You will need a demat account with a broker like Zerodha, Groww or Paytm Money to buy from the secondary market. The order looks and feels like buying any listed bond — except the underlying asset is a gram of gold, backed by the Government of India.</p>
+
+<h2>SGB vs physical gold: the comparison still matters</h2>
+
+<p>With SGBs gone from primary issuance, many households are tempted to default back to the old ways — gold biscuits from the jeweller, 22K bangles, the odd sovereign for Akshaya Tritiya. Before you do that, consider what you're actually giving up.</p>
+
+<h3>1. The 2.5% coupon</h3>
+
+<p>The Wikipedia entry on SGBs is clear on the structure: the <a href="https://en.wikipedia.org/wiki/Sovereign_Gold_Bond" rel="noopener" target="_blank">bond is interest-bearing, carrying 2.5% per annum, with an 8-year term and an option for early withdrawal through the RBI after 5 years</a>. On a ₹1,00,000 SGB purchase, that is ₹2,500 of interest every year, paid semi-annually. Physical gold pays nothing — it just sits in a locker and (hopefully) appreciates.</p>
+
+<h3>2. GST and making charges</h3>
+
+<p>Here's where physical gold quietly bleeds its owners. Every gram of jewellery you buy in India attracts <a href="https://fdcalculator.co.in/sovereign-gold-bonds-and-physical-gold-an-investment-guide/" rel="noopener" target="_blank">3% GST on the total transaction value, per CBIC norms</a>. Add making charges of 8-25% (depending on design) and purity loss on resale, and you can lose 15-20% of the value on day one. SGBs have no GST, no making charges, no purity discount.</p>
+
+<h3>3. The tax structure at maturity</h3>
+
+<p>This is arguably the single biggest advantage of SGBs. <a href="https://www.niftytrader.in/markets/sovereign-gold-bond-vs-physical-gold/" rel="noopener" target="_blank">Early redemption or sale before maturity attracts long-term capital gains tax at 20% with indexation, and semi-annual interest is taxable under the regular income slab</a>. But hold the bond for the full eight-year term, and <a href="https://calcwise.finance/investing-for-beginners/digital-gold-investment/" rel="noopener" target="_blank">SGBs offer complete tax exemption at maturity</a>. Physical gold has no such exemption — any gain on sale is taxed as capital gains, period.</p>
+
+<h3>4. Storage, security, insurance</h3>
+
+<p>A locker in SBI or HDFC in Mumbai will set you back ₹2,000-₹8,000 per year, and you remain liable for theft (banks typically disclaim locker contents). Gold stored at home is an insurance headache. SGBs sit in your demat account — the RBI itself is the custodian of record.</p>
+
+<h3>5. The purity and resale problem</h3>
+
+<p>When you walk back into a jeweller to sell your bangle, you are at their mercy for both purity assessment and buyback price. SGBs settle at a published, transparent price derived from the <a href="https://www.teamleaseregtech.com/updates/article/45528/rbi-notified-regarding-the-premature-redemption-under-sovereign-gold-b/" rel="noopener" target="_blank">simple average of closing gold prices for three business days</a>, as published by the India Bullion and Jewellers Association.</p>
+
+<h3>Where physical gold still wins</h3>
+
+<p>There are three honest arguments for owning a limited amount of physical gold. One, cultural and ceremonial — a wedding set is not an investment. Two, for <a href="https://getbelong.com/blog/gold-etf-vs-sovereign-gold-bonds/" rel="noopener" target="_blank">NRIs, who cannot invest in Sovereign Gold Bonds per FEMA regulations</a>, physical gold or ETFs are the only options. Three, in a true crisis, a locker full of gold is accessible in a way a demat account is not. These are real, but they do not justify putting your entire gold allocation into jewellery.</p>
+
+<h2>What should an Indian investor actually do in FY 2025-26?</h2>
+
+<p>The strategy depends on which side of the SGB story you're on.</p>
+
+<h3>If you already hold SGBs</h3>
+
+<p>Do nothing hasty. If your bond is approaching the five-year mark, check whether the RBI has published a premature redemption notification for your series — these are issued series by series, two weeks ahead of the interest payment date. Weigh three things: the current secondary-market price, the announced RBI redemption price, and the number of years remaining to full maturity. Remember, the tax exemption applies only at full maturity; early redemption via RBI has historically been treated as exempt as well, but selling on the exchange is not.</p>
+
+<p>If your bond still has 2-3 years to maturity, holding on is usually the better call. The 2.5% coupon continues to accrue on the original issue price, and you get the full tax-free capital gain at the end.</p>
+
+<h3>If you want fresh gold exposure</h3>
+
+<p>With new SGB tranches off the menu, the realistic options are:</p>
+
+<ul>
+  <li><strong>Buy older SGBs on the secondary market</strong> via the NSE/BSE — ideal if you want the 2.5% coupon and the tax structure, and can tolerate thin liquidity.</li>
+  <li><strong>Gold ETFs</strong> — highly liquid, trade at close to the underlying gold price, no storage hassle, but no 2.5% coupon and taxed as capital gains.</li>
+  <li><strong>Gold mutual funds</strong> — a fund-of-funds structure wrapping gold ETFs; convenient if you already use SIPs in mutual funds.</li>
+  <li><strong>Digital gold</strong> on Paytm, PhonePe or Google Pay — fine for small amounts but check the custodian and the buy-sell spread carefully.</li>
+</ul>
+
+<h3>How much gold should you own at all?</h3>
+
+<p>The traditional Indian household often holds 20-40% of financial net worth in gold. Most modern financial planners suggest 5-15% as an inflation hedge. The right number depends on your other assets, but if you're a salaried professional in Bangalore or Pune with a home loan running, the first question is rarely "how much gold" — it's "how much of my monthly cash flow is already committed." If a rate cut is coming or you're considering prepaying part of your home loan with matured SGB proceeds, run the numbers on your existing EMI first with the <a href="/tools/emi-calculator">EMI Calculator</a> to see how much interest you'd save by deploying a lump-sum part-payment versus letting it continue to compound in gold.</p>
+
+<p>For those planning their monthly gold allocation through a Gold ETF or Gold Fund SIP, the <a href="/tools/sip-calculator">SIP Calculator</a> is a useful companion to project corpus over 5-10 years at various assumed CAGRs.</p>
+
+<h2>The bottom line for FY 2025-26</h2>
+
+<p>The Sovereign Gold Bond was, in retrospect, a generous instrument — generous enough that the government eventually decided it couldn't afford to keep issuing them. For eight years, Indian savers were handed a product that paid 2.5% interest, tracked the gold price, and promised a tax-free exit. Many of them are now collecting cheques of ₹9,600 to ₹13,563 per gram for units they bought at a fraction of those levels.</p>
+
+<p>If you're sitting on existing SGBs, treat them as one of your most valuable paper assets and hold them to maturity where you can. If you're looking for new exposure, accept that the primary-market SGB door is closed and evaluate the secondary market, Gold ETFs, and Gold Funds on their merits. And resist, as far as your family traditions allow, the temptation to put fresh money into physical gold biscuits or 22K jewellery as an "investment." It is a store of sentiment, not a store of value — and the 3% GST, 10-15% making charges, and lack of any coupon mean it will almost always lag a well-structured paper gold allocation over any meaningful horizon.</p>
+
+<p>The SGB era, as a programme, may be winding down. The investment lessons it taught Indian households — that government-backed, coupon-bearing, tax-efficient gold is possible — should not be.</p>`,
   }
 ];
 
