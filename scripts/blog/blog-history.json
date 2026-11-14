@@ -388,9 +388,10 @@
     "electricity-bill-calculator",
     "old-photo-restorer",
     "tailwind-generator",
-    "ai-story-generator"
+    "ai-story-generator",
+    "business-card-maker"
   ],
-  "lastCategory": "ai",
-  "totalPosts": 389,
-  "lastRun": "2026-11-13T18:34:37.908Z"
+  "lastCategory": "image",
+  "totalPosts": 390,
+  "lastRun": "2026-11-14T11:29:32.624Z"
 }
